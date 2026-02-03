@@ -1,0 +1,398 @@
+# NVIDIA NIM Monitoring Stack
+# Complete Prometheus + Grafana configuration for production monitoring
+# Version: 1.0
+
+---
+# ServiceMonitor for NIM Metrics Collection
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: nim-metrics
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    prometheus: kube-prometheus
+spec:
+  selector:
+    matchLabels:
+      app: nim-inference
+  endpoints:
+  - port: metrics
+    interval: 15s
+    scrapeTimeout: 10s
+    path: /metrics
+    relabelings:
+    - sourceLabels: [__meta_kubernetes_pod_name]
+      targetLabel: pod
+    - sourceLabels: [__meta_kubernetes_pod_node_name]
+      targetLabel: node
+    - sourceLabels: [__meta_kubernetes_namespace]
+      targetLabel: namespace
+    - sourceLabels: [__meta_kubernetes_pod_label_model]
+      targetLabel: model
+
+---
+# PrometheusRule: NIM Performance Alerts
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: nim-performance-alerts
+  namespace: monitoring
+  labels:
+    prometheus: kube-prometheus
+spec:
+  groups:
+  - name: nim-performance
+    interval: 30s
+    rules:
+    # High latency alert
+    - alert: NIMHighLatency
+      expr: histogram_quantile(0.95, rate(nim_inference_duration_seconds_bucket[5m])) > 2
+      for: 5m
+      labels:
+        severity: warning
+        team: ml-platform
+      annotations:
+        summary: "NIM P95 latency above 2 seconds"
+        description: "P95 latency is {{ $value | humanizeDuration }} on {{ $labels.pod }}"
+        runbook_url: "https://wiki.example.com/runbooks/nim-high-latency"
+
+    # Critical latency
+    - alert: NIMCriticalLatency
+      expr: histogram_quantile(0.95, rate(nim_inference_duration_seconds_bucket[5m])) > 5
+      for: 2m
+      labels:
+        severity: critical
+        team: ml-platform
+        pager: "true"
+      annotations:
+        summary: "NIM P95 latency critically high"
+        description: "P95 latency is {{ $value | humanizeDuration }} - immediate action required"
+
+    # High error rate
+    - alert: NIMHighErrorRate
+      expr: (rate(nim_inference_errors_total[5m]) / rate(nim_inference_requests_total[5m])) > 0.05
+      for: 2m
+      labels:
+        severity: critical
+      annotations:
+        summary: "NIM error rate above 5%"
+        description: "Error rate is {{ $value | humanizePercentage }} on {{ $labels.pod }}"
+
+    # Low throughput
+    - alert: NIMLowThroughput
+      expr: rate(nim_inference_requests_total[5m]) < 1
+      for: 10m
+      labels:
+        severity: warning
+      annotations:
+        summary: "NIM throughput unusually low"
+        description: "Only {{ $value | humanize }} req/s on {{ $labels.pod }}"
+
+  - name: nim-resources
+    interval: 30s
+    rules:
+    # GPU saturation
+    - alert: NIMGPUSaturation
+      expr: nim_gpu_utilization_percent > 95
+      for: 10m
+      labels:
+        severity: warning
+      annotations:
+        summary: "NIM GPU consistently saturated"
+        description: "GPU {{ $labels.gpu_index }} at {{ $value }}% utilization for 10+ minutes"
+
+    # GPU memory pressure
+    - alert: NIMGPUMemoryPressure
+      expr: (nim_gpu_memory_used_bytes / nim_gpu_memory_total_bytes) > 0.90
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "NIM GPU memory pressure"
+        description: "GPU memory {{ $value | humanizePercentage }} used on {{ $labels.pod }}"
+
+    # GPU temperature
+    - alert: NIMGPUTemperatureHigh
+      expr: nim_gpu_temperature_celsius > 85
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "NIM GPU temperature elevated"
+        description: "GPU temperature {{ $value }}°C on {{ $labels.node }}"
+
+  - name: nim-availability
+    interval: 30s
+    rules:
+    # Pod crash loop
+    - alert: NIMPodCrashLoop
+      expr: rate(kube_pod_container_status_restarts_total{pod=~"nim-.*"}[15m]) > 0
+      for: 5m
+      labels:
+        severity: critical
+        pager: "true"
+      annotations:
+        summary: "NIM pod in crash loop"
+        description: "Pod {{ $labels.pod }} restarting repeatedly"
+
+    # Insufficient replicas
+    - alert: NIMInsufficientReplicas
+      expr: |
+        kube_deployment_spec_replicas{deployment=~"nim-.*"} -
+        kube_deployment_status_replicas_available{deployment=~"nim-.*"} > 0
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "NIM deployment has unavailable replicas"
+        description: "{{ $value }} replicas unavailable for {{ $labels.deployment }}"
+
+---
+# Grafana Dashboard ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nim-dashboard
+  namespace: monitoring
+  labels:
+    grafana_dashboard: "1"
+data:
+  nim-dashboard.json: |
+    {
+      "dashboard": {
+        "title": "NVIDIA NIM Production Monitoring",
+        "tags": ["nim", "inference", "gpu"],
+        "timezone": "utc",
+        "panels": [
+          {
+            "id": 1,
+            "title": "Request Rate (req/s)",
+            "type": "graph",
+            "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+            "targets": [
+              {
+                "expr": "sum(rate(nim_inference_requests_total[5m])) by (model)",
+                "legendFormat": "{{model}}"
+              }
+            ],
+            "yaxes": [{"format": "reqps"}, {"format": "short"}]
+          },
+          {
+            "id": 2,
+            "title": "P95 Latency (seconds)",
+            "type": "graph",
+            "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, sum(rate(nim_inference_duration_seconds_bucket[5m])) by (model, le))",
+                "legendFormat": "{{model}} P95"
+              },
+              {
+                "expr": "histogram_quantile(0.99, sum(rate(nim_inference_duration_seconds_bucket[5m])) by (model, le))",
+                "legendFormat": "{{model}} P99"
+              }
+            ],
+            "yaxes": [{"format": "s"}, {"format": "short"}],
+            "alert": {
+              "conditions": [
+                {
+                  "evaluator": {"type": "gt", "params": [2]},
+                  "query": {"params": ["A", "5m", "now"]}
+                }
+              ]
+            }
+          },
+          {
+            "id": 3,
+            "title": "GPU Utilization (%)",
+            "type": "graph",
+            "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+            "targets": [
+              {
+                "expr": "nim_gpu_utilization_percent",
+                "legendFormat": "GPU {{gpu_index}} - {{node}}"
+              }
+            ],
+            "yaxes": [{"format": "percent", "max": 100}, {"format": "short"}]
+          },
+          {
+            "id": 4,
+            "title": "GPU Memory Usage (GB)",
+            "type": "graph",
+            "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+            "targets": [
+              {
+                "expr": "nim_gpu_memory_used_bytes / 1073741824",
+                "legendFormat": "Used - GPU {{gpu_index}}"
+              },
+              {
+                "expr": "nim_gpu_memory_total_bytes / 1073741824",
+                "legendFormat": "Total - GPU {{gpu_index}}"
+              }
+            ],
+            "yaxes": [{"format": "decgbytes"}, {"format": "short"}]
+          },
+          {
+            "id": 5,
+            "title": "Token Throughput (tokens/s)",
+            "type": "graph",
+            "gridPos": {"x": 0, "y": 16, "w": 12, "h": 8},
+            "targets": [
+              {
+                "expr": "sum(rate(nim_tokens_generated_total[5m])) by (model)",
+                "legendFormat": "{{model}}"
+              }
+            ],
+            "yaxes": [{"format": "ops"}, {"format": "short"}]
+          },
+          {
+            "id": 6,
+            "title": "Error Rate (%)",
+            "type": "graph",
+            "gridPos": {"x": 12, "y": 16, "w": 12, "h": 8},
+            "targets": [
+              {
+                "expr": "(rate(nim_inference_errors_total[5m]) / rate(nim_inference_requests_total[5m])) * 100",
+                "legendFormat": "{{model}}"
+              }
+            ],
+            "yaxes": [{"format": "percent"}, {"format": "short"}],
+            "alert": {
+              "conditions": [
+                {
+                  "evaluator": {"type": "gt", "params": [5]},
+                  "query": {"params": ["A", "5m", "now"]}
+                }
+              ]
+            }
+          },
+          {
+            "id": 7,
+            "title": "Active Requests",
+            "type": "stat",
+            "gridPos": {"x": 0, "y": 24, "w": 6, "h": 4},
+            "targets": [
+              {
+                "expr": "sum(nim_inference_requests_in_progress)"
+              }
+            ],
+            "options": {
+              "colorMode": "value",
+              "graphMode": "area"
+            }
+          },
+          {
+            "id": 8,
+            "title": "Total Requests (5m)",
+            "type": "stat",
+            "gridPos": {"x": 6, "y": 24, "w": 6, "h": 4},
+            "targets": [
+              {
+                "expr": "sum(increase(nim_inference_requests_total[5m]))"
+              }
+            ],
+            "options": {
+              "colorMode": "value"
+            }
+          },
+          {
+            "id": 9,
+            "title": "Average GPU Utilization",
+            "type": "stat",
+            "gridPos": {"x": 12, "y": 24, "w": 6, "h": 4},
+            "targets": [
+              {
+                "expr": "avg(nim_gpu_utilization_percent)"
+              }
+            ],
+            "options": {
+              "unit": "percent",
+              "colorMode": "value",
+              "thresholds": {
+                "steps": [
+                  {"value": 0, "color": "red"},
+                  {"value": 60, "color": "yellow"},
+                  {"value": 70, "color": "green"},
+                  {"value": 90, "color": "orange"}
+                ]
+              }
+            }
+          },
+          {
+            "id": 10,
+            "title": "Estimated Hourly Cost",
+            "type": "stat",
+            "gridPos": {"x": 18, "y": 24, "w": 6, "h": 4},
+            "targets": [
+              {
+                "expr": "sum(rate(nim_app_token_cost_usd[1h])) * 3600"
+              }
+            ],
+            "options": {
+              "unit": "currencyUSD",
+              "colorMode": "value"
+            }
+          }
+        ],
+        "refresh": "30s",
+        "time": {"from": "now-6h", "to": "now"}
+      }
+    }
+
+---
+# AlertManager Configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+  namespace: monitoring
+data:
+  alertmanager.yml: |
+    global:
+      resolve_timeout: 5m
+      slack_api_url: 'https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK'
+
+    route:
+      receiver: 'default'
+      group_by: ['alertname', 'cluster', 'namespace']
+      group_wait: 10s
+      group_interval: 10s
+      repeat_interval: 12h
+
+      routes:
+      # Critical alerts to PagerDuty
+      - match:
+          severity: critical
+        receiver: 'pagerduty'
+        continue: true
+
+      # NIM-specific alerts to Slack
+      - match_re:
+          alertname: '^NIM.*'
+        receiver: 'slack-nim'
+
+    receivers:
+    - name: 'default'
+      webhook_configs:
+      - url: 'http://webhook.example.com/alerts'
+        send_resolved: true
+
+    - name: 'pagerduty'
+      pagerduty_configs:
+      - service_key: '<pagerduty-service-key>'
+        description: '{{ .GroupLabels.alertname }}: {{ .Annotations.summary }}'
+
+    - name: 'slack-nim'
+      slack_configs:
+      - channel: '#nim-alerts'
+        title: '{{ .GroupLabels.alertname }}'
+        text: '{{ .Annotations.description }}'
+        send_resolved: true
+
+    inhibit_rules:
+    - source_match:
+        severity: 'critical'
+      target_match:
+        severity: 'warning'
+      equal: ['alertname', 'namespace']

@@ -1,0 +1,548 @@
+# NVIDIA NIM Production Kubernetes Deployment
+# Complete production-grade deployment with multi-model support
+# Version: 1.0
+# Target: Kubernetes 1.28+
+
+---
+# Namespace for NIM Production
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nim-production
+  labels:
+    name: nim-production
+    environment: production
+    team: ml-platform
+
+---
+# Resource Quota
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: nim-production-quota
+  namespace: nim-production
+spec:
+  hard:
+    requests.nvidia.com/gpu: "10"
+    requests.memory: "256Gi"
+    requests.cpu: "64"
+    persistentvolumeclaims: "10"
+    services.loadbalancers: "2"
+
+---
+# Persistent Volume Claim for Model Cache
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nim-model-cache-pvc
+  namespace: nim-production
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 500Gi
+  storageClassName: fast-ssd
+
+---
+# ConfigMap for NIM Configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nim-config
+  namespace: nim-production
+data:
+  NIM_LOG_LEVEL: "INFO"
+  NIM_MAX_BATCH_SIZE: "32"
+  NIM_BATCH_WAIT_TIME_MS: "10"
+  NIM_MIN_BATCH_SIZE: "4"
+  NIM_KV_CACHE_SIZE_GB: "8"
+  NIM_MAX_SEQ_LENGTH: "4096"
+  NIM_NUM_SCHEDULER_THREADS: "4"
+  NIM_ENABLE_CHUNKED_PREFILL: "true"
+
+---
+# Deployment: Llama 2 7B (Primary General-Purpose Model)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nim-llama2-7b
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    model: llama2-7b
+    tier: primary
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nim-inference
+      model: llama2-7b
+  template:
+    metadata:
+      labels:
+        app: nim-inference
+        model: llama2-7b
+        tier: primary
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+        prometheus.io/path: "/metrics"
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - nim-inference
+              topologyKey: kubernetes.io/hostname
+      nodeSelector:
+        accelerator: nvidia-gpu
+      containers:
+      - name: nim
+        image: nvcr.io/nvidia/nim:llama2-7b-instruct
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http
+          protocol: TCP
+        - containerPort: 9090
+          name: metrics
+          protocol: TCP
+        env:
+        - name: NIM_CACHE_DIR
+          value: "/cache"
+        - name: NGC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nim-secrets
+              key: ngc-api-key
+        - name: NIM_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nim-secrets
+              key: nim-api-key
+        envFrom:
+        - configMapRef:
+            name: nim-config
+        resources:
+          requests:
+            nvidia.com/gpu: 1
+            memory: "16Gi"
+            cpu: "4"
+          limits:
+            nvidia.com/gpu: 1
+            memory: "16Gi"
+            cpu: "4"
+        volumeMounts:
+        - name: model-cache
+          mountPath: /cache
+        - name: shm
+          mountPath: /dev/shm
+        livenessProbe:
+          httpGet:
+            path: /v1/health
+            port: 8000
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /v1/models
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sh", "-c", "sleep 15; kill -SIGTERM 1"]
+      volumes:
+      - name: model-cache
+        persistentVolumeClaim:
+          claimName: nim-model-cache-pvc
+      - name: shm
+        emptyDir:
+          medium: Memory
+          sizeLimit: 2Gi
+      terminationGracePeriodSeconds: 300
+
+---
+# Deployment: Mistral 7B (Code Generation Specialist)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nim-mistral-7b
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    model: mistral-7b
+    tier: specialized
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nim-inference
+      model: mistral-7b
+  template:
+    metadata:
+      labels:
+        app: nim-inference
+        model: mistral-7b
+        tier: specialized
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - nim-inference
+              topologyKey: kubernetes.io/hostname
+      nodeSelector:
+        accelerator: nvidia-gpu
+      containers:
+      - name: nim
+        image: nvcr.io/nvidia/nim:mistral-7b-instruct
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http
+        - containerPort: 9090
+          name: metrics
+        env:
+        - name: NIM_CACHE_DIR
+          value: "/cache"
+        - name: NGC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nim-secrets
+              key: ngc-api-key
+        - name: NIM_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nim-secrets
+              key: nim-api-key
+        envFrom:
+        - configMapRef:
+            name: nim-config
+        resources:
+          requests:
+            nvidia.com/gpu: 1
+            memory: "16Gi"
+            cpu: "4"
+          limits:
+            nvidia.com/gpu: 1
+            memory: "16Gi"
+            cpu: "4"
+        volumeMounts:
+        - name: model-cache
+          mountPath: /cache
+        - name: shm
+          mountPath: /dev/shm
+        livenessProbe:
+          httpGet:
+            path: /v1/health
+            port: 8000
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /v1/models
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 5
+      volumes:
+      - name: model-cache
+        persistentVolumeClaim:
+          claimName: nim-model-cache-pvc
+      - name: shm
+        emptyDir:
+          medium: Memory
+          sizeLimit: 2Gi
+      terminationGracePeriodSeconds: 300
+
+---
+# Deployment: Embedding Model (RAG Support)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nim-embed-qa
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    model: embed-qa
+    tier: embedding
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nim-inference
+      model: embed-qa
+  template:
+    metadata:
+      labels:
+        app: nim-inference
+        model: embed-qa
+        tier: embedding
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+    spec:
+      nodeSelector:
+        accelerator: nvidia-gpu
+      containers:
+      - name: nim
+        image: nvcr.io/nvidia/nim:embed-qa-4
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http
+        - containerPort: 9090
+          name: metrics
+        env:
+        - name: NIM_CACHE_DIR
+          value: "/cache"
+        - name: NGC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nim-secrets
+              key: ngc-api-key
+        - name: NIM_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nim-secrets
+              key: nim-api-key
+        resources:
+          requests:
+            nvidia.com/gpu: 1
+            memory: "8Gi"
+            cpu: "2"
+          limits:
+            nvidia.com/gpu: 1
+            memory: "8Gi"
+            cpu: "2"
+        volumeMounts:
+        - name: model-cache
+          mountPath: /cache
+        livenessProbe:
+          httpGet:
+            path: /v1/health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /v1/models
+            port: 8000
+          initialDelaySeconds: 20
+          periodSeconds: 5
+      volumes:
+      - name: model-cache
+        persistentVolumeClaim:
+          claimName: nim-model-cache-pvc
+      terminationGracePeriodSeconds: 60
+
+---
+# Service: Llama 2 7B
+apiVersion: v1
+kind: Service
+metadata:
+  name: nim-llama2-7b-service
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    model: llama2-7b
+spec:
+  type: ClusterIP
+  selector:
+    app: nim-inference
+    model: llama2-7b
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  - port: 9090
+    targetPort: 9090
+    protocol: TCP
+    name: metrics
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 3600
+
+---
+# Service: Mistral 7B
+apiVersion: v1
+kind: Service
+metadata:
+  name: nim-mistral-7b-service
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    model: mistral-7b
+spec:
+  type: ClusterIP
+  selector:
+    app: nim-inference
+    model: mistral-7b
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  - port: 9090
+    targetPort: 9090
+    protocol: TCP
+    name: metrics
+  sessionAffinity: ClientIP
+
+---
+# Service: Embedding
+apiVersion: v1
+kind: Service
+metadata:
+  name: nim-embed-qa-service
+  namespace: nim-production
+  labels:
+    app: nim-inference
+    model: embed-qa
+spec:
+  type: ClusterIP
+  selector:
+    app: nim-inference
+    model: embed-qa
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  - port: 9090
+    targetPort: 9090
+    protocol: TCP
+    name: metrics
+
+---
+# Unified Service (Load Balanced across all models)
+apiVersion: v1
+kind: Service
+metadata:
+  name: nim-unified-service
+  namespace: nim-production
+  labels:
+    app: nim-inference
+spec:
+  type: LoadBalancer
+  selector:
+    app: nim-inference
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+
+---
+# Horizontal Pod Autoscaler: Llama 2 7B
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nim-llama2-7b-hpa
+  namespace: nim-production
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nim-llama2-7b
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+      - type: Percent
+        value: 100
+        periodSeconds: 30
+      - type: Pods
+        value: 2
+        periodSeconds: 30
+
+---
+# Pod Disruption Budget
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: nim-pdb
+  namespace: nim-production
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: nim-inference
+
+---
+# Network Policy: Ingress Control
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nim-network-policy
+  namespace: nim-production
+spec:
+  podSelector:
+    matchLabels:
+      app: nim-inference
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: ingress-nginx
+    ports:
+    - protocol: TCP
+      port: 8000
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: monitoring
+    ports:
+    - protocol: TCP
+      port: 9090
+  egress:
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 443
+    - protocol: TCP
+      port: 53
+    - protocol: UDP
+      port: 53

@@ -1,0 +1,118 @@
+{
+  "dashboard": {
+    "title": "AI Agent Monitoring Dashboard",
+    "tags": ["ai-agent", "production", "monitoring"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Request Rate",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(agent_requests_total[5m])",
+            "legendFormat": "Requests/sec"
+          }
+        ],
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8}
+      },
+      {
+        "id": 2,
+        "title": "Response Latency (Percentiles)",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.50, rate(agent_latency_seconds_bucket[5m]))",
+            "legendFormat": "p50"
+          },
+          {
+            "expr": "histogram_quantile(0.95, rate(agent_latency_seconds_bucket[5m]))",
+            "legendFormat": "p95"
+          },
+          {
+            "expr": "histogram_quantile(0.99, rate(agent_latency_seconds_bucket[5m]))",
+            "legendFormat": "p99"
+          }
+        ],
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+        "yaxes": [{"format": "s"}]
+      },
+      {
+        "id": 3,
+        "title": "Error Rate",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "rate(agent_errors_total[5m]) / rate(agent_requests_total[5m])",
+            "legendFormat": "Error Rate"
+          }
+        ],
+        "gridPos": {"x": 0, "y": 8, "w": 6, "h": 6},
+        "thresholds": [
+          {"value": 0.01, "color": "green"},
+          {"value": 0.05, "color": "yellow"},
+          {"value": 0.1, "color": "red"}
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Cost per Hour",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "sum(rate(agent_token_usage_total[1h])) * 0.000002",
+            "legendFormat": "Cost/Hour"
+          }
+        ],
+        "gridPos": {"x": 6, "y": 8, "w": 6, "h": 6}
+      },
+      {
+        "id": 5,
+        "title": "Quality Score (LLM-as-Judge)",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "avg(agent_quality_score)",
+            "legendFormat": "Avg Quality"
+          }
+        ],
+        "gridPos": {"x": 12, "y": 8, "w": 12, "h": 6},
+        "yaxes": [{"min": 0, "max": 5}]
+      },
+      {
+        "id": 6,
+        "title": "GPU Utilization",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "DCGM_FI_DEV_GPU_UTIL",
+            "legendFormat": "GPU {{gpu}}"
+          }
+        ],
+        "gridPos": {"x": 0, "y": 14, "w": 12, "h": 8}
+      },
+      {
+        "id": 7,
+        "title": "SLO Compliance (99.5% Availability)",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "(1 - (rate(agent_errors_total[30d]) / rate(agent_requests_total[30d]))) * 100",
+            "legendFormat": "Availability %"
+          }
+        ],
+        "gridPos": {"x": 12, "y": 14, "w": 12, "h": 8},
+        "thresholds": [
+          {"value": 99.5, "color": "green"},
+          {"value": 99.0, "color": "yellow"},
+          {"value": 0, "color": "red"}
+        ]
+      }
+    ],
+    "refresh": "10s",
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    }
+  }
+}
