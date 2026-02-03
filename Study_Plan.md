@@ -7,117 +7,117 @@ This study plan provides structured guidance for mastering all 93 chapters of th
 ## Table of Contents
 
 ### Part 1: Agent Fundamentals (10 chapters)
-- 1.1A: UI Foundations
-- 1.1B: Human-in-the-Loop Patterns and Accessible Design
-- 1.2: Core Patterns
-- 1.3: Multi-Agent Systems
-- 1.4: Memory & Perception
-- 1.5A: Stateful Orchestration - Foundations
-- 1.5B: Stateful Orchestration - Worked Examples
-- 1.6: Stateful Orchestration - Pitfalls, Integration, and Synthesis
-- 1.7A: Relational Reasoning with Knowledge Graphs
-- 1.7B: Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration
+- [1.1A: UI Foundations](#part-1-chapter-11a-ui-foundations)
+- [1.1B: Human-in-the-Loop Patterns and Accessible Design](#part-1-chapter-11b-human-in-the-loop-patterns-and-accessible-design)
+- [1.2: Core Patterns](#part-1-chapter-12-core-patterns)
+- [1.3: Multi-Agent Systems](#part-1-chapter-13-multi-agent-systems)
+- [1.4: Memory & Perception](#part-1-chapter-14-memory--perception)
+- [1.5A: Stateful Orchestration - Foundations](#part-1-chapter-15a-stateful-orchestration---foundations)
+- [1.5B: Stateful Orchestration - Worked Examples](#part-1-chapter-15b-stateful-orchestration---worked-examples)
+- [1.6: Stateful Orchestration - Pitfalls, Integration, and Synthesis](#part-1-chapter-16-stateful-orchestration---pitfalls-integration-and-synthesis)
+- [1.7A: Relational Reasoning with Knowledge Graphs](#part-1-chapter-17a-relational-reasoning-with-knowledge-graphs)
+- [1.7B: Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration](#part-1-chapter-17b-relational-reasoning-with-knowledge-graphs---hybrid-ragkg-integration)
 
 ### Part 2: Framework & Tool Integration (9 chapters)
-- 2.1: Framework Landscape
-- 2.2: LangGraph
-- 2.3: LangChain
-- 2.4: MultiAgent Frameworks
-- 2.5: Semantic Kernel - Enterprise Framework and Plugin Architecture
-- 2.6: Tool Integration and Function Calling
-- 2.7: Multimodal RAG - Integration of Vision, Audio, and Text
-- 2.8: Error Handling and Resilience
-- 2.9: Streaming and Real-Time Responses
+- [2.1: Framework Landscape](#part-2-chapter-21-framework-landscape)
+- [2.2: LangGraph](#part-2-chapter-22-langgraph)
+- [2.3: LangChain](#part-2-chapter-23-langchain)
+- [2.4: MultiAgent Frameworks](#part-2-chapter-24-multiagent-frameworks)
+- [2.5: Semantic Kernel - Enterprise Framework and Plugin Architecture](#part-2-chapter-25-semantic-kernel---enterprise-framework-and-plugin-architecture)
+- [2.6: Tool Integration and Function Calling](#part-2-chapter-26-tool-integration-and-function-calling)
+- [2.7: Multimodal RAG - Integration of Vision, Audio, and Text](#part-2-chapter-27-multimodal-rag---integration-of-vision-audio-and-text)
+- [2.8: Error Handling and Resilience](#part-2-chapter-28-error-handling-and-resilience)
+- [2.9: Streaming and Real-Time Responses](#part-2-chapter-29-streaming-and-real-time-responses)
 
 ### Part 3: Evaluation & Optimization (10 chapters)
-- 3.1A: Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts
-- 3.1B: Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration
-- 3.1C: Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design
-- 3.2: Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor
-- 3.3: Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering
-- 3.4: Tune Parameters
-- 3.5: Prompt Optimization, Few-Shot Learning, Fine-Tuning with Agent Trajectories, and Reward Modeling
-- 3.6: Trace Analysis and Execution Debugging
-- 3.7: Tool Auditing and Validation
-- 3.8: Action Accuracy
-- 3.9: Reasoning Quality
-- 3.10: Efficiency Metrics
+- [3.1A: Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts](#part-3-chapter-31a-implement-evaluation-pipelines-and-task-benchmarks---introduction-motivation-and-core-concepts)
+- [3.1B: Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration](#part-3-chapter-31b-implement-evaluation-pipelines-and-task-benchmarks---custom-metrics-and-cicd-integration)
+- [3.1C: Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design](#part-3-chapter-31c-implement-evaluation-pipelines-and-task-benchmarks---independent-practice-and-comprehensive-system-design)
+- [3.2: Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor](#part-3-chapter-32-compare-agent-performance-across-tasks-and-datasets---multi-benchmark-evaluation-and-statistical-rigor)
+- [3.3: Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering](#part-3-chapter-33-web-navigation-and-interaction-benchmarks---web-agent-evaluation-and-multi-hop-question-answering)
+- [3.4: Tune Parameters](#part-3-chapter-34-tune-parameters)
+- [3.5: Prompt Optimization, Few-Shot Learning, Fine-Tuning with Agent Trajectories, and Reward Modeling](#part-3-chapter-35-prompt-optimization-few-shot-learning-fine-tuning-with-agent-trajectories-and-reward-modeling)
+- [3.6: Trace Analysis and Execution Debugging](#part-3-chapter-36-trace-analysis-and-execution-debugging)
+- [3.7: Tool Auditing and Validation](#part-3-chapter-37-tool-auditing-and-validation)
+- [3.8: Action Accuracy](#part-3-chapter-38-action-accuracy)
+- [3.9: Reasoning Quality](#part-3-chapter-39-reasoning-quality)
+- [3.10: Efficiency Metrics](#part-3-chapter-310-efficiency-metrics)
 
 ### Part 4: Production Deployment & Scaling (7 chapters)
-- 4.1: AI Agent Deployment and Scaling
-- 4.2: Deployment & Scaling
-- 4.3: Container Orchestration and Edge Deployment
-- 4.4: Performance Profiling and Optimization
-- 4.5: NVIDIA NIM and Triton Inference Server
-- 4.6: TensorRT-LLM and NVIDIA Fleet Command
-- 4.7: Scaling Strategies
+- [4.1: AI Agent Deployment and Scaling](#part-4-chapter-41-ai-agent-deployment-and-scaling)
+- [4.2: Deployment & Scaling](#part-4-chapter-42-deployment--scaling)
+- [4.3: Container Orchestration and Edge Deployment](#part-4-chapter-43-container-orchestration-and-edge-deployment)
+- [4.4: Performance Profiling and Optimization](#part-4-chapter-44-performance-profiling-and-optimization)
+- [4.5: NVIDIA NIM and Triton Inference Server](#part-4-chapter-45-nvidia-nim-and-triton-inference-server)
+- [4.6: TensorRT-LLM and NVIDIA Fleet Command](#part-4-chapter-46-tensorrt-llm-and-nvidia-fleet-command)
+- [4.7: Scaling Strategies](#part-4-chapter-47-scaling-strategies)
 
 ### Part 5: Advanced Reasoning & Decision Making (13 chapters)
-- 5.1: Chain-of-Thought Reasoning
-- 5.2: Tree-of-Thought (ToT)
-- 5.3: Self-Consistency
-- 5.4: Hierarchical Planning
-- 5.5: Monte Carlo Tree Search (MCTS)
-- 5.6: A* Search
-- 5.7: Episodic Memory
-- 5.8: Semantic Memory
-- 5.9: Working Memory
-- 5.10: Utility-Based Decision Making
-- 5.11: Rule-Based Decision Making
-- 5.12: Learning-Based Decision Making
-- 5.13: Hybrid Decision Systems
+- [5.1: Chain-of-Thought Reasoning](#part-5-chapter-51-chain-of-thought-reasoning)
+- [5.2: Tree-of-Thought (ToT)](#part-5-chapter-52-tree-of-thought-tot)
+- [5.3: Self-Consistency](#part-5-chapter-53-self-consistency)
+- [5.4: Hierarchical Planning](#part-5-chapter-54-hierarchical-planning)
+- [5.5: Monte Carlo Tree Search (MCTS)](#part-5-chapter-55-monte-carlo-tree-search-mcts)
+- [5.6: A* Search](#part-5-chapter-56-a-search)
+- [5.7: Episodic Memory](#part-5-chapter-57-episodic-memory)
+- [5.8: Semantic Memory](#part-5-chapter-58-semantic-memory)
+- [5.9: Working Memory](#part-5-chapter-59-working-memory)
+- [5.10: Utility-Based Decision Making](#part-5-chapter-510-utility-based-decision-making)
+- [5.11: Rule-Based Decision Making](#part-5-chapter-511-rule-based-decision-making)
+- [5.12: Learning-Based Decision Making](#part-5-chapter-512-learning-based-decision-making)
+- [5.13: Hybrid Decision Systems](#part-5-chapter-513-hybrid-decision-systems)
 
 ### Part 6: Retrieval-Augmented Generation (RAG) (12 chapters)
-- 6.1A: RAG Chunking and Embeddings
-- 6.1C: RAG Implementation
-- 6.2A: Vector Database Selection
-- 6.2B: Production Vector Database Deployment
-- 6.3A: ETL Fundamentals
-- 6.3B: ETL Load and Integration
-- 6.3C: ETL Practice
-- 6.4A: Data Quality Fundamentals
-- 6.4B: Data Quality Practice
-- 6.5A: Production RAG Architecture
-- 6.5B: Production RAG Practice
-- 6.6A: Reranking Implementation
-- 6.6B: Query Decomposition and Adaptive Retrieval
-- 6.6C: Advanced Retrieval Practice
+- [6.1A: RAG Chunking and Embeddings](#part-6-chapter-61a-rag-chunking-and-embeddings)
+- [6.1C: RAG Implementation](#part-6-chapter-61c-rag-implementation)
+- [6.2A: Vector Database Selection](#part-6-chapter-62a-vector-database-selection)
+- [6.2B: Production Vector Database Deployment](#part-6-chapter-62b-production-vector-database-deployment)
+- [6.3A: ETL Fundamentals](#part-6-chapter-63a-etl-fundamentals)
+- [6.3B: ETL Load and Integration](#part-6-chapter-63b-etl-load-and-integration)
+- [6.3C: ETL Practice](#part-6-chapter-63c-etl-practice)
+- [6.4A: Data Quality Fundamentals](#part-6-chapter-64a-data-quality-fundamentals)
+- [6.4B: Data Quality Practice](#part-6-chapter-64b-data-quality-practice)
+- [6.5A: Production RAG Architecture](#part-6-chapter-65a-production-rag-architecture)
+- [6.5B: Production RAG Practice](#part-6-chapter-65b-production-rag-practice)
+- [6.6A: Reranking Implementation](#part-6-chapter-66a-reranking-implementation)
+- [6.6B: Query Decomposition and Adaptive Retrieval](#part-6-chapter-66b-query-decomposition-and-adaptive-retrieval)
+- [6.6C: Advanced Retrieval Practice](#part-6-chapter-66c-advanced-retrieval-practice)
 
 ### Part 7: NVIDIA NeMo Framework & Optimization (6 chapters)
-- 7.1A: NVIDIA NeMo Framework and Six Rail Types
-- 7.1B: Colang DSL, NIM Integration, and Misconceptions
-- 7.2A: Local Development Setup and API Integration
-- 7.2B: Performance Monitoring & Optimization
-- 7.3: Agent Toolkit
-- 7.4: Quantization Fundamentals
-- 7.5: Curator, Riva, and Multimodal
-- 7.6: Multi-Instance GPU (MIG) & Security
+- [7.1A: NVIDIA NeMo Framework and Six Rail Types](#part-7-chapter-71a-nvidia-nemo-framework-and-six-rail-types)
+- [7.1B: Colang DSL, NIM Integration, and Misconceptions](#part-7-chapter-71b-colang-dsl-nim-integration-and-misconceptions)
+- [7.2A: Local Development Setup and API Integration](#part-7-chapter-72a-local-development-setup-and-api-integration)
+- [7.2B: Performance Monitoring & Optimization](#part-7-chapter-72b-performance-monitoring--optimization)
+- [7.3: Agent Toolkit](#part-7-chapter-73-agent-toolkit)
+- [7.4: Quantization Fundamentals](#part-7-chapter-74-quantization-fundamentals)
+- [7.5: Curator, Riva, and Multimodal](#part-7-chapter-75-curator-riva-and-multimodal)
+- [7.6: Multi-Instance GPU (MIG) & Security](#part-7-chapter-76-multi-instance-gpu-mig--security)
 
 ### Part 8: Reliability & Cost Management (4 chapters)
-- 8.1: Latency Fundamentals
-- 8.2A: Error Taxonomy and SLO
-- 8.2B: Circuit Breakers and NeMo Integration
-- 8.3: Token Economics
-- 8.4: Success Metrics
+- [8.1: Latency Fundamentals](#part-8-chapter-81-latency-fundamentals)
+- [8.2A: Error Taxonomy and SLO](#part-8-chapter-82a-error-taxonomy-and-slo)
+- [8.2B: Circuit Breakers and NeMo Integration](#part-8-chapter-82b-circuit-breakers-and-nemo-integration)
+- [8.3: Token Economics](#part-8-chapter-83-token-economics)
+- [8.4: Success Metrics](#part-8-chapter-84-success-metrics)
 
 ### Part 9: Safety & Governance (8 chapters)
-- 9.1: Output Filtering
-- 9.2: Action Constraints
-- 9.3: Sandboxing and Isolation
-- 9.4: Fairness Foundations
-- 9.5: Constitutional AI Principles
-- 9.6: Standards, Certifications, and Frameworks
-- 9.7: GDPR Foundations
-- 9.8: Standards and Frameworks for AI Governance
+- [9.1: Output Filtering](#part-9-chapter-91-output-filtering)
+- [9.2: Action Constraints](#part-9-chapter-92-action-constraints)
+- [9.3: Sandboxing and Isolation](#part-9-chapter-93-sandboxing-and-isolation)
+- [9.4: Fairness Foundations](#part-9-chapter-94-fairness-foundations)
+- [9.5: Constitutional AI Principles](#part-9-chapter-95-constitutional-ai-principles)
+- [9.6: Standards, Certifications, and Frameworks](#part-9-chapter-96-standards-certifications-and-frameworks)
+- [9.7: GDPR Foundations](#part-9-chapter-97-gdpr-foundations)
+- [9.8: Standards and Frameworks for AI Governance](#part-9-chapter-98-standards-and-frameworks-for-ai-governance)
 
 ### Part 10: Human-in-the-Loop & Integration (5 chapters)
-- 10.1: Conversational UI
-- 10.2: Proactive Agents
-- 10.3A: RLHF Methodology
-- 10.3B: RLHF Pitfalls and Red Teaming
-- 10.4: Human-in-the-Loop
-- 10.5: Human-over-the-Loop
-- 10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)
+- [10.1: Conversational UI](#part-10-chapter-101-conversational-ui)
+- [10.2: Proactive Agents](#part-10-chapter-102-proactive-agents)
+- [10.3A: RLHF Methodology](#part-10-chapter-103a-rlhf-methodology)
+- [10.3B: RLHF Pitfalls and Red Teaming](#part-10-chapter-103b-rlhf-pitfalls-and-red-teaming)
+- [10.4: Human-in-the-Loop](#part-10-chapter-104-human-in-the-loop)
+- [10.5: Human-over-the-Loop](#part-10-chapter-105-human-over-the-loop)
+- [10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)](#part-10-sections-106-integration-feedback-calibration-explainability-controllability-consistency)
 
 ---
 
