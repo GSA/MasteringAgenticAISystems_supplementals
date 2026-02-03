@@ -4,7 +4,7 @@ This study plan provides structured guidance for mastering all 93 chapters of th
 
 ---
 
-## Table of Contents {#table-of-contents}
+## Table of Contents
 
 ### Part 1: Agent Fundamentals (10 chapters)
 - [1.1A: UI Foundations](#part-1-chapter-11a-ui-foundations)
