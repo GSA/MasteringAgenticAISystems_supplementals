@@ -2,6 +2,125 @@
 
 This study plan provides structured guidance for mastering all 93 chapters of the textbook within a 4-month (120-day) intensive study program. Each chapter includes:
 
+---
+
+## Table of Contents
+
+### Part 1: Agent Fundamentals (10 chapters)
+- 1.1A: UI Foundations
+- 1.1B: Human-in-the-Loop Patterns and Accessible Design
+- 1.2: Core Patterns
+- 1.3: Multi-Agent Systems
+- 1.4: Memory & Perception
+- 1.5A: Stateful Orchestration - Foundations
+- 1.5B: Stateful Orchestration - Worked Examples
+- 1.6: Stateful Orchestration - Pitfalls, Integration, and Synthesis
+- 1.7A: Relational Reasoning with Knowledge Graphs
+- 1.7B: Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration
+
+### Part 2: Framework & Tool Integration (9 chapters)
+- 2.1: Framework Landscape
+- 2.2: LangGraph
+- 2.3: LangChain
+- 2.4: MultiAgent Frameworks
+- 2.5: Semantic Kernel - Enterprise Framework and Plugin Architecture
+- 2.6: Tool Integration and Function Calling
+- 2.7: Multimodal RAG - Integration of Vision, Audio, and Text
+- 2.8: Error Handling and Resilience
+- 2.9: Streaming and Real-Time Responses
+
+### Part 3: Evaluation & Optimization (10 chapters)
+- 3.1A: Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts
+- 3.1B: Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration
+- 3.1C: Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design
+- 3.2: Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor
+- 3.3: Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering
+- 3.4: Tune Parameters
+- 3.5: Prompt Optimization, Few-Shot Learning, Fine-Tuning with Agent Trajectories, and Reward Modeling
+- 3.6: Trace Analysis and Execution Debugging
+- 3.7: Tool Auditing and Validation
+- 3.8: Action Accuracy
+- 3.9: Reasoning Quality
+- 3.10: Efficiency Metrics
+
+### Part 4: Production Deployment & Scaling (7 chapters)
+- 4.1: AI Agent Deployment and Scaling
+- 4.2: Deployment & Scaling
+- 4.3: Container Orchestration and Edge Deployment
+- 4.4: Performance Profiling and Optimization
+- 4.5: NVIDIA NIM and Triton Inference Server
+- 4.6: TensorRT-LLM and NVIDIA Fleet Command
+- 4.7: Scaling Strategies
+
+### Part 5: Advanced Reasoning & Decision Making (13 chapters)
+- 5.1: Chain-of-Thought Reasoning
+- 5.2: Tree-of-Thought (ToT)
+- 5.3: Self-Consistency
+- 5.4: Hierarchical Planning
+- 5.5: Monte Carlo Tree Search (MCTS)
+- 5.6: A* Search
+- 5.7: Episodic Memory
+- 5.8: Semantic Memory
+- 5.9: Working Memory
+- 5.10: Utility-Based Decision Making
+- 5.11: Rule-Based Decision Making
+- 5.12: Learning-Based Decision Making
+- 5.13: Hybrid Decision Systems
+
+### Part 6: Retrieval-Augmented Generation (RAG) (12 chapters)
+- 6.1A: RAG Chunking and Embeddings
+- 6.1C: RAG Implementation
+- 6.2A: Vector Database Selection
+- 6.2B: Production Vector Database Deployment
+- 6.3A: ETL Fundamentals
+- 6.3B: ETL Load and Integration
+- 6.3C: ETL Practice
+- 6.4A: Data Quality Fundamentals
+- 6.4B: Data Quality Practice
+- 6.5A: Production RAG Architecture
+- 6.5B: Production RAG Practice
+- 6.6A: Reranking Implementation
+- 6.6B: Query Decomposition and Adaptive Retrieval
+- 6.6C: Advanced Retrieval Practice
+
+### Part 7: NVIDIA NeMo Framework & Optimization (6 chapters)
+- 7.1A: NVIDIA NeMo Framework and Six Rail Types
+- 7.1B: Colang DSL, NIM Integration, and Misconceptions
+- 7.2A: Local Development Setup and API Integration
+- 7.2B: Performance Monitoring & Optimization
+- 7.3: Agent Toolkit
+- 7.4: Quantization Fundamentals
+- 7.5: Curator, Riva, and Multimodal
+- 7.6: Multi-Instance GPU (MIG) & Security
+
+### Part 8: Reliability & Cost Management (4 chapters)
+- 8.1: Latency Fundamentals
+- 8.2A: Error Taxonomy and SLO
+- 8.2B: Circuit Breakers and NeMo Integration
+- 8.3: Token Economics
+- 8.4: Success Metrics
+
+### Part 9: Safety & Governance (8 chapters)
+- 9.1: Output Filtering
+- 9.2: Action Constraints
+- 9.3: Sandboxing and Isolation
+- 9.4: Fairness Foundations
+- 9.5: Constitutional AI Principles
+- 9.6: Standards, Certifications, and Frameworks
+- 9.7: GDPR Foundations
+- 9.8: Standards and Frameworks for AI Governance
+
+### Part 10: Human-in-the-Loop & Integration (5 chapters)
+- 10.1: Conversational UI
+- 10.2: Proactive Agents
+- 10.3A: RLHF Methodology
+- 10.3B: RLHF Pitfalls and Red Teaming
+- 10.4: Human-in-the-Loop
+- 10.5: Human-over-the-Loop
+- 10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)
+
+---
+
 
 ## Part 1, Chapter 1.1A: UI Foundations
 
@@ -445,6 +564,167 @@ Addresses when and how to combine vector RAG with knowledge graph traversal thro
 
 
 ---
+
+## Part 2, Chapter 2.1: Framework Landscape
+
+This chapter provides a systematic decision framework for selecting among five major agent frameworks (LangGraph, LangChain, AutoGen, CrewAI, Semantic Kernel) by analyzing how their control flow models match workflow architectures, state management requirements, and collaboration patterns. Through worked examples and contrastive cases, the chapter teaches readers to evaluate frameworks analytically rather than by popularity, ensuring architectural decisions align with long-term system requirements.
+
+**Key Concepts**:
+- Control Flow Model, LangGraph Graph Architecture, LangChain Linear Execution
+- State Schema, Conditional Routing, Cycle Support
+- Conversation-Driven Coordination, AssistantAgent, UserProxyAgent, Non-Determinism
+- Emergent Behavior, Role-Based Hierarchy, Task Delegation
+- Plugin Architecture, Semantic Functions, Native Functions
+- Kernel Orchestrator, Dynamic Plugin Routing, Plugin Discovery, Dependency Injection
+- Control Flow Complexity, State Management Requirements, Collaboration Patterns
+- Deployment Context, Framework Selection Criteria
+- Hybrid Workflow Pattern, Complex State Requirements, Multi-Round Search Iterations
+- User Feedback Integration, Over-Engineering, Architectural Mismatch
+- Determinism Violation, State Management Limitations, Compliance Requirements
+- Step 1: Control Flow Mapping, Step 2: State Analysis, Step 3: Collaboration Evaluation
+- Step 4: Enterprise Context, Step 5: Non-Functional Requirements, Validation Strategy
+
+**Key Questions**:
+1. What is the fundamental architectural difference between LangGraph's graph-based approach and LangChain's linear execution model?
+2. When should you choose LangGraph over LangChain for an agent project?
+3. How does AutoGen's conversation-driven coordination differ from CrewAI's role-based hierarchical organization?
+4. What are the key advantages and disadvantages of AutoGen's non-deterministic conversational approach?
+5. Why is Semantic Kernel described as an enterprise framework, and when is its complexity justified?
+6. What are the five systematic steps for selecting the appropriate framework for a new agent project?
+7. How can you recognize when framework selection creates an architectural mismatch that actively fights workflow requirements?
+8. What makes LangGraph the appropriate choice for workflows requiring iteration and user feedback integration?
+9. Why might using CrewAI for iterative self-correction workflows lead to implementation challenges?
+10. What role does determinism play in framework selection for compliance-critical applications like financial services?
+
+**Metrics**: Word Count: 4,672, Pages: 16, Complexity: 2/5, Reading Speed: 6.0 pph, Total Hours: 2.7
+
+**Weekly Allocation**: Reading: 1.89 hrs (70%), Active Learning: 0.81 hrs (30%)
+
+**Related Chapters**:
+- Part 1 Chapter 1.2 (Core Patterns foundation)
+- Part 1 Chapter 1.5A (Stateless vs Stateful patterns)
+- Part 1 Chapter 1.5B (State & Control Flow mechanisms)
+- Part 1 Chapter 1.6 (Orchestration scaling principles)
+- Part 2 Chapter 2.2 (LangGraph Deep Dive)
+- Part 2 Chapter 2.3 (LangChain Implementation)
+- Part 2 Chapter 2.4 (MultiAgent framework patterns)
+
+
+## Part 2, Chapter 2.2: LangGraph
+
+LangGraph is a framework for building agentic workflows through explicit graph architecture with nodes as computational units, edges as control flow pathways, and state as shared context. The chapter explores how graph-based design enables iterative refinement, conditional routing, and recovery from failures while establishing when LangGraph's sophistication is justified versus when simpler frameworks better match workflow requirements.
+
+**Key Concepts**:
+- Nodes, Edges, State, Reducers, Cycles
+- State Graph, Thread ID, Checkpointer
+- Routing Functions, Decision Trees, Testability
+- State Snapshots, Workflow Recovery, Time-Travel Debugging
+- Persistence Backends, Checkpoint Overhead
+
+**Key Questions**:
+1. What are the three fundamental components of LangGraph workflows and how do they interact to enable complex control flow?
+2. How do conditional edges enable iterative refinement patterns that would require prompt engineering workarounds in sequential frameworks?
+3. What is the difference between static edges and conditional edges, and when would you use each?
+4. How do state reducers like `add_messages` differ from default overwrite behavior and what patterns do they enable?
+5. Why is explicit state schema definition in LangGraph an advantage compared to implicit state in sequential frameworks?
+6. When is LangGraph's architectural complexity justified, and when does it represent premature optimization?
+7. How does checkpointing enable production reliability for long-running workflows, and what is the latency trade-off?
+8. What would be the code complexity difference between implementing iterative code refinement in LangGraph versus LangChain?
+9. How do routing functions provide testability advantages compared to prompt-based routing in sequential frameworks?
+10. What capabilities does time-travel debugging through checkpoints provide for analyzing and improving workflow behavior?
+
+**Metrics**: Word Count: 3,769, Pages: 13, Complexity: 2/5, Reading Speed: 8.3 pph, Total Hours: 1.6
+
+**Weekly Allocation**: Reading: 1.12 hrs (70%), Active Learning: 0.48 hrs (30%)
+
+**Related Chapters**:
+- Part 1 Chapter 1.1 (Basic Agent Architecture)
+- Part 1 Chapter 1.2 (Core Patterns)
+- Part 1 Chapter 1.5A (Stateful Orchestration)
+- Part 1 Chapter 1.5B (Stateful Orchestration)
+- Part 2 Chapter 2.3 (LangChain Sequential Frameworks)
+- Part 2 Chapter 2.4 (MultiAgent Frameworks)
+- Part 2 Chapter 2.5 (Semantic Kernel)
+- Part 2 Chapter 2.6 (Tool Integration)
+- Part 2 Chapter 2.7 (Multimodal RAG)
+
+
+---
+
+
+## Part 2, Chapter 2.3: LangChain
+
+LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requiring manual loop management, abstracting 150-200 lines of careful code into a single interface. The chapter covers agent types, tool integration patterns, and recognition of when workflows exceed LangChain's linear model and require migration to LangGraph.
+
+**Key Concepts**:
+- AgentExecutor, ReAct Pattern, Agent Scratchpad, Tool Abstraction
+- Zero-Shot ReAct Agent, Conversational ReAct Agent, Chat-Optimized Zero-Shot Agent
+- ConversationBufferMemory, OpenAI Functions Agent, Function-Calling API
+- Tool Description Quality, Graceful Degradation, Iteration Loops Signal
+- Complex State Signal, Conditional Branching Signal, Over-Engineering
+
+**Key Questions**:
+1. What problem does AgentExecutor solve compared to building ReAct loops manually?
+2. Explain the difference between Zero-Shot and Conversational ReAct agents with a concrete example.
+3. Why does tool description quality matter for agent performance?
+4. What is the fundamental limitation of AgentExecutor, and how do you recognize when you've exceeded it?
+5. How does ConversationBufferMemory enable follow-up questions?
+6. What trade-offs come with using the OpenAI Functions agent?
+7. Why is temperature setting to 0 important for agent tool calling?
+8. How does graceful error handling in tools prevent agent failures?
+9. Compare the development burden of LangChain versus LangGraph for a simple question-answering agent.
+10. When should you choose LangChain over LangGraph?
+
+**Metrics**: Word Count: 3,610, Pages: 12, Complexity: 2/5, Reading Speed: 8.3 pph, Total Hours: 1.4
+
+**Weekly Allocation**: Reading: 0.98 hrs (70%), Active Learning: 0.42 hrs (30%)
+
+**Related Chapters**:
+- Part 1 Chapter 1.1A (UI Foundations)
+- Part 1 Chapter 1.2 (Tool Use)
+- Part 1 Chapter 1.3 (Memory Systems)
+- Part 1 Chapter 1.4 (ReAct Pattern)
+- Part 2 Chapter 2.1 (Framework Landscape)
+- Part 2 Chapter 2.2 (LangGraph)
+- Part 2 Chapter 2.4 (Multi-Agent Frameworks)
+
+
+## Part 2, Chapter 2.4: MultiAgent Frameworks
+
+This chapter explores two fundamentally different approaches to multi-agent coordination: AutoGen's message-driven conversational architecture and CrewAI's organizational structure model. It examines the trade-offs between conversational flexibility and reproducibility, along with patterns for composing multi-agent systems with specialized single-agent frameworks.
+
+**Key Concepts**:
+- ConversableAgent, AssistantAgent, UserProxyAgent, Message-Driven Architecture
+- Reply Functions, GroupChat, Non-Determinism Trade-off, State Synchronization Challenge
+- Agent Role Definition, Task Definition, Crew Orchestration, Sequential Process
+- Hierarchical Process, Delegation Mechanism, Role-Based Abstractions, Quality Gates
+- AutoGen Strengths and Weaknesses, CrewAI Strengths and Weaknesses, Pattern Matching Criteria
+- Determinism Versus Flexibility Trade-off, Hybrid Architecture Pattern, Framework Composition Strategy
+
+**Key Questions**:
+1. When should I use AutoGen versus CrewAI for building multi-agent systems?
+2. What are the key trade-offs between AutoGen's conversational coordination and CrewAI's organizational structure?
+3. How do I handle state management and context passing in multi-agent systems?
+4. What are the most common failure modes when integrating multi-agent frameworks with single-agent frameworks?
+5. When should I use hierarchical CrewAI process instead of sequential?
+6. How does AutoGen's message-driven architecture enable capabilities that single-agent frameworks can't achieve?
+7. What observability and debugging strategies should I implement for multi-agent systems?
+8. How should I structure agent roles and capabilities in CrewAI to enable correct delegation?
+9. How do I handle determinism and reproducibility when using AutoGen in production systems?
+10. How should I compose multi-agent frameworks with single-agent frameworks for complex production systems?
+
+**Metrics**: Word Count: 4,377, Pages: 15, Complexity: 2/5, Reading Speed: 7.2 pph, Total Hours: 2.1
+
+**Weekly Allocation**: Reading: 1.47 hrs (70%), Active Learning: 0.63 hrs (30%)
+
+**Related Chapters**:
+- Part 1 Chapter 1.3 (Multi-Agent Systems)
+- Part 2 Chapter 2.1 (Framework Landscape)
+- Part 2 Chapter 2.2 (LangGraph)
+- Part 2 Chapter 2.3 (LangChain)
+- Part 2 Chapter 2.5 (Semantic Kernel)
+- Part 3 Chapter 3 (Optimization and Evaluation)
+
 
 ## Part 2, Chapter 2.5: Semantic Kernel - Enterprise Framework and Plugin Architecture
 
@@ -1214,69 +1494,46 @@ Efficiency metrics measure how effectively agents utilize computational resource
 - Part 2 (evaluation frameworks)
 - Part 1 (core principles)
 - Part 4 (production deployment and scaling)
-, Chapter 4.1: AI Agent Deployment and Scaling Infrastructure
 
-Chapter 4.1 establishes critical infrastructure components enabling production multi-agent systems through message queues, vector databases, observability platforms, and API gateways. The chapter covers architectural patterns for asynchronous communication, semantic search capabilities, comprehensive system monitoring, and centralized traffic management—foundational components supporting deployment at scale.
+## Part 4, Chapter 4.1: AI Agent Deployment and Scaling
+
+This chapter introduces the essential infrastructure and operational practices for deploying and scaling multi-agent systems in production, covering message queue architectures, vector database selection, observability patterns, API gateway implementations, MLOps for agentic systems, and CI/CD pipeline automation.
 
 **Key Concepts**:
-- Asynchronous Communication and Message Queue Brokers
-- RabbitMQ with AMQP-Compliant Routing and Exchanges
-- Kafka as Distributed Log Architecture with Consumer Offsets
-- Exchange Routing, Topic-Based Routing, and Consumer Groups
-- Message Queue Decision Framework
-- Retrieval-Augmented Generation (RAG) Integration
-- Semantic Similarity Search and Vector Embeddings
-- Managed Vector Database Services (Pinecone)
-- HNSW Index and Graph-Based Similarity Search
-- Hybrid Search Combining Semantics with Keywords
-- Metadata Filtering and Hot/Cold Storage Strategy
-- Pull-Based Metrics Architecture (Prometheus)
-- Counter, Gauge, Histogram, and Summary Metrics
-- LLM-Specific Observability Metrics
-- Observability Dashboards and Grafana Visualization
-- Alert Configuration with Sustained Metric Violations
-- API Gateway Pattern and Centralized Entry Points
-- Kong Gateway with 100+ Plugin Ecosystem
-- Plugin Pipeline Architecture and Rate Limiting
-- NGINX Reverse Proxy Performance Characteristics
-- Load Balancing Methods (Round-Robin, Least-Connections, IP Hash)
-- Canary Deployment Pattern with Traffic Gradation
-- Circuit Breaker Pattern and Cascade Failure Prevention
-- Machine Learning Operations (MLOps) for Agents
-- Agentic System Components Beyond Model Weights
-- Behavioral Testing for Multi-Step Reasoning
-- MLflow Registry for Component Versioning
-- Blue-Green Deployment and Feature Flags
-- Continuous Integration with Code Quality Checks
-- Continuous Deployment and Progressive Rollout
-- Docker Multi-Architecture Builds
-- Container Image Security Scanning
+- Message queues (RabbitMQ, Kafka), asynchronous communication, broker-centric vs distributed log architectures, exchange routing, consumer offsets
+- Vector databases (Pinecone, Weaviate, Milvus), semantic similarity search, managed services, HNSW indexing, hybrid search, metadata filtering, hot/cold storage
+- Observability (Prometheus, Grafana), pull-based metrics architecture, counter/gauge/histogram metrics, LLM-specific metrics, alert configuration, dashboards
+- API gateways (Kong, NGINX), centralized entry points, authentication, rate limiting, load balancing, canary deployments, circuit breakers
+- MLOps for agents, component versioning, behavioral testing, blue-green deployment, feature flags, artifact registration, continuous improvement cycles
+- CI/CD pipelines, continuous integration, continuous deployment, code quality checks, multi-stage testing, Docker multi-architecture builds, container security scanning, progressive rollout
 
 **Key Questions**:
-- When should you choose RabbitMQ over Kafka for agent communication?
-- Why do production agentic AI systems require different MLOps practices than traditional machine learning models?
-- What are the trade-offs between Pinecone, Weaviate, and Milvus for vector database deployment?
-- Why does the chapter emphasize comprehensive artifact registration in MLflow during CI/CD, not just container images?
-- How does progressive deployment (canary rollout) reduce production risk compared to traditional all-at-once deployment?
-- What organizational and technical practices enable teams to deploy agentic systems multiple times daily safely?
-- Why do agentic systems require agent-specific observability metrics beyond traditional application monitoring?
-- How does the API gateway architectural pattern improve security and policy enforcement compared to distributed authentication?
-- What specific role does behavioral testing play in CI/CD pipelines for production agent quality assurance?
+1. When should you choose RabbitMQ over Kafka for multi-agent communication, and what are the architectural trade-offs between broker-centric and distributed log approaches?
+2. Why do agentic systems require different MLOps practices than traditional machine learning models, and how does component versioning address this challenge?
+3. What are the deployment trade-offs between Pinecone (managed), Weaviate (open-source), and Milvus (high-performance) for vector database selection?
+4. How does comprehensive artifact registration in MLflow during CI/CD pipelines enable reproducible deployments and instant rollback compared to container images alone?
+5. What specific role does behavioral testing play in CI/CD quality gates, and how does it differ from traditional unit testing for agent systems?
+6. How do progressive deployment strategies (canary rollouts, blue-green) reduce production risk compared to all-at-once deployment approaches?
+7. What agent-specific observability metrics beyond traditional application monitoring (latency, throughput, errors) are essential for detecting behavioral drift and quality degradation?
+8. How does centralized API gateway enforcement improve security and policy management compared to distributed authentication across agent services?
+9. Why do agentic systems require LLM-specific metrics (token usage, cost-per-interaction, conversation turn counts) in addition to infrastructure metrics?
+10. What organizational and technical foundations (automation, versioning, testing, monitoring, safe rollback) enable teams to deploy agent systems multiple times daily safely?
 
 **Metrics**: Word Count: 9,374, Pages: 33, Complexity: 4/5, Reading Speed: 10.2 pph, Total Hours: 3.2
 
-**Weekly Allocation**: Reading: 2.2 hrs (70%), Active Learning: 1.0 hrs (30%)
+**Weekly Allocation**: Reading: 2.24 hrs (70%), Active Learning: 0.96 hrs (30%)
 
 **Related Chapters**:
-- Part 1 (agent fundamentals)
-- Part 2 (framework implementations)
-- Part 3 (evaluation frameworks)
-- Chapter 4.2 (deployment patterns)
-- Chapter 4.3 (container orchestration)
-- Chapter 4.4 (performance profiling)
-- Chapter 4.5 (NVIDIA NIM)
-- Chapter 4.6 (TensorRT-LLM)
-- Chapter 4.7 (scaling strategies)
+- Part 1 Chapter 1.1 (Agent Fundamentals - foundational architectures and reasoning patterns requiring deployment infrastructure)
+- Part 1 Chapter 1.3 (Multi-Agent Coordination - interaction patterns depending on message queue architectures)
+- Part 1 Chapter 1.7 (Memory and Knowledge Systems - architectures informing vector database and state management design)
+- Part 2 Chapter 2.1 (Framework Landscape - capabilities defining service boundaries and orchestration requirements)
+- Part 2 Chapter 2.6 (Tool Integration - configurations and schemas requiring versioning in agentic MLOps)
+- Part 3 Chapter 3.1 (Evaluation Frameworks - methodologies becoming quality gates in CI/CD pipelines)
+- Part 3 Chapter 3.6 (Trace Analysis and Observability - patterns foundation for monitoring infrastructure)
+- Part 4 Chapter 4.2 (Deployment and Scaling - detailed implementation patterns for infrastructure introduced in 4.1)
+- Part 4 Chapter 4.3 (Container Orchestration - Kubernetes deployment depending on 4.1 foundations)
+- Part 4 Chapter 4.4 (Performance Profiling - optimization depending on observability metrics from 4.1)
 
 
 ## Part 4, Chapter 4.2: Deployment & Scaling
@@ -1572,46 +1829,47 @@ Horizontal scaling addresses capacity expansion through creating multiple agent 
 - Chapter 4.1: AI Agent Deployment Introduction (foundational context)
 - Parts 1-3: AI/ML and Agent Foundations (scaling design context)
 - Part 5+: Advanced Agent Systems (multi-agent orchestration)
-, Chapter 5.1: Chain-of-Thought Reasoning
 
-Chain-of-Thought reasoning operates through three fundamentally different implementation approaches (zero-shot, few-shot, Auto-CoT), each serving distinct requirements. CoT provides foundation for agent memory systems by transforming ephemeral reasoning into persistent knowledge. Beyond simple linear chains, Tree and Graph reasoning structures enable hypothesis exploration and insight aggregation. Despite transformative impact, CoT has dangerous misconceptions where post-hoc narratives often diverge from true computational paths.
+## Part 5, Chapter 5.1: Chain-of-Thought Reasoning
+
+This chapter covers Chain-of-Thought (CoT) as the foundational reasoning technique enabling agent memory, planning, and multi-agent coordination through structured intermediate reasoning steps. It explores CoT implementation approaches, integration with agent memory systems, task decomposition, grounding in observable reality, and advanced reasoning architectures.
 
 **Key Concepts**:
-- Chain-of-Thought (CoT), Zero-Shot CoT, Few-Shot CoT, Auto-CoT, Semantic Similarity Clustering, Representativeness Selection
-- Compositionality, System Non-Parametric Short-Term Memory, Consolidation Strategies, Episodic Memory, Retrieval-Augmented Reasoning, Hierarchical Memory Integration
-- Agent-Oriented Task Decomposition, Solvability, Completeness, Non-Redundancy, Dependency Specification, Layered CoT Architectures, Meta-Agent
-- ReAct Framework, Thought-Action-Observation Cycle, Grounding in Observable Reality, Multi-Step Research Workflows, Process of Discovery Documentation
-- Tree of Thoughts (ToT), Hypothesis Exploration, Backtracking, Search Algorithms for ToT, Graph of Thoughts (GoT), Thought Aggregation, Thought Refinement, Thought Generation, Reflection and Refinement, Adaptive Reasoning, Procedural Memory
-- Multi-Agent Consensus and Debate, Consensus Mechanisms, Tiebreaker Logic
-- Complex Multi-Turn Interactions, Coordinated Expertise Requirements, Observable Outcomes, Ambiguous Problems, When CoT Integration Matters, When CoT Fails
-- Explainability Misconception, Silent Error Correction, Position Bias, Compositionality Gap, Hallucination in CoT, Omission Failures, Incompleteness, CoT Coherence vs. Faithfulness, Gaming the Metric, Path Ambiguity
+- Zero-Shot CoT, Few-Shot CoT, Auto-CoT, semantic similarity clustering, representativeness selection, compositionality
+- System non-parametric short-term memory, consolidation strategies, episodic memory, retrieval-augmented reasoning, hierarchical memory integration
+- Agent-oriented task decomposition, solvability, completeness, non-redundancy, dependency specification, layered CoT architectures, meta-agents
+- ReAct framework, Thought-Action-Observation cycles, grounding in observable reality, multi-step research workflows, process of discovery documentation
+- Tree of Thoughts, hypothesis exploration, backtracking, search algorithms for ToT, Graph of Thoughts, thought aggregation, thought refinement, thought generation
+- Reflection and refinement, adaptive reasoning, procedural memory, multi-agent consensus and debate, consensus mechanisms, tiebreaker logic
+- Explainability misconception, silent error correction, position bias, compositionality gap, hallucination, omission failures, incompleteness, optimization gaming, path ambiguity
 
 **Key Questions**:
-1. What is the fundamental difference between how CoT claims to reveal reasoning versus what research shows?
-2. How does Zero-Shot CoT differ from Few-Shot CoT, and when should each be chosen?
-3. What specific design principles govern agent task decomposition into subtasks?
-4. How does ReAct framework improve upon pure Chain-of-Thought reasoning?
-5. What specific failure modes distinguish medical reasoning with CoT from general domains?
-6. How do Tree of Thoughts and Graph of Thoughts extend beyond linear CoT reasoning?
-7. Why does the compositionality gap persist even as models scale to larger sizes?
-8. What does "optimization gaming" mean in the context of CoT systems?
-9. When should CoT integration be applied versus when are simpler approaches sufficient?
-10. How does Silent Error Correction demonstrate that CoT steps don't reflect true computational paths?
+1. What is the fundamental difference between how Chain-of-Thought claims to reveal reasoning versus what research shows about its actual relationship to model computation?
+2. How does Zero-Shot CoT differ from Few-Shot CoT in terms of deployment characteristics, and when should each be chosen?
+3. What specific design principles govern how agents should decompose complex tasks into subtasks, and why does each matter?
+4. How does the ReAct framework specifically improve upon pure Chain-of-Thought reasoning, and what makes grounding in observable reality paradoxically improve reasoning quality?
+5. What specific failure modes distinguish medical reasoning with CoT from general domains, and why do these failure modes prove particularly dangerous?
+6. How do Tree of Thoughts and Graph of Thoughts extend beyond linear Chain-of-Thought reasoning, and what problems does each architecture uniquely solve?
+7. Why does the "compositionality gap" persist even as models scale to larger sizes, and what implications does this have for practitioners expecting scale alone to improve multi-step reasoning?
+8. What does "optimization gaming" mean in the context of CoT systems, and why does optimizing for CoT quality sometimes decrease actual problem-solving performance?
+9. How do layered CoT architectures enable complex multi-agent workflows, and what roles do meta-agents and specialized agents play in orchestrating sophisticated reasoning?
+10. Under what specific problem characteristics does CoT integration matter most, and when should simpler approaches be preferred over architectural complexity?
 
 **Metrics**: Word Count: 9,499, Pages: 33, Complexity: 4/5, Reading Speed: 10.2 pph, Total Hours: 3.2
 
 **Weekly Allocation**: Reading: 2.24 hrs (70%), Active Learning: 0.96 hrs (30%)
 
 **Related Chapters**:
-- Part 1: Foundations (transformer architecture understanding)
-- Part 2: Core Concepts (prompting techniques and instruction engineering)
-- Part 3: Agent Fundamentals (agent architecture and tool usage)
-- Part 4: Advanced Agent Techniques (agent optimization and complexity)
-- Chapter 5.2+: Advanced Reasoning (Tree-of-Thought, Graph-of-Thought extension)
-- Chapter 5.3-5.5: Specialized Reasoning Applications (domain-specific techniques)
-- Chapter 5.6-5.13: Multi-Agent Orchestration (agent coordination patterns)
-- Advanced Memory Systems (CoT traces as memory foundation)
-- Real-Time Reasoning (feedback loops and adaptation)
+- Part 1 Chapter 1.1 (Agent Fundamentals - transformer architecture and neural computation prerequisite for understanding CoT's relationship to actual model processing)
+- Part 1 Chapter 1.2 (Core Patterns - foundational reasoning patterns enhanced by CoT integration)
+- Part 2 Chapter 2.1 (Framework Landscape - framework capabilities that CoT enhances through reasoning and planning)
+- Part 2 Chapter 2.2 (LangGraph - graph-based reasoning structures enabling CoT-driven planning)
+- Part 3 Chapter 3.1 (Evaluation Frameworks - evaluation methodologies applied to CoT reasoning quality)
+- Part 4 Chapter 4.1 (AI Agent Deployment and Scaling - infrastructure supporting production CoT systems)
+- Part 5 Chapter 5.2 (Tree-of-Thought - extends linear CoT with branching hypothesis exploration)
+- Part 5 Chapter 5.3 (Self-Consistency - ensemble reasoning approaches building on CoT foundations)
+- Part 5 Chapter 5.4 (Hierarchical Planning - task decomposition applying CoT patterns)
+- Part 5 Chapters 5.5+ (Advanced Reasoning - complex architectures depending on CoT fundamentals)
 
 ## Part 5, Chapter 5.2: Tree-of-Thought (ToT)
 
@@ -3709,7 +3967,7 @@ This chapter presents the Human-over-the-Loop (HOvL) governance paradigm that ba
 - Chapter 8 (Observability and Anomaly Detection)
 - Chapter 3 (Agent Architecture and Tool Invocation)
 
-## Part 10, Sections 10.12-16: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)
+## Part 10, Sections 10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)
 
 This integration chapter synthesizes five foundational capabilities—feedback integration, calibrated confidence, explainability, controllability, and consistent behavior—that work synergistically to create trustworthy human-AI collaborative systems. It covers feedback pipelines incorporating corrections into both immediate context and parametric knowledge, techniques for aligning stated confidence with actual reliability, explainability mechanisms serving diverse stakeholders, controllability infrastructure preserving human authority, and multi-method drift detection ensuring consistent production performance.
 
