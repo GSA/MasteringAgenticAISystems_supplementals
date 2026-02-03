@@ -1,0 +1,12 @@
+        livenessProbe:  # Detects pod crashes and restarts
+          httpGet:
+            path: /v1/health/live
+            port: 8000
+          initialDelaySeconds: 300  # Wait 5 minutes for model loading
+          periodSeconds: 10         # Check every 10 seconds
+        readinessProbe:  # Determines when pod receives traffic
+          httpGet:
+            path: /v1/health/ready
+            port: 8000
+          initialDelaySeconds: 30   # Quick readiness check after 30s
+          periodSeconds: 5          # Check every 5 seconds

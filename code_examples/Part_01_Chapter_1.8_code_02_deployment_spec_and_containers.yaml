@@ -1,0 +1,25 @@
+spec:
+  replicas: 3  # Initial baseline (HPA will override based on metrics)
+  selector:
+    matchLabels:
+      app: customer-agent
+  template:
+    metadata:
+      labels:
+        app: customer-agent
+      annotations:
+        prometheus.io/scrape: "true"  # Enable Prometheus metrics collection
+        prometheus.io/port: "8002"    # Metrics endpoint
+    spec:
+      containers:
+      - name: agent-nim
+        image: nvcr.io/nvidia/nim/llama-3-8b-instruct:latest
+        resources:
+          requests:
+            nvidia.com/gpu: 1  # Request exactly 1 GPU
+            memory: "16Gi"     # 16GB RAM for model and context
+            cpu: "4"           # 4 CPU cores for preprocessing
+          limits:
+            nvidia.com/gpu: 1  # Limit matches request (guaranteed allocation)
+            memory: "16Gi"
+            cpu: "4"

@@ -1,0 +1,17 @@
+  behavior:  # Fine-tune scaling aggressiveness
+    scaleUp:
+      stabilizationWindowSeconds: 60  # Wait 60s before scaling up
+      policies:
+      - type: Percent
+        value: 50          # Option 1: Increase by 50% of current replicas
+        periodSeconds: 60
+      - type: Pods
+        value: 2           # Option 2: Add 2 pods
+        periodSeconds: 60
+      selectPolicy: Max    # Use whichever adds more capacity
+    scaleDown:
+      stabilizationWindowSeconds: 300  # Wait 5 minutes before scaling down
+      policies:
+      - type: Percent
+        value: 10          # Remove only 10% of current replicas
+        periodSeconds: 60

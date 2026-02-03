@@ -1,0 +1,44 @@
+# nim-alerts.yaml
+groups:
+- name: nim-inference
+  interval: 30s
+  rules:
+  # High latency alert
+  - alert: NIMHighLatency
+    expr: histogram_quantile(0.95, rate(nim_inference_duration_seconds_bucket[5m])) > 2
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "NIM P95 latency above 2 seconds"
+      description: "P95 latency is {{ $value }}s, exceeding 2s threshold"
+
+  # High error rate alert
+  - alert: NIMHighErrorRate
+    expr: rate(nim_inference_errors_total[5m]) / rate(nim_inference_requests_total[5m]) > 0.05
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "NIM error rate above 5%"
+      description: "Error rate is {{ $value | humanizePercentage }}"
+
+  # GPU saturation alert
+  - alert: NIMGPUSaturation
+    expr: nim_gpu_utilization_percent > 95
+    for: 10m
+    labels:
+      severity: warning
+    annotations:
+      summary: "NIM GPU utilization consistently high"
+      description: "GPU utilization at {{ $value }}% for 10+ minutes"
+
+  # Pod crash loop
+  - alert: NIMPodCrashLoop
+    expr: rate(kube_pod_container_status_restarts_total{pod=~"nim-.*"}[15m]) > 0
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "NIM pod in crash loop"
+      description: "Pod {{ $labels.pod }} restarting repeatedly"

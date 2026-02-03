@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: agent-service
+spec:
+  replicas: 10
+  strategy:
+    canary:
+      steps:
+      - setWeight: 10  # Route 10% traffic to v1.3.0
+      - pause: {duration: 30m}  # Monitor for 30 minutes
+      - setWeight: 50
+      - pause: {duration: 30m}
+      - setWeight: 100
+
+      analysis:
+        templates:
+        - templateName: success-rate-check
+        - templateName: latency-check
+        args:
+        - name: service-name
+          value: agent-service

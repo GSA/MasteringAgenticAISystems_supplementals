@@ -1,0 +1,27 @@
+  metrics:
+  # Metric 1: Queue-to-compute ratio (primary - user experience)
+  - type: Pods
+    pods:
+      metric:
+        name: nim_queue_to_compute_ratio_milliunits
+      target:
+        type: AverageValue
+        averageValue: "800"  # Scale up when average > 800 milliunits
+
+  # Metric 2: GPU utilization (secondary - resource efficiency)
+  - type: Pods
+    pods:
+      metric:
+        name: nim_gpu_utilization_percent
+      target:
+        type: AverageValue
+        averageValue: "75"  # Scale up when GPU utilization > 75%
+
+  # Metric 3: Request rate (tertiary - traffic spike detection)
+  - type: Pods
+    pods:
+      metric:
+        name: http_requests_per_second
+      target:
+        type: AverageValue
+        averageValue: "50"  # Scale up when > 50 req/sec per pod

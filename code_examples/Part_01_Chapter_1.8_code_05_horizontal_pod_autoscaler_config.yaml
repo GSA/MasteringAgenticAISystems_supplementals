@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: customer-agent-hpa
+  namespace: production
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: customer-service-agent  # Which deployment to autoscale
+  minReplicas: 3   # Never scale below 3 (baseline capacity + fault tolerance)
+  maxReplicas: 20  # Never scale above 20 (cost control)

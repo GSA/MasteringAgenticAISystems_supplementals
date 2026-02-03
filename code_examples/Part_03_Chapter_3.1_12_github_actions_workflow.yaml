@@ -1,0 +1,57 @@
+name: Agent Evaluation Pipeline
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'src/agent/**'
+      - 'prompts/**'
+      - 'tests/evaluation/**'
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          # TODO: Install your evaluation pipeline dependencies
+          # Consider:
+          # - What packages does your pipeline need?
+          # - Should you cache dependencies for faster runs?
+          # - How to handle API keys securely?
+
+      - name: Run Evaluation Pipeline
+        run: |
+          # TODO: Execute evaluation script
+          # Consider:
+          # - How to pass test dataset path?
+          # - Where to save results for next step?
+          # - How to handle evaluation failures gracefully?
+
+      - name: Comment PR with Results
+        uses: actions/github-script@v6
+        if: always()  # Run even if evaluation fails
+        with:
+          script: |
+            # TODO: Post evaluation results as PR comment
+            # Consider:
+            # - How to format metrics for readability?
+            # - Should you include comparison to baseline?
+            # - How to highlight regressions in red?
+
+      - name: Check Quality Gates
+        run: |
+          # TODO: Fail workflow if metrics regress
+          # Consider:
+          # - What thresholds define "regression"?
+          # - Should some metrics be warnings vs blockers?
+          # - How to communicate why merge is blocked?

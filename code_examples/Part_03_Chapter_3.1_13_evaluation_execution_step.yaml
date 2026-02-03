@@ -1,0 +1,14 @@
+      - name: Run Evaluation Pipeline
+        id: evaluation
+        run: |
+          # Run evaluation and save results to results.json
+          # TODO: Add your evaluation command
+          python scripts/run_evaluation.py \
+            --dataset tests/evaluation/test_dataset.json \
+            --output results.json \
+            --baseline results/baseline_metrics.json
+
+          # TODO: Handle exit codes
+          # Consider:
+          # - Should evaluation errors fail the workflow?
+          # - How to distinguish "metrics regressed" from "pipeline crashed"?

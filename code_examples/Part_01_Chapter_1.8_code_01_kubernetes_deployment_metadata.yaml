@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-service-agent
+  namespace: production
+  labels:
+    app: customer-agent
+    version: v1.0

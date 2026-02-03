@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: success-rate-check
+spec:
+  metrics:
+  - name: success-rate
+    interval: 5m
+    successCondition: result >= 0.90
+    failureLimit: 2
+    provider:
+      prometheus:
+        query: |
+          sum(rate(agent_requests_total{status="success"}[5m]))
+          /
+          sum(rate(agent_requests_total[5m]))

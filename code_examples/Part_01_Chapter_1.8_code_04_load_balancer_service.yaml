@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-agent-service
+  namespace: production
+spec:
+  type: LoadBalancer  # Expose externally (cloud provider provisions LB)
+  selector:
+    app: customer-agent  # Route to pods with this label
+  ports:
+  - name: http
+    port: 80           # External port
+    targetPort: 8000   # Pod's inference port
+    protocol: TCP
+  - name: metrics
+    port: 8002
+    targetPort: 8002
+    protocol: TCP
+  sessionAffinity: None  # Critical: Stateless routing (any pod, any request)
