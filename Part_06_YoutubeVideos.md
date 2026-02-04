@@ -2,8 +2,7 @@
 
 ## Table of Contents
 
-- [Chapter 6.1A - RAG Chunking](#chapter-61a---rag-chunking)
-- [Chapter 6.1C - RAG Implementation](#chapter-61c---rag-implementation)
+- [Chapter 6.1 - RAG Chunking](#chapter-61---rag-chunking)
 - [Chapter 6.2A - Vector Database Selection](#chapter-62a---vector-database-selection)
 - [Chapter 6.2B - Production Vector Database Deployment](#chapter-62b---production-vector-database-deployment)
 - [Chapter 6.3A - ETL Fundamentals](#chapter-63a---etl-fundamentals)
@@ -15,12 +14,11 @@
 - [Chapter 6.5B - Production RAG Practice](#chapter-65b---production-rag-practice)
 - [Chapter 6.6A - Reranking Implementation](#chapter-66a---reranking-implementation)
 - [Chapter 6.6B - Query Decomposition](#chapter-66b---query-decomposition)
-- [Chapter 6.6C - Advanced Retrieval Practice](#chapter-66c---advanced-retrieval-practice)
 
 ---
 
-<a name="chapter-61a---rag-chunking"></a>
-## Chapter 6.1A - RAG Chunking
+<a name="chapter-61---rag-chunking"></a>
+## Chapter 6.1 - RAG Chunking
 
 **Topics:** Embeddings, Vector Search, Hybrid Retrieval, GPU Acceleration, Matryoshka Representation Learning
 
@@ -31,29 +29,6 @@
 ### 5 Levels of Text Splitting for RAG
 - [https://youtu.be/8OJC21T2SL4](https://youtu.be/8OJC21T2SL4) ~45 minutes
 - Covers: Essential chunking strategies
-
-### Attention in Transformers
-- [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc) ~30 minutes
-- Covers: Foundation for embeddings and semantic similarity
-
-### Neural Networks Basics
-- [https://www.youtube.com/watch?v=aircAruvnKk](https://www.youtube.com/watch?v=aircAruvnKk) ~19 minutes
-- Covers: Embedding fundamentals
-
----
-
-<a name="chapter-61c---rag-implementation"></a>
-## Chapter 6.1C - RAG Implementation
-
-**Topics:** Document Chunking, Embedding Generation, Similarity-Based Retrieval, Context-Augmented Generation
-
-### Learn RAG from Scratch
-- [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) Variable
-- Covers: Complete RAG system implementation
-
-### Attention in Transformers
-- [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc) ~30 minutes
-- Covers: Transformer architecture for retrieval
 
 ### RAG+Langchain Python Project
 - [https://www.youtube.com/watch?v=tcqEUSNCn8I](https://www.youtube.com/watch?v=tcqEUSNCn8I) Variable
@@ -67,10 +42,6 @@
 - [https://www.youtube.com/watch?v=fB2JQXEH_94](https://www.youtube.com/watch?v=fB2JQXEH_94) Variable
 - Covers: Integration with agentic systems
 
-### LangChain RAG Tutorial Playlist
-- [https://www.youtube.com/playlist?list=PL8motc6AQftk1Bs42EW45kwYbyJ4jOdiZ](https://www.youtube.com/playlist?list=PL8motc6AQftk1Bs42EW45kwYbyJ4jOdiZ) Playlist
-- Covers: Comprehensive RAG tutorials
-
 ---
 
 <a name="chapter-62a---vector-database-selection"></a>
@@ -81,10 +52,6 @@
 ### Vector Databases Simply Explained
 - [https://www.youtube.com/watch?v=dN0lsF2cvm4](https://www.youtube.com/watch?v=dN0lsF2cvm4) ~10-15 minutes
 - Covers: Overview and database comparison
-
-### Introduction to Vector Database for AI & LLM
-- [https://www.youtube.com/watch?v=f0EcGl9O_Wg](https://www.youtube.com/watch?v=f0EcGl9O_Wg) ~20-30 minutes
-- Covers: Vector database fundamentals
 
 ### Milvus: Cloud-Native Vector Database
 - [https://www.youtube.com/watch?v=75G513Y9rkU](https://www.youtube.com/watch?v=75G513Y9rkU) ~30-45 minutes
@@ -97,6 +64,10 @@
 ### Billion-scale ANN Search
 - [https://www.youtube.com/watch?v=SKrHs03i08Q](https://www.youtube.com/watch?v=SKrHs03i08Q) ~60+ minutes
 - Covers: Academic depth on algorithms
+
+### Hierarchical Navigable Small Worlds (HNSW) Explained
+- [https://www.youtube.com/watch?v=77QH0Y2PYKg&t=289s](https://www.youtube.com/watch?v=77QH0Y2PYKg&t=289s)
+- Covers: how the hierarchical navigable small worlds (HNSW) algorithm works when we want to index vector databases, and how it can speed up the process of finding the most similar vectors in a database to a given query.
 
 ---
 
@@ -118,6 +89,10 @@
 
 Note: Basic ETL concepts are well covered across multiple tutorial channels. See official documentation for platform-specific details.
 
+### Data Engineering Pipeline Fundamentals
+- [https://www.youtube.com/watch?v=uqRRjcsUGgk](https://www.youtube.com/watch?v=uqRRjcsUGgk) Variable
+- Covers: Pipeline fundamentals
+  
 ---
 
 <a name="chapter-63b---etl-load-and-integration"></a>
@@ -133,10 +108,6 @@ Note: Comprehensive tutorials available from James Briggs, freeCodeCamp, and NVI
 ## Chapter 6.3C - ETL Practice
 
 **Topics:** Incremental Updates, Streaming ETL, Custom Chunking
-
-### Data Engineering Pipeline Fundamentals
-- [https://www.youtube.com/watch?v=uqRRjcsUGgk](https://www.youtube.com/watch?v=uqRRjcsUGgk) Variable
-- Covers: Pipeline fundamentals
 
 ### LangChain RAG Build and Deploy
 - [https://youtu.be/EhlPDL4QrWY](https://youtu.be/EhlPDL4QrWY) Variable
@@ -212,23 +183,15 @@ Note: Practical RAG implementation patterns available from Pinecone Learning Hub
 
 **Topics:** Query Decomposition, Adaptive Retrieval, Query Routing
 
-### RAG From Scratch - Query Decomposition
-- [https://youtube.com/watch?v=h0OPWlEOank](https://youtube.com/watch?v=h0OPWlEOank) Variable
-- Covers: Query decomposition techniques
+### Query Expansion, Decomposition & HyDE Explained
+- [https://www.youtube.com/watch?v=avn3KsiPK8Y](https://www.youtube.com/watch?v=avn3KsiPK8Y)
+- Covers: Query Expansion, Query Decomposition, HyDE (Hypothetical Document Embeddings) <-- use carefully
 
-### RAG From Scratch Playlist
-- [https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) Playlist
-- Covers: Comprehensive RAG implementations
+### Break Down Complex Questions with Query Decomposition
+- [https://www.youtube.com/watch?v=kR4pVvBnOII](https://www.youtube.com/watch?v=kR4pVvBnOII)
+- Covers: query decomposition.
 
-### 5 Levels Text Splitting
-- [https://youtu.be/8OJC21T2SL4?t=1933](https://youtu.be/8OJC21T2SL4?t=1933) ~45 minutes
-- Covers: Query and chunk optimization
+### Logical vs. Semantic Routing:- A Deep Dive into RAG Query Routing
+- [https://www.youtube.com/watch?v=h856O8ly7mE](https://www.youtube.com/watch?v=h856O8ly7mE)
+- Covers: how to direct user queries to the most appropriate data sources or processing chains
 
----
-
-<a name="chapter-66c---advanced-retrieval-practice"></a>
-## Chapter 6.6C - Advanced Retrieval Practice
-
-**Topics:** Two-stage Retrieval, Cross-encoders, Hybrid Search, Production
-
-Note: Advanced retrieval practices well covered by James Briggs (Aurelio AI), Sam Witteveen (Red Dragon AI), and Krish Naik. See DeepLearning.AI courses on advanced RAG, Building and Evaluating Advanced RAG, and Knowledge Graphs for RAG. Weights & Biases offers RAG++ course. DataCamp provides "Build RAG Systems with LangChain" course. Elasticsearch Labs has resources on cross-encoder reranking.
