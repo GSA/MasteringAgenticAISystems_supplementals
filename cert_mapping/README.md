@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder contains detailed mappings between chapters in the **"Mastering Agentic AI Systems"** study material and knowledge items across five major AI/ML certifications:
+**"Mastering Agentic AI Systems"** is a comprehensive study material covering agentic AI systems, from fundamentals through advanced production deployment. While originally designed to provide comprehensive support for the **NVIDIA NCP-AAI (NVIDIA Certified Associate AI)** certification, the breadth and depth of this material make it a valuable resource for preparation across multiple major AI and cloud certifications:
 
 - **NVIDIA NCP-AAI** (NVIDIA Certified Associate AI)
 - **AWS AIP-C01** (AWS Certified: AI Practitioner)
@@ -10,29 +10,41 @@ This folder contains detailed mappings between chapters in the **"Mastering Agen
 - **Google Cloud Professional Machine Learning Engineer (PMLE)**
 - **Microsoft AI-102** (Azure AI Engineer Associate)
 
-## Design Philosophy
-
-The chapters in this study material were **originally designed to comprehensively support the NVIDIA NCP-AAI certification**. However, the breadth and depth of content have been structured to provide valuable preparation for pursuing other major cloud and AI certifications as well.
+This folder contains detailed mappings showing how study chapters align with knowledge items for each certification, enabling learners to identify which chapters provide comprehensive preparation for their target credential.
 
 ## Understanding the Mappings
 
-### Knowledge Item Relevance Levels
+### How This Resource Is Structured
 
-Each mapping file (`.csv`) indicates how chapter content aligns with specific certification knowledge items:
+Each certification mapping file (`.csv`) indicates how chapter content aligns with specific certification knowledge items using a four-level relevance scale:
 
-| Level | Symbol | Meaning |
-|-------|--------|---------|
-| **H** | Highly Relevant | Mastering this chapter content directly prepares you for questions requiring this knowledge item. The chapter provides comprehensive coverage. |
-| **M** | Moderate | The chapter provides supplementary content. Combined with other chapters, it contributes to mastery of the knowledge item. |
-| **L** | Low | The chapter contains tangential or minimal relevant content for this knowledge item. |
-| **N** | Not Relevant | The chapter does not address this knowledge item. |
+| Level | Meaning |
+|-------|---------|
+| **H** (Highly Relevant) | Mastering this chapter content directly prepares you for questions requiring this knowledge item. The chapter provides comprehensive coverage of the concept. |
+| **M** (Moderate) | The chapter provides supplementary content. Combined with other chapters, it contributes meaningfully to mastery of this knowledge item. |
+| **L** (Low) | The chapter contains tangential or minimal relevant content for this knowledge item. |
+| **N** (Not Relevant) | The chapter does not address this knowledge item. |
 
-## Chapter Coverage Summary
+### Detailed Results by Certification
 
-The following table shows which chapters contain **highly relevant content (H)** for each certification. A 🟢 indicates that the chapter has one or more "H" ratings for that certification's knowledge items.
+The detailed mapping results are available in the CSV files within this folder. Each file lists all chapters and shows exactly which knowledge items receive "H", "M", "L", or "N" ratings:
 
-| Chapter | NVIDIA NCP-AAI | AWS AIP-C01 | Databricks GenAI | Google PMLE | Microsoft AI-102 |
-|---------|---|---|---|---|---|
+- **`nvidia_NCP-AAI.csv`** – Full mapping of 94 chapters to 53 NVIDIA knowledge items
+- **`aws_AIP-C01.csv`** – Full mapping of 94 chapters to AWS Certified AI Practitioner knowledge areas
+- **`databricks_genAI_EngAsc.csv`** – Full mapping of 93 chapters to 54 Databricks skills
+- **`google_PMLE.csv`** – Full mapping of 93 chapters to 36 Google Cloud ML Engineer knowledge items
+- **`microsoft_AI-102.csv`** – Full mapping of 93 chapters to Azure AI-102 certification knowledge
+
+Open these files to see the complete alignment for each chapter-knowledge item pair.
+
+## Chapter Coverage by Certification
+
+The table below provides a quick reference showing which chapters contain **highly relevant content (H)** for each certification. A 🟢 indicates the presence of one or more "H" ratings for that certification's knowledge items.
+
+<div style="overflow-x: auto;">
+
+| <div style="width: 80px; text-align: center;">Chapter</div> | <div style="width: 100px; text-align: center;">NVIDIA NCP-AAI</div> | <div style="width: 100px; text-align: center;">AWS AIP-C01</div> | <div style="width: 120px; text-align: center;">Databricks GenAI</div> | <div style="width: 110px; text-align: center;">Google PMLE</div> | <div style="width: 120px; text-align: center;">Microsoft AI-102</div> |
+|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1.1A | 🟢 | 🟢 | 🟢 | - | 🟢 |
 | 1.1B | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 1.2 | 🟢 | 🟢 | - | 🟢 | 🟢 |
@@ -53,7 +65,6 @@ The following table shows which chapters contain **highly relevant content (H)**
 | 2.7 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 2.8 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 2.9 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 3.10 | 🟢 | 🟢 | - | 🟢 | - |
 | 3.1A | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 3.1B | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 3.1C | 🟢 | 🟢 | - | 🟢 | 🟢 |
@@ -65,6 +76,7 @@ The following table shows which chapters contain **highly relevant content (H)**
 | 3.7 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 3.8 | 🟢 | 🟢 | - | 🟢 | - |
 | 3.9 | 🟢 | 🟢 | - | 🟢 | 🟢 |
+| 3.10 | 🟢 | 🟢 | - | 🟢 | - |
 | 4.2 | 🟢 | 🟢 | - | 🟢 | - |
 | 4.3 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 4.4 | 🟢 | 🟢 | - | 🟢 | 🟢 |
@@ -72,24 +84,24 @@ The following table shows which chapters contain **highly relevant content (H)**
 | 4.6 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 4.7 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 5.1 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 5.9 | 🟢 | 🟢 | - | - | 🟢 |
-| 5.10 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 5.11 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 5.12 | 🟢 | 🟢 | 🟢 | - | 🟢 |
-| 5.13 | 🟢 | 🟢 | 🟢 | - | 🟢 |
 | 5.2 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 5.3 | 🟢 | 🟢 | - | 🟢 | 🟢 |
 | 5.4 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 5.5 | 🟢 | 🟢 | 🟢 | - | 🟢 |
-| 5.6 | 🟢 | 🟢 | - | - | 🟢 |
-| 5.7 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 5.8 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 6.1A | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 5.5 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 5.6 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 5.7 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 5.8 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 5.9 | 🟢 | 🟢 | - | - | 🟢 |
+| 5.10 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 5.11 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 5.12 | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 5.13 | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 6.1A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.1C | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.2A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.2B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.3A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 6.3B | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 6.3B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.3C | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.4A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.4B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
@@ -97,122 +109,184 @@ The following table shows which chapters contain **highly relevant content (H)**
 | 6.5B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.6A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 6.6B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 6.6C | 🟢 | 🟢 | - | 🟢 | 🟢 |
+| 6.6C | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 7.1A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 7.1B | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 7.2A | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 7.2B | 🟢 | 🟢 | - | 🟢 | - |
-| 7.3 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 7.4 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 7.5 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 7.6 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 8.1 | 🟢 | 🟢 | - | 🟢 | - |
-| 8.2A | 🟢 | 🟢 | - | 🟢 | - |
+| 7.1B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 7.2A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 7.2B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 7.3 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 7.4 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 7.5 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 7.6 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 8.1 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 8.2A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 8.2B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 8.3 | 🟢 | 🟢 | - | 🟢 | - |
-| 8.4 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 9.1 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 9.7 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 9.8 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 9.16 | 🟢 | - | - | - | - |
-| 9.17 | 🟢 | - | - | - | - |
-| 9.2 | 🟢 | 🟢 | - | - | 🟢 |
-| 9.3 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 9.4 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 9.5 | 🟢 | 🟢 | - | 🟢 | 🟢 |
-| 10.3A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 10.3B | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 8.3 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 8.4 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 9.1 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 9.2 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 9.3 | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 9.4 | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 9.5 | 🟢 | 🟢 | 🟢 | - | 🟢 |
 | 9.6 | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 9.7 | 🟢 | 🟢 | 🟢 | - | 🟢 |
+| 9.8 | 🟢 | 🟢 | 🟢 | - | 🟢 |
 | 10.1 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 10.2 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 10.3A | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 10.3B | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 10.4 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 | 10.5 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
-| 4.1 | - | 🟢 | - | 🟢 | 🟢 |
-| 10.6 | - | 🟢 | 🟢 | 🟢 | 🟢 |
+| 10.6 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
 
+</div>
 
 ## Using These Mappings
 
-### For NVIDIA NCP-AAI Candidates
-The complete study material is designed to provide comprehensive coverage of all knowledge domains required for the NVIDIA NCP-AAI examination. All chapters have been reviewed for relevance to this certification.
+### If You're Pursuing NVIDIA NCP-AAI
+The complete study material provides comprehensive coverage of all NVIDIA knowledge items. The design philosophy centers on this certification, so all chapters contribute meaningfully to your preparation.
 
-### For Other Certification Candidates
-The presence of 🟢 indicators for other certifications suggests that chapters with high relevance can supplement your certification preparation. Consider:
+### If You're Preparing for Other Certifications
+Use the table above to identify chapters with 🟢 indicators for your target certification. Combine these with chapters showing "M" (Moderate) ratings in the detailed CSV files to build a complete study plan. This allows you to leverage existing material while identifying exactly which sections are most relevant to your goals.
 
-1. **Primary Focus**: Focus on chapters with 🟢 indicators for your target certification
-2. **Supplementary Learning**: Review chapters with M (Moderate) ratings to fill knowledge gaps
-3. **Cross-Certification Value**: The breadth of the material allows candidates to prepare for multiple certifications simultaneously
+### Building Your Study Plan
 
-### Study Strategy
-
-1. **Identify Your Target Certification**: Locate your certification in the table
-2. **Prioritize High-Relevance Chapters**: Start with chapters marked with 🟢
-3. **Review Knowledge Items**: Cross-reference with the detailed `.csv` files to understand which specific knowledge items each chapter addresses
-4. **Plan Your Study Path**: Use the M ratings to identify supplementary chapters that enhance your preparation
-
-## File Structure
-
-- **`nvidia_NCP-AAI.csv`** - Maps 93 study chapters to 53 NVIDIA NCP-AAI knowledge items
-- **`aws_AIP-C01.csv`** - Maps 94 study chapters to AWS Certified AI Practitioner knowledge areas
-- **`databricks_genAI_EngAsc.csv`** - Maps 93 study chapters to 54 Databricks GenAI Engineer Associate skills
-- **`google_PMLE.csv`** - Maps 93 study chapters to 36 Google Cloud ML Engineer knowledge items
-- **`microsoft_AI-102.csv`** - Maps 93 study chapters to Azure AI-102 certification knowledge
-
-Each CSV file contains:
-- **First column**: Chapter identifiers from the study material
-- **Remaining columns**: Knowledge items/skills from each certification
-- **Cell values**: H (Highly relevant), M (Moderate), L (Low), or N (Not relevant)
+1. **Identify your target certification** in the table above
+2. **Prioritize chapters with 🟢** indicators for high-relevance material
+3. **Consult the detailed CSV files** to understand which specific knowledge items each chapter addresses
+4. **Plan supplementary study** using chapters with "M" ratings to fill knowledge gaps
+5. **Leverage cross-certification coverage** to prepare for multiple credentials simultaneously
 
 ## Certification Profiles
 
-### NVIDIA NCP-AAI
-**Focus**: AI Fundamentals, Generative AI, and Prompt Engineering
-- **Alignment**: Primary certification target
-- **Breadth**: 53 knowledge items across core AI/ML competencies
-- **Study Material Coverage**: Comprehensive and complete
+### NVIDIA NCP-AAI – Comprehensive Coverage
 
-### AWS Certified AI Practitioner (AIP-C01)
-**Focus**: AWS services for AI/ML and generative AI applications
-- **Alignment**: Strong alignment on foundational AI concepts and practical applications
-- **Breadth**: Coverage of cloud-native AI implementation patterns
+The **NVIDIA Certified Associate AI** certification validates foundational knowledge in AI principles and practices. This study material was designed from the ground up to support NVIDIA's certification objectives.
 
-### Databricks Generative AI Engineer Associate
-**Focus**: Building GenAI applications using Databricks platform
-- **Alignment**: Strong alignment on LLM applications, RAG, and MLOps
-- **Breadth**: 54 practical engineering skills
+**Exam Focus:** AI fundamentals, large language models, agentic AI systems, and practical implementation patterns
 
-### Google Cloud Professional Machine Learning Engineer (PMLE)
-**Focus**: ML solutions on Google Cloud Platform
-- **Alignment**: Coverage of ML fundamentals and cloud engineering practices
-- **Breadth**: 36 knowledge items focused on GCP-specific implementations
+**Relevant Skills:** 53 knowledge items across all core competencies
+- AI and agentic fundamentals
+- Prompt engineering and model interaction
+- Retrieval-Augmented Generation (RAG)
+- Safety, governance, and responsible AI
+- Production deployment and scaling patterns
 
-### Microsoft AI-102 (Azure AI Engineer Associate)
-**Focus**: Building AI solutions with Azure services
-- **Alignment**: Strong alignment on practical AI implementation and Azure services
-- **Breadth**: Azure-specific AI engineering skills and services
+**Content Alignment:** This material provides direct, comprehensive coverage across all NVIDIA knowledge areas, making it an ideal primary resource for certification preparation.
 
-## How to Use This Repository
+### AWS Certified AI Practitioner (AIP-C01) – Strong Foundation
 
-1. **Select Your Certification**: Identify your target certification from the summary table
-2. **Review Relevant Chapters**: Chapters with 🟢 indicators are highly aligned with your certification
-3. **Consult Detailed Mappings**: Open the corresponding `.csv` file for detailed knowledge item alignment
-4. **Create Your Study Plan**: Combine high-relevance and moderate-relevance chapters for comprehensive preparation
-5. **Track Progress**: Use the mappings to track which knowledge areas you've covered
+The **AWS Certified: AI Practitioner** exam validates the ability to develop, deploy, and manage AI/ML solutions on AWS infrastructure.
+
+**Exam Focus:** AI services and platforms on AWS, generative AI application development, and cloud-native ML practices
+
+**Key AWS Services Covered in Related Context:**
+- Amazon Bedrock for foundation models
+- Amazon SageMaker for ML workflows
+- Generative AI services and LLM deployment
+- AI governance and responsible practices
+
+**Content Alignment:** Chapters 1-6 and 7-10 provide strong foundational knowledge that transfers directly to AWS context. The material's focus on agentic systems and practical AI implementation aligns well with AWS certification objectives. Supplement with AWS-specific service documentation for service-level details.
+
+### Databricks Generative AI Engineer Associate – Practical Engineering Focus
+
+The **Databricks Generative AI Engineer Associate** certification validates the ability to build, evaluate, and deploy generative AI applications on the Databricks platform.
+
+**Exam Focus:** Building GenAI applications, RAG implementation, LLM evaluation and optimization, and MLOps for generative AI
+
+**Key Databricks Skills Covered:**
+- **Design Applications:** Prompt engineering, model selection, tool integration (Skills 1.1-1.5)
+- **Data Preparation:** Document chunking, RAG data preparation, retrieval optimization (Skills 2.1-2.9)
+- **Application Development:** LLM guardrails, prompt optimization, agent framework usage (Skills 3.1-3.15)
+- **Deployment:** Model registration, endpoint serving, vector search implementation (Skills 4.1-4.12)
+- **Governance:** Data masking, content safety, legal/licensing compliance (Skills 5.1-5.5)
+- **Evaluation & Monitoring:** Model evaluation, inference logging, cost optimization (Skills 6.1-6.8)
+
+**Content Alignment:** Chapters 5-10 (especially Chapters 5-6 on RAG, Chapters 7-10 on governance and deployment) provide highly relevant material. Combine with hands-on Databricks platform experience for complete preparation.
+
+### Google Cloud Professional Machine Learning Engineer (PMLE) – Cloud ML Ecosystem
+
+The **Google Cloud Professional Machine Learning Engineer** exam validates expertise in designing and building ML solutions on Google Cloud Platform.
+
+**Exam Focus:** Low-code/no-code ML solutions, ML pipeline development, model serving, and GCP-specific ML services
+
+**Key GCP ML Competencies:**
+- **Low-code Solutions:** BigQuery ML, Vertex AI, AutoML, foundation model integration
+- **Data Management:** Data exploration, governance, quality monitoring
+- **Model Development:** TensorFlow, PyTorch, distributed training with GCP services
+- **Serving & Scaling:** Model deployment, online/batch prediction, performance optimization
+- **Pipeline Automation:** Vertex AI Pipelines, orchestration, CI/CD for ML
+- **Monitoring:** Model and data drift detection, explainability, performance tracking
+
+**Content Alignment:** Chapters 1-6 provide strong conceptual foundations applicable to GCP's ML ecosystem. Chapters 7-10 on deployment patterns and governance align with GCP's MLOps practices. Supplement with GCP-specific service documentation for platform-level implementation details.
+
+### Microsoft Azure AI-102 – Comprehensive Azure AI Services
+
+The **Microsoft Azure AI Engineer Associate (AI-102)** certification validates the ability to design and implement solutions using Azure's comprehensive AI services.
+
+**Exam Focus:** Azure Cognitive Services, generative AI solutions, vision and NLP, responsible AI implementation
+
+**Key Azure AI Knowledge Areas:**
+- **AI Service Planning:** Resource selection and deployment for generative, vision, and NLP solutions
+- **Generative AI:** Azure OpenAI, Foundry Models, prompt engineering, RAG patterns
+- **Agent Development:** Creating intelligent agents with Azure Agent Service and frameworks
+- **Computer Vision:** Image analysis, object detection, custom vision models
+- **Natural Language Processing:** Text analysis, speech services, custom language models
+- **Knowledge Mining:** Azure AI Search, Document Intelligence, semantic and vector search
+- **Responsible AI:** Content moderation, safety, bias detection, explainability
+
+**Content Alignment:** Chapters throughout the material—especially Chapters 1-6 (fundamentals, prompt engineering, RAG), Chapters 7-8 (optimization and deployment), and Chapters 9-10 (safety and governance)—provide strong preparation. Combine with hands-on Azure service experience for comprehensive mastery.
+
+## File Structure
+
+This folder contains:
+
+- **CSV Mapping Files** – Detailed chapter-to-knowledge-item alignments (H/M/L/N ratings)
+- **Study Guides** – Markdown and PDF references for each certification
+- **README.md** – This file
+
+Each CSV file has:
+- **First column:** Chapter identifiers from the study material
+- **Remaining columns:** Knowledge items/skills for that certification
+- **Cell values:** H (Highly relevant), M (Moderate), L (Low), or N (Not relevant)
+
+## Recommended Workflows
+
+**Multi-Certification Strategy**
+If pursuing multiple certifications simultaneously:
+1. Start with core chapters (1-6) for shared foundational knowledge
+2. Use the table above to identify chapters highly relevant to all your target certs
+3. Then branch into specialization chapters for each certification
+4. Finally, address gaps using moderate-relevance chapters specific to each cert
+
+**Single-Certification Focus**
+1. Identify your target certification
+2. Study chapters with 🟢 indicators
+3. Review chapters with M ratings for supplementary preparation
+4. Reference the detailed CSV file for exact knowledge item coverage
+
+**Baseline Assessment**
+Use the CSV files to create a self-assessment mapping your current knowledge against each certification's requirements.
 
 ## Version Information
 
-- **Study Material**: Mastering Agentic AI Systems
-- **Total Chapters**: 93 core chapters (96 with variations)
-- **Certifications Mapped**: 5
-- **Last Updated**: February 2025
-- **Mapping Methodology**: Manual review and expert assessment of chapter-to-knowledge-item alignment
+- **Study Material:** Mastering Agentic AI Systems (10 parts, 93+ chapters)
+- **Certifications Mapped:** 5 major AI certifications
+- **Total Chapters:** 94 (including variations)
+- **Last Updated:** February 2025
+- **Mapping Methodology:** Expert assessment of chapter-to-knowledge-item alignment
 
-## Support and Updates
+## Important Notes
 
-These mappings are maintained to ensure accuracy and relevance. As certifications evolve and new chapters are added, these mappings will be updated accordingly.
+While this study material provides strong preparation for all five certifications, official certification preparation should include:
 
-For questions about specific chapter mappings or certification alignment, refer to the detailed CSV files in this folder.
+- Official exam guides and skill outlines from certification providers
+- Practice exams and sample questions
+- Hands-on experience with relevant platforms and tools
+- Current documentation for platform-specific services
+
+This resource optimizes your study path by connecting conceptual knowledge to specific certification objectives.
 
 ---
 
-**Note**: While this study material provides strong preparation for all five certifications, candidates should supplement their preparation with official certification guides and practice exams from each certification provider.
+For detailed knowledge item alignments, review the corresponding `.csv` files in this folder.
