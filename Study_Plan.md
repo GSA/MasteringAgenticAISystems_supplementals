@@ -119,6 +119,9 @@ This study plan provides structured guidance for mastering all 86 theory chapter
 
 This chapter establishes the fundamental differences between traditional application UIs and agent UIs by centering on agent autonomy. Agents make independent decisions with real-world consequences, creating unique design challenges where users transition from operators to overseers. The chapter introduces foundational principles (progressive disclosure, transparency, control, error communication, context awareness) and UI patterns (chat, command palette, approval workflows) that form the basis for building trustworthy agent interfaces.
 
+**Weekly Allocation**: Reading: 3.36 hrs | Active Learning: 1.44 hrs
+Total Hours: 4.8 (3.36 hrs reading, 1.44 hrs active learning)
+
 **Key Concepts**:
 - Autonomy, Transparency, Human Oversight, Trust Equation, Decision Reviewer Role
 - Approval Mechanisms, Cognitive Limits, System Abandonment
@@ -145,9 +148,7 @@ This chapter establishes the fundamental differences between traditional applica
 9. How does context awareness contribute to users' ability to trust agent responses?
 10. What is "approval fatigue" and how do you prevent it?
 
-**Metrics**: Word Count: 8,314, Pages: 29, Complexity: 4/5, Reading Speed: 6.0 pph, Total Hours: 4.8
-
-**Weekly Allocation**: Reading: 3.36 hrs (70%), Active Learning: 1.44 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1Vtz-NDYQN8m7EyvXgdAIgGgiME9lhT7xAI5vQpC58wI/viewform?usp=sharing)
 
 **Related Chapters**:
 - 1.1B (Human-in-the-Loop Patterns)
@@ -156,6 +157,10 @@ This chapter establishes the fundamental differences between traditional applica
 - Part 3 (Deployment & Infrastructure)
 
 
+
+
+✅ [Take Chapter 1.1A quiz](https://docs.google.com/forms/d/1f5hdiT-njPf2bHPe5sYux80xSvWbwpOhM9mNCXhgzG0/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -163,6 +168,9 @@ This chapter establishes the fundamental differences between traditional applica
 ## Part 1, Chapter 1.1B: Human-in-the-Loop Patterns and Accessible Design
 
 This chapter addresses the fundamental challenge of autonomous agent systems by calibrating human intervention to match decision risk. It establishes three core control patterns (notification, approval, monitoring) distributed across a spectrum, provides decision frameworks for pattern selection, and introduces WCAG-based accessible design ensuring all users can interact effectively with approval workflows and agent systems.
+
+**Weekly Allocation**: Reading: 1.26 hrs | Active Learning: 0.54 hrs
+Total Hours: 1.8 (1.26 hrs reading, 0.54 hrs active learning)
 
 **Key Concepts**:
 - Control Spectrum, Notification Pattern, Approval Pattern, Monitoring Pattern
@@ -190,15 +198,17 @@ This chapter addresses the fundamental challenge of autonomous agent systems by 
 8. Why is semantic HTML important for both accessibility and general user experience?
 9. What are the four WCAG principles and how do they apply to agent UIs?
 
-**Metrics**: Word Count: 4,261, Pages: 15, Complexity: 2/5, Reading Speed: 8.3 pph, Total Hours: 1.8
-
-**Weekly Allocation**: Reading: 1.26 hrs (70%), Active Learning: 0.54 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1tPuC_SNCaqDEZgX2802NJARqIlCh4JkzIf9FDpzoqdY/viewform?usp=sharing)
 
 **Related Chapters**:
 - 1.1A (UI Foundations)
 - Part 2 (Implementation Bridge)
 - Part 10 (Production HITL Systems)
 
+
+
+
+✅ [Take Chapter 1.1B quiz](https://docs.google.com/forms/d/1-5k4PsaJvEVD8q1SrMdsW4DKVlwGFAH5tVL_UISSzYc/viewform?usp=sharing)
 
 ---
 
@@ -207,6 +217,9 @@ This chapter addresses the fundamental challenge of autonomous agent systems by 
 ## Part 1, Chapter 1.2: Core Patterns
 
 This chapter explores four fundamental agent reasoning patterns—ReAct (Reasoning + Action), Plan-and-Execute (Hierarchical Task Decomposition), Reflection (Self-Critique and Iterative Refinement), and Tool-Use Architecture—examining their strengths, limitations, and production applicability. The chapter emphasizes evidence-based pattern selection over assumptions, exposing common misconceptions and providing clear guidance on when each pattern optimizes performance versus when they create unnecessary cost and complexity.
+
+**Weekly Allocation**: Reading: 2.52 hrs | Active Learning: 1.08 hrs
+Total Hours: 3.6 (2.52 hrs reading, 1.08 hrs active learning)
 
 **Key Concepts**:
 - Thought Phase, Action Phase, Observation Phase, Explicit Reasoning Traces
@@ -233,9 +246,7 @@ This chapter explores four fundamental agent reasoning patterns—ReAct (Reasoni
 7. What strategies prevent hallucinated reasoning in Reflection?
 8. Design an architecture for a customer service refund agent combining multiple patterns effectively.
 
-**Metrics**: Word Count: 7,413, Pages: 26, Complexity: 3/5, Reading Speed: 7.2 pph, Total Hours: 3.6
-
-**Weekly Allocation**: Reading: 2.52 hrs (70%), Active Learning: 1.08 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1tfLakO_xSTnJkSjc2QmJix25sYrrSXY2vSN1EkaixaI/viewform?usp=sharing)
 
 **Related Chapters**:
 - 1.1A (UI Foundations context)
@@ -245,6 +256,10 @@ This chapter explores four fundamental agent reasoning patterns—ReAct (Reasoni
 - Part 10 (Production Deployment)
 
 
+
+
+✅ [Take Chapter 1.2 quiz](https://docs.google.com/forms/d/1iDO8NO3rtYwJ8lCOQmDR397PPs4sXeS_q7eJaD9jaGM/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -252,6 +267,9 @@ This chapter explores four fundamental agent reasoning patterns—ReAct (Reasoni
 ## Part 1, Chapter 1.3: Multi-Agent Systems
 
 This chapter addresses the fundamental challenge of coordinating multiple autonomous agents toward shared or competing objectives. It examines collaborative paradigms using specialized agents with shared goals, competitive systems applying game-theoretic principles, swarm intelligence emerging from simple local rules, communication mechanisms (message passing, shared memory, event-driven, API-based), and orchestration patterns (centralized, decentralized, hierarchical, federated) with explicit failure modes and selection criteria for each approach.
+
+**Weekly Allocation**: Reading: 5.11 hrs | Active Learning: 2.19 hrs
+Total Hours: 7.3 (5.11 hrs reading, 2.19 hrs active learning)
 
 **Key Concepts**:
 - Agent Specialization, Peer-to-Peer Interaction, Communication Protocols
@@ -290,9 +308,7 @@ This chapter addresses the fundamental challenge of coordinating multiple autono
 9. What is a circuit breaker and why is it essential in multi-agent systems?
 10. How does federated orchestration differ from hierarchical orchestration?
 
-**Metrics**: Word Count: 12,485, Pages: 44, Complexity: 5/5, Reading Speed: 6.0 pph, Total Hours: 7.3
-
-**Weekly Allocation**: Reading: 5.11 hrs (70%), Active Learning: 2.19 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1D6ORbJJbJGzyygA-fgn-TNFqpmhG4U_Wz1sgAIyrK_0/viewform?usp=sharing)
 
 **Related Chapters**:
 - 1.1A (UI Foundations)
@@ -303,6 +319,10 @@ This chapter addresses the fundamental challenge of coordinating multiple autono
 - Part 2 (Framework Implementations)
 
 
+
+
+✅ [Take Chapter 1.3 quiz](https://docs.google.com/forms/d/1FVLdeDLl39rCA0w7rm3qRT4SEH6-o3zYhXwVrI1D7Zo/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -310,6 +330,9 @@ This chapter addresses the fundamental challenge of coordinating multiple autono
 ## Part 1, Chapter 1.4: Memory & Perception
 
 This chapter establishes the architectural foundation for agent cognition through memory and perception systems. It distinguishes between short-term working memory (context window) and long-term systems (semantic, episodic, procedural), introduces perception pipeline stages, and addresses critical integration challenges including the vector store misconception, temporal synchronization, context degradation, and the "lost in the middle" effect. The chapter emphasizes that proper memory-perception integration enables context-aware agent behavior essential for production systems.
+
+**Weekly Allocation**: Reading: 0.7 hrs | Active Learning: 0.3 hrs
+Total Hours: 1.0 (0.7 hrs reading, 0.3 hrs active learning)
 
 **Key Concepts**:
 - Short-Term Memory, Long-Term Memory, Semantic Memory
@@ -335,9 +358,7 @@ This chapter establishes the architectural foundation for agent cognition throug
 7. How does integration of memory and perception enable resolution of "the same problem as before"?
 8. How does hierarchical context management prevent the context degradation problem?
 
-**Metrics**: Word Count: 2,697, Pages: 9, Complexity: 1/5, Reading Speed: 9.5 pph, Total Hours: 1.0
-
-**Weekly Allocation**: Reading: 0.7 hrs (70%), Active Learning: 0.3 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1FRP4086_QwTHPCIE60hjFuzTLidSSm1Yj-IAwOlE9yE/viewform?usp=sharing)
 
 **Related Chapters**:
 - 1.1A (UI Foundations for displaying memory/perception)
@@ -350,6 +371,10 @@ This chapter establishes the architectural foundation for agent cognition throug
 
 
 
+
+
+✅ [Take Chapter 1.4 quiz](https://docs.google.com/forms/d/1XTKmLXnShcaVTE6y_2274fxBLk8NDk_g_wu_QcI-o0c/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -357,6 +382,9 @@ This chapter establishes the architectural foundation for agent cognition throug
 ## Part 1, Chapter 1.5A: Stateful Orchestration - Foundations
 
 Establishes the theoretical foundations of stateful orchestration by defining core concepts including logic trees as decision path structures, prompt chains as sequential orchestration patterns, and stateful orchestration as explicit context management across execution cycles. The chapter introduces the Stateful Agent Orchestration Model organizing State Storage, Logic Tree Evaluation, and Execution Engine subsystems, while teaching three architectural principles (separation of state and logic, explicit transitions, and idempotent operations) that enable production-grade reliability.
+
+**Weekly Allocation**: Reading: 1.54 hrs | Active Learning: 0.66 hrs
+Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 
 **Key Concepts**:
 - Logic Trees
@@ -383,12 +411,7 @@ Establishes the theoretical foundations of stateful orchestration by defining co
 7. What distinguishes Logic Trees from simple if-then-else branching in workflow control?
 8. How do state machines formalize workflow execution beyond simple state variables?
 
-**Metrics**:
-- Word Count: 4,724, Pages: 16, Complexity: 2/5, Reading Speed: 7.2 pph, Total Hours: 2.2
-
-**Weekly Allocation**:
-- Reading: 1.54 hrs (70%)
-- Active Learning: 0.66 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1UeodKYi-1ymUYEJPXKHjqHwo6006FRaADVtnWYr7h9s/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1.1B (Agent Foundations - memory component formalization)
@@ -399,6 +422,10 @@ Establishes the theoretical foundations of stateful orchestration by defining co
 - Chapter 1.6 (Advanced Patterns - building on foundations)
 
 
+
+
+✅ [Take Chapter 1.5A quiz](https://docs.google.com/forms/d/1ak8LyuNWlA95p-c14lrvCL1A5ELpO8IiOO4B3QHWlTs/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -406,6 +433,9 @@ Establishes the theoretical foundations of stateful orchestration by defining co
 ## Part 1, Chapter 1.5B: Stateful Orchestration - Worked Examples
 
 Demonstrates stateful orchestration principles through concrete implementations comparing stateless versus stateful agent architectures. Uses a multi-city flight booking example to expose failure modes of stateless designs (context loss on error, latency multiplication, observability gaps, parallelization impossibility) and shows how stateful orchestration addresses each. A customer support routing example demonstrates logic tree implementation using LangGraph with TypedDict state schemas and conditional edges, showing how explicit graph representation enables visualization, modification, and performance optimization through infrastructure choices like NVIDIA NIM.
+
+**Weekly Allocation**: Reading: 0.98 hrs | Active Learning: 0.42 hrs
+Total Hours: 1.4 (0.98 hrs reading, 0.42 hrs active learning)
 
 **Key Concepts**:
 - State Persistence
@@ -427,16 +457,7 @@ Demonstrates stateful orchestration principles through concrete implementations 
 7. How does the customer support routing example demonstrate human-in-the-loop patterns for ambiguous classifications?
 8. Why does parallel flight search capability require explicit state management and how would you implement it?
 
-**Metrics**:
-- Word Count: 3,840
-- Pages: 13
-- Complexity: 2/5
-- Reading Speed: 9.5 pph
-- Total Hours: 1.4
-
-**Weekly Allocation**:
-- Reading: 0.98 hrs (70%)
-- Active Learning: 0.42 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1qocOMGJsvuIgQNxYZpfavfVKSAp0zPJ91cq1ZEeMLDM/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1.5A (Stateful Orchestration Foundations - theoretical basis)
@@ -446,6 +467,10 @@ Demonstrates stateful orchestration principles through concrete implementations 
 - Chapter 1.7 (Knowledge Graphs - semantic reasoning integration)
 
 
+
+
+✅ [Take Chapter 1.5B quiz](https://docs.google.com/forms/d/1sQgQhpex2NzhujEo689tI_ta_z0mXFNtikv6HVQZ_-I/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -453,6 +478,9 @@ Demonstrates stateful orchestration principles through concrete implementations 
 ## Part 1, Chapter 1.6: Stateful Orchestration - Pitfalls, Integration, and Synthesis
 
 Addresses production failures and integration patterns emerging when implementing stateful orchestration at scale. Covers critical misconceptions (LLMs are stateless despite seeming to remember context), failure modes (unbounded state growth, infinite loops, sequential execution of parallelizable operations), and how stateful orchestration implements patterns from Chapter 1.2. Demonstrates how orchestration foundations enable advanced capabilities like hierarchical planning, continual replanning, collaborative planning, and memory systems.
+
+**Weekly Allocation**: Reading: 1.26 hrs | Active Learning: 0.54 hrs
+Total Hours: 1.8 (1.26 hrs reading, 0.54 hrs active learning)
 
 **Key Concepts**:
 - Context Reconstruction
@@ -479,16 +507,7 @@ Addresses production failures and integration patterns emerging when implementin
 7. How does state management in Chapter 1.6 relate to memory systems in Chapter 1.4?
 8. What makes distributed state management (Chapter 1.8) fundamentally different from local state?
 
-**Metrics**:
-- Word Count: 4,451
-- Pages: 15
-- Complexity: 2/5
-- Reading Speed: 8.3 pph
-- Total Hours: 1.8
-
-**Weekly Allocation**:
-- Reading: 1.26 hrs (70%)
-- Active Learning: 0.54 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1j2QqGnUlnkZKzRVhJFcssdOqmxzlt3_H3no8ESRoO5I/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1.2 (Core Agent Patterns - ReAct, Plan-and-Execute foundations)
@@ -499,6 +518,10 @@ Addresses production failures and integration patterns emerging when implementin
 - Chapter 1.8 (Deployment and Scaling - distributed state management)
 
 
+
+
+✅ [Take Chapter 1.6 quiz](https://docs.google.com/forms/d/1BkwG-9Cf6glajlkD9WIlt4HwrWLFGfZemilLgFd9BgQ/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -506,6 +529,9 @@ Addresses production failures and integration patterns emerging when implementin
 ## Part 1, Chapter 1.7A: Relational Reasoning with Knowledge Graphs
 
 Introduces knowledge graphs as structured representations of entities, relationships, and properties, addressing limitations of vector-based retrieval systems where relationships are implicit in embeddings. Covers property graphs as flexible knowledge representation models, Cypher query language for pattern matching and multi-hop traversal, and knowledge graph construction from unstructured documents through NER, entity disambiguation, and relationship extraction. Demonstrates how knowledge graphs complement vector RAG for questions requiring explicit relationship traversal and multi-hop reasoning.
+
+**Weekly Allocation**: Reading: 1.89 hrs | Active Learning: 0.81 hrs
+Total Hours: 2.7 (1.89 hrs reading, 0.81 hrs active learning)
 
 **Key Concepts**:
 - Entity Node
@@ -533,16 +559,7 @@ Introduces knowledge graphs as structured representations of entities, relations
 7. Why does LangChain's GraphCypherQAChain set temperature=0 for query generation?
 8. What does "stateless architecture as a scaling enabler" mean in context of horizontal scaling knowledge graphs?
 
-**Metrics**:
-- Word Count: 5,342
-- Pages: 19
-- Complexity: 3/5
-- Reading Speed: 7.2 pph
-- Total Hours: 2.7
-
-**Weekly Allocation**:
-- Reading: 1.89 hrs (70%)
-- Active Learning: 0.81 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1SUlPOKg3QO3-Kvq2g82e5yvlaQlmMzHwfF-NUe68yGQ/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1.1A (Core Agent Architecture - context for why agents need knowledge graphs)
@@ -554,6 +571,8 @@ Introduces knowledge graphs as structured representations of entities, relations
 - Chapter 1.8 (Scaling and Performance - graph optimization at scale)
 
 
+
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -561,6 +580,9 @@ Introduces knowledge graphs as structured representations of entities, relations
 ## Part 1, Chapter 1.7B: Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration
 
 Addresses when and how to combine vector RAG with knowledge graph traversal through three hybrid integration patterns. Covers decision criteria distinguishing simple factual queries (RAG alone) from multi-hop relational queries (graph alone) and hybrid queries requiring both. Demonstrates the compliance analysis system combining semantic understanding with relationship verification, analyzes performance trade-offs (50% latency overhead for hybrid), and covers production deployment patterns including knowledge graphs as memory backends, tool invocation enhancers, and multi-agent coordination infrastructure. Emphasizes optimization strategies and operational disciplines maintaining system health at scale.
+
+**Weekly Allocation**: Reading: 1.19 hrs | Active Learning: 0.51 hrs
+Total Hours: 1.7 (1.19 hrs reading, 0.51 hrs active learning)
 
 **Key Concepts**:
 - Vector RAG, Graph-Enhanced RAG, Retrieval-Augmented Knowledge Graphs, Vector Store, Semantic Search   
@@ -581,16 +603,7 @@ Addresses when and how to combine vector RAG with knowledge graph traversal thro
 7. When would graph-based coordination between agents reduce overhead versus message-based communication?
 8. How do you translate query requirements into explicit Cypher patterns optimized for production scale?
 
-**Metrics**:
-- Word Count: 4,092
-- Pages: 14
-- Complexity: 2/5
-- Reading Speed: 8.3 pph
-- Total Hours: 1.7
-
-**Weekly Allocation**:
-- Reading: 1.19 hrs (70%)
-- Active Learning: 0.51 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1fDKOJe1V-ilTPEDz29FKqtfN4fwTxYF6IBc7o-_m_Uc/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1.7A (Knowledge Graph Fundamentals - core concepts and construction)
@@ -601,7 +614,6 @@ Addresses when and how to combine vector RAG with knowledge graph traversal thro
 - Chapter 1.8 (Scalability and Production Deployment - scaling stateful systems)
 
 
----
 
 
 ---
@@ -611,6 +623,9 @@ Addresses when and how to combine vector RAG with knowledge graph traversal thro
 ## Part 2, Chapter 2.1: Framework Landscape
 
 This chapter provides a systematic decision framework for selecting among five major agent frameworks (LangGraph, LangChain, AutoGen, CrewAI, Semantic Kernel) by analyzing how their control flow models match workflow architectures, state management requirements, and collaboration patterns. Through worked examples and contrastive cases, the chapter teaches readers to evaluate frameworks analytically rather than by popularity, ensuring architectural decisions align with long-term system requirements.
+
+**Weekly Allocation**: Reading: 1.89 hrs | Active Learning: 0.81 hrs
+Total Hours: 2.7 (1.89 hrs reading, 0.81 hrs active learning)
 
 **Key Concepts**:
 - Control Flow Model, LangGraph Graph Architecture, LangChain Linear Execution
@@ -639,9 +654,7 @@ This chapter provides a systematic decision framework for selecting among five m
 9. Why might using CrewAI for iterative self-correction workflows lead to implementation challenges?
 10. What role does determinism play in framework selection for compliance-critical applications like financial services?
 
-**Metrics**: Word Count: 4,672, Pages: 16, Complexity: 2/5, Reading Speed: 6.0 pph, Total Hours: 2.7
-
-**Weekly Allocation**: Reading: 1.89 hrs (70%), Active Learning: 0.81 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1sMNPc3ARkGr-pLP7nA51-S8Tn-OcAMjdQPxexAx1cZs/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 1 Chapter 1.2 (Core Patterns foundation)
@@ -654,6 +667,10 @@ This chapter provides a systematic decision framework for selecting among five m
 
 
 
+
+
+✅ [Take Chapter 2.1 quiz](https://docs.google.com/forms/d/1J8oqng5jNp6SJUrke5Jg3udjTZ1AM37ldWli4vmeyZI/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -661,6 +678,9 @@ This chapter provides a systematic decision framework for selecting among five m
 ## Part 2, Chapter 2.2: LangGraph
 
 LangGraph is a framework for building agentic workflows through explicit graph architecture with nodes as computational units, edges as control flow pathways, and state as shared context. The chapter explores how graph-based design enables iterative refinement, conditional routing, and recovery from failures while establishing when LangGraph's sophistication is justified versus when simpler frameworks better match workflow requirements.
+
+**Weekly Allocation**: Reading: 1.12 hrs | Active Learning: 0.48 hrs
+Total Hours: 1.6 (1.12 hrs reading, 0.48 hrs active learning)
 
 **Key Concepts**:
 - Nodes, Edges, State, Reducers, Cycles
@@ -681,9 +701,7 @@ LangGraph is a framework for building agentic workflows through explicit graph a
 9. How do routing functions provide testability advantages compared to prompt-based routing in sequential frameworks?
 10. What capabilities does time-travel debugging through checkpoints provide for analyzing and improving workflow behavior?
 
-**Metrics**: Word Count: 3,769, Pages: 13, Complexity: 2/5, Reading Speed: 8.3 pph, Total Hours: 1.6
-
-**Weekly Allocation**: Reading: 1.12 hrs (70%), Active Learning: 0.48 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/18Pd0DgV6z8ubxm4t7FgMv5o-WTXyJWBc2n1LCkWbrOE/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 1 Chapter 1.1 (Basic Agent Architecture)
@@ -697,9 +715,9 @@ LangGraph is a framework for building agentic workflows through explicit graph a
 - Part 2 Chapter 2.7 (Multimodal RAG)
 
 
----
 
 
+✅ [Take Chapter 2.2 quiz](https://docs.google.com/forms/d/1vtYJ1nUdFWFCl9zY1no54tQYgI9XFPL816KTNwgekZQ/viewform?usp=sharing)
 
 ---
 
@@ -708,6 +726,9 @@ LangGraph is a framework for building agentic workflows through explicit graph a
 ## Part 2, Chapter 2.3: LangChain
 
 LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requiring manual loop management, abstracting 150-200 lines of careful code into a single interface. The chapter covers agent types, tool integration patterns, and recognition of when workflows exceed LangChain's linear model and require migration to LangGraph.
+
+**Weekly Allocation**: Reading: 0.98 hrs | Active Learning: 0.42 hrs
+Total Hours: 1.4 (0.98 hrs reading, 0.42 hrs active learning)
 
 **Key Concepts**:
 - AgentExecutor, ReAct Pattern, Agent Scratchpad, Tool Abstraction
@@ -728,9 +749,7 @@ LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requi
 9. Compare the development burden of LangChain versus LangGraph for a simple question-answering agent.
 10. When should you choose LangChain over LangGraph?
 
-**Metrics**: Word Count: 3,610, Pages: 12, Complexity: 2/5, Reading Speed: 8.3 pph, Total Hours: 1.4
-
-**Weekly Allocation**: Reading: 0.98 hrs (70%), Active Learning: 0.42 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1QCeo9aUUGxNr9NVpyJPYMLBv4hSZqVu7Ufn7aZv5Y7k/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 1 Chapter 1.1A (UI Foundations)
@@ -743,6 +762,10 @@ LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requi
 
 
 
+
+
+✅ [Take Chapter 2.3 quiz](https://docs.google.com/forms/d/1s8K94UD7KQ7Z5dK7Hw6iq7HxNN4_4fFyFTCO2AAvJdU/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -750,6 +773,9 @@ LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requi
 ## Part 2, Chapter 2.4: MultiAgent Frameworks
 
 This chapter explores two fundamentally different approaches to multi-agent coordination: AutoGen's message-driven conversational architecture and CrewAI's organizational structure model. It examines the trade-offs between conversational flexibility and reproducibility, along with patterns for composing multi-agent systems with specialized single-agent frameworks.
+
+**Weekly Allocation**: Reading: 1.47 hrs | Active Learning: 0.63 hrs
+Total Hours: 2.1 (1.47 hrs reading, 0.63 hrs active learning)
 
 **Key Concepts**:
 - ConversableAgent, AssistantAgent, UserProxyAgent, Message-Driven Architecture
@@ -771,9 +797,7 @@ This chapter explores two fundamentally different approaches to multi-agent coor
 9. How do I handle determinism and reproducibility when using AutoGen in production systems?
 10. How should I compose multi-agent frameworks with single-agent frameworks for complex production systems?
 
-**Metrics**: Word Count: 4,377, Pages: 15, Complexity: 2/5, Reading Speed: 7.2 pph, Total Hours: 2.1
-
-**Weekly Allocation**: Reading: 1.47 hrs (70%), Active Learning: 0.63 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1D9uH2BZHLmFzMVBCrwRwcYao9SIEE8enbr0YurbQhjY/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 1 Chapter 1.3 (Multi-Agent Systems)
@@ -785,6 +809,10 @@ This chapter explores two fundamentally different approaches to multi-agent coor
 
 
 
+
+
+✅ [Take Chapter 2.4 quiz](https://docs.google.com/forms/d/1l9QELiqLpXgt_F2EspmqDzw7i9BcmoACJpxZi8WjtRg/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -792,6 +820,9 @@ This chapter explores two fundamentally different approaches to multi-agent coor
 ## Part 2, Chapter 2.5: Semantic Kernel - Enterprise Framework and Plugin Architecture
 
 Semantic Kernel provides a central orchestration component managing service registration, plugin discovery, and execution coordination through dependency injection patterns. The framework distinguishes between semantic functions (LLM-powered reasoning) and native functions (deterministic code), enabling plugins to combine AI capabilities with reliable system integration while supporting dynamic routing through LLM-driven orchestration.
+
+**Weekly Allocation**: Reading: 1.2 hrs | Active Learning: 0.5 hrs
+Total Hours: 1.7 (1.2 hrs reading, 0.5 hrs active learning)
 
 **Key Concepts**:
 - Kernel
@@ -815,9 +846,7 @@ Semantic Kernel provides a central orchestration component managing service regi
 7. How does plugin reusability across multiple agents create efficiency in enterprise environments?
 8. What is FunctionChoiceBehavior, and how does it address routing non-determinism?
 
-**Metrics**: Word Count: 3,987, Pages: 14, Complexity: 2/5, Reading Speed: 8.3 pph, Total Hours: 1.7
-
-**Weekly Allocation**: Reading: 1.2 hrs (70%), Active Learning: 0.5 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/19IY2XiDVAlbZQwlvoqH9D0fYaA3XBShjzPs5IT5L8X4/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 2.1 (Framework Landscape as positioning alternative)
@@ -828,6 +857,10 @@ Semantic Kernel provides a central orchestration component managing service regi
 - Chapter 2.7 (RAG integration)
 
 
+
+
+✅ [Take Chapter 2.5 quiz](https://docs.google.com/forms/d/18KzsSdxbKRDJBiV68SQYE31Z4-GaKD6OvLWE4lZs3S8/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -835,6 +868,9 @@ Semantic Kernel provides a central orchestration component managing service regi
 ## Part 2, Chapter 2.6: Tool Integration and Function Calling
 
 Tool integration establishes how language models request external tool execution through structured function calling, with applications responsible for parsing JSON, validating inputs, and managing execution. The chapter covers function calling mechanics, schema design using JSON Schema standards, tool chaining for sequential dependencies, parallel execution optimization, and production considerations including error handling and NVIDIA NIM optimizations.
+
+**Weekly Allocation**: Reading: 2.8 hrs | Active Learning: 1.2 hrs
+Total Hours: 4.0 (2.8 hrs reading, 1.2 hrs active learning)
 
 **Key Concepts**:
 - Function Calling
@@ -860,9 +896,7 @@ Tool integration establishes how language models request external tool execution
 9. How do you design tool schemas that work across multiple LLM providers?
 10. Explain how tool chaining connects to state management challenges and what strategies address these challenges.
 
-**Metrics**: Word Count: 6,876, Pages: 24, Complexity: 3/5, Reading Speed: 6.0 pph, Total Hours: 4.0
-
-**Weekly Allocation**: Reading: 2.8 hrs (70%), Active Learning: 1.2 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1-gbnIpSv2kFrPUEEFG8RmN_9wW3X_FtH7urOPEJcTuY/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 2.5 (Semantic Kernel plugin functions)
@@ -874,6 +908,10 @@ Tool integration establishes how language models request external tool execution
 - Chapter 2.9 (Streaming tool results)
 
 
+
+
+✅ [Take Chapter 2.6 quiz](https://docs.google.com/forms/d/1GBnXoaDWStpAvBGOOT9ApCZLnTm7m8GRgegLAUN5kNg/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -881,6 +919,9 @@ Tool integration establishes how language models request external tool execution
 ## Part 2, Chapter 2.7: Multimodal RAG - Integration of Vision, Audio, and Text
 
 Multimodal RAG extends retrieval-augmented generation to handle visual and audio content alongside text, addressing semantic alignment challenges through three architectural approaches: unified embedding spaces with CLIP, grounding all modalities to text with vision-language models, and separate stores with cross-modal reranking. The chapter covers vision model specialization, image routing logic, Whisper-based audio transcription with time indexing, and the NVIDIA multimodal stack for production deployment.
+
+**Weekly Allocation**: Reading: 3.7 hrs | Active Learning: 1.6 hrs
+Total Hours: 5.3 (3.7 hrs reading, 1.6 hrs active learning)
 
 **Key Concepts**:
 - Semantic Alignment
@@ -905,9 +946,7 @@ Multimodal RAG extends retrieval-augmented generation to handle visual and audio
 9. How does Milvus achieve 10-100x faster vector search than CPU-based vector databases?
 10. What are the critical design principles for effective multimodal preprocessing pipelines?
 
-**Metrics**: Word Count: 9,035, Pages: 32, Complexity: 4/5, Reading Speed: 6.0 pph, Total Hours: 5.3
-
-**Weekly Allocation**: Reading: 3.7 hrs (70%), Active Learning: 1.6 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1dZZIS9qrg0yokglW9vurYWoEmjoeyiebcpuIJMaahrw/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 2.6 (Tool integration foundation)
@@ -917,6 +956,10 @@ Multimodal RAG extends retrieval-augmented generation to handle visual and audio
 - Part 3 (Deployment and scaling of multimodal systems)
 
 
+
+
+✅ [Take Chapter 2.7 quiz](https://docs.google.com/forms/d/1uOVFi6y7U-vlQx6LVlkRdBBhJ0Xg2YW8V2nGtnnz0eU/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -924,6 +967,9 @@ Multimodal RAG extends retrieval-augmented generation to handle visual and audio
 ## Part 2, Chapter 2.8: Error Handling and Resilience
 
 Error handling patterns establish production resilience through layered defense combining retry logic for transient failures, fallback strategies for persistent failures, graceful degradation maintaining partial functionality, and circuit breakers preventing cascading failures in multi-agent systems. The chapter addresses framework integration with LangChain and LangGraph, provides worked examples of resilient multi-tool agents, and explains how to achieve 99.9% uptime through comprehensive pattern application.
+
+**Weekly Allocation**: Reading: 0.9 hrs | Active Learning: 0.4 hrs
+Total Hours: 1.3 (0.9 hrs reading, 0.4 hrs active learning)
 
 **Key Concepts**:
 - Transient Failures
@@ -949,9 +995,7 @@ Error handling patterns establish production resilience through layered defense 
 9. Why does LangGraph's conditional edges approach to error handling improve over LangChain callbacks?
 10. What's the production difference between 99% and 99.9% uptime targets, and how do error handling patterns achieve these?
 
-**Metrics**: Word Count: 3,480, Pages: 12, Complexity: 2/5, Reading Speed: 9.5 pph, Total Hours: 1.3
-
-**Weekly Allocation**: Reading: 0.9 hrs (70%), Active Learning: 0.4 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1dw5bhQ1ByWWPaVKHTraRKR5wGIXEapuq2bqdNnkKYgU/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 2.6 (Tool orchestration and API failures)
@@ -963,6 +1007,10 @@ Error handling patterns establish production resilience through layered defense 
 
 
 
+
+
+✅ [Take Chapter 2.8 quiz](https://docs.google.com/forms/d/10KSLeNg8z7FgW7C5fmh0Zy75_0Rn1IpEK6TcQSLa5Kk/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -970,6 +1018,9 @@ Error handling patterns establish production resilience through layered defense 
 ## Part 2, Chapter 2.9: Streaming and Real-Time Responses
 
 Streaming restructures agent response patterns from accumulate-then-display to generate-and-stream-simultaneously, addressing the blank screen psychological effect and user abandonment. The chapter covers the perceived latency principle where sub-second feedback matters more than total latency, Time to First Token optimization, protocol selection between Server-Sent Events and WebSockets, and LangServe integration for production streaming infrastructure.
+
+**Weekly Allocation**: Reading: 1.4 hrs | Active Learning: 0.6 hrs
+Total Hours: 2.0 (1.4 hrs reading, 0.6 hrs active learning)
 
 **Key Concepts**:
 - Perceived Latency
@@ -995,9 +1046,7 @@ Streaming restructures agent response patterns from accumulate-then-display to g
 9. What are the critical components of TTFT and which typically dominates in RAG agents?
 10. How does prompt compression address encoding latency, and what throughput improvements does it provide?
 
-**Metrics**: Word Count: 4,165, Pages: 14, Complexity: 2/5, Reading Speed: 7.2 pph, Total Hours: 2.0
-
-**Weekly Allocation**: Reading: 1.4 hrs (70%), Active Learning: 0.6 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/11eHMRr-rKwryaHVflbmRTJz0E4Us2uRH6DJpAqKTVhs/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 2.1 (Framework support for streaming)
@@ -1007,8 +1056,9 @@ Streaming restructures agent response patterns from accumulate-then-display to g
 - Chapter 2.8 (Streaming error handling)
 - Part 3 (Performance optimization and scaling considerations)
 
----
 
+
+✅ [Take Chapter 2.9 quiz](https://docs.google.com/forms/d/1_LJfwkS10MVPZgoJUMh6BFZrOFD-s2mtrdIcbVmhAhA/viewform?usp=sharing)
 
 ---
 
@@ -1017,6 +1067,9 @@ Streaming restructures agent response patterns from accumulate-then-display to g
 ## Part 3, Chapter 3.1A: Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts
 
 This foundational chapter establishes the vocabulary, conceptual frameworks, and architectural principles for systematic agent evaluation. It introduces the evaluation pyramid (unit tests, offline evaluation, staging, A/B testing), distinguishes offline evaluation as prediction from online evaluation as measurement, and demonstrates how continuous evaluation prevents regression from future changes that break previously functional capabilities.
+
+**Weekly Allocation**: Reading: 2.1 hrs | Active Learning: 0.9 hrs
+Total Hours: 3.0 (2.1 hrs reading, 0.9 hrs active learning)
 
 **Key Concepts**:
 - Evaluation Pipeline, Task Success Rate (TSR), Offline Evaluation, Online Evaluation, A/B Testing, Ground Truth Labels
@@ -1039,9 +1092,7 @@ This foundational chapter establishes the vocabulary, conceptual frameworks, and
 7. How do you handle scenarios where offline evaluation produces 92% accuracy but online shows 15% task abandonment despite 87% task completion?
 8. What's the minimum viable evaluation pipeline you could implement for a new agent project to catch obvious regressions?
 
-**Metrics**: Word Count: 7,310, Pages: 26, Complexity: 3/5, Reading Speed: 8.8 pph, Total Hours: 3.0
-
-**Weekly Allocation**: Reading: 2.1 hrs (70%), Active Learning: 0.9 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/18jaqGsULpEaGpx7NxPzclx_XsiOZfcVeareOozH5zXM/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3.1B (Custom Metrics & CI/CD Integration)
@@ -1051,6 +1102,10 @@ This foundational chapter establishes the vocabulary, conceptual frameworks, and
 - Chapter 3.2+ (Advanced Evaluation Techniques)
 
 
+
+
+✅ [Take Chapter 3.1A quiz](https://docs.google.com/forms/d/1KPObiIs-NsSrDIdWRpij_axE__ack1a2jDy4uLgOJ_A/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1058,6 +1113,9 @@ This foundational chapter establishes the vocabulary, conceptual frameworks, and
 ## Part 3, Chapter 3.1B: Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration
 
 This guided practice chapter extends the foundational evaluation pipeline concepts from 3.1A with practical implementation of custom domain-specific metrics and continuous integration infrastructure. It demonstrates how to measure business value beyond generic accuracy and latency through keyword matching, LLM-as-judge scoring, and rule-based validation, then integrates these custom metrics into GitHub Actions workflows for automated quality assurance.
+
+**Weekly Allocation**: Reading: 1.0 hrs | Active Learning: 0.4 hrs
+Total Hours: 1.4 (1.0 hrs reading, 0.4 hrs active learning)
 
 **Key Concepts**:
 - Custom Metrics, Keyword Matching Scoring, LLM-as-Judge Evaluation, Rule Checking Validation
@@ -1079,9 +1137,7 @@ This guided practice chapter extends the foundational evaluation pipeline concep
 7. Your continuous evaluation detects a new prompt template increases accuracy from 89% to 92% but increases P95 latency from 2.0 to 3.5 seconds. Should you accept or block the PR?
 8. How do you handle the problem that offline evaluation predicts 92% accuracy but A/B testing measures only 87% task success rate?
 
-**Metrics**: Word Count: 4,015, Pages: 14, Complexity: 2/5, Reading Speed: 9.8 pph, Total Hours: 1.4
-
-**Weekly Allocation**: Reading: 1.0 hrs (70%), Active Learning: 0.4 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/16XDu67ICAelCAcPso3LCqnSPczWtDD5RiqKvXiTI2Vo/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3.1A (Foundation)
@@ -1091,45 +1147,9 @@ This guided practice chapter extends the foundational evaluation pipeline concep
 
 
 
----
-
-[↑ Back to Table of Contents](#table-of-contents)
-
-## Part 3, Chapter 3.1C: Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design
-
-This capstone chapter removes scaffolding entirely, presenting a complete end-to-end evaluation challenge for a travel booking agent requiring synthesis of all Chapter 3.1A and 3.1B concepts without step-by-step guidance. It demands designing offline evaluation pipelines with performance budgets, A/B testing infrastructure with automatic rollback, and MLflow logging for reproducibility, while managing statistical rigor and cost constraints in production scenarios.
-
-**Key Concepts**:
-- Task Success Rate Segmentation, Response Time Distribution Analysis, API Cost Breakdown, Failure Mode Categorization
-- Ground Truth Test Datasets, Statistical Significance Testing, Offline Evaluation Pipeline, A/B Testing Infrastructure
-- Gradual Rollout Strategy, MLflow Experiment Logging, Cost Management, Statistical Power Analysis
-- Performance Budget Constraints, Statistical Rigor Requirements, Metric Selection Trade-offs, Latency Percentile Focus
-- Failure Categorization Value, Simulated User Satisfaction, Baseline Comparison with Significance
-- Component Metrics, Edge Case Handling, Performance Optimization, Per-Scenario Debugging
-- Traffic Randomization, Identical Metric Tracking, Appropriate Test Selection, Multiple Comparison Correction
-- Pre-Test Power Analysis, Statistical vs. Practical Significance, Assumption Validation
-- Complete Metric Logging, Hierarchical Organization, Artifact Versioning, Detailed Metadata, Comparison Views
-
-**Key Questions**:
-1. Why does Chapter 3.1C require evaluating offline before A/B testing, rather than jumping straight to A/B testing with real users?
-2. The chapter mentions statistical significance testing with Bonferroni correction for multiple comparisons. Why is this necessary?
-3. How would you handle a scenario where offline evaluation shows 2% accuracy improvement, but A/B testing reveals 5% task abandonment increase despite no change in task success rate?
-4. What specific strategies prevent memorizing test scenarios rather than learning generalizable capabilities?
-5. Why implement automatic rollback based on task success rate thresholds rather than requiring manual approval?
-6. How do you decide between P95 and P99 latency when one metric improves while the other degrades?
-7. The chapter mentions using simulated user satisfaction when real user feedback is unavailable. What makes these simulations valid or invalid?
-
-**Metrics**: Word Count: 4,069, Pages: 14, Complexity: 2/5, Reading Speed: 9.8 pph, Total Hours: 1.4
-
-**Weekly Allocation**: Reading: 1.0 hrs (70%), Active Learning: 0.4 hrs (30%)
-
-**Related Chapters**:
-- Chapter 3.1A (Foundational Concepts)
-- Chapter 3.1B (Guided Practice)
-- Chapter 3.2 (Optimization and Performance Tuning)
 
 
-
+✅ [Take Chapter 3.1B quiz](https://docs.google.com/forms/d/1fEhq0wN_qQrXTP7J39awodsskNKLVUe1FppPvvSk1fo/viewform?usp=sharing)
 
 ---
 
@@ -1138,6 +1158,9 @@ This capstone chapter removes scaffolding entirely, presenting a complete end-to
 ## Part 3, Chapter 3.2: Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor
 
 This chapter extends single-metric evaluation to comprehensive multi-benchmark assessment, revealing capability distributions hidden by aggregate scoring. It addresses the critical dangers of benchmarking misconceptions, teaches controlled comparison methodology preventing confounding variables, and demonstrates how cross-dataset generalization testing exposes brittleness versus robust reasoning. Special focus on AgentBench's eight-environment framework and the continuous feedback loop connecting offline evaluation to production deployment.
+
+**Weekly Allocation**: Reading: 2.7 hrs | Active Learning: 1.2 hrs
+Total Hours: 3.9 (2.7 hrs reading, 1.2 hrs active learning)
 
 **Key Concepts**:
 - Multi-Dimensional Benchmarking, Capability Distributions, Overfitting Detection, Generalization Capabilities
@@ -1175,9 +1198,7 @@ This chapter extends single-metric evaluation to comprehensive multi-benchmark a
 7. How do explicit feedback mechanisms and implicit behavioral signals provide complementary insights?
 8. How does the continuous improvement flywheel transform user feedback into compounding quality gains?
 
-**Metrics**: Word Count: 9,686, Pages: 34, Complexity: 4/5, Reading Speed: 8.8 pph, Total Hours: 3.9
-
-**Weekly Allocation**: Reading: 2.7 hrs (70%), Active Learning: 1.2 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/17lHL7q_P4TvuHWnCcsnyXYvjdWI1nQfKROisDq-ESF0/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3.1A-3.1C (Single-Metric Foundation)
@@ -1187,6 +1208,10 @@ This chapter extends single-metric evaluation to comprehensive multi-benchmark a
 
 
 
+
+
+✅ [Take Chapter 3.2 quiz](https://docs.google.com/forms/d/1xIx6xl8c2kGfsV4qokwFpAM6gYj1oUdRI1PdOm0ckdE/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1194,6 +1219,9 @@ This chapter extends single-metric evaluation to comprehensive multi-benchmark a
 ## Part 3, Chapter 3.3: Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering
 
 This chapter specializes evaluation methodologies for web navigation agents and multi-hop reasoning tasks, addressing the unique challenges of evaluating agents in dynamic, interactive environments. It covers web agent benchmarks (Mind2Web, WebArena, Web Bench), metrics capturing critical intermediate actions, and the critical gap between offline static benchmarks and online production reality where agents encounter CAPTCHA, dynamic pricing, and authentication. Special emphasis on multi-hop question answering failure modes, handling non-determinism, and domain-specific benchmarking necessity.
+
+**Weekly Allocation**: Reading: 5.7 hrs | Active Learning: 2.4 hrs
+Total Hours: 8.1 (5.7 hrs reading, 2.4 hrs active learning)
 
 **Key Concepts**:
 - Web Agent Benchmarking, Mind2Web, WebArena, Online-Mind2Web, Web Bench
@@ -1241,9 +1269,7 @@ This chapter specializes evaluation methodologies for web navigation agents and 
 7. Why do agents fail more systematically on early hops in multi-hop reasoning compared to later hops?
 8. Why must production multi-domain deployments include fallback hierarchies and cross-domain consistency testing?
 
-**Metrics**: Word Count: 15,514, Pages: 55, Complexity: 5/5, Reading Speed: 6.8 pph, Total Hours: 8.1
-
-**Weekly Allocation**: Reading: 5.7 hrs (70%), Active Learning: 2.4 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1LuAa0-BTaiMWOQPXbsLPWTnRUWoICWcz25QMgKS-hvk/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3.2 (Multi-Benchmark Evaluation)
@@ -1252,6 +1278,10 @@ This chapter specializes evaluation methodologies for web navigation agents and 
 
 
 
+
+
+✅ [Take Chapter 3.3 quiz](https://docs.google.com/forms/d/10eGq1Q85Z70u3OPuxRZxJxkj3w5tDCL8xT_8mNExgso/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1259,6 +1289,9 @@ This chapter specializes evaluation methodologies for web navigation agents and 
 ## Part 3, Chapter 3.4: Tune Parameters
 
 Systematic parameter tuning requires understanding how configuration changes affect multiple performance dimensions simultaneously through accuracy-latency-cost trade-off spaces. This chapter establishes multi-objective optimization frameworks and Pareto frontier analysis for production agent deployment decisions, preventing single-metric optimization pathologies.
+
+**Weekly Allocation**: Reading: 2.7 hrs | Active Learning: 1.1 hrs
+Total Hours: 3.8 (2.7 hrs reading, 1.1 hrs active learning)
 
 **Key Concepts**:
 - Router Models
@@ -1304,9 +1337,7 @@ Systematic parameter tuning requires understanding how configuration changes aff
 7. Our Pareto frontier analysis identified four configurations meeting constraints. How do we choose between them?
 8. We're considering router models that route queries to GPT-3.5 or GPT-4. What's the biggest risk?
 
-**Metrics**: Word Count: 9,336, Pages: 33, Complexity: 4/5, Reading Speed: 7.8 pph, Total Hours: 3.8
-
-**Weekly Allocation**: Reading: 2.7 hrs (70%), Active Learning: 1.1 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1YFDszYseCzx68rsjWeoW2GDjpu36ccjkP5u9QaAu1TY/viewform?usp=sharing)
 
 **Related Chapters**:
 - 3.1 (Evaluation Pipelines)
@@ -1318,6 +1349,10 @@ Systematic parameter tuning requires understanding how configuration changes aff
 
 
 
+
+
+✅ [Take Chapter 3.4 quiz](https://docs.google.com/forms/d/1L8N0XfuZSeHCbccANkbSoBMuJdB-D40p_SSD8yLeuNw/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1326,48 +1361,11 @@ Systematic parameter tuning requires understanding how configuration changes aff
 
 Prompt optimization represents systematic engineering of agent instructions through measurement-driven refinement where minor phrasing changes dramatically shift accuracy (8-15 points). This chapter covers prompt optimization, few-shot learning leveraging 2-5 demonstration examples, trajectory-based fine-tuning combining human expertise with LLM-generated variants, and reward modeling through reinforcement learning from human feedback (RLHF).
 
+**Weekly Allocation**: Reading: 4.5 hrs | Active Learning: 1.9 hrs
+Total Hours: 6.4 (4.5 hrs reading, 1.9 hrs active learning)
+
 **Key Concepts**:
-- Prompt Optimization
-- Non-linear Effects
-- Evaluation Pipelines
-- Multi-Objective Optimization
-- Feedback Validation
-- Root Cause Analysis Framework
-- Observability Infrastructure
-- Token Usage Optimization
-- Few-Shot Learning
-- In-Context Learning (ICL)
-- Zero vs. One vs. Few-Shot Hierarchy
-- Demonstration Selection Frameworks
-- Example Ordering and Recency Bias
-- Chain-of-Thought (CoT) Prompting
-- Auto-CoT Generation
-- Contrastive Chain-of-Thought
-- Faithful Chain-of-Thought
-- Fine-Tuning
-- Agent Trajectories
-- Successful vs. Failure Trajectories
-- LLM-Based Trajectory Generation
-- Hybrid Trajectory Generation
-- AgentTrek Approach
-- Rejection Fine-Tuning (RFT)
-- Continuous Pretraining (CPT)
-- Supervised Fine-Tuning (SFT)
-- Hyperparameter Tuning for Fine-Tuning
-- Parameter-Efficient Fine-Tuning (PEFT)
-- Reward Modeling
-- RLHF Pipeline
-- Reward Model Architecture
-- Pairwise Ranking Loss
-- Preference Data Collection
-- Inter-Rater Reliability Challenges
-- Systematic Biases:
-- Bias Mitigation Strategies
-- Direct Preference Optimization (DPO)
-- Agentic Reward Modeling
-- Self-Rewarding Language Models
-- Production Integration
-- Continuous Improvement Flywheels
+
 **Key Questions**:
 1. Why does adding a single clarifying sentence to a prompt sometimes improve accuracy by 15 points while adding five verbose sentences degrades performance by 8 points?
 2. When should you choose few-shot learning over fine-tuning, and what are the practical implications of this choice?
@@ -1378,9 +1376,7 @@ Prompt optimization represents systematic engineering of agent instructions thro
 7. Describe the distinction between explicit user feedback (ratings, scores, comments) and implicit signals (behavioral patterns, reformulations) in feedback validation.
 8. Explain how rejection fine-tuning (RFT) improves training data quality and enables progressive iteration cycles that compound improvements.
 
-**Metrics**: Word Count: 14,051, Pages: 50, Complexity: 5/5, Reading Speed: 10.4 pph, Total Hours: 6.4
-
-**Weekly Allocation**: Reading: 4.5 hrs (70%), Active Learning: 1.9 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1UDQBEIAq_lkmUtMa5GZl-Q_0G7LFQgITV0WPNIaqBRU/viewform?usp=sharing)
 
 **Related Chapters**:
 - 3.1 (Evaluation)
@@ -1392,6 +1388,10 @@ Prompt optimization represents systematic engineering of agent instructions thro
 
 
 
+
+
+✅ [Take Chapter 3.5 quiz](https://docs.google.com/forms/d/11CPqSTsT2EOt6mSQqEx9RRIiQdZwW_CRlj5JCCJ8Qik/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1399,6 +1399,9 @@ Prompt optimization represents systematic engineering of agent instructions thro
 ## Part 3, Chapter 3.6: Trace Analysis and Execution Debugging
 
 Trace analysis transforms opaque agent failures into actionable debugging insights through systematic instrumentation, visualization, and forensic analysis. This chapter establishes comprehensive frameworks for debugging non-deterministic probabilistic reasoning where traditional software debugging approaches prove inadequate, making invisible decision processes observable through detailed execution traces.
+
+**Weekly Allocation**: Reading: 6.4 hrs | Active Learning: 2.8 hrs
+Total Hours: 9.2 (6.4 hrs reading, 2.8 hrs active learning)
 
 **Key Concepts**:
 - Tracing & Instrumentation Basics: Span, Thought-Action-Observation Cycle, OpenTelemetry Semantic Conventions, Hierarchical Trace Structure
@@ -1427,9 +1430,7 @@ Consistency Checking, Confidence Score Propagation, Step-Level Verifiers, Formal
 7. What's the critical difference between step-level and path-level inspection?
 8. How do the 15 misconceptions about reasoning inspection prevent effective verification?
 
-**Metrics**: Word Count: 17,503, Pages: 62, Complexity: 5/5, Reading Speed: 13.0 pph, Total Hours: 9.2
-
-**Weekly Allocation**: Reading: 6.4 hrs (70%), Active Learning: 2.8 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1S0DJHGhIlb9iihW-X8LNNaLLgzJc-Qh9HU8CgD7mEgI/viewform?usp=sharing)
 
 **Related Chapters**:
 - 3.1 (Evaluation Design)
@@ -1442,6 +1443,10 @@ Consistency Checking, Confidence Score Propagation, Step-Level Verifiers, Formal
 
 
 
+
+
+✅ [Take Chapter 3.6 quiz](https://docs.google.com/forms/d/1F9ZMB5Bl_av1VldP0kI4LLEQ9Je1E7NOwQtA06_0FEY/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1449,6 +1454,9 @@ Consistency Checking, Confidence Score Propagation, Step-Level Verifiers, Formal
 ## Part 3, Chapter 3.7: Tool Auditing and Validation
 
 Tool auditing exposes what agents actually do through function calls and API invocations, complementing reasoning inspection with comprehensive monitoring of tool selection, parameter generation, and execution sequencing. This chapter establishes formal tool contracts, validation frameworks distinguishing syntactic from semantic errors, recovery mechanisms, and production monitoring patterns.
+
+**Weekly Allocation**: Reading: 3.7 hrs | Active Learning: 1.6 hrs
+Total Hours: 5.3 (3.7 hrs reading, 1.6 hrs active learning)
 
 **Key Concepts**:
 - Tool Contract & Specification: Tool Contract, JSON Schema, Specification Completeness, Parameter Error Rate, Tool Boundary Alignment, Documentation Quality Gap
@@ -1472,9 +1480,7 @@ Tool auditing exposes what agents actually do through function calls and API inv
 7. How do you balance implementing comprehensive pre-execution validation against latency costs?
 8. If documentation improvements are so effective at reducing hallucinations, why do agents still hallucinate parameters in well-documented systems?
 
-**Metrics**: Word Count: 11,599, Pages: 41, Complexity: 4/5, Reading Speed: 10.4 pph, Total Hours: 5.3
-
-**Weekly Allocation**: Reading: 3.7 hrs (70%), Active Learning: 1.6 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/13TyeQff6TbjzXNFHgBLmErnakQ2Mh8inRReIVjTljvo/viewform?usp=sharing)
 
 **Related Chapters**:
 - 3.4 (Parameter Tuning)
@@ -1485,6 +1491,10 @@ Tool auditing exposes what agents actually do through function calls and API inv
 
 
 
+
+
+✅ [Take Chapter 3.7 quiz](https://docs.google.com/forms/d/1rJ2Ghg9Ehrm2jf6foqfJP7Gx7n-u6VKWgML9v8Q-ru0/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1492,6 +1502,9 @@ Tool auditing exposes what agents actually do through function calls and API inv
 ## Part 3, Chapter 3.8: Action Accuracy
 
 Action accuracy represents granular evaluation of discrete decisions, tool selections, parameters, and execution steps complementing task-level metrics that only measure final outcomes. This chapter establishes frameworks distinguishing tool selection accuracy from parameter accuracy, trajectory evaluation metrics, and production monitoring patterns revealing hidden problems in agent behavior.
+
+**Weekly Allocation**: Reading: 3.2 hrs | Active Learning: 1.3 hrs
+Total Hours: 4.5 (3.2 hrs reading, 1.3 hrs active learning)
 
 **Key Concepts**:
 - Accuracy Types: Tool Selection Accuracy, Tool Calling Accuracy, Parameter Accuracy, Execution Path Validity, Action Trajectory Quality, Task Success Metrics
@@ -1513,9 +1526,7 @@ Action accuracy represents granular evaluation of discrete decisions, tool selec
 7. Should I prioritize improving action accuracy or error recovery capability?
 8. How can I prevent the exact match trap where valid alternative action sequences are penalized?
 
-**Metrics**: Word Count: 9,816, Pages: 35, Complexity: 4/5, Reading Speed: 10.4 pph, Total Hours: 4.5
-
-**Weekly Allocation**: Reading: 3.2 hrs (70%), Active Learning: 1.3 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/13c2gdPWotS71qiZfoCGWAtzI4pWiadFNdr-9NIPCIdA/viewform?usp=sharing)
 
 **Related Chapters**:
 - 3.1 (Evaluation Pipelines)
@@ -1526,6 +1537,10 @@ Action accuracy represents granular evaluation of discrete decisions, tool selec
 - 3.10 (Efficiency Metrics)
 
 
+
+
+✅ [Take Chapter 3.8 quiz](https://docs.google.com/forms/d/1MFoKgYBtljPsJ8H6EXeoxrOUJ6jQBRDjOFDYzPR5SUY/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1533,6 +1548,9 @@ Action accuracy represents granular evaluation of discrete decisions, tool selec
 ## Part 3, Chapter 3.9: Reasoning Quality
 
 Reasoning quality evaluation examines how agents navigate decision-making paths through logical coherence, chain validity, transparency, and informativeness—dimensions distinct from task success rates. The chapter establishes frameworks for assessing multi-dimensional reasoning quality through chain-of-thought decomposition, formal logic verification, and evaluation metrics that enable production systems to catch flawed reasoning before critical failures.
+
+**Weekly Allocation**: Reading: 5.6 hrs | Active Learning: 2.4 hrs
+Total Hours: 8.0 (5.6 hrs reading, 2.4 hrs active learning)
 
 **Key Concepts**:
 - Logical Coherence and Chain Validity
@@ -1563,9 +1581,7 @@ Reasoning quality evaluation examines how agents navigate decision-making paths 
 - How can teams avoid the "task success illusion" while validating that reasoning quality improvements actually translate to better outcomes?
 - What specific hallucination risks exist in reasoning traces themselves, and how should teams address this beyond checking final answers?
 
-**Metrics**: Word Count: 15,200, Pages: 54, Complexity: 5/5, Reading Speed: 6.8 pph, Total Hours: 8.0
-
-**Weekly Allocation**: Reading: 5.6 hrs (70%), Active Learning: 2.4 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/128t6LAQ_P0jHdbtxTa-SrcXifmo6GJUN8aBKpEuQOOE/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3.1 (foundational evaluation framework)
@@ -1582,6 +1598,10 @@ Reasoning quality evaluation examines how agents navigate decision-making paths 
 
 
 
+
+
+✅ [Take Chapter 3.9 quiz](https://docs.google.com/forms/d/19ygg51eTO3Qt0YyX6skQExASouTaGV9AdXgwFJJowxY/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1589,6 +1609,9 @@ Reasoning quality evaluation examines how agents navigate decision-making paths 
 ## Part 3, Chapter 3.10: Efficiency Metrics
 
 Efficiency metrics measure how effectively agents utilize computational resources, API calls, and execution steps, translating technical optimization into business-critical metrics. The chapter demonstrates that substantial efficiency improvements exist without accuracy sacrifices through systematic measurement of token consumption, step reduction, and cost attribution—critical for production viability.
+
+**Weekly Allocation**: Reading: 7.1 hrs | Active Learning: 3.1 hrs
+Total Hours: 10.2 (7.1 hrs reading, 3.1 hrs active learning)
 
 **Key Concepts**:
 - Token Usage with Asymmetric Pricing (Output 1.5-3x more than Input)
@@ -1627,9 +1650,7 @@ Efficiency metrics measure how effectively agents utilize computational resource
 - You observe an agent using 3,000 tokens per interaction at launch but drifting to 4,500 tokens after six months. List three probable causes for this efficiency degradation.
 - What factors should be considered when choosing between small language models and frontier models for specific task types in a routing architecture?
 
-**Metrics**: Word Count: 19,433, Pages: 69, Complexity: 5/5, Reading Speed: 6.8 pph, Total Hours: 10.2
-
-**Weekly Allocation**: Reading: 7.1 hrs (70%), Active Learning: 3.1 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1Pmjy7mSxNobu5oYN2s6aKhyHM2a5EtuTCvNv393dKrc/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3.9 (reasoning quality maintenance)
@@ -1639,6 +1660,10 @@ Efficiency metrics measure how effectively agents utilize computational resource
 - Part 4 (production deployment and scaling)
 
 
+
+
+✅ [Take Chapter 3.10 quiz](https://docs.google.com/forms/d/1gpzuiNKQSbBm6u68ff3BvACHF_Am-mYpU8PW_WsPI20/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1646,6 +1671,9 @@ Efficiency metrics measure how effectively agents utilize computational resource
 ## Part 4, Chapter 4.1: AI Agent Deployment and Scaling
 
 This chapter introduces the essential infrastructure and operational practices for deploying and scaling multi-agent systems in production, covering message queue architectures, vector database selection, observability patterns, API gateway implementations, MLOps for agentic systems, and CI/CD pipeline automation.
+
+**Weekly Allocation**: Reading: 2.24 hrs | Active Learning: 0.96 hrs
+Total Hours: 3.2 (2.24 hrs reading, 0.96 hrs active learning)
 
 **Key Concepts**:
 - Message queues (RabbitMQ, Kafka), asynchronous communication, broker-centric vs distributed log architectures, exchange routing, consumer offsets
@@ -1667,9 +1695,7 @@ This chapter introduces the essential infrastructure and operational practices f
 9. Why do agentic systems require LLM-specific metrics (token usage, cost-per-interaction, conversation turn counts) in addition to infrastructure metrics?
 10. What organizational and technical foundations (automation, versioning, testing, monitoring, safe rollback) enable teams to deploy agent systems multiple times daily safely?
 
-**Metrics**: Word Count: 9,374, Pages: 33, Complexity: 4/5, Reading Speed: 10.2 pph, Total Hours: 3.2
-
-**Weekly Allocation**: Reading: 2.24 hrs (70%), Active Learning: 0.96 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1reobzyiijjgzJZvvaMIVJV7cJyEr2Ve2w5AaGLf7Lhk/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 1 Chapter 1.1 (Agent Fundamentals - foundational architectures and reasoning patterns requiring deployment infrastructure)
@@ -1685,6 +1711,8 @@ This chapter introduces the essential infrastructure and operational practices f
 
 
 
+
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1692,6 +1720,9 @@ This chapter introduces the essential infrastructure and operational practices f
 ## Part 4, Chapter 4.2: Deployment & Scaling
 
 Chapter 4.2 details deployment patterns for agentic systems, examining microservices and serverless approaches, message queue architecture selection, vector database deployment options, observability implementation, and CI/CD pipeline construction. The chapter provides production-ready guidance for scaling systems while maintaining reliability through progressive deployment and comprehensive monitoring.
+
+**Weekly Allocation**: Reading: 4.1 hrs | Active Learning: 1.7 hrs
+Total Hours: 5.8 (4.1 hrs reading, 1.7 hrs active learning)
 
 **Key Concepts**:
 - Microservices Architecture with Independent Scaling
@@ -1743,9 +1774,7 @@ Chapter 4.2 details deployment patterns for agentic systems, examining microserv
 - Why is behavioral testing critical for agentic AI systems, and how does it differ from traditional ML testing approaches?
 - How do containerization and orchestration platforms like Kubernetes enable the deployment patterns discussed in this chapter?
 
-**Metrics**: Word Count: 16,137, Pages: 57, Complexity: 5/5, Reading Speed: 9.8 pph, Total Hours: 5.8
-
-**Weekly Allocation**: Reading: 4.1 hrs (70%), Active Learning: 1.7 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/12qABTv3UPfMa7lEVmrQ7JiS31biI5DwgMoQxY5aPdh8/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 4.1 (infrastructure foundations)
@@ -1760,6 +1789,10 @@ Chapter 4.2 details deployment patterns for agentic systems, examining microserv
 
 
 
+
+
+✅ [Take Chapter 4.2 quiz](https://docs.google.com/forms/d/15AZa-h1gx97fnvqPz-MfpUVuPoMxIq7YlA9IlHHNAKg/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1767,6 +1800,9 @@ Chapter 4.2 details deployment patterns for agentic systems, examining microserv
 ## Part 4, Chapter 4.3: Container Orchestration and Edge Deployment
 
 Chapter 4.3 covers Kubernetes orchestration for production multi-agent deployments and edge model optimization strategies. The chapter explains how Kubernetes automates deployment, scaling, and healing of containerized agents while covering model optimization techniques (quantization, pruning, distillation) that enable efficient edge deployment on resource-constrained devices.
+
+**Weekly Allocation**: Reading: 1.5 hrs | Active Learning: 0.6 hrs
+Total Hours: 2.1 (1.5 hrs reading, 0.6 hrs active learning)
 
 **Key Concepts**:
 - Kubernetes Enterprise Orchestration Framework
@@ -1817,9 +1853,7 @@ Chapter 4.3 covers Kubernetes orchestration for production multi-agent deploymen
 - What causes the most significant operational failures in production Kubernetes deployments and how do you prevent them?
 - What role does federated learning play in edge deployment and how does it improve systems?
 
-**Metrics**: Word Count: 6,287, Pages: 22, Complexity: 3/5, Reading Speed: 10.6 pph, Total Hours: 2.1
-
-**Weekly Allocation**: Reading: 1.5 hrs (70%), Active Learning: 0.6 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1KsS5CGcUpwBhTKitNLw4O5jrZvCQBmVAhqMeKL4nQB8/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 4.1 (infrastructure components)
@@ -1833,6 +1867,10 @@ Chapter 4.3 covers Kubernetes orchestration for production multi-agent deploymen
 - Chapter 4.7 (production reliability)
 
 
+
+
+✅ [Take Chapter 4.3 quiz](https://docs.google.com/forms/d/1doSFCcw7zjA8kMTJlZh3KkZpKEMwFYk96kBI0uSPC54/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1840,6 +1878,9 @@ Chapter 4.3 covers Kubernetes orchestration for production multi-agent deploymen
 ## Part 4, Chapter 4.4: Performance Profiling and Optimization
 
 Performance profiling represents a critical but often-neglected step between deployment and production stability. AI agent systems introduce unique challenges compared to traditional inference workloads because their multi-stage execution pattern creates bottlenecks distributed across components that simple metrics cannot reveal. Measurement-driven optimization transforms deployment from one-time event into continuous cycle of improvement, replacing assumptions with data to guide effort toward high-impact optimizations.
+
+**Weekly Allocation**: Reading: 4.2 hrs | Active Learning: 1.8 hrs
+Total Hours: 6.0 (4.2 hrs reading, 1.8 hrs active learning)
 
 **Key Concepts**:
 - AI Agent Performance Challenges, Intermittent GPU Utilization, KV Cache Memory Pressure, CPU-GPU Synchronization Overhead, GPU Idle Between Kernels, Low GPU Utilization Below 50%, Memory Copy Spikes, Kernel Launch Gaps, Periodic Stalls
@@ -1861,9 +1902,7 @@ Performance profiling represents a critical but often-neglected step between dep
 9. What are the failure modes when choosing wrong quantization precision for model deployment?
 10. How do you design rollback policies before deploying rather than during incidents?
 
-**Metrics**: Word Count: 16,781, Pages: 59, Complexity: 5/5, Reading Speed: 9.8 pph, Total Hours: 6.0
-
-**Weekly Allocation**: Reading: 4.2 hrs (70%), Active Learning: 1.8 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/18QFKEW5wF2zl7ihQ4xulrfXl0E5GjJ4KIHFHtfHdqQc/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 4.3: Container Orchestration and Edge Deployment (prerequisite)
@@ -1876,6 +1915,10 @@ Performance profiling represents a critical but often-neglected step between dep
 
 
 
+
+
+✅ [Take Chapter 4.4 quiz](https://docs.google.com/forms/d/1wMoYTDGgWJv6qkG1-84miLLcVV-2TRGnxnUSULKKsU8/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1883,6 +1926,9 @@ Performance profiling represents a critical but often-neglected step between dep
 ## Part 4, Chapter 4.5: NVIDIA NIM and Triton Inference Server
 
 NVIDIA NIM represents a paradigm shift in LLM deployment by collapsing the months-long gap between "agent works locally" and "agent serves production traffic" through pre-optimized containerized microservices. NIM bundles a complete, enterprise-grade inference stack while Triton serves as a unified multi-framework serving platform, enabling production-quality deployments without extensive optimization expertise.
+
+**Weekly Allocation**: Reading: 1.47 hrs | Active Learning: 0.63 hrs
+Total Hours: 2.1 (1.47 hrs reading, 0.63 hrs active learning)
 
 **Key Concepts**:
 - NVIDIA NIM (Inference Microservice), Inference Stack Optimization, Performance Benchmarking, Profile System, Runtime Refinement
@@ -1907,9 +1953,7 @@ NVIDIA NIM represents a paradigm shift in LLM deployment by collapsing the month
 9. What configuration choices differ between latency-optimized and throughput-optimized Triton models?
 10. How do you troubleshoot configuration drift in multi-model Triton deployments?
 
-**Metrics**: Word Count: 6,358, Pages: 22, Complexity: 3/5, Reading Speed: 10.6 pph, Total Hours: 2.1
-
-**Weekly Allocation**: Reading: 1.47 hrs (70%), Active Learning: 0.63 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1yoMnzfS_hAAyc8YN7Dv_tSolB9ja7yBiU9jvGOFJ8fw/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 4.4: Performance Profiling (establishes measurement discipline)
@@ -1920,6 +1964,10 @@ NVIDIA NIM represents a paradigm shift in LLM deployment by collapsing the month
 
 
 
+
+
+✅ [Take Chapter 4.5 quiz](https://docs.google.com/forms/d/1laislV3uAD_i40J1lzbjwZnJwJQNF_k-psOVE6c7txI/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1927,6 +1975,9 @@ NVIDIA NIM represents a paradigm shift in LLM deployment by collapsing the month
 ## Part 4, Chapter 4.6: TensorRT-LLM and NVIDIA Fleet Command
 
 TensorRT-LLM addresses fundamental inference challenges through optimization pipeline orchestrating multiple complementary optimizations achieving 3-8x speedup while reducing memory 50-75%. Fleet Command enables orchestration of edge AI deployments at scale through hybrid-cloud architecture, one-touch provisioning, and zero-trust security, transforming edge deployment from operational burden to managed platform.
+
+**Weekly Allocation**: Reading: 1.05 hrs | Active Learning: 0.45 hrs
+Total Hours: 1.5 (1.05 hrs reading, 0.45 hrs active learning)
 
 **Key Concepts**:
 - Precision Reduction, FP32 to FP16 Conversion, INT8 Quantization, Entropy Calibration, Calibration Dataset Selection, Scaling Modes
@@ -1951,9 +2002,7 @@ TensorRT-LLM addresses fundamental inference challenges through optimization pip
 9. What specific failure modes distinguish quantized LLM deployment from traditional model optimization?
 10. How do you diagnose INT8 quantization failures when test performance doesn't match production results?
 
-**Metrics**: Word Count: 4,536, Pages: 16, Complexity: 2/5, Reading Speed: 11.0 pph, Total Hours: 1.5
-
-**Weekly Allocation**: Reading: 1.05 hrs (70%), Active Learning: 0.45 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1qkmLMGBptSSH_c4Sr7fHJSJOO8G1SDClyA7_tW5NSrs/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 4.5: NVIDIA NIM and Triton (production inference deployment foundation)
@@ -1967,6 +2016,10 @@ TensorRT-LLM addresses fundamental inference challenges through optimization pip
 
 
 
+
+
+✅ [Take Chapter 4.6 quiz](https://docs.google.com/forms/d/1EoILa3dEouQbQXNlpGP4qCh6ltABVrZPeripduK8dkc/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1974,6 +2027,9 @@ TensorRT-LLM addresses fundamental inference challenges through optimization pip
 ## Part 4, Chapter 4.7: Scaling Strategies
 
 Horizontal scaling addresses capacity expansion through creating multiple agent instances operating in parallel, enabling nearly linear capacity improvements. Strategic scaling requires effective load balancing, sophisticated batching decisions, multi-tier caching architectures, and cost optimization while maintaining high availability across distributed infrastructure.
+
+**Weekly Allocation**: Reading: 2.59 hrs | Active Learning: 1.11 hrs
+Total Hours: 3.7 (2.59 hrs reading, 1.11 hrs active learning)
 
 **Key Concepts**:
 - Horizontal Scaling, Fault Tolerance, Rolling Updates, Stateless Design, Session Affinity/Sticky Sessions, Auto-Scaling, Stabilization Windows, Cold Start Problem
@@ -1994,9 +2050,7 @@ Horizontal scaling addresses capacity expansion through creating multiple agent 
 9. What metrics should you monitor to detect that your scaling strategy isn't working?
 10. Why do some scaling architectures increase costs faster than throughput improves?
 
-**Metrics**: Word Count: 10,877, Pages: 38, Complexity: 4/5, Reading Speed: 10.2 pph, Total Hours: 3.7
-
-**Weekly Allocation**: Reading: 2.59 hrs (70%), Active Learning: 1.11 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1JwLKWCj8aKKPQshSRdlTlq13bux-_kQoo5a3gP2Av_E/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 4.6: TensorRT-LLM and Fleet Command (establishes optimized model inference)
@@ -2009,6 +2063,10 @@ Horizontal scaling addresses capacity expansion through creating multiple agent 
 - Part 5+: Advanced Agent Systems (multi-agent orchestration)
 
 
+
+
+✅ [Take Chapter 4.7 quiz](https://docs.google.com/forms/d/1ue9n7rBDgBYAnaPeuzf1-YoWRPNOscpTP-vITgx33js/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -2016,6 +2074,9 @@ Horizontal scaling addresses capacity expansion through creating multiple agent 
 ## Part 5, Chapter 5.1: Chain-of-Thought Reasoning
 
 This chapter covers Chain-of-Thought (CoT) as the foundational reasoning technique enabling agent memory, planning, and multi-agent coordination through structured intermediate reasoning steps. It explores CoT implementation approaches, integration with agent memory systems, task decomposition, grounding in observable reality, and advanced reasoning architectures.
+
+**Weekly Allocation**: Reading: 2.24 hrs | Active Learning: 0.96 hrs
+Total Hours: 3.2 (2.24 hrs reading, 0.96 hrs active learning)
 
 **Key Concepts**:
 - Zero-Shot CoT, Few-Shot CoT, Auto-CoT, semantic similarity clustering, representativeness selection, compositionality
@@ -2038,9 +2099,7 @@ This chapter covers Chain-of-Thought (CoT) as the foundational reasoning techniq
 9. How do layered CoT architectures enable complex multi-agent workflows, and what roles do meta-agents and specialized agents play in orchestrating sophisticated reasoning?
 10. Under what specific problem characteristics does CoT integration matter most, and when should simpler approaches be preferred over architectural complexity?
 
-**Metrics**: Word Count: 9,499, Pages: 33, Complexity: 4/5, Reading Speed: 10.2 pph, Total Hours: 3.2
-
-**Weekly Allocation**: Reading: 2.24 hrs (70%), Active Learning: 0.96 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1k9JQ0ddTTMM_827PlFYaHDrOjr14J7iZEJOJ8cAnaUI/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 1 Chapter 1.1 (Agent Fundamentals - transformer architecture and neural computation prerequisite for understanding CoT's relationship to actual model processing)
@@ -2055,6 +2114,10 @@ This chapter covers Chain-of-Thought (CoT) as the foundational reasoning techniq
 - Part 5 Chapters 5.5+ (Advanced Reasoning - complex architectures depending on CoT fundamentals)
 
 
+
+
+✅ [Take Chapter 5.1 quiz](https://docs.google.com/forms/d/1O3Z_5dpZeNQy59Dvg11BN3pyLI9Q5R0mXUpX7lUTo5M/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -2062,6 +2125,9 @@ This chapter covers Chain-of-Thought (CoT) as the foundational reasoning techniq
 ## Part 5, Chapter 5.2: Tree-of-Thought (ToT)
 
 Tree-of-Thought addresses a fundamental challenge in agent planning: how to intelligently explore decision spaces when linear reasoning produces irreversible choices and poor early decisions create cascading failures. ToT transforms reasoning into structured exploration through four integrated components—thought decomposition that identifies meaningful intermediate steps, candidate generation that explores alternatives, formal evaluation that prunes unproductive branches, and systematic search that enables backtracking—enabling agents to achieve 74% accuracy on Game of 24 versus Chain-of-Thought's 4%.
+
+**Weekly Allocation**: Reading: 4.3 hrs | Active Learning: 1.9 hrs
+Total Hours: 6.2 (4.3 hrs reading, 1.9 hrs active learning)
 
 **Key Concepts**:
 - Thought Decomposition, Greedy vs. Strategic Optimization, Candidate Thought Generation, Parallel Exploration
@@ -2079,14 +2145,16 @@ Tree-of-Thought addresses a fundamental challenge in agent planning: how to inte
 7. Why does vote-based evaluation outperform value estimation specifically for subjective criteria like narrative coherence?
 8. What constitutes "successful synthesis" in Graph-of-Thought's aggregation operation?
 
-**Metrics**: Word Count: 13,849 | Pages: 49 | Complexity: 5/5 | Reading Speed: 7.9 pph | Total Hours: 6.2
-
-**Weekly Allocation**: Reading: 4.3 hrs (70%) | Active Learning: 1.9 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1PaMpFPm979uRw6lPchnDdEut-0TvlJbJ4SM7n28niSQ/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.1 (Chain-of-Thought Fundamentals) - establishes sequential reasoning foundation; Chapter 5.3 (Self-Consistency) - ensemble reasoning approaches; Chapter 5.4 (Hierarchical Planning) - task decomposition; Chapter 5.5 (MCTS) - systematic exploration; Part 1 (Foundations of Reasoning) - problem decomposition principles
 
 
+
+
+
+✅ [Take Chapter 5.2 quiz](https://docs.google.com/forms/d/17vpGqPa8fxggQa7qADllp2Ji2KNunNf-F2Za3NkUcFg/viewform?usp=sharing)
 
 ---
 
@@ -2095,6 +2163,9 @@ Tree-of-Thought addresses a fundamental challenge in agent planning: how to inte
 ## Part 5, Chapter 5.3: Self-Consistency
 
 Self-Consistency fundamentally transforms how language models approach complex reasoning by separating generation of reasoning chains from selection of final answers, addressing Chain-of-Thought's vulnerability to greedy decoding. By sampling multiple independent reasoning paths using stochastic decoding and aggregating through majority voting, Self-Consistency leverages the convergence property that correct answers emerge consistently across diverse solution strategies while errors scatter across samples, enabling 74% accuracy on GSM8K versus 58% baseline.
+
+**Weekly Allocation**: Reading: 2.7 hrs | Active Learning: 1.2 hrs
+Total Hours: 3.9 (2.7 hrs reading, 1.2 hrs active learning)
 
 **Key Concepts**:
 - Self-Consistency, Generation Phase, Selection Phase
@@ -2114,14 +2185,16 @@ Self-Consistency fundamentally transforms how language models approach complex r
 7. How do Reasoning-Aware Self-Consistency and difficulty-adaptive sampling each reduce costs, and how can they be combined?
 8. What real-world applications best demonstrate Self-Consistency's value?
 
-**Metrics**: Word Count: 10,406 | Pages: 37 | Complexity: 4/5 | Reading Speed: 9.5 pph | Total Hours: 3.9
-
-**Weekly Allocation**: Reading: 2.7 hrs (70%) | Active Learning: 1.2 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1lWb0XwfjeX7bMdb3ZFJrsJZXLGM6cnxN3c4VB5UY8zI/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.1 (Chain-of-Thought Fundamentals) - sequential reasoning foundation; Chapter 5.2 (Tree-of-Thought) - complementary exploration approach; Chapter 5.4 (Hierarchical Planning) - multi-level reasoning; Part 4 (Memory Systems) - episodic and semantic memory integration
 
 
+
+
+
+✅ [Take Chapter 5.3 quiz](https://docs.google.com/forms/d/1uwPSAzCv9f_F_u6CrazwnE4X35Imtq9yB1kt5KEde44/viewform?usp=sharing)
 
 ---
 
@@ -2130,6 +2203,9 @@ Self-Consistency fundamentally transforms how language models approach complex r
 ## Part 5, Chapter 5.4: Hierarchical Planning
 
 Hierarchical planning addresses the impracticality of flat task sequences for complex problems by introducing multiple abstraction layers—strategic goals decompose into tactical phases, which decompose into operational actions. This multi-level organization mirrors human cognition, suppressing irrelevant details at higher levels while preserving decision quality, and transforms intractable problems with hundreds of interdependent tasks into manageable hierarchical structures where complex goal decomposition reduces search space from factorial to polynomial.
+
+**Weekly Allocation**: Reading: 3.1 hrs | Active Learning: 1.3 hrs
+Total Hours: 4.4 (3.1 hrs reading, 1.3 hrs active learning)
 
 **Key Concepts**:
 - Hierarchical Decomposition, Task Abstraction Levels, Task Networks, Root Nodes, Abstract Tasks, Primitive Tasks, Leaf Nodes
@@ -2148,14 +2224,16 @@ Hierarchical planning addresses the impracticality of flat task sequences for co
 7. Why does HTN formalism matter for practical hierarchical planning?
 8. When is hierarchical planning the right architectural choice versus flat planning?
 
-**Metrics**: Word Count: 11,908 | Pages: 42 | Complexity: 4/5 | Reading Speed: 9.5 pph | Total Hours: 4.4
-
-**Weekly Allocation**: Reading: 3.1 hrs (70%) | Active Learning: 1.3 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1A1AbUb9KyUB2BCRnQTK_6EU2qmGKuQ3M3IIZBOpMIew/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.1 (Chain-of-Thought) - linear decomposition foundation; Chapter 5.2 (Tree-of-Thought) - tree-based exploration; Chapter 5.3 (Self-Consistency) - ensemble reasoning; Chapter 5.5 (MCTS) - iterative planning refinement; Part 1 (Foundations) - problem decomposition principles
 
 
+
+
+
+✅ [Take Chapter 5.4 quiz](https://docs.google.com/forms/d/1OUPNylJKG3QomLKXJsaV-6wAVIug3TZGdokuuBtDvQE/viewform?usp=sharing)
 
 ---
 
@@ -2164,6 +2242,9 @@ Hierarchical planning addresses the impracticality of flat task sequences for co
 ## Part 5, Chapter 5.5: Monte Carlo Tree Search (MCTS)
 
 Monte Carlo Tree Search addresses a fundamental challenge in agent planning: how to intelligently explore exponentially large action spaces without exhaustive enumeration. By iteratively building search trees through simulation—selecting promising branches, expanding to unexplored frontiers, simulating complete episodes, and backpropagating results—MCTS concentrates computational effort where it matters most. The algorithm combines chain-of-thought reasoning through iterative tree expansion, planning strategies for sequential decision-making, working memory storing visit counts and rewards, and stateful orchestration across simulation cycles.
+
+**Weekly Allocation**: Reading: 3.4 hrs | Active Learning: 1.4 hrs
+Total Hours: 4.8 (3.4 hrs reading, 1.4 hrs active learning)
 
 **Key Concepts**:
 - Monte Carlo Method, Tree Search, Sequential Decision-Making
@@ -2187,14 +2268,16 @@ Monte Carlo Tree Search addresses a fundamental challenge in agent planning: how
 7. How does the "tree reuse" optimization work when transitioning between sequential decisions?
 8. Explain how multi-objective MCTS maintains a Pareto frontier of solutions?
 
-**Metrics**: Word Count: 11,960 | Pages: 42 | Complexity: 4/5 | Reading Speed: 8.7 pph | Total Hours: 4.8
-
-**Weekly Allocation**: Reading: 3.4 hrs (70%) | Active Learning: 1.4 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1UdM3NIEtN4hKQ5yDXf8N5S0ucbkozO10u39tJap-0ak/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.4 (Hierarchical Planning) - abstract task decomposition; Chapter 5.3 (Self-Consistency) - ensemble reasoning principles; Chapter 5.2 (Tree-of-Thought) - explicit tree-based exploration; Chapter 5.1 (Chain-of-Thought) - sequential reasoning; Part 4 (Memory Systems) - memory integration
 
 
+
+
+
+✅ [Take Chapter 5.5 quiz](https://docs.google.com/forms/d/12GPqFvXkMd-0NSNo3w6834nILWI-WhgWSzS5hioFbtc/viewform?usp=sharing)
 
 ---
 
@@ -2203,6 +2286,9 @@ Monte Carlo Tree Search addresses a fundamental challenge in agent planning: how
 ## Part 5, Chapter 5.6: A* Search
 
 A* Search represents a fundamental breakthrough in intelligent pathfinding, combining actual costs already incurred with informed estimates of remaining distances to balance optimization with efficiency. By expanding nodes in order of lowest f-value where f(n) = g(n) + h(n), the algorithm integrates actual path costs (g(n)) with heuristic estimates of distance to goal (h(n)), enabling guaranteed optimal solutions through admissible heuristics while achieving computational efficiency through goal-directed guidance. A* powers applications from video game pathfinding to robot navigation to logistics optimization.
+
+**Weekly Allocation**: Reading: 7.8 hrs | Active Learning: 3.4 hrs
+Total Hours: 11.2 (7.8 hrs reading, 3.4 hrs active learning)
 
 **Key Concepts**:
 - Actual Path Cost (g(n)), Heuristic Estimate (h(n)), Evaluation Function (f(n))
@@ -2226,14 +2312,16 @@ A* Search represents a fundamental breakthrough in intelligent pathfinding, comb
 7. How would you design a heuristic for A* solving the traveling salesman problem?
 8. When would you use weighted A* over standard A*?
 
-**Metrics**: Word Count: 25,095 | Pages: 89 | Complexity: 5/5 | Reading Speed: 7.9 pph | Total Hours: 11.2
-
-**Weekly Allocation**: Reading: 7.8 hrs (70%) | Active Learning: 3.4 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1wW0E012vaBMfewc7keiQJ-NM8zScRGLsVU4FFlpWOQw/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.1 (Chain-of-Thought) - sequential reasoning foundation; Chapter 5.2 (Tree-of-Thought) - tree exploration principles; Chapter 5.3 (Self-Consistency) - ensemble reasoning; Chapter 5.5 (MCTS) - alternative planning algorithm; Part 1 (Foundations) - search and optimization principles
 
 
+
+
+
+✅ [Take Chapter 5.6 quiz](https://docs.google.com/forms/d/1GuDSTLUv7y35WNinttn66-J8xZkBkutrUabyDo-eAMc/viewform?usp=sharing)
 
 ---
 
@@ -2242,6 +2330,9 @@ A* Search represents a fundamental breakthrough in intelligent pathfinding, comb
 ## Part 5, Chapter 5.7: Episodic Memory
 
 Episodic memory stores specific past experiences with temporal and personal context, distinguishing it from semantic memory which stores generalized knowledge. It enables personalization by maintaining awareness of individual customer situations, preferences, and interaction history across multiple sessions through encoding, consolidation, and retrieval mechanisms.
+
+**Weekly Allocation**: Reading: 2.6 hrs | Active Learning: 1.1 hrs
+Total Hours: 3.7 (2.6 hrs reading, 1.1 hrs active learning)
 
 **Key Concepts**:
 - Episodic Memory, Semantic Memory, Working Memory, Procedural Memory
@@ -2259,14 +2350,16 @@ Episodic memory stores specific past experiences with temporal and personal cont
 - What are the "common pitfalls" in production episodic memory systems, and what mitigation strategies address each pitfall?
 - How do trajectory-level episodic memories differ from individual episode storage, and what distinctive questions can trajectory retrieval answer?
 
-**Metrics**: Word Count: 10,025 | Pages: 35 | Complexity: 4/5 | Reading Speed: 9.5 pph | Total Hours: 3.7
-
-**Weekly Allocation**: Reading: 2.6 hrs (70%) | Active Learning: 1.1 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/18I_Vc4zvVo_HpB00qY0qqFiUR9GkeHM41dBbFR74YWY/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.8 (Semantic Memory), Chapter 5.9 (Working Memory), Chapter 5.10-5.13 (Advanced Agent Reasoning), Part 4 (Agent Optimization & Production)
 
 
+
+
+
+✅ [Take Chapter 5.7 quiz](https://docs.google.com/forms/d/14W4mk77rIhpQHf_BZ-xW-5bE824hj7GkPf9bUfwc6ys/viewform?usp=sharing)
 
 ---
 
@@ -2275,6 +2368,9 @@ Episodic memory stores specific past experiences with temporal and personal cont
 ## Part 5, Chapter 5.8: Semantic Memory
 
 Semantic memory stores generalized facts, concepts, rules, and relationships independent of personal context or learning episodes, bridging the gap between parametric knowledge frozen at training time and dynamic external knowledge. It enables agents to access dynamic, current, domain-specific information through vector databases and knowledge graphs.
+
+**Weekly Allocation**: Reading: 1.7 hrs | Active Learning: 0.7 hrs
+Total Hours: 2.4 (1.7 hrs reading, 0.7 hrs active learning)
 
 **Key Concepts**:
 - Semantic Memory, Vector Databases, Knowledge Graphs
@@ -2293,14 +2389,16 @@ Semantic memory stores generalized facts, concepts, rules, and relationships ind
 - What specific failure modes does knowledge graph construction encounter when extracting entities and relationships from unstructured text?
 - How should systems handle the quality-quantity tradeoff in semantic memory retrieval, and why does "more results" often degrade rather than improve performance?
 
-**Metrics**: Word Count: 7,199 | Pages: 25 | Complexity: 3/5 | Reading Speed: 10.2 pph | Total Hours: 2.4
-
-**Weekly Allocation**: Reading: 1.7 hrs (70%) | Active Learning: 0.7 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1jAGjKjqFPudeKqcwtMNO1s1k19hX8mcSoXwheRonUX4/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.7 (Episodic Memory), Chapter 5.9 (Working Memory), Part 2 (Prompting & RAG Foundations), Part 1 (Transformer Architecture)
 
 
+
+
+
+✅ [Take Chapter 5.8 quiz](https://docs.google.com/forms/d/1kpE74lt1HDQ_cnCkkgx6ckKpNPxpubMG3Fw-K6gi-lQ/viewform?usp=sharing)
 
 ---
 
@@ -2309,6 +2407,9 @@ Semantic memory stores generalized facts, concepts, rules, and relationships ind
 ## Part 5, Chapter 5.9: Working Memory
 
 Working memory is temporary storage and processing mechanism enabling real-time reasoning, context maintenance, and immediate decision-making within a single conversation episode. It implements the bounded context window fundamental to LLMs, managing competing demands including system prompts, conversation history, retrieved documents, and reasoning traces within token budgets.
+
+**Weekly Allocation**: Reading: 3.4 hrs | Active Learning: 1.5 hrs
+Total Hours: 4.9 (3.4 hrs reading, 1.5 hrs active learning)
 
 **Key Concepts**:
 - Working Memory, Context Window, Token
@@ -2330,14 +2431,16 @@ Working memory is temporary storage and processing mechanism enabling real-time 
 - How do I decide between vector-based retrieval and knowledge graphs for managing semantic memory that working memory accesses?
 - Why does document positioning in context matter if the model can attend to any position equally?
 
-**Metrics**: Word Count: 12,261 | Pages: 43 | Complexity: 5/5 | Reading Speed: 8.7 pph | Total Hours: 4.9
-
-**Weekly Allocation**: Reading: 3.4 hrs (70%) | Active Learning: 1.5 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1_Pe-hI0Onul0xF7qixqn6ILYDne9Cp5EI6qFHvh650Q/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.7 (Episodic Memory), Chapter 5.8 (Semantic Memory), Chapter 5.1-5.6 (Planning and Tree Search), Part 4 (Agent Optimization)
 
 
+
+
+
+✅ [Take Chapter 5.9 quiz](https://docs.google.com/forms/d/1ikuIDvfO6aByd0elyNfM5wRQzxVBUSXp836zyz_7Wic/viewform?usp=sharing)
 
 ---
 
@@ -2346,6 +2449,9 @@ Working memory is temporary storage and processing mechanism enabling real-time 
 ## Part 5, Chapter 5.10: Utility-Based Decision Making
 
 Utility-based decision making provides a mathematical framework evaluating actions by their expected utility rather than binary success criteria, enabling systematic reasoning about complex trade-offs. It uses expected utility theory to select actions maximizing average desirability across all possible futures while accounting for risk attitudes and probabilistic uncertainty.
+
+**Weekly Allocation**: Reading: 3.9 hrs | Active Learning: 1.7 hrs
+Total Hours: 5.5 (3.9 hrs reading, 1.7 hrs active learning)
 
 **Key Concepts**:
 - Utility-Based Decision Making, Expected Desirability, Trade-off Balancing
@@ -2368,14 +2474,16 @@ Utility-based decision making provides a mathematical framework evaluating actio
 - How do common utility-based applications like autonomous vehicles, financial portfolios, and recommendation systems demonstrate multi-objective optimization?
 - Identify and explain at least three major misconceptions in utility-based decision making implementation and how to avoid each.
 
-**Metrics**: Word Count: 13,542 | Pages: 48 | Complexity: 5/5 | Reading Speed: 8.7 pph | Total Hours: 5.5
-
-**Weekly Allocation**: Reading: 3.9 hrs (70%) | Active Learning: 1.7 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1fakG-1aL8aFmcEYiXZ6g0cK7CkKPB4GtVuO7ArbCQjo/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.3 (Goal-Based Agents), Chapter 5.11 (Rule-Based Decision Making), Chapter 5.12-5.13 (Learning-Based and Hybrid Systems), Part 4 (Learning & Adaptation)
 
 
+
+
+
+✅ [Take Chapter 5.10 quiz](https://docs.google.com/forms/d/1lmcvEXr5DUePHAYI1QB9vLY8wQ5vYcHKi_gzdWCwmSc/viewform?usp=sharing)
 
 ---
 
@@ -2384,6 +2492,9 @@ Utility-based decision making provides a mathematical framework evaluating actio
 ## Part 5, Chapter 5.11: Rule-Based Decision Making
 
 Rule-based decision making represents an AI approach where agents make decisions by applying explicitly programmed conditional rules to current information, creating transparent and auditable reasoning chains. It enables deterministic behavior with complete explainability through inference traces, making it ideal for regulatory compliance and safety-critical applications.
+
+**Weekly Allocation**: Reading: 2.9 hrs | Active Learning: 1.3 hrs
+Total Hours: 4.2 (2.9 hrs reading, 1.3 hrs active learning)
 
 **Key Concepts**:
 - Rule-Based Decision Making, Transparent Reasoning, Domain Expertise Encoding, Deterministic Behavior, Explainability Advantage
@@ -2409,9 +2520,7 @@ Rule-based decision making represents an AI approach where agents make decisions
 - Analyze when pure rule-based, pure utility-based, or hybrid approaches are most appropriate for specific domains.
 - Describe real-world rule learning applications in fraud detection, medical diagnosis, and e-commerce pricing.
 
-**Metrics**: Word Count: 11,229 | Pages: 40 | Complexity: 4/5 | Reading Speed: 9.5 pph | Total Hours: 4.2
-
-**Weekly Allocation**: Reading: 2.9 hrs (70%) | Active Learning: 1.3 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1jdGDKpMn1ARceRO_GnfbOutpCpIsbp75YuiYlTzyv0Q/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5.1-5.6 (Foundational Decision-Making), Chapter 5.10 (Utility-Based Decision Making), Chapter 5.12-5.13 (Learning-Based and Hybrid Systems), Part 4 (Learning & Adaptation)
@@ -2437,6 +2546,10 @@ Together they form the foundational memory and decision-making systems enabling 
 
 
 
+
+
+✅ [Take Chapter 5.11 quiz](https://docs.google.com/forms/d/1yRj9rNqPck1p-tXRU6-Vsn4R9-dhdCH3_I50EAyRd1c/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -2444,6 +2557,9 @@ Together they form the foundational memory and decision-making systems enabling 
 ## Part 5, Chapter 5.12: Learning-Based Decision Making
 
 This chapter establishes the fundamental paradigm shift from engineering explicit decision rules to cultivating intelligence through learning from consequences. Learning-based agents discover effective strategies through trial-and-error interaction with feedback signals that guide autonomous pattern discovery, enabling discovery of non-obvious strategies and continuous adaptation to novel situations that static rule-based systems cannot handle.
+
+**Weekly Allocation**: Reading: 4.4 hrs | Active Learning: 1.9 hrs
+Total Hours: 6.3 (4.4 hrs reading, 1.9 hrs active learning)
 
 **Key Concepts**:
 - Learning-Based Decision Making, Trial-and-Error Learning, Feedback Signals, Autonomous Pattern Discovery, Paradigm Shift
@@ -2471,14 +2587,16 @@ This chapter establishes the fundamental paradigm shift from engineering explici
 9. Explain why deep RL's target networks are necessary for learning stability, and what problems they prevent.
 10. What production requirements does the simple in-memory approach neglect that production systems address?
 
-**Metrics**: Word Count: 14,151 | Pages: 50 | Complexity: 5/5 | Reading Speed: 7.9 pph | Total Hours: 6.3
-
-**Weekly Allocation**: Reading: 4.4 hrs (70%) | Active Learning: 1.9 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1eahsTYHtCqykSSRukYNQpDmsSZ_qZ5kypuqooIlHXH0/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 5.1 (Agent Architecture), Part 5.2 (Agent Types and Paradigms), Part 5.3 (Sensing and Perception), Part 5.6 (Rule-Based Decision Systems), Part 5.7 (Rule Inference and Execution), Part 5.8 (Utility-Based Approaches), Part 5.9 (Search and Planning), Part 5.10 (Reasoning Under Uncertainty), Part 5.11 (Multi-Criteria Decision Making), Part 5.13 (Hybrid Decision Systems), Part 6 (Ethics, Governance, Advanced Topics)
 
 
+
+
+
+✅ [Take Chapter 5.12 quiz](https://docs.google.com/forms/d/1B_qU9ifDNJAlCfGqD16H2PO1NcgXfwC5Ro_XCLZBS0E/viewform?usp=sharing)
 
 ---
 
@@ -2487,6 +2605,9 @@ This chapter establishes the fundamental paradigm shift from engineering explici
 ## Part 5, Chapter 5.13: Hybrid Decision Systems
 
 Hybrid decision systems integrate multiple paradigms—utility-based optimization, rule-based logic, and learning-based policies—despite their fundamentally different internal representations. This chapter shows how to connect heterogeneous components through integration architectures, manage information loss at paradigm boundaries, and apply systematic decision frameworks for choosing appropriate paradigm combinations based on problem characteristics.
+
+**Weekly Allocation**: Reading: 6.8 hrs | Active Learning: 2.9 hrs
+Total Hours: 9.7 (6.8 hrs reading, 2.9 hrs active learning)
 
 **Key Concepts**:
 - Sequential Architecture (Pipeline Pattern), Parallel Architecture, Cooperative Architecture (Iterative Pattern), Embedded Architecture, Information Bottleneck, Fusion Mechanism, Arbitration
@@ -2510,15 +2631,14 @@ Hybrid decision systems integrate multiple paradigms—utility-based optimizatio
 9. What are the three critical design principles for mitigating common integration failures?
 10. How do we select between different integration architectures based on problem characteristics?
 
-**Metrics**: Word Count: 21,751 | Pages: 77 | Complexity: 5/5 | Reading Speed: 7.9 pph | Total Hours: 9.7
-
-**Weekly Allocation**: Reading: 6.8 hrs (70%) | Active Learning: 2.9 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1gnFiBKS18fy7Mm5OPoNVCcLodZZNYvbSeDsj4LEJR7E/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 5.1 (Reasoning Fundamentals), Part 5.2 (Planning Algorithms), Part 5.3 (Memory Systems), Part 5.10 (Utility-Based Optimization), Part 5.11 (Rule-Based Logic Systems), Part 5.12 (Learning-Based Adaptation), Part 6 (System Operations and Deployment), Part 7 (Safety, Ethics, and Compliance), Part 8 (Evaluation and Metrics)
 
----
 
+
+✅ [Take Chapter 5.13 quiz](https://docs.google.com/forms/d/1NhuSfAJ7RsSxuNSR-a1XURaX_8H53ZBTJJMuraX3dt8/viewform?usp=sharing)
 
 ---
 
@@ -2527,6 +2647,9 @@ Hybrid decision systems integrate multiple paradigms—utility-based optimizatio
 ## Part 6, Chapter 6.1A: RAG Chunking and Embeddings
 
 This chapter establishes the technical foundation for semantic search in RAG systems through embeddings that convert text into high-dimensional vectors where semantic meaning is preserved through spatial relationships. It covers embedding fundamentals, comparing leading embedding models, building production pipelines, implementing hybrid search combining dense and sparse methods, and understanding performance optimization through GPU acceleration.
+
+**Weekly Allocation**: Reading: 0.7 hrs | Active Learning: 0.3 hrs
+Total Hours: 1.0 (0.7 hrs reading, 0.3 hrs active learning)
 
 **Key Concepts**:
 - Embedding, Vector Space, Cosine Similarity, Dimensionality, Dense Embeddings, Semantic Meaning, Distance Metrics
@@ -2550,58 +2673,16 @@ This chapter establishes the technical foundation for semantic search in RAG sys
 9. What are the three main challenges that dense embeddings struggle with in production systems?
 10. How does the fusion weight (alpha) parameter in hybrid retrieval affect the balance between semantic and keyword relevance?
 
-**Metrics**: Word Count: 2,884 | Pages: 10 | Complexity: 1/5 | Reading Speed: 10.2 pph | Total Hours: 1.0
-
-**Weekly Allocation**: Reading: 0.7 hrs (70%) | Active Learning: 0.3 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1xXg-9cHNamLcmu4cw6GdAilK7wxS9yCkLY2yTNgJxw8/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 2 (Framework Landscape, LangGraph, LangChain), Part 3 (LLM Architecture, Training, Fine-tuning), Part 4 (Model Deployment, Optimization), Part 5 (Agent Architecture, Memory, Reasoning), Part 6.1C (RAG Implementation), Part 6.2A (Vector Database Selection), Part 6.2B (Production Deployment), Part 6.3 (ETL Fundamentals), Part 6.4 (Data Quality), Part 6.5 (Production RAG Architecture), Part 6.6 (Reranking, Query Decomposition, Advanced Retrieval)
 
 
 
----
-
-[↑ Back to Table of Contents](#table-of-contents)
-
-## Part 6, Chapter 6.1C: RAG Implementation
-
-This chapter provides hands-on implementation of retrieval-augmented generation systems by orchestrating five key components: document chunking, embedding generation, vector storage, similarity-based retrieval, and context-augmented generation. It demonstrates complete RAG workflow with practical code, addressing production requirements like batch optimization, token economics, and verification through citations.
-
-**Key Concepts**:
-- DocumentChunk dataclass, Embedding Vector, Source Attribution, Metadata Dictionary, Vector Storage
-- RAG System Architecture, Chunk Size Parameter, Chunk Overlap, Embeddings Matrix, Separation of Concerns, Production Readiness
-- Sequential Processing Pipeline, Batch Embedding Requests, Matrix Synchronization, Observability Logging, Data Consistency Guarantee
-- Sliding Window Algorithm, Boundary Context Preservation, Token Counting, Whitespace Tokenization, Tokenization Mismatch Risk, Overlap Percentage
-- Batch Processing Efficiency, OpenAI text-embedding-3-small, OpenAI text-embedding-3-large, Vectorized Similarity Computation, Batch Size Optimization, API Batch Limits
-- Query Embedding, Vector Normalization, Cosine Similarity Scoring, Efficient Top-K Selection, Descending Order Ranking, Semantic Relationship Capture
-- RAG Pipeline Orchestration, Numbered Citation Format, Grounding Instruction, Citation Requirement, Temperature Parameter, Structured Response Format
-- Knowledge Base Construction, Chunk Configuration, Multi-Query Testing, Similarity Score Interpretation, Token Cost Analysis, Output Observability
-- Retrieval Quality Validation, Citation Grounding Verification, Token Usage Breakdown, Cost-Per-Query Economics
-- Principle 1: Simplicity Scales, Principle 2: Chunking Strategy Determines Quality, Principle 3: Citations Enable Verification, Principle 4: Token Economics Matter
-- Ideal Use Cases, Prototype Advantages, Small-Scale Production, Inappropriate for Scale, Advanced Features Required
-- Document Count, Query Frequency, Persistence Requirement
-- Misconception #1 - RAG Eliminates Hallucinations, Misconception #2 - Larger Chunks Better, Misconception #3 - RAG Replaces Fine-Tuning
-
-**Key Questions**:
-1. What are the three stages of the RAG pipeline in order?
-2. Your RAG system chunks a 50-page technical manual into 200-token chunks with no overlap. Users report that answers often miss context spanning chunk boundaries. What's the best fix?
-3. Why does batch embedding generation (100 texts per request) provide 10-20x speedup compared to individual text requests?
-4. How does cosine similarity enable semantic search that keyword search cannot?
-5. In the demonstration output, why does a chunk from "RAG_best_practices" appear in the results for "What is the memory bandwidth of H100?" when it doesn't contain that information?
-6. What does the temperature parameter (0.3) do in the context-augmented generation, and why is low temperature appropriate for factual Q&A?
-7. Why does the implementation separate the chunks list from the embeddings numpy matrix?
-8. What production requirements does the simple in-memory approach neglect that Part 6.2B addresses?
-9. When you set chunk_overlap to 20 tokens for a 200-token chunk size, how many times does each token appear across chunks?
-10. How do you determine if in-memory approach is viable versus needing vector databases?
-
-**Metrics**: Word Count: 3,163 | Pages: 11 | Complexity: 2/5 | Reading Speed: 10.2 pph | Total Hours: 1.1
-
-**Weekly Allocation**: Reading: 0.8 hrs (70%) | Active Learning: 0.3 hrs (30%)
-
-**Related Chapters**:
-- Part 6.1A (RAG Chunking and Embeddings), Part 2 (Prompt Engineering and LLM Fundamentals), Part 3 (Understanding and Evaluating LLMs), Part 4 (Multi-turn Conversations and Context Management), Part 6.1B (RAG Fundamentals and Theory), Part 6.2A (Vector Database Selection), Part 6.2B (Production Deployment), Part 6.3 (ETL Fundamentals), Part 6.4 (Data Quality), Part 6.5 (Production RAG Architecture), Part 6.6 (Reranking and Query Decomposition)
 
 
+✅ [Take Chapter 6.1A quiz](https://docs.google.com/forms/d/1-8oYAzmGUdMKqcpRrJ971XaXUjZZZlpZ0y1AOe6FWI8/viewform?usp=sharing)
 
 ---
 
@@ -2610,6 +2691,9 @@ This chapter provides hands-on implementation of retrieval-augmented generation 
 ## Part 6, Chapter 6.2A: Vector Database Selection
 
 Vector databases represent a fundamental architectural paradigm shift enabling semantic search through specialized indexing optimized for high-dimensional vectors. This chapter covers the vector database landscape comparing six dominant platforms, systematic database selection frameworks, HNSW algorithm parameters, distance metrics, and practical decision frameworks for choosing appropriate infrastructure as systems scale from prototypes to enterprise deployments.
+
+**Weekly Allocation**: Reading: 1.8 hrs | Active Learning: 0.8 hrs
+Total Hours: 2.6 (1.8 hrs reading, 0.8 hrs active learning)
 
 **Key Concepts**:
 - Vector Database, Similarity Search, Approximate Nearest Neighbor (ANN) Algorithms, Horizontal Scaling, Metadata Filtering, Native Vector Data Types
@@ -2644,14 +2728,16 @@ Vector databases represent a fundamental architectural paradigm shift enabling s
 9. How do you translate abstract HNSW principles into concrete configurations for specific accuracy and latency requirements?
 10. What factors determine whether a startup should choose Pinecone versus self-hosted Milvus for initial product development?
 
-**Metrics**: Word Count: 6,563, Pages: 23, Complexity: 3/5, Reading Speed: 8.7 pph, Total Hours: 2.6
-
-**Weekly Allocation**: Reading: 1.8 hrs (70%), Active Learning: 0.8 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1kOr7sb_nuwOPqRdhxMLwDISLH685EN9zxsGPgUZJjbY/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 2 (Framework Landscape, LangGraph, LangChain), Part 3 (LLM Architecture, Training, Fine-tuning), Part 4 (Model Deployment, Optimization), Part 5 (Agent Architecture, Memory, Reasoning), Part 6.1A (RAG Chunking and Embeddings), Part 6.2B (Production Deployment), Part 6.3A (ETL Fundamentals), Part 6.3B (ETL Load Integration), Part 6.3C (ETL Practice), Part 6.4/6.4B (Data Quality), Part 6.5/6.5B (Production RAG Architecture), Part 6.6A/6.6/6.6C (Reranking, Query Decomposition, Advanced Retrieval)
 
 
+
+
+
+✅ [Take Chapter 6.2A quiz](https://docs.google.com/forms/d/168TmtaKjNRr5hCVwuiWyYLAFrlJvMIzSiBd1hz-7308/viewform?usp=sharing)
 
 ---
 
@@ -2660,6 +2746,9 @@ Vector databases represent a fundamental architectural paradigm shift enabling s
 ## Part 6, Chapter 6.2B: Production Vector Database Deployment
 
 Production vector database deployments require careful orchestration across connectivity, authentication, persistence, performance, and observability dimensions. This chapter covers Docker Compose configuration for both REST and gRPC endpoints, implements secure Python clients with proper authentication and timeout handling, and demonstrates batch ingestion achieving 10-20x throughput improvements. Comprehensive monitoring and high-availability clustering patterns enable reliable production operation.
+
+**Weekly Allocation**: Reading: 1.19 hrs | Active Learning: 0.51 hrs
+Total Hours: 1.7 (1.19 hrs reading, 0.51 hrs active learning)
 
 **Key Concepts**:
 - HTTP REST API and gRPC endpoints with performance trade-offs (50ms vs. 15ms latency)
@@ -2690,14 +2779,16 @@ Production vector database deployments require careful orchestration across conn
 7. Explain why proper HNSW parameter tuning (efConstruction, maxConnections, ef) represents a critical production deployment decision, and describe production-oriented tuning approach.
 8. Compare the deployment models for vector database production systems (managed SaaS like Pinecone versus self-hosted like Milvus in Docker), and discuss trade-offs around operational burden, cost, and control.
 
-**Metrics**: Word Count: 4,501 | Pages: 16 | Complexity: 2/5 | Reading Speed: 9.5 pph | Total Hours: 1.7
-
-**Weekly Allocation**: Reading: 1.19 hrs (70%) | Active Learning: 0.51 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1-gNzsKl6Hxltt6X3gaD3YMS3TQnBVyJSN3Dkh_6tKgI/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 6.2A (Vector Database Selection), Chapter 6.1A (RAG Chunking and Retrieval), Chapter 6.1C (RAG Implementation), Chapter 6.3A (ETL Fundamentals), Chapter 6.3B (ETL Load Integration), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG Architecture), Chapter 6.6A/6.6/6.6C (Advanced Retrieval)
 
 
+
+
+
+✅ [Take Chapter 6.2B quiz](https://docs.google.com/forms/d/16d1h4zOkhZr4ZDltSDDFVH9B1Arjmc4QEjasTAayCr0/viewform?usp=sharing)
 
 ---
 
@@ -2706,6 +2797,9 @@ Production vector database deployments require careful orchestration across conn
 ## Part 6, Chapter 6.3A: ETL Fundamentals
 
 ETL pipelines solve the critical enterprise data integration problem, bridging 70+ fragmented organizational data sources into AI-ready vector databases for RAG systems. This chapter establishes the three-stage systematic approach (Extract, Transform, Load) with specialized connectors for different source types, chunking strategies balancing context and specificity, and quality validation ensuring only clean data enters production knowledge bases. Real-world examples demonstrate measurable business impact: accuracy improvement from 67% to 92%, response time reduction to 3.2 seconds, and $2.1M annual savings through reduced escalations.
+
+**Weekly Allocation**: Reading: 2.03 hrs | Active Learning: 0.87 hrs
+Total Hours: 2.9 (2.03 hrs reading, 0.87 hrs active learning)
 
 **Key Concepts**:
 - ETL pipeline architecture decomposing extraction, transformation, and loading into manageable phases
@@ -2784,14 +2878,16 @@ ETL pipelines solve the critical enterprise data integration problem, bridging 7
 7. Explain the role of metadata threading through ETL pipelines, including what downstream capabilities it enables that wouldn't be possible without this design choice.
 8. Explain why content hashing via SHA-256 provides effective deduplication at scale, including the trade-off analysis and failure modes compared to alternative approaches.
 
-**Metrics**: Word Count: 7,058 | Pages: 25 | Complexity: 3/5 | Reading Speed: 8.7 pph | Total Hours: 2.9
-
-**Weekly Allocation**: Reading: 2.03 hrs (70%) | Active Learning: 0.87 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1Mojn9ca0VptK5eB5AqJXsQKnZcp9CCZ2RTQBcY1d-ZQ/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 6.1A (RAG Chunking), Chapter 6.1C (RAG Implementation), Chapter 6.2A (Vector Database Selection), Chapter 6.2B (Production Deployment), Part 4 (Model Deployment and Optimization), Part 2 (Framework Landscape and Orchestration), Chapter 6.3B (ETL Load Integration), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG Architecture), Chapter 6.6A/6.6/6.6C (Advanced Retrieval)
 
 
+
+
+
+✅ [Take Chapter 6.3A quiz](https://docs.google.com/forms/d/1W4rjInxlmdn7ZFONLKbVO7oR8aA1PYXhYW5Z_LU5knw/viewform?usp=sharing)
 
 ---
 
@@ -2800,6 +2896,9 @@ ETL pipelines solve the critical enterprise data integration problem, bridging 7
 ## Part 6, Chapter 6.3B: ETL Load and Integration
 
 The load phase completes ETL pipelines by translating transformed data into vector database operations. This chapter explains vector database architecture fundamentals, collection schema design optimizing for RAG retrieval patterns, batch insertion strategies achieving 10-38x throughput improvements, and indexing decisions determining 20-100x performance variance. Production patterns address incremental updates through state management, graceful error handling enabling partial success, comprehensive monitoring for operational visibility, and GPU acceleration for billion-document scale systems.
+
+**Weekly Allocation**: Reading: 0.91 hrs | Active Learning: 0.39 hrs
+Total Hours: 1.3 (0.91 hrs reading, 0.39 hrs active learning)
 
 **Key Concepts**:
 - Vector database, Approximate nearest neighbor (ANN) search
@@ -2831,109 +2930,16 @@ The load phase completes ETL pipelines by translating transformed data into vect
 7. What does the zero-document check after extraction accomplish and why is it essential for frequently scheduled pipelines?
 8. Explain the dead letter queue pattern and how it enables forward progress in ETL pipelines.
 
-**Metrics**: Word Count: 3,431 | Pages: 12 | Complexity: 2/5 | Reading Speed: 9.5 pph | Total Hours: 1.3
-
-**Weekly Allocation**: Reading: 0.91 hrs (70%) | Active Learning: 0.39 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1nShu6IQgd52nZtHFHt8LWRSvsnhIeFZxmJkz3NNMGiw/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 6.1A (RAG Chunking Fundamentals), Chapter 6.1C (RAG Implementation), Chapter 6.2A (Vector Database Selection), Chapter 6.2B (Production Vector Database Deployment), Chapter 6.3A (ETL Fundamentals), Part 4 (Deployment and Scaling), Chapter 6.3C (ETL Practice), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG Architecture), Chapter 6.6A/6.6/6.6C (Advanced Retrieval), Chapter 8.2B (Circuit Breakers and NeMo Integration), Chapter 8.4 (Success Metrics)
 
 
 
----
-
-[↑ Back to Table of Contents](#table-of-contents)
-
-## Part 6, Chapter 6.3C: ETL Practice
-
-This practice chapter transitions from theoretical ETL understanding to hands-on implementation through guided exercises, independent challenges, and real-world anti-pattern analysis. Students implement incremental update detection with robust state management, design domain-specific chunking strategies respecting semantic boundaries, build streaming ETL pipelines with production constraints like rate limiting and deduplication, and learn to recognize and diagnose common failure patterns that emerge at production scale. The chapter emphasizes that well-designed ETL pipelines directly determine RAG retrieval quality and agent reliability.
-
-**Key Concepts**:
-- Incremental update detection identifying new or modified content since last ETL run
-- State tracking system persisting last successful run timestamp and document counts
-- Cold start scenario defaulting to processing previous 24 hours when no state exists
-- SQL parameterization preventing injection attacks while maintaining readability
-- Modification timestamp filtering using updated_at or modified_at columns
-- File metadata extraction using st_mtime for cross-platform change detection
-- State persistence pattern updating state only after successful completion
-- Chronological ordering enabling reproducible processing and easier debugging
-- Domain-specific chunking tailored to document type respecting semantic boundaries
-- Code block protection extracting and temporarily replacing code with placeholders
-- Markdown section boundaries recognizing heading hierarchy as natural dividing points
-- Chunk metadata including section heading, code presence indicator, document position
-- Overlap strategy including 10-20% of previous chunk for context continuity
-- Size tolerance allowing 10% tolerance for semantic unit boundaries
-- Semantic unit atomicity ensuring code functions and procedures never split
-- Design trade-offs when semantic constraints conflict with size constraints
-- Streaming pipeline architecture continuous polling-based systems
-- Rate limiting API constraints requiring careful implementation
-- Token bucket algorithm accumulating request capacity over time
-- Deduplication logic checking if identical records already exist using upserts
-- Quality validation for ETL domain-specific filtering rules
-- Latency targeting setting aggressive performance objectives driving architecture
-- Graceful error recovery continuing operation despite failures
-- State management for streaming tracking last processed record ID or timestamp
-- Missing quality validation anti-pattern allowing 20-40% low-quality data entry
-- Semantic chunking failure splitting semantic units across boundaries
-- Full refresh inefficiency reprocessing entire datasets without incremental updates
-- Character-based splitting naive approach ignoring semantic boundaries
-- Quality gates validation checks during transformation
-- Boilerplate removal filtering legal disclaimers and auto-generated sections
-- Content hashing for deduplication using hash functions for similarity
-- Incremental update pattern storing state and querying for changes
-- ETL as data foundation for RAG bridging sources to vector database
-- Retrieval quality dependencies direct causal relationship with ETL quality
-- ETL telemetry integration logging chunk metadata when retrieved
-- Agent planning integration exposing ETL components as callable tools
-- Scheduled versus on-demand ETL hybrid pattern combining both approaches
-- RAG dependency chain complete data flow from documents to agent responses
-- Knowledge gap resolution agent ability to trigger ETL on demand
-- Production deployment foundation ETL fundamentals for any scale
-- ETL stage responsibilities distinct purposes enabling independent testing
-- Incremental update recognition identifying applicability and improvements
-- Chunking problem diagnosis tracing symptoms back to boundaries
-- State management complexity appreciating careful tracking importance
-- Quality validation implementation understanding rejection rates versus quality impact
-- Production SQL patterns parameterized queries with WHERE clauses
-- Design trade-off analysis recognizing conflicts and making documented choices
-- Cross-stage debugging tracing issues through complete ETL pipeline
-- Document loader ecosystem recognizing pre-built connectors beyond examples
-- GPU-accelerated ETL understanding 10-100x processing speedup
-- Advanced change detection alternatives to timestamp-based approaches
-- Orchestration frameworks understanding Apache Airflow and task dependencies
-- Vector database optimization recognizing indexing and consistency tuning
-- Production scaling strategies distributed processing, checkpointing, batching
-- Monitoring and observability necessity of instrumenting ETL with telemetry
-- Comparative resource analysis progression from beginner to advanced
-
-**Key Questions**:
-1. Your team is migrating from nightly batch ETL (taking 8 hours for 10 million documents) to incremental updates. What are the three critical implementation decisions you need to make?
-2. You're chunking clinical guidelines for a medical decision support system. Your current 512-token fixed-size chunking is causing incomplete dosing instructions to be retrieved. Explain the problem and propose a solution.
-3. Describe how you would design an incremental update strategy for a REST API source like GitHub issues that doesn't have reliable last-modified timestamps.
-4. Your streaming ETL pipeline is ingesting support tickets at 30-second latency but hitting Zendesk's 100 requests/minute rate limit during business hour bursts. How would you fix this without sacrificing latency?
-5. Your quality validation rejects 35% of extracted documents. Your manager questions whether this is too aggressive. How would you justify the trade-off?
-6. How would you architect an ETL pipeline that supports both scheduled hourly incremental updates and on-demand full refreshes triggered by an agent when it detects knowledge gaps?
-7. Compare character-based chunking at 512 tokens with semantic chunking including overlap for a Python tutorial document. Why does semantic chunking typically outperform?
-
-**Metrics**: Word Count: 9,459, Pages: 33, Complexity: 4/5, Reading Speed: 7.9 pph, Total Hours: 4.2
-
-**Weekly Allocation**: Reading: 2.94 hrs (70%), Active Learning: 1.26 hrs (30%)
-
-**Related Chapters**:
-- Chapter 6.1 (RAG Fundamentals)
-- Chapter 6.2 (Vector Database Fundamentals)
-- Chapter 6.3A (ETL Fundamentals)
-- Chapter 6.3B (ETL Load Integration)
-- Chapter 4 (Advanced Agent Cognition)
-- Chapter 5 (Knowledge Integration - RAG Advanced)
-- Chapter 6.4 (Data Quality Fundamentals)
-- Chapter 6.5 (Production RAG Architecture)
-- Chapter 6.6 (Advanced Retrieval)
-- Chapter 8 (Evaluation and Tuning)
-- Chapter 9 (Human-AI Interaction)
-- Chapter 10 (Production Operations & Monitoring)
 
 
+✅ [Take Chapter 6.3B quiz](https://docs.google.com/forms/d/1V0lPKEgZaYv1PK7IQ-qhXG2qIe0qJLlXO6Q-XECfU3A/viewform?usp=sharing)
 
 ---
 
@@ -2942,6 +2948,9 @@ This practice chapter transitions from theoretical ETL understanding to hands-on
 ## Part 6, Chapter 6.4: Data Quality Fundamentals
 
 Data quality represents the hidden variable determining whether production RAG systems deliver reliable value or generate catastrophic failures. This chapter establishes the five-dimensional framework (completeness, accuracy, consistency, timeliness, validity) and demonstrates how quality failures amplify through RAG systems. A $4.2 million financial services deployment failed within 72 hours due to 12% duplicate articles with conflicting information, 8% corrupted formatting, and 5% outdated regulatory guidance. The chapter translates abstract quality goals into concrete SLAs: 98% completeness minimum, 99% accuracy, 0.5% duplicate threshold, 95% content reflecting 24-hour changes, 99.9% schema conformance. Comprehensive validation across these dimensions at ingestion, transformation, post-loading, and monitoring stages ensures production-grade reliability.
+
+**Weekly Allocation**: Reading: 3.08 hrs | Active Learning: 1.32 hrs
+Total Hours: 4.4 (3.08 hrs reading, 1.32 hrs active learning)
 
 **Key Concepts**:
 - Data quality, Quality amplification effect, Probability of error propagation, $4.2 million failure case
@@ -2965,9 +2974,7 @@ Data quality represents the hidden variable determining whether production RAG s
 6. Your ETL pipeline processes 10,000 documents daily. Exact matching removes 3,000 duplicates in 2 minutes. Fuzzy matching on remaining 7,000 takes 90 minutes. Semantic matching would add 180 minutes. Business wants completion within 2.5 hours. What optimization strategy would you propose?
 7. A regulated financial services company is deploying a RAG system for customer investment advice. They're debating strict PII redaction versus masking. What are the trade-offs, and which approach would you recommend?
 
-**Metrics**: Word Count: 10,054 | Pages: 35 | Complexity: 4/5 | Reading Speed: 7.9 pph | Total Hours: 4.4
-
-**Weekly Allocation**: Reading: 3.08 hrs (70%) | Active Learning: 1.32 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/13qnq8ng5c91PlxaIIck2rd_bFXniMWyanCxBuJfTkpY/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3 (Deploying Agentic AI), Chapter 4 (Advanced Agent Cognition), Chapter 5 (Knowledge Integration and RAG), Chapter 6.4B/6.4C (Data Quality Advanced and Implementation), Chapter 6.5 (Monitoring and Operations), Chapter 7 (Safety, Ethics, and Compliance), Chapter 8 (Evaluation and Benchmarking), Chapter 9 (Explainability and Human Oversight)
@@ -2991,6 +2998,10 @@ Data quality represents the hidden variable determining whether production RAG s
 
 
 
+
+
+✅ [Take Chapter 6.4 quiz](https://docs.google.com/forms/d/1Z6a1NKwf95YFULIfXa_3xgC3-3HL_o5rrTRPwvsU7Ls/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -2998,6 +3009,9 @@ Data quality represents the hidden variable determining whether production RAG s
 ## Part 6, Chapter 6.4B: Data Quality Practice
 
 This chapter provides comprehensive practical implementation of quality validation frameworks for production RAG systems. Through guided and independent practice, learners implement multi-dimensional quality checking, automated remediation, quality monitoring dashboards, and deploy these patterns in real-world scenarios involving diverse data sources and domain-specific requirements. The chapter addresses realistic production failures and establishes patterns to recognize and avoid.
+
+**Weekly Allocation**: Reading: 1.54 hrs | Active Learning: 0.66 hrs
+Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 
 **Key Concepts**:
 - Quality Assessment Framework, QualityScore Dataclass
@@ -3021,12 +3035,12 @@ This chapter provides comprehensive practical implementation of quality validati
 9. What is the incremental processing optimization and why does capturing document modification timestamps matter?
 10. Describe the false positive trap that occurred in the financial services case and explain how scoring resolved it.
 
-**Metrics**: Word Count: 5567 | Pages: 19 | Complexity: 3/5 | Reading Speed: 8.7 pph | Total Hours: 2.2
-
-**Weekly Allocation**: Reading: 1.54 hrs (70%) | Active Learning: 0.66 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1-D_2XgdmixDRY58Cgsv4mdPGAV_X6uAI8mrHMt59328/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 6.4 (Data Quality Fundamentals), Chapter 6.3A/6.3B (ETL Fundamentals & Load Integration), Chapter 6.2B (Production Vector Database Deployment), Chapter 6.1A/6.1C (RAG Chunking & Implementation), Part 3 (Deployment), Chapter 6.5/6.5B (Production RAG Architecture & Practice), Chapter 6.6A/6.6/6.6C (Advanced Retrieval), Chapter 8.2/8.3 (System Integration & Continuous Evaluation), Chapter 9 (Human Oversight & Feedback Loops)
+
+
 
 
 
@@ -3037,6 +3051,9 @@ This chapter provides comprehensive practical implementation of quality validati
 ## Part 6, Chapter 6.5: Production RAG Architecture
 
 This chapter covers the complete architectural design of production RAG systems operating at enterprise scale with sub-second latency, 90%+ accuracy, strict cost controls, and guaranteed availability. The chapter establishes critical patterns for layered system design (ingestion, storage, retrieval, generation, API, observability), addresses fundamental production challenges absent in prototypes, and implements fault tolerance and deployment strategies ensuring reliable operations.
+
+**Weekly Allocation**: Reading: 2.66 hrs | Active Learning: 1.14 hrs
+Total Hours: 3.8 (2.66 hrs reading, 1.14 hrs active learning)
 
 **Key Concepts**:
 - Production Gap, Latency Requirements, Accuracy Demands, Cost Optimization, Reliability SLAs
@@ -3058,14 +3075,16 @@ This chapter covers the complete architectural design of production RAG systems 
 7. Your monitoring dashboard shows retrieval recall dropping from 92% to 78% over the past month without code changes. What's likely happening and how do you diagnose?
 8. Explain the relationship between caching strategy decisions (TTL, invalidation pattern) and observability metrics required to validate they're working.
 
-**Metrics**: Word Count: 8620 | Pages: 30 | Complexity: 4/5 | Reading Speed: 7.9 pph | Total Hours: 3.8
-
-**Weekly Allocation**: Reading: 2.66 hrs (70%) | Active Learning: 1.14 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1exID93jeuDM61qnnM45omx9zc-FftFm2meUbimX4Wz4/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 2 (LLM Fundamentals), Part 4 (Advanced Agent Cognition), Part 5 (Knowledge Integration - Chapter 6.1-6.4), Chapter 3 (Deployment Infrastructure), Chapter 6.1-6.4 (Core RAG)
 
 
+
+
+
+✅ [Take Chapter 6.5 quiz](https://docs.google.com/forms/d/1oTMXSv-6yRwrSQEZbEyI6Cn7-mhjUUmDH9fhNhKu8dI/viewform?usp=sharing)
 
 ---
 
@@ -3074,6 +3093,9 @@ This chapter covers the complete architectural design of production RAG systems 
 ## Part 6, Chapter 6.5B: Production RAG Practice
 
 This chapter moves from production RAG theory to practical implementation through guided and independent challenges. Learners implement health checks validating every critical dependency, conduct load testing to identify bottlenecks, optimize latency and costs, design A/B testing infrastructure for data-driven decisions, and build comprehensive monitoring dashboards. The chapter establishes advanced retrieval techniques including reranking and their cost-benefit analysis, with emphasis on measuring effectiveness before production deployment.
+
+**Weekly Allocation**: Reading: 2.8 hrs | Active Learning: 1.2 hrs
+Total Hours: 4.0 (2.8 hrs reading, 1.2 hrs active learning)
 
 **Key Concepts**:
 - Staging Environment, Environment Configuration Management, Health Check Endpoint, Dependency Validation, Docker Compose Profiles, Graceful Degradation Fallback, Configuration Encapsulation, Deployment Validation Checklist
@@ -3100,12 +3122,12 @@ This chapter moves from production RAG theory to practical implementation throug
 7. Your reranking model latency degrades from 120ms to 420ms as candidate set grows from 50 to 150 documents. What architectural change reduces latency without sacrificing quality?
 8. Your RAG health check detects LLM API latency degraded from 200ms to 2000ms. How do you handle this gracefully to maintain partial service?
 
-**Metrics**: Word Count: 9047 | Pages: 32 | Complexity: 4/5 | Reading Speed: 7.9 pph | Total Hours: 4.0
-
-**Weekly Allocation**: Reading: 2.8 hrs (70%) | Active Learning: 1.2 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1QBsp45KxxY8UdLM62mZ7XNGmiSgO-fFdNQLvm36nLYU/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5 (Knowledge Integration - Chapter 5.1-5.3), Chapter 5.4-5.5 (Embedding and Vector Database), Chapter 6.5 (RAG System Architecture), Chapter 3 (Deployment), Chapter 6 (Operating Agentic AI), Chapter 6.6 (Advanced Retrieval), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation and Benchmarking), Chapter 9 (Human-in-the-Loop), Chapter 10 (Optimization and Scaling)
+
+
 
 
 
@@ -3116,6 +3138,9 @@ This chapter moves from production RAG theory to practical implementation throug
 ## Part 6, Chapter 6.6A: Reranking Implementation
 
 This chapter provides comprehensive understanding and practical implementation of cross-encoder based reranking as a production-grade advanced retrieval technique. The chapter explains the architectural differences between bi-encoders and cross-encoders, guides implementation of two-stage retrieval systems, compares commercial APIs with self-hosted approaches, and establishes production error handling patterns for resilient systems.
+
+**Weekly Allocation**: Reading: 0.56 hrs | Active Learning: 0.24 hrs
+Total Hours: 0.8 (0.56 hrs reading, 0.24 hrs active learning)
 
 **Key Concepts**:
 - Bi-Encoder, Cross-Encoder, Joint Attention Mechanism
@@ -3138,12 +3163,12 @@ This chapter provides comprehensive understanding and practical implementation o
 7. Explain how timing breakdown enables bottleneck identification in reranking pipelines, and describe what patterns would indicate different performance issues.
 8. Design a production RAG system incorporating optional reranking with clear performance metrics and A/B testing capability.
 
-**Metrics**: Word Count: 2382 | Pages: 8 | Complexity: 1/5 | Reading Speed: 10.2 pph | Total Hours: 0.8
-
-**Weekly Allocation**: Reading: 0.56 hrs (70%) | Active Learning: 0.24 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1SydWbyaGudVHIPRMzXhwyxnag2xWqsa-lo9h6EgojrU/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 5 (Knowledge Integration), Chapter 6.1A/6.1C (RAG Chunking), Chapter 6.2A/6.2B (Vector Database), Chapter 6.3A/6.3B (ETL), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG), Chapter 6.6 (Query Decomposition), Chapter 6.6C (Advanced Retrieval Practice), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation), Chapter 9 (Human-in-the-Loop), Chapter 10 (Advanced Optimization)
+
+
 
 
 
@@ -3154,6 +3179,9 @@ This chapter provides comprehensive understanding and practical implementation o
 ## Part 6, Chapter 6.6: Query Decomposition and Adaptive Retrieval
 
 This chapter addresses advanced retrieval challenges in production RAG systems through two complementary techniques. Query decomposition breaks complex multi-part questions into focused sub-queries, enabling targeted retrieval of comprehensive context for each component. Adaptive retrieval recognizes when external knowledge is genuinely needed, reducing unnecessary API calls and improving latency. Together, these techniques significantly improve answer quality for complex queries while optimizing efficiency for queries where parametric memory suffices.
+
+**Weekly Allocation**: Reading: 1.05 hrs | Active Learning: 0.45 hrs
+Total Hours: 1.5 (1.05 hrs reading, 0.45 hrs active learning)
 
 **Key Concepts**:
 - Semantic Blending, Monolithic Retrieval Limitation, Information Loss, Context Incompleteness, LLM Accuracy Penalty
@@ -3181,9 +3209,7 @@ This chapter addresses advanced retrieval challenges in production RAG systems t
 6. Explain how query decomposition and adaptive retrieval interact for complex queries. Could using both techniques together create problems?
 7. You notice 45% of procedural queries are simple steps while complex procedures are misclassified as factual. What changes would you make to improve routing?
 
-**Metrics**: Word Count: 4005 | Pages: 14 | Complexity: 2/5 | Reading Speed: 9.5 pph | Total Hours: 1.5
-
-**Weekly Allocation**: Reading: 1.05 hrs (70%) | Active Learning: 0.45 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1R5swVSmSqPTUWx-MMN2hWvHUYO6bHq9smPi48mJsLOE/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1 (Agent Architecture), Chapter 2 (Error Handling), Chapter 3 (Infrastructure), Chapter 4 (Retrieval-Augmented Reasoning), Chapter 5 (Knowledge Integration), Chapter 6 (Operations), Chapter 7 (Safety, Ethics), Chapter 8 (Evaluation)
@@ -3192,43 +3218,9 @@ This chapter addresses advanced retrieval challenges in production RAG systems t
 
 
 
----
 
-[↑ Back to Table of Contents](#table-of-contents)
 
-## Part 6, Chapter 6.6C: Advanced Retrieval Practice
-
-This chapter covers advanced retrieval techniques for production RAG systems including two-stage reranking, query decomposition, multi-stage progressive refinement pipelines, and cross-lingual retrieval. Through guided and independent practice exercises, learners implement real-world optimization strategies balancing precision, latency, and cost while recognizing production failure modes through proactive design thinking.
-
-**Key Concepts**:
-- Two-Stage Retrieval-Then-Rerank Architecture with candidate multiplier patterns and cross-encoder batch prediction
-- Query Decomposition Pipeline with LLM-based decomposition prompts and parallel sub-query retrieval
-- Progressive Refinement Funnel with three-stage architecture (hybrid search, reranking, summarization)
-- Multilingual Vector Space Embedding with cross-lingual retrieval accuracy targets and language-pair quality variance
-- Cost-Accuracy Trade-off Analysis with production precision targets (15-25% improvement) justifying added latency
-- Timeout Handling in Parallel Pipelines and graceful degradation strategies
-- Adaptive Candidate Selection and GPU acceleration for reranking cost reduction
-- Multi-Component System Design Principles recognizing failure modes and implementing fallback mechanisms
-
-**Key Questions**:
-1. How does reranking improve precision from 58% to 87% in legal research systems, and what's the expected precision improvement?
-2. How would you validate query decomposition quality when LLM occasionally breaks complex questions into sub-queries missing key context?
-3. Design a three-stage retrieval pipeline with latency budget P95 <3 seconds - how do you allocate latency across stages?
-4. How do you account for differing performance across language pairs in multilingual retrieval supporting English-Spanish and English-Vietnamese?
-5. Your reranking deployment costs jumped from $8K to $45K monthly - what cost reduction strategies would you implement?
-6. How do you recognize production failure modes during design phase rather than discovering them post-deployment?
-7. If query decomposition validation shows 87% semantic similarity between original and concatenated sub-queries, is this sufficient?
-8. How do you ensure 20% precision improvements in three-stage pipelines come from the pipeline rather than variance?
-
-**Metrics**: Word Count: 4,606 | Pages: 16 | Complexity: 2/5 | Reading Speed: 8 pph | Total Hours: 1.8
-
-**Weekly Allocation**: Reading: 1.26 hrs (70%) | Active Learning: 0.54 hrs (30%)
-
-**Related Chapters**:
-- Chapter 5 (RAG Fundamentals), Chapter 6.1-6.6 (Earlier Advanced Retrieval Sections), Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment Infrastructure), Chapter 4 (Advanced Cognition), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation Pipelines), Chapter 9 (Explainability and Human Oversight), Chapter 10 (NVIDIA Platform Optimization)
-
----
-
+✅ [Take Chapter 6.6 quiz](https://docs.google.com/forms/d/1YY12mwegquMSrDSVpSgFyhFhdoqzw4Gd_Xetns6fTF0/viewform?usp=sharing)
 
 ---
 
@@ -3237,6 +3229,9 @@ This chapter covers advanced retrieval techniques for production RAG systems inc
 ## Part 7, Chapter 7.1A: NVIDIA NeMo Framework and Six Rail Types
 
 This chapter orchestrates the complete AI agent lifecycle through NVIDIA NeMo platform's integrated ecosystem. The architecture encompasses data curation via NeMo Curator (16x GPU acceleration), safety via NeMo Guardrails (six protective layers), optimized inference through NIM and TensorRT-LLM (3-4x throughput), and domain-aware retrieval via NeMo Retriever (50% accuracy improvements). Six defense-in-depth rail types apply protection at strategic pipeline checkpoints, complemented by advanced inference optimization techniques including speculative decoding, continuous batching, and multi-GPU parallelism strategies.
+
+**Weekly Allocation**: Reading: 3.01 hrs | Active Learning: 1.29 hrs
+Total Hours: 4.3 (3.01 hrs reading, 1.29 hrs active learning)
 
 **Key Concepts**:
 - NeMo Framework Components: Curator, Guardrails, NIM, TensorRT-LLM, Triton, Retriever
@@ -3257,14 +3252,16 @@ This chapter orchestrates the complete AI agent lifecycle through NVIDIA NeMo pl
 6. Design a multi-rail guardrail configuration for healthcare agent with escalation to nurses for symptom recognition.
 7. Explain the continuous batching mechanism and why it achieves 5-10x throughput improvement for variable-length workloads.
 
-**Metrics**: Word Count: 11,101 | Pages: 39 | Complexity: 4/5 | Reading Speed: 7 pph | Total Hours: 4.3
-
-**Weekly Allocation**: Reading: 3.01 hrs (70%) | Active Learning: 1.29 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1uu3kxtPjqIBEnBkI9UBjTKGe3VCP3WR99n0H0YHT5Vg/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1 (Agentic Foundations), Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment & Orchestration), Chapter 4 (Advanced Reasoning), Chapter 5 (RAG Systems), Chapter 6 (Operations & Monitoring), Chapter 7.1B (NeMo Guardrails DSL), Chapter 8 (Evaluation & Tuning), Chapter 9 (Human-in-the-Loop), Chapter 10 (NVIDIA Optimization Stack)
 
 
+
+
+
+✅ [Take Chapter 7.1A quiz](https://docs.google.com/forms/d/1lsiikJbI85IzK9Isxw9jYL7_GMa9JASOdtnEJF49u6s/viewform?usp=sharing)
 
 ---
 
@@ -3273,6 +3270,9 @@ This chapter orchestrates the complete AI agent lifecycle through NVIDIA NeMo pl
 ## Part 7, Chapter 7.1B: Colang DSL, NIM Integration, and Misconceptions
 
 This chapter translates business safety policies into executable guardrail configurations using Colang, a Python-inspired domain-specific language enabling declarative policy definition without ML expertise. The chapter demonstrates seamless NIM integration through protective wrapper architecture, then clarifies four critical misconceptions: guardrails as complete security, elimination of model safety training, jailbreak detection reliability, and fact-checking hallucination coverage. Understanding these limitations positions teams to design realistic, multi-layered safety strategies acknowledging guardrails' role as one component in defense-in-depth architectures.
+
+**Weekly Allocation**: Reading: 1.26 hrs | Active Learning: 0.54 hrs
+Total Hours: 1.8 (1.26 hrs reading, 0.54 hrs active learning)
 
 **Key Concepts**:
 - Colang DSL: Declarative conversational flow programming with canonical forms and semantic matching
@@ -3296,14 +3296,16 @@ This chapter translates business safety policies into executable guardrail confi
 7. Explain the three-stage hardware detection cascade NIM implements and why graceful fallback to vLLM is important.
 8. What comprehensive strategy would a healthcare organization need for HIPAA-compliant PII blocking beyond guardrails?
 
-**Metrics**: Word Count: 5,298 | Pages: 18 | Complexity: 3/5 | Reading Speed: 4.2 pph | Total Hours: 1.8
-
-**Weekly Allocation**: Reading: 1.26 hrs (70%) | Active Learning: 0.54 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1nf51kkNs3AJ0hP8sfj4a_7ruwjpxjeExTnKzGy1_bKs/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 2 (Agentic Frameworks), Chapter 5 (RAG Systems), Chapter 6 (Operating Agentic AI Systems), Chapter 7.1A (Safety Principles), Chapter 8 (Evaluation and Tuning), Chapter 9 (Human Oversight and Explainability), Chapter 10 (Production Optimization), Compliance Modules (GDPR/EU AI Act)
 
 
+
+
+
+✅ [Take Chapter 7.1B quiz](https://docs.google.com/forms/d/1Dhc4-eysbBLFTR_Fy9zYLalU4MeldqaW38r-s74aj7A/viewform?usp=sharing)
 
 ---
 
@@ -3312,6 +3314,9 @@ This chapter translates business safety policies into executable guardrail confi
 ## Part 7, Chapter 7.2A: Local Development Setup and API Integration
 
 This chapter transforms abstract NIM architecture into hands-on deployment infrastructure starting with local Docker development then scaling to production Kubernetes. Prerequisites validate system readiness (GPU drivers, VRAM constraints, NGC authentication), environment configuration establishes persistent storage and credential management, and deployment verification confirms end-to-end pipeline functionality. The chapter translates Docker patterns to Kubernetes resources (volumes to PersistentVolumeClaims, GPU allocation to resource requests) while maintaining development-production consistency. Multi-model serving architecture enables workload-specific scaling, and service mesh routing provides intelligent model selection without client knowledge of backend implementations.
+
+**Weekly Allocation**: Reading: 2.03 hrs | Active Learning: 0.87 hrs
+Total Hours: 2.9 (2.03 hrs reading, 0.87 hrs active learning)
 
 **Key Concepts**:
 - Docker Runtime Toolkit, NVIDIA Container Toolkit, Driver Version Compatibility, VRAM Constraints
@@ -3334,12 +3339,12 @@ This chapter transforms abstract NIM architecture into hands-on deployment infra
 9. What does a 10-minute first-launch timeline entail, and why is understanding these phases important for troubleshooting?
 10. Explain how health probes (liveness and readiness) enable automatic recovery from failures.
 
-**Metrics**: Word Count: 7,308 | Pages: 26 | Complexity: 3/5 | Reading Speed: 7 pph | Total Hours: 2.9
-
-**Weekly Allocation**: Reading: 2.03 hrs (70%) | Active Learning: 0.87 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1vOt-xfisBrd9G4BgPneBxvb4GjEhhyECEkdrUbXAyC0/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 7.1A (NIM Architecture & Hardware Detection), Chapter 2 (Framework & Platform Architectures), Chapter 4 (Advanced Agent Cognition), Chapter 6 (Operating Agentic AI Systems), Chapter 7.2-7.6 (Advanced NIM Topics), Chapter 8 (Evaluation and Tuning), Chapter 9 (Human-in-the-Loop & Explainability), Chapter 10 (Optimization & Production Hardening)
+
+
 
 
 
@@ -3350,6 +3355,9 @@ This chapter transforms abstract NIM architecture into hands-on deployment infra
 ## Part 7, Chapter 7.2: Performance Monitoring & Optimization
 
 This chapter navigates the fundamental throughput-latency-cost optimization triangle where maximizing any two metrics degrades the third. Throughput optimization batches concurrent requests achieving 8-10x improvement; latency optimization reduces per-request computation through parameter tuning (69% reduction from 800ms to 250ms); cost optimization combines model selection, quantization, and auto-scaling for 33-80% savings. Production monitoring validates these strategies through Prometheus metrics collection (20+ indicators), PromQL queries (request rates, latency percentiles, error rates, GPU utilization), Grafana dashboards (seven key panels), and AlertManager alerting rules with appropriate severity and duration thresholds. Structured logging through Fluentd enables troubleshooting by correlating metrics (what happened) with logs (why it happened).
+
+**Weekly Allocation**: Reading: 0.77 hrs | Active Learning: 0.33 hrs
+Total Hours: 1.1 (0.77 hrs reading, 0.33 hrs active learning)
 
 **Key Concepts**:
 - Throughput Optimization, Latency Optimization, Cost Optimization
@@ -3372,14 +3380,16 @@ This chapter navigates the fundamental throughput-latency-cost optimization tria
 7. Your alerting rule requires "P95 latency >2s for 5 minutes" but a 3-minute spike reaching 2.5s didn't trigger - why?
 8. Your deployment targets 70% CPU utilization via HPA but GPU utilization hovers at 80% while CPU at 65% - what's happening?
 
-**Metrics**: Word Count: 3,441 | Pages: 12 | Complexity: 2/5 | Reading Speed: 2.8 pph | Total Hours: 1.1
-
-**Weekly Allocation**: Reading: 0.77 hrs (70%) | Active Learning: 0.33 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/129PXcFFF4zsyRdCNIP847m7rz40GZmjxnGkJ91HwSMQ/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 7.1A (NeMo SixRails), Chapter 7.1B (Colang NIM Integration), Chapter 7.2A (Local Development), Chapter 4 (Infrastructure), Chapter 8 (Security & Operations), Chapter 7.3 (Agent Toolkit), Chapter 7.4 (Quantization), Chapter 7.5 (Curator & Riva Multimodal), Chapter 7.6 (MIG & Security), Chapter 8.1-8.4 (Production Operations), Chapter 9 (Advanced Optimization)
 
 
+
+
+
+✅ [Take Chapter 7.2 quiz](https://docs.google.com/forms/d/1mBrj3Gn3ENt0B0rAm4ISF32PJ3ef6gZeGhHAhlasWz0/viewform?usp=sharing)
 
 ---
 
@@ -3388,6 +3398,9 @@ This chapter navigates the fundamental throughput-latency-cost optimization tria
 ## Part 7, Chapter 7.3: Agent Toolkit
 
 NeMo Agent Toolkit provides systematic profiling, optimization, and continuous monitoring capabilities for production LLM agents across frameworks like LangChain, CrewAI, and LlamaIndex. This chapter covers end-to-end performance engineering—from identifying bottlenecks through profiling, implementing optimizations with measured impact validation, and preventing regressions through continuous benchmarking integrated into CI/CD pipelines.
+
+**Weekly Allocation**: Reading: 0.77 hrs | Active Learning: 0.33 hrs
+Total Hours: 1.1 (0.77 hrs reading, 0.33 hrs active learning)
 
 **Key Concepts**:
 - Agent Profiling and Framework-Agnostic Instrumentation, Automated Optimization Recommendations and Performance Quantification, Parallelization Opportunity Detection and Trade-off Analysis
@@ -3405,13 +3418,15 @@ NeMo Agent Toolkit provides systematic profiling, optimization, and continuous m
 7. Compare profiling a LangChain AgentExecutor versus a custom agent implementation. What three capabilities does NeMo Toolkit's framework-agnostic design provide that would be lost with framework-specific instrumentation?
 8. Walk through the complete profiling-optimization-monitoring lifecycle for an agent with new bottleneck discovered during production. How do you validate that optimization improvements match profiling predictions?
 
-**Metrics**: Word Count: 3,513 | Pages: 12 | Complexity: 2/5 | Reading Speed: 10.7 pph | Total Hours: 1.1
-
-**Weekly Allocation**: Reading: 0.77 hrs (70%) | Active Learning: 0.33 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/19maV7ZNGxBXS3tMAQaX7KSeerh-PYyM9h0b4UOwsb_E/viewform?usp=sharing)
 
 **Related Chapters**:
 Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment & Orchestration), Chapter 5 (RAG Systems), Chapter 6 (Operations & Monitoring), Chapter 7.1A (NeMo Framework), Chapter 7.2 (Performance Monitoring), Chapter 7.4 (Quantization Fundamentals), Chapter 8 (Evaluation & Tuning)
 
+
+
+
+✅ [Take Chapter 7.3 quiz](https://docs.google.com/forms/d/1B0X4Kh162lA3VHqWROSDFV8Qb4OiHomb44pYdvlwwD8/viewform?usp=sharing)
 
 ---
 
@@ -3420,6 +3435,9 @@ Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment & Orchestration), Chapter 
 ## Part 7, Chapter 7.4: Quantization Fundamentals
 
 This chapter addresses the critical optimization challenge of reducing model inference latency and memory consumption through precision reduction techniques. Students learn how to apply INT8, FP8, and other quantization strategies to achieve 4-8x throughput improvements while maintaining model accuracy within acceptable bounds for production LLM deployments.
+
+**Weekly Allocation**: Reading: 1.54 hrs | Active Learning: 0.66 hrs
+Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 
 **Key Concepts**:
 - Memory-Bandwidth Bottleneck, Prefill Phase, Decode Phase
@@ -3444,13 +3462,15 @@ This chapter addresses the critical optimization challenge of reducing model inf
 9. Determine when to select FP32, FP16, TF32, INT8, or FP8 quantization based on deployment context, accuracy requirements, hardware constraints, and throughput targets.
 10. Design a production inference deployment combining quantization with KV cache optimization, calculating token serving capacity and predicting infrastructure cost-per-token improvements.
 
-**Metrics**: Word Count: 6,029 | Pages: 21 | Complexity: 3/5 | Reading Speed: 9.6 pph | Total Hours: 2.2
-
-**Weekly Allocation**: Reading: 1.54 hrs (70%) | Active Learning: 0.66 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1NLr1QJuYmSimYZcI_WuL5BmSx4DQ2MOytWKLI5buYD4/viewform?usp=sharing)
 
 **Related Chapters**:
 Chapter 4.6 (TensorRT-LLM), Chapter 4.4 (Performance Profiling), Chapter 4.5 (NVIDIA NIM), Chapter 7.1A (NeMo Framework & Guardrails), Chapter 3 (Deployment & Orchestration), Chapter 7.5-7.6 (Advanced Optimization Techniques), Chapter 8 (Evaluation & Tuning), Chapter 9 (Human-in-the-Loop Systems), Chapter 10 (NVIDIA Optimization Stack)
 
+
+
+
+✅ [Take Chapter 7.4 quiz](https://docs.google.com/forms/d/10LpbHa7dcFGsYsdDRYmLtyPveQOf6Ey850_UdeQuHTY/viewform?usp=sharing)
 
 ---
 
@@ -3459,6 +3479,9 @@ Chapter 4.6 (TensorRT-LLM), Chapter 4.4 (Performance Profiling), Chapter 4.5 (NV
 ## Part 7, Chapter 7.5: Curator, Riva, and Multimodal
 
 This chapter covers GPU-accelerated data curation through NeMo Curator, production-grade voice capabilities with Riva Speech AI for real-time speech recognition and synthesis, and multimodal integration combining voice and vision for intelligent agents. Together, these technologies enable enterprises to build high-quality training datasets, deploy voice-based agent interfaces, and create sophisticated multimodal systems that process voice, text, and visual information simultaneously.
+
+**Weekly Allocation**: Reading: 3.15 hrs | Active Learning: 1.35 hrs
+Total Hours: 4.5 (3.15 hrs reading, 1.35 hrs active learning)
 
 **Key Concepts**:
 - Data Quality Improvement Narrative, GPU Acceleration, Language Identification Filter
@@ -3487,13 +3510,15 @@ This chapter covers GPU-accelerated data curation through NeMo Curator, producti
 9. How does microphone choice (close-talk headsets vs. far-field microphones) impact medical transcription accuracy in noisy environments?
 10. What is the cost-benefit analysis for NeMo Curator's aggressive filtering (17% retention) compared to naive training on all data?
 
-**Metrics**: Word Count: 11,644 | Pages: 41 | Complexity: 4/5 | Reading Speed: 9.1 pph | Total Hours: 4.5
-
-**Weekly Allocation**: Reading: 3.15 hrs (70%) | Active Learning: 1.35 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1F7bypU5pqr9chNR90LvJQ0Ec62fjoe07HahJv_QBOiA/viewform?usp=sharing)
 
 **Related Chapters**:
 Chapter 1: Agent Architecture & Design Patterns, Chapter 2: Agentic Frameworks (LangGraph, LangChain, AutoGen), Chapter 5: Knowledge Integration & RAG, Chapter 6: Operations & Monitoring, Chapter 8: Evaluation & Tuning, Chapter 9: Human-in-the-Loop & Oversight, Chapter 10: Production Optimization & Scaling
 
+
+
+
+✅ [Take Chapter 7.5 quiz](https://docs.google.com/forms/d/1sGA-T9cL9bBkz_G3wteNgNlFhEHS0zmNjqEa9fxjqKU/viewform?usp=sharing)
 
 ---
 
@@ -3502,6 +3527,9 @@ Chapter 1: Agent Architecture & Design Patterns, Chapter 2: Agentic Frameworks (
 ## Part 7, Chapter 7.6: Multi-Instance GPU (MIG) & Security
 
 This chapter addresses the fundamental economics problem of GPU underutilization in multi-tenant AI deployments, where 85-90% of GPU capacity sits idle when serving agent inference workloads. It explores how Multi-Instance GPU (MIG) hardware partitioning divides a single A100 into up to seven fully isolated instances, enabling dramatic cost reduction (86% CAPEX savings) while maintaining strict performance guarantees essential for SaaS platforms, contrasting this with software-level time-slicing approaches that sacrifice isolation for flexibility.
+
+**Weekly Allocation**: Reading: 1.47 hrs | Active Learning: 0.63 hrs
+Total Hours: 2.1 (1.47 hrs reading, 0.63 hrs active learning)
 
 **Key Concepts**:
 - Multi-Instance GPU (MIG) Architecture, Hardware-Enforced Isolation, GPU Utilization Economics
@@ -3523,15 +3551,14 @@ This chapter addresses the fundamental economics problem of GPU underutilization
 9. How do Kubernetes ResourceQuotas and PriorityClasses implement economic service tiers (Enterprise, Professional, Starter) with preemption-based fair scheduling?
 10. Analyze a scenario where your 3-GPU A100 cluster (21 instances of 1g.10gb) is 95% full and a new enterprise customer requests 2g.20gb—outline three options and recommend the best approach.
 
-**Metrics**: Word Count: 5,693 | Pages: 20 | Complexity: 3/5 | Reading Speed: 9.6 pph | Total Hours: 2.1
-
-**Weekly Allocation**: Reading: 1.47 hrs (70%) | Active Learning: 0.63 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1p62aXbuz1033AgniVLD8B1MLCMDSXSE2jnuxgP2DMVU/viewform?usp=sharing)
 
 **Related Chapters**:
 Chapter 3 (NIM Deployment & Optimization), Chapter 4 (Advanced Agent Cognition), Chapter 5 (RAG Systems & Integration), Chapter 6 (Monitoring & Observability), Chapter 7.1 (NeMo Guardrails), Chapter 8 (Evaluation & Tuning), Chapter 10 (Advanced Optimization with TensorRT-LLM)
 
----
 
+
+✅ [Take Chapter 7.6 quiz](https://docs.google.com/forms/d/1j41X2e0zy_bPJIOuhb5G7HYcYHfZIIhgfElYVZ1LbmM/viewform?usp=sharing)
 
 ---
 
@@ -3540,6 +3567,9 @@ Chapter 3 (NIM Deployment & Optimization), Chapter 4 (Advanced Agent Cognition),
 ## Part 8, Chapter 8.1: Latency Fundamentals
 
 Agent latency monitoring requires simultaneous tracking of end-to-end metrics and granular per-step measurements to distinguish between average performance that masks outliers and percentile-based metrics revealing true user experience. From diagnosis through distributed tracing to GPU-level observability, this chapter provides the comprehensive measurement framework necessary for production optimization.
+
+**Weekly Allocation**: Reading: 1.54 hrs | Active Learning: 0.66 hrs
+Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 
 **Key Concepts**:
 - End-to-End Response Time, Time to First Token (TTFT), Per-Step Execution Latency
@@ -3563,13 +3593,15 @@ Agent latency monitoring requires simultaneous tracking of end-to-end metrics an
 9. How do you distinguish between a compute-bound bottleneck, a memory-bound bottleneck, and a throughput-bound bottleneck using DCGM and Triton metrics?
 10. What are the three dominant misconceptions that lead teams into suboptimal latency optimization decisions despite comprehensive instrumentation?
 
-**Metrics**: Word Count: 6,042 | Pages: 21 | Complexity: 3/5 | Reading Speed: 9.6 pph | Total Hours: 2.2
-
-**Weekly Allocation**: Reading: 1.54 hrs (70%) | Active Learning: 0.66 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1KGLG7ufkVnysfR4ocdxCqobS1-EsPOc0TzCVfuonrSE/viewform?usp=sharing)
 
 **Related Chapters**:
 Chapter 1 (Agent Fundamentals), Chapter 2 (Agent Frameworks), Chapter 3 (Inference & Serving), Chapter 4 (Advanced Cognition), Chapter 5 (Knowledge Integration/RAG), Chapter 6 (Operations & Monitoring), Chapter 7 (Safety & Compliance), Chapter 8.2 (Error Rates & Reliability), Chapter 8.3 (Cost Tracking & Economics), Chapter 9 (Human-AI Interaction), Chapter 10 (Advanced Optimization)
 
+
+
+
+✅ [Take Chapter 8.1 quiz](https://docs.google.com/forms/d/1XCGRuVQgcThsE_3ysjkU9303knU_atHNghjGKS429mo/viewform?usp=sharing)
 
 ---
 
@@ -3578,6 +3610,9 @@ Chapter 1 (Agent Fundamentals), Chapter 2 (Agent Frameworks), Chapter 3 (Inferen
 ## Part 8, Chapter 8.2A: Error Taxonomy and SLO
 
 This chapter provides a systematic framework for categorizing AI agent failures into three tiers (planning, execution, verification) and using Service Level Objectives (SLOs) with error budgets and burn rate metrics to make reliability-velocity tradeoffs explicit and measurable. It also covers multi-agent coordination failures and distributed tracing techniques for diagnosing invisible failure patterns in concurrent systems.
+
+**Weekly Allocation**: Reading: 2.45 hrs | Active Learning: 1.05 hrs
+Total Hours: 3.5 (2.45 hrs reading, 1.05 hrs active learning)
 
 **Key Concepts**:
 - Planning Failure, Reasoning Error, Execution Failure, Verification Failure
@@ -3600,13 +3635,15 @@ This chapter provides a systematic framework for categorizing AI agent failures 
 9. How do execution barriers enforce phase-based ordering in dependency graphs, and what is the parallelism tradeoff compared to fully concurrent execution?
 10. Design a merge strategy for optimistic locking when two agents concurrently update different sections of a shared report—when does automatic merge succeed, and when does it require manual intervention?
 
-**Metrics**: Word Count: 9,026 | Pages: 32 | Complexity: 4/5 | Reading Speed: 9.1 pph | Total Hours: 3.5
-
-**Weekly Allocation**: Reading: 2.45 hrs (70%) | Active Learning: 1.05 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1kHSHxskYauFFcG4YHGBeGs7jO1-wHd9xpN5By-kX0r0/viewform?usp=sharing)
 
 **Related Chapters**:
 Chapter 1 (Agent Fundamentals), Chapter 2 (Tool-Use and Function Calling), Chapter 3 (LLM Optimization), Chapter 4 (Reasoning Techniques), Chapter 5 (RAG Systems), Chapter 6 (Observability and Monitoring), Chapter 7 (Safety), Chapter 8.1 (Evaluation Fundamentals)
 
+
+
+
+✅ [Take Chapter 8.2A quiz](https://docs.google.com/forms/d/1BqI_YpTt8DFuFnqv9dOI5T8otRaxu1nqqv44Vv1jmwc/viewform?usp=sharing)
 
 ---
 
@@ -3615,6 +3652,9 @@ Chapter 1 (Agent Fundamentals), Chapter 2 (Tool-Use and Function Calling), Chapt
 ## Part 8, Chapter 8.2B: Circuit Breakers and NeMo Integration
 
 This chapter addresses how circuit breakers prevent cascading failures in distributed systems through fast-fail behavior, and how to categorize production errors into safety violations versus infrastructure failures for proper team escalation and monitoring. The practical focus includes implementing a three-state circuit breaker automaton and designing separate monitoring pipelines that distinguish NeMo Guardrails safety blocks from execution exceptions.
+
+**Weekly Allocation**: Reading: 0.84 hrs | Active Learning: 0.36 hrs
+Total Hours: 1.2 (0.84 hrs reading, 0.36 hrs active learning)
 
 **Key Concepts**:
 - Cascading Failure, Fast-Fail Behavior, Failure Threshold
@@ -3633,12 +3673,14 @@ This chapter addresses how circuit breakers prevent cascading failures in distri
 9. How does the sliding window calculation ensure that recovered services can close the circuit despite past failures?
 10. What is the role of the success_threshold parameter in the HALF_OPEN state, and why is it typically 2 or higher?
 
-**Metrics**: Word Count: 3,542 | Pages: 12 | Complexity: 2/5 | Reading Speed: 10.2 pph | Total Hours: 1.2
-
-**Weekly Allocation**: Reading: 0.84 hrs (70%) | Active Learning: 0.36 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1kIUBboN0csvaZWgh5bKUWLoC5xc86K8DhvLFacN2TBU/viewform?usp=sharing)
 
 **Related Chapters**: Chapter 1 (Agent Fundamentals), Chapter 2 (Tool-Use and Function Calling), Chapter 6 (Observability and Monitoring), Chapter 7 (Safety), Chapter 8.1 (Evaluation Fundamentals), Chapter 8.2A (Error Taxonomy and SLOs), Chapter 9 (Human-AI Interaction and Oversight)
 
+
+
+
+✅ [Take Chapter 8.2B quiz](https://docs.google.com/forms/d/1PPVeau5D9tm0VAYPwqcyOQy9lu0ysMhYZYsFVzAQOnU/viewform?usp=sharing)
 
 ---
 
@@ -3647,6 +3689,9 @@ This chapter addresses how circuit breakers prevent cascading failures in distri
 ## Part 8, Chapter 8.3: Token Economics
 
 Token economics fundamentally shape LLM cost optimization strategies through asymmetric pricing, where output tokens cost 4-5× more than input tokens due to computational differences between single-pass encoding and iterative decoding. This chapter establishes a three-tier monitoring architecture and demonstrates how systematic multi-faceted optimizations can achieve significant cost reductions while maintaining quality metrics.
+
+**Weekly Allocation**: Reading: 2.24 hrs | Active Learning: 0.96 hrs
+Total Hours: 3.2 (2.24 hrs reading, 0.96 hrs active learning)
 
 **Key Concepts**:
 - Asymmetric Pricing Model, Output Token, Input Token, Token Cost Multiplier
@@ -3663,12 +3708,14 @@ Token economics fundamentally shape LLM cost optimization strategies through asy
 7. How does the three-tier token monitoring architecture enable drill-down analysis from organization-level anomalies to request-level root cause identification?
 8. What is the difference between output optimization strategies (explicit length constraints, structured formats, temperature reduction) and input optimization strategies (prompt caching, RAG, context pruning)?
 
-**Metrics**: Word Count: 8,277 | Pages: 29 | Complexity: 4/5 | Reading Speed: 9.1 pph | Total Hours: 3.2
-
-**Weekly Allocation**: Reading: 2.24 hrs (70%) | Active Learning: 0.96 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1nS1j3yPQT7v_2ac5iZHNT6ZeEPvDUzB-T1rMPhaPm7o/viewform?usp=sharing)
 
 **Related Chapters**: Chapter 8.1 (Latency Fundamentals), Chapter 8.2A (Error Taxonomy and SLO Management), Part 4 (Deployment and Scaling), Part 6 (Retrieval-Augmented Generation), Part 7 (Agent Development and Tools), Chapter 8.4 (Success Metrics), Part 9-10 (Advanced Topics)
 
+
+
+
+✅ [Take Chapter 8.3 quiz](https://docs.google.com/forms/d/1sUgWO8ROiNz8afZXIzkgwyYlu7c4F2LumOfAa1FX9Pg/viewform?usp=sharing)
 
 ---
 
@@ -3677,6 +3724,9 @@ Token economics fundamentally shape LLM cost optimization strategies through asy
 ## Part 8, Chapter 8.4: Success Metrics
 
 This chapter explores multi-dimensional measurement of AI agent success through balanced scorecards that track task completion, user satisfaction, efficiency, and safety metrics simultaneously. Rather than optimizing for single metrics in isolation, production systems must measure across complementary dimensions to prevent optimization pathologies that degrade unmeasured but equally important success factors.
+
+**Weekly Allocation**: Reading: 0.56 hrs | Active Learning: 0.24 hrs
+Total Hours: 0.8 (0.56 hrs reading, 0.24 hrs active learning)
 
 **Key Concepts**:
 - Multi-dimensional measurement, Balanced scorecard, Metric pathology
@@ -3700,14 +3750,13 @@ This chapter explores multi-dimensional measurement of AI agent success through 
 9. How should you respond when you observe high task completion with low CSAT—what does this pattern indicate?
 10. What production monitoring approach prevents teams from inadvertently optimizing one metric at the expense of others?
 
-**Metrics**: Word Count: 2,636 | Pages: 9 | Complexity: 1/5 | Reading Speed: 10.7 pph | Total Hours: 0.8
-
-**Weekly Allocation**: Reading: 0.56 hrs (70%) | Active Learning: 0.24 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1nq2oEU2vIZK6dr6QUZ1IX-Wo7zm3D3J9ee9Ko6YYUpQ/viewform?usp=sharing)
 
 **Related Chapters**: Chapter 3: Deploying Agentic AI, Chapter 6: Operating Agentic AI Systems, Chapter 8.1: Evaluation Fundamentals, Chapter 8.2: Benchmarking Agentic AI, Chapter 8.3: Measuring Reasoning Quality, Chapter 9: Human-AI Interaction and Oversight, Chapter 10: NVIDIA Platform Mastery
 
----
 
+
+✅ [Take Chapter 8.4 quiz](https://docs.google.com/forms/d/1hZGfpTCu6STzcPRw1CDK1TKwLZWBYMsQ52euVXPqpZo/viewform?usp=sharing)
 
 ---
 
@@ -3716,6 +3765,9 @@ This chapter explores multi-dimensional measurement of AI agent success through 
 ## Part 9, Chapter 9.1: Output Filtering
 
 Output filtering serves as the critical last line of defense in AI safety, intercepting LLM outputs before delivery to users to prevent harmful content including hate speech, harassment, misinformation, and regulatory violations. This chapter explores multi-layered defense architectures, implementation techniques from keyword matching to ML classifiers, human-in-the-loop moderation workflows, NeMo Guardrails integration, and domain-specific compliance requirements for regulated domains like healthcare and financial services.
+
+**Weekly Allocation**: Reading: 1.75 hrs | Active Learning: 0.75 hrs
+Total Hours: 2.5 (1.75 hrs reading, 0.75 hrs active learning)
 
 **Key Concepts**:
 - Multi-Layered Filtering Architecture, Content Moderation, False Positive, False Negative
@@ -3735,12 +3787,14 @@ Output filtering serves as the critical last line of defense in AI safety, inter
 9. Why do organizations with aggressive output filtering sometimes find their systems less safe?
 10. What are the types of guardrails in NeMo (block, filter, flag, modify, validate) and when should each be used?
 
-**Metrics**: Word Count: 7,647 | Pages: 27 | Complexity: 3/5 | Reading Speed: 10.6 pph | Total Hours: 2.5
-
-**Weekly Allocation**: Reading: 1.75 hrs (70%) | Active Learning: 0.75 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1dVCq8Owpi8X89rP6ff1JxLrbcGn4GiPa1w4TjRzrJMc/viewform?usp=sharing)
 
 **Related Chapters**: Chapter 3 (NVIDIA Inference Stack), Chapter 5 (RAG and Knowledge Integration), Chapter 6 (Observability and Tracing), Chapter 7 (Safety Foundations), Chapter 8 (Evaluation and Tuning), Chapter 9.2 (Action Constraints), Chapter 9.3 (Sandboxing), Chapter 9.4 (Fairness Foundations)
 
+
+
+
+✅ [Take Chapter 9.1 quiz](https://docs.google.com/forms/d/1ISil2THita0GLmOpUx-VPc4n5V1gKn0rlX6IEp7g7VI/viewform?usp=sharing)
 
 ---
 
@@ -3749,6 +3803,9 @@ Output filtering serves as the critical last line of defense in AI safety, inter
 ## Part 9, Chapter 9.2: Action Constraints
 
 This chapter addresses the fundamental vulnerability of autonomous agents operating with excessive permissions, where the machine-paced execution of 1,000-10,000 operations per minute combined with dynamic behavior synthesis creates risks that traditional human-centric permission models cannot address. It provides comprehensive frameworks for implementing least-privilege permissions, multi-layered defense architectures, and human oversight mechanisms to contain the blast radius of agent misbehavior or compromise.
+
+**Weekly Allocation**: Reading: 1.54 hrs | Active Learning: 0.66 hrs
+Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 
 **Key Concepts**:
 - Excessive Agency, Machine-Paced Execution, Dynamic Behavior Synthesis
@@ -3768,13 +3825,15 @@ This chapter addresses the fundamental vulnerability of autonomous agents operat
 9. How do audit trails from HITL approval workflows satisfy regulatory compliance requirements?
 10. What real-world triggers determine when human approval gates are necessary versus when autonomous execution is acceptable?
 
-**Metrics**: Word Count: 6,899 | Pages: 24 | Complexity: 3/5 | Reading Speed: 11.0 pph | Total Hours: 2.2
-
-**Weekly Allocation**: Reading: 1.54 hrs (70%) | Active Learning: 0.66 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1xdT_HMh3sW3zaR_gv4Ujk7kcTWsJ2XBIJ17hXr-kXOY/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 9.1 (Authentication and System Security), Chapter 7.3 (Authentication and Authorization Foundation), Chapter 5 (Knowledge Integration and Data Handling), Chapter 6 (Operating Agentic AI Systems), Chapter 9.3 (Detection and Response Mechanisms), Chapter 10 (NVIDIA Platform Mastery), Chapter 7 (Safety)
 
+
+
+
+✅ [Take Chapter 9.2 quiz](https://docs.google.com/forms/d/1VYkRaj4EXzatB0lwCvpCXLmc3LYRiDLVc72DavwJb30/viewform?usp=sharing)
 
 ---
 
@@ -3783,6 +3842,9 @@ This chapter addresses the fundamental vulnerability of autonomous agents operat
 ## Part 9, Chapter 9.3: Sandboxing and Isolation
 
 Sandboxing represents a fundamental paradigm shift from detection-based safety approaches to containment-based approaches, providing structural guarantees that even perfectly compromised agents cannot escape designated boundaries or propagate damage beyond defined limits. Through layered defense combining process isolation, resource restrictions, filesystem virtualization, and network isolation, sandboxing implements the principle that perfect detection is impossible and systems must design for failure.
+
+**Weekly Allocation**: Reading: 3.08 hrs | Active Learning: 1.32 hrs
+Total Hours: 4.4 (3.08 hrs reading, 1.32 hrs active learning)
 
 **Key Concepts**:
 - Sandboxing, Defense-in-Depth containment strategies
@@ -3804,14 +3866,16 @@ Sandboxing represents a fundamental paradigm shift from detection-based safety a
 8. What are common implementation pitfalls that undermine sandboxing effectiveness?
 9. How should organizations scale sandboxing from proof-of-concept to production?
 
-**Metrics**: Word Count: 12,647 | Pages: 45 | Complexity: 5/5 | Reading Speed: 10.2 pph | Total Hours: 4.4
-
-**Weekly Allocation**: Reading: 3.08 hrs (70%) | Active Learning: 1.32 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1ojljlX7Z-EBGWXkgUTCoLOFcgINYAPASApl_K0cz7fE/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 7.1A (NeMo and SixRails), Chapter 7.6 (Multi-Instance GPU and Security), Chapter 8.2B (Circuit Breakers and NeMo), Chapter 9.1 (Output Filtering), Chapter 9.2 (Action Constraints), Chapter 6 (Observability), Chapter 4 (Prompt Engineering and Reasoning), Chapter 9.4-9.6 (Fairness and Constitutional AI), Chapter 10 (NVIDIA Platform Mastery)
 
 
+
+
+
+✅ [Take Chapter 9.3 quiz](https://docs.google.com/forms/d/1y3RU8rdnXDgADWfHW1yT2g4-uMsHWjwi7buFZjKhKj8/viewform?usp=sharing)
 
 ---
 
@@ -3820,6 +3884,9 @@ Sandboxing represents a fundamental paradigm shift from detection-based safety a
 ## Part 9, Chapter 9.4: Fairness Foundations
 
 Fairness in AI extends beyond non-discrimination to address emergent biases from multi-agent interactions and systems-level patterns, requiring continuous demographic auditing, fairness-aware data preparation, constraint-based training, and runtime monitoring rather than one-time testing during development. The challenge involves navigating fundamental mathematical trade-offs between incompatible fairness metrics while implementing comprehensive detection and correction across the entire system lifecycle.
+
+**Weekly Allocation**: Reading: 4.55 hrs | Active Learning: 1.95 hrs
+Total Hours: 6.5 (4.55 hrs reading, 1.95 hrs active learning)
 
 **Key Concepts**:
 - Fairness in Agentic Systems and equity across demographic groups
@@ -3855,9 +3922,7 @@ Fairness in AI extends beyond non-discrimination to address emergent biases from
 7. How does NeMo Guardrails implement defense-in-depth for fairness across multiple pipeline stages?
 8. How do data drift and model drift specifically threaten fairness post-deployment?
 
-**Metrics**: Word Count: 18,194, Pages: 64, Complexity: 5/5, Reading Speed: 9.8 pph, Total Hours: 6.5
-
-**Weekly Allocation**: Reading: 4.55 hrs (70%), Active Learning: 1.95 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1E7zypyipxYeKfrKkHlqGIpUhbFR8mVBgsbzwQFeGVaQ/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3 (AI Governance and Safety)
@@ -3869,6 +3934,10 @@ Fairness in AI extends beyond non-discrimination to address emergent biases from
 
 
 
+
+
+✅ [Take Chapter 9.4 quiz](https://docs.google.com/forms/d/1pmrutzZiUDHk7mCljjJ-L3wVr078rvyVbTOoKqh99RY/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -3876,6 +3945,9 @@ Fairness in AI extends beyond non-discrimination to address emergent biases from
 ## Part 9, Chapter 9.5: Constitutional AI Principles
 
 Constitutional AI addresses RLHF's critical limitations (implicit values, annotation bottleneck, psychological costs) by replacing preference-based learning with explicit, inspectable ethical principles that guide behavior throughout training. The two-phase approach—Phase 1 supervised self-critique with constitutional principles and Phase 2 reinforcement learning from AI feedback—makes values transparent while enabling scalability without human annotation, though implementation remains constrained by principle ambiguity, incomplete coverage, and fundamental value conflicts.
+
+**Weekly Allocation**: Reading: 5.32 hrs | Active Learning: 2.28 hrs
+Total Hours: 7.6 (5.32 hrs reading, 2.28 hrs active learning)
 
 **Key Concepts**:
 - Constitutional AI (CAI) and explicit predefined ethical principles
@@ -3914,9 +3986,7 @@ Constitutional AI addresses RLHF's critical limitations (implicit values, annota
 8. Why can Constitutional AI be more robust to prompt injection and jailbreaks than prompt engineering?
 9. What is the practical difference between Constitutional AI eliminating all harmful outputs versus improving outcomes?
 
-**Metrics**: Word Count: 21,176, Pages: 75, Complexity: 5/5, Reading Speed: 9.8 pph, Total Hours: 7.6
-
-**Weekly Allocation**: Reading: 5.32 hrs (70%), Active Learning: 2.28 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1hPydkdW-Nz_06F5GvnBgaUmlf1Q9JeFzoGL0WcNNVrE/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 7 (Safety
@@ -3933,6 +4003,10 @@ Constitutional AI addresses RLHF's critical limitations (implicit values, annota
 
 
 
+
+
+✅ [Take Chapter 9.5 quiz](https://docs.google.com/forms/d/1_HJDXzen_adGd2L4CUnaCHxliD8tqWuc0xacA7ksKss/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -3940,6 +4014,9 @@ Constitutional AI addresses RLHF's critical limitations (implicit values, annota
 ## Part 9, Chapter 9.6: Standards, Certifications, and Frameworks
 
 Value alignment frameworks operationalize abstract ethical principles into systematic technical and governance approaches that ensure AI systems maintain long-term consistency with human values across deployment contexts. The World Economic Forum framework emphasizes that effective alignment requires transparency at every development stage, continuous stakeholder participation beyond initial design, ongoing monitoring to detect drift, and explicit documentation of value conflicts rather than pretending technical methods eliminate inherent tensions.
+
+**Weekly Allocation**: Reading: 2.45 hrs | Active Learning: 1.05 hrs
+Total Hours: 3.5 (2.45 hrs reading, 1.05 hrs active learning)
 
 **Key Concepts**:
 - Value Alignment ensuring objectives consistent with human values
@@ -3984,9 +4061,7 @@ Value alignment frameworks operationalize abstract ethical principles into syste
 7. How does the WEF framework distinguish between one-time alignment versus ongoing alignment processes?
 8. What distinguishes value identification that misses community values versus inclusive processes?
 
-**Metrics**: Word Count: 10,435, Pages: 37, Complexity: 4/5, Reading Speed: 10.6 pph, Total Hours: 3.5
-
-**Weekly Allocation**: Reading: 2.45 hrs (70%), Active Learning: 1.05 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1RQBTspxgyzwi1_dhRNnb5nhirmE7YcIdK_UwiDZvfy8/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 3 (Deploying Agentic AI)
@@ -3999,6 +4074,10 @@ Value alignment frameworks operationalize abstract ethical principles into syste
 - Chapter 10 (NVIDIA Platform Mastery)
 
 
+
+
+✅ [Take Chapter 9.6 quiz](https://docs.google.com/forms/d/1XAx5kZqZsJb6f31ojdbn_cUWpPeG2AnMfQJuDunpV6A/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -4006,6 +4085,9 @@ Value alignment frameworks operationalize abstract ethical principles into syste
 ## Part 9, Chapter 9.7: GDPR Foundations
 
 The General Data Protection Regulation represents a paradigm shift in global data protection, establishing principles-based requirements applicable worldwide to any organization processing EU resident data since May 25, 2018. GDPR compliance requires embedding data protection into operational culture as ongoing governance commitment rather than temporary initiative, with organizations adapting implementations to context while maintaining consistent data protection standards.
+
+**Weekly Allocation**: Reading: 2.6 hrs | Active Learning: 1.1 hrs
+Total Hours: 3.7 (2.6 hrs reading, 1.1 hrs active learning)
 
 **Key Concepts**:
 - General Data Protection Regulation (GDPR) - comprehensive regulation with extraterritorial scope applying to organizations worldwide processing EU resident data
@@ -4031,9 +4113,7 @@ The General Data Protection Regulation represents a paradigm shift in global dat
 7. How should organizations balance granular consent requests against consent fatigue while maintaining meaningful user choice?
 8. What documentation should organizations maintain for GDPR compliance audits and regulatory reviews?
 
-**Metrics**: Word Count: 10,849, Pages: 38, Complexity: 4/5, Reading Speed: 10.2 pph, Total Hours: 3.7
-
-**Weekly Allocation**: Reading: 2.6 hrs (70%), Active Learning: 1.1 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/11dJ_n3Qu9MHFiOw0iPp4SSPesGPL3NLlAxxjnLJDvP4/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 9.1 (Output Filtering) - prevents sensitive personal data from appearing in outputs
@@ -4047,6 +4127,10 @@ The General Data Protection Regulation represents a paradigm shift in global dat
 
 
 
+
+
+✅ [Take Chapter 9.7 quiz](https://docs.google.com/forms/d/1jixS2zU6yATnjcFCXEXsL89EMLZylfSz6MO3fRDuvjc/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -4054,6 +4138,9 @@ The General Data Protection Regulation represents a paradigm shift in global dat
 ## Part 9, Chapter 9.8: Standards and Frameworks for AI Governance
 
 NIST AI Risk Management Framework and ISO/IEC 42001 provide complementary governance approaches where NIST delivers flexible operational risk management while ISO 42001 establishes formal management system structure, with implementation of both frameworks creating more robust governance than either alone. These standards integrate with sector-specific regulations and other management systems into unified governance addressing complete AI system lifecycles.
+
+**Weekly Allocation**: Reading: 3.5 hrs | Active Learning: 1.5 hrs
+Total Hours: 5.0 (3.5 hrs reading, 1.5 hrs active learning)
 
 **Key Concepts**:
 - NIST AI Risk Management Framework (NIST AI RMF) - flexible iterative operational framework for identifying risks, measuring effectiveness, and continuously adapting as systems evolve
@@ -4084,9 +4171,7 @@ NIST AI Risk Management Framework and ISO/IEC 42001 provide complementary govern
 7. Describe how healthcare example demonstrates integration of NIST AI RMF, ISO 42001, and sector-specific regulations into unified governance.
 8. How do common NIST misconceptions (one-time project, ISO eliminates NIST need, frameworks only for large enterprises) reflect systematic misunderstanding?
 
-**Metrics**: Word Count: 13,820, Pages: 49, Complexity: 5/5, Reading Speed: 9.8 pph, Total Hours: 5.0
-
-**Weekly Allocation**: Reading: 3.5 hrs (70%), Active Learning: 1.5 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1hMLoV22SF359en6C8L0VyABWG7obzcamhTJxgNF1-jI/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 9.1-9.7 (Earlier Part 9 Chapters) - specific control mechanisms that frameworks integrate into comprehensive governance
@@ -4099,8 +4184,9 @@ NIST AI Risk Management Framework and ISO/IEC 42001 provide complementary govern
 - General Application - standards frameworks transcend specific chapters providing governance applicable across entire AI system lifecycle
 
 
----
 
+
+✅ [Take Chapter 9.8 quiz](https://docs.google.com/forms/d/1P6I6VJdwNBQDWkDHp5W8joSAWXyja89i-HO6JspuRCo/viewform?usp=sharing)
 
 ---
 
@@ -4109,6 +4195,9 @@ NIST AI Risk Management Framework and ISO/IEC 42001 provide complementary govern
 ## Part 10, Chapter 10.1: Conversational UI
 
 Conversational user interfaces fundamentally shift interaction from constrained navigation menus to natural language dialogue, processing plain language input while maintaining conversation history across multiple turns through hierarchical memory architectures. This transformation dramatically improves accessibility and reduces cognitive load, particularly benefiting users with limited technical literacy or accessibility needs.
+
+**Weekly Allocation**: Reading: 3.1 hrs | Active Learning: 1.3 hrs
+Total Hours: 4.4 (3.1 hrs reading, 1.3 hrs active learning)
 
 **Key Concepts**:
 - Conversational User Interface (CUI), Multi-turn Dialogue Management, Hierarchical Memory Architecture
@@ -4130,14 +4219,16 @@ Conversational user interfaces fundamentally shift interaction from constrained 
 7. Design a task decomposition for a complex multi-step user request including dependencies and parallelization opportunities.
 8. What validation checkpoints should prevent a customer service agent from executing high-value transfers?
 
-**Metrics**: Word Count: 13,188 | Pages: 47 | Complexity: 5/5 | Reading Speed: 10.6 pph | Total Hours: 4.4
-
-**Weekly Allocation**: Reading: 3.1 hrs (70%) | Active Learning: 1.3 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1W6vhdPtRekAiCriCjGLkTGr1r_UbzSSgpJomU3DeI0Y/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 1 (Foundational Agent Patterns), Chapter 5 (Knowledge Integration and RAG), Chapter 6 (Operating Agentic AI Systems), Chapter 7 (Safety, Security, and Guardrails), Chapter 9 (Human-AI Interaction and Oversight), Chapter 10.2 (Proactive Agents), Chapter 10.3 (RLHF Methodology), Chapter 10.4 (Human-in-the-Loop)
 
 
+
+
+
+✅ [Take Chapter 10.1 quiz](https://docs.google.com/forms/d/17WIUXrqnRZ-RHj5Ogqs-qn1xEGKuXP8HM6NTQl4v8kw/viewform?usp=sharing)
 
 ---
 
@@ -4146,6 +4237,9 @@ Conversational user interfaces fundamentally shift interaction from constrained 
 ## Part 10, Chapter 10.2: Proactive Agents
 
 Proactive AI agents shift from traditional pull-based user-initiated interaction to push-based systems delivering timely assistance when users need it most by continuously monitoring environments and analyzing patterns across temporal and contextual dimensions. This transformation enables preventative assistance where issues surface before escalation and opportunities materialize before user recognition.
+
+**Weekly Allocation**: Reading: 4.3 hrs | Active Learning: 1.9 hrs
+Total Hours: 6.2 (4.3 hrs reading, 1.9 hrs active learning)
 
 **Key Concepts**:
 - Proactive AI Agents, Predictive Intelligence, Contextual Awareness, Autonomous Decision-Making
@@ -4168,14 +4262,16 @@ Proactive AI agents shift from traditional pull-based user-initiated interaction
 7. What does "temporal inappropriateness" mean in proactive agent design with two concrete examples?
 8. How should organizations implement graduated autonomy when deploying proactive agents in specific domains?
 
-**Metrics**: Word Count: 17,151 | Pages: 61 | Complexity: 5/5 | Reading Speed: 9.8 pph | Total Hours: 6.2
-
-**Weekly Allocation**: Reading: 4.3 hrs (70%) | Active Learning: 1.9 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1KjrqTbHPhfeg5m7OG9SRO2FmjTz4T8dSENVHElXjPxQ/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 10.1 (Conversational UI), Part 9 (Foundation Models), Part 8 (Tool Use and Planning), Part 5 (Prompt Engineering), Chapter 10.3A-10.3B (RLHF Methodology), Chapter 10.4 (Human-in-the-Loop), Chapter 10.5 (Human over the Loop), Integration Chapters
 
 
+
+
+
+✅ [Take Chapter 10.2 quiz](https://docs.google.com/forms/d/1aEj8JG-BDb_QrCYoy-z7ofMgTeZO37zw2hb9XRGpgKw/viewform?usp=sharing)
 
 ---
 
@@ -4184,6 +4280,9 @@ Proactive AI agents shift from traditional pull-based user-initiated interaction
 ## Part 10, Chapter 10.3A: RLHF Methodology
 
 Reinforcement Learning from Human Feedback addresses fundamental asymmetry in human cognition where humans excel at recognizing preferences through comparative judgment while struggling to specify desired behavior exhaustively through formal rules. RLHF translates this comparative strength into three-phase training pipeline transforming pre-trained models into systems understanding language and responding in helpful, harmless, and honest ways through preference-based optimization.
+
+**Weekly Allocation**: Reading: 3.7 hrs | Active Learning: 1.6 hrs
+Total Hours: 5.3 (3.7 hrs reading, 1.6 hrs active learning)
 
 **Key Concepts**:
 - Alignment Challenge, Comparative Strength, Preference Comparison, Implicit Values, Human Cognitive Asymmetry
@@ -4211,9 +4310,7 @@ Reinforcement Learning from Human Feedback addresses fundamental asymmetry in hu
 7. Why might reward models trained on high-agreement examples underperform ones trained on moderate-disagreement examples?
 8. What underlying tension does RLHF's preference-based approach leave unresolved regarding fundamental value agreement?
 
-**Metrics**: Word Count: 15,389, Pages: 54, Complexity: 5/5, Reading Speed: 10.2 pph, Total Hours: 5.3
-
-**Weekly Allocation**: Reading: 3.7 hrs (70%), Active Learning: 1.6 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1KzM5uiCN4DPKg00h3kWNpO54VYsdRfMrX2LotHJ1TgM/viewform?usp=sharing)
 
 **Related Chapters**:
 - Part 2 (Agent Development & Frameworks) - agentic frameworks requiring RLHF alignment assume foundational understanding of agent architecture
@@ -4229,6 +4326,10 @@ Reinforcement Learning from Human Feedback addresses fundamental asymmetry in hu
 
 
 
+
+
+✅ [Take Chapter 10.3A quiz](https://docs.google.com/forms/d/1_rkb0PK47dVVgQC779pGupbR3wgGjgvJMrW00hgBgHk/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -4236,6 +4337,9 @@ Reinforcement Learning from Human Feedback addresses fundamental asymmetry in hu
 ## Part 10, Chapter 10.3B: RLHF Pitfalls and Red Teaming
 
 This chapter exposes twelve critical misconceptions about RLHF that organizations frequently hold, including the dangerous assumption that RLHF solves alignment completely. It provides systematic analysis of preference variation, annotation quality challenges, reward model limitations, and introduces red teaming methodologies for identifying vulnerabilities before production deployment.
+
+**Weekly Allocation**: Reading: 2.73 hrs | Active Learning: 1.17 hrs
+Total Hours: 3.9 (2.73 hrs reading, 1.17 hrs active learning)
 
 **Key Concepts**:
 - Alignment Illusion and RLHF as foundational not complete solution
@@ -4262,16 +4366,7 @@ This chapter exposes twelve critical misconceptions about RLHF that organization
 7. What does the gap between reward model loss and policy performance reveal about evaluating RLHF systems?
 8. Why does quality matter more than quantity in preference data collection?
 
-**Metrics**:
-- Word Count: 12,209
-- Pages: 43
-- Complexity: 5/5
-- Reading Speed: 11.0 pph
-- Total Hours: 3.9
-
-**Weekly Allocation**:
-- Reading: 2.73 hrs (70%)
-- Active Learning: 1.17 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1cJlIRPrSozydsmMk6KsdgqXT1tMLxZjv2VgvYAVZaVI/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 9 (Evaluation and Feedback)
@@ -4286,6 +4381,8 @@ This chapter exposes twelve critical misconceptions about RLHF that organization
 
 
 
+
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -4293,6 +4390,9 @@ This chapter exposes twelve critical misconceptions about RLHF that organization
 ## Part 10, Chapter 10.4: Human-in-the-Loop
 
 This chapter explains Human-in-the-Loop (HITL) approval mechanisms where agent execution halts pending explicit human validation. It covers three-phase approval architectures, graduated autonomy frameworks, state persistence approaches, escalation pathways, and real-world deployment scenarios from healthcare to financial services where organizational oversight maintains authority over consequential outcomes.
+
+**Weekly Allocation**: Reading: 3.85 hrs | Active Learning: 1.65 hrs
+Total Hours: 5.5 (3.85 hrs reading, 1.65 hrs active learning)
 
 **Key Concepts**:
 - Human-in-the-Loop (HITL) Approval as active gatekeeping mechanism
@@ -4323,16 +4423,7 @@ This chapter explains Human-in-the-Loop (HITL) approval mechanisms where agent e
 7. What mechanisms distinguish between approval failure due to fatigue versus systematic errors?
 8. Why does Allstate's graduated approach (65% autonomous, 30% adjuster, 5% specialist) achieve better outcomes than uniform approval requirements?
 
-**Metrics**:
-- Word Count: 15,909
-- Pages: 56
-- Complexity: 5/5
-- Reading Speed: 10.2 pph
-- Total Hours: 5.5
-
-**Weekly Allocation**:
-- Reading: 3.85 hrs (70%)
-- Active Learning: 1.65 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/1EcJolS6oKa8grdGzuTmbnL6Mln1f7r5HPmFxtcw8y8s/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 10.2 (Proactive Agents - autonomy foundations)
@@ -4346,6 +4437,10 @@ This chapter explains Human-in-the-Loop (HITL) approval mechanisms where agent e
 
 
 
+
+
+✅ [Take Chapter 10.4 quiz](https://docs.google.com/forms/d/1aZTIz_eJ1lNvPPc9bt9QTDcUpyjAsrZGshzBlUxKfpU/viewform?usp=sharing)
+
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -4353,6 +4448,9 @@ This chapter explains Human-in-the-Loop (HITL) approval mechanisms where agent e
 ## Part 10, Chapter 10.5: Human-over-the-Loop
 
 This chapter presents the Human-over-the-Loop (HOvL) governance paradigm that balances agent autonomy with human accountability through policy-based constraints. Rather than requiring approval for every decision, HOvL encodes organizational wisdom into policies that agents respect automatically, eliminating real-time approval bottlenecks while maintaining explicit veto power and continuous learning through RLHF integration.
+
+**Weekly Allocation**: Reading: 5.67 hrs | Active Learning: 2.43 hrs
+Total Hours: 8.1 (5.67 hrs reading, 2.43 hrs active learning)
 
 **Key Concepts**:
 - Human-over-the-Loop (HOvL) governance paradigm balancing autonomy with accountability
@@ -4395,16 +4493,7 @@ This chapter presents the Human-over-the-Loop (HOvL) governance paradigm that ba
 7. Why does confidence-based intelligent routing outperform simple threshold-based escalation?
 8. What are the key misconceptions about human oversight effectiveness that Chapter 10.5 addresses?
 
-**Metrics**:
-- Word Count: 22,557
-- Pages: 80
-- Complexity: 5/5
-- Reading Speed: 9.8 pph
-- Total Hours: 8.1
-
-**Weekly Allocation**:
-- Reading: 5.67 hrs (70%)
-- Active Learning: 2.43 hrs (30%)
+💭 [Answer the questions in your own words](https://docs.google.com/forms/d/10rEgIOm5LM1M6QtLkl5srwh7ug8IPBbVWRv4OV39pMU/viewform?usp=sharing)
 
 **Related Chapters**:
 - Chapter 10.1 (Conversational UI - dialogue state foundations)
@@ -4503,3 +4592,11 @@ This integration chapter synthesizes five foundational capabilities—feedback i
 - Chapter 8 (Optimization and Performance)
 - Chapter 9 (Evaluation and Monitoring)
 - Chapter 10.1-10.11 (NVIDIA Platform Stack)
+
+
+✅ [Take Chapter 10.5 quiz](https://docs.google.com/forms/d/1MhzKWM3Ob8bWVum7g6-8jz8AtnE3rapOdSySxPhxfIs/viewform?usp=sharing)
+
+---
+
+[↑ Back to Table of Contents](#table-of-contents)
+
