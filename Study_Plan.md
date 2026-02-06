@@ -1,12 +1,12 @@
 # Mastering Agentic AI Systems - Study Plan
 
-This study plan provides structured guidance for mastering all 93 chapters of the textbook within a 4-month (120-day) intensive study program. Each chapter includes:
+This study plan provides structured guidance for mastering all 86 theory chapters of the textbook within a 4-month (120-day) intensive study program. (18 practice chapters are available separately in the labs/ directory). Each chapter includes:
 
 ---
 
 ## Table of Contents
 
-### Part 1: Agent Fundamentals (10 chapters)
+### Part 1: Agent Fundamentals (11 chapters)
 - [1.1A: UI Foundations](#part-1-chapter-11a-ui-foundations)
 - [1.1B: Human-in-the-Loop Patterns and Accessible Design](#part-1-chapter-11b-human-in-the-loop-patterns-and-accessible-design)
 - [1.2: Core Patterns](#part-1-chapter-12-core-patterns)
@@ -17,6 +17,7 @@ This study plan provides structured guidance for mastering all 93 chapters of th
 - [1.6: Stateful Orchestration - Pitfalls, Integration, and Synthesis](#part-1-chapter-16-stateful-orchestration---pitfalls-integration-and-synthesis)
 - [1.7A: Relational Reasoning with Knowledge Graphs](#part-1-chapter-17a-relational-reasoning-with-knowledge-graphs)
 - [1.7B: Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration](#part-1-chapter-17b-relational-reasoning-with-knowledge-graphs---hybrid-ragkg-integration)
+- [1.8: Agent Resilience and Synthesis](#part-1-chapter-18-agent-resilience-and-synthesis)
 
 ### Part 2: Framework & Tool Integration (9 chapters)
 - [2.1: Framework Landscape](#part-2-chapter-21-framework-landscape)
@@ -29,7 +30,7 @@ This study plan provides structured guidance for mastering all 93 chapters of th
 - [2.8: Error Handling and Resilience](#part-2-chapter-28-error-handling-and-resilience)
 - [2.9: Streaming and Real-Time Responses](#part-2-chapter-29-streaming-and-real-time-responses)
 
-### Part 3: Evaluation & Optimization (10 chapters)
+### Part 3: Evaluation & Optimization (12 chapters)
 - [3.1A: Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts](#part-3-chapter-31a-implement-evaluation-pipelines-and-task-benchmarks---introduction-motivation-and-core-concepts)
 - [3.1B: Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration](#part-3-chapter-31b-implement-evaluation-pipelines-and-task-benchmarks---custom-metrics-and-cicd-integration)
 - [3.1C: Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design](#part-3-chapter-31c-implement-evaluation-pipelines-and-task-benchmarks---independent-practice-and-comprehensive-system-design)
@@ -67,33 +68,27 @@ This study plan provides structured guidance for mastering all 93 chapters of th
 - [5.12: Learning-Based Decision Making](#part-5-chapter-512-learning-based-decision-making)
 - [5.13: Hybrid Decision Systems](#part-5-chapter-513-hybrid-decision-systems)
 
-### Part 6: Retrieval-Augmented Generation (RAG) (12 chapters)
+### Part 6: Retrieval-Augmented Generation (RAG) (9 chapters)
 - [6.1A: RAG Chunking and Embeddings](#part-6-chapter-61a-rag-chunking-and-embeddings)
 - [6.1C: RAG Implementation](#part-6-chapter-61c-rag-implementation)
 - [6.2A: Vector Database Selection](#part-6-chapter-62a-vector-database-selection)
 - [6.2B: Production Vector Database Deployment](#part-6-chapter-62b-production-vector-database-deployment)
 - [6.3A: ETL Fundamentals](#part-6-chapter-63a-etl-fundamentals)
 - [6.3B: ETL Load and Integration](#part-6-chapter-63b-etl-load-and-integration)
-- [6.3C: ETL Practice](#part-6-chapter-63c-etl-practice)
-- [6.4A: Data Quality Fundamentals](#part-6-chapter-64a-data-quality-fundamentals)
-- [6.4B: Data Quality Practice](#part-6-chapter-64b-data-quality-practice)
-- [6.5A: Production RAG Architecture](#part-6-chapter-65a-production-rag-architecture)
-- [6.5B: Production RAG Practice](#part-6-chapter-65b-production-rag-practice)
-- [6.6A: Reranking Implementation](#part-6-chapter-66a-reranking-implementation)
-- [6.6B: Query Decomposition and Adaptive Retrieval](#part-6-chapter-66b-query-decomposition-and-adaptive-retrieval)
-- [6.6C: Advanced Retrieval Practice](#part-6-chapter-66c-advanced-retrieval-practice)
+- [6.4: Data Quality Fundamentals](#part-6-chapter-64-data-quality-fundamentals)
+- [6.5: Production RAG Architecture](#part-6-chapter-65-production-rag-architecture)
+- [6.6: Query Decomposition and Adaptive Retrieval](#part-6-chapter-66-query-decomposition-and-adaptive-retrieval)
 
-### Part 7: NVIDIA NeMo Framework & Optimization (6 chapters)
+### Part 7: NVIDIA NeMo Framework & Optimization (7 chapters)
 - [7.1A: NVIDIA NeMo Framework and Six Rail Types](#part-7-chapter-71a-nvidia-nemo-framework-and-six-rail-types)
 - [7.1B: Colang DSL, NIM Integration, and Misconceptions](#part-7-chapter-71b-colang-dsl-nim-integration-and-misconceptions)
-- [7.2A: Local Development Setup and API Integration](#part-7-chapter-72a-local-development-setup-and-api-integration)
-- [7.2B: Performance Monitoring & Optimization](#part-7-chapter-72b-performance-monitoring--optimization)
+- [7.2: Performance Monitoring & Optimization](#part-7-chapter-72-performance-monitoring--optimization)
 - [7.3: Agent Toolkit](#part-7-chapter-73-agent-toolkit)
 - [7.4: Quantization Fundamentals](#part-7-chapter-74-quantization-fundamentals)
 - [7.5: Curator, Riva, and Multimodal](#part-7-chapter-75-curator-riva-and-multimodal)
 - [7.6: Multi-Instance GPU (MIG) & Security](#part-7-chapter-76-multi-instance-gpu-mig--security)
 
-### Part 8: Reliability & Cost Management (4 chapters)
+### Part 8: Reliability & Cost Management (5 chapters)
 - [8.1: Latency Fundamentals](#part-8-chapter-81-latency-fundamentals)
 - [8.2A: Error Taxonomy and SLO](#part-8-chapter-82a-error-taxonomy-and-slo)
 - [8.2B: Circuit Breakers and NeMo Integration](#part-8-chapter-82b-circuit-breakers-and-nemo-integration)
@@ -114,10 +109,8 @@ This study plan provides structured guidance for mastering all 93 chapters of th
 - [10.1: Conversational UI](#part-10-chapter-101-conversational-ui)
 - [10.2: Proactive Agents](#part-10-chapter-102-proactive-agents)
 - [10.3A: RLHF Methodology](#part-10-chapter-103a-rlhf-methodology)
-- [10.3B: RLHF Pitfalls and Red Teaming](#part-10-chapter-103b-rlhf-pitfalls-and-red-teaming)
 - [10.4: Human-in-the-Loop](#part-10-chapter-104-human-in-the-loop)
 - [10.5: Human-over-the-Loop](#part-10-chapter-105-human-over-the-loop)
-- [10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)](#part-10-sections-106-integration-feedback-calibration-explainability-controllability-consistency)
 
 ---
 
@@ -2656,7 +2649,7 @@ Vector databases represent a fundamental architectural paradigm shift enabling s
 **Weekly Allocation**: Reading: 1.8 hrs (70%), Active Learning: 0.8 hrs (30%)
 
 **Related Chapters**:
-- Part 2 (Framework Landscape, LangGraph, LangChain), Part 3 (LLM Architecture, Training, Fine-tuning), Part 4 (Model Deployment, Optimization), Part 5 (Agent Architecture, Memory, Reasoning), Part 6.1A (RAG Chunking and Embeddings), Part 6.2B (Production Deployment), Part 6.3A (ETL Fundamentals), Part 6.3B (ETL Load Integration), Part 6.3C (ETL Practice), Part 6.4A/6.4B (Data Quality), Part 6.5A/6.5B (Production RAG Architecture), Part 6.6A/6.6B/6.6C (Reranking, Query Decomposition, Advanced Retrieval)
+- Part 2 (Framework Landscape, LangGraph, LangChain), Part 3 (LLM Architecture, Training, Fine-tuning), Part 4 (Model Deployment, Optimization), Part 5 (Agent Architecture, Memory, Reasoning), Part 6.1A (RAG Chunking and Embeddings), Part 6.2B (Production Deployment), Part 6.3A (ETL Fundamentals), Part 6.3B (ETL Load Integration), Part 6.3C (ETL Practice), Part 6.4/6.4B (Data Quality), Part 6.5/6.5B (Production RAG Architecture), Part 6.6A/6.6/6.6C (Reranking, Query Decomposition, Advanced Retrieval)
 
 
 
@@ -2702,7 +2695,7 @@ Production vector database deployments require careful orchestration across conn
 **Weekly Allocation**: Reading: 1.19 hrs (70%) | Active Learning: 0.51 hrs (30%)
 
 **Related Chapters**:
-- Chapter 6.2A (Vector Database Selection), Chapter 6.1A (RAG Chunking and Retrieval), Chapter 6.1C (RAG Implementation), Chapter 6.3A (ETL Fundamentals), Chapter 6.3B (ETL Load Integration), Chapter 6.4A/6.4B (Data Quality), Chapter 6.5A/6.5B (Production RAG Architecture), Chapter 6.6A/6.6B/6.6C (Advanced Retrieval)
+- Chapter 6.2A (Vector Database Selection), Chapter 6.1A (RAG Chunking and Retrieval), Chapter 6.1C (RAG Implementation), Chapter 6.3A (ETL Fundamentals), Chapter 6.3B (ETL Load Integration), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG Architecture), Chapter 6.6A/6.6/6.6C (Advanced Retrieval)
 
 
 
@@ -2796,7 +2789,7 @@ ETL pipelines solve the critical enterprise data integration problem, bridging 7
 **Weekly Allocation**: Reading: 2.03 hrs (70%) | Active Learning: 0.87 hrs (30%)
 
 **Related Chapters**:
-- Chapter 6.1A (RAG Chunking), Chapter 6.1C (RAG Implementation), Chapter 6.2A (Vector Database Selection), Chapter 6.2B (Production Deployment), Part 4 (Model Deployment and Optimization), Part 2 (Framework Landscape and Orchestration), Chapter 6.3B (ETL Load Integration), Chapter 6.4A/6.4B (Data Quality), Chapter 6.5A/6.5B (Production RAG Architecture), Chapter 6.6A/6.6B/6.6C (Advanced Retrieval)
+- Chapter 6.1A (RAG Chunking), Chapter 6.1C (RAG Implementation), Chapter 6.2A (Vector Database Selection), Chapter 6.2B (Production Deployment), Part 4 (Model Deployment and Optimization), Part 2 (Framework Landscape and Orchestration), Chapter 6.3B (ETL Load Integration), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG Architecture), Chapter 6.6A/6.6/6.6C (Advanced Retrieval)
 
 
 
@@ -2843,7 +2836,7 @@ The load phase completes ETL pipelines by translating transformed data into vect
 **Weekly Allocation**: Reading: 0.91 hrs (70%) | Active Learning: 0.39 hrs (30%)
 
 **Related Chapters**:
-- Chapter 6.1A (RAG Chunking Fundamentals), Chapter 6.1C (RAG Implementation), Chapter 6.2A (Vector Database Selection), Chapter 6.2B (Production Vector Database Deployment), Chapter 6.3A (ETL Fundamentals), Part 4 (Deployment and Scaling), Chapter 6.3C (ETL Practice), Chapter 6.4A/6.4B (Data Quality), Chapter 6.5A/6.5B (Production RAG Architecture), Chapter 6.6A/6.6B/6.6C (Advanced Retrieval), Chapter 8.2B (Circuit Breakers and NeMo Integration), Chapter 8.4 (Success Metrics)
+- Chapter 6.1A (RAG Chunking Fundamentals), Chapter 6.1C (RAG Implementation), Chapter 6.2A (Vector Database Selection), Chapter 6.2B (Production Vector Database Deployment), Chapter 6.3A (ETL Fundamentals), Part 4 (Deployment and Scaling), Chapter 6.3C (ETL Practice), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG Architecture), Chapter 6.6A/6.6/6.6C (Advanced Retrieval), Chapter 8.2B (Circuit Breakers and NeMo Integration), Chapter 8.4 (Success Metrics)
 
 
 
@@ -2946,7 +2939,7 @@ This practice chapter transitions from theoretical ETL understanding to hands-on
 
 [↑ Back to Table of Contents](#table-of-contents)
 
-## Part 6, Chapter 6.4A: Data Quality Fundamentals
+## Part 6, Chapter 6.4: Data Quality Fundamentals
 
 Data quality represents the hidden variable determining whether production RAG systems deliver reliable value or generate catastrophic failures. This chapter establishes the five-dimensional framework (completeness, accuracy, consistency, timeliness, validity) and demonstrates how quality failures amplify through RAG systems. A $4.2 million financial services deployment failed within 72 hours due to 12% duplicate articles with conflicting information, 8% corrupted formatting, and 5% outdated regulatory guidance. The chapter translates abstract quality goals into concrete SLAs: 98% completeness minimum, 99% accuracy, 0.5% duplicate threshold, 95% content reflecting 24-hour changes, 99.9% schema conformance. Comprehensive validation across these dimensions at ingestion, transformation, post-loading, and monitoring stages ensures production-grade reliability.
 
@@ -2984,7 +2977,7 @@ Data quality represents the hidden variable determining whether production RAG s
 - Chapter 6.3A: ETL Fundamentals (8.0%)
 - Chapter 6.3B: ETL Load and Integration (6.0%)
 - Chapter 6.3C: ETL Practice (10.0%)
-- Chapter 6.4A: Data Quality Fundamentals (10.0%)
+- Chapter 6.4: Data Quality Fundamentals (10.0%)
 
 **Combined Exam Weight**: 40.0%
 
@@ -3033,7 +3026,7 @@ This chapter provides comprehensive practical implementation of quality validati
 **Weekly Allocation**: Reading: 1.54 hrs (70%) | Active Learning: 0.66 hrs (30%)
 
 **Related Chapters**:
-- Chapter 6.4A (Data Quality Fundamentals), Chapter 6.3A/6.3B (ETL Fundamentals & Load Integration), Chapter 6.2B (Production Vector Database Deployment), Chapter 6.1A/6.1C (RAG Chunking & Implementation), Part 3 (Deployment), Chapter 6.5A/6.5B (Production RAG Architecture & Practice), Chapter 6.6A/6.6B/6.6C (Advanced Retrieval), Chapter 8.2/8.3 (System Integration & Continuous Evaluation), Chapter 9 (Human Oversight & Feedback Loops)
+- Chapter 6.4 (Data Quality Fundamentals), Chapter 6.3A/6.3B (ETL Fundamentals & Load Integration), Chapter 6.2B (Production Vector Database Deployment), Chapter 6.1A/6.1C (RAG Chunking & Implementation), Part 3 (Deployment), Chapter 6.5/6.5B (Production RAG Architecture & Practice), Chapter 6.6A/6.6/6.6C (Advanced Retrieval), Chapter 8.2/8.3 (System Integration & Continuous Evaluation), Chapter 9 (Human Oversight & Feedback Loops)
 
 
 
@@ -3041,7 +3034,7 @@ This chapter provides comprehensive practical implementation of quality validati
 
 [↑ Back to Table of Contents](#table-of-contents)
 
-## Part 6, Chapter 6.5A: Production RAG Architecture
+## Part 6, Chapter 6.5: Production RAG Architecture
 
 This chapter covers the complete architectural design of production RAG systems operating at enterprise scale with sub-second latency, 90%+ accuracy, strict cost controls, and guaranteed availability. The chapter establishes critical patterns for layered system design (ingestion, storage, retrieval, generation, API, observability), addresses fundamental production challenges absent in prototypes, and implements fault tolerance and deployment strategies ensuring reliable operations.
 
@@ -3112,7 +3105,7 @@ This chapter moves from production RAG theory to practical implementation throug
 **Weekly Allocation**: Reading: 2.8 hrs (70%) | Active Learning: 1.2 hrs (30%)
 
 **Related Chapters**:
-- Chapter 5 (Knowledge Integration - Chapter 5.1-5.3), Chapter 5.4-5.5 (Embedding and Vector Database), Chapter 6.5A (RAG System Architecture), Chapter 3 (Deployment), Chapter 6 (Operating Agentic AI), Chapter 6.6 (Advanced Retrieval), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation and Benchmarking), Chapter 9 (Human-in-the-Loop), Chapter 10 (Optimization and Scaling)
+- Chapter 5 (Knowledge Integration - Chapter 5.1-5.3), Chapter 5.4-5.5 (Embedding and Vector Database), Chapter 6.5 (RAG System Architecture), Chapter 3 (Deployment), Chapter 6 (Operating Agentic AI), Chapter 6.6 (Advanced Retrieval), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation and Benchmarking), Chapter 9 (Human-in-the-Loop), Chapter 10 (Optimization and Scaling)
 
 
 
@@ -3150,7 +3143,7 @@ This chapter provides comprehensive understanding and practical implementation o
 **Weekly Allocation**: Reading: 0.56 hrs (70%) | Active Learning: 0.24 hrs (30%)
 
 **Related Chapters**:
-- Chapter 5 (Knowledge Integration), Chapter 6.1A/6.1C (RAG Chunking), Chapter 6.2A/6.2B (Vector Database), Chapter 6.3A/6.3B (ETL), Chapter 6.4A/6.4B (Data Quality), Chapter 6.5A/6.5B (Production RAG), Chapter 6.6B (Query Decomposition), Chapter 6.6C (Advanced Retrieval Practice), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation), Chapter 9 (Human-in-the-Loop), Chapter 10 (Advanced Optimization)
+- Chapter 5 (Knowledge Integration), Chapter 6.1A/6.1C (RAG Chunking), Chapter 6.2A/6.2B (Vector Database), Chapter 6.3A/6.3B (ETL), Chapter 6.4/6.4B (Data Quality), Chapter 6.5/6.5B (Production RAG), Chapter 6.6 (Query Decomposition), Chapter 6.6C (Advanced Retrieval Practice), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation), Chapter 9 (Human-in-the-Loop), Chapter 10 (Advanced Optimization)
 
 
 
@@ -3158,7 +3151,7 @@ This chapter provides comprehensive understanding and practical implementation o
 
 [↑ Back to Table of Contents](#table-of-contents)
 
-## Part 6, Chapter 6.6B: Query Decomposition and Adaptive Retrieval
+## Part 6, Chapter 6.6: Query Decomposition and Adaptive Retrieval
 
 This chapter addresses advanced retrieval challenges in production RAG systems through two complementary techniques. Query decomposition breaks complex multi-part questions into focused sub-queries, enabling targeted retrieval of comprehensive context for each component. Adaptive retrieval recognizes when external knowledge is genuinely needed, reducing unnecessary API calls and improving latency. Together, these techniques significantly improve answer quality for complex queries while optimizing efficiency for queries where parametric memory suffices.
 
@@ -3232,7 +3225,7 @@ This chapter covers advanced retrieval techniques for production RAG systems inc
 **Weekly Allocation**: Reading: 1.26 hrs (70%) | Active Learning: 0.54 hrs (30%)
 
 **Related Chapters**:
-- Chapter 5 (RAG Fundamentals), Chapter 6.1-6.6B (Earlier Advanced Retrieval Sections), Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment Infrastructure), Chapter 4 (Advanced Cognition), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation Pipelines), Chapter 9 (Explainability and Human Oversight), Chapter 10 (NVIDIA Platform Optimization)
+- Chapter 5 (RAG Fundamentals), Chapter 6.1-6.6 (Earlier Advanced Retrieval Sections), Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment Infrastructure), Chapter 4 (Advanced Cognition), Chapter 7 (Safety, Ethics, Compliance), Chapter 8 (Evaluation Pipelines), Chapter 9 (Explainability and Human Oversight), Chapter 10 (NVIDIA Platform Optimization)
 
 ---
 
@@ -3346,7 +3339,7 @@ This chapter transforms abstract NIM architecture into hands-on deployment infra
 **Weekly Allocation**: Reading: 2.03 hrs (70%) | Active Learning: 0.87 hrs (30%)
 
 **Related Chapters**:
-- Chapter 7.1A (NIM Architecture & Hardware Detection), Chapter 2 (Framework & Platform Architectures), Chapter 4 (Advanced Agent Cognition), Chapter 6 (Operating Agentic AI Systems), Chapter 7.2B-7.6 (Advanced NIM Topics), Chapter 8 (Evaluation and Tuning), Chapter 9 (Human-in-the-Loop & Explainability), Chapter 10 (Optimization & Production Hardening)
+- Chapter 7.1A (NIM Architecture & Hardware Detection), Chapter 2 (Framework & Platform Architectures), Chapter 4 (Advanced Agent Cognition), Chapter 6 (Operating Agentic AI Systems), Chapter 7.2-7.6 (Advanced NIM Topics), Chapter 8 (Evaluation and Tuning), Chapter 9 (Human-in-the-Loop & Explainability), Chapter 10 (Optimization & Production Hardening)
 
 
 
@@ -3354,7 +3347,7 @@ This chapter transforms abstract NIM architecture into hands-on deployment infra
 
 [↑ Back to Table of Contents](#table-of-contents)
 
-## Part 7, Chapter 7.2B: Performance Monitoring & Optimization
+## Part 7, Chapter 7.2: Performance Monitoring & Optimization
 
 This chapter navigates the fundamental throughput-latency-cost optimization triangle where maximizing any two metrics degrades the third. Throughput optimization batches concurrent requests achieving 8-10x improvement; latency optimization reduces per-request computation through parameter tuning (69% reduction from 800ms to 250ms); cost optimization combines model selection, quantization, and auto-scaling for 33-80% savings. Production monitoring validates these strategies through Prometheus metrics collection (20+ indicators), PromQL queries (request rates, latency percentiles, error rates, GPU utilization), Grafana dashboards (seven key panels), and AlertManager alerting rules with appropriate severity and duration thresholds. Structured logging through Fluentd enables troubleshooting by correlating metrics (what happened) with logs (why it happened).
 
@@ -3417,7 +3410,7 @@ NeMo Agent Toolkit provides systematic profiling, optimization, and continuous m
 **Weekly Allocation**: Reading: 0.77 hrs (70%) | Active Learning: 0.33 hrs (30%)
 
 **Related Chapters**:
-Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment & Orchestration), Chapter 5 (RAG Systems), Chapter 6 (Operations & Monitoring), Chapter 7.1A (NeMo Framework), Chapter 7.2B (Performance Monitoring), Chapter 7.4 (Quantization Fundamentals), Chapter 8 (Evaluation & Tuning)
+Chapter 2 (Agentic Frameworks), Chapter 3 (Deployment & Orchestration), Chapter 5 (RAG Systems), Chapter 6 (Operations & Monitoring), Chapter 7.1A (NeMo Framework), Chapter 7.2 (Performance Monitoring), Chapter 7.4 (Quantization Fundamentals), Chapter 8 (Evaluation & Tuning)
 
 
 ---
