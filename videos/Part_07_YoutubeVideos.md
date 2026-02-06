@@ -5,7 +5,7 @@
 - [Chapter 7.1A: NeMo Framework and Six Rails](#chapter-71a---nemo-framework-and-six-rails)
 - [Chapter 7.1B: Colang DSL and NIM Integration](#chapter-71b---colang-dsl-and-nim-integration)
 - [Chapter 7.2A: Local Development Setup](#chapter-72a---local-development-setup)
-- [Chapter 7.2B: Performance Monitoring and Optimization](#chapter-72b---performance-monitoring-and-optimization)
+- [Chapter 7.2: Performance Monitoring and Optimization](#chapter-72---performance-monitoring-and-optimization)
 - [Chapter 7.3: NeMo Agent Toolkit](#chapter-73---nemo-agent-toolkit)
 - [Chapter 7.4: Quantization Fundamentals](#chapter-74---quantization-fundamentals)
 - [Chapter 7.5: Curator, Riva, and Multimodal Systems](#chapter-75---curator-riva-and-multimodal-systems)
@@ -123,9 +123,9 @@
 
 ---
 
-<a name="chapter-72b---performance-monitoring-and-optimization"></a>
+<a name="chapter-72---performance-monitoring-and-optimization"></a>
 
-## Chapter 7.2B: Performance Monitoring and Optimization
+## Chapter 7.2: Performance Monitoring and Optimization
 
 **Topics:** Prometheus Monitoring, Grafana Dashboards, Kubernetes HPA, GPU Utilization, LLM Inference Optimization, AlertManager, Structured Logging, Fluentd, Model Quantization
 

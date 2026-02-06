@@ -8,12 +8,12 @@
 - [Chapter 6.3A - ETL Fundamentals](#chapter-63a---etl-fundamentals)
 - [Chapter 6.3B - ETL Load and Integration](#chapter-63b---etl-load-and-integration)
 - [Chapter 6.3C - ETL Practice](#chapter-63c---etl-practice)
-- [Chapter 6.4A - Data Quality Fundamentals](#chapter-64a---data-quality-fundamentals)
+- [Chapter 6.4 - Data Quality](#chapter-64---data-quality)
 - [Chapter 6.4B - Data Quality Practice](#chapter-64b---data-quality-practice)
-- [Chapter 6.5A - Production RAG Architecture](#chapter-65a---production-rag-architecture)
+- [Chapter 6.5 - Production RAG](#chapter-65---production-rag)
 - [Chapter 6.5B - Production RAG Practice](#chapter-65b---production-rag-practice)
 - [Chapter 6.6A - Reranking Implementation](#chapter-66a---reranking-implementation)
-- [Chapter 6.6B - Query Decomposition](#chapter-66b---query-decomposition)
+- [Chapter 6.6 - Query Decomposition](#chapter-66---query-decomposition)
 
 ---
 
@@ -123,8 +123,8 @@ Note: Comprehensive tutorials available from James Briggs, freeCodeCamp, and NVI
 
 ---
 
-<a name="chapter-64a---data-quality-fundamentals"></a>
-## Chapter 6.4A - Data Quality Fundamentals
+<a name="chapter-64---data-quality"></a>
+## Chapter 6.4 - Data Quality
 
 **Topics:** Data Quality Assessment, Validation, Testing
 
@@ -147,8 +147,8 @@ Note: Quality assessment frameworks well covered. See tutorials on schema valida
 
 ---
 
-<a name="chapter-65a---production-rag-architecture"></a>
-## Chapter 6.5A - Production RAG Architecture
+<a name="chapter-65---production-rag"></a>
+## Chapter 6.5 - Production RAG
 
 **Topics:** System Design, Scalability, Observability, Performance
 
@@ -178,8 +178,8 @@ Note: Practical RAG implementation patterns available from Pinecone Learning Hub
 
 ---
 
-<a name="chapter-66b---query-decomposition"></a>
-## Chapter 6.6B - Query Decomposition
+<a name="chapter-66---query-decomposition"></a>
+## Chapter 6.6 - Query Decomposition
 
 **Topics:** Query Decomposition, Adaptive Retrieval, Query Routing
 
