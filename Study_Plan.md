@@ -156,10 +156,8 @@ Total Hours: 4.8 (3.36 hrs reading, 1.44 hrs active learning)
 - Part 2 (Framework Implementations)
 - Part 3 (Deployment & Infrastructure)
 
+**✅ [Take Chapter 1.1A quiz](https://docs.google.com/forms/d/e/1FAIpQLSfRpAEoQBYr8AT-YWuHvGzYyovoDzk_KI2lu69FfP1Z28e4rA/viewform?usp=sharing)**
 
-
-
-✅ [Take Chapter 1.1A quiz](https://docs.google.com/forms/d/e/1FAIpQLSfRpAEoQBYr8AT-YWuHvGzYyovoDzk_KI2lu69FfP1Z28e4rA/viewform?usp=sharing)
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -204,10 +202,7 @@ Total Hours: 1.8 (1.26 hrs reading, 0.54 hrs active learning)
 - Part 2 (Implementation Bridge)
 - Part 10 (Production HITL Systems)
 
-
-
-
-✅ [Take Chapter 1.1B quiz](https://docs.google.com/forms/d/1-5k4PsaJvEVD8q1SrMdsW4DKVlwGFAH5tVL_UISSzYc/viewform?usp=sharing)
+✅ [Take Chapter 1.1B quiz](https://docs.google.com/forms/d/e/1FAIpQLSd0-ms91kZKlPjrfIvjKYx6mKTiDSW96X5xUt_wlR4Nn9yXtQ/viewform?usp=sharing&ouid=116579026379007071084)
 
 ---
 
