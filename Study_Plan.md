@@ -159,8 +159,7 @@ Total Hours: 4.8 (3.36 hrs reading, 1.44 hrs active learning)
 
 
 
-✅ [Take Chapter 1.1A quiz](https://docs.google.com/forms/d/1f5hdiT-njPf2bHPe5sYux80xSvWbwpOhM9mNCXhgzG0/viewform?usp=sharing)
-
+✅ [Take Chapter 1.1A quiz](https://docs.google.com/forms/d/e/1FAIpQLSfRpAEoQBYr8AT-YWuHvGzYyovoDzk_KI2lu69FfP1Z28e4rA/viewform?usp=sharing)
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
