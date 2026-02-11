@@ -202,7 +202,7 @@ Total Hours: 1.8 (1.26 hrs reading, 0.54 hrs active learning)
 - Part 2 (Implementation Bridge)
 - Part 10 (Production HITL Systems)
 
-✅ [Take Chapter 1.1B quiz](https://docs.google.com/forms/d/e/1FAIpQLSd0-ms91kZKlPjrfIvjKYx6mKTiDSW96X5xUt_wlR4Nn9yXtQ/viewform?usp=sharing&ouid=116579026379007071084)
+**✅ [Take Chapter 1.1B quiz](https://docs.google.com/forms/d/e/1FAIpQLSd0-ms91kZKlPjrfIvjKYx6mKTiDSW96X5xUt_wlR4Nn9yXtQ/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
@@ -252,7 +252,7 @@ Total Hours: 3.6 (2.52 hrs reading, 1.08 hrs active learning)
 
 
 
-✅ [Take Chapter 1.2 quiz](https://docs.google.com/forms/d/1iDO8NO3rtYwJ8lCOQmDR397PPs4sXeS_q7eJaD9jaGM/viewform?usp=sharing)
+**✅ [Take Chapter 1.2 quiz](https://docs.google.com/forms/d/e/1FAIpQLScbDCuwEEAPMITGgDm5QRvx2UIKTAJZHFiNTInBd3Upn8kCNA/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
