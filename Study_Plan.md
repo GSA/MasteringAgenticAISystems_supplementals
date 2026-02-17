@@ -367,7 +367,7 @@ Total Hours: 1.0 (0.7 hrs reading, 0.3 hrs active learning)
 
 
 
-✅ [Take Chapter 1.4 quiz](https://docs.google.com/forms/d/1XTKmLXnShcaVTE6y_2274fxBLk8NDk_g_wu_QcI-o0c/viewform?usp=sharing)
+**✅ [Take Chapter 1.4 quiz](https://docs.google.com/forms/d/e/1FAIpQLSdaLksbxBQ7MrW0iROXe7gK3rPa-A1XTChHBzGGPldirFbp4Q/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
