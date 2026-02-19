@@ -415,10 +415,7 @@ Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 - Chapter 1.5B (Worked Examples - practical implementation)
 - Chapter 1.6 (Advanced Patterns - building on foundations)
 
-
-
-
-✅ [Take Chapter 1.5A quiz](https://docs.google.com/forms/d/1ak8LyuNWlA95p-c14lrvCL1A5ELpO8IiOO4B3QHWlTs/viewform?usp=sharing)
+✅** [Take Chapter 1.5A quiz](https://docs.google.com/forms/d/e/1FAIpQLSeolDH9wqfMzruX8okBPTB5E-jhtFdkdG5chPbZfDd39qI0sg/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
@@ -460,11 +457,7 @@ Total Hours: 1.4 (0.98 hrs reading, 0.42 hrs active learning)
 - Chapter 1.6 (Advanced Orchestration Patterns - complex scenarios)
 - Chapter 1.7 (Knowledge Graphs - semantic reasoning integration)
 
-
-
-
-✅ [Take Chapter 1.5B quiz](https://docs.google.com/forms/d/1sQgQhpex2NzhujEo689tI_ta_z0mXFNtikv6HVQZ_-I/viewform?usp=sharing)
-
+✅ No Quiz!
 ---
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -511,10 +504,7 @@ Total Hours: 1.8 (1.26 hrs reading, 0.54 hrs active learning)
 - Chapter 1.7A & 1.7B (Knowledge Graphs - relationship-based reasoning)
 - Chapter 1.8 (Deployment and Scaling - distributed state management)
 
-
-
-
-✅ [Take Chapter 1.6 quiz](https://docs.google.com/forms/d/1BkwG-9Cf6glajlkD9WIlt4HwrWLFGfZemilLgFd9BgQ/viewform?usp=sharing)
+**✅ [Take Chapter 1.6 quiz](https://docs.google.com/forms/d/e/1FAIpQLScGK3oH2vlJaJvt4DPkr0YKZAXaoRzCLZhBarVhIdyaR44nNQ/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
