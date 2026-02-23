@@ -415,7 +415,7 @@ Total Hours: 2.2 (1.54 hrs reading, 0.66 hrs active learning)
 - Chapter 1.5B (Worked Examples - practical implementation)
 - Chapter 1.6 (Advanced Patterns - building on foundations)
 
-✅** [Take Chapter 1.5A quiz](https://docs.google.com/forms/d/e/1FAIpQLSeolDH9wqfMzruX8okBPTB5E-jhtFdkdG5chPbZfDd39qI0sg/viewform?usp=sharing&ouid=116579026379007071084)**
+**✅ [Take Chapter 1.5A quiz](https://docs.google.com/forms/d/e/1FAIpQLSeolDH9wqfMzruX8okBPTB5E-jhtFdkdG5chPbZfDd39qI0sg/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
@@ -649,11 +649,7 @@ Total Hours: 2.7 (1.89 hrs reading, 0.81 hrs active learning)
 - Part 2 Chapter 2.3 (LangChain Implementation)
 - Part 2 Chapter 2.4 (MultiAgent framework patterns)
 
-
-
-
-
-✅ [Take Chapter 2.1 quiz](https://docs.google.com/forms/d/1J8oqng5jNp6SJUrke5Jg3udjTZ1AM37ldWli4vmeyZI/viewform?usp=sharing)
+**✅ [Take Chapter 2.1 quiz](https://docs.google.com/forms/d/e/1FAIpQLSeNbhCnlqM2jNNjOGS-Fed32VepTbG6c39tF_jNmGvmq7vBXw/viewform?usp=sharing&ouid=116579026379007071084)**
 
 ---
 
