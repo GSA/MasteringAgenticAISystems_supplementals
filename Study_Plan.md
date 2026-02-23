@@ -554,8 +554,7 @@ Total Hours: 2.7 (1.89 hrs reading, 0.81 hrs active learning)
 - Chapter 1.7B (Hybrid Retrieval Systems - integration patterns)
 - Chapter 1.8 (Scaling and Performance - graph optimization at scale)
 
-
-
+**✅ [Take Chapter 1.7A quiz](https://docs.google.com/forms/d/e/1FAIpQLSd8YokYuK9mCMUjZNdVPFV0XuXVuNqN3o2GA6bUgum261Fxqg/viewform?usp=dialog)**
 
 ---
 
@@ -597,7 +596,7 @@ Total Hours: 1.7 (1.19 hrs reading, 0.51 hrs active learning)
 - Chapter 1.6 (Stateful Orchestration - state machine extension to graph-based state)
 - Chapter 1.8 (Scalability and Production Deployment - scaling stateful systems)
 
-
+**✅ [Take Chapter 1.7B quiz](https://docs.google.com/forms/d/e/1FAIpQLSc9dfmZrsOYn-pFxnxE_1tkUpu2ENwxUxqa0B2-UlS2Pz_p1Q/viewform?usp=dialog)**
 
 
 ---
