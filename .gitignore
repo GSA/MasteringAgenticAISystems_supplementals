@@ -13,3 +13,5 @@ release/
 .DS_Store
 */.DS_Store
 /.vscode
+guides/guide_ArxivQueryOptimization.md
+guides/guide_ArxivResearch.md
