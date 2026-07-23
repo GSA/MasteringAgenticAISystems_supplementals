@@ -32,37 +32,8 @@ The tutor adapts to your level, tracks which topics you are getting right and wr
 
 ## What the tutor covers
 
-The tutor currently has access to **Parts 1 and 2** of the textbook:
-
-**Part 1 — Agent Architecture and Design Foundations**
-| Chapter | Topic |
-|---|---|
-| 1.1A | Designing User Interfaces for Intuitive Human-Agent Interaction |
-| 1.1B | Human-in-the-Loop Patterns and Accessible Design |
-| 1.2 | Core Agent Patterns |
-| 1.3 | Multi-Agent Systems |
-| 1.4 | Memory and Perception Systems |
-| 1.5A | Stateful Orchestration — Introduction and Core Concepts |
-| 1.5B | Stateful Orchestration — Worked Examples |
-| 1.6 | Stateful Orchestration — Pitfalls, Integration, and Synthesis |
-| 1.7A | Relational Reasoning with Knowledge Graphs — Fundamentals |
-| 1.7B | Relational Reasoning with Knowledge Graphs — Hybrid RAG+KG |
-| 1.8 | Scalability and Production Deployment |
-
-**Part 2 — Development Frameworks**
-| Chapter | Topic |
-|---|---|
-| 2.1 | Framework Landscape and Selection |
-| 2.2 | LangGraph |
-| 2.3 | LangChain Sequential Frameworks |
-| 2.4 | Multi-Agent Frameworks |
-| 2.5 | Semantic Kernel |
-| 2.6 | Tool Integration and Function Calling |
-| 2.7 | Multimodal RAG Approaches |
-| 2.8 | Error Handling and Resilience |
-| 2.9 | Streaming and Real-Time Responses |
-
-If you ask about content from Parts 3–10, the tutor will tell you that it is outside its current scope and redirect you to what it can help with.
+The tutor will have access to certain part chapters of the textbook (to be shared in the tutor email).
+If you ask about content from outside of the covered parts, the tutor will tell you that it is outside its current scope and redirect you to what it can help with.
 
 ---
 
@@ -72,7 +43,7 @@ If you ask about content from Parts 3–10, the tutor will tell you that it is o
 
 **During the session.** The tutor will:
 - Search the chapter files before answering — it will not fabricate references.
-- Cite chapters naturally: *"Chapter 1.3 explains that..."*
+- Cite chapters naturally: *"Chapter x.x explains that..."*
 - Ask you questions more often than it gives you answers.
 - Track which topics you are getting right and wrong and adjust difficulty accordingly.
 - Push back when your reasoning is flawed, rather than agreeing to be agreeable.
@@ -120,20 +91,6 @@ The tutor uses named protocols — reusable pedagogical patterns — to structur
 
 Protocols chain within a session. A typical path might be: N (attempt first) → A (explain canonical solution) → E (self-explain) → G (hints on follow-up problem) → I (quiz to confirm mastery) → J (reflection).
 
----
-
-## How to start a session
-
-1. Open a conversation with the AI tutor.
-2. Upload the resource files when prompted (or confirm they are already loaded):
-   - `section1_part1.txt` — Chapters 1.1A through 1.4
-   - `section1_part2.txt` — Chapters 1.5A through 1.8
-   - `section1_part3.txt` — Chapters 2.1 through 2.9
-   - `part1n2_misconceptions.txt` — Misconceptions catalog
-   - `protocols_n_policy.txt` — Tutoring protocols reference
-3. Tell the tutor your level and what you want to work on.
-
-For prompt patterns tailored to each scenario, see `example_prompts.md`.
 
 ---
 
@@ -141,7 +98,7 @@ For prompt patterns tailored to each scenario, see `example_prompts.md`.
 
 The following uses are appropriate and encouraged:
 
-- **Concept clarification.** Asking the tutor to explain any topic from Parts 1–2 in plain language, with examples, at your level.
+- **Concept clarification.** Asking the tutor to explain any topic from Parts X in plain language, with examples, at your level.
 - **Reasoning check.** Describing your understanding or design plan and asking the tutor to question it for correctness and consistency.
 - **Debugging understanding.** Sharing code or an architecture sketch and asking why it behaves unexpectedly — without asking for a full rewrite.
 - **Practice and fluency.** Requesting drills, flashcard-style questions, or scenario-based challenges on any covered topic.
