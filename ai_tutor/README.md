@@ -1,6 +1,6 @@
 # AI Tutor for *Mastering Agentic AI Systems*
 
-This directory contains resources for the AI tutor companion to *Mastering Agentic AI Systems*. The tutor is a pedagogically-grounded AI assistant that helps learners understand the textbook content through active dialogue — not passive answer delivery.
+This directory contains design guidance and example prompts for building an AI tutor companion to *Mastering Agentic AI Systems*. It does not contain a deployed tutor service, retrieval index, learner database, or runnable application.
 
 ---
 
@@ -10,30 +10,28 @@ This directory contains resources for the AI tutor companion to *Mastering Agent
 2. [What the tutor covers](#what-the-tutor-covers)
 3. [What to expect from a session](#what-to-expect-from-a-session)
 4. [Tutoring protocols](#tutoring-protocols)
-5. [How to start a session](#how-to-start-a-session)
-6. [Proper use](#proper-use)
-7. [Prohibited use](#prohibited-use)
-8. [Answer-revealing rules](#answer-revealing-rules)
-9. [Learner levels](#learner-levels)
-10. [Privacy and data](#privacy-and-data)
-11. [Academic references](#academic-references)
+5. [Proper use](#proper-use)
+6. [Prohibited use](#prohibited-use)
+7. [Answer-revealing rules](#answer-revealing-rules)
+8. [Learner levels](#learner-levels)
+9. [Privacy and data](#privacy-and-data)
+10. [Academic references](#academic-references)
 
 ---
 
 ## What the tutor is
 
-The AI tutor is a conversational assistant built on top of the textbook's chapter files. It is grounded in the actual text — before answering any content question it searches the uploaded chapter material and cites the specific chapter and section. It does not answer from general training data alone.
+A deployed tutor can be configured as a conversational assistant grounded in selected chapter files. Retrieval, citation, source coverage, and fallback behavior depend on the implementation and must be tested; the files in this directory do not themselves provide those capabilities.
 
-The tutor's pedagogy draws on decades of learning science research: Socratic questioning, worked examples, productive failure, self-explanation prompting, retrieval practice with spacing, and metacognitive reflection. These are not stylistic choices — they are research-validated techniques that produce measurably better learning outcomes than direct answer-giving.
+The proposed pedagogy is informed by research on Socratic questioning, worked examples, productive failure, self-explanation, retrieval practice, spacing, and metacognitive reflection. Outcomes depend on implementation, learner context, and evaluation design, so these resources should not be read as a guarantee of improved learning.
 
-The tutor adapts to your level, tracks which topics you are getting right and wrong within a session, and selects the teaching approach that best matches your current situation. It prefers asking questions over giving answers, and it will challenge your reasoning rather than validate it uncritically.
+A deployment may adapt prompts to a learner-selected level and maintain session-level notes about demonstrated strengths and errors. Any persistent learner modeling requires explicit implementation, privacy review, retention rules, and evaluation.
 
 ---
 
 ## What the tutor covers
 
-The tutor will have access to certain part chapters of the textbook (to be shared in the tutor email).
-If you ask about content from outside of the covered parts, the tutor will tell you that it is outside its current scope and redirect you to what it can help with.
+Coverage is deployment-specific. Document exactly which chapter files are indexed and have the tutor disclose when a question falls outside that configured source collection.
 
 ---
 
@@ -41,7 +39,7 @@ If you ask about content from outside of the covered parts, the tutor will tell 
 
 **Session opening.** The tutor will greet you briefly and ask three things: what chapter or topic you want to work on, your comfort level (beginner / intermediate / advanced), and what kind of help you need (explanation, practice, quiz prep, debugging, etc.). If you jump straight into a question, it will infer your level from the sophistication of the question.
 
-**During the session.** The tutor will:
+**During the session.** When implemented as described, the tutor should:
 - Search the chapter files before answering — it will not fabricate references.
 - Cite chapters naturally: *"Chapter x.x explains that..."*
 - Ask you questions more often than it gives you answers.
@@ -98,7 +96,7 @@ Protocols chain within a session. A typical path might be: N (attempt first) →
 
 The following uses are appropriate and encouraged:
 
-- **Concept clarification.** Asking the tutor to explain any topic from Parts X in plain language, with examples, at your level.
+- **Concept clarification.** Asking the tutor to explain a topic from the configured source chapters in plain language, with examples appropriate to your level.
 - **Reasoning check.** Describing your understanding or design plan and asking the tutor to question it for correctness and consistency.
 - **Debugging understanding.** Sharing code or an architecture sketch and asking why it behaves unexpectedly — without asking for a full rewrite.
 - **Practice and fluency.** Requesting drills, flashcard-style questions, or scenario-based challenges on any covered topic.

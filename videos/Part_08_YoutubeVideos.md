@@ -1,4 +1,6 @@
-# Part 08: Production Reliability and Success Metrics - YouTube Video Resources
+# Part 08: Production Reliability and Success Metrics - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 

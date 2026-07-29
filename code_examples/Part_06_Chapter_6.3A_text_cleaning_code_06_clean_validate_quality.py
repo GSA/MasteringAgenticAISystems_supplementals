@@ -1,3 +1,9 @@
+"""Contextual cleaning methods for ``DataTransformer`` from code example 05."""
+
+from __future__ import annotations
+
+
+class DataTransformer:
     def clean_text(self, text: str) -> str:
         """
         Clean and normalize text for embedding.

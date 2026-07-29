@@ -1,3 +1,14 @@
+"""Contextual indexing method for ``VectorDatabaseLoader`` from code example 01."""
+
+from __future__ import annotations
+
+import logging
+from pymilvus import Collection
+
+logger = logging.getLogger(__name__)
+
+
+class VectorDatabaseLoader:
     def _create_index(self, collection: Collection):
         """
         Create vector index for fast similarity search.

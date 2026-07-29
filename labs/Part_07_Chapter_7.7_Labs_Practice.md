@@ -13,38 +13,38 @@ This lab challenges you to deploy a production-ready multi-model NIM stack that 
 
 The multi-replica strategy for Llama 2 7B addresses both availability and throughput requirements. With three replicas, your deployment can handle replica failures without service interruption while distributing load across multiple GPU instances. This pattern applies the container orchestration principles from Part 4 (Skill 4.1), where you learned to design resilient microservices architectures. Each replica operates as an independent service behind a Kubernetes Service load balancer, ensuring requests distribute evenly and failed replicas automatically stop receiving traffic.
 
-Auto-scaling forms the second critical component of this lab. You'll implement Horizontal Pod Autoscaler (HPA) configurations that monitor GPU utilization across your NIM pods, scaling replica counts based on a 75% threshold. When GPU utilization across existing replicas exceeds 75% for a sustained period (typically 30 seconds), HPA adds new replicas to handle the increased load. When utilization drops below this threshold for several minutes, HPA removes replicas to reduce costs. This auto-scaling mechanism integrates Skill 4.4 (monitoring and scaling) with NIM deployment patterns, demonstrating how Kubernetes abstractions enable responsive infrastructure that adapts to demand patterns without manual intervention.
+Auto-scaling forms the second critical component of this lab. You will configure a Horizontal Pod Autoscaler (HPA) using GPU or queue metrics exposed through the metrics pipeline. A 75% target can be used as an initial experiment, but HPA reaction time is governed by its sync period, metric availability, tolerance, and configured behavior policies rather than by a universal 30-second rule. Record the actual scale-up and scale-down timing in your cluster and tune the stabilization windows for the workload.
 
 The monitoring setup combines Prometheus for metrics collection with Grafana for visualization, creating the observability foundation necessary for production operations. You'll configure Prometheus to scrape metrics from NIM endpoints, capturing inference latency, throughput, GPU memory utilization, and queue depths. Grafana dashboards then visualize these metrics across time, enabling you to identify performance degradation, capacity constraints, and cost optimization opportunities. This monitoring layer proves essential when debugging performance issues—for example, when p95 latency begins creeping upward, your metrics reveal whether the cause is GPU exhaustion, network bottlenecks, or model configuration issues.
 
-Cost tracking and optimization complete the lab by forcing you to consider the economic implications of your deployment choices. You'll implement cost attribution tagging that tracks GPU hours consumed by each model and replica, enabling finance teams to allocate cloud spending accurately. More importantly, you'll analyze the cost-performance tradeoffs inherent in replica counts, model sizes, and quantization strategies. A three-replica Llama 2 7B deployment might consume $500/day in GPU costs, but if it prevents cascading failures and maintains SLA commitments, the cost justifies itself. Conversely, running three replicas during low-traffic hours wastes resources—this is where auto-scaling's cost optimization value becomes apparent.
+Cost tracking and optimization complete the lab by requiring you to measure the economic implications of deployment choices. Apply cost-allocation labels or tags, record GPU-hours by model and replica, and calculate cost from the current price for the selected cloud, region, accelerator, commitment model, and operating schedule. Compare fixed minimum replicas with an autoscaled configuration; do not assume a fixed daily amount because provider prices and workload utilization vary.
 
 This lab integrates seven skills across three chapters: NIM deployment patterns (7.2) form the foundation, container orchestration (4.1) provides the infrastructure layer, and monitoring and scaling (4.4) ensures operational excellence. Additionally, you'll apply concepts from earlier sections including model selection tradeoffs (choosing Llama vs Mistral for different tasks), quantization strategies (balancing memory vs accuracy), and API design patterns (ensuring your multi-model stack presents a consistent inference interface). By completing this lab, you'll have demonstrated the ability to architect, deploy, and operate production inference systems that meet real-world reliability and cost requirements.
 
-> **Full Lab Instructions:** See `/Users/tamnguyen/Documents/GitHub/book1/labs/chapter_07_lab_01_nim_production.md`
+> **Lab scope note:** The standalone source file referenced by the original draft is not included in this repository. Treat the material above as a lab brief and add a complete, repository-relative lab before assigning it.
 
 ### Lab 2: TensorRT-LLM Optimization Pipeline
 
 **Duration:** 3 hours
 **Skills Integrated:** 7.4 (TensorRT-LLM optimization), 7.4 (profiling and benchmarking)
 
-This lab focuses on the optimization pipeline necessary to achieve production-level performance targets. You'll transform a standard Llama 2 7B model into a highly optimized inference engine capable of exceeding 250 tokens per second on an A100 40GB GPU—a throughput level that makes real-time applications viable and batch processing economically feasible.
+This lab focuses on the optimization pipeline necessary to establish and improve a production inference baseline. You will optimize a supported model, measure tokens per second and time to first token on the available hardware, and document the exact model, precision, sequence lengths, batch settings, software versions, and power mode. Treat any numerical target as a hypothesis to benchmark rather than a guaranteed property of an A100 or any other accelerator.
 
-The optimization journey begins with INT8 quantization, which reduces model weights from 16-bit floating point to 8-bit integers. This 50% memory reduction enables larger batch sizes and faster memory transfers while introducing minimal accuracy degradation (typically <1% on standard benchmarks). The quantization workflow requires calibration data that represents your production distribution—you'll use a representative sample of 1,000 prompts to profile activation ranges, then apply symmetric quantization that maintains the model's output distribution. This process exemplifies the tradeoff analysis central to production deployments: you sacrifice negligible accuracy to gain substantial throughput improvements that directly impact user experience and operational costs.
+The optimization journey begins with quantization. Lower precision can reduce model-memory use and may improve throughput, but quality impact is model-, dataset-, calibration-, and task-dependent. Build a representative evaluation set, compare the quantized engine with the chosen baseline, and report task metrics and error cases instead of assuming a universal accuracy loss.
 
-PagedAttention KV cache configuration represents the second optimization layer, addressing the memory bottleneck that constrains long-context inference. Standard attention mechanisms cache key-value pairs for all previous tokens, consuming memory linearly with sequence length. PagedAttention breaks this cache into fixed-size blocks (typically 64 tokens), storing them in non-contiguous memory pages similar to virtual memory systems. You'll configure page sizes and memory budgets, calculating that a 40GB A100 can support approximately 100 concurrent sequences of 2,048 tokens each when using INT8 quantization and 256-token pages. This calculation demonstrates how memory architecture decisions directly constrain system capacity—larger page sizes reduce overhead but waste memory on short sequences, while smaller pages increase metadata overhead but improve memory utilization.
+KV-cache configuration represents the second optimization layer. Cache capacity depends on the model architecture, precision, tensor parallelism, maximum sequence length, batching policy, runtime implementation, and memory reserved for weights and workspaces. Estimate capacity from the deployed engine, then verify it with concurrency and out-of-memory tests rather than relying on a fixed number of sequences.
 
-The Triton Inference Server deployment integrates your optimized model into a production-ready serving stack. Triton's dynamic batching capabilities aggregate multiple inference requests into single GPU operations, dramatically improving throughput. You'll configure batch size limits (typically 8-32 for real-time applications, up to 128 for batch processing), queue delay tolerances (the maximum time Triton waits to accumulate a full batch), and preferred batch sizes that guide the scheduler toward efficient GPU utilization. This configuration process requires understanding the latency-throughput tradeoff: larger batches and longer queue delays maximize throughput at the cost of increased per-request latency, while smaller batches prioritize responsiveness.
+The Triton Inference Server deployment integrates the optimized model into a serving stack. Configure `max_batch_size` at the model level and use `dynamic_batching` for queue-delay policy. Start without preferred batch sizes unless profiling demonstrates that particular sizes improve the selected backend; NVIDIA recommends using preferred sizes only when they provide a measured performance benefit. Benchmark latency and throughput across representative arrival rates before choosing production values.
 
-Performance profiling with Nsight Systems closes the optimization loop by revealing where your pipeline spends time. You'll capture execution traces showing GPU kernel launches, memory transfers, and CPU overhead, identifying bottlenecks that prevent you from reaching the 250 tokens/second target. Common issues include CPU-bound preprocessing (solved by moving tokenization to GPU), memory transfer bottlenecks (solved by pinned memory and CUDA streams), and suboptimal batch sizes (solved by adjusting Triton configuration). The profiling workflow teaches you to translate abstract performance metrics into concrete optimization actions—when Nsight reveals that 40% of time is spent in memory copies, you know to focus on memory management rather than kernel optimization.
+Performance profiling with Nsight Systems closes the optimization loop by showing GPU kernel activity, memory transfers, synchronization, and CPU overhead. Use the trace to form and test bottleneck hypotheses. Do not infer a specific remedy from a percentage alone; validate each change with the same workload and report both throughput and latency effects.
 
-The benchmark target of exceeding 250 tokens per second on an A100 40GB represents a meaningful production threshold. At this throughput level, a single GPU can serve approximately 15,000 requests per minute (assuming 250-token average responses), making the deployment economically viable for moderate-scale applications. Below this threshold, you'll need multiple GPUs to handle typical production loads, dramatically increasing infrastructure costs. Above this threshold, you gain cost efficiency headroom that allows for traffic spikes without immediate scaling.
+Report throughput separately as input tokens per second, output tokens per second, and completed requests per second. For example, 250 output tokens per second with 250 output tokens per response is approximately one completed response per second, or 60 responses per minute, before accounting for prompt processing and scheduling overhead. It is not 15,000 responses per minute. Capacity planning must use measured request distributions and service-level objectives.
 
-Skills validation throughout this lab ensures you've mastered the TensorRT-LLM optimization workflow. You'll verify that your quantized model maintains accuracy within 1% of the FP16 baseline, that PagedAttention successfully handles the target concurrent sequence count, that Triton batching achieves the expected throughput multiplier, and that profiling results explain your performance characteristics. These validation steps mirror production deployment practices where every optimization must be validated against accuracy, performance, and reliability requirements before production rollout.
+Skills validation throughout this lab should compare the optimized engine with a documented baseline. Verify task quality on a representative evaluation set, concurrency at the selected context lengths, batching behavior, and reproducibility of the benchmark. Record confidence intervals or repeated-run variation where practical; avoid universal accuracy, throughput, or concurrency thresholds.
 
 The skills integrated here—TensorRT-LLM optimization and profiling/benchmarking (both from Skill 7.4)—represent the technical depth necessary for production LLM inference. While the previous lab focused on deployment architecture and operational concerns, this lab emphasizes low-level optimization techniques that extract maximum performance from available hardware. Together, these labs prepare you to both architect scalable systems and optimize individual components for cost-effective performance.
 
-> **Full Lab Instructions:** See `/Users/tamnguyen/Documents/GitHub/book1/drafts/iter2_content/labs/chapter_07_lab_02_tensorrt_optimization.md`
+> **Lab scope note:** The standalone source file referenced by the original draft is not included in this repository. Treat the material above as a lab brief and add a complete, repository-relative lab before assigning it.
 
 ---
 
@@ -144,48 +144,38 @@ This scenario requires defense-in-depth security architecture where multiple gua
 
 ---
 
-**Question 5:** You're optimizing LLM inference for batch processing workloads (10,000 daily summaries). Which Triton configuration maximizes throughput?
+**Question 5:** You are tuning Triton for a throughput-oriented batch summarization workload. Which option is the best starting point to benchmark?
 
 ```protobuf
-# Option A
+# Option A: latency-oriented starting point
+max_batch_size: 8
 dynamic_batching {
-  max_batch_size: 8
   max_queue_delay_microseconds: 1000
 }
 
-# Option B
+# Option B: throughput-oriented starting point
+max_batch_size: 128
 dynamic_batching {
-  max_batch_size: 128
   max_queue_delay_microseconds: 100000
-  preferred_batch_sizes: [32, 64, 128]
 }
 
 # Option C
+max_batch_size: 0
 # No dynamic batching
 ```
 
-**Answer:** B
+**Answer:** B, as a starting point for measurement rather than a guaranteed optimum.
 
 **Explanation with Worked Reasoning:**
 
-Batch processing workloads have fundamentally different optimization priorities than interactive applications. Let's analyze why Option B maximizes throughput for this scenario:
+A batch workload can usually tolerate more queueing than an interactive workload, so a larger maximum batch size and a longer queue-delay budget are reasonable values to test. The actual optimum depends on the backend, model, sequence-length distribution, GPU memory, request arrival pattern, and latency objective. `max_batch_size` is a top-level model setting; the queue delay belongs inside `dynamic_batching`.
 
-**Understanding the Workload:** Processing 10,000 daily summaries is a throughput-focused task with relaxed latency requirements. Unlike a chatbot where each user expects sub-second responses, batch summarization can tolerate higher per-request latency (seconds or even minutes) if it means processing the entire workload faster and more cost-effectively. This latency tolerance allows aggressive batching strategies that would be unacceptable for interactive use cases.
+Do not add `preferred_batch_size` merely because powers of two appear efficient. Triton documentation recommends preferred batch sizes only when a backend or model has measured performance advantages at particular sizes. Use Performance Analyzer or an equivalent repeatable load test to sweep batch and delay values, then choose a configuration from the measured latency-throughput frontier.
 
-**Option B's Configuration Explained:**
+- **Option A** is a more latency-oriented starting point because it limits batch size and queue delay.
+- **Option B** allows more aggregation and is therefore the strongest throughput-oriented candidate to benchmark.
+- **Option C** disables batching and is useful as a baseline, but it is not normally the best throughput configuration for a batchable model.
 
-**max_batch_size: 128:** This large batch size enables the GPU to process many requests simultaneously. GPUs excel at parallel computation—processing 128 requests together uses memory bandwidth more efficiently than processing 16 batches of 8 requests sequentially. Modern A100 GPUs can handle batches of 128-256 for 7B-parameter models without memory constraints, achieving near-linear throughput scaling (doubling batch size approximately doubles throughput until memory limits are reached).
-
-**max_queue_delay_microseconds: 100000 (100ms):** This generous delay allows Triton to wait up to 100ms to accumulate a full batch before executing. For batch processing where requests arrive in bursts, this wait time ensures batches fill completely rather than executing partially-filled batches that waste GPU capacity. The 100ms delay is imperceptible in the context of a multi-hour batch processing job but critical for maximizing batch efficiency.
-
-**preferred_batch_sizes: [32, 64, 128]:** This hint guides Triton's scheduler to prefer these power-of-two batch sizes, which align with GPU memory access patterns and kernel optimizations. If Triton has 70 queued requests, it will execute a batch of 64 rather than 70, leaving 6 in the queue for the next batch. This preference improves GPU utilization because GPUs optimize memory access and computation for aligned batch sizes.
-
-**Throughput Calculation:** Option B could process the 10,000 summaries in approximately 1.5-2 hours on a single A100 (assuming 2-second average latency per request at batch size 128, yielding ~64 requests per second, or 3,840 requests per minute). Option A's small batches would require 6-8 hours for the same workload, while Option C (no batching) would take 15+ hours.
-
-**Why Other Answers Are Wrong:**
-- **A) Small batches with short delay:** This configuration optimizes for latency, not throughput. Processing 8 requests at a time dramatically underutilizes GPU capacity—an A100 could easily handle 16x larger batches for a 7B model. The 1ms queue delay prevents batches from filling even to the small max_batch_size of 8, since requests would need to arrive within microseconds of each other. This configuration makes sense for real-time chat applications but wastes capacity for batch workloads.
-- **C) No dynamic batching:** Without batching, the GPU processes one request at a time, wasting the parallel computation capabilities that make GPUs efficient. This is the worst possible configuration for throughput, potentially taking 10-20x longer than Option B to complete the workload. The only scenario where this makes sense is extremely high-priority, ultra-low-latency requirements where even microsecond delays matter—not applicable to batch processing.
-
-**Key Insight:** Optimization strategies must align with workload characteristics. Interactive applications prioritize latency and require small batches with minimal delays. Batch processing workloads prioritize throughput and benefit from large batches with generous delays. Understanding this tradeoff and configuring infrastructure accordingly represents the difference between cost-effective deployments and those that waste resources.
+No elapsed-time estimate follows from this configuration alone. Report the measured request distribution, hardware, model, software versions, concurrency, latency percentiles, and completed requests per second.
 
 ---

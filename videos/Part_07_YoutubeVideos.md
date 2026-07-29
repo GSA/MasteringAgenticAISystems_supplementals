@@ -1,4 +1,6 @@
-# Part 07: NVIDIA Ecosystem and Production Systems - YouTube Video Resources
+# Part 07: NVIDIA Ecosystem and Production Systems - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -184,7 +186,7 @@ Note: Core topics well covered by monitoring and DevOps tutorial channels. See r
 - Covers: Transformer architecture and attention mechanisms
 
 ### Attention in transformers, step-by-step
-- [https://youtu.be/eMlx5fFNoYc](https://youtu.be/eMlx5fFNoYc) ~27 minutes
+- [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc) ~27 minutes
 - 3Blue1Brown
 - Covers: Visual explanation of attention and embeddings
 

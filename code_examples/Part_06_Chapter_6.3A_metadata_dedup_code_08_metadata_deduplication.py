@@ -1,3 +1,13 @@
+"""Contextual metadata methods for ``DataTransformer`` from code example 05."""
+
+from __future__ import annotations
+
+from datetime import datetime
+from typing import Any, Dict
+import hashlib
+
+
+class DataTransformer:
     def compute_hash(self, text: str) -> str:
         """
         Compute SHA-256 content hash for deduplication.

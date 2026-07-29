@@ -1,3 +1,15 @@
+"""Contextual loading method for ``VectorDatabaseLoader`` from code example 01."""
+
+from __future__ import annotations
+
+from typing import Any, Dict, List
+import json
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+class VectorDatabaseLoader:
     def load_documents(
         self,
         chunks: List[Dict[str, Any]],

@@ -123,24 +123,24 @@ This exercise challenges you to implement a domain-specific chunking strategy ta
 
 Imagine you're processing a Python tutorial with interspersed code examples. A naive chunker might split like this:
 
-```
+````text
 Chunk 1: "...To implement error handling, use try-except blocks:
-```python
+```text
 def process_data(input):"
 
 Chunk 2: "    try:
         result = transform(input)
         return result..."
-```
+````
 
 Notice how the code block is destroyed across chunks. An agent retrieving Chunk 1 sees an incomplete function definition. Chunk 2 contains orphaned code without context about what function this belongs to. Neither chunk enables accurate code comprehension.
 
 A smart chunker recognizes code block boundaries and preserves them:
 
-```
+````text
 Chunk 1: "...To implement error handling, use try-except blocks:"
 
-Chunk 2: "```python
+Chunk 2: "```text
 def process_data(input):
     try:
         result = transform(input)
@@ -151,7 +151,7 @@ def process_data(input):
 ```
 
 This approach maintains the complete function..."
-```
+````
 
 Now each chunk stands alone as a coherent semantic unit. Chunk 1 provides the explanatory context. Chunk 2 contains the complete, executable code example with its explanation. Retrieval quality improves dramatically.
 

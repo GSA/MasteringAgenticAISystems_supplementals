@@ -1,17 +1,36 @@
-## Terraform ##
-*.tfvars
-# Compiled files
-*.tfstate*
-# Module directory
-.terraform/
-
-## Go ##
-vendor/
-*.zip
-dist/
-release/
+# Operating-system and editor files
 .DS_Store
-*/.DS_Store
-/.vscode
-guides/guide_ArxivQueryOptimization.md
-guides/guide_ArxivResearch.md
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Build, coverage, and local output
+build/
+dist/
+htmlcov/
+.coverage
+coverage.xml
+*.log
+*.tmp
+
+# Generated inventories and audit output
+References/reference_inventory.csv
+audit_output/
+
+# Terraform state, if local experiments use Terraform
+*.tfvars
+*.tfstate*
+.terraform/

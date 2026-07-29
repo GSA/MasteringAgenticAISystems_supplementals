@@ -1,4 +1,6 @@
-# Part 06: RAG and Data Pipeline Implementation - YouTube Video Resources
+# Part 06: RAG and Data Pipeline Implementation - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -23,11 +25,11 @@
 **Topics:** Embeddings, Vector Search, Hybrid Retrieval, GPU Acceleration, Matryoshka Representation Learning
 
 ### Learn RAG from Scratch
-- [https://youtube.com/watch?v=sVcwVQRHIc8](https://youtube.com/watch?v=sVcwVQRHIc8) ~3 hours
+- [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~3 hours
 - Covers: Comprehensive RAG with embeddings, chunking, query translation
 
 ### 5 Levels of Text Splitting for RAG
-- [https://youtu.be/8OJC21T2SL4](https://youtu.be/8OJC21T2SL4) ~45 minutes
+- [https://www.youtube.com/watch?v=8OJC21T2SL4](https://www.youtube.com/watch?v=8OJC21T2SL4) ~45 minutes
 - Covers: Essential chunking strategies
 
 ### RAG+Langchain Python Project
@@ -38,9 +40,9 @@
 - [https://www.youtube.com/watch?v=2TJxpyO3ei4](https://www.youtube.com/watch?v=2TJxpyO3ei4) Variable
 - Covers: Local RAG deployment
 
-### Agentic AI and RAG
-- [https://www.youtube.com/watch?v=fB2JQXEH_94](https://www.youtube.com/watch?v=fB2JQXEH_94) Variable
-- Covers: Integration with agentic systems
+### RAG vs. Agentic AI - IBM Technology
+- [https://www.youtube.com/watch?v=fB2JQXEH_94](https://www.youtube.com/watch?v=fB2JQXEH_94)
+- Covers: How retrieval-augmented generation differs from agentic systems and how agentic behavior can extend retrieval workflows
 
 ---
 
@@ -92,7 +94,7 @@ Note: Basic ETL concepts are well covered across multiple tutorial channels. See
 ### Data Engineering Pipeline Fundamentals
 - [https://www.youtube.com/watch?v=uqRRjcsUGgk](https://www.youtube.com/watch?v=uqRRjcsUGgk) Variable
 - Covers: Pipeline fundamentals
-  
+
 ---
 
 <a name="chapter-63b---etl-load-and-integration"></a>
@@ -110,7 +112,7 @@ Note: Comprehensive tutorials available from James Briggs, freeCodeCamp, and NVI
 **Topics:** Incremental Updates, Streaming ETL, Custom Chunking
 
 ### LangChain RAG Build and Deploy
-- [https://youtu.be/EhlPDL4QrWY](https://youtu.be/EhlPDL4QrWY) Variable
+- [https://www.youtube.com/watch?v=EhlPDL4QrWY](https://www.youtube.com/watch?v=EhlPDL4QrWY) Variable
 - Covers: RAG deployment patterns
 
 ### Azure Databricks ETL
@@ -137,9 +139,9 @@ Note: Quality assessment frameworks well covered. See tutorials on schema valida
 
 **Topics:** Pydantic Validation, Data Testing, Monitoring
 
-### Python Pydantic Tutorial
-- [https://www.youtube.com/watch?v=502XOB0u8OY](https://www.youtube.com/watch?v=502XOB0u8OY) Variable
-- Covers: Pydantic data validation
+### Why You Should Use Pydantic in 2024 - Tutorial - ArjanCodes
+- [https://www.youtube.com/watch?v=502XOB0u8OY](https://www.youtube.com/watch?v=502XOB0u8OY)
+- Covers: Pydantic models, Python type hints, parsing and validation, constraints, and structured application data
 
 ### Data Engineering for Beginners
 - [https://www.youtube.com/watch?v=PHsC_t0j1dU](https://www.youtube.com/watch?v=PHsC_t0j1dU) Variable
@@ -153,7 +155,7 @@ Note: Quality assessment frameworks well covered. See tutorials on schema valida
 **Topics:** System Design, Scalability, Observability, Performance
 
 ### Learn RAG from Scratch
-- [https://youtube.com/watch?v=sVcwVQRHIc8](https://youtube.com/watch?v=sVcwVQRHIc8) ~2.5 hours
+- [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~2.5 hours
 - Covers: RAG architecture and design patterns
 
 ---
@@ -173,7 +175,7 @@ Note: Practical RAG implementation patterns available from Pinecone Learning Hub
 **Topics:** Cross-encoder, Two-stage Retrieval, Transformer Attention
 
 ### Attention in Transformers
-- [https://youtu.be/eMlx5fFNoYc](https://youtu.be/eMlx5fFNoYc) Variable
+- [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc) Variable
 - Covers: Transformer attention for reranking
 
 ---
@@ -183,15 +185,10 @@ Note: Practical RAG implementation patterns available from Pinecone Learning Hub
 
 **Topics:** Query Decomposition, Adaptive Retrieval, Query Routing
 
-### Query Expansion, Decomposition & HyDE Explained
-- [https://www.youtube.com/watch?v=avn3KsiPK8Y](https://www.youtube.com/watch?v=avn3KsiPK8Y)
-- Covers: Query Expansion, Query Decomposition, HyDE (Hypothetical Document Embeddings) <-- use carefully
-
 ### Break Down Complex Questions with Query Decomposition
 - [https://www.youtube.com/watch?v=kR4pVvBnOII](https://www.youtube.com/watch?v=kR4pVvBnOII)
 - Covers: query decomposition.
 
-### Logical vs. Semantic Routing:- A Deep Dive into RAG Query Routing
-- [https://www.youtube.com/watch?v=h856O8ly7mE](https://www.youtube.com/watch?v=h856O8ly7mE)
-- Covers: how to direct user queries to the most appropriate data sources or processing chains
-
+### RAG from Scratch: Part 10 (Routing)
+- [https://www.youtube.com/watch?v=pfpIndq7Fi8](https://www.youtube.com/watch?v=pfpIndq7Fi8)
+- Covers: Logical and semantic routing for directing a query to the appropriate data source or processing chain

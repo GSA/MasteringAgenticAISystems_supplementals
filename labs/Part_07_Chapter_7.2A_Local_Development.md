@@ -1,4 +1,4 @@
-# Part 7 - Chapter 7.2: Local Development Setup and API Integration
+# Part 7 - Chapter 7.2A: Local Development Setup and API Integration
 
 **Skill Coverage:** 7.2 - NVIDIA NIM Deployment (Chapter 3-4 of 8)
 **Learning Objectives:**

@@ -9,9 +9,11 @@ We're so glad you're thinking about contributing to a GSA open source project! I
 
 ## Submit an issue
 
-Use the issue tracker to suggest feature requests, report bugs, and ask questions. This is also a great way to connect with the developers of the project as well as others who are interested in this solution.  
+Use the issue tracker to suggest feature requests, report bugs, and ask questions. This is also a great way to connect with the developers of the project as well as others who are interested in this solution.
 
 ## Requesting a change
+
+Before submitting a change, run `make validate`. Context-dependent code examples must be listed in `code_examples/fragments.txt`, and intentionally incomplete exercises must be listed in `code_examples/scaffolds.txt`; every Python file, including contextual excerpts, must parse successfully. Do not add credentials, private local paths, or third-party material without recording its source and reuse terms.
 
 Generally speaking, you should fork this repository, make changes in your
 own fork, and then submit a pull-request.  All new code should have associated unit tests that validate implemented features and the presence or lack of defects.  Additionally, the code should follow any stylistic and architectural guidelines prescribed by the project. In the absence of such guidelines, mimic the styles and patterns in the existing code-base.

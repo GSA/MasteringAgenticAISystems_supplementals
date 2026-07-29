@@ -1,5 +1,8 @@
 # Reference File Index: Chapters 4-7
 
+> **Historical index notice:** This file is a research-stage snapshot. Its counts, paths, exam weights, and processing labels may not match the current repository or current certification blueprint. Use `make inventory` for the current file inventory.
+
+
 **NVIDIA Agentic AI Certification Exam Preparation**
 **Generated:** 2025-11-08
 
@@ -788,7 +791,7 @@ Focus: NeMo Guardrails, NIM microservices, NeMo Agent Toolkit, TensorRT-LLM, Tri
 
 ### File Tracking
 All reference files are tracked in git repository:
-- **Repository:** `/Users/tamnguyen/Documents/GitHub/book1/`
+- **Repository:** `./`
 - **References Path:** `/references/Chapter [4-7] - [Title]/`
 - **Commit:** caffa6b (Initial commit)
 
@@ -832,7 +835,7 @@ All reference files are tracked in git repository:
 ### Finding Files by Topic
 Use this command to locate all files on a specific topic:
 ```bash
-find /Users/tamnguyen/Documents/GitHub/book1/references -type f \( -name "*.pdf" -o -name "*.md" \) | grep -i "TOPIC"
+find References -type f \( -name "*.pdf" -o -name "*.md" \) | grep -i "TOPIC"
 ```
 
 Replace "TOPIC" with:
@@ -841,16 +844,16 @@ Replace "TOPIC" with:
 ### Opening All Files for a Chapter
 ```bash
 # Chapter 4
-cd "/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 4 - Deployment and Scaling"
+cd "References/Chapter 4 - Deployment and Scaling"
 
 # Chapter 5
-cd "/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 5 - Cognition, Planning, and Memory"
+cd "References/Chapter 5 - Cognition, Planning, and Memory"
 
 # Chapter 6
-cd "/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 6 - Knowledge Integration and Data Handling"
+cd "References/Chapter 6 - Knowledge Integration and Data Handling"
 
 # Chapter 7
-cd "/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 7 - NVIDIA Platform Implementation"
+cd "References/Chapter 7 - NVIDIA Platform Implementation"
 ```
 
 ---

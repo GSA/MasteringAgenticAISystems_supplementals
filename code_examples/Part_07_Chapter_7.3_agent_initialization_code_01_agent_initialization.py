@@ -1,3 +1,5 @@
+import os
+
 from nemo.agent_toolkit import AgentProfiler
 from langchain.agents import AgentExecutor, create_react_agent
 from langchain.llms import NIM
@@ -5,8 +7,8 @@ from langchain.tools import Tool
 
 # Initialize NIM-backed LLM (from Section 7.2)
 llm = NIM(
-    base_url="http://nim.example.com/v1",
-    api_key="your-key",
+    base_url=os.environ.get("NIM_BASE_URL", "http://localhost:8000/v1"),
+    api_key=os.environ["NIM_API_KEY"],
     model="meta/llama-3.1-70b-instruct"
 )
 

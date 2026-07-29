@@ -1,10 +1,12 @@
+import os
+
 from nemoguardrails import RailsConfig, LLMRails
 from openai import OpenAI
 
 # Initialize NIM client
 nim_client = OpenAI(
-    api_key="your-nim-api-key",
-    base_url="http://nim.example.com/v1"
+    api_key=os.environ["NIM_API_KEY"],
+    base_url=os.environ.get("NIM_BASE_URL", "http://localhost:8000/v1"),
 )
 
 # Load guardrails configuration

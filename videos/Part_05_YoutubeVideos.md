@@ -1,4 +1,6 @@
-# Part 05: Agent Reasoning & Decision-Making - YouTube Video Resources
+# Part 05: Agent Reasoning & Decision-Making - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -67,7 +69,7 @@
 - Covers: Search algorithms for ToT navigation
 
 ### Deep Dive into LLMs
-- [https://youtube.com/watch?v=7xTGNNLPyMI](https://youtube.com/watch?v=7xTGNNLPyMI) ~3h31m
+- [https://www.youtube.com/watch?v=7xTGNNLPyMI](https://www.youtube.com/watch?v=7xTGNNLPyMI) ~3h31m
 - Covers: LLM reasoning and distributed reasoning
 
 ### MIT 6.006 Algorithms
@@ -136,37 +138,38 @@
 - [https://www.youtube.com/watch?v=MypF9_5wvlM](https://www.youtube.com/watch?v=MypF9_5wvlM) ~20-30 minutes
 - Covers: HTN decomposition methods
 
-### HTN Planning Tutorial Series - Video 3
-- [https://www.youtube.com/watch?v=7rHi4FwlJw4](https://www.youtube.com/watch?v=7rHi4FwlJw4) ~20-30 minutes
-- Covers: HTN planning examples
+### AIPLAN 3.13: HTN Planning - University of Edinburgh
+- [https://www.youtube.com/watch?v=7rHi4FwlJw4](https://www.youtube.com/watch?v=7rHi4FwlJw4)
+- Covers: An introductory university lesson on hierarchical task-network planning and decomposition
 
-### HTN Planning Tutorial Series - Video 4
-- [https://www.youtube.com/watch?v=kXm467TFTcY](https://www.youtube.com/watch?v=kXm467TFTcY) ~20-30 minutes
-- Covers: HTN advanced concepts
+### HTN Planning in Transformers: Fall of Cybertron - AI and Games
+- [https://www.youtube.com/watch?v=kXm467TFTcY](https://www.youtube.com/watch?v=kXm467TFTcY)
+- Covers: Primitive and compound tasks, top-down decomposition, and a production-game application of HTN planning
 
-### HTN Planning Tutorial Series - Video 5
-- [https://www.youtube.com/watch?v=XxuSFBVQULY](https://www.youtube.com/watch?v=XxuSFBVQULY) ~20-30 minutes
-- Covers: HTN applications
+### The AI of Horizon Zero Dawn, Part 1: Rise of the Machines - AI and Games
+- [https://www.youtube.com/watch?v=XxuSFBVQULY](https://www.youtube.com/watch?v=XxuSFBVQULY) ~22 minutes
+- Covers: Horizon Zero Dawn game AI, including the use of HTN planning alongside utility-based decision making
 
 ### Computational Thinking - Problem Decomposition
 - [https://www.youtube.com/watch?v=r2c_SfdEQ84](https://www.youtube.com/watch?v=r2c_SfdEQ84) ~10-20 minutes
 - Covers: Task decomposition principles
 
-### Building AI Scheduling Agents
-- [https://www.youtube.com/watch?v=bZzyPscbtI8](https://www.youtube.com/watch?v=bZzyPscbtI8) ~15-45 minutes
-- Covers: Agent scheduling architectures
+### How to Build Effective AI Agents in Pure Python - Beginner Course
+- [https://www.youtube.com/watch?v=bZzyPscbtI8](https://www.youtube.com/watch?v=bZzyPscbtI8)
+- Covers: Prompt chaining, routing, parallelization, orchestrator-worker patterns, evaluation, and workflow composition in Python
 
-### Building Content Creator Agents with CrewAI
-- [https://www.youtube.com/watch?v=PM9zr7wgJX4](https://www.youtube.com/watch?v=PM9zr7wgJX4) ~30-60 minutes
-- Covers: Multi-agent hierarchical systems
+### How to Create AI Agents from Scratch (CrewAI, Zapier, Cursor) - João Moura
+- [https://www.youtube.com/watch?v=PM9zr7wgJX4](https://www.youtube.com/watch?v=PM9zr7wgJX4)
+- Covers: Building a content-creator agent with CrewAI, Zapier, and Cursor using both no-code and code-based workflows
 
 ### Production Research Agent with Graph Workflows
 - [https://www.youtube.com/watch?v=cUC-hyjpNxk](https://www.youtube.com/watch?v=cUC-hyjpNxk) ~45-90 minutes
 - Covers: Graph-based task decomposition
 
-### AI-Driven Workflows and Parallel Agent Management
-- [https://www.youtube.com/watch?v=8lF7HmQ_RgY](https://www.youtube.com/watch?v=8lF7HmQ_RgY) ~30-60 minutes
-- Covers: Parallel hierarchical planning
+### Parallelization and Orchestrator-Worker Workflows with LangGraph
+- [https://docs.langchain.com/oss/python/langgraph/workflows-agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)
+- Official LangGraph documentation
+- Covers: Parallel fan-out, dynamic worker creation, task decomposition, delegation, and synthesis of worker outputs
 
 ---
 
@@ -179,9 +182,9 @@
 - [https://www.youtube.com/watch?v=WXuK6gekU1Y](https://www.youtube.com/watch?v=WXuK6gekU1Y) ~90 minutes
 - Covers: Real-world MCTS application
 
-### David Silver Lecture 5
+### David Silver Lecture 2 - Markov Decision Processes
 - [https://www.youtube.com/watch?v=lfHX2hHRMVQ](https://www.youtube.com/watch?v=lfHX2hHRMVQ) ~60 minutes
-- Covers: Monte Carlo methods fundamentals
+- Covers: Markov decision processes, returns, value functions, and Bellman equations
 
 ### AlphaGo Move 37 Analysis
 - [https://www.youtube.com/watch?v=JNrXgpSEEIE](https://www.youtube.com/watch?v=JNrXgpSEEIE) ~10-20 minutes
@@ -203,9 +206,9 @@
 - [https://www.youtube.com/watch?v=2pWv7GOvuf0](https://www.youtube.com/watch?v=2pWv7GOvuf0) ~90 minutes
 - Covers: Reinforcement learning foundations
 
-### AlphaZero Paper Explained
+### AlphaGo Paper Explained
 - [https://www.youtube.com/watch?v=MgowR4pq3e8](https://www.youtube.com/watch?v=MgowR4pq3e8) ~30-60 minutes
-- Covers: Advanced MCTS with neural networks
+- Covers: AlphaGo policy/value networks, Monte Carlo tree search, and neural-network-guided game play
 
 ---
 
@@ -230,10 +233,6 @@
 - [https://www.youtube.com/watch?v=g024lzsknDo](https://www.youtube.com/watch?v=g024lzsknDo) ~8-12 minutes
 - Covers: Detailed algorithm analysis
 
-### Simple A* Demo
-- [https://www.youtube.com/watch?v=y6Tj5J12zWQ](https://www.youtube.com/watch?v=y6Tj5J12zWQ) ~5-8 minutes
-- Covers: A* practical example
-
 ### Path Finding: BFS, DFS, Dijkstra, A*
 - [https://www.youtube.com/watch?v=DINCL5cd_w0](https://www.youtube.com/watch?v=DINCL5cd_w0) ~10-15 minutes
 - Covers: Comprehensive search algorithms
@@ -241,10 +240,6 @@
 ### Path-Finding Visualisation
 - [https://www.youtube.com/watch?v=aW9kZcJx64o](https://www.youtube.com/watch?v=aW9kZcJx64o) ~12-18 minutes
 - Covers: Interactive visualization
-
-### A* Algorithm in Action
-- [https://www.youtube.com/watch?v=O0MvdhQdj6I](https://www.youtube.com/watch?v=O0MvdhQdj6I) ~8-12 minutes
-- Covers: Real-world A* application
 
 ---
 
@@ -254,36 +249,28 @@
 **Topics:** Vector Databases, Graph Databases, Experience Replay
 
 ### Learn RAG from Scratch
-- [https://youtube.com/watch?v=sVcwVQRHIc8](https://youtube.com/watch?v=sVcwVQRHIc8) ~2.5 hours
+- [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~2.5 hours
 - Covers: Vector storage for episodic experiences
 
 ### LangGraph Agent with Persistent Memory
-- [https://youtube.com/watch?v=wKeFV11Uvds](https://youtube.com/watch?v=wKeFV11Uvds) ~30-40 minutes
+- [https://www.youtube.com/watch?v=wKeFV11Uvds](https://www.youtube.com/watch?v=wKeFV11Uvds) ~30-40 minutes
 - Covers: Memory persistence in agents
-
-### AI Chatbot with LangChain Context Memory
-- [https://www.youtube.com/watch?v=6qXcIaSS-kg](https://www.youtube.com/watch?v=6qXcIaSS-kg) ~20-30 minutes
-- Covers: Conversation memory management
-
-### Simple AI Agent Demo
-- [https://www.youtube.com/watch?v=axrc0XzmI4I](https://www.youtube.com/watch?v=axrc0XzmI4I) ~15-20 minutes
-- Covers: Agent memory basics
 
 ### Knowledge Graph Construction with LLMs
 - [https://www.youtube.com/watch?v=ViHV16ly-qs](https://www.youtube.com/watch?v=ViHV16ly-qs) ~20-30 minutes
 - Covers: Graph-based episodic storage
 
-### Neo4j Quick Start
+### Neo4j Arrows - Graph Modeling Tutorial
 - [https://www.youtube.com/watch?v=fkD1agLtQ4I](https://www.youtube.com/watch?v=fkD1agLtQ4I) ~10-15 minutes
-- Covers: Graph database fundamentals
+- Covers: Visual graph modeling and diagramming with Neo4j Arrows
 
 ### Neo4j with Python Tutorial
 - [https://www.youtube.com/watch?v=uZqGKg0ad7k](https://www.youtube.com/watch?v=uZqGKg0ad7k) Variable
 - Covers: Graph database implementation
 
-### Knowledge Accumulation and Feature Forgetting
+### Knowledge Accumulation in Continually Learned Representations and the Issue of Feature Forgetting
 - [https://www.youtube.com/watch?v=od0GNwd4-Cs](https://www.youtube.com/watch?v=od0GNwd4-Cs) ~15-20 minutes
-- Covers: Memory management strategies
+- Covers: Continual-learning representations, accumulation of task knowledge, and feature forgetting across sequential tasks
 
 ---
 
@@ -293,19 +280,19 @@
 **Topics:** Vector Databases, Knowledge Graphs, RAG, Chunking Strategies
 
 ### Vector Search and RAG Tutorial
-- [https://youtu.be/JEBDfGqrAUA](https://youtu.be/JEBDfGqrAUA) ~1 hour
+- [https://www.youtube.com/watch?v=JEBDfGqrAUA](https://www.youtube.com/watch?v=JEBDfGqrAUA) ~1 hour
 - Covers: Vector semantic storage
 
 ### Learn RAG from Scratch
-- [https://youtu.be/sVcwVQRHIc8](https://youtu.be/sVcwVQRHIc8) ~2.5 hours
+- [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~2.5 hours
 - Covers: Comprehensive RAG implementation
 
 ### Build RAG Chatbot with JavaScript
-- [https://youtu.be/d-VKYF4Zow0](https://youtu.be/d-VKYF4Zow0) ~90 minutes
+- [https://www.youtube.com/watch?v=d-VKYF4Zow0](https://www.youtube.com/watch?v=d-VKYF4Zow0) ~90 minutes
 - Covers: Cross-platform semantic search
 
 ### 5 Levels of Text Splitting for RAG
-- [https://youtu.be/8OJC21T2SL4](https://youtu.be/8OJC21T2SL4) ~45 minutes
+- [https://www.youtube.com/watch?v=8OJC21T2SL4](https://www.youtube.com/watch?v=8OJC21T2SL4) ~45 minutes
 - Covers: Semantic chunking strategies
 
 ### Weaviate Vector Database
@@ -317,7 +304,7 @@
 - Covers: Graph-based semantic storage
 
 ### Cosine Similarity, Clearly Explained
-- [https://youtu.be/e9U0QAFbfLI](https://youtu.be/e9U0QAFbfLI) ~10 minutes
+- [https://www.youtube.com/watch?v=e9U0QAFbfLI](https://www.youtube.com/watch?v=e9U0QAFbfLI) ~10 minutes
 - Covers: Semantic similarity metrics
 
 ---
@@ -332,7 +319,7 @@
 - Covers: Attention mechanism for context
 
 ### Deep Dive into LLMs
-- [https://youtube.com/watch?v=7xTGNNLPyMI](https://youtube.com/watch?v=7xTGNNLPyMI) ~3h31m
+- [https://www.youtube.com/watch?v=7xTGNNLPyMI](https://www.youtube.com/watch?v=7xTGNNLPyMI) ~3h31m
 - Covers: Context and working memory mechanisms
 
 ### Let's Build GPT
@@ -347,12 +334,12 @@
 - [https://www.youtube.com/watch?v=zduSFxRajkE](https://www.youtube.com/watch?v=zduSFxRajkE) ~2 hours
 - Covers: Token encoding and working memory
 
-### vLLM Optimization
-- [https://www.youtube.com/watch?v=80bIUggRJf4](https://www.youtube.com/watch?v=80bIUggRJf4) Variable
-- Covers: Efficient context utilization
+### Fast LLM Serving with vLLM and PagedAttention
+- [https://www.youtube.com/watch?v=5ZlavKF_98U](https://www.youtube.com/watch?v=5ZlavKF_98U) ~32 minutes
+- Covers: PagedAttention, KV-cache efficiency, continuous batching, serving throughput, and memory utilization
 
 ### RAG From Scratch Playlist
-- [https://youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x](https://youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) 14+ videos
+- [https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) 14+ videos
 - Covers: RAG systems for extended context
 
 ---
@@ -362,9 +349,9 @@
 
 **Topics:** Expected Utility Theory, Risk Attitudes, Multi-Objective Optimization
 
-### Law of Diminishing Marginal Utility
+### Law of Diminishing Marginal Utility - Richard Dykes
 - [https://www.youtube.com/watch?v=xgLx9CBnm9U](https://www.youtube.com/watch?v=xgLx9CBnm9U) ~10-15 minutes
-- Covers: Utility theory fundamentals
+- Covers: Diminishing marginal utility and its implications for utility-based decision-making
 
 ### Diminishing Marginal Utility
 - [https://www.youtube.com/watch?v=KOUJEyy48qY](https://www.youtube.com/watch?v=KOUJEyy48qY) ~5-10 minutes
@@ -385,10 +372,6 @@
 ### Multi-Objective Optimization Tutorial
 - [https://www.youtube.com/watch?v=ELLHqHk32II](https://www.youtube.com/watch?v=ELLHqHk32II) ~20-40 minutes
 - Covers: Multi-objective decision making
-
-### Multi-Objective Optimization MOOC
-- [https://www.youtube.com/watch?v=H7-wEO70-x4](https://www.youtube.com/watch?v=H7-wEO70-x4) ~30-60 minutes
-- Covers: Comprehensive optimization strategies
 
 ### Coding Bayesian Optimization with BoTorch
 - [https://www.youtube.com/watch?v=BQ4kVn-Rt84](https://www.youtube.com/watch?v=BQ4kVn-Rt84) ~30-45 minutes
@@ -429,9 +412,9 @@ Note: Rule-based systems have limited YouTube coverage. Consult academic alterna
 - [https://www.youtube.com/watch?v=IUiKAD6cuTA](https://www.youtube.com/watch?v=IUiKAD6cuTA) ~25-30 minutes
 - Covers: Deep RL by Steve Brunton
 
-### UC Berkeley CS285 Lecture 1
-- [https://www.youtube.com/watch?v=JHrlF10v2Og](https://www.youtube.com/watch?v=JHrlF10v2Og) ~1 hour
-- Covers: Advanced RL by Sergey Levine
+### UC Berkeley CS285 Lecture 1 - Part 1
+- [https://www.youtube.com/watch?v=JHrlF10v2Og](https://www.youtube.com/watch?v=JHrlF10v2Og) (lecture segment)
+- Covers: The first segment of the introductory CS285 deep reinforcement learning lecture
 
 ### But what is a Neural Network?
 - [https://www.youtube.com/watch?v=aircAruvnKk](https://www.youtube.com/watch?v=aircAruvnKk) ~20 minutes
@@ -441,13 +424,13 @@ Note: Rule-based systems have limited YouTube coverage. Consult academic alterna
 - [https://www.youtube.com/watch?v=vQ_ifavFBkI](https://www.youtube.com/watch?v=vQ_ifavFBkI) Variable
 - Covers: PPO algorithm details
 
-### Policy Gradient Methods
+### Proximal Policy Optimization (PPO) Explained - Arxiv Insights
 - [https://www.youtube.com/watch?v=5P7I-xPq8u8](https://www.youtube.com/watch?v=5P7I-xPq8u8) Variable
-- Covers: Policy gradient techniques
+- Covers: PPO objectives, clipping, policy updates, and practical intuition
 
-### Multi-Agent RL
+### CSL Seminar: Jakob Foerster on Multi-Agent Reinforcement Learning
 - [https://www.youtube.com/watch?v=ii_SwIsY8aU](https://www.youtube.com/watch?v=ii_SwIsY8aU) ~1 hour
-- Covers: Multi-agent learning by Jakob Foerster
+- Covers: Multi-agent reinforcement learning, cooperative AI, communication, and coordination between learning agents
 
 ### Multi-Agent RL Logic
 - [https://www.youtube.com/watch?v=8fICnUvIw6g](https://www.youtube.com/watch?v=8fICnUvIw6g) Variable
@@ -472,17 +455,17 @@ Note: Rule-based systems have limited YouTube coverage. Consult academic alterna
 - [https://www.youtube.com/watch?v=IsDpoXExmNA](https://www.youtube.com/watch?v=IsDpoXExmNA) Variable
 - Covers: Neural-symbolic integration
 
-### Self-Driving Cars
+### Self-Driving Elegoo/Arduino Car - Course Project Demo
 - [https://www.youtube.com/watch?v=1-7RTr_nGgs](https://www.youtube.com/watch?v=1-7RTr_nGgs) Variable
-- Covers: Hybrid autonomous system design
+- Covers: A hobby robotics project demonstrating a small self-driving car implementation
 
 ### RAG Explained - n8n Demo
 - [https://www.youtube.com/watch?v=Ox26-mRSsvg](https://www.youtube.com/watch?v=Ox26-mRSsvg) ~15-20 minutes
 - Covers: Hybrid retrieval and generation
 
-### Knowledge Graphs Tutorial
-- [https://www.youtube.com/watch?v=AWotm2b3bLs](https://www.youtube.com/watch?v=AWotm2b3bLs) ~90 minutes
-- Covers: Knowledge graph construction (WWW2020)
+### Entity Summarization in Knowledge Graphs: Algorithms, Evaluation, and Applications
+- [https://sites.google.com/view/entity-summarization-tutorials/www2020](https://sites.google.com/view/entity-summarization-tutorials/www2020) (official WWW 2020 tutorial with video and slides)
+- Covers: Entity summarization methods for knowledge graphs, including algorithms, evaluation, and applications
 
 ### Project Chimera
 - [https://www.youtube.com/watch?v=e8h9FvE_l80](https://www.youtube.com/watch?v=e8h9FvE_l80) ~10-15 minutes

@@ -1,4 +1,6 @@
-# Part 02: Building with Agent Frameworks - YouTube Video Resources
+# Part 02: Building with Agent Frameworks - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -31,12 +33,12 @@
 - [https://www.youtube.com/watch?v=-kSOTtYzgEw](https://www.youtube.com/watch?v=-kSOTtYzgEw) ~30 minutes
 - Covers: Role-based agent organization, task delegation, hierarchical processes
 
-### CrewAI Tutorial - Building Multi-Agent Systems
-- [https://www.youtube.com/watch?v=tnejrr-0a94](https://www.youtube.com/watch?v=tnejrr-0a94) ~45 minutes
-- Covers: Role-based collaboration, organizational structure, specialist agent coordination
+### CrewAI Tutorial - Next Generation AI Agent Teams (Fully Local)
+- [https://www.youtube.com/watch?v=tnejrr-0a94](https://www.youtube.com/watch?v=tnejrr-0a94) ~11 minutes
+- Covers: A compact, fully local CrewAI introduction covering agents, roles, tasks, and team execution
 
 ### AutoGen Studio 0.4 Tutorial
-- [https://youtu.be/oum6EI7wohM](https://youtu.be/oum6EI7wohM) ~30 minutes
+- [https://www.youtube.com/watch?v=oum6EI7wohM](https://www.youtube.com/watch?v=oum6EI7wohM) ~30 minutes
 - Covers: AutoGen Studio interface, multi-agent conversation framework, agent team composition
 
 ### Semantic Kernel - AI-Powered Legacy Modernization
@@ -58,33 +60,34 @@
 - [https://www.youtube.com/watch?v=jGg_1h0qzaM](https://www.youtube.com/watch?v=jGg_1h0qzaM) ~3 hours
 - Covers: Complete LangGraph fundamentals, state graphs, nodes, edges, production-ready patterns
 
-### Adding Short-Term Memory to LangGraph ReAct Agent
-- [https://www.youtube.com/watch?v=GMaGG8UBek8](https://www.youtube.com/watch?v=GMaGG8UBek8) ~15-20 minutes
-- Covers: MemorySaver checkpointer, short-term memory, checkpoint configuration
+### LangChain Short-Term Memory
+- [https://docs.langchain.com/oss/python/langchain/short-term-memory](https://docs.langchain.com/oss/python/langchain/short-term-memory)
+- Official LangChain documentation
+- Covers: Thread-scoped agent memory, checkpointers, production persistence, message trimming, deletion, and summarization
 
-### Official LangGraph Tutorial Playlist - Introduction
-- [https://www.youtube.com/watch?v=5h-JBkySK34&list=PLfaIDFEXuae16n2TWUkKq5PgJ0w6Pkwtg](https://www.youtube.com/watch?v=5h-JBkySK34&list=PLfaIDFEXuae16n2TWUkKq5PgJ0w6Pkwtg) Playlist
-- Covers: Official tutorials, core concepts, state management, best practices
+### Building AI Agent Systems with LangGraph
+- [https://www.youtube.com/watch?v=5h-JBkySK34](https://www.youtube.com/watch?v=5h-JBkySK34)
+- Covers: LangGraph state, nodes, edges, graph-based agent control, and system construction
 
 ### Adaptive-RAG with LangGraph
-- [https://youtu.be/04ighIjMcAI](https://youtu.be/04ighIjMcAI) ~5-10 minutes
+- [https://www.youtube.com/watch?v=04ighIjMcAI](https://www.youtube.com/watch?v=04ighIjMcAI) ~5-10 minutes
 - Covers: Conditional routing, state management in iterative workflows
 
 ### Corrective-RAG (CRAG) in LangGraph with Ollama
-- [https://youtube.com/watch?v=E2shqsYwxck](https://youtube.com/watch?v=E2shqsYwxck) ~5-10 minutes
+- [https://www.youtube.com/watch?v=E2shqsYwxck](https://www.youtube.com/watch?v=E2shqsYwxck) ~5-10 minutes
 - Covers: Self-correcting RAG, iterative refinement, error correction loops
 
-### Query Routing with LangGraph
-- [https://youtu.be/pfpIndq7Fi8](https://youtu.be/pfpIndq7Fi8) ~5-10 minutes
-- Covers: Conditional routing implementation, multi-path workflow design
+### RAG from Scratch: Part 10 (Routing)
+- [https://www.youtube.com/watch?v=pfpIndq7Fi8](https://www.youtube.com/watch?v=pfpIndq7Fi8)
+- Covers: Logical and semantic query routing, including choosing an appropriate data source or processing path
 
 ### Report mAIstro - Building Research Agent from Scratch with LangGraph
-- [https://youtube.com/watch?v=wSxZ7yFbbas](https://youtube.com/watch?v=wSxZ7yFbbas) ~30-45 minutes
+- [https://www.youtube.com/watch?v=wSxZ7yFbbas](https://www.youtube.com/watch?v=wSxZ7yFbbas) ~30-45 minutes
 - Covers: Complex multi-agent workflow, state management, production architecture
 
-### LangChain and DSPy Integration with LangGraph
-- [https://youtube.com/watch?v=4EXOmWeqXRc](https://youtube.com/watch?v=4EXOmWeqXRc) ~30-60 minutes
-- Covers: Framework integration, LCEL/LangGraph optimization
+### Optimization with DSPy and LangChain
+- [https://www.youtube.com/watch?v=4EXOmWeqXRc](https://www.youtube.com/watch?v=4EXOmWeqXRc)
+- Covers: DSPy optimization of language-model programs and LangChain-based applications, including automated prompt and pipeline tuning
 
 ---
 
@@ -93,9 +96,9 @@
 
 **Topics:** AgentExecutor, ReAct Pattern, Agent Types, Tool Integration, Memory Systems
 
-### LangChain Cookbook Part 1 - Fundamentals
+### LangChain Cookbook Part 1: 7 Core Concepts
 - [https://www.youtube.com/watch?v=2xxziIWmaSA](https://www.youtube.com/watch?v=2xxziIWmaSA) ~20 minutes
-- Covers: LangChain fundamentals, ConversationBufferMemory, core components
+- Covers: Seven foundational LangChain concepts, including models, prompts, parsers, chains, memory, documents, and agents
 
 ### OpenAI Function Calling - Full Beginner Tutorial
 - [https://www.youtube.com/watch?v=aqdWSYWC_LI](https://www.youtube.com/watch?v=aqdWSYWC_LI) ~20 minutes
@@ -120,13 +123,13 @@
 - [https://www.youtube.com/watch?v=hvAPnpSfSGo](https://www.youtube.com/watch?v=hvAPnpSfSGo) ~38 minutes
 - Covers: Multi-agent patterns, LangGraph implementation, agent coordination
 
-### CrewAI Advanced Tutorial
-- [https://www.youtube.com/watch?v=tnejrr-0a94](https://www.youtube.com/watch?v=tnejrr-0a94) ~45 minutes
-- Covers: Role-based collaboration, organizational structure, specialist coordination
+### CrewAI - Building a Custom Crew - Sam Witteveen
+- [https://www.youtube.com/watch?v=2Uar1fDKYpQ](https://www.youtube.com/watch?v=2Uar1fDKYpQ) ~22 minutes
+- Covers: Custom agents and tasks, tools, sequential and hierarchical processes, and crew execution
 
-### AutoGen Advanced Patterns
-- [https://youtu.be/oum6EI7wohM](https://youtu.be/oum6EI7wohM) ~30 minutes
-- Covers: Conversation-driven coordination, multi-agent patterns, agent composition
+### AutoGen v0.4: Reimagining the Foundation of Agentic AI for Scale and More
+- [https://www.microsoft.com/en-us/research/video/autogen-v0-4-reimagining-the-foundation-of-agentic-ai-for-scale-and-more-microsoft-research-forum/](https://www.microsoft.com/en-us/research/video/autogen-v0-4-reimagining-the-foundation-of-agentic-ai-for-scale-and-more-microsoft-research-forum/) ~8 minutes
+- Covers: Actor-model foundations, asynchronous messages, event-driven agents, workflows, state, memory, and streaming
 
 ---
 
@@ -154,9 +157,10 @@
 - [https://www.youtube.com/watch?v=aqdWSYWC_LI](https://www.youtube.com/watch?v=aqdWSYWC_LI) ~20 minutes
 - Covers: OpenAI function calling API, structured tool invocation, schema design
 
-### LangChain Tool Use and Integration
-- [https://www.youtube.com/watch?v=2xxziIWmaSA](https://www.youtube.com/watch?v=2xxziIWmaSA) ~20 minutes
-- Covers: LangChain tool integration patterns, agent executor configuration
+### LangChain Tools
+- [https://docs.langchain.com/oss/python/langchain/tools](https://docs.langchain.com/oss/python/langchain/tools)
+- Official LangChain documentation
+- Covers: Defining tools, input schemas, runtime context, state access, and tool integration with agents
 
 ---
 
@@ -167,11 +171,7 @@
 
 ### RAG From Scratch - Complete Course
 - [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~3.5 hours
-- Covers: RAG fundamentals, multi-step retrieval, integration patterns
-
-### LangChain RAG Tutorial
-- [https://www.youtube.com/watch?v=jGg_1h0qzaM](https://www.youtube.com/watch?v=jGg_1h0qzaM) ~3 hours
-- Covers: RAG architecture with LangGraph, document processing, retrieval optimization
+- Covers: RAG architecture and fundamentals, document processing, multi-step retrieval, generation, integration patterns, and evaluation
 
 ---
 
@@ -180,13 +180,15 @@
 
 **Topics:** Error Handling, Resilience, Recovery Patterns, Graceful Degradation
 
-### Building Robust AI Applications with Error Handling
-- [https://www.youtube.com/watch?v=5h-JBkySK34](https://www.youtube.com/watch?v=5h-JBkySK34) ~35 minutes
-- Covers: Error handling strategies, circuit breakers, retry patterns
+### LangGraph Fault Tolerance
+- [https://docs.langchain.com/oss/python/langgraph/fault-tolerance](https://docs.langchain.com/oss/python/langgraph/fault-tolerance)
+- Official LangGraph documentation
+- Covers: Per-node retries, backoff, timeouts, recovery handlers, resume-safe failures, and graceful compensation flows
 
-### LangGraph Error Recovery Patterns
-- [https://youtu.be/GMaGG8UBek8](https://youtu.be/GMaGG8UBek8) ~15-20 minutes
-- Covers: Checkpointing for recovery, state persistence, error handling in workflows
+### LangGraph Persistence and Recovery
+- [https://docs.langchain.com/oss/python/langgraph/persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+- Official LangGraph documentation
+- Covers: Checkpoint-based recovery, pending writes, thread state, replay, and resuming after failed graph steps
 
 ---
 
@@ -195,10 +197,11 @@
 
 **Topics:** Streaming, Real-Time Responses, Event-Driven Architecture, Async Patterns
 
-### Streaming with LangChain
-- [https://www.youtube.com/watch?v=jGg_1h0qzaM](https://www.youtube.com/watch?v=jGg_1h0qzaM) ~3 hours
-- Covers: Streaming output, real-time responses, async agent patterns
+### LangChain Streaming
+- [https://docs.langchain.com/oss/python/langchain/streaming](https://docs.langchain.com/oss/python/langchain/streaming)
+- Official LangChain documentation
+- Covers: Agent-progress updates, token streaming, custom events, multiple stream modes, and synchronous or asynchronous streaming
 
 ### Python Asynchronous Programming
-- [https://www.youtube.com/watch?v=YOUR_URL](https://www.youtube.com/watch?v=YOUR_URL) ~26 minutes
+- [https://www.youtube.com/watch?v=t5Bo1Je9EmE](https://www.youtube.com/watch?v=t5Bo1Je9EmE) ~26 minutes
 - Covers: Asyncio fundamentals, async/await syntax, parallel execution patterns

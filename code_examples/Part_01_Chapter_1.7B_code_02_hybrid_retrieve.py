@@ -1,3 +1,11 @@
+"""Contextual method for ``HybridComplianceAnalyzer`` from code example 01."""
+
+from __future__ import annotations
+
+from typing import Any, Dict
+
+
+class HybridComplianceAnalyzer:
     def hybrid_retrieve(
         self,
         query: str,

@@ -1,4 +1,4 @@
-# Chapter 2, Section 2.2.6-2.2.9: Multimodal Integration - Labs and Resources
+# Chapter 2, Section 2.7.6-2.7.9: Multimodal Integration - Labs and Resources
 
 **Transformation Type:** Light (Enhanced narrative flow while maintaining appropriate formats)
 **Word Count:** ~1,800 words (from ~1,500 words)
@@ -6,7 +6,7 @@
 
 ---
 
-## 2.2.6 Hands-On Lab: Build a Multimodal Agent
+## 2.7.6 Hands-On Lab: Build a Multimodal Agent
 
 With a solid understanding of vision models, audio processing, and the NVIDIA multimodal stack, you're ready to build a complete end-to-end multimodal RAG agent. This lab walks you through constructing a production-quality system that processes technical documents containing text, diagrams, and performance charts, then answers questions requiring synthesis across all modalities.
 
@@ -432,7 +432,7 @@ for query in test_queries:
 
 ---
 
-## 2.2.7 Common Pitfalls and Anti-Patterns
+## 2.7.7 Common Pitfalls and Anti-Patterns
 
 As you build multimodal RAG systems, three critical mistakes emerge repeatedly in production deployments. Understanding these pitfalls—and their solutions—separates functional prototypes from production-ready systems that deliver accurate, reliable answers.
 
@@ -517,7 +517,7 @@ At inference time, when a retrieved chunk is image-sourced, your system should l
 
 ---
 
-## 2.2.8 Section Learning Check
+## 2.7.8 Section Learning Check
 
 ### Quick Knowledge Check
 
@@ -647,7 +647,7 @@ Before moving to the next section, ensure you can perform these tasks without re
 
 ---
 
-## 2.2.9 Additional Resources
+## 2.7.9 Additional Resources
 
 To deepen your multimodal integration expertise beyond this section's coverage, the following resources provide official documentation, open-source implementations, and advanced patterns. These materials support both exam preparation and production deployment.
 
@@ -687,7 +687,7 @@ This section's complete code implementations, along with extended patterns and p
 
 ### Recommended Practice Exercises
 
-Structured practice exercises help cement multimodal integration concepts through hands-on implementation. Beginners should start by building a simple text-plus-image RAG system using CLIP embeddings for 10 Wikipedia pages containing images—this establishes the foundational pattern without overwhelming complexity. Intermediate practitioners should implement the full lab (Chapter 2.2.6) with text, charts processed via DePlot, and audio transcribed via Whisper, working with a realistic technical report or earnings call transcript. Advanced developers should build a production multimodal RAG system implementing Approach 3 (separate stores for text and images, unified by a multimodal reranker), complete with monitoring, error handling, and performance optimization.
+Structured practice exercises help cement multimodal integration concepts through hands-on implementation. Beginners should start by building a simple text-plus-image RAG system using CLIP embeddings for 10 Wikipedia pages containing images—this establishes the foundational pattern without overwhelming complexity. Intermediate practitioners should implement the full lab (Chapter 2.7.6) with text, charts processed via DePlot, and audio transcribed via Whisper, working with a realistic technical report or earnings call transcript. Advanced developers should build a production multimodal RAG system implementing Approach 3 (separate stores for text and images, unified by a multimodal reranker), complete with monitoring, error handling, and performance optimization.
 
 - **Beginner**: Build a text + image RAG using CLIP for 10 Wikipedia pages with images
 - **Intermediate**: Implement the full lab with text, charts (DePlot), and audio (Whisper) on a technical report
@@ -712,4 +712,4 @@ Chapter 2.3 addresses this challenge by introducing comprehensive error handling
 
 ---
 
-**END OF SECTION 2.2.6-2.2.9: HANDS-ON LAB, PITFALLS, LEARNING CHECK, AND RESOURCES**
+**END OF SECTION 2.7.6-2.7.9: HANDS-ON LAB, PITFALLS, LEARNING CHECK, AND RESOURCES**

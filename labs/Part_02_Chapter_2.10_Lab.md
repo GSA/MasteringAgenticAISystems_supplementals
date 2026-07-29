@@ -1,6 +1,6 @@
-# Section 2.11: Hands-On Lab - Multi-Framework Comparison
+# Section 2.10: Hands-On Lab - Multi-Framework Comparison
 
-# Hands-On Lab 11: Multi-Framework Comparison
+## Hands-On Lab 10: Multi-Framework Comparison
 
 ## Lab Overview
 

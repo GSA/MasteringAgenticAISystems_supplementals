@@ -1,81 +1,49 @@
-# References and Source Materials
+# References and source materials
 
-This directory contains the complete reference library for **Mastering Agentic AI Systems**, organized by textbook chapter and aligned with the NVIDIA Certified Professional: Agentic AI (NCP-AAI) certification exam domains.
+This directory contains third-party papers, documentation snapshots, curriculum PDFs, notebooks, configuration examples, and research notes used while developing *Mastering Agentic AI Systems*.
 
-## Contents
+## Snapshot status
 
-### Reference Index Files
+These files are a **partial, date-specific research snapshot**, not a complete mirror of each upstream project. Some copied documentation trees contain links to files that were not included, and some APIs or regulatory materials may have changed since capture. Prefer current upstream documentation for implementation decisions and use the local files for traceability and offline study.
 
-Three index files catalog every reference with descriptions, file types, and chapter mappings:
+The three historical index files were generated at different stages of the project. Their narrative counts and processing labels may not match the current tree. Generate an authoritative path-and-hash inventory with:
 
-| Index File | Coverage | Entries |
-|------------|----------|---------|
-| `reference_file_index_ch1-3.md` | Chapters 1 through 3 | 185 references |
-| `reference_file_index_ch4-7.md` | Chapters 4 through 7 | 67 references |
-| `reference_file_index_ch8-10.md` | Chapters 8 through 10 | 150 references |
+```bash
+make inventory
+```
 
-Start with these index files to locate specific references by topic, chapter, or source type.
+The generated `References/reference_inventory.csv` is intentionally ignored by Git so reviewers can regenerate it from the current checkout.
 
-### NVIDIA Curriculum Materials
+## Current snapshot counts
 
-Three NVIDIA Deep Learning Institute (DLI) curriculum PDFs are included at the top level:
+Counts below were calculated from this repository snapshot and include files recursively within each chapter directory.
 
-- **Curriculum - Adding New Knowledge to LLMs.pdf** -- Fine-tuning and knowledge injection techniques
-- **Curriculum - Building Agentic AI Applications with LLMs.pdf** -- Agent development patterns and frameworks
-- **Curriculum - Deploying RAG Pipelines for Production at Scale.pdf** -- Production RAG architecture and deployment
+| Directory | Files |
+|---|---:|
+| Chapter 1 - Agent Architecture and Design | 94 |
+| Chapter 2 - Agent Development | 141 |
+| Chapter 3 - Evaluation and Tuning | 14 |
+| Chapter 4 - Deployment and Scaling | 16 |
+| Chapter 5 - Cognition, Planning, and Memory | 14 |
+| Chapter 6 - Knowledge Integration and Data Handling | 2 |
+| Chapter 7 - NVIDIA Platform Implementation | 35 |
+| Chapter 8 - Run, Monitor, and Maintain | 16 |
+| Chapter 9 - Safety, Ethics, and Compliance | 259 |
+| Chapter 10 - Human-AI Interaction and Oversight | 13 |
+| **Chapter directories** | **604** |
+| Top-level files, including this README and indexes | 7 |
+| **References directory total** | **611** |
 
-### Chapter Reference Directories
+The largest format groups are 328 Markdown files, 75 PDFs, 73 reStructuredText files, 36 PNGs, 17 notebooks, 10 Python files, 10 YAML files, 10 PlantUML files, and 10 protobuf-text files. The remaining files use other formats or have no extension.
 
-Each chapter directory contains the primary source materials used during research and writing. The directories follow the textbook's ten-part structure, which mirrors the ten NCP-AAI exam domains.
+## Indexes
 
-| Directory | Files | Exam Domain (Weight) | Key Sources |
-|-----------|------:|----------------------|-------------|
-| Chapter 1 - Agent Architecture and Design | 96 | Domain 1 (15%) | NeMo Agent Toolkit docs, memory system research, multi-agent communication protocols |
-| Chapter 2 - Agent Development | 141 | Domain 2 (15%) | LangChain, LangGraph, AutoGen, CrewAI, Semantic Kernel framework documentation |
-| Chapter 3 - Evaluation and Tuning | 14 | Domain 3 (13%) | Benchmark suites, AgentBench, WebArena, trace analysis methodologies |
-| Chapter 4 - Deployment and Scaling | 16 | Domain 4 (5%) | Kubernetes guides, TensorRT-LLM documentation, scaling pattern references |
-| Chapter 5 - Cognition, Planning, and Memory | 14 | Domain 5 (10%) | CoT/ToT/MCTS research papers, memory architecture surveys, planning algorithms |
-| Chapter 6 - Knowledge Integration and Data Handling | 2 | Domain 6 (10%) | RAG architecture references, vector database documentation |
-| Chapter 7 - NVIDIA Platform Implementation | 35 | Domain 7 (7%) | NIM deployment guides, Triton Inference Server, Riva ASR/TTS, NeMo Curator |
-| Chapter 8 - Run, Monitor, and Maintain | 16 | Domain 8 (7%) | LangSmith integration, Prometheus/Grafana monitoring, profiling methodologies |
-| Chapter 9 - Safety, Ethics, and Compliance | 260 | Domain 9 (5%) | NeMo Guardrails full documentation, IEEE standards, GDPR/EU AI Act, NIST AI RMF |
-| Chapter 10 - Human-AI Interaction and Oversight | 13 | Domain 10 (5%) | RLHF methodology, HITL/HOTL patterns, conversational UI research |
+- `reference_file_index_ch1-3.md`
+- `reference_file_index_ch4-7.md`
+- `reference_file_index_ch8-10.md`
 
-**Total: 614 files** across all directories.
+Treat those files as historical research aids. For current counts, paths, sizes, and SHA-256 hashes, use the generated inventory.
 
-### Notable Subdirectories
+## Reuse and attribution
 
-Several chapters contain structured documentation sets from major NVIDIA projects:
-
-- **Chapter 1 / Nemo_Agent_Toolkit/** -- Complete NeMo Agent Intelligence Toolkit documentation including quick-start guides, workflow references, MCP integration, tutorials, and API reference
-- **Chapter 4 / TensorRT/** -- TensorRT-LLM optimization documentation
-- **Chapter 9 / Nemo_Guardrail/** -- Full NeMo Guardrails documentation set (102 files) covering Colang DSL, rail types, security configurations, and integration patterns
-
-## File Format Distribution
-
-| Format | Count | Description |
-|--------|------:|-------------|
-| Markdown (.md) | 326 | Framework documentation, NVIDIA guides, integration references |
-| PDF (.pdf) | 75 | Academic papers, whitepapers, regulatory documents, curriculum materials |
-| Text (.txt) | 7 | URL caches, plain-text notes |
-| Other | 206 | Configuration files, templates, static assets (primarily within NeMo toolkit and Guardrails documentation sets) |
-
-## Source Categories
-
-1. **NVIDIA Official Documentation** -- NeMo Framework, TensorRT-LLM, Triton Inference Server, NIM, Guardrails, Riva, Curator, Agent Intelligence Toolkit
-2. **Agent Framework Documentation** -- LangChain, LangGraph, AutoGen, CrewAI, Semantic Kernel, LlamaIndex
-3. **Academic and Research Papers** -- Agent planning surveys, memory architecture research, reasoning strategy papers, RLHF methodology
-4. **Regulatory and Standards Documents** -- IEEE Ethically Aligned Design, FDA AI/ML guidance, GDPR compliance frameworks, EU AI Act, NIST AI Risk Management Framework
-5. **Industry Whitepapers and Technical Blogs** -- NVIDIA technical blogs, enterprise AI architecture guides, optimization case studies
-
-## How to Use This Directory
-
-**Finding references for a specific chapter:** Open the corresponding index file (`reference_file_index_ch1-3.md`, `ch4-7.md`, or `ch8-10.md`) and search for the chapter number. Each entry includes a description and file path.
-
-**Finding references by topic:** Use the index files' descriptions to search by keyword (e.g., "guardrails," "quantization," "RLHF").
-
-**Browsing by exam domain:** The chapter directories map directly to exam domains. For exam preparation, focus on directories with higher exam weight (Chapters 1-3 cover 43% of the exam).
-
-## License
-
-Reference materials are included for educational and research purposes in support of the textbook. Individual documents retain their original licenses and copyright. NVIDIA documentation is subject to NVIDIA's documentation license. Academic papers are referenced under fair use for educational commentary.
+Individual files retain their original rights and terms. Inclusion here does not place a third-party work under the repository's CC0 dedication. Review the source file, adjacent notices, and the original publisher before redistribution or adaptation; also see [`../THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).

@@ -1,18 +1,21 @@
-# Standard OpenAI API
+import os
+
 from openai import OpenAI
 
-client = OpenAI(base_url="https://api.openai.com/v1")
+# Standard OpenAI API; the client reads OPENAI_API_KEY from the environment.
+openai_client = OpenAI(base_url="https://api.openai.com/v1")
 
-# NVIDIA NIM endpoint (maintains OpenAI API compatibility)
-client = OpenAI(
-    base_url="https://your-nim-endpoint.nvidia.com/v1",
-    api_key="your-nim-api-key"
+# NVIDIA NIM endpoint (maintains OpenAI API compatibility).
+# Set NIM_API_KEY and, when needed, NIM_BASE_URL in the environment.
+nim_client = OpenAI(
+    base_url=os.environ.get("NIM_BASE_URL", "http://localhost:8000/v1"),
+    api_key=os.environ["NIM_API_KEY"],
 )
 
-# Function calling code remains identical
-response = client.chat.completions.create(
-    model="meta/llama-3-70b-instruct",  # NIM model
+# Function-calling code remains identical.
+response = nim_client.chat.completions.create(
+    model="meta/llama-3-70b-instruct",  # Select a model supported by your NIM deployment.
     messages=messages,
     tools=tool_schemas,
-    tool_choice="auto"
+    tool_choice="auto",
 )

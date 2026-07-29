@@ -1,4 +1,7 @@
 # Reference File Index - Chapters 1-3
+
+> **Historical index notice:** This file is a research-stage snapshot. Its counts, paths, exam weights, and processing labels may not match the current repository or current certification blueprint. Use `make inventory` for the current file inventory.
+
 ## NVIDIA Agentic AI Certification Exam Preparation
 
 **Generated**: 2025-01-08
@@ -17,7 +20,7 @@ This index documents all reference materials available for the first three chapt
 
 ## Chapter 1: Agent Architecture and Design
 
-**Reference Directory**: `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 1 - Agent Architecture and Design/`
+**Reference Directory**: `References/Chapter 1 - Agent Architecture and Design/`
 
 ### File Statistics
 - **Total Files**: 92
@@ -157,7 +160,7 @@ This index documents all reference materials available for the first three chapt
 
 ## Chapter 2: Agent Development
 
-**Reference Directory**: `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 2 - Agent Development/`
+**Reference Directory**: `References/Chapter 2 - Agent Development/`
 
 ### File Statistics
 - **Total Files**: 79
@@ -250,7 +253,7 @@ This index documents all reference materials available for the first three chapt
 
 ## Chapter 3: Evaluation and Tuning
 
-**Reference Directory**: `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 3 - Evaluation and Tuning/`
+**Reference Directory**: `References/Chapter 3 - Evaluation and Tuning/`
 
 ### File Statistics
 - **Total Files**: 14

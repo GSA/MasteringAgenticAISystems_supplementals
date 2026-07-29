@@ -1,12 +1,13 @@
-name: 'GSA/[PROJECT]'
-description: '[PROJECT DESCRIPTION]'
+name: 'Mastering Agentic AI Systems Supplementals'
+description: 'Study plans, labs, code examples, slides, figures, certification mappings, and reference materials supporting the Mastering Agentic AI Systems curriculum.'
 license: cc0-1.0
 openSourceProject: 1
 governmentWideReuseProject: 1
 tags:
-    - open-source
-    - opensource
-    - grace
-    - devsecops
+  - artificial-intelligence
+  - agentic-ai
+  - education
+  - machine-learning
+  - open-source
 contact:
-    email: grace-staff@gsa.gov
+  email: grace-staff@gsa.gov

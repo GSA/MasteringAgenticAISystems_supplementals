@@ -1,4 +1,6 @@
-# Part 09: Safety, Ethics, and Governance - YouTube Video Resources
+# Part 09: Safety, Ethics, and Governance - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -100,10 +102,10 @@
 - TechWorld with Nana
 - Covers: Kubernetes orchestration and security
 
-### Kubernetes Crash Course
+### Kubernetes Crash Course for Absolute Beginners [NEW]
 - [https://www.youtube.com/watch?v=s_o8dwzRlu4](https://www.youtube.com/watch?v=s_o8dwzRlu4) ~1 hour
 - TechWorld with Nana
-- Covers: Essential Kubernetes concepts
+- Covers: Kubernetes components and architecture, deployments, services, and practical Minikube demonstrations
 
 ### Kubernetes Security Best Practices
 - Covers: Security policies and network isolation

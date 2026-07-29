@@ -1,3 +1,9 @@
+# License
+
+## Scope
+
+This dedication applies to original project material for which the project has authority to grant these terms. It does not supersede rights in third-party works. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 As a work of the United States government, this project is in the
 public domain within the United States.
 

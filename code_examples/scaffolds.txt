@@ -1,0 +1,7 @@
+# Intentionally incomplete exercise or workflow scaffolds; one repository-relative path per line.
+code_examples/Part_03_Chapter_3.1_08_calculate_tool_efficiency.py
+code_examples/Part_03_Chapter_3.1_09_custom_evaluation_pipeline_class.py
+code_examples/Part_03_Chapter_3.1_12_github_actions_workflow.yaml
+code_examples/Part_03_Chapter_3.1_13_evaluation_execution_step.yaml
+code_examples/Part_03_Chapter_3.1_18_travel_agent_evaluator.py
+code_examples/Part_08_Chapter_8.2B_scaffolded_code_01_circuit_breaker_setup.py

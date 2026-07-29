@@ -1,3 +1,11 @@
+"""Contextual method for ``HybridComplianceAnalyzer`` from code example 01."""
+
+from __future__ import annotations
+
+from typing import Any, List
+
+
+class HybridComplianceAnalyzer:
     def _extract_entities_from_docs(
         self,
         docs: List[Any]

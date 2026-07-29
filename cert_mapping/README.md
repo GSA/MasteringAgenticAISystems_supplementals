@@ -2,14 +2,16 @@
 
 ## Overview
 
-**"Mastering Agentic AI Systems"** is a comprehensive study material covering agentic AI systems, from fundamentals through advanced production deployment. While originally designed to provide comprehensive support for the **NVIDIA NCP-AAI (NVIDIA Certified Profesional- Agentic AI)** certification, the breadth and depth of this material make it a valuable resource for preparation across multiple other AI certifications:
+**"Mastering Agentic AI Systems"** is a comprehensive study material covering agentic AI systems, from fundamentals through advanced production deployment. While originally designed to provide comprehensive support for the **NVIDIA NCP-AAI (NVIDIA-Certified Professional: Agentic AI)** certification, the breadth and depth of this material make it a valuable resource for preparation across multiple other AI certifications:
 
-- **AWS AIP-C01** (AWS Certified: AI Practitioner)
+- **AWS AIP-C01** (AWS Certified Generative AI Developer - Professional)
 - **Databricks Generative AI Engineer Associate**
 - **Google Cloud Professional Machine Learning Engineer (PMLE)**
 - **Microsoft AI-102** (Azure AI Engineer Associate)
 
 This folder contains detailed mappings showing how study chapters align with knowledge items for each certification.
+
+> **Version note:** Certification names, objectives, weights, and exam codes change. These files are editorial crosswalks from a repository snapshot, not provider endorsements. Verify the current official blueprint before planning study time.
 
 ## Understanding the Mappings
 
@@ -156,34 +158,19 @@ Use the table above to identify chapters with 🟢 indicators for your target ce
 
 ## Certification Profiles
 
-### NVIDIA NCP-AAI – Comprehensive Coverage
+### NVIDIA NCP-AAI - Comprehensive Coverage
 
-The **NVIDIA Certified Associate AI** certification validates foundational knowledge in AI principles and practices. This study material was designed from the ground up to support NVIDIA's certification objectives.
+The **NVIDIA-Certified Professional: Agentic AI (NCP-AAI)** credential is a professional-level certification focused on designing, developing, evaluating, deploying, and governing agentic AI systems with NVIDIA and ecosystem technologies. This material was developed with substantial overlap with that subject area, but the mapping is an editorial crosswalk rather than an official NVIDIA endorsement or guarantee of exam coverage.
 
-**Exam Focus:** AI fundamentals, large language models, agentic AI systems, and practical implementation patterns
+**Use of the mapping:** Review the current official exam blueprint, compare its objectives with `nvidia_NCP-AAI.csv`, and validate the crosswalk whenever the provider updates the exam. Hands-on work with current NVIDIA software and documentation is still required.
 
-**Relevant Skills:** 53 knowledge items across all core competencies
-- AI and agentic fundamentals
-- Prompt engineering and model interaction
-- Retrieval-Augmented Generation (RAG)
-- Safety, governance, and responsible AI
-- Production deployment and scaling patterns
 
-**Content Alignment:** This material provides direct, comprehensive coverage across all NVIDIA knowledge areas, making it an ideal primary resource for certification preparation.
+### AWS Certified Generative AI Developer - Professional (AIP-C01)
 
-### AWS Certified AI Practitioner (AIP-C01) – Strong Foundation
+The **AWS Certified Generative AI Developer - Professional** exam uses code **AIP-C01**. It assesses advanced skills in building and operationalizing production-ready generative AI solutions on AWS. It is not the AWS Certified AI Practitioner exam; the practitioner credential uses code **AIF-C01** and targets foundational AI, ML, and generative AI concepts.
 
-The **AWS Certified: AI Practitioner** exam validates the ability to develop, deploy, and manage AI/ML solutions on AWS infrastructure.
+**Content alignment:** The repository provides transferable coverage of agent architecture, retrieval, evaluation, safety, deployment, and operations. The crosswalk must be supplemented with current AWS-specific services, security controls, deployment patterns, and hands-on practice. Treat `aws_AIP-C01.csv` as a dated editorial mapping, not an official blueprint or completeness claim.
 
-**Exam Focus:** AI services and platforms on AWS, generative AI application development, and cloud-native ML practices
-
-**Key AWS Services Covered in Related Context:**
-- Amazon Bedrock for foundation models
-- Amazon SageMaker for ML workflows
-- Generative AI services and LLM deployment
-- AI governance and responsible practices
-
-**Content Alignment:** Chapters 1-6 and 7-10 provide strong foundational knowledge that transfers directly to AWS context. The material's focus on agentic systems and practical AI implementation aligns well with AWS certification objectives. Supplement with AWS-specific service documentation for service-level details.
 
 ### Databricks Generative AI Engineer Associate – Practical Engineering Focus
 

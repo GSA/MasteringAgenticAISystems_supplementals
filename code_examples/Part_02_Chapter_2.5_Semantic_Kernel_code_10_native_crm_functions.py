@@ -1,3 +1,13 @@
+"""Contextual native methods for ``EnterpriseCRMPlugin`` from code example 09."""
+
+from __future__ import annotations
+
+from typing import Optional
+
+from semantic_kernel.functions import kernel_function
+
+
+class EnterpriseCRMPlugin:
     @kernel_function(
         description="Retrieve comprehensive customer profile including contact information, "
                     "account standing, subscription status, and metadata. Use when you need "

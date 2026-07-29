@@ -1,3 +1,13 @@
+"""Contextual state methods for ``ETLPipeline`` from code example 04."""
+
+from __future__ import annotations
+
+from datetime import datetime, timedelta
+import json
+from pathlib import Path
+
+
+class ETLPipeline:
     def _get_last_run_time(self) -> datetime:
         """
         Get timestamp of last successful ETL run.

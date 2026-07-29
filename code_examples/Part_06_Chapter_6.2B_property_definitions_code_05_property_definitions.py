@@ -1,4 +1,6 @@
-    "properties": [
+"""Continuation of ``schema`` from code example 03."""
+
+schema["properties"] = [
         {
             "name": "content",
             "dataType": ["text"],
@@ -25,4 +27,3 @@
             ]
         }
     ]
-}

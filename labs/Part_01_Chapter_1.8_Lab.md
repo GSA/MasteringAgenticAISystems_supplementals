@@ -1,3 +1,5 @@
+# Part 1 - Chapter 1.8: Autoscaling Configuration Lab
+
 ## 1.8.4 Guided Practice: Building Your Autoscaling Configuration
 
 Understanding the worked example demonstrates autoscaling principles, but mastering autoscaling requires hands-on implementation. This guided practice walks you through configuring HPA for a coding assistant agent with different characteristics than the customer service agent—longer inference times, higher GPU requirements, and queue-based scaling dominance. You'll make the same design decisions (metric selection, threshold configuration, behavior policies) but adapted to different constraints.

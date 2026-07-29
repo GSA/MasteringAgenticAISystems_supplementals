@@ -1,3 +1,13 @@
+"""Contextual semantic methods for ``EnterpriseCRMPlugin`` from code example 09."""
+
+from __future__ import annotations
+
+import json
+
+from semantic_kernel.functions import kernel_function
+
+
+class EnterpriseCRMPlugin:
     @kernel_function(
         description="Analyze customer sentiment and concerns from support conversation history. "
                     "Returns sentiment classification, identified concerns, urgency assessment, "

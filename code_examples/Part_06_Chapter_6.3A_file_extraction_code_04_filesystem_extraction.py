@@ -1,3 +1,13 @@
+"""Contextual file extraction method for ``DataExtractor`` from code example 02."""
+
+from __future__ import annotations
+
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List
+
+
+class DataExtractor:
     def extract_from_files(
         self,
         directory: Path,

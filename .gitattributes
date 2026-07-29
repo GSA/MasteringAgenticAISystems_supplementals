@@ -1,0 +1,13 @@
+# Normalize first-party text files to LF while preserving binary assets byte-for-byte.
+* text=auto eol=lf
+
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.onnx binary
+*.pptx binary
+*.xlsx binary
+*.zip binary

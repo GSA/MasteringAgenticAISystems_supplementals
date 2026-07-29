@@ -1,6 +1,6 @@
 # Practice Test Links
 
-Points: Easy=1, Medium=2, Hard=3 
+Points: Easy=1, Medium=2, Hard=3
 
 Anyone with link can take.
 

@@ -24,10 +24,10 @@ Return ONLY the Python code, no explanations. Include necessary imports."""
         # Refinement attempt: include error feedback
         prompt = f"""The previous code failed tests with these errors:
 
-                {state[`error_analysis`]}
+                {state["error_analysis"]}
 
                 Requirements:
-                {state[`requirements`]}
+                {state["requirements"]}
 
                 Previous attempt:
                 {state["generated_code"]}

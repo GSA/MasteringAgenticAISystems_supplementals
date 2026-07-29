@@ -1,4 +1,6 @@
-# Part 01: Foundations - YouTube Video Resources
+# Part 01: Foundations - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -38,16 +40,16 @@
 - Covers: Neural network fundamentals, understanding AI decision-making, building trust through transparency
 
 ### Intro to Large Language Models
-- [https://youtube.com/watch?v=zjkBMFhNj_g](https://youtube.com/watch?v=zjkBMFhNj_g) ~60 minutes
+- [https://www.youtube.com/watch?v=zjkBMFhNj_g](https://www.youtube.com/watch?v=zjkBMFhNj_g) ~60 minutes
 - Covers: LLM architecture, context windows, training, finetuning fundamentals
 
-### Sam Altman on OpenAI and Future of AI
-- [https://www.youtube.com/watch?v=L_Guz73e6fw](https://www.youtube.com/watch?v=L_Guz73e6fw) ~2 hours
-- Covers: AI alignment, trust in AI systems, transparency challenges, human oversight
+### Lex Fridman Podcast #367 - Sam Altman
+- [https://www.youtube.com/watch?v=L_Guz73e6fw](https://www.youtube.com/watch?v=L_Guz73e6fw) ~2 hours 25 minutes
+- Covers: OpenAI, GPT-4, AI safety and alignment, governance, and the future of AI
 
-### AI Prompt Engineering Course
-- [https://www.youtube.com/watch?v=p09yRj47kNM](https://www.youtube.com/watch?v=p09yRj47kNM) ~50 minutes
-- Covers: Agent coordination patterns, workflow orchestration principles, prompt design
+### Google's 9 Hour AI Prompt Engineering Course in 20 Minutes
+- [https://www.youtube.com/watch?v=p09yRj47kNM](https://www.youtube.com/watch?v=p09yRj47kNM) ~20 minutes
+- Covers: Prompt-engineering concepts and techniques condensed from a longer course; not an agent-coordination tutorial
 
 ---
 
@@ -68,13 +70,13 @@
 - [https://www.youtube.com/watch?v=qSNUi7pRmWg](https://www.youtube.com/watch?v=qSNUi7pRmWg) ~25 minutes
 - Covers: Semantic HTML, screen reader compatibility, proper heading hierarchy
 
-### Accessibility Navigation Tutorial
-- [https://www.youtube.com/watch?v=YAqRQoN8ykI](https://www.youtube.com/watch?v=YAqRQoN8ykI) ~18 minutes
-- Covers: Accessible navigation patterns, focus management, keyboard operability
+### I Made a BIG Mistake - Kevin Powell
+- [https://www.youtube.com/watch?v=YAqRQoN8ykI](https://www.youtube.com/watch?v=YAqRQoN8ykI)
+- Covers: Accessible buttons and navigation, semantic HTML, visually hidden content, and corrections to earlier accessibility patterns
 
 ### Colors with Good Contrast
-- [https://www.youtube.com/watch?v=Hui87z2Vx8o](https://www.youtube.com/watch?v=Hui87z2Vx8o) ~2 minutes
-- Covers: WCAG contrast requirements, visual indicators beyond color
+- [https://www.youtube.com/watch?v=Hui87z2Vx8o](https://www.youtube.com/watch?v=Hui87z2Vx8o) ~1 minute
+- Covers: A concise introduction to readable color contrast for accessible interfaces
 
 ---
 
@@ -84,12 +86,12 @@
 **Topics:** ReAct Pattern, Plan-and-Execute, Reflection Pattern, Tool-Use Architecture
 
 ### What's next for AI agentic workflows (Andrew Ng)
-- [https://youtube.com/watch?v=sal78ACtGTc](https://youtube.com/watch?v=sal78ACtGTc) ~12 minutes
+- [https://www.youtube.com/watch?v=sal78ACtGTc](https://www.youtube.com/watch?v=sal78ACtGTc) ~12 minutes
 - Covers: Four key agentic patterns overview, current state of AI agents
 
-### LangChain Crash Course For Beginners
-- [https://m.youtube.com/watch?v=nAmC7SoVLd8](https://m.youtube.com/watch?v=nAmC7SoVLd8) ~53 minutes
-- Covers: LangChain fundamentals, Chains, Sequential Chains, basic agent patterns
+### LangChain Crash Course for Beginners - codebasics
+- [https://www.youtube.com/watch?v=nAmC7SoVLd8](https://www.youtube.com/watch?v=nAmC7SoVLd8) ~45 minutes
+- Covers: LangChain fundamentals, chains, sequential chains, and introductory agent concepts
 
 ### LangChain ReAct Voice Agent Tutorial
 - [https://www.youtube.com/watch?v=TdZtr1nrhJg](https://www.youtube.com/watch?v=TdZtr1nrhJg) ~25 minutes
@@ -100,12 +102,12 @@
 - Covers: Security vulnerabilities in ReAct agents, tool-use security, jailbreaking techniques
 
 ### AI Agent Tool Calling Example
-- [https://www.youtube.com/watch?v=zjkBMFhNj_g](https://www.youtube.com/watch?v=zjkBMFhNj_g) ~20 minutes
+- [https://www.youtube.com/watch?v=4KXK6c6TVXQ](https://www.youtube.com/watch?v=4KXK6c6TVXQ)
 - Covers: Tool-Use Architecture, function calling mechanisms, API integration
 
-### LangChain Agents Tutorial (James Briggs)
-- [https://www.youtube.com/watch?v=nE2skSRWTTs](https://www.youtube.com/watch?v=nE2skSRWTTs) ~38 minutes
-- Covers: Tool integration, agent executor patterns, agent workflows
+### LangChain Agents Deep Dive with GPT-3.5 - James Briggs
+- [https://www.youtube.com/watch?v=jSP-gSEyVeI](https://www.youtube.com/watch?v=jSP-gSEyVeI) ~32 minutes
+- Covers: LangChain tools, agent types, AgentExecutor, calculator and SQL examples, and agent workflows
 
 ### Advanced LangChain Concepts (James Briggs)
 - [https://www.youtube.com/watch?v=RflBcK0oDH0](https://www.youtube.com/watch?v=RflBcK0oDH0) ~25 minutes
@@ -138,9 +140,10 @@
 - [https://www.youtube.com/watch?v=0ZGbIKd0XrM](https://www.youtube.com/watch?v=0ZGbIKd0XrM) ~10 minutes
 - Covers: Swarm intelligence, emergent behavior, local interactions creating global patterns
 
-### Ballerina gRPC Introduction
-- [https://www.youtube.com/watch?v=Kk4tbN8FcZ4](https://www.youtube.com/watch?v=Kk4tbN8FcZ4) ~20 minutes
-- Covers: gRPC protocol, Protocol Buffers, API-based inter-agent communication
+### Ballerina gRPC Service - Simple RPC
+- [https://ballerina.io/learn/by-example/grpc-service-simple/](https://ballerina.io/learn/by-example/grpc-service-simple/)
+- Official Ballerina documentation
+- Covers: Protocol Buffers service definitions, stub generation, listener setup, and a single-request/single-response gRPC service
 
 ---
 
@@ -150,19 +153,19 @@
 **Topics:** Vector Databases, Memory Systems, Transformer Architecture, RAG, Context Windows
 
 ### Visualizing Neural Network Internals
-- [https://youtube.com/watch?v=ChfEO8l-fas](https://youtube.com/watch?v=ChfEO8l-fas) ~18 minutes
+- [https://www.youtube.com/watch?v=ChfEO8l-fas](https://www.youtube.com/watch?v=ChfEO8l-fas) ~18 minutes
 - Covers: CNN visualization, perception pipeline, feature extraction techniques
 
 ### Attention in Transformers, Visually Explained
-- [https://youtu.be/eMlx5fFNoYc](https://youtu.be/eMlx5fFNoYc) ~25 minutes
+- [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc) ~25 minutes
 - Covers: Transformer attention mechanism, "lost in the middle" effect, multi-headed self-attention
 
 ### RAG from Scratch - Video Playlist
-- [https://youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x](https://youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) ~5-10 minutes per video
+- [https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) ~5-10 minutes per video
 - Covers: Query translation, RAPTOR hierarchical retrieval, ColBERT embeddings, advanced RAG techniques
 
 ### How to Add Memory to LangGraph Agents
-- [https://youtube.com/watch?v=wKeFV11Uvds](https://youtube.com/watch?v=wKeFV11Uvds) ~35 minutes
+- [https://www.youtube.com/watch?v=wKeFV11Uvds](https://www.youtube.com/watch?v=wKeFV11Uvds) ~35 minutes
 - Covers: Persistent memory with PostgreSQL + pgvector, long-term vs short-term memory architectures
 
 ---
@@ -173,15 +176,15 @@
 **Topics:** Stateful Orchestration, ReAct Pattern, Logic Trees, State Machines, LangGraph
 
 ### LangGraph Tutorial 1 - Building Stateful Multi-AI Agents
-- [https://www.youtube.com/watch?v=YOUR_URL_1](https://www.youtube.com/watch?v=YOUR_URL_1) ~40 minutes
+- [https://www.youtube.com/watch?v=gqvFmK7LpDo](https://www.youtube.com/watch?v=gqvFmK7LpDo) ~40 minutes
 - Covers: State machine fundamentals, graph-based workflows, multi-agent coordination with LangGraph
 
 ### LangGraph Tutorial 2 - Multi AI Agents with External Tools
-- [https://www.youtube.com/watch?v=YOUR_URL_2](https://www.youtube.com/watch?v=YOUR_URL_2) ~27 minutes
+- [https://www.youtube.com/watch?v=b2iM9bPdAEs](https://www.youtube.com/watch?v=b2iM9bPdAEs) ~27 minutes
 - Covers: Tool integration in stateful agents, external API calls, state persistence
 
 ### Agentic AI with LangGraph and MCP Crash Course
-- [https://www.youtube.com/watch?v=YOUR_URL_3](https://www.youtube.com/watch?v=YOUR_URL_3) ~147 minutes
+- [https://www.youtube.com/watch?v=dIb-DujRNEo](https://www.youtube.com/watch?v=dIb-DujRNEo) ~147 minutes
 - Covers: Model Context Protocol integration, advanced LangGraph patterns, production deployment
 
 ### LangGraph Crash Course with Code Examples
@@ -189,7 +192,7 @@
 - Covers: StateGraph fundamentals, conditional routing, state transitions, debugging
 
 ### Development with Large Language Models
-- [https://www.youtube.com/watch?v=YOUR_URL_5](https://www.youtube.com/watch?v=YOUR_URL_5) ~150 minutes
+- [https://www.youtube.com/watch?v=xZDB1naRUlk](https://www.youtube.com/watch?v=xZDB1naRUlk) ~150 minutes
 - Covers: LLM application development, prompt engineering for stateful systems, error handling
 
 ---
@@ -204,19 +207,19 @@
 - Covers: NVIDIA NIM optimization, 3× latency reduction, TensorRT acceleration for RAG pipelines
 
 ### Getting Started with LangGraph
-- [https://www.youtube.com/watch?v=YOUR_URL_2](https://www.youtube.com/watch?v=YOUR_URL_2) ~40 minutes
+- [https://www.youtube.com/watch?v=gqvFmK7LpDo](https://www.youtube.com/watch?v=gqvFmK7LpDo) ~40 minutes
 - Covers: State schema design, TypedDict patterns, StateGraph basics
 
 ### Building Multi AI Agents Chatbots
-- [https://www.youtube.com/watch?v=YOUR_URL_3](https://www.youtube.com/watch?v=YOUR_URL_3) ~27 minutes
+- [https://www.youtube.com/watch?v=b2iM9bPdAEs](https://www.youtube.com/watch?v=b2iM9bPdAEs) ~27 minutes
 - Covers: Conditional routing, tool integration, chatbot workflows with LangGraph
 
-### Agentic AI Crash Course
-- [https://www.youtube.com/watch?v=YOUR_URL_4](https://www.youtube.com/watch?v=YOUR_URL_4) ~147 minutes
+### Agentic AI with LangGraph and MCP Crash Course
+- [https://www.youtube.com/watch?v=dIb-DujRNEo](https://www.youtube.com/watch?v=dIb-DujRNEo) ~147 minutes
 - Covers: Error handling, state persistence, Human-in-the-Loop patterns, production deployment
 
 ### Python Asynchronous Programming
-- [https://www.youtube.com/watch?v=YOUR_URL_5](https://www.youtube.com/watch?v=YOUR_URL_5) ~26 minutes
+- [https://www.youtube.com/watch?v=t5Bo1Je9EmE](https://www.youtube.com/watch?v=t5Bo1Je9EmE) ~26 minutes
 - Covers: Asyncio fundamentals, async/await syntax, parallel execution patterns
 
 
@@ -228,24 +231,25 @@
 **Topics:** State Management, Infinite Loops, Parallel Execution, Multi-Agent Coordination
 
 ### LangGraph Multi-Agent Workflows
-- [https://youtu.be/hvAPnpSfSGo](https://youtu.be/hvAPnpSfSGo) ~25 minutes
+- [https://www.youtube.com/watch?v=hvAPnpSfSGo](https://www.youtube.com/watch?v=hvAPnpSfSGo) ~25 minutes
 - Covers: Multi-agent coordination, state sharing, collaboration patterns
 
 ### Building AI Agent Systems with LangGraph
-- [https://youtu.be/5h-JBkySK34](https://youtu.be/5h-JBkySK34) ~35 minutes
+- [https://www.youtube.com/watch?v=5h-JBkySK34](https://www.youtube.com/watch?v=5h-JBkySK34) ~35 minutes
 - Covers: Tool calls, state management, agent workflow orchestration
 
 ### Building Stateful Conversational AI Agents
-- [https://youtu.be/k1OEeqknoR0](https://youtu.be/k1OEeqknoR0) ~30 minutes
+- [https://www.youtube.com/watch?v=k1OEeqknoR0](https://www.youtube.com/watch?v=k1OEeqknoR0) ~30 minutes
 - Covers: Stateful conversations, HITL workflows, state persistence
 
-### LangGraph Checkpointer - Game-Changer for AI Agents
-- [https://youtu.be/0yISjksQ8as](https://youtu.be/0yISjksQ8as) ~25 minutes
-- Covers: Checkpointer fundamentals, MemorySaver, state persistence, recovery from failures
+### How to Add Memory to LangGraph Agents
+- [https://www.youtube.com/watch?v=wKeFV11Uvds](https://www.youtube.com/watch?v=wKeFV11Uvds) ~35 minutes
+- Covers: LangGraph memory and checkpointing, persistent state, and long-term vs. short-term memory patterns
 
-### LangGraph Persistence Tutorial
-- [https://www.youtube.com/watch?v=GMaGG8UBek8](https://www.youtube.com/watch?v=GMaGG8UBek8) ~20 minutes
-- Covers: Built-in persistence, thread management, fault tolerance, time travel replay
+### LangGraph Persistence
+- [https://docs.langchain.com/oss/python/langgraph/persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+- Official LangGraph documentation
+- Covers: Checkpoints, threads, conversational memory, fault-tolerant recovery, pending writes, and time-travel replay
 
 ---
 
@@ -266,25 +270,25 @@
 - [https://www.youtube.com/watch?v=pMjwgKqMzi8](https://www.youtube.com/watch?v=pMjwgKqMzi8) ~52 minutes
 - Covers: Cypher fundamentals, pattern matching, MERGE operations, multi-hop traversals
 
-### Neo4j and Cypher Overview
-- [https://www.youtube.com/watch?v=uZqGKg0ad7k](https://www.youtube.com/watch?v=uZqGKg0ad7k) ~35 minutes
-- Covers: Property graph model, relationship types, node labels, graph design patterns
+### Get Started with Python, Flask, and Neo4j
+- [https://www.youtube.com/watch?v=uZqGKg0ad7k](https://www.youtube.com/watch?v=uZqGKg0ad7k)
+- Covers: Connecting a Flask application to Neo4j and performing introductory graph-database operations from Python
 
 ### RAG From Scratch - Complete Course
 - [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~3.5 hours
 - Covers: RAG fundamentals, graph databases in RAG architectures, LangChain integration
 
 ### Query Structuring for Graph Databases
-- [https://youtu.be/kl6NwWYxvbM](https://youtu.be/kl6NwWYxvbM) ~8 minutes
+- [https://www.youtube.com/watch?v=kl6NwWYxvbM](https://www.youtube.com/watch?v=kl6NwWYxvbM) ~8 minutes
 - Covers: Natural language to Cypher query translation, LangChain + Neo4j integration
 
 ### Named Entity Recognition with spaCy
 - [https://www.youtube.com/watch?v=ytAyCO-n8tY](https://www.youtube.com/watch?v=ytAyCO-n8tY) ~18 minutes
 - Covers: NER fundamentals, entity extraction, entity type classification
 
-### Custom NER with spaCy
-- [https://www.youtube.com/watch?v=sqDHBH9IjRU](https://www.youtube.com/watch?v=sqDHBH9IjRU) ~38 minutes
-- Covers: Custom NER training, dependency parsing for relationship extraction
+### How spaCy's Entity Recognition Model Works
+- [https://www.youtube.com/watch?v=sqDHBH9IjRU](https://www.youtube.com/watch?v=sqDHBH9IjRU)
+- Covers: Incremental parsing, Bloom embeddings, convolutional neural networks, and spaCy NER architecture
 
 ---
 
@@ -322,4 +326,3 @@
 ### Learn to Build Graph Databases with Neo4j
 - [https://www.youtube.com/watch?v=_IgbB24scLI](https://www.youtube.com/watch?v=_IgbB24scLI) ~5 hours
 - Covers: Neo4j fundamentals, Cypher optimization, performance best practices, advanced patterns
-

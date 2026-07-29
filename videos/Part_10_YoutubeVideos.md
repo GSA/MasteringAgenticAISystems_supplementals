@@ -1,4 +1,6 @@
-# Part 10: Human Feedback, Alignment, and Integration - YouTube Video Resources
+# Part 10: Human Feedback, Alignment, and Integration - Video and Learning Resources
+
+> **Catalog note:** A hyperlink means a resource is currently assigned; it does not by itself guarantee that every title, runtime, or scope claim has been independently verified. Entries without a hyperlink are unverified discovery candidates. See [README.md](README.md) and [video_resource_status.csv](video_resource_status.csv) for status and provenance.
 
 ## Table of Contents
 
@@ -191,19 +193,15 @@
 
 **Topics:** RLHF and human feedback integration, Approval workflows, Interrupt patterns, Active learning, Annotation infrastructure, Agent frameworks (LangChain, LangGraph), Guardrails and policy enforcement, Explainability and audit trails
 
-### Tornado Human-in-the-Loop ML Tool Demo
-- [https://www.youtube.com/watch?v=zBe6b_vxs_I](https://www.youtube.com/watch?v=zBe6b_vxs_I)
-- Covers: Real-world HITL workflow with 1300 image labeling iterations
-
 ### Deep Dive into LLMs like ChatGPT
 - [https://www.youtube.com/watch?v=7xTGNNLPyMI](https://www.youtube.com/watch?v=7xTGNNLPyMI)
 - Andrej Karpathy
 - ~3.5 hours (RLHF section at 02:48:26)
 - Covers: Comprehensive RLHF overview
 
-### LangChain HITL Breakpoints Tutorial
-- [https://www.youtube.com/watch?v=Za8CrPqQxpA](https://www.youtube.com/watch?v=Za8CrPqQxpA)
-- Covers: Practical approval workflow implementation
+### LangGraph Persistence for Human-in-the-Loop Workflows
+- [https://www.youtube.com/watch?v=9BPCV5TYPmg](https://www.youtube.com/watch?v=9BPCV5TYPmg)
+- Covers: Checkpointing and persistence that allow a workflow to pause for human approval or edits and resume from saved state
 
 ### DeepLearning.AI RLHF Course
 - Covers: Hands-on Llama 2 with human feedback

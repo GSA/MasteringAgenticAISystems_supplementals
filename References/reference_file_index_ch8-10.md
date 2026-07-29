@@ -1,4 +1,7 @@
 # Reference File Index: Chapters 8-10
+
+> **Historical index notice:** This file is a research-stage snapshot. Its counts, paths, exam weights, and processing labels may not match the current repository or current certification blueprint. Use `make inventory` for the current file inventory.
+
 ## Operations & Governance Domain
 
 **Generated:** 2025-11-08
@@ -33,7 +36,7 @@
 
 ## Chapter 8: Run, Monitor, and Maintain
 
-**Location:** `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 8 - Run, Monitor, and Maintain/`
+**Location:** `References/Chapter 8 - Run, Monitor, and Maintain/`
 **Total Files:** 16 (9 .md + 7 .pdf)
 **Topics Covered:** Monitoring, logging, performance tuning, model updates, troubleshooting
 
@@ -124,7 +127,7 @@
 
 ## Chapter 9: Safety, Ethics, and Compliance
 
-**Location:** `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 9 - Safety, Ethics, and Compliance/`
+**Location:** `References/Chapter 9 - Safety, Ethics, and Compliance/`
 **Total Files:** 121 (111 .md + 10 .pdf)
 **Topics Covered:** Guardrails, bias mitigation, privacy, regulatory compliance, alignment
 **Special Feature:** Comprehensive NVIDIA NeMo Guardrails documentation (102 .md files)
@@ -221,7 +224,7 @@
 
 ### Nemo_Guardrail Subdirectory (102 .md files, 53 subdirectories)
 
-**Location:** `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 9 - Safety, Ethics, and Compliance/Nemo_Guardrail/`
+**Location:** `References/Chapter 9 - Safety, Ethics, and Compliance/Nemo_Guardrail/`
 
 This directory contains the complete NVIDIA NeMo Guardrails documentation, organized into:
 
@@ -345,7 +348,7 @@ The 102 markdown files in Nemo_Guardrail comprehensively support:
 
 ## Chapter 10: Human-AI Interaction and Oversight
 
-**Location:** `/Users/tamnguyen/Documents/GitHub/book1/references/Chapter 10 - Human-AI Interaction and Oversight/`
+**Location:** `References/Chapter 10 - Human-AI Interaction and Oversight/`
 **Total Files:** 13 (7 .md + 6 .pdf)
 **Topics Covered:** UI design, feedback loops, explainability, human oversight patterns
 
@@ -418,7 +421,7 @@ The 102 markdown files in Nemo_Guardrail comprehensively support:
 
 ## Exam Study Guide
 
-**Location:** `/Users/tamnguyen/Documents/GitHub/book1/guides/nvt-study-guide-new-agentic-ai-cert-exam-4230000-1.pdf`
+**Location:** `cert_mapping/nvt-study-guide-new-agentic-ai-cert-exam-4230000-1.pdf`
 **Size:** 514.8 KB (11 pages)
 **Content:** Official NVIDIA certification exam blueprint
 

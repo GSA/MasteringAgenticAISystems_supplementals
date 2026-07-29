@@ -1,12 +1,12 @@
 # Mastering Agentic AI Systems - Study Plan
 
-This study plan provides structured guidance for mastering all 86 theory chapters of the textbook within a 4-month (120-day) intensive study program. (18 practice chapters are available separately in the labs/ directory). Each chapter includes:
+This study plan provides structured guidance for the 89 chapter sections included below within a 4-month (120-day) intensive study program. Additional practice materials are available in the `labs/` directory. Each chapter includes:
 
 ---
 
 ## Table of Contents
 
-### Part 1: Agent Fundamentals (11 chapters)
+### Part 1: Agent Fundamentals (10 chapters)
 - [1.1A: UI Foundations](#part-1-chapter-11a-ui-foundations)
 - [1.1B: Human-in-the-Loop Patterns and Accessible Design](#part-1-chapter-11b-human-in-the-loop-patterns-and-accessible-design)
 - [1.2: Core Patterns](#part-1-chapter-12-core-patterns)
@@ -17,7 +17,6 @@ This study plan provides structured guidance for mastering all 86 theory chapter
 - [1.6: Stateful Orchestration - Pitfalls, Integration, and Synthesis](#part-1-chapter-16-stateful-orchestration---pitfalls-integration-and-synthesis)
 - [1.7A: Relational Reasoning with Knowledge Graphs](#part-1-chapter-17a-relational-reasoning-with-knowledge-graphs)
 - [1.7B: Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration](#part-1-chapter-17b-relational-reasoning-with-knowledge-graphs---hybrid-ragkg-integration)
-- [1.8: Agent Resilience and Synthesis](#part-1-chapter-18-agent-resilience-and-synthesis)
 
 ### Part 2: Framework & Tool Integration (9 chapters)
 - [2.1: Framework Landscape](#part-2-chapter-21-framework-landscape)
@@ -30,10 +29,9 @@ This study plan provides structured guidance for mastering all 86 theory chapter
 - [2.8: Error Handling and Resilience](#part-2-chapter-28-error-handling-and-resilience)
 - [2.9: Streaming and Real-Time Responses](#part-2-chapter-29-streaming-and-real-time-responses)
 
-### Part 3: Evaluation & Optimization (12 chapters)
+### Part 3: Evaluation & Optimization (11 chapters)
 - [3.1A: Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts](#part-3-chapter-31a-implement-evaluation-pipelines-and-task-benchmarks---introduction-motivation-and-core-concepts)
 - [3.1B: Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration](#part-3-chapter-31b-implement-evaluation-pipelines-and-task-benchmarks---custom-metrics-and-cicd-integration)
-- [3.1C: Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design](#part-3-chapter-31c-implement-evaluation-pipelines-and-task-benchmarks---independent-practice-and-comprehensive-system-design)
 - [3.2: Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor](#part-3-chapter-32-compare-agent-performance-across-tasks-and-datasets---multi-benchmark-evaluation-and-statistical-rigor)
 - [3.3: Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering](#part-3-chapter-33-web-navigation-and-interaction-benchmarks---web-agent-evaluation-and-multi-hop-question-answering)
 - [3.4: Tune Parameters](#part-3-chapter-34-tune-parameters)
@@ -68,20 +66,23 @@ This study plan provides structured guidance for mastering all 86 theory chapter
 - [5.12: Learning-Based Decision Making](#part-5-chapter-512-learning-based-decision-making)
 - [5.13: Hybrid Decision Systems](#part-5-chapter-513-hybrid-decision-systems)
 
-### Part 6: Retrieval-Augmented Generation (RAG) (9 chapters)
+### Part 6: Retrieval-Augmented Generation (RAG) (11 chapters)
 - [6.1A: RAG Chunking and Embeddings](#part-6-chapter-61a-rag-chunking-and-embeddings)
-- [6.1C: RAG Implementation](#part-6-chapter-61c-rag-implementation)
 - [6.2A: Vector Database Selection](#part-6-chapter-62a-vector-database-selection)
 - [6.2B: Production Vector Database Deployment](#part-6-chapter-62b-production-vector-database-deployment)
 - [6.3A: ETL Fundamentals](#part-6-chapter-63a-etl-fundamentals)
 - [6.3B: ETL Load and Integration](#part-6-chapter-63b-etl-load-and-integration)
 - [6.4: Data Quality Fundamentals](#part-6-chapter-64-data-quality-fundamentals)
+- [6.4B: Data Quality Practice](#part-6-chapter-64b-data-quality-practice)
 - [6.5: Production RAG Architecture](#part-6-chapter-65-production-rag-architecture)
+- [6.5B: Production RAG Practice](#part-6-chapter-65b-production-rag-practice)
+- [6.6A: Reranking Implementation](#part-6-chapter-66a-reranking-implementation)
 - [6.6: Query Decomposition and Adaptive Retrieval](#part-6-chapter-66-query-decomposition-and-adaptive-retrieval)
 
-### Part 7: NVIDIA NeMo Framework & Optimization (7 chapters)
+### Part 7: NVIDIA NeMo Framework & Optimization (8 chapters)
 - [7.1A: NVIDIA NeMo Framework and Six Rail Types](#part-7-chapter-71a-nvidia-nemo-framework-and-six-rail-types)
 - [7.1B: Colang DSL, NIM Integration, and Misconceptions](#part-7-chapter-71b-colang-dsl-nim-integration-and-misconceptions)
+- [7.2A: Local Development Setup and API Integration](#part-7-chapter-72a-local-development-setup-and-api-integration)
 - [7.2: Performance Monitoring & Optimization](#part-7-chapter-72-performance-monitoring--optimization)
 - [7.3: Agent Toolkit](#part-7-chapter-73-agent-toolkit)
 - [7.4: Quantization Fundamentals](#part-7-chapter-74-quantization-fundamentals)
@@ -105,12 +106,14 @@ This study plan provides structured guidance for mastering all 86 theory chapter
 - [9.7: GDPR Foundations](#part-9-chapter-97-gdpr-foundations)
 - [9.8: Standards and Frameworks for AI Governance](#part-9-chapter-98-standards-and-frameworks-for-ai-governance)
 
-### Part 10: Human-in-the-Loop & Integration (5 chapters)
+### Part 10: Human-in-the-Loop & Integration (7 chapters)
 - [10.1: Conversational UI](#part-10-chapter-101-conversational-ui)
 - [10.2: Proactive Agents](#part-10-chapter-102-proactive-agents)
 - [10.3A: RLHF Methodology](#part-10-chapter-103a-rlhf-methodology)
+- [10.3B: RLHF Pitfalls and Red Teaming](#part-10-chapter-103b-rlhf-pitfalls-and-red-teaming)
 - [10.4: Human-in-the-Loop](#part-10-chapter-104-human-in-the-loop)
 - [10.5: Human-over-the-Loop](#part-10-chapter-105-human-over-the-loop)
+- [10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)](#part-10-chapter-106-integration-feedback-calibration-explainability-controllability-consistency)
 
 ---
 
@@ -568,10 +571,10 @@ Addresses when and how to combine vector RAG with knowledge graph traversal thro
 Total Hours: 1.7 (1.19 hrs reading, 0.51 hrs active learning)
 
 **Key Concepts**:
-- Vector RAG, Graph-Enhanced RAG, Retrieval-Augmented Knowledge Graphs, Vector Store, Semantic Search   
+- Vector RAG, Graph-Enhanced RAG, Retrieval-Augmented Knowledge Graphs, Vector Store, Semantic Search
 - Knowledge Graph Traversal, Knowledge Graph Entity Traversal, Graph as Memory Backend, Graph Projections for Analytics, Temporal Graph Management, Monitoring Graph Health, Schema Evolution Without Breaking Changes, Data Quality and Entity Reconciliation
 - Query Complexity Analysis, Query Pattern Analysis, Simple Factual Queries, Multi-Hop Relational Queries, Hybrid Queries, Parallel Querying
-- Entity Linking Bridge, Entity Type Filtering, Relationship Connection Proving, Result Merging and Ranking, Policy Rule Understanding                                             
+- Entity Linking Bridge, Entity Type Filtering, Relationship Connection Proving, Result Merging and Ranking, Policy Rule Understanding
 - Semantic vs Relational Strength Matching, Compliance Domain Requirements, Performance Trade-offs, Semantic Coverage, Relational Accuracy, Index Optimization, Scaling Challenges
 - Graph-Enhanced Tool Invocation, Multi-Agent Coordination via Knowledge Graphs, ReAct Pattern Enhancement, Plan-and-Execute Graph Benefits
 - Shared Memory Complement, Temporal Context, Memory Tiering, Three-Tier Architecture, Entity-Centric Recall
@@ -1384,7 +1387,7 @@ Total Hours: 9.2 (6.4 hrs reading, 2.8 hrs active learning)
 
 **Key Concepts**:
 - Tracing & Instrumentation Basics: Span, Thought-Action-Observation Cycle, OpenTelemetry Semantic Conventions, Hierarchical Trace Structure
-- Instrumentation Levels: Workflow-Level Instrumentation, Agent-Level Instrumentation, Tool-Level Instrumentation         
+- Instrumentation Levels: Workflow-Level Instrumentation, Agent-Level Instrumentation, Tool-Level Instrumentation
 - Data Collection & Metrics: Temporal Data, Token Consumption Metrics, State Transitions, Concurrency Information
 - Visualization & Analysis Tools: Timeline Views, Hierarchical Exploration, Error Highlighting, Comparison Views, Filtering and Search Capabilities
 - Failure Categories: Tool Selection Failures, Parameter Generation Failures, Response Interpretation Failures, State Management Failures, Hallucination Detection, Expected Errors, Unexpected Errors, Context
@@ -1397,7 +1400,7 @@ Consistency Checking, Confidence Score Propagation, Step-Level Verifiers, Formal
 - Domain-Specific Verification: Mathematical Reasoning Inspection, Logical Reasoning and Fallacy Detection, Multi-Hop Reasoning in Knowledge Graphs, Multi-Agent Reasoning and Coordination
 - Reasoning Quality Attributes: Faithfulness, Coherence, Grounding, Path Efficiency, Confidence Calibration
 - Infrastructure & Sampling: OpenTelemetry SDK, OpenTelemetry Collector, Trace Sampling, Cross-Agent Trace Correlation, Historical Trace Analysis, Automated Alerting
-- System Characteristics: Non-Deterministic Reasoning  
+- System Characteristics: Non-Deterministic Reasoning
 
 **Key Questions**:
 1. How does trace analysis address debugging challenges unique to agentic AI systems?
@@ -1447,7 +1450,7 @@ Total Hours: 5.3 (3.7 hrs reading, 1.6 hrs active learning)
 - Documentation & Quality: Documentation Root Cause, Documentation Priority, Bidirectional Relationship, Specification Clarity Impact, Parameter Documentation, Tool Taxonomy Organization, Standardization Consistency
 - Continuous Improvement: Audit Data-Driven Improvement, Closing the Loop
 - Workflow Validation: Data Flow Validation, Sequence Correctness, State Consistency, Idempotency Verification, Race Condition Detection, Dependency Relationships, Multi-Agent Synchronization
-- Case Study: Initial Failure Rate, Root Cause, Workflow-Level Problem, Solution Implementation, Parameter Grounding Issue, Results 
+- Case Study: Initial Failure Rate, Root Cause, Workflow-Level Problem, Solution Implementation, Parameter Grounding Issue, Results
 
 **Key Questions**:
 1. Why does Chapter 3.7 distinguish between syntactic and semantic validation separately?
@@ -1493,7 +1496,7 @@ Total Hours: 4.5 (3.2 hrs reading, 1.3 hrs active learning)
 - Metrics & Measurement: Exact Match Metric, In-Order Match Metric, Session-Level Metrics, Node-Level Metrics, Berkeley Function Calling Leaderboard (BFCL) Metrics, Trajectory Precision, Trajectory Recall, Step Utility Score, Tool Execution Success Rate
 - Ground Truth & Reference: Semantic Gap, Reference Trajectory
 - Monitoring & Instrumentation: Action Logging
-- Common Pitfalls & Fallacies: Single Metric Fallacy, Exact Match Trap, Parameter Validation Without Semantic Grounding, Averaging Away Diagnostic Information, Context Dependence Ignorance, Coverage Gap in Test Data, Missing Production Monitoring, Error Recovery Blind Spots 
+- Common Pitfalls & Fallacies: Single Metric Fallacy, Exact Match Trap, Parameter Validation Without Semantic Grounding, Averaging Away Diagnostic Information, Context Dependence Ignorance, Coverage Gap in Test Data, Missing Production Monitoring, Error Recovery Blind Spots
 
 **Key Questions**:
 1. How does action accuracy differ from task success rate, and why measure both?
@@ -4483,7 +4486,7 @@ Total Hours: 8.1 (5.67 hrs reading, 2.43 hrs active learning)
 - Chapter 8 (Observability and Anomaly Detection)
 - Chapter 3 (Agent Architecture and Tool Invocation)
 
-## Part 10, Sections 10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)
+## Part 10, Chapter 10.6: Integration (Feedback, Calibration, Explainability, Controllability, Consistency)
 
 This integration chapter synthesizes five foundational capabilities—feedback integration, calibrated confidence, explainability, controllability, and consistent behavior—that work synergistically to create trustworthy human-AI collaborative systems. It covers feedback pipelines incorporating corrections into both immediate context and parametric knowledge, techniques for aligning stated confidence with actual reliability, explainability mechanisms serving diverse stakeholders, controllability infrastructure preserving human authority, and multi-method drift detection ensuring consistent production performance.
 

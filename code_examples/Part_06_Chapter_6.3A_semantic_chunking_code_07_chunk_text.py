@@ -1,3 +1,11 @@
+"""Contextual chunking method for ``DataTransformer`` from code example 05."""
+
+from __future__ import annotations
+
+from typing import List
+
+
+class DataTransformer:
     def chunk_text(self, text: str) -> List[str]:
         """
         Split text into semantically coherent chunks for retrieval.

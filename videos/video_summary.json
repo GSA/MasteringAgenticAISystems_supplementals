@@ -1,0 +1,125 @@
+{
+  "generated_by": "validate_video_resources.py",
+  "source_files": 10,
+  "chapters": 91,
+  "entries": 537,
+  "linked_entries": 348,
+  "unlinked_entries": 189,
+  "entries_with_duration": 319,
+  "entries_without_duration": 218,
+  "unique_targets": 264,
+  "reused_targets": 50,
+  "targets_with_multiple_titles": 31,
+  "resolved_official_replacements": 9,
+  "verified_entries": 10,
+  "linked_targets_requiring_review": 15,
+  "unlinked_entries_with_internal_exact_title_match": 8,
+  "review_queue_entries": 204,
+  "by_part": {
+    "1": {
+      "chapters": 10,
+      "entries": 59,
+      "linked": 59,
+      "unlinked": 0,
+      "review_required": 0,
+      "verified": 0
+    },
+    "2": {
+      "chapters": 9,
+      "entries": 31,
+      "linked": 31,
+      "unlinked": 0,
+      "review_required": 0,
+      "verified": 0
+    },
+    "3": {
+      "chapters": 12,
+      "entries": 77,
+      "linked": 77,
+      "unlinked": 0,
+      "review_required": 8,
+      "verified": 0
+    },
+    "4": {
+      "chapters": 7,
+      "entries": 54,
+      "linked": 54,
+      "unlinked": 0,
+      "review_required": 2,
+      "verified": 7
+    },
+    "5": {
+      "chapters": 12,
+      "entries": 93,
+      "linked": 93,
+      "unlinked": 0,
+      "review_required": 5,
+      "verified": 2
+    },
+    "6": {
+      "chapters": 9,
+      "entries": 21,
+      "linked": 21,
+      "unlinked": 0,
+      "review_required": 0,
+      "verified": 0
+    },
+    "7": {
+      "chapters": 6,
+      "entries": 48,
+      "linked": 3,
+      "unlinked": 45,
+      "review_required": 0,
+      "verified": 0
+    },
+    "8": {
+      "chapters": 4,
+      "entries": 23,
+      "linked": 2,
+      "unlinked": 21,
+      "review_required": 0,
+      "verified": 0
+    },
+    "9": {
+      "chapters": 7,
+      "entries": 64,
+      "linked": 6,
+      "unlinked": 58,
+      "review_required": 0,
+      "verified": 1
+    },
+    "10": {
+      "chapters": 7,
+      "entries": 67,
+      "linked": 2,
+      "unlinked": 65,
+      "review_required": 0,
+      "verified": 0
+    }
+  },
+  "target_types": {
+    "youtube_video": 312,
+    "web": 29,
+    "youtube_playlist": 7
+  },
+  "hosts": {
+    "youtube.com": 319,
+    "docs.langchain.com": 7,
+    "nngroup.com": 3,
+    "slideslive.com": 3,
+    "microsoft.com": 2,
+    "deeplearning.ai": 2,
+    "ballerina.io": 1,
+    "neo4j.com": 1,
+    "watch.knowledgegraph.tech": 1,
+    "learn.deeplearning.ai": 1,
+    "dl.acm.org": 1,
+    "julien.org": 1,
+    "cvpr.thecvf.com": 1,
+    "docker.com": 1,
+    "vimeo.com": 1,
+    "vcluster.com": 1,
+    "huggingface.co": 1,
+    "sites.google.com": 1
+  }
+}
