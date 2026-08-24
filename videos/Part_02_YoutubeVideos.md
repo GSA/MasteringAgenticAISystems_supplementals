@@ -200,5 +200,5 @@
 - Covers: Streaming output, real-time responses, async agent patterns
 
 ### Python Asynchronous Programming
-- [https://www.youtube.com/watch?v=YOUR_URL](https://www.youtube.com/watch?v=YOUR_URL) ~26 minutes
+- [https://www.youtube.com/watch?v=ngXbyui-weA](https://www.youtube.com/watch?v=ngXbyui-weA) ~26 minutes
 - Covers: Asyncio fundamentals, async/await syntax, parallel execution patterns
