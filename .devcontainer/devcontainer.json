@@ -1,0 +1,33 @@
+{
+  // Devcontainer for the "Mastering Agentic AI Systems" companion repo.
+  // Lets a contributor open this repo (GitHub Codespaces or local VS Code
+  // Dev Containers) with zero local setup to read code_examples/ and run
+  // the runnable labs/ as they come online.
+  "name": "Mastering Agentic AI Systems - Supplementals",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  },
+
+  // Defensive baseline install: this repo has no root requirements.txt yet
+  // (labs/ are Markdown-only today; runnable labs are separate, in-progress
+  // work). We install a small baseline of the agentic-AI frameworks actually
+  // referenced across code_examples/ (langchain, langgraph, openai,
+  // semantic-kernel, crewai, pyautogen) plus python-dotenv for API-key
+  // handling, and then install from requirements.txt if/when one appears at
+  // the repo root - so this file keeps working unmodified once that lands.
+  "postCreateCommand": "pip install --upgrade pip && pip install langchain langchain-openai langgraph openai semantic-kernel crewai pyautogen python-dotenv pydantic jupyter && (pip install -r requirements.txt 2>/dev/null || true)",
+
+  "postAttachCommand": "echo 'Devcontainer ready. See code_examples/ for snippets and labs/ for lab guides.'"
+}

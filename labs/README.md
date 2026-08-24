@@ -2,7 +2,17 @@
 
 ## 1. What belongs here
 
-Every file in this folder should be a real, standalone, runnable lab written against [`LAB_TEMPLATE.md`](LAB_TEMPLATE.md): a learner opens it, works through a realistic scenario with guided and independent sections, and can tell for themselves — by running something, not by reading a narrated answer — whether they succeeded. The 17 legacy `Part_*.md` files currently in this folder are **examples**: prose excerpts from the book with code embedded inline, written before this template existed, kept here as source material pending replacement. They are not labs, they do not meet the rubric below, and they do not count as coverage for any chapter — a chapter with only a legacy example file listed against it is still `not started` in the status table in Section 5.
+Every file directly in this folder should be a real, standalone, runnable lab
+written against [`LAB_TEMPLATE.md`](LAB_TEMPLATE.md): a learner opens it, works
+through a realistic scenario with guided and independent sections, and can tell
+for themselves — by running something, not by reading a narrated answer — whether
+they succeeded. The 17 legacy `Part_*.md` files live under
+[`labs/archive/`](archive/), moved out of the main listing on purpose: they are
+**examples**, prose excerpts from the book with code embedded inline, written
+before this template existed, kept as source material pending replacement. They
+are not labs, they do not meet the rubric below, and they do not count as coverage
+for any chapter — a chapter with only a legacy example file listed against it is
+still `not started` in the status table in Section 5.
 
 ## 2. Design philosophy
 
@@ -32,7 +42,7 @@ Adapted, lighter-weight, from the [Carpentries lesson life cycle](https://cdh.ca
 
 | Stage | Meaning |
 |---|---|
-| `example` | Prose-with-embedded-code, not written against the template — this is where the 17 legacy files sit today, pending replacement. Not counted as chapter coverage. |
+| `example` | Prose-with-embedded-code, not written against the template — this is where the 17 legacy files sit today, under `labs/archive/`, pending replacement. Not counted as chapter coverage. |
 | `draft` | Written against `LAB_TEMPLATE.md` and passes the Section 3 rubric on inspection, but has not yet been worked through by anyone other than its author. |
 | `piloted` | At least one person other than the author has worked through the lab end-to-end and logged any issues found. |
 | `stable` | Piloted, revised in response to that feedback, and the solution has been re-verified to still run (dependencies current, tests passing). |
@@ -42,6 +52,8 @@ Adapted, lighter-weight, from the [Carpentries lesson life cycle](https://cdh.ca
 ## 5. Chapter status table
 
 One row per canonical chapter (94 total, from `cert_mapping/README.md`, Part 4 extended to include chapter 4.1). "Existing example file(s)" lists legacy files worth checking for salvageable content — being listed does **not** imply any maturity beyond `example`; per Section 1, legacy files never count as coverage on their own.
+
+**Path note:** filenames below are bare (e.g. `Part_01_Chapter_1.1_Labs.md`) — every legacy example file actually lives under [`labs/archive/`](archive/), so that filename is at `labs/archive/Part_01_Chapter_1.1_Labs.md`. They were moved there deliberately, out of the main `labs/` listing, so a contributor browsing `labs/` sees real labs and the template first, not 17 files that aren't labs.
 
 ### Part 1
 

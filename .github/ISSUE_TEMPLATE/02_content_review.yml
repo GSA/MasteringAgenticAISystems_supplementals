@@ -1,0 +1,124 @@
+name: "Instructional Content Review"
+description: Review chapter text, a slide deck, or a quiz/practice test for accuracy and clarity.
+title: "[Content Review]: "
+labels:
+  - "track:content-review"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reviewing instructional content! Careful review of chapter text, slides, and
+        quizzes/practice tests keeps this material accurate and useful for exam candidates.
+
+        **Before you start:**
+        - Keep each pull request to roughly 20 changed items or fewer — see [CONTRIBUTING.md](../../CONTRIBUTING.md) for how this applies to content review (e.g. splitting a long chapter review into sections).
+        - Questions? Check [SUPPORT.md](../../SUPPORT.md) before opening a new issue.
+
+  - type: markdown
+    attributes:
+      value: |
+        **How this review happens:** Review is conducted openly in this GitHub issue thread,
+        working through a review checklist (accuracy of technical claims, currency of tooling/
+        model references, clarity, consistency with other chapters, and — for quizzes/tests —
+        correctness of the answer key). Post your findings as comments here as you go, and a
+        maintainer or the original author responds inline. The possible outcomes are **accept**,
+        **minor revisions**, or **major revisions** — content is never simply rejected outright;
+        it goes back for revision instead.
+
+  - type: dropdown
+    id: artifact-type
+    attributes:
+      label: Artifact type
+      description: What kind of content are you reviewing?
+      options:
+        - "Chapter text"
+        - "Slide deck"
+        - "Quiz"
+        - "Simulated/practice test"
+    validations:
+      required: true
+
+  - type: input
+    id: chapter-part
+    attributes:
+      label: Chapter / Part
+      description: >
+        Which chapter or Part does this artifact cover? Use the book's numbering (e.g. "Part 4,
+        Chapter 4.6") or, for quizzes/simulated tests spanning multiple chapters, name the range
+        or the source file.
+      placeholder: "e.g. Part 9, Chapter 9.3 — or quizzes_ver20JUN26.md, Chapters 9.1-9.8"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Review scope and known concerns
+      description: >
+        What specifically prompted this review? A suspected inaccuracy, an outdated tool/model
+        reference, unclear explanations, a broken quiz answer, or a general first-pass review?
+        Link to the specific file(s) if you can.
+      placeholder: |
+        Reviewing slides/Part_04_Chapter_4.3.pptx for accuracy against current LangGraph APIs;
+        also spot-checking that the quiz answer key in quizzes_ver20JUN26.md matches the slide content.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of done
+      description: >
+        Precise, checkable completion criteria for this review.
+      placeholder: |
+        - [ ] Every technical claim in the artifact checked against current authoritative sources
+        - [ ] Any outdated tool/model/API references flagged with a suggested update
+        - [ ] For quizzes/tests: every answer key entry verified correct, with rationale
+        - [ ] Findings posted as comments in this issue thread against the review checklist
+        - [ ] Final outcome recorded on this issue: accept / minor revisions / major revisions
+        - [ ] If revisions were made, a linked PR implements them and references this issue
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated effort
+      description: >
+        Your best estimate of the time this review will take. A maintainer will apply the
+        matching `effort:` label after triage — you don't need to add it yourself.
+      options:
+        - "Small (~1-3 hours)"
+        - "Medium (~3-8 hours)"
+        - "Large (~8+ hours)"
+    validations:
+      required: true
+
+  - type: input
+    id: skills
+    attributes:
+      label: Required skills
+      description: What background does a reviewer need for this artifact?
+      placeholder: "e.g. Working knowledge of RAG architectures and current retrieval tooling; comfortable reading technical slide decks"
+    validations:
+      required: true
+
+  - type: input
+    id: exemplar
+    attributes:
+      label: Exemplar to follow
+      description: >
+        This review should follow the JOSE-style open review convention: conducted as a
+        checklist-driven GitHub issue thread rather than a private review. See the Journal of
+        Open Source Education review process for the general model this follows.
+      placeholder: "https://jose.theoj.org/about#reviewer_guidelines (review-checklist-as-issue-thread convention)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else reviewers or maintainers should know.
+    validations:
+      required: false

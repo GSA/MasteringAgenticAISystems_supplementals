@@ -1,0 +1,6 @@
+# No third-party dependencies. Standard library only.
+# Verified against Python 3.12.9. Should also run on 3.10+ (the code uses
+# `X | None` union syntax deferred via `from __future__ import annotations`),
+# but only 3.12.9 was actually run for this lab.
+#
+# Run with: python3 test_lab.py

@@ -1,0 +1,116 @@
+name: "Certification Mapping"
+description: Map a certification's exam guide to book chapters using the H/M/L/N relevance rubric in cert_mapping/.
+title: "[Cert Mapping]: "
+labels:
+  - "track:cert-mapping"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing a certification mapping! This helps readers preparing for
+        certifications beyond NVIDIA NCP-AAI find exactly which chapters matter to them.
+
+        **Before you start:**
+        - Keep each pull request to roughly 20 changed items or fewer — see [CONTRIBUTING.md](../../CONTRIBUTING.md) for how this applies to cert mapping (e.g. one PR per certification, or splitting a very large exam guide across a few PRs).
+        - Questions? Check [SUPPORT.md](../../SUPPORT.md) before opening a new issue.
+
+  - type: dropdown
+    id: certification
+    attributes:
+      label: Certification
+      description: >
+        Which certification's exam guide are you mapping? The first four already have
+        documented mappings in `cert_mapping/` (a new mapping issue for these usually means an
+        exam-guide update, not a from-scratch mapping). The Google Generative AI Leader
+        certification is the highest-priority gap — it currently has only the raw exam-guide
+        PDF and no mapping at all.
+      options:
+        - "NVIDIA NCP-AAI (already documented — update/refresh)"
+        - "AWS AIP-C01 (already documented — update/refresh)"
+        - "Databricks Generative AI Engineer Associate (already documented — update/refresh)"
+        - "Google Cloud Professional Machine Learning Engineer / PMLE (already documented — update/refresh)"
+        - "Microsoft AI-102 (already documented — update/refresh)"
+        - "Google Generative AI Leader (undocumented, PDF only, no mapping yet — see cert_mapping/google_genAI_leader.pdf)"
+        - "Other certification not yet listed (describe below)"
+    validations:
+      required: true
+
+  - type: input
+    id: other-cert
+    attributes:
+      label: If "Other certification", name it here
+      description: Leave blank if you selected one of the listed certifications above.
+      placeholder: "e.g. Certification name and vendor"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: exam-guide
+    attributes:
+      label: Official exam guide
+      description: >
+        Certification mappings must be grounded in the certification provider's official exam
+        guide / skills outline, not secondhand summaries.
+      options:
+        - label: I already have the official exam guide (PDF or webpage) for this certification.
+          required: false
+        - label: I don't have it yet but will source it from the certification provider's official site before starting the mapping.
+          required: true
+
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of done
+      description: >
+        Precise, checkable completion criteria for this mapping, per the rubric and file
+        conventions documented in `cert_mapping/README.md`.
+      placeholder: |
+        - [ ] Every knowledge item / exam objective from the official exam guide is listed
+        - [ ] Every book chapter is rated H/M/L/N against every knowledge item per cert_mapping/README.md's rubric definitions
+        - [ ] Output delivered as a CSV in cert_mapping/ following the existing column format (see e.g. cert_mapping/microsoft_AI-102.csv)
+        - [ ] A companion narrative .md summary added (see e.g. cert_mapping/google_PMLE.md) describing exam focus, key knowledge areas, and content alignment
+        - [ ] cert_mapping/README.md's certification list and coverage table updated to include the new/updated certification
+        - [ ] Source exam guide (link or filename) cited in the PR description
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated effort
+      description: >
+        Your best estimate of the time this mapping will take. A maintainer will apply the
+        matching `effort:` label after triage — you don't need to add it yourself.
+      options:
+        - "Small (~1-3 hours)"
+        - "Medium (~3-8 hours)"
+        - "Large (~8+ hours)"
+    validations:
+      required: true
+
+  - type: input
+    id: skills
+    attributes:
+      label: Required skills
+      description: What background does a contributor need to do this mapping accurately?
+      placeholder: "e.g. Familiarity with the target certification's domain, careful spreadsheet/CSV work, ability to read exam guides critically rather than skim them"
+    validations:
+      required: true
+
+  - type: input
+    id: exemplar
+    attributes:
+      label: Exemplar to follow
+      description: >
+        Link to the documented H/M/L/N rubric and file conventions your mapping should follow.
+      placeholder: "cert_mapping/README.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else reviewers should know (e.g. ambiguous knowledge items, exam guide version/date).
+    validations:
+      required: false

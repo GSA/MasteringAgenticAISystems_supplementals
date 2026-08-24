@@ -1,0 +1,23 @@
+# CODEOWNERS
+#
+# There is currently one active reviewer for this repository (see
+# GOVERNANCE.md), so every path below resolves to the same person today.
+# Per-directory entries are listed explicitly anyway, rather than relying
+# solely on the catch-all rule, so that ownership of a given track (labs,
+# certification mapping, videos, slides, code examples, repo tooling) can be
+# handed off later by changing a single line here, without having to
+# restructure this file. Patterns follow .gitignore-style globbing, matched
+# top-to-bottom with the last matching pattern taking precedence, per
+# GitHub's CODEOWNERS rules.
+
+# Default owner for anything not matched below.
+*                       @Cybonto
+
+# Per-track ownership (currently all @Cybonto; update independently as
+# ownership of each track is handed off).
+/labs/                  @Cybonto
+/cert_mapping/          @Cybonto
+/videos/                @Cybonto
+/slides/                @Cybonto
+/code_examples/         @Cybonto
+/.github/               @Cybonto

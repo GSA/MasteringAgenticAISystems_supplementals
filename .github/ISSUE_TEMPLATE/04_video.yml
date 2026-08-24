@@ -1,0 +1,109 @@
+name: "Video Library Entry/Verification"
+description: Verify existing YouTube links still work and match their description, or add new curated entries for a thin chapter.
+title: "[Video]: "
+labels:
+  - "track:video"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping maintain the video library! Links rot over time, and some chapters
+        still have thin video coverage — both are useful contributions.
+
+        **Before you start:**
+        - Keep each pull request to roughly 20 changed items or fewer — see [CONTRIBUTING.md](../../CONTRIBUTING.md) for how this applies to video work (e.g. one Part's file per PR, or splitting a large batch of new entries).
+        - Questions? Check [SUPPORT.md](../../SUPPORT.md) before opening a new issue.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task type
+      description: Is this verifying existing entries, or adding new ones?
+      options:
+        - "Verify existing entries (check links still resolve and match their description)"
+        - "Add new entries for a thin chapter"
+        - "Both"
+    validations:
+      required: true
+
+  - type: input
+    id: part-chapter
+    attributes:
+      label: Part / chapter
+      description: >
+        Which video file / Part and, if relevant, which chapter section within it are you working on?
+      placeholder: "e.g. videos/Part_07_YoutubeVideos.md, Chapter 7.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of work
+      description: >
+        For verification: list the specific links/entries you'll check (or say "all entries in
+        this file"). For new entries: describe the topic gap and roughly how many videos you
+        plan to add.
+      placeholder: |
+        Verifying all 12 entries under "Chapter 7.4 - Agent Evaluation" for broken/private/removed videos
+        and confirming each video's actual content matches its listed "Covers:" description.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of done
+      description: >
+        Precise, checkable completion criteria. See the existing format in
+        `videos/Part_01_YoutubeVideos.md` for how entries are structured (title, URL, approximate
+        length, "Covers:" line).
+      placeholder: |
+        - [ ] Every link checked: still resolves, is not private/deleted/age-restricted-without-access
+        - [ ] Each video's actual content compared against its listed "Covers:" description; description corrected if inaccurate
+        - [ ] Broken/dead links removed or replaced with a working equivalent covering the same topic
+        - [ ] New entries (if any) follow the exact existing format: title, link, approximate duration, "Covers:" summary
+        - [ ] New entries added under the correct chapter heading and Table of Contents anchor updated
+        - [ ] No duplicate entries introduced
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated effort
+      description: >
+        Your best estimate of the time this will take. A maintainer will apply the matching
+        `effort:` label after triage — you don't need to add it yourself.
+      options:
+        - "Small (~1-3 hours)"
+        - "Medium (~3-8 hours)"
+        - "Large (~8+ hours)"
+    validations:
+      required: true
+
+  - type: input
+    id: skills
+    attributes:
+      label: Required skills
+      description: What background does a contributor need for this task?
+      placeholder: "e.g. No special technical skill required for verification; for new entries, familiarity with the chapter topic to judge video quality/accuracy"
+    validations:
+      required: true
+
+  - type: input
+    id: exemplar
+    attributes:
+      label: Exemplar to follow
+      description: Link to an existing well-formatted video file to use as the formatting reference.
+      placeholder: "videos/Part_01_YoutubeVideos.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else reviewers should know.
+    validations:
+      required: false

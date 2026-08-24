@@ -37,9 +37,11 @@ Everything else in this repository is keyed to that chapter numbering.
 
 ### About `labs/`
 
-The files currently in `labs/` are prose excerpts from the chapter text that happen to
-contain worked code — not finished, standalone exercises. A real lab for every chapter
-is still to be written. If you're looking for hands-on practice today, start with
+The 17 files under [`labs/archive/`](labs/archive/) are prose excerpts from the
+chapter text that happen to contain worked code — not finished, standalone
+exercises, and moved out of the main `labs/` listing on purpose so browsing
+`labs/` shows real labs and the template first. A real lab for every chapter is
+still to be written. If you're looking for hands-on practice today, start with
 [`labs/LAB_TEMPLATE.md`](labs/LAB_TEMPLATE.md) and the reference lab it links to, which
 define what a finished lab looks like and are the standard new labs are built against.
 
@@ -96,7 +98,7 @@ as part of the PR.
 ## We're looking for help
 
 The biggest gap here is `labs/`: every chapter needs a real, hands-on lab written
-from scratch — the 17 files currently there are prose excerpts, not finished
+from scratch — the 17 files under `labs/archive/` are prose excerpts, not finished
 exercises, and none of it counts as coverage. That's the focus of this call, but
 it's not the only track. We're also looking for instructional-content reviewers
 (chapter text, slides, and quizzes — no coding required), help extending

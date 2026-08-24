@@ -1,0 +1,157 @@
+name: "New Lab"
+description: Write a new hands-on lab for a book chapter (the primary contribution track — every chapter needs one written from scratch).
+title: "[Lab]: "
+labels:
+  - "track:labs"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for volunteering to write a lab! Labs are the largest and highest-priority contribution track for this project — no real hands-on labs exist yet for most chapters, so your work here has outsized impact.
+
+        **Before you start:**
+        - Keep each pull request to roughly 20 changed items or fewer — see [CONTRIBUTING.md](../../CONTRIBUTING.md) for how this applies to labs (e.g. splitting a very long lab into a base lab plus follow-on "extension" labs).
+        - Questions about scope, formatting, or anything else? Check [SUPPORT.md](../../SUPPORT.md) before opening a new issue.
+        - A maintainer will comment to confirm the chapter/topic isn't already claimed by someone else before you start writing.
+
+  - type: input
+    id: chapter
+    attributes:
+      label: Target chapter
+      description: >
+        Which chapter (or sub-chapter, e.g. "6.5B") is this lab for? Use the numbering scheme
+        from the book's table of contents / the `labs/` and `slides/` folders (e.g. "Part 3,
+        Chapter 3.4"). If you're proposing a chapter not yet covered by any lab, say so.
+      placeholder: "e.g. Part 6, Chapter 6.5B — Production RAG"
+    validations:
+      required: true
+
+  - type: textarea
+    id: knowledge-items
+    attributes:
+      label: Knowledge items / exam skills reinforced
+      description: >
+        List the specific knowledge items, exam objectives, or learning outcomes this lab is
+        meant to reinforce. If this chapter has an entry in a certification mapping under
+        `cert_mapping/` (H-rated knowledge items are the strongest candidates), reference those.
+      placeholder: |
+        - NVIDIA NCP-AAI: "Implement retrieval-augmented generation pipelines" (H)
+        - Reinforces: chunking strategy trade-offs, retriever evaluation metrics
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: >
+        What must a learner already know or have installed before attempting this lab
+        (prior chapters/labs, software, API keys, accounts, hardware)?
+      placeholder: |
+        - Completion of Lab 6.4B (Data Quality Practice)
+        - Python 3.11+, a local Ollama install or an OpenAI-compatible API key
+        - Basic familiarity with vector databases
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: salvage
+    attributes:
+      label: Reusable content from an existing example file
+      description: >
+        Some chapters already have a non-lab example file under `labs/archive/` (e.g. narrative
+        walkthroughs, code snippets) that isn't a real structured lab yet. Check this if you've
+        identified reusable scenario or code content worth salvaging into the new lab, and name
+        the file below.
+      options:
+        - label: I've identified an existing `labs/archive/` file with reusable scenario/code content for this chapter (name it in the field below).
+          required: false
+
+  - type: input
+    id: salvage-file
+    attributes:
+      label: Existing file to salvage from (if applicable)
+      description: Path to the existing non-lab example file, if the box above is checked. Leave blank otherwise.
+      placeholder: "e.g. labs/archive/Part_06_Chapter_6.5B_Production_RAG_Practice.md"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: learner-time
+    attributes:
+      label: Estimated time for the LEARNER to complete the lab
+      description: >
+        How long should it take a student to work through the finished lab end-to-end?
+        This is distinct from how long it will take YOU to write it (see "Estimated effort" below).
+      options:
+        - "Under 30 minutes"
+        - "30-60 minutes"
+        - "1-2 hours"
+        - "2-4 hours"
+        - "4+ hours (consider splitting into multiple labs)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of done
+      description: >
+        Precise, checkable completion criteria for this lab. Be specific enough that a reviewer
+        can verify each item without guessing.
+      placeholder: |
+        - [ ] Lab follows the labs/LAB_TEMPLATE.md structure (Objectives, Scenario, Setup, We Do, You Do with a hint ladder, Self-Check, Key Points, Citation table)
+        - [ ] Lives in its own labs/<chapter-id>_<slug>/ directory with lab.md, starter.py, solution.py, test_lab.py, and requirements.txt as separate files
+        - [ ] starter.py runs/imports without error before any learner change (it's fine for it to fail its own tests until the TODOs are done)
+        - [ ] solution.py passes test_lab.py cleanly — actually run it, don't just claim it
+        - [ ] Dependencies in requirements.txt are pinned, or the file states plainly there are none
+        - [ ] Estimated learner time is validated by at least one dry run
+        - [ ] No secrets, API keys, or personal data committed
+        - [ ] Every learning objective has a row in the Citation table (objective → knowledge item → practiced-in → verified-by)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated effort (to write this lab)
+      description: >
+        Your best estimate of the time it will take YOU to research, write, and validate this lab.
+        A maintainer will apply the matching `effort:` label after triage — you don't need to add it yourself.
+      options:
+        - "Small (~1-3 hours)"
+        - "Medium (~3-8 hours)"
+        - "Large (~8+ hours)"
+    validations:
+      required: true
+
+  - type: input
+    id: skills
+    attributes:
+      label: Required skills
+      description: What background/technical skills does a contributor need to write this lab well?
+      placeholder: "e.g. Python, LangChain or LlamaIndex, vector DB basics (FAISS/Chroma), comfortable writing step-by-step technical tutorials"
+    validations:
+      required: true
+
+  - type: input
+    id: exemplar
+    attributes:
+      label: Exemplar to follow
+      description: >
+        Every lab is built against `labs/LAB_TEMPLATE.md` for structure, and
+        `labs/8.2B_circuit_breaker/lab.md` as a complete, working reference lab —
+        read that one end to end (and run `python3 test_lab.py` inside it) before
+        writing your own, so you see the expected shape, not just a description
+        of it.
+      placeholder: "labs/LAB_TEMPLATE.md and labs/8.2B_circuit_breaker/lab.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else reviewers should know (open questions, alternative approaches considered, etc.)
+    validations:
+      required: false
