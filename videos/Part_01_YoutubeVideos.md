@@ -173,15 +173,15 @@
 **Topics:** Stateful Orchestration, ReAct Pattern, Logic Trees, State Machines, LangGraph
 
 ### LangGraph Tutorial 1 - Building Stateful Multi-AI Agents
-- [https://www.youtube.com/watch?v=YOUR_URL_1](https://www.youtube.com/watch?v=YOUR_URL_1) ~40 minutes
+- [https://www.youtube.com/watch?v=gqvFmK7LpDo](https://www.youtube.com/watch?v=gqvFmK7LpDo) ~40 minutes
 - Covers: State machine fundamentals, graph-based workflows, multi-agent coordination with LangGraph
 
 ### LangGraph Tutorial 2 - Multi AI Agents with External Tools
-- [https://www.youtube.com/watch?v=YOUR_URL_2](https://www.youtube.com/watch?v=YOUR_URL_2) ~27 minutes
+- [https://www.youtube.com/watch?v=b2iM9bPdAEs](https://www.youtube.com/watch?v=b2iM9bPdAEs) ~27 minutes
 - Covers: Tool integration in stateful agents, external API calls, state persistence
 
 ### Agentic AI with LangGraph and MCP Crash Course
-- [https://www.youtube.com/watch?v=YOUR_URL_3](https://www.youtube.com/watch?v=YOUR_URL_3) ~147 minutes
+- [https://www.youtube.com/watch?v=dIb-DujRNEo](https://www.youtube.com/watch?v=dIb-DujRNEo) ~147 minutes
 - Covers: Model Context Protocol integration, advanced LangGraph patterns, production deployment
 
 ### LangGraph Crash Course with Code Examples
@@ -189,7 +189,7 @@
 - Covers: StateGraph fundamentals, conditional routing, state transitions, debugging
 
 ### Development with Large Language Models
-- [https://www.youtube.com/watch?v=YOUR_URL_5](https://www.youtube.com/watch?v=YOUR_URL_5) ~150 minutes
+- [https://www.youtube.com/watch?v=xZDB1naRUlk](https://www.youtube.com/watch?v=xZDB1naRUlk) ~150 minutes
 - Covers: LLM application development, prompt engineering for stateful systems, error handling
 
 ---
@@ -204,19 +204,19 @@
 - Covers: NVIDIA NIM optimization, 3× latency reduction, TensorRT acceleration for RAG pipelines
 
 ### Getting Started with LangGraph
-- [https://www.youtube.com/watch?v=YOUR_URL_2](https://www.youtube.com/watch?v=YOUR_URL_2) ~40 minutes
+- [https://www.youtube.com/watch?v=gqvFmK7LpDo](https://www.youtube.com/watch?v=gqvFmK7LpDo) ~40 minutes
 - Covers: State schema design, TypedDict patterns, StateGraph basics
 
 ### Building Multi AI Agents Chatbots
-- [https://www.youtube.com/watch?v=YOUR_URL_3](https://www.youtube.com/watch?v=YOUR_URL_3) ~27 minutes
+- [https://www.youtube.com/watch?v=b2iM9bPdAEs](https://www.youtube.com/watch?v=b2iM9bPdAEs) ~27 minutes
 - Covers: Conditional routing, tool integration, chatbot workflows with LangGraph
 
 ### Agentic AI Crash Course
-- [https://www.youtube.com/watch?v=YOUR_URL_4](https://www.youtube.com/watch?v=YOUR_URL_4) ~147 minutes
+- [https://www.youtube.com/watch?v=dIb-DujRNEo](https://www.youtube.com/watch?v=dIb-DujRNEo) ~147 minutes
 - Covers: Error handling, state persistence, Human-in-the-Loop patterns, production deployment
 
 ### Python Asynchronous Programming
-- [https://www.youtube.com/watch?v=YOUR_URL_5](https://www.youtube.com/watch?v=YOUR_URL_5) ~26 minutes
+- [https://www.youtube.com/watch?v=ngXbyui-weA](https://www.youtube.com/watch?v=ngXbyui-weA) ~26 minutes
 - Covers: Asyncio fundamentals, async/await syntax, parallel execution patterns
 
 
