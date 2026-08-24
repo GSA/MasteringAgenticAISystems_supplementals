@@ -32,13 +32,13 @@ Chapter,1.1,1.2,1.3,1.4,2.1,2.2,2.3,2.4,2.5,2.6,3.1,3.2,3.3,3.4,3.5,3.6,4.1,4.2,
 3.10,N,N,N,N,L,L,M,M,L,L,M,M,M,M,M,H,H,H,H,H,H,M,M,M,L,M,L,M,M,M,H,H,L,L,M,H
 4.1,N,N,N,N,N,L,N,L,M,N,N,N,N,M,N,L,H,H,H,H,H,H,H,L,L,M,H,H,M,M,M,H,N,M,N,H
 4.2,H,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,H,H,H,H,H,N,H,N,H,H,H,H,N,N,N,H,N,N,N
+4.3,H,N,N,N,N,N,M,N,M,N,L,N,N,N,M,L,M,H,H,H,H,H,M,L,N,M,H,M,L,L,L,H,M,N,N,H
 4.4,N,N,N,L,L,L,L,M,L,M,L,L,M,M,M,M,H,H,H,H,H,H,M,M,M,M,H,M,M,M,H,H,H,L,H,H
 4.5,H,N,N,N,N,N,N,N,M,N,N,N,N,N,H,N,H,H,H,H,H,M,M,L,L,L,M,L,L,L,M,H,M,L,L,H
 4.6,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,H,H,H,H,H,H,M,M,M,M,M,M,M,M
 4.7,H,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,H,H,M,M,M,L,H,M,M,M,M,H,H,M,M,L,M,M,M,M
 5.1,H,M,H,M,M,M,M,M,H,M,M,H,M,M,M,L,M,M,M,M,M,L,H,M,M,M,M,M,L,L,L,M,M,L,L,M
 5.2,N,N,N,N,N,N,N,N,N,N,L,L,M,L,L,M,L,L,L,M,L,L,H,H,M,H,H,H,H,H,L,M,L,L,L,L
-4.3,H,N,N,N,N,N,M,N,M,N,L,N,N,N,M,L,M,H,H,H,H,H,M,L,N,M,H,M,L,L,L,H,M,N,N,H
 5.3,N,N,N,N,N,N,N,N,L,M,N,M,N,M,N,H,M,M,M,H,M,L,H,N,N,H,H,M,M,M,L,H,M,M,M,M
 5.4,N,N,N,N,N,N,N,N,N,N,N,N,M,N,N,N,N,N,N,N,N,N,M,M,M,H,M,M,M,M,N,N,M,N,N,N
 5.5,N,N,N,N,N,N,N,N,N,N,L,N,N,L,M,M,N,N,N,N,N,N,M,L,M,M,M,L,L,M,N,N,N,N,N,N
