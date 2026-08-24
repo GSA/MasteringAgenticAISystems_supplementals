@@ -1,105 +1,46 @@
 # Call for Collaborators
 
-<!--
-STATUS: DRAFT — DO NOT PUBLISH YET.
-This call instructs readers to browse GitHub issues by track label and pick a
-"good first issue." As of this draft, the seed backlog described in
-_cfc/backlog/README.md exists only as local files — nothing has been posted to
-GitHub. Publishing this call before that backlog (and its milestone) is live
-means every "where to start" instruction below points at an empty tracker,
-which is worse for credibility than not publishing at all. Post the backlog
-first (see _cfc/backlog/README.md's "what happens after approval" section),
-confirm the issues and milestone are live, THEN remove this comment and
-publish. This notice is intentionally invisible in rendered Markdown as an
-HTML comment, so its presence doesn't affect the reading experience once
-someone does view the published version — but check for it before pinning.
--->
-
 ## What this project is
 
 *Mastering Agentic AI Systems* is a public-domain study guide built primarily for
 the **NVIDIA NCP-AAI (NVIDIA Certified Professional — Agentic AI)** exam, and useful
-preparation for four others besides (AWS AIP-C01, Databricks Generative AI Engineer
-Associate, Google Cloud PMLE, Microsoft AI-102). If you're studying for one of
-those, teaching a course that touches agentic AI systems, or building curriculum on
-top of this material, you're who this repository is for — and you're also who we
-need help from, because the people best placed to notice what's missing are the
-people actually using it to study.
+preparation for four others: AWS AIP-C01, Databricks Generative AI Engineer
+Associate, Google Cloud PMLE, Microsoft AI-102. If you're studying for one of
+those, teaching a course that touches agentic AI systems, building curriculum on
+top of this material, or working with Agentic AI daily, you are at the right place — and you're also who we
+need help from.
 
 This repository is a **United States government work, in the public domain within
 the US**, with copyright and related rights waived worldwide through the
 [CC0 1.0 Universal dedication](https://creativecommons.org/publicdomain/zero/1.0/).
-Every contribution — prose, code, everything — is released under that same
-dedication. We're saying this early and plainly because it's a real decision for a
-contributor, not a footnote: if you write something for this project, it enters the
-public domain, and you should be comfortable with that before you start. If you
-adapt or reuse material you wrote elsewhere, you need to actually hold the rights to
-dedicate it this way — content you don't have clear rights to isn't something we
+Every contribution is released under that same
+dedication. If you adapt or reuse material you wrote elsewhere, you need to actually hold the rights to
+contribute the material to this repository — content you don't have clear rights to isn't something we
 can accept, no matter how good it is. The exception is `videos/`: those YouTube
 links are references to third-party work, not contributions, and the dedication
 doesn't apply to them.
-
-## Why we're asking, in real numbers
-
-We audited this repository against what it's supposed to offer a reader before
-writing this call, and we're not going to soften or round the numbers:
-
-- **`labs/` has zero real coverage.** The 17 files currently in that folder are
-  prose excerpts from the chapter text that happen to contain code — not
-  standalone exercises. Every one of the book's roughly 94 chapters still needs a
-  real lab written from scratch.
-- **Slides don't exist for 28 of the book's 94 chapters** — all of Parts 7, 8, 9, and 10, 30%
-  of the book. Figures don't exist for any chapter in Parts 1 or 2 (20 chapters).
-- **Video coverage looks fine until you click.** Parts 7-10 have 203 entries
-  between them, but only 14 actually link anywhere — the rest are titles with no
-  URL.
-- **One certification is sitting half-done.** Google's "Generative AI Leader" exam
-  guide has been in this repo for a while with zero mapping work against it, and
-  it isn't even mentioned in `cert_mapping/README.md`'s list of what we cover.
-
-None of this is a crisis. It's a normal state for a project built by one person
-writing fast, and it's exactly the kind of gap that's fixable in small pieces by
-people who aren't us. That's what this call is for.
 
 ## The four tracks, in priority order
 
 ### 1. Labs — the focus of this call
 
-This is a build from zero, not a cleanup. Say it plainly to yourself before you
-pick this track: the files presently in `labs/` are bare examples, not finished
-exercises, and a real lab is needed for every chapter. You are not editing what's
-there — you're writing new material against a published template
-(`labs/LAB_TEMPLATE.md`) and a worked reference lab
-(`labs/8.2B_circuit_breaker/`) that we built, ran, and verified ourselves before
-asking anyone else to meet the same bar.
+Labs are not developed. The files presently in `labs/` are bare examples, and real labs are needed to reinforce the chapter knowledge. You will be writing new material against a published template
+(`labs/LAB_TEMPLATE.md`).
 
 **What you'd be doing:** pick a chapter, design a realistic scenario, write a
 guided ("We Do") walkthrough, an independent ("You Do") exercise with a hint
 ladder, a working solution with pinned dependencies, and an automated self-check
-the learner runs themselves. Existing example files for your chapter (if any) are
-worth reading for a reusable scenario or code fragment — not for their structure,
-which won't meet the bar.
+the learner runs themselves. Existing example files for your selected book chapter (if any) are
+worth reading for a reusable scenario or code fragment.
 
 **Skills:** Python, and whatever framework the chapter covers (LangChain,
 LangGraph, CrewAI, AutoGen, Semantic Kernel, or infrastructure tools, depending on
-the chapter).
+the chapter). You may also use similar frameworks.
 
 **Setup:** no repository-wide install step exists yet — each lab is
-self-contained with its own `requirements.txt`. Before writing one, clone the
-reference lab and run it to see the expected shape:
+self-contained with its own `requirements.txt`.
 
-```bash
-git clone <your fork>
-cd MasteringAgenticAISystems_supplementals/labs/8.2B_circuit_breaker
-python3 --version   # 3.10+
-python3 test_lab.py # confirm it runs before you model a new lab on it
-```
-
-If your repository has `.devcontainer/devcontainer.json` open in a Codespace or
-VS Code Dev Containers, Python and a baseline set of agentic-AI framework packages
-are pre-installed — no local setup needed at all.
-
-**Time:** roughly 8-12 hours for a self-contained algorithmic lab, 12-20 hours for
+**Time:** roughly 4-12 hours for a self-contained algorithmic lab, 12-20 hours for
 one needing an external service — big enough that we expect it as a sequence of
 several small pull requests, not one, and we tell you how to split it below.
 
@@ -114,41 +55,32 @@ you're signing up for. It's the former.
 ### 2. Instructional content review
 
 Three different jobs live here: fact-checking the chapter text against current
-vendor/framework documentation, reviewing slide decks for accuracy and clarity, and
-reviewing the quiz/practice-test index for chapter-mapping consistency (there's
-real, confirmed drift in several Parts). Review happens in the open, on a GitHub
-issue thread, against a checklist — and the outcome is always accept, minor
-revisions, or major revisions, never outright rejection. Your work stays visible
-either way.
+vendor/framework documentation amd latest Agentic AI knowledge, reviewing slide decks for accuracy and clarity, and
+reviewing the quiz/practice-test index for chapter-mapping consistency. Review happens in the open, on a GitHub
+issue thread, against a checklist. Your work stays visible.
 
 **Skills:** subject familiarity with the area you're reviewing; no coding required
-for slide or quiz review.
+for slide or quiz review. Your experience must reflect Agentic AI expertise. 
 
 **Time:** roughly 1-3 hours per finding for most sub-tasks.
 
-**Where to start:** issues labeled `track:content-review`.
+**Where to start:** Please contact Tam.Nguyen@gsa.gov for further details
 
 ### 3. Certification mapping
 
 Take an exam's official guide, extract its knowledge items, rate every chapter
 against every item on our H/M/L/N scale (documented in `cert_mapping/README.md`),
-and produce a CSV and summary. The natural first pick is Google's "Generative AI
-Leader" — its source exam guide is already in the repo, so the hardest part
-(finding and rights-clearing the material) is done for you.
+and produce a CSV and summary.
 
 **Skills:** careful, structured reading; no coding required.
 
-**Time:** the Generative AI Leader mapping is a multi-session project (call it
-8+ hours across a few sittings); several smaller fixes to existing mappings
-(a missing summary file, a misfiled row, a filename bug) are under an hour each.
+**Time:** all the time you need
 
 **Where to start:** issues labeled `track:cert-mapping`.
 
 ### 4. Video library
 
-Verify that existing links still work and still show what they claim (start with 9
-literally broken placeholder links we already know about — the fastest, most
-certain win in this whole call), or add new curated entries where coverage is thin.
+Verify that existing links still work and still show what they claim, or add new curated entries where coverage is thin.
 New entries need a real link, a topic line, and — a new requirement, since none of
 the 548 existing entries have one — a verification date, so link rot gets caught by
 someone other than a frustrated reader. Format follows the existing entry style,
@@ -178,26 +110,22 @@ name for what they actually did. You keep that credit; it accrues as you contrib
 more, it doesn't reset. Beyond that: the material itself, whatever depth on the
 subject you get from working through it closely enough to write or review it, and —
 for people who stick around — a path to becoming a maintainer with real merge
-authority, described in [GOVERNANCE.md](GOVERNANCE.md). That last one is one of the
-few things a volunteer project can genuinely offer, and we mean it.
+authority, described in [GOVERNANCE.md](GOVERNANCE.md). We may also issue a Certificate of Contribution to you.
 
 ## Time commitment
 
 There's no minimum. A single small fix is a complete, welcome contribution on its
-own — most people who show up to an open-source project do exactly one thing and
-that's a fine outcome, not a failure to convert them into something bigger. If
-you want to go further, a sustainable pace for most contributors is a few hours a
+own. If you want to go further, a sustainable pace for most contributors is a few hours a
 week; a full lab at that pace takes 2-4 weeks end to end, split into the smaller
 pull requests described below.
 
 ## Our capacity, stated plainly
 
 Review is one person (Tam Nguyen), at roughly 3-5 hours a week. There's no backup
-reviewer today — if that changes, it'll be because someone who contributes
-consistently gets asked to co-maintain, which is a real, open path (see
-[GOVERNANCE.md](GOVERNANCE.md)), not because of some larger team standing by. We're
-telling you this so your expectations calibrate to it: a small PR gets reviewed
-fast; if you send something huge, it waits longer, not because it's unwelcome but
+reviewer today. If that changes, it'll be because someone who contributes
+consistently gets asked to co-maintain (see
+[GOVERNANCE.md](GOVERNANCE.md)). A small PR gets reviewed
+fast. If you send something huge, it waits longer, not because it's unwelcome but
 because that's the real math of the time available. This is also why the pull
 request size guidance below isn't bureaucracy — it's how we keep the queue moving
 at all.
