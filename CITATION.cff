@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: >-
+  If you use this material, please cite it using the metadata below.
+  Contributors: see the "Contributors" section of README.md, maintained via
+  the All Contributors specification — this file records the project's
+  citable identity, not a full contributor roster.
+type: dataset
+title: "Mastering Agentic AI Systems: Supplemental Materials"
+authors:
+  - name: "GSA and contributors to MasteringAgenticAISystems_supplementals"
+url: "https://github.com/GSA/MasteringAgenticAISystems_supplementals"
+repository-code: "https://github.com/GSA/MasteringAgenticAISystems_supplementals"
+license: CC0-1.0

@@ -1,17 +1,32 @@
-## Terraform ##
-*.tfvars
-# Compiled files
-*.tfstate*
-# Module directory
-.terraform/
+# Python + content repo — corrected from a leftover Terraform/Go template
 
-## Go ##
-vendor/
-*.zip
-dist/
-release/
+## Editor / OS ##
 .DS_Store
 */.DS_Store
 /.vscode
+
+## Python ##
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+
+## Jupyter ##
+.ipynb_checkpoints/
+
+## Environment / secrets ##
+.env
+.env.local
+
+## Excluded personal working notes (not book/exam content) ##
 guides/guide_ArxivQueryOptimization.md
 guides/guide_ArxivResearch.md
+/_cfc
+/guides
+/workflows
