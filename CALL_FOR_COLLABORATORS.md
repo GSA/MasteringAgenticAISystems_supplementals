@@ -132,20 +132,19 @@ at all.
 
 ## What we will and won't accept
 
-We'll accept: new labs built against the template and rubric; content corrections
+We'll accept: new labs built against the template and rubric (we may allow some flexibility with template alignment, keeping on the values the lab provides); content corrections
 backed by evidence (a quote, a citation, a link); new or corrected certification
 mappings following the documented rubric; video entries that meet the curation
 standard once each Part's scope statement exists. We won't accept: labs that don't
-run or don't follow the template; content changes that alter a chapter's exam
+run or significantly diverges from the template; content changes that alter a chapter's exam
 scope or alignment without a maintainer discussion first (open an issue describing
 the proposed change before writing the PR — that's the discussion; no separate
 process exists); unverified or uncredited video additions; and — this one matters
 because of the licensing position above — anything you don't hold clear rights to
-dedicate to the public domain. A "no" on any of these is a scope decision stated in
-advance, not a personal judgment made up on the spot.
+dedicate to the public domain.
 
 ## How to start
-
+We recommend the following:
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md) — the full mechanics live there.
 2. Browse issues labeled with the track that interests you (`track:labs`,
    `track:content-review`, `track:cert-mapping`, `track:video`); if it's your
@@ -159,22 +158,22 @@ advance, not a personal judgment made up on the spot.
 
 Keep each pull request to roughly 20 changed items or fewer — one section,
 exercise, or code block for prose; one file or ~100 lines for code. This isn't a
-restriction so much as how we keep review fast on a small team: a PR at this size
-gets read and responded to quickly; a 2,000-line PR sits in a queue regardless of
+restriction so much as how we keep review fast on a small team. A PR at this size
+gets read and responded to quickly. A 2,000-line PR sits in a queue regardless of
 how good it is, because review quality genuinely degrades past this range (Google's
 own engineering guidance treats 100 lines as reasonable and 1,000 as too large; the
 classic Cisco/SmartBear code-review study found defect-finding drops off past
-roughly 200-400 lines and after about an hour of continuous review). A full lab
-won't fit in one PR — split it into scaffolding, then the guided section, then the
+roughly 200-400 lines and after about an hour of continuous review). Since a full lab
+won't fit in one PR, you may submit key documentations first, then the
 solution and self-check, then polish, each one mergeable on its own.
-`CONTRIBUTING.md` has the full splitting guidance. An oversized PR isn't rejected,
+`CONTRIBUTING.md` has the full splitting recommendation. An oversized PR isn't rejected,
 just slower — we'll ask you to split it if it comes to that.
 
 ## What review checks, and how fast
 
 Your PR gets checked against the definition of done stated in its issue and the
 track's rubric (for labs, the 7-line checklist in `labs/README.md`). We aim for a
-first response — even just an acknowledgment — within **3 business days**. If
+first response — even just an acknowledgment — within **3-5 business days**. If
 you've heard nothing after that, ping the issue; it happens on a small team, and a
 nudge is always welcome, never annoying.
 
