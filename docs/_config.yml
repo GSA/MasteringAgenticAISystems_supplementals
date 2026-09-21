@@ -1,0 +1,37 @@
+# GitHub Pages (Jekyll) configuration. See docs/README.md.
+title: Mastering Agentic AI Systems — Supplementals
+description: >-
+  Companion material for Mastering Agentic AI Systems: study plan, slides, quizzes,
+  practice exams, videos, code examples, and certification mappings for NVIDIA NCP-AAI
+  and four other AI certifications.
+
+# Change url and baseurl together if the repository moves or is forked.
+url: https://gsa.github.io
+baseurl: /MasteringAgenticAISystems_supplementals
+
+# Links to files elsewhere in the repository (used as {{ site.repo_blob }}/path).
+repo_blob: https://github.com/GSA/MasteringAgenticAISystems_supplementals/blob/master
+repo_tree: https://github.com/GSA/MasteringAgenticAISystems_supplementals/tree/master
+
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: Back to top
+aux_links:
+  GitHub repository: https://github.com/GSA/MasteringAgenticAISystems_supplementals
+aux_links_new_tab: true
+footer_content: >-
+  Public domain: a work of the United States government, also dedicated worldwide under
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.
+  Third-party links (videos, quizzes) are not covered by that dedication.
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
