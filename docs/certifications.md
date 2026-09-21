@@ -32,10 +32,10 @@ chapter against every knowledge item of each exam.
 | Certification | Mapping (CSV) | Exam guide / knowledge items | Chapters mapped | Items rated | Chapters with ≥1 **H** |
 |---|---|---|---:|---:|---:|
 | **NVIDIA NCP-AAI**<br>The book's primary target exam | [`nvidia_NCP-AAI.csv`]({{ site.repo_blob }}/cert_mapping/nvidia_NCP-AAI.csv) | [`nvt-study-guide-new-agentic-ai-cert-exam-4230000.pdf`]({{ site.repo_blob }}/cert_mapping/nvt-study-guide-new-agentic-ai-cert-exam-4230000.pdf) | 94 | 53 | 94 |
-| **AWS AIP-C01**<br>AWS certification exam AIP-C01 | [`aws_AIP-C01.csv`]({{ site.repo_blob }}/cert_mapping/aws_AIP-C01.csv) | [`aws_AIP-C01.pdf`]({{ site.repo_blob }}/cert_mapping/aws_AIP-C01.pdf) | 93 | 98 | 92 |
-| **Databricks GenAI Engineer Associate**<br>Databricks Generative AI Engineer Associate | [`databricks_genAI_EngAsc.csv`]({{ site.repo_blob }}/cert_mapping/databricks_genAI_EngAsc.csv) | [`databricks_genAI_EngAsc.md`]({{ site.repo_blob }}/cert_mapping/databricks_genAI_EngAsc.md) | 93 | 54 | 31 |
-| **Google Cloud PMLE**<br>Google Professional Machine Learning Engineer | [`google_PMLE.csv`]({{ site.repo_blob }}/cert_mapping/google_PMLE.csv) | [`google_PMLE.md`]({{ site.repo_blob }}/cert_mapping/google_PMLE.md) | 93 | 36 | 79 |
-| **Microsoft AI-102**<br>Microsoft AI-102 (Azure AI Engineer Associate) | [`microsoft_AI-102.csv`]({{ site.repo_blob }}/cert_mapping/microsoft_AI-102.csv) | [`microsoft_AI‑102.md`]({{ site.repo_blob }}/cert_mapping/microsoft_AI%E2%80%91102.md) | 93 | 106 | 86 |
+| **AWS AIP-C01** | [`aws_AIP-C01.csv`]({{ site.repo_blob }}/cert_mapping/aws_AIP-C01.csv) | [`aws_AIP-C01.pdf`]({{ site.repo_blob }}/cert_mapping/aws_AIP-C01.pdf) | 93 | 98 | 92 |
+| **Databricks Generative AI Engineer Associate** | [`databricks_genAI_EngAsc.csv`]({{ site.repo_blob }}/cert_mapping/databricks_genAI_EngAsc.csv) | [`databricks_genAI_EngAsc.md`]({{ site.repo_blob }}/cert_mapping/databricks_genAI_EngAsc.md) | 93 | 54 | 31 |
+| **Google Cloud PMLE**<br>Professional Machine Learning Engineer | [`google_PMLE.csv`]({{ site.repo_blob }}/cert_mapping/google_PMLE.csv) | [`google_PMLE.md`]({{ site.repo_blob }}/cert_mapping/google_PMLE.md) | 93 | 36 | 79 |
+| **Microsoft AI-102**<br>Azure AI Engineer Associate | [`microsoft_AI-102.csv`]({{ site.repo_blob }}/cert_mapping/microsoft_AI-102.csv) | [`microsoft_AI‑102.md`]({{ site.repo_blob }}/cert_mapping/microsoft_AI%E2%80%91102.md) | 93 | 106 | 86 |
 
 Each CSV has one row per chapter and one column per knowledge item, holding H, M, L, or N. Open the CSV for the
 full grid; the [Part pages]({% link curriculum/index.md %}) show, for every chapter, which certifications rate it **H**

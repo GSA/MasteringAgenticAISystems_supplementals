@@ -1,7 +1,7 @@
 ---
 title: Home
 nav_order: 1
-permalink: /home/
+permalink: /
 description: Study materials for the NVIDIA NCP-AAI Agentic AI certification and four other AI certifications.
 ---
 

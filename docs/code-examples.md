@@ -42,7 +42,7 @@ Each Part page lists its files under the chapter they belong to.
 | [Part 9]({% link curriculum/part-09.md %}) | 27 | — |
 | [Part 10]({% link curriculum/part-10.md %}) | 4 | 2 |
 
-Some files are named for chapter numbers that no longer exist in the chapter list (for example `3.1`, `4.1C`, `4.2A`,
+Some files are named for chapter numbers that are not in the current chapter list (`3.1`, `4.1C`, `4.2A`, `4.2B`,
 `10.3`); the Part pages list them separately as *Other code examples*.
 
 ## Additional worked examples

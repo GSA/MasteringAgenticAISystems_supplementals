@@ -36,15 +36,15 @@ chapters 6.1A and 6.1C) counts toward each chapter in the family.
 
 | File | Title | Chapters | Version |
 |---|---|---|---|
-| [Chapter1.1A&B\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.1A%26B_v1.0_2026_03_01.pdf) | Session 1 Reviewing Chapter 1.1 A & B | 1.1A, 1.1B | v1.0 (2026-03-01) |
-| [Chapter1.2&1.3\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.2%261.3_v1.0_2026_03_01.pdf) | Session 2 Reviewing Chapter 1.2 & 1.3 | 1.2, 1.3 | v1.0 (2026-03-01) |
-| [Chapter1.4\_1.5\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.4_1.5_v1.0_2026_03_01.pdf) | Session 3 Reviewing Chapter 1.4 & 1.5 | 1.4, 1.5 | v1.0 (2026-03-01) |
-| [Chapter1.6\_1.7A\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.6_1.7A_v1.0_2026_03_01.pdf) | Session x Reviewing Chapter 1.6 & 1.7A | 1.6, 1.7A | v1.0 (2026-03-01) |
-| [Chapter1.7B\_1.8\_v1.0\_2026\_03\_01 (1).pdf]({{ site.repo_blob }}/slides/Chapter1.7B_1.8_v1.0_2026_03_01%20%281%29.pdf) | Session x Reviewing Chapter 1.7B & 1.8 AI Community of Practice - 2026 | 1.7B, 1.8 | v1.0 (2026-03-01) |
-| [Chapter 2.1 and 2.2\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | Session x Reviewing Chapter 2.1 & 2.2 AI Community of Practice - 2026 | 2.1, 2.2 | v1.0 (2026-03-01) |
-| [Chapter2.3\_2.4\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | Week 9 Reviewing Chapter 2.3 & 2.4 AI Community of Practice - 2026 | 2.3, 2.4 | v1.0 (2026-03-01) |
-| [Chapter2.5\_2.6\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | Week 10 Reviewing Chapter 2.5 & 2.6 AI Community of Practice - 2026 | 2.5, 2.6 | v1.0 (2026-03-01) |
-| [Chapter2.7\_2.8\_2.9\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | Week 11 Reviewing Chapter 2.7, 2.8 & 2.9 AI Community of Practice - 2026 | 2.7, 2.8, 2.9 | v1.0 (2026-03-01) |
+| [Chapter1.1A&B\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.1A%26B_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 1.1A, 1.1B | 1.1A, 1.1B | v1.0 (2026-03-01) |
+| [Chapter1.2&1.3\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.2%261.3_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 1.2, 1.3 | 1.2, 1.3 | v1.0 (2026-03-01) |
+| [Chapter1.4\_1.5\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.4_1.5_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 1.4, 1.5 | 1.4, 1.5 | v1.0 (2026-03-01) |
+| [Chapter1.6\_1.7A\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter1.6_1.7A_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 1.6, 1.7A | 1.6, 1.7A | v1.0 (2026-03-01) |
+| [Chapter1.7B\_1.8\_v1.0\_2026\_03\_01 (1).pdf]({{ site.repo_blob }}/slides/Chapter1.7B_1.8_v1.0_2026_03_01%20%281%29.pdf) | Book Club session deck: chapters 1.7B, 1.8 | 1.7B, 1.8 | v1.0 (2026-03-01) |
+| [Chapter 2.1 and 2.2\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 2.1, 2.2 | 2.1, 2.2 | v1.0 (2026-03-01) |
+| [Chapter2.3\_2.4\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 2.3, 2.4 | 2.3, 2.4 | v1.0 (2026-03-01) |
+| [Chapter2.5\_2.6\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 2.5, 2.6 | 2.5, 2.6 | v1.0 (2026-03-01) |
+| [Chapter2.7\_2.8\_2.9\_v1.0\_2026\_03\_01.pdf]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | Book Club session deck: chapters 2.7, 2.8, 2.9 | 2.7, 2.8, 2.9 | v1.0 (2026-03-01) |
 | [Ch3.1A\_v20MAR26.pdf]({{ site.repo_blob }}/slides/Ch3.1A_v20MAR26.pdf) | Implement Evaluation Pipelines and Task Benchmarks | 3.1A | 20MAR26 |
 | [Ch3.1B\_v20MAR26.pdf]({{ site.repo_blob }}/slides/Ch3.1B_v20MAR26.pdf) | Implement Evaluation Pipelines -- Guided Practice | 3.1B | 20MAR26 |
 | [Ch3.2\_v20MAR26.pdf]({{ site.repo_blob }}/slides/Ch3.2_v20MAR26.pdf) | Compare Agent Performance Across Tasks and Datasets | 3.2 | 20MAR26 |
