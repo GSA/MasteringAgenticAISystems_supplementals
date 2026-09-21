@@ -31,7 +31,7 @@ was accepted; the rest were compared by hand. This is a title check only, and re
 
 ## Not found
 
-38 entries point at a video that YouTube reports as not found. Some IDs may never have existed.
+38 entries (36 unique links, since some videos are listed under more than one chapter) point at a video that YouTube reports as not found. Some were probably removed or made private, and some IDs may be mistyped.
 
 | Chapter | Entry in the source file | Link |
 |---|---|---|

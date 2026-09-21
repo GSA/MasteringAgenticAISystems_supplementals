@@ -31,7 +31,8 @@ A suggested path through the material. Adjust it to your exam date and backgroun
 5. **Practice.** Work through the [code examples]({% link code-examples.md %}) for the chapter, and the
    [lab]({% link labs.md %}) where one exists (coverage is still being built out).
 6. **Take a second pass.** Use the [slides]({% link slides.md %}) for a condensed review and the
-   [videos]({% link videos.md %}) for another explanation of the same concept.
+   [videos]({% link videos.md %}), embedded under each chapter summary on the Part pages, for another explanation of the
+   same concept.
 7. **Rehearse the exam.** Take the full-length practice exams, and use the [AI tutor]({% link ai-tutor.md %}) to
    work through what you miss.
 

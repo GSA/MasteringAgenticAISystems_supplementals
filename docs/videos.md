@@ -13,7 +13,7 @@ They are **references, not contributed material**, and the project's public-doma
 ## Watch them in context
 
 Each [Part page]({% link curriculum/index.md %}) embeds the videos for a chapter directly under that chapter's summary, in a
-collapsed **Videos** section (the same way code examples are shown). Nothing loads until you open a section. Players use
+collapsed **Videos** section (the same way code examples are shown). In current browsers nothing loads until you open a section. Players use
 YouTube's privacy-enhanced domain, and each caption gives the video's title and channel as YouTube reports them, with a link
 to watch it on YouTube. 261 videos are embedded in total.
 
