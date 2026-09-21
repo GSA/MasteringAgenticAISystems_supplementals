@@ -8,7 +8,7 @@ permalink: /curriculum/part-02/
 # Part 2 — Framework & Tool Integration
 {: .no_toc }
 
-9 chapters · 22.1 study hours allocated in the Study Plan · 4 slide decks · 23 direct video links · 66 code example files
+9 chapters · 22.1 study hours allocated in the Study Plan · 4 slide decks · 25 videos · 66 code example files
 
 <details open markdown="block">
   <summary>On this page</summary>
@@ -24,17 +24,17 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
 | 2.1 | [Framework Landscape]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-21-framework-landscape) | 2.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1jj55JTho9uPN2Mu7FwIpfc-mQe-L34q0cHoniRtOuOY/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-21---framework-landscape) | — | 3 | NV AWS GCP MS |
-| 2.2 | [LangGraph]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-22-langgraph) | 1.6 | [PDF‡]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1WyguE8MVLqdmWYRCy-0T_ZxX7B_Jcigt2r5jy80pmN0/viewform?usp=sharing) | [8]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-22---langgraph) | — | 11 | NV AWS GCP MS |
+| 2.2 | [LangGraph]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-22-langgraph) | 1.6 | [PDF‡]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1WyguE8MVLqdmWYRCy-0T_ZxX7B_Jcigt2r5jy80pmN0/viewform?usp=sharing) | [7 of 8]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-22---langgraph) | — | 11 | NV AWS GCP MS |
 | 2.3 | [LangChain]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-23-langchain) | 1.4 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/13Ecjr24F4NqLB131JaVg36h0ExKPQiqkxTlYog6n7PM/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-23---langchain) | — | 8 | NV AWS GCP MS |
-| 2.4 | [MultiAgent Frameworks]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-24-multiagent-frameworks) | 2.1 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1BwgT2tdhSe8Yv6NixzTpAbhGT2ksn5JG-10u-uEHUcQ/viewform?usp=sharing) | [3]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-24---multi-agent-frameworks) | — | 5 | NV AWS GCP MS |
+| 2.4 | [MultiAgent Frameworks]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-24-multiagent-frameworks) | 2.1 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1BwgT2tdhSe8Yv6NixzTpAbhGT2ksn5JG-10u-uEHUcQ/viewform?usp=sharing) | [2 of 3]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-24---multi-agent-frameworks) | — | 5 | NV AWS GCP MS |
 | 2.5 | [Semantic Kernel - Enterprise Framework and Plugin Architecture]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-25-semantic-kernel---enterprise-framework-and-plugin-architecture) | 1.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1qbm2AAl0XkPeTWvqInQZog1zRHNMblMmvSgbSQNLIDA/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-25---semantic-kernel) | — | 12 | NV AWS MS |
-| 2.6 | [Tool Integration and Function Calling]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-26-tool-integration-and-function-calling) | 4.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1f_7aioG1-xWk0M2bAhihuJJOx9UK2nwaaWsjcevGTek/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-26---tool-integration) | — | 4 | NV AWS GCP MS |
-| 2.7 | [Multimodal RAG - Integration of Vision, Audio, and Text]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-27-multimodal-rag---integration-of-vision-audio-and-text) | 5.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1yPrLfIsN_xeFWya-hQb0rla3c-A4I0gbbiZy_5wzQ-Y/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-27---multimodal-rag) | — | 7 | NV AWS GCP MS |
-| 2.8 | [Error Handling and Resilience]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-28-error-handling-and-resilience) | 1.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1u4hzqjpzM3hRjso7YSN6Ay-j9MCsiCRzO-zFtvTV-MU/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-28---error-handling) | — | 7 | NV AWS GCP MS |
-| 2.9 | [Streaming and Real-Time Responses]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-29-streaming-and-real-time-responses) | 2.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EVvuCnVelN44xHeVzolDx1MVwV3AJucqDsPeeHLP5DA/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-29---streaming) | — | 9 | NV AWS GCP MS |
+| 2.6 | [Tool Integration and Function Calling]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-26-tool-integration-and-function-calling) | 4.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1f_7aioG1-xWk0M2bAhihuJJOx9UK2nwaaWsjcevGTek/viewform?usp=sharing) | [1 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-26---tool-integration) | — | 4 | NV AWS GCP MS |
+| 2.7 | [Multimodal RAG - Integration of Vision, Audio, and Text]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-27-multimodal-rag---integration-of-vision-audio-and-text) | 5.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1yPrLfIsN_xeFWya-hQb0rla3c-A4I0gbbiZy_5wzQ-Y/viewform?usp=sharing) | [1 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-27---multimodal-rag) | — | 7 | NV AWS GCP MS |
+| 2.8 | [Error Handling and Resilience]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-28-error-handling-and-resilience) | 1.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1u4hzqjpzM3hRjso7YSN6Ay-j9MCsiCRzO-zFtvTV-MU/viewform?usp=sharing) | [0 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-28---error-handling) | — | 7 | NV AWS GCP MS |
+| 2.9 | [Streaming and Real-Time Responses]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-29-streaming-and-real-time-responses) | 2.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EVvuCnVelN44xHeVzolDx1MVwV3AJucqDsPeeHLP5DA/viewform?usp=sharing) | [1 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-29---streaming) | — | 9 | NV AWS GCP MS |
 
 
-**Notes.** Video counts are unique direct links in [`Part_02_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md); a chapter can list search suggestions instead of links, so a low number does not mean the chapter is skipped.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_02_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -56,6 +56,46 @@ Summaries are excerpted from [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.m
 This chapter provides a systematic decision framework for selecting among five major agent frameworks (LangGraph, LangChain, AutoGen, CrewAI, Semantic Kernel) by analyzing how their control flow models match workflow architectures, state management requirements, and collaboration patterns. Through worked examples and contrastive cases, the chapter teaches readers to evaluate frameworks analytically rather than by popularity, ensuring architectural decisions align with long-term system requirements.
 
 <details markdown="block">
+<summary>Videos (7)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/jGg_1h0qzaM" title="LangGraph Complete Course for Beginners – Complex AI Agents with Python" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=jGg_1h0qzaM">LangGraph Complete Course for Beginners – Complex AI Agents with Python</a> &middot; freeCodeCamp.org</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/RUDZZLtB08w" title="Multi-Agent AI EXPLAINED: How Magentic-One Works" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=RUDZZLtB08w">Multi-Agent AI EXPLAINED: How Magentic-One Works</a> &middot; Sam Witteveen</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/-kSOTtYzgEw" title="Getting Started with CrewAI Open Source" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=-kSOTtYzgEw">Getting Started with CrewAI Open Source</a> &middot; CrewAI</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/tnejrr-0a94" title="CrewAI Tutorial - Next Generation AI Agent Teams (Fully Local)" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=tnejrr-0a94">CrewAI Tutorial - Next Generation AI Agent Teams (Fully Local)</a> &middot; Matthew Berman</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/oum6EI7wohM" title="A Friendly Introduction to AutoGen Studio v0.4 (UI for Building AI Agents with AutoGen)" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=oum6EI7wohM">A Friendly Introduction to AutoGen Studio v0.4 (UI for Building AI Agents with AutoGen)</a> &middot; Designing With AI</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/62OI_y-KRlw" title="Migrating from COBOL with AI: A Moonshot Demo - Julia Kordick" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=62OI_y-KRlw">Migrating from COBOL with AI: A Moonshot Demo - Julia Kordick</a> &middot; WeAreDevelopers</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/QR_DkWv8VoE" title="Semantic Kernel Office Hours for US/EMEA - September 25th, 2024" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=QR_DkWv8VoE">Semantic Kernel Office Hours for US/EMEA - September 25th, 2024</a> &middot; Microsoft Reactor</div>
+</div>
+
+</details>
+
+<details markdown="block">
 <summary>Code examples (3 files)</summary>
 
 - [`Framework_Landscape_code_01_research_state_schema.py`]({{ site.repo_blob }}/code_examples/Part_02_Chapter_2.1_Framework_Landscape_code_01_research_state_schema.py)
@@ -67,6 +107,48 @@ This chapter provides a systematic decision framework for selecting among five m
 ### 2.2. LangGraph
 
 LangGraph is a framework for building agentic workflows through explicit graph architecture with nodes as computational units, edges as control flow pathways, and state as shared context. The chapter explores how graph-based design enables iterative refinement, conditional routing, and recovery from failures while establishing when LangGraph's sophistication is justified versus when simpler frameworks better match workflow requirements.
+
+<details markdown="block">
+<summary>Videos (7)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/jGg_1h0qzaM" title="LangGraph Complete Course for Beginners – Complex AI Agents with Python" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=jGg_1h0qzaM">LangGraph Complete Course for Beginners – Complex AI Agents with Python</a> &middot; freeCodeCamp.org</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/GMaGG8UBek8" title="How to add short-term memory to LangGraph ReAct agent🤖: Python &amp; Node.js — LangGraph #2" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=GMaGG8UBek8">How to add short-term memory to LangGraph ReAct agent🤖: Python &amp; Node.js — LangGraph #2</a> &middot; Code AI with Rok</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/5h-JBkySK34?list=PLfaIDFEXuae16n2TWUkKq5PgJ0w6Pkwtg" title="LangGraph: Intro" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=5h-JBkySK34">LangGraph: Intro</a> &middot; LangChain</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/04ighIjMcAI" title="Building adaptive RAG from scratch with Command-R" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=04ighIjMcAI">Building adaptive RAG from scratch with Command-R</a> &middot; LangChain</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/E2shqsYwxck" title="Building Corrective RAG from scratch with open-source, local LLMs" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=E2shqsYwxck">Building Corrective RAG from scratch with open-source, local LLMs</a> &middot; LangChain</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/wSxZ7yFbbas" title="Report mAIstro: Multi-agent research and report writing" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=wSxZ7yFbbas">Report mAIstro: Multi-agent research and report writing</a> &middot; LangChain</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/4EXOmWeqXRc" title="Optimization of LLM Systems with DSPy and LangChain/LangSmith" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=4EXOmWeqXRc">Optimization of LLM Systems with DSPy and LangChain/LangSmith</a> &middot; LangChain</div>
+</div>
+
+<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
+
+</details>
 
 <details markdown="block">
 <summary>Code examples (11 files)</summary>
@@ -90,6 +172,31 @@ LangGraph is a framework for building agentic workflows through explicit graph a
 LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requiring manual loop management, abstracting 150-200 lines of careful code into a single interface. The chapter covers agent types, tool integration patterns, and recognition of when workflows exceed LangChain's linear model and require migration to LangGraph.
 
 <details markdown="block">
+<summary>Videos (4)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/2xxziIWmaSA" title="The LangChain Cookbook - Beginner Guide To 7 Essential Concepts" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=2xxziIWmaSA">The LangChain Cookbook - Beginner Guide To 7 Essential Concepts</a> &middot; Greg Kamradt</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/aqdWSYWC_LI" title="OpenAI Function Calling - Full Beginner Tutorial" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=aqdWSYWC_LI">OpenAI Function Calling - Full Beginner Tutorial</a> &middot; Dave Ebbelaar</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/Qor2VZoBib0" title="How does OpenAI Function Calling work?" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=Qor2VZoBib0">How does OpenAI Function Calling work?</a> &middot; Learn Data with Mark</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/zRdzLfoTwvQ" title="The Power Of Function Calling Ussing OpenAI API Tutorial #2" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=zRdzLfoTwvQ">The Power Of Function Calling Ussing OpenAI API Tutorial #2</a> &middot; Krish Naik</div>
+</div>
+
+</details>
+
+<details markdown="block">
 <summary>Code examples (8 files)</summary>
 
 - [`LangChain_code_01_web_search_tool.py`]({{ site.repo_blob }}/code_examples/Part_02_Chapter_2.3_LangChain_code_01_web_search_tool.py)
@@ -108,6 +215,23 @@ LangChain's AgentExecutor implements the ReAct pattern from Part 1 without requi
 This chapter explores two fundamentally different approaches to multi-agent coordination: AutoGen's message-driven conversational architecture and CrewAI's organizational structure model. It examines the trade-offs between conversational flexibility and reproducibility, along with patterns for composing multi-agent systems with specialized single-agent frameworks.
 
 <details markdown="block">
+<summary>Videos (2)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/hvAPnpSfSGo" title="LangGraph: Multi-Agent Workflows" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=hvAPnpSfSGo">LangGraph: Multi-Agent Workflows</a> &middot; LangChain</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/tnejrr-0a94" title="CrewAI Tutorial - Next Generation AI Agent Teams (Fully Local)" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=tnejrr-0a94">CrewAI Tutorial - Next Generation AI Agent Teams (Fully Local)</a> &middot; Matthew Berman</div>
+</div>
+
+<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
+
+</details>
+
+<details markdown="block">
 <summary>Code examples (5 files)</summary>
 
 - [`MultiAgent_Frameworks_code_01_autogen_research_team_setup.py`]({{ site.repo_blob }}/code_examples/Part_02_Chapter_2.4_MultiAgent_Frameworks_code_01_autogen_research_team_setup.py)
@@ -121,6 +245,21 @@ This chapter explores two fundamentally different approaches to multi-agent coor
 ### 2.5. Semantic Kernel - Enterprise Framework and Plugin Architecture
 
 Semantic Kernel provides a central orchestration component managing service registration, plugin discovery, and execution coordination through dependency injection patterns. The framework distinguishes between semantic functions (LLM-powered reasoning) and native functions (deterministic code), enabling plugins to combine AI capabilities with reliable system integration while supporting dynamic routing through LLM-driven orchestration.
+
+<details markdown="block">
+<summary>Videos (2)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/62OI_y-KRlw" title="Migrating from COBOL with AI: A Moonshot Demo - Julia Kordick" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=62OI_y-KRlw">Migrating from COBOL with AI: A Moonshot Demo - Julia Kordick</a> &middot; WeAreDevelopers</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/QR_DkWv8VoE" title="Semantic Kernel Office Hours for US/EMEA - September 25th, 2024" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=QR_DkWv8VoE">Semantic Kernel Office Hours for US/EMEA - September 25th, 2024</a> &middot; Microsoft Reactor</div>
+</div>
+
+</details>
 
 <details markdown="block">
 <summary>Code examples (12 files)</summary>
@@ -145,6 +284,18 @@ Semantic Kernel provides a central orchestration component managing service regi
 Tool integration establishes how language models request external tool execution through structured function calling, with applications responsible for parsing JSON, validating inputs, and managing execution. The chapter covers function calling mechanics, schema design using JSON Schema standards, tool chaining for sequential dependencies, parallel execution optimization, and production considerations including error handling and NVIDIA NIM optimizations.
 
 <details markdown="block">
+<summary>Videos (1)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/aqdWSYWC_LI" title="OpenAI Function Calling - Full Beginner Tutorial" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=aqdWSYWC_LI">OpenAI Function Calling - Full Beginner Tutorial</a> &middot; Dave Ebbelaar</div>
+</div>
+
+<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
+
+</details>
+
+<details markdown="block">
 <summary>Code examples (4 files)</summary>
 
 - [`01_weather_lookup_agent.py`]({{ site.repo_blob }}/code_examples/Part_02_Chapter_2.6_01_weather_lookup_agent.py)
@@ -157,6 +308,18 @@ Tool integration establishes how language models request external tool execution
 ### 2.7. Multimodal RAG - Integration of Vision, Audio, and Text
 
 Multimodal RAG extends retrieval-augmented generation to handle visual and audio content alongside text, addressing semantic alignment challenges through three architectural approaches: unified embedding spaces with CLIP, grounding all modalities to text with vision-language models, and separate stores with cross-modal reranking. The chapter covers vision model specialization, image routing logic, Whisper-based audio transcription with time indexing, and the NVIDIA multimodal stack for production deployment.
+
+<details markdown="block">
+<summary>Videos (1)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/sVcwVQRHIc8" title="Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=sVcwVQRHIc8">Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer</a> &middot; freeCodeCamp.org</div>
+</div>
+
+<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
+
+</details>
 
 <details markdown="block">
 <summary>Code examples (7 files)</summary>
@@ -175,6 +338,8 @@ Multimodal RAG extends retrieval-augmented generation to handle visual and audio
 
 Error handling patterns establish production resilience through layered defense combining retry logic for transient failures, fallback strategies for persistent failures, graceful degradation maintaining partial functionality, and circuit breakers preventing cascading failures in multi-agent systems. The chapter addresses framework integration with LangChain and LangGraph, provides worked examples of resilient multi-tool agents, and explains how to achieve 99.9% uptime through comprehensive pattern application.
 
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+
 <details markdown="block">
 <summary>Code examples (7 files)</summary>
 
@@ -191,6 +356,18 @@ Error handling patterns establish production resilience through layered defense 
 ### 2.9. Streaming and Real-Time Responses
 
 Streaming restructures agent response patterns from accumulate-then-display to generate-and-stream-simultaneously, addressing the blank screen psychological effect and user abandonment. The chapter covers the perceived latency principle where sub-second feedback matters more than total latency, Time to First Token optimization, protocol selection between Server-Sent Events and WebSockets, and LangServe integration for production streaming infrastructure.
+
+<details markdown="block">
+<summary>Videos (1)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/ngXbyui-weA" title="Python Asynchronous Programming Tutorial: Asyncio, async &amp; await Explained" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=ngXbyui-weA">Python Asynchronous Programming Tutorial: Asyncio, async &amp; await Explained</a> &middot; Code with Josh</div>
+</div>
+
+<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
+
+</details>
 
 <details markdown="block">
 <summary>Code examples (9 files)</summary>

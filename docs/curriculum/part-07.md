@@ -8,7 +8,7 @@ permalink: /curriculum/part-07/
 # Part 7 — NVIDIA NeMo Framework & Optimization
 {: .no_toc }
 
-8 chapters · 20.0 study hours allocated in the Study Plan · 0 slide decks · 3 direct video links · 76 code example files
+8 chapters · 20.0 study hours allocated in the Study Plan · 0 slide decks · 3 videos · 76 code example files
 
 <details open markdown="block">
   <summary>On this page</summary>
@@ -33,7 +33,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 7.6 | [Multi-Instance GPU (MIG) & Security]({{ site.repo_blob }}/Study_Plan.md#part-7-chapter-76-multi-instance-gpu-mig--security) | 2.1 | — | [Quiz](https://docs.google.com/forms/d/1io2Z9tCSlSIAPDXIdrVC1KsGJL3nA_5S_aLxCKj0M7s/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_07_YoutubeVideos.md#chapter-76-gpu-security-and-multi-instance-gpu) | [7]({{ site.repo_tree }}/figures/Ch7.6_figures_v11MAY26) | — | NV AWS GCP MS |
 
 
-**Notes.** Video counts are unique direct links in [`Part_07_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_07_YoutubeVideos.md); a chapter can list search suggestions instead of links, so a low number does not mean the chapter is skipped.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_07_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_07_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -52,6 +52,8 @@ Summaries are excerpted from [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.m
 
 This chapter orchestrates the complete AI agent lifecycle through NVIDIA NeMo platform's integrated ecosystem. The architecture encompasses data curation via NeMo Curator (16x GPU acceleration), safety via NeMo Guardrails (six protective layers), optimized inference through NIM and TensorRT-LLM (3-4x throughput), and domain-aware retrieval via NeMo Retriever (50% accuracy improvements). Six defense-in-depth rail types apply protection at strategic pipeline checkpoints, complemented by advanced inference optimization techniques including speculative decoding, continuous batching, and multi-GPU parallelism strategies.
 
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+
 <details markdown="block">
 <summary>Code examples (5 files)</summary>
 
@@ -66,6 +68,8 @@ This chapter orchestrates the complete AI agent lifecycle through NVIDIA NeMo pl
 ### 7.1B. Colang DSL, NIM Integration, and Misconceptions
 
 This chapter translates business safety policies into executable guardrail configurations using Colang, a Python-inspired domain-specific language enabling declarative policy definition without ML expertise. The chapter demonstrates seamless NIM integration through protective wrapper architecture, then clarifies four critical misconceptions: guardrails as complete security, elimination of model safety training, jailbreak detection reliability, and fact-checking hallucination coverage. Understanding these limitations positions teams to design realistic, multi-layered safety strategies acknowledging guardrails' role as one component in defense-in-depth architectures.
+
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
 
 <details markdown="block">
 <summary>Code examples (1 files)</summary>
@@ -95,6 +99,8 @@ This chapter navigates the fundamental throughput-latency-cost optimization tria
 
 This chapter transforms abstract NIM architecture into hands-on deployment infrastructure starting with local Docker development then scaling to production Kubernetes. Prerequisites validate system readiness (GPU drivers, VRAM constraints, NGC authentication), environment configuration establishes persistent storage and credential management, and deployment verification confirms end-to-end pipeline functionality. The chapter translates Docker patterns to Kubernetes resources (volumes to PersistentVolumeClaims, GPU allocation to resource requests) while maintaining development-production consistency. Multi-model serving architecture enables workload-specific scaling, and service mesh routing provides intelligent model selection without client knowledge of backend implementations.
 
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+
 <details markdown="block">
 <summary>Code examples (4 files)</summary>
 
@@ -108,6 +114,8 @@ This chapter transforms abstract NIM architecture into hands-on deployment infra
 ### 7.3. Agent Toolkit
 
 NeMo Agent Toolkit provides systematic profiling, optimization, and continuous monitoring capabilities for production LLM agents across frameworks like LangChain, CrewAI, and LlamaIndex. This chapter covers end-to-end performance engineering—from identifying bottlenecks through profiling, implementing optimizations with measured impact validation, and preventing regressions through continuous benchmarking integrated into CI/CD pipelines.
+
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
 
 <details markdown="block">
 <summary>Code examples (14 files)</summary>
@@ -132,6 +140,26 @@ NeMo Agent Toolkit provides systematic profiling, optimization, and continuous m
 ### 7.4. Quantization Fundamentals
 
 This chapter addresses the critical optimization challenge of reducing model inference latency and memory consumption through precision reduction techniques. Students learn how to apply INT8, FP8, and other quantization strategies to achieve 4-8x throughput improvements while maintaining model accuracy within acceptable bounds for production LLM deployments.
+
+<details markdown="block">
+<summary>Videos (3)</summary>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/kCc8FmEb1nY" title="Let&#x27;s build GPT: from scratch, in code, spelled out." loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=kCc8FmEb1nY">Let&#x27;s build GPT: from scratch, in code, spelled out.</a> &middot; Andrej Karpathy</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/eMlx5fFNoYc" title="Attention in transformers, step-by-step | Deep Learning Chapter 6" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=eMlx5fFNoYc">Attention in transformers, step-by-step | Deep Learning Chapter 6</a> &middot; 3Blue1Brown</div>
+</div>
+
+<div style="margin:0 0 1.5rem 0">
+<iframe src="https://www.youtube-nocookie.com/embed/oMb_WiUwf5o" title="The Evolution of Multi-GPU Inference in vLLM | Ray Summit 2024" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div><a href="https://www.youtube.com/watch?v=oMb_WiUwf5o">The Evolution of Multi-GPU Inference in vLLM | Ray Summit 2024</a> &middot; Anyscale</div>
+</div>
+
+</details>
 
 <details markdown="block">
 <summary>Code examples (5 files)</summary>
@@ -197,6 +225,8 @@ This chapter covers GPU-accelerated data curation through NeMo Curator, producti
 ### 7.6. Multi-Instance GPU (MIG) & Security
 
 This chapter addresses the fundamental economics problem of GPU underutilization in multi-tenant AI deployments, where 85-90% of GPU capacity sits idle when serving agent inference workloads. It explores how Multi-Instance GPU (MIG) hardware partitioning divides a single A100 into up to seven fully isolated instances, enabling dramatic cost reduction (86% CAPEX savings) while maintaining strict performance guarantees essential for SaaS platforms, contrasting this with software-level time-slicing approaches that sacrifice isolation for flexibility.
+
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
 
 ### Additional worked examples
 

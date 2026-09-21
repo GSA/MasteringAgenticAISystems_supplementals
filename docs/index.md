@@ -34,7 +34,7 @@ curriculum on top of this material, this site is for you.
 | Chapter quizzes | 96 | [Quizzes & practice exams]({% link practice.md %}) |
 | Practice exams | 10 full-length NCP-AAI tests | [Quizzes & practice exams]({% link practice.md %}) |
 | Slide decks | 48 | [Slides]({% link slides.md %}) |
-| Videos | 317 direct links to third-party videos | [Videos]({% link videos.md %}) |
+| Videos | 261 third-party videos embedded under the chapter summaries | [Videos]({% link videos.md %}) |
 | Code examples | 402 illustrative files, plus 20 more worked examples | [Code examples]({% link code-examples.md %}) |
 | Labs | 1 draft lab; the rest are being written | [Labs]({% link labs.md %}) |
 | AI study tutor | Socratic tutoring protocols and example prompts | [AI tutor]({% link ai-tutor.md %}) |
@@ -44,7 +44,7 @@ curriculum on top of this material, this site is for you.
 - **Labs** are the biggest gap. Only chapter 8.2B has a lab written to the lab template, and it is still a
   draft. The other files in `labs/archive/` are prose excerpts, not finished exercises.
 - **Slides** exist for Parts 1–6 only, and not for every chapter in them.
-- **Videos** for Parts 7–10 are sparse: many entries are search suggestions rather than links.
+- **Videos** for Parts 7–10 are sparse, and many entries elsewhere are search suggestions rather than links. Some links are dead or point at an unrelated video; those are not embedded (see the [link check]({% link video-link-check.md %})).
 - **Numbering** differs between the quiz list and the rest of the material from Part 4 onward. The Part pages
   say where a quiz, deck, or figure set is linked by chapter family rather than by exact ID.
 
