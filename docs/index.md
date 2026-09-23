@@ -44,7 +44,7 @@ curriculum on top of this material, this site is for you.
 - **Labs** are the biggest gap. Only chapter 8.2B has a lab written to the lab template, and it is still a
   draft. The other files in `labs/archive/` are prose excerpts, not finished exercises.
 - **Slides** exist for Parts 1–6 only, and not for every chapter in them.
-- **Videos** for Parts 7–10 are sparse, and many entries elsewhere are search suggestions rather than links. Some links are dead or point at an unrelated video; those are not embedded (see the [link check]({% link video-link-check.md %})).
+- **Videos** for Parts 7–10 are sparse, and many entries elsewhere are search suggestions rather than links. 93 dead or mis-linked entries were removed from `videos/` on 2026-09-23 after a link check (see the [link check]({% link video-link-check.md %})).
 - **Numbering** differs between the quiz list and the rest of the material from Part 4 onward. The Part pages
   say where a quiz, deck, or figure set is linked by chapter family rather than by exact ID.
 

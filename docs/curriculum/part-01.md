@@ -24,14 +24,14 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
 | 1.1A | [UI Foundations]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-11a-ui-foundations) | 4.8 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.1A%26B_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1XmM2qiJrFvJCOJXGFM_waJ-fDvNq7DCcjeHDUFo-J7w/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-11a---ui-foundations) | — | — | NV AWS DBX MS |
-| 1.1B | [Human-in-the-Loop Patterns and Accessible Design]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-11b-human-in-the-loop-patterns-and-accessible-design) | 1.8 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.1A%26B_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1wWQYe9nQOFHfVtHt8wCYysaIp_obXckibGoJgHB9p_Q/viewform?usp=sharing) | [4 of 5]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-11b---accessibility--hitl-patterns) | — | 2 | NV AWS GCP MS |
-| 1.2 | [Core Patterns]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-12-core-patterns) | 3.6 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.2%261.3_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EsIlTzhOYvtV3RahqLJ3q5dW013TjVb0l0RWOu_N-Tg/viewform?usp=sharing) | [4 of 7]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-12---core-patterns) | — | — | NV AWS GCP MS |
-| 1.3 | [Multi-Agent Systems]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-13-multi-agent-systems) | 7.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.2%261.3_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1rGwHje49TRniIhG65hXRgmqXtHmy1xc5dv_zb2VmEMY/viewform?usp=sharing) | [5 of 6]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-13---multi-agent-systems) | — | 9 | NV MS |
+| 1.1B | [Human-in-the-Loop Patterns and Accessible Design]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-11b-human-in-the-loop-patterns-and-accessible-design) | 1.8 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.1A%26B_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1wWQYe9nQOFHfVtHt8wCYysaIp_obXckibGoJgHB9p_Q/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-11b---accessibility--hitl-patterns) | — | 2 | NV AWS GCP MS |
+| 1.2 | [Core Patterns]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-12-core-patterns) | 3.6 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.2%261.3_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EsIlTzhOYvtV3RahqLJ3q5dW013TjVb0l0RWOu_N-Tg/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-12---core-patterns) | — | — | NV AWS GCP MS |
+| 1.3 | [Multi-Agent Systems]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-13-multi-agent-systems) | 7.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.2%261.3_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1rGwHje49TRniIhG65hXRgmqXtHmy1xc5dv_zb2VmEMY/viewform?usp=sharing) | [5]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-13---multi-agent-systems) | — | 9 | NV MS |
 | 1.4 | [Memory & Perception]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-14-memory--perception) | 1.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.4_1.5_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/15U_a9_pc7gVkGTCNS-NG9K1sJwQWe5HGBaN6uMJBLVU/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-14---memory--perception) | — | 3 | NV AWS GCP MS |
 | 1.5A | [Stateful Orchestration - Foundations]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-15a-stateful-orchestration---foundations) | 2.2 | [PDF†]({{ site.repo_blob }}/slides/Chapter1.4_1.5_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/109aLl62B5W3Nk4a34dI4fwTlgM6A01saKeAzZuZOtxw/viewform?usp=sharing) | [5]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-15a---stateful-orchestration) | — | — | NV AWS GCP MS |
 | 1.5B | [Stateful Orchestration - Worked Examples]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-15b-stateful-orchestration---worked-examples) | 1.4 | [PDF†]({{ site.repo_blob }}/slides/Chapter1.4_1.5_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1jz2PVQHMS6ok1yD45OxRsVI7p8bL9r1IWhEGdicE6pE/viewform?usp=sharing) | [5]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-15b---stateful-examples) | — | 8 | NV AWS MS |
-| 1.6 | [Stateful Orchestration - Pitfalls, Integration, and Synthesis]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-16-stateful-orchestration---pitfalls-integration-and-synthesis) | 1.8 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.6_1.7A_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1Sy889rKbbJmXe6chqXD7gYnqLfgJtOYibvxTtE7PZuE/viewform?usp=sharing) | [4 of 5]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-16---orchestration-pitfalls) | — | 7 | NV AWS GCP MS |
-| 1.7A | [Relational Reasoning with Knowledge Graphs]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-17a-relational-reasoning-with-knowledge-graphs) | 2.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.6_1.7A_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/11SNhGX9BGs58nqaICVAv4lmEN6G922_vjOu1DuctXPY/viewform?usp=sharing) | [7 of 8]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-17a---knowledge-graphs) | — | 12 | NV AWS GCP MS |
+| 1.6 | [Stateful Orchestration - Pitfalls, Integration, and Synthesis]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-16-stateful-orchestration---pitfalls-integration-and-synthesis) | 1.8 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.6_1.7A_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1Sy889rKbbJmXe6chqXD7gYnqLfgJtOYibvxTtE7PZuE/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-16---orchestration-pitfalls) | — | 7 | NV AWS GCP MS |
+| 1.7A | [Relational Reasoning with Knowledge Graphs]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-17a-relational-reasoning-with-knowledge-graphs) | 2.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.6_1.7A_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/11SNhGX9BGs58nqaICVAv4lmEN6G922_vjOu1DuctXPY/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-17a---knowledge-graphs) | — | 12 | NV AWS GCP MS |
 | 1.7B | [Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration]({{ site.repo_blob }}/Study_Plan.md#part-1-chapter-17b-relational-reasoning-with-knowledge-graphs---hybrid-ragkg-integration) | 1.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.7B_1.8_v1.0_2026_03_01%20%281%29.pdf) | [Quiz](https://docs.google.com/forms/d/1CjMbpAIwwGx_cse1y0Dh1hmjPZEU43LIDReJBJOTMtM/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_01_YoutubeVideos.md#chapter-17b---hybrid-ragkg) | — | 5 | NV AWS GCP MS |
 | 1.8 | Agent Resilience and Synthesis § | — | [PDF‡]({{ site.repo_blob }}/slides/Chapter1.7B_1.8_v1.0_2026_03_01%20%281%29.pdf) | — | — | — | 7 | NV |
 
@@ -117,8 +117,6 @@ This chapter addresses the fundamental challenge of autonomous agent systems by 
 <div><a href="https://www.youtube.com/watch?v=Hui87z2Vx8o">Web Accessibility Perspectives: Colors with Good Contrast</a> &middot; W3C Web Accessibility Initiative (WAI)</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 <details markdown="block">
@@ -156,8 +154,6 @@ This chapter explores four fundamental agent reasoning patterns—ReAct (Reasoni
 <div><a href="https://www.youtube.com/watch?v=43qfHaKh0Xk">Prompt Injection in LLM Agents (ReAct, Langchain)</a> &middot; Donato Capitella</div>
 </div>
 
-<p><small>3 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 1.3. Multi-Agent Systems
@@ -191,8 +187,6 @@ This chapter addresses the fundamental challenge of coordinating multiple autono
 <iframe src="https://www.youtube-nocookie.com/embed/0ZGbIKd0XrM" title="Simulating Natural Selection" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=0ZGbIKd0XrM">Simulating Natural Selection</a> &middot; Primer</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -358,8 +352,6 @@ Addresses production failures and integration patterns emerging when implementin
 <div><a href="https://www.youtube.com/watch?v=GMaGG8UBek8">How to add short-term memory to LangGraph ReAct agent🤖: Python &amp; Node.js — LangGraph #2</a> &middot; Code AI with Rok</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 <details markdown="block">
@@ -416,8 +408,6 @@ Introduces knowledge graphs as structured representations of entities, relations
 <iframe src="https://www.youtube-nocookie.com/embed/sqDHBH9IjRU" title="SPACY&#x27;S ENTITY RECOGNITION MODEL: incremental parsing with Bloom embeddings &amp; residual CNNs" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=sqDHBH9IjRU">SPACY&#x27;S ENTITY RECOGNITION MODEL: incremental parsing with Bloom embeddings &amp; residual CNNs</a> &middot; Explosion</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

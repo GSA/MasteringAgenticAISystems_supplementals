@@ -24,14 +24,14 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
 | 2.1 | [Framework Landscape]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-21-framework-landscape) | 2.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1jj55JTho9uPN2Mu7FwIpfc-mQe-L34q0cHoniRtOuOY/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-21---framework-landscape) | — | 3 | NV AWS GCP MS |
-| 2.2 | [LangGraph]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-22-langgraph) | 1.6 | [PDF‡]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1WyguE8MVLqdmWYRCy-0T_ZxX7B_Jcigt2r5jy80pmN0/viewform?usp=sharing) | [7 of 8]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-22---langgraph) | — | 11 | NV AWS GCP MS |
+| 2.2 | [LangGraph]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-22-langgraph) | 1.6 | [PDF‡]({{ site.repo_blob }}/slides/Chapter%202.1%20and%202.2_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1WyguE8MVLqdmWYRCy-0T_ZxX7B_Jcigt2r5jy80pmN0/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-22---langgraph) | — | 11 | NV AWS GCP MS |
 | 2.3 | [LangChain]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-23-langchain) | 1.4 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/13Ecjr24F4NqLB131JaVg36h0ExKPQiqkxTlYog6n7PM/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-23---langchain) | — | 8 | NV AWS GCP MS |
-| 2.4 | [MultiAgent Frameworks]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-24-multiagent-frameworks) | 2.1 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1BwgT2tdhSe8Yv6NixzTpAbhGT2ksn5JG-10u-uEHUcQ/viewform?usp=sharing) | [2 of 3]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-24---multi-agent-frameworks) | — | 5 | NV AWS GCP MS |
+| 2.4 | [MultiAgent Frameworks]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-24-multiagent-frameworks) | 2.1 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.3_2.4_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1BwgT2tdhSe8Yv6NixzTpAbhGT2ksn5JG-10u-uEHUcQ/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-24---multi-agent-frameworks) | — | 5 | NV AWS GCP MS |
 | 2.5 | [Semantic Kernel - Enterprise Framework and Plugin Architecture]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-25-semantic-kernel---enterprise-framework-and-plugin-architecture) | 1.7 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1qbm2AAl0XkPeTWvqInQZog1zRHNMblMmvSgbSQNLIDA/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-25---semantic-kernel) | — | 12 | NV AWS MS |
-| 2.6 | [Tool Integration and Function Calling]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-26-tool-integration-and-function-calling) | 4.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1f_7aioG1-xWk0M2bAhihuJJOx9UK2nwaaWsjcevGTek/viewform?usp=sharing) | [1 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-26---tool-integration) | — | 4 | NV AWS GCP MS |
-| 2.7 | [Multimodal RAG - Integration of Vision, Audio, and Text]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-27-multimodal-rag---integration-of-vision-audio-and-text) | 5.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1yPrLfIsN_xeFWya-hQb0rla3c-A4I0gbbiZy_5wzQ-Y/viewform?usp=sharing) | [1 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-27---multimodal-rag) | — | 7 | NV AWS GCP MS |
-| 2.8 | [Error Handling and Resilience]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-28-error-handling-and-resilience) | 1.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1u4hzqjpzM3hRjso7YSN6Ay-j9MCsiCRzO-zFtvTV-MU/viewform?usp=sharing) | [0 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-28---error-handling) | — | 7 | NV AWS GCP MS |
-| 2.9 | [Streaming and Real-Time Responses]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-29-streaming-and-real-time-responses) | 2.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EVvuCnVelN44xHeVzolDx1MVwV3AJucqDsPeeHLP5DA/viewform?usp=sharing) | [1 of 2]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-29---streaming) | — | 9 | NV AWS GCP MS |
+| 2.6 | [Tool Integration and Function Calling]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-26-tool-integration-and-function-calling) | 4.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.5_2.6_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1f_7aioG1-xWk0M2bAhihuJJOx9UK2nwaaWsjcevGTek/viewform?usp=sharing) | [1]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-26---tool-integration) | — | 4 | NV AWS GCP MS |
+| 2.7 | [Multimodal RAG - Integration of Vision, Audio, and Text]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-27-multimodal-rag---integration-of-vision-audio-and-text) | 5.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1yPrLfIsN_xeFWya-hQb0rla3c-A4I0gbbiZy_5wzQ-Y/viewform?usp=sharing) | [1]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-27---multimodal-rag) | — | 7 | NV AWS GCP MS |
+| 2.8 | [Error Handling and Resilience]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-28-error-handling-and-resilience) | 1.3 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1u4hzqjpzM3hRjso7YSN6Ay-j9MCsiCRzO-zFtvTV-MU/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-28---error-handling) | — | 7 | NV AWS GCP MS |
+| 2.9 | [Streaming and Real-Time Responses]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-29-streaming-and-real-time-responses) | 2.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EVvuCnVelN44xHeVzolDx1MVwV3AJucqDsPeeHLP5DA/viewform?usp=sharing) | [1]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-29---streaming) | — | 9 | NV AWS GCP MS |
 
 
 **Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_02_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
@@ -146,8 +146,6 @@ LangGraph is a framework for building agentic workflows through explicit graph a
 <div><a href="https://www.youtube.com/watch?v=4EXOmWeqXRc">Optimization of LLM Systems with DSPy and LangChain/LangSmith</a> &middot; LangChain</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 <details markdown="block">
@@ -227,8 +225,6 @@ This chapter explores two fundamentally different approaches to multi-agent coor
 <div><a href="https://www.youtube.com/watch?v=tnejrr-0a94">CrewAI Tutorial - Next Generation AI Agent Teams (Fully Local)</a> &middot; Matthew Berman</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 <details markdown="block">
@@ -291,8 +287,6 @@ Tool integration establishes how language models request external tool execution
 <div><a href="https://www.youtube.com/watch?v=aqdWSYWC_LI">OpenAI Function Calling - Full Beginner Tutorial</a> &middot; Dave Ebbelaar</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 <details markdown="block">
@@ -317,8 +311,6 @@ Multimodal RAG extends retrieval-augmented generation to handle visual and audio
 <div><a href="https://www.youtube.com/watch?v=sVcwVQRHIc8">Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer</a> &middot; freeCodeCamp.org</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 <details markdown="block">
@@ -337,8 +329,6 @@ Multimodal RAG extends retrieval-augmented generation to handle visual and audio
 ### 2.8. Error Handling and Resilience
 
 Error handling patterns establish production resilience through layered defense combining retry logic for transient failures, fallback strategies for persistent failures, graceful degradation maintaining partial functionality, and circuit breakers preventing cascading failures in multi-agent systems. The chapter addresses framework integration with LangChain and LangGraph, provides worked examples of resilient multi-tool agents, and explains how to achieve 99.9% uptime through comprehensive pattern application.
-
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
 
 <details markdown="block">
 <summary>Code examples (7 files)</summary>
@@ -364,8 +354,6 @@ Streaming restructures agent response patterns from accumulate-then-display to g
 <iframe src="https://www.youtube-nocookie.com/embed/ngXbyui-weA" title="Python Asynchronous Programming Tutorial: Asyncio, async &amp; await Explained" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=ngXbyui-weA">Python Asynchronous Programming Tutorial: Asyncio, async &amp; await Explained</a> &middot; Code with Josh</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

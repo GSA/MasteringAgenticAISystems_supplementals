@@ -23,17 +23,17 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
-| 3.1A | [Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-31a-implement-evaluation-pipelines-and-task-benchmarks---introduction-motivation-and-core-concepts) | 3.0 | [PDF]({{ site.repo_blob }}/slides/Ch3.1A_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/15iqCaPDaFXuBRjNGR643LmzxtZKWcDTXGI8VmkxYXew/viewform?usp=sharing) | [0 of 3]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-31a---hallucination-detection) | [12]({{ site.repo_tree }}/figures/Ch3.1A_figures_v11MAY26) | — | NV AWS GCP MS |
-| 3.1B | [Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-31b-implement-evaluation-pipelines-and-task-benchmarks---custom-metrics-and-cicd-integration) | 1.4 | [PDF]({{ site.repo_blob }}/slides/Ch3.1B_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1nyE8Blc4ZgqNV2ZBAD8pJbGBArv-sRDbAVv6oFWldPU/viewform?usp=sharing) | [3 of 12]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-31b---grounding-in-external-knowledge) | [12]({{ site.repo_tree }}/figures/Ch3.1B_figures_v11MAY26) | — | NV AWS GCP MS |
-| 3.1C | Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design § | — | — | [Quiz](https://docs.google.com/forms/d/1OGa5ulPg3OvKKE6-TO3MfyONhmmn5dVX47TGUKa8EXk/viewform?usp=sharing) | [2 of 12]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-31c---multi-modal-evaluation) | — | — | NV AWS GCP MS |
-| 3.2 | [Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-32-compare-agent-performance-across-tasks-and-datasets---multi-benchmark-evaluation-and-statistical-rigor) | 3.9 | [PDF]({{ site.repo_blob }}/slides/Ch3.2_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1cr_yfhb2zKPgxcGna1rjZUc0FJYGx7n18kLV3T_jPIw/viewform?usp=sharing) | [2 of 5]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-32---context-relevance) | [12]({{ site.repo_tree }}/figures/Ch3.2_figures_v11MAY26) | 3 | NV AWS GCP MS |
-| 3.3 | [Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-33-web-navigation-and-interaction-benchmarks---web-agent-evaluation-and-multi-hop-question-answering) | 8.1 | [PDF]({{ site.repo_blob }}/slides/Ch3.3_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1KU6D0880znwHkFMab25JXaNJwQdtOt4z-sfaeWAcMN0/viewform?usp=sharing) | [4 of 9]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-33---harmfulness--safety-assessment) | [12]({{ site.repo_tree }}/figures/Ch3.3_figures_v11MAY26) | — | NV AWS GCP MS |
-| 3.4 | [Tune Parameters]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-34-tune-parameters) | 3.8 | [PDF]({{ site.repo_blob }}/slides/Ch3.4_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1GmJu-NCaKyfixAg4HMtt9ReNxKkMXNDm52FtbIKUL50/viewform?usp=sharing) | [1 of 3]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-34---behavioral-consistency) | [12]({{ site.repo_tree }}/figures/Ch3.4_figures_v11MAY26) | — | NV AWS GCP MS |
+| 3.1A | [Implement Evaluation Pipelines and Task Benchmarks - Introduction, Motivation, and Core Concepts]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-31a-implement-evaluation-pipelines-and-task-benchmarks---introduction-motivation-and-core-concepts) | 3.0 | [PDF]({{ site.repo_blob }}/slides/Ch3.1A_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/15iqCaPDaFXuBRjNGR643LmzxtZKWcDTXGI8VmkxYXew/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-31a---hallucination-detection) | [12]({{ site.repo_tree }}/figures/Ch3.1A_figures_v11MAY26) | — | NV AWS GCP MS |
+| 3.1B | [Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-31b-implement-evaluation-pipelines-and-task-benchmarks---custom-metrics-and-cicd-integration) | 1.4 | [PDF]({{ site.repo_blob }}/slides/Ch3.1B_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1nyE8Blc4ZgqNV2ZBAD8pJbGBArv-sRDbAVv6oFWldPU/viewform?usp=sharing) | [3]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-31b---grounding-in-external-knowledge) | [12]({{ site.repo_tree }}/figures/Ch3.1B_figures_v11MAY26) | — | NV AWS GCP MS |
+| 3.1C | Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design § | — | — | [Quiz](https://docs.google.com/forms/d/1OGa5ulPg3OvKKE6-TO3MfyONhmmn5dVX47TGUKa8EXk/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-31c---multi-modal-evaluation) | — | — | NV AWS GCP MS |
+| 3.2 | [Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-32-compare-agent-performance-across-tasks-and-datasets---multi-benchmark-evaluation-and-statistical-rigor) | 3.9 | [PDF]({{ site.repo_blob }}/slides/Ch3.2_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1cr_yfhb2zKPgxcGna1rjZUc0FJYGx7n18kLV3T_jPIw/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-32---context-relevance) | [12]({{ site.repo_tree }}/figures/Ch3.2_figures_v11MAY26) | 3 | NV AWS GCP MS |
+| 3.3 | [Web Navigation and Interaction Benchmarks - Web Agent Evaluation and Multi-Hop Question Answering]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-33-web-navigation-and-interaction-benchmarks---web-agent-evaluation-and-multi-hop-question-answering) | 8.1 | [PDF]({{ site.repo_blob }}/slides/Ch3.3_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1KU6D0880znwHkFMab25JXaNJwQdtOt4z-sfaeWAcMN0/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-33---harmfulness--safety-assessment) | [12]({{ site.repo_tree }}/figures/Ch3.3_figures_v11MAY26) | — | NV AWS GCP MS |
+| 3.4 | [Tune Parameters]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-34-tune-parameters) | 3.8 | [PDF]({{ site.repo_blob }}/slides/Ch3.4_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1GmJu-NCaKyfixAg4HMtt9ReNxKkMXNDm52FtbIKUL50/viewform?usp=sharing) | [1]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-34---behavioral-consistency) | [12]({{ site.repo_tree }}/figures/Ch3.4_figures_v11MAY26) | — | NV AWS GCP MS |
 | 3.5 | [Prompt Optimization, Few-Shot Learning, Fine-Tuning with Agent Trajectories, and Reward Modeling]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-35-prompt-optimization-few-shot-learning-fine-tuning-with-agent-trajectories-and-reward-modeling) | 6.4 | [PDF]({{ site.repo_blob }}/slides/Ch3.5_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1pVmk3BXqPnhzLGPfGNznt0LDY11gOcGKckXiAdAFCwA/viewform?usp=sharing) | [5]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-35---prompt-optimization-few-shot-learning-and-fine-tuning) | [11]({{ site.repo_tree }}/figures/Ch3.5_figures_v11MAY26) | — | NV AWS GCP MS |
-| 3.6 | [Trace Analysis and Execution Debugging]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-36-trace-analysis-and-execution-debugging) | 9.2 | [PDF]({{ site.repo_blob }}/slides/Ch3.6_v20MAR26.pdf) | — | [0 of 10]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-36---agent-benchmarking-frameworks) | [12]({{ site.repo_tree }}/figures/Ch3.6_figures_v11MAY26) | — | NV AWS GCP MS |
-| 3.7 | [Tool Auditing and Validation]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-37-tool-auditing-and-validation) | 5.3 | [PDF]({{ site.repo_blob }}/slides/Ch3.7_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1TetLG6Fo7CnUyRHhjF5Ugbf0uCovGp0vCV23CZui-JA/viewform?usp=sharing) | [4 of 5]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-37---tool-auditing) | [10]({{ site.repo_tree }}/figures/Ch3.7_figures_v11MAY26) | — | NV AWS GCP MS |
-| 3.8 | [Action Accuracy]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-38-action-accuracy) | 4.5 | [PDF]({{ site.repo_blob }}/slides/Ch3.8_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1lRlcnCStFuREtPdHk6b9Qxu69WKoglcrEKExiKIRlcQ/viewform?usp=sharing) | [3 of 4]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-38---action-accuracy) | [12]({{ site.repo_tree }}/figures/Ch3.8_figures_v11MAY26) | 13 | NV AWS GCP |
-| 3.9 | [Reasoning Quality]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-39-reasoning-quality) | 8.0 | [PDF]({{ site.repo_blob }}/slides/Ch3.9_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/162oqrBfqthRmZNyU-74dOVIQr2KQ62ISMkS8dkMsfvw/viewform?usp=sharing) | [5 of 6]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-39---reasoning-quality) | [12]({{ site.repo_tree }}/figures/Ch3.9_figures_v11MAY26) | 1 | NV AWS GCP MS |
+| 3.6 | [Trace Analysis and Execution Debugging]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-36-trace-analysis-and-execution-debugging) | 9.2 | [PDF]({{ site.repo_blob }}/slides/Ch3.6_v20MAR26.pdf) | — | [0]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-36---agent-benchmarking-frameworks) | [12]({{ site.repo_tree }}/figures/Ch3.6_figures_v11MAY26) | — | NV AWS GCP MS |
+| 3.7 | [Tool Auditing and Validation]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-37-tool-auditing-and-validation) | 5.3 | [PDF]({{ site.repo_blob }}/slides/Ch3.7_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1TetLG6Fo7CnUyRHhjF5Ugbf0uCovGp0vCV23CZui-JA/viewform?usp=sharing) | [4]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-37---tool-auditing) | [10]({{ site.repo_tree }}/figures/Ch3.7_figures_v11MAY26) | — | NV AWS GCP MS |
+| 3.8 | [Action Accuracy]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-38-action-accuracy) | 4.5 | [PDF]({{ site.repo_blob }}/slides/Ch3.8_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1lRlcnCStFuREtPdHk6b9Qxu69WKoglcrEKExiKIRlcQ/viewform?usp=sharing) | [3]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-38---action-accuracy) | [12]({{ site.repo_tree }}/figures/Ch3.8_figures_v11MAY26) | 13 | NV AWS GCP |
+| 3.9 | [Reasoning Quality]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-39-reasoning-quality) | 8.0 | [PDF]({{ site.repo_blob }}/slides/Ch3.9_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/162oqrBfqthRmZNyU-74dOVIQr2KQ62ISMkS8dkMsfvw/viewform?usp=sharing) | [5]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-39---reasoning-quality) | [12]({{ site.repo_tree }}/figures/Ch3.9_figures_v11MAY26) | 1 | NV AWS GCP MS |
 | 3.10 | [Efficiency Metrics]({{ site.repo_blob }}/Study_Plan.md#part-3-chapter-310-efficiency-metrics) | 10.2 | [PDF]({{ site.repo_blob }}/slides/Ch3.10_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1iZ1MjXJ_OPXboW9LVd-zzCzIh1y2ySzFZP1azKCdCCs/viewform?usp=sharing) | [6]({{ site.repo_blob }}/videos/Part_03_YoutubeVideos.md#chapter-310---efficiency-metrics) | [12]({{ site.repo_tree }}/figures/Ch3.10_figures_v11MAY26) | — | NV AWS GCP |
 
 
@@ -58,8 +58,6 @@ Summaries are excerpted from [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.m
 
 This foundational chapter establishes the vocabulary, conceptual frameworks, and architectural principles for systematic agent evaluation. It introduces the evaluation pyramid (unit tests, offline evaluation, staging, A/B testing), distinguishes offline evaluation as prediction from online evaluation as measurement, and demonstrates how continuous evaluation prevents regression from future changes that break previously functional capabilities.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
-
 ### 3.1B. Implement Evaluation Pipelines and Task Benchmarks - Custom Metrics and CI/CD Integration
 
 This guided practice chapter extends the foundational evaluation pipeline concepts from 3.1A with practical implementation of custom domain-specific metrics and continuous integration infrastructure. It demonstrates how to measure business value beyond generic accuracy and latency through keyword matching, LLM-as-judge scoring, and rule-based validation, then integrates these custom metrics into GitHub Actions workflows for automated quality assurance.
@@ -82,8 +80,6 @@ This guided practice chapter extends the foundational evaluation pipeline concep
 <div><a href="https://www.youtube.com/watch?v=8OJC21T2SL4">The 5 Levels Of Text Splitting For Retrieval</a> &middot; Greg Kamradt</div>
 </div>
 
-<p><small>9 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 3.1C. Implement Evaluation Pipelines and Task Benchmarks - Independent Practice and Comprehensive System Design
@@ -103,8 +99,6 @@ _No summary in the Study Plan for this chapter._
 <div><a href="https://www.youtube.com/watch?v=TrdevFK_am4">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (Paper Explained)</a> &middot; Yannic Kilcher</div>
 </div>
 
-<p><small>10 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 3.2. Compare Agent Performance Across Tasks and Datasets - Multi-Benchmark Evaluation and Statistical Rigor
@@ -123,8 +117,6 @@ This chapter extends single-metric evaluation to comprehensive multi-benchmark a
 <iframe src="https://www.youtube-nocookie.com/embed/OATCgQtNX2o" title="Text embeddings &amp; semantic search" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=OATCgQtNX2o">Text embeddings &amp; semantic search</a> &middot; Hugging Face</div>
 </div>
-
-<p><small>3 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -164,8 +156,6 @@ This chapter specializes evaluation methodologies for web navigation agents and 
 <div><a href="https://www.youtube.com/watch?v=2MBJOuVq380">Reinforcement Learning from Human Feedback: From Zero to chatGPT</a> &middot; Hugging Face</div>
 </div>
 
-<p><small>5 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 3.4. Tune Parameters
@@ -179,8 +169,6 @@ Systematic parameter tuning requires understanding how configuration changes aff
 <iframe src="https://www.youtube-nocookie.com/embed/9BPCV5TYPmg" title="LangGraph - Persistence &amp; Human-in-the-Loop Workflow" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=9BPCV5TYPmg">LangGraph - Persistence &amp; Human-in-the-Loop Workflow</a> &middot; Coding Crash Courses</div>
 </div>
-
-<p><small>2 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -222,8 +210,6 @@ Prompt optimization represents systematic engineering of agent instructions thro
 
 Trace analysis transforms opaque agent failures into actionable debugging insights through systematic instrumentation, visualization, and forensic analysis. This chapter establishes comprehensive frameworks for debugging non-deterministic probabilistic reasoning where traditional software debugging approaches prove inadequate, making invisible decision processes observable through detailed execution traces.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
-
 ### 3.7. Tool Auditing and Validation
 
 Tool auditing exposes what agents actually do through function calls and API invocations, complementing reasoning inspection with comprehensive monitoring of tool selection, parameter generation, and execution sequencing. This chapter establishes formal tool contracts, validation frameworks distinguishing syntactic from semantic errors, recovery mechanisms, and production monitoring patterns.
@@ -251,8 +237,6 @@ Tool auditing exposes what agents actually do through function calls and API inv
 <div><a href="https://www.youtube.com/watch?v=J-HWmoTKhC8">Monadic Error Handling in Python ⚠ Write Better Python Code Part 7B</a> &middot; ArjanCodes</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 3.8. Action Accuracy
@@ -276,8 +260,6 @@ Action accuracy represents granular evaluation of discrete decisions, tool selec
 <iframe src="https://www.youtube-nocookie.com/embed/f5Qr8xUeSH4" title="LLM Projects - A Quick Tutorial on Multi-Agent Workflows with AutoGen" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=f5Qr8xUeSH4">LLM Projects - A Quick Tutorial on Multi-Agent Workflows with AutoGen</a> &middot; Brainqub3</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -331,8 +313,6 @@ Reasoning quality evaluation examines how agents navigate decision-making paths 
 <iframe src="https://www.youtube-nocookie.com/embed/IsDpoXExmNA" title="SAT Net Pt 1 of 3: Learning MAXSAT Constraints with SAT Net" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=IsDpoXExmNA">SAT Net Pt 1 of 3: Learning MAXSAT Constraints with SAT Net</a> &middot; Neuro Symbolic</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

@@ -26,15 +26,15 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 5.1 | [Chain-of-Thought Reasoning]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-51-chain-of-thought-reasoning) | 3.2 | [PDF]({{ site.repo_blob }}/slides/Ch5.1_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1z75RzeMlZKVckMfWuAszUoCAssGs2vqfq-YRncf2HHI/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-51---chain-of-thought) | [12]({{ site.repo_tree }}/figures/Ch5.1_figures_v11MAY26) | — | NV AWS GCP MS |
 | 5.2 | [Tree-of-Thought (ToT)]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-52-tree-of-thought-tot) | 6.2 | [PDF]({{ site.repo_blob }}/slides/Ch5.2_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1hhvV97gVvKuxCSQ8f7Vhm7ipGrSf0nDeEvqUTzz4ciw/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-52---tree-of-thought) | [6]({{ site.repo_tree }}/figures/Ch5.2_figures_v11MAY26) | 3 | NV AWS GCP MS |
 | 5.3 | [Self-Consistency]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-53-self-consistency) | 3.9 | [PDF]({{ site.repo_blob }}/slides/Ch5.3_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1sJG1qC1wUFkDaXt_3uLY3ulJXGTi34y4qi4NUq2q5bs/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-53---self-consistency) | [8]({{ site.repo_tree }}/figures/Ch5.3_figures_v11MAY26) | — | NV AWS GCP MS |
-| 5.4 | [Hierarchical Planning]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-54-hierarchical-planning) | 4.4 | [PDF]({{ site.repo_blob }}/slides/Ch5.4_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1-ZY4GaQaWejGOa6TtuA1f6Msm9xLSKTII4ojrn_08Sw/viewform?usp=sharing) | [2 of 10]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-54---hierarchical-planning) | [6]({{ site.repo_tree }}/figures/Ch5.4_figures_v11MAY26) | — | NV AWS GCP MS |
-| 5.5 | [Monte Carlo Tree Search (MCTS)]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-55-monte-carlo-tree-search-mcts) | 4.8 | [PDF]({{ site.repo_blob }}/slides/Ch5.5_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1qDmgPgrrIKZoSTESd9Z-riUAac3kUkrLe1HdgSHUpa8/viewform?usp=sharing) | [7 of 8]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-55---monte-carlo-tree-search) | [9]({{ site.repo_tree }}/figures/Ch5.5_figures_v11MAY26) | 3 | NV AWS DBX MS |
-| 5.6 | [A\* Search]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-56-a-search) | 11.2 | [PDF]({{ site.repo_blob }}/slides/Ch5.6_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1yWaTgJIJcToZNaG58nq5HAokSfIMvrysr26tuN5xMSM/viewform?usp=sharing) | [7 of 8]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-56---a-search) | [8]({{ site.repo_tree }}/figures/Ch5.6_figures_v11MAY26) | — | NV AWS MS |
-| 5.7 | [Episodic Memory]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-57-episodic-memory) | 3.7 | [PDF]({{ site.repo_blob }}/slides/Ch5.7_v20MAR26.pdf) | — | [7 of 8]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-57---episodic-memory) | [6]({{ site.repo_tree }}/figures/Ch5.7_figures_v11MAY26) | — | NV AWS GCP MS |
+| 5.4 | [Hierarchical Planning]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-54-hierarchical-planning) | 4.4 | [PDF]({{ site.repo_blob }}/slides/Ch5.4_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1-ZY4GaQaWejGOa6TtuA1f6Msm9xLSKTII4ojrn_08Sw/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-54---hierarchical-planning) | [6]({{ site.repo_tree }}/figures/Ch5.4_figures_v11MAY26) | — | NV AWS GCP MS |
+| 5.5 | [Monte Carlo Tree Search (MCTS)]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-55-monte-carlo-tree-search-mcts) | 4.8 | [PDF]({{ site.repo_blob }}/slides/Ch5.5_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1qDmgPgrrIKZoSTESd9Z-riUAac3kUkrLe1HdgSHUpa8/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-55---monte-carlo-tree-search) | [9]({{ site.repo_tree }}/figures/Ch5.5_figures_v11MAY26) | 3 | NV AWS DBX MS |
+| 5.6 | [A\* Search]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-56-a-search) | 11.2 | [PDF]({{ site.repo_blob }}/slides/Ch5.6_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1yWaTgJIJcToZNaG58nq5HAokSfIMvrysr26tuN5xMSM/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-56---a-search) | [8]({{ site.repo_tree }}/figures/Ch5.6_figures_v11MAY26) | — | NV AWS MS |
+| 5.7 | [Episodic Memory]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-57-episodic-memory) | 3.7 | [PDF]({{ site.repo_blob }}/slides/Ch5.7_v20MAR26.pdf) | — | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-57---episodic-memory) | [6]({{ site.repo_tree }}/figures/Ch5.7_figures_v11MAY26) | — | NV AWS GCP MS |
 | 5.8 | [Semantic Memory]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-58-semantic-memory) | 2.4 | [PDF]({{ site.repo_blob }}/slides/Ch5.8_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1druUvn3qBIZn4A3O29sJpwO9PGEbH-2qC7zBv3muSk4/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-58---semantic-memory) | [6]({{ site.repo_tree }}/figures/Ch5.8_figures_v11MAY26) | 1 | NV AWS GCP MS |
-| 5.9 | [Working Memory]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-59-working-memory) | 4.9 | [PDF]({{ site.repo_blob }}/slides/Ch5.9_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1TyXSfcoxGHCr9QKNZ8OrYnKs14FBPtvoj_H_3SVdSyc/viewform?usp=sharing) | [6 of 7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-59---working-memory) | [11]({{ site.repo_tree }}/figures/Ch5.9_figures_v11MAY26) | — | NV AWS MS |
-| 5.10 | [Utility-Based Decision Making]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-510-utility-based-decision-making) | 5.5 | [PDF]({{ site.repo_blob }}/slides/Ch5.10_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1bT6_8qN2j1GOUOGmtVgIVijEU7FWlbsc6_j5njKPfV8/viewform?usp=sharing) | [7 of 8]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-510---utility-based-decision-making) | [7]({{ site.repo_tree }}/figures/Ch5.10_figures_v11MAY26) | — | NV AWS GCP MS |
+| 5.9 | [Working Memory]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-59-working-memory) | 4.9 | [PDF]({{ site.repo_blob }}/slides/Ch5.9_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1TyXSfcoxGHCr9QKNZ8OrYnKs14FBPtvoj_H_3SVdSyc/viewform?usp=sharing) | [6]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-59---working-memory) | [11]({{ site.repo_tree }}/figures/Ch5.9_figures_v11MAY26) | — | NV AWS MS |
+| 5.10 | [Utility-Based Decision Making]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-510-utility-based-decision-making) | 5.5 | [PDF]({{ site.repo_blob }}/slides/Ch5.10_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1bT6_8qN2j1GOUOGmtVgIVijEU7FWlbsc6_j5njKPfV8/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-510---utility-based-decision-making) | [7]({{ site.repo_tree }}/figures/Ch5.10_figures_v11MAY26) | — | NV AWS GCP MS |
 | 5.11 | [Rule-Based Decision Making]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-511-rule-based-decision-making) | 4.2 | [PDF]({{ site.repo_blob }}/slides/Ch5.11_v20MAR26.pdf) | — | [0]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-511---rule-based-decision-making) | [5]({{ site.repo_tree }}/figures/Ch5.11_figures_v11MAY26) | — | NV AWS DBX GCP MS |
-| 5.12 | [Learning-Based Decision Making]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-512-learning-based-decision-making) | 6.3 | [PDF]({{ site.repo_blob }}/slides/Ch5.12_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/166c1B5zKyF6D_qePjAhlGh_YOAr_5e-74QxhhfVY-FA/viewform?usp=sharing) | [9 of 12]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-512---learning-based-decision-making) | [10]({{ site.repo_tree }}/figures/Ch5.12_figures_v11MAY26) | 1 | NV AWS DBX MS |
+| 5.12 | [Learning-Based Decision Making]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-512-learning-based-decision-making) | 6.3 | [PDF]({{ site.repo_blob }}/slides/Ch5.12_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/166c1B5zKyF6D_qePjAhlGh_YOAr_5e-74QxhhfVY-FA/viewform?usp=sharing) | [9]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-512---learning-based-decision-making) | [10]({{ site.repo_tree }}/figures/Ch5.12_figures_v11MAY26) | 1 | NV AWS DBX MS |
 | 5.13 | [Hybrid Decision Systems]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-513-hybrid-decision-systems) | 9.7 | [PDF]({{ site.repo_blob }}/slides/Ch5.13_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1xyjiUDrzOfxbeixSAX08jC7rNL4HW99guwzyJDwuDSw/viewform?usp=sharing) | [9]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-513---hybrid-decision-systems) | [6]({{ site.repo_tree }}/figures/Ch5.13_figures_v11MAY26) | — | NV AWS DBX MS |
 
 
@@ -211,8 +211,6 @@ Hierarchical planning addresses the impracticality of flat task sequences for co
 <div><a href="https://www.youtube.com/watch?v=bZzyPscbtI8">Building AI Agents in Pure Python - Beginner Course</a> &middot; Dave Ebbelaar</div>
 </div>
 
-<p><small>8 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 5.5. Monte Carlo Tree Search (MCTS)
@@ -256,8 +254,6 @@ Monte Carlo Tree Search addresses a fundamental challenge in agent planning: how
 <iframe src="https://www.youtube-nocookie.com/embed/2pWv7GOvuf0" title="RL Course by David Silver - Lecture 1: Introduction to Reinforcement Learning" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=2pWv7GOvuf0">RL Course by David Silver - Lecture 1: Introduction to Reinforcement Learning</a> &middot; Google DeepMind</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -312,8 +308,6 @@ A* Search represents a fundamental breakthrough in intelligent pathfinding, comb
 <div><a href="https://www.youtube.com/watch?v=aW9kZcJx64o">Path-finding Visualization Comparison; A*, Dijkstra, BFS and DFS</a> &middot; James Robinson</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 5.7. Episodic Memory
@@ -357,8 +351,6 @@ Episodic memory stores specific past experiences with temporal and personal cont
 <iframe src="https://www.youtube-nocookie.com/embed/od0GNwd4-Cs" title="[TMLR 2024] Knowledge Accumulation and Feature Forgetting in Continually Learned Representations" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=od0GNwd4-Cs">[TMLR 2024] Knowledge Accumulation and Feature Forgetting in Continually Learned Representations</a> &middot; Timm Hess</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -450,8 +442,6 @@ Working memory is temporary storage and processing mechanism enabling real-time 
 <div><a href="https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x">RAG From Scratch</a> &middot; LangChain</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 5.10. Utility-Based Decision Making
@@ -495,8 +485,6 @@ Utility-based decision making provides a mathematical framework evaluating actio
 <iframe src="https://www.youtube-nocookie.com/embed/BQ4kVn-Rt84" title="Coding Bayesian Optimization (Bayes Opt) with BOTORCH - Python example for hyperparameter tuning" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=BQ4kVn-Rt84">Coding Bayesian Optimization (Bayes Opt) with BOTORCH - Python example for hyperparameter tuning</a> &middot; paretos</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -552,8 +540,6 @@ This chapter establishes the fundamental paradigm shift from engineering explici
 </div>
 
 <p><a href="https://www.youtube.com/watch?v=vQ_ifavFBkI">Proximal Policy Optimization (PPO) Explained</a> &middot; <small>the uploader has disabled embedding</small></p>
-
-<p><small>3 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

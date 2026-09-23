@@ -23,7 +23,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
-| 9.1 | [Output Filtering]({{ site.repo_blob }}/Study_Plan.md#part-9-chapter-91-output-filtering) | 2.5 | — | [Quiz](https://docs.google.com/forms/d/1EljVTn1taC7T7mVsUz-NZKmLbf2E-Xp2e229yQTGl_w/viewform?usp=sharing) | [2 of 3]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md#chapter-91-output-filtering) | [7]({{ site.repo_tree }}/figures/Ch9.1_figures_v11MAY26) | 6 | NV AWS GCP MS |
+| 9.1 | [Output Filtering]({{ site.repo_blob }}/Study_Plan.md#part-9-chapter-91-output-filtering) | 2.5 | — | [Quiz](https://docs.google.com/forms/d/1EljVTn1taC7T7mVsUz-NZKmLbf2E-Xp2e229yQTGl_w/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md#chapter-91-output-filtering) | [7]({{ site.repo_tree }}/figures/Ch9.1_figures_v11MAY26) | 6 | NV AWS GCP MS |
 | 9.2 | [Action Constraints]({{ site.repo_blob }}/Study_Plan.md#part-9-chapter-92-action-constraints) | 2.2 | — | [Quiz](https://docs.google.com/forms/d/1q3QaLjLhBIFW4GDBWRdBICCz0RZl3wD6ZpjJLa74fkA/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md#chapter-92-action-constraints) | [6]({{ site.repo_tree }}/figures/Ch9.2_figures_v11MAY26) | 21 | NV AWS MS |
 | 9.3 | [Sandboxing and Isolation]({{ site.repo_blob }}/Study_Plan.md#part-9-chapter-93-sandboxing-and-isolation) | 4.4 | — | [Quiz](https://docs.google.com/forms/d/1VorINUF8J5w44kFKSzgEVaifGmX_ojvpW1ixHJkRKYo/viewform?usp=sharing) | [3]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md#chapter-93-sandboxing-and-isolation) | [6]({{ site.repo_tree }}/figures/Ch9.3_figures_v11MAY26) | — | NV AWS GCP MS |
 | 9.4 | [Fairness Foundations]({{ site.repo_blob }}/Study_Plan.md#part-9-chapter-94-fairness-foundations) | 6.5 | — | [Quiz](https://docs.google.com/forms/d/17VfqM5o4CrRf0vXk-U9bWLZShS9LjnwXFQ3kypRScLo/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md#chapter-94-fairness-foundations) | [9]({{ site.repo_tree }}/figures/Ch9.4_figures_v11MAY26) | — | NV AWS DBX GCP MS |
@@ -68,8 +68,6 @@ Output filtering serves as the critical last line of defense in AI safety, inter
 <iframe src="https://www.youtube-nocookie.com/embed/lICivVwm-F8" title="Jaeger V2 Unveiled: Distributed Tracing Powered by OpenTelemetry" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=lICivVwm-F8">Jaeger V2 Unveiled: Distributed Tracing Powered by OpenTelemetry</a> &middot; OpenObservability Talks</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

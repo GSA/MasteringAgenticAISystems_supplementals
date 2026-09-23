@@ -23,13 +23,13 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
-| 4.1 | [AI Agent Deployment and Scaling]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-41-ai-agent-deployment-and-scaling) | 3.2 | [PDF]({{ site.repo_blob }}/slides/Ch4.1_v20MAR26.pdf) | [Quiz 4.1A†](https://docs.google.com/forms/d/1if2c8Qu-gzjVf7NkPtEV6hPmgCpQcGauEoaFp-zCoGs/viewform?usp=sharing), [Quiz 4.1B†](https://docs.google.com/forms/d/1AGZ2H6dIePFVzdv0nsS_wM0x6BjH6UhC8IdAh-Sp49A/viewform?usp=sharing) | [9 of 11]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-41---ai-agent-deployment-and-scaling) | [6]({{ site.repo_tree }}/figures/Ch4.1_figures_v11MAY26) | — | AWS GCP MS |
-| 4.2 | [Deployment & Scaling]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-42-deployment--scaling) | 5.8 | [PDF]({{ site.repo_blob }}/slides/Ch4.2_v20MAR26.pdf) | — | [1 of 8]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-42---deployment--scaling-architecture) | [12]({{ site.repo_tree }}/figures/Ch4.2_figures_v11MAY26) | 4 | NV AWS GCP |
-| 4.3 | [Container Orchestration and Edge Deployment]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-43-container-orchestration-and-edge-deployment) | 2.1 | [PDF]({{ site.repo_blob }}/slides/Ch4.3_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1zf3fb2qlxLbs6Z6ARpbrcUdp-T5OE6hmEP9wMZC3bjw/viewform?usp=sharing) | [7 of 9]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-43---container-orchestration-and-edge-deployment) | [12]({{ site.repo_tree }}/figures/Ch4.3_figures_v11MAY26) | 7 | NV AWS GCP MS |
+| 4.1 | [AI Agent Deployment and Scaling]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-41-ai-agent-deployment-and-scaling) | 3.2 | [PDF]({{ site.repo_blob }}/slides/Ch4.1_v20MAR26.pdf) | [Quiz 4.1A†](https://docs.google.com/forms/d/1if2c8Qu-gzjVf7NkPtEV6hPmgCpQcGauEoaFp-zCoGs/viewform?usp=sharing), [Quiz 4.1B†](https://docs.google.com/forms/d/1AGZ2H6dIePFVzdv0nsS_wM0x6BjH6UhC8IdAh-Sp49A/viewform?usp=sharing) | [9]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-41---ai-agent-deployment-and-scaling) | [6]({{ site.repo_tree }}/figures/Ch4.1_figures_v11MAY26) | — | AWS GCP MS |
+| 4.2 | [Deployment & Scaling]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-42-deployment--scaling) | 5.8 | [PDF]({{ site.repo_blob }}/slides/Ch4.2_v20MAR26.pdf) | — | [1]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-42---deployment--scaling-architecture) | [12]({{ site.repo_tree }}/figures/Ch4.2_figures_v11MAY26) | 4 | NV AWS GCP |
+| 4.3 | [Container Orchestration and Edge Deployment]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-43-container-orchestration-and-edge-deployment) | 2.1 | [PDF]({{ site.repo_blob }}/slides/Ch4.3_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1zf3fb2qlxLbs6Z6ARpbrcUdp-T5OE6hmEP9wMZC3bjw/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-43---container-orchestration-and-edge-deployment) | [12]({{ site.repo_tree }}/figures/Ch4.3_figures_v11MAY26) | 7 | NV AWS GCP MS |
 | 4.4 | [Performance Profiling and Optimization]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-44-performance-profiling-and-optimization) | 6.0 | [PDF]({{ site.repo_blob }}/slides/Ch4.4_v20MAR26.pdf) | — | [7]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-44---performance-profiling-and-optimization) | [12]({{ site.repo_tree }}/figures/Ch4.4_figures_v11MAY26) | 12 | NV AWS GCP MS |
-| 4.5 | [NVIDIA NIM and Triton Inference Server]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-45-nvidia-nim-and-triton-inference-server) | 2.1 | [PDF]({{ site.repo_blob }}/slides/Ch4.5_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1Z1xLfMAdzT0IJibUl0cGqfRD7Hh1Pb2CY2SCUcGJL6Q/viewform?usp=sharing) | [5 of 6]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-45---nvidia-nim-and-triton-inference-server) | [6]({{ site.repo_tree }}/figures/Ch4.5_figures_v11MAY26) | — | NV AWS GCP MS |
-| 4.6 | [TensorRT-LLM and NVIDIA Fleet Command]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-46-tensorrt-llm-and-nvidia-fleet-command) | 1.5 | [PDF]({{ site.repo_blob }}/slides/Ch4.6_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1ak-7FD_KYAcAfbrWxUm_y2n3pyBXM0vvrnu5ZjYEkVE/viewform?usp=sharing) | [7 of 9]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-46---tensorrt-llm-and-nvidia-fleet-command) | [9]({{ site.repo_tree }}/figures/Ch4.6_figures_v11MAY26) | — | NV AWS GCP MS |
-| 4.7 | [Scaling Strategies]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-47-scaling-strategies) | 3.7 | [PDF]({{ site.repo_blob }}/slides/Ch4.7_v20MAR26.pdf) | — | [3 of 4]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-47---scaling-strategies) | [6]({{ site.repo_tree }}/figures/Ch4.7_figures_v11MAY26) | — | NV AWS GCP MS |
+| 4.5 | [NVIDIA NIM and Triton Inference Server]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-45-nvidia-nim-and-triton-inference-server) | 2.1 | [PDF]({{ site.repo_blob }}/slides/Ch4.5_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1Z1xLfMAdzT0IJibUl0cGqfRD7Hh1Pb2CY2SCUcGJL6Q/viewform?usp=sharing) | [5]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-45---nvidia-nim-and-triton-inference-server) | [6]({{ site.repo_tree }}/figures/Ch4.5_figures_v11MAY26) | — | NV AWS GCP MS |
+| 4.6 | [TensorRT-LLM and NVIDIA Fleet Command]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-46-tensorrt-llm-and-nvidia-fleet-command) | 1.5 | [PDF]({{ site.repo_blob }}/slides/Ch4.6_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1ak-7FD_KYAcAfbrWxUm_y2n3pyBXM0vvrnu5ZjYEkVE/viewform?usp=sharing) | [7]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-46---tensorrt-llm-and-nvidia-fleet-command) | [9]({{ site.repo_tree }}/figures/Ch4.6_figures_v11MAY26) | — | NV AWS GCP MS |
+| 4.7 | [Scaling Strategies]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-47-scaling-strategies) | 3.7 | [PDF]({{ site.repo_blob }}/slides/Ch4.7_v20MAR26.pdf) | — | [3]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-47---scaling-strategies) | [6]({{ site.repo_tree }}/figures/Ch4.7_figures_v11MAY26) | — | NV AWS GCP MS |
 
 
 **Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_04_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
@@ -99,8 +99,6 @@ This chapter introduces the essential infrastructure and operational practices f
 <div><a href="https://www.youtube.com/watch?v=kTp5xUtcalw">Docker Containers and Kubernetes Fundamentals – Full Hands-On Course</a> &middot; freeCodeCamp.org</div>
 </div>
 
-<p><small>2 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 4.2. Deployment & Scaling
@@ -114,8 +112,6 @@ Chapter 4.2 details deployment patterns for agentic systems, examining microserv
 <iframe src="https://www.youtube-nocookie.com/embed/QoDqxm7ybLc" title="Setup Prometheus Monitoring on Kubernetes using Helm and Prometheus Operator | Part 1" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=QoDqxm7ybLc">Setup Prometheus Monitoring on Kubernetes using Helm and Prometheus Operator | Part 1</a> &middot; TechWorld with Nana</div>
 </div>
-
-<p><small>7 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -170,8 +166,6 @@ Chapter 4.3 covers Kubernetes orchestration for production multi-agent deploymen
 <iframe src="https://www.youtube-nocookie.com/embed/Vrxr-7rjkvM" title="Kubernetes Tutorial: Why Do You Need StatefulSets in Kubernetes?" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=Vrxr-7rjkvM">Kubernetes Tutorial: Why Do You Need StatefulSets in Kubernetes?</a> &middot; KodeKloud</div>
 </div>
-
-<p><small>2 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 
@@ -282,8 +276,6 @@ NVIDIA NIM represents a paradigm shift in LLM deployment by collapsing the month
 <div><a href="https://www.youtube.com/watch?v=wtJ09xDuSx0">Kubernetes HPA Not Scaling? Here&#x27;s Why – With Live Demo</a> &middot; sarfatech</div>
 </div>
 
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 4.6. TensorRT-LLM and NVIDIA Fleet Command
@@ -328,8 +320,6 @@ TensorRT-LLM addresses fundamental inference challenges through optimization pip
 <div><a href="https://www.youtube.com/watch?v=aircAruvnKk">But what is a neural network? | Deep learning chapter 1</a> &middot; 3Blue1Brown</div>
 </div>
 
-<p><small>2 more listed in the source file were not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
-
 </details>
 
 ### 4.7. Scaling Strategies
@@ -353,8 +343,6 @@ Horizontal scaling addresses capacity expansion through creating multiple agent 
 <iframe src="https://www.youtube-nocookie.com/embed/X48VuDVv0do" title="Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=X48VuDVv0do">Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]</a> &middot; TechWorld with Nana</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

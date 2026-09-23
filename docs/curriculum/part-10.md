@@ -27,7 +27,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 10.2 | [Proactive Agents]({{ site.repo_blob }}/Study_Plan.md#part-10-chapter-102-proactive-agents) | 6.2 | — | [Quiz](https://docs.google.com/forms/d/1JfhTZi64odDKNg6bxGdDK6Tzke4LJ6H-l80zreuBmzw/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_10_YoutubeVideos.md#chapter-102-proactive-agents) | [6]({{ site.repo_tree }}/figures/Ch10.2_figures_v11MAY26) | — | NV AWS DBX GCP MS |
 | 10.3A | [RLHF Methodology]({{ site.repo_blob }}/Study_Plan.md#part-10-chapter-103a-rlhf-methodology) | 5.3 | — | [Quiz 10.3†](https://docs.google.com/forms/d/1kfKFluEL-PTpI3MlNeYHK6D6zJ2MF44TFe40gaS-EWA/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_10_YoutubeVideos.md#chapter-103a-rlhf-methodology) | [12†]({{ site.repo_tree }}/figures/Ch10.3_figures_v11MAY26) | — | NV AWS DBX GCP MS |
 | 10.3B | [RLHF Pitfalls and Red Teaming]({{ site.repo_blob }}/Study_Plan.md#part-10-chapter-103b-rlhf-pitfalls-and-red-teaming) | 3.9 | — | — | [0]({{ site.repo_blob }}/videos/Part_10_YoutubeVideos.md#chapter-103b-rlhf-pitfalls) | [12†]({{ site.repo_tree }}/figures/Ch10.3_figures_v11MAY26) | — | NV AWS DBX MS |
-| 10.4 | [Human-in-the-Loop]({{ site.repo_blob }}/Study_Plan.md#part-10-chapter-104-human-in-the-loop) | 5.5 | — | [Quiz](https://docs.google.com/forms/d/1S9-1L6ueaO3E7ApGEXekHlKI74rXTce7v-P5TtQn_eI/viewform?usp=sharing) | [2 of 3]({{ site.repo_blob }}/videos/Part_10_YoutubeVideos.md#chapter-104-human-in-the-loop) | [11]({{ site.repo_tree }}/figures/Ch10.4_figures_v11MAY26) | — | NV AWS DBX GCP MS |
+| 10.4 | [Human-in-the-Loop]({{ site.repo_blob }}/Study_Plan.md#part-10-chapter-104-human-in-the-loop) | 5.5 | — | [Quiz](https://docs.google.com/forms/d/1S9-1L6ueaO3E7ApGEXekHlKI74rXTce7v-P5TtQn_eI/viewform?usp=sharing) | [2]({{ site.repo_blob }}/videos/Part_10_YoutubeVideos.md#chapter-104-human-in-the-loop) | [11]({{ site.repo_tree }}/figures/Ch10.4_figures_v11MAY26) | — | NV AWS DBX GCP MS |
 | 10.5 | [Human-over-the-Loop]({{ site.repo_blob }}/Study_Plan.md#part-10-chapter-105-human-over-the-loop) | 8.1 | — | [Quiz](https://docs.google.com/forms/d/1ePcVBWqiyScIys77ZiU0F1OQaGRndloJJIZr30tM80Y/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_10_YoutubeVideos.md#chapter-105-human-over-the-loop) | [12]({{ site.repo_tree }}/figures/Ch10.5_figures_v11MAY26) | — | NV AWS DBX GCP MS |
 | 10.6 | [Integration (Feedback, Calibration, Explainability, Controllability, Consistency)]({{ site.repo_blob }}/Study_Plan.md#part-10-sections-106-integration-feedback-calibration-explainability-controllability-consistency) | 4.9 | — | — | — | — | — | AWS DBX GCP MS |
 
@@ -87,8 +87,6 @@ This chapter explains Human-in-the-Loop (HITL) approval mechanisms where agent e
 <iframe src="https://www.youtube-nocookie.com/embed/Za8CrPqQxpA" title="LangGraph Agents - Human-In-The-Loop Breakpoints" loading="lazy" style="width:100%;max-width:560px;aspect-ratio:16/9;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div><a href="https://www.youtube.com/watch?v=Za8CrPqQxpA">LangGraph Agents - Human-In-The-Loop Breakpoints</a> &middot; LangChain</div>
 </div>
-
-<p><small>1 more listed in the source file was not embedded (unavailable, or not matching its description); see the <a href="{% link video-link-check.md %}">link check</a>.</small></p>
 
 </details>
 

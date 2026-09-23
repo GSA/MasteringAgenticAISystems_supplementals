@@ -44,7 +44,7 @@ docs/
 ├── certifications.md    Certification mappings (NCP-AAI, AWS, Databricks, Google, Microsoft)
 ├── practice.md          Chapter quizzes and full-length practice exams
 ├── videos.md            Curated third-party videos, per Part
-├── video-link-check.md  Which video links were not embedded, and why (hidden from the menu)
+├── video-link-check.md  Record of the video link check/cleanup: what was removed and why (hidden from the menu)
 ├── slides.md            Slide decks, per chapter
 ├── labs.md              Lab status and how labs are written
 ├── code-examples.md     Code snippets and worked examples, per Part
@@ -117,18 +117,25 @@ Each chapter summary on a Part page has a collapsed **Videos** section, built li
 lazy-loaded `youtube-nocookie.com` player per video and a caption. Captions use the title and channel that YouTube
 reports, not the wording in `videos/`, because the two often differ.
 
-Only some links are embedded. On 2026-09-21 each YouTube link was checked with YouTube's public oEmbed endpoint
-(`https://www.youtube.com/oembed?url=…`), which returns the real title or an error. A video is embedded when it is
-available **and** either its title shares at least half its meaningful words with the entry's title, or it was accepted by
-hand after comparing the two titles (the exceptions are listed in the generator that produced the pages, not in the
-repository). Everything else is left out and listed on `video-link-check.md`: links YouTube reports as not found,
-links whose video is a different one from the entry, and videos that cannot be embedded (shown as plain links).
-The three `nngroup.com` links are not YouTube, so they are shown as plain links.
+Not every link in `videos/` is embeddable, and the source files are cleaned periodically as a result. Each YouTube link
+is checked with YouTube's public oEmbed endpoint (`https://www.youtube.com/oembed?url=…`), which returns the real title
+or an error. On 2026-09-23, that check found 93 entries whose link was dead (36 unique links) or pointed at a real but
+different video from the one the entry described, and those 93 entries were **removed from `videos/`** rather than left
+in and merely un-embedded; four chapters lost their only video this way and now carry a short "Note:" line instead (the
+existing convention in these files for a chapter with no direct link), in the same style as the pre-existing notes on,
+for example, chapter 6.3A. `video-link-check.md` records what was removed and why, for salvage and so the same dead link
+does not get proposed again.
+
+Of what remains, a video is embedded when it is available **and** either its title shares at least half its meaningful
+words with the entry's title, or it was accepted by hand after comparing the two titles (the exceptions are listed in the
+cleanup and generator scripts, not in the repository). The two links whose uploader has disabled embedding are kept as
+plain links rather than players. The three `nngroup.com` links are not YouTube, so they were never checked and are
+always shown as plain links.
 
 This is a title check only. It cannot tell whether a video is a good explanation, and a few embedded videos are only
-loosely related to the chapter they sit under. The result is a snapshot: videos disappear, so re-run the check before
-relying on it. Family-numbered sections (the `6.1` section of Part 6) are embedded once, under the first chapter of the
-family.
+loosely related to the chapter they sit under. It is also a snapshot — new links added later, or videos that go dead
+after the check date, will not be caught until the check is re-run. Family-numbered sections (the `6.1` section of
+Part 6) are embedded once, under the first chapter of the family.
 
 ### Deliberately not published
 
@@ -157,7 +164,7 @@ simplify the pages.
 | Prerequisite tiers | `Prerequisite_Knowledge.md` lists machine learning fundamentals as essential in its detailed section and as recommended in its checklist | The site follows the detailed section and notes the difference |
 | AI tutor scope | `ai_tutor/README.md` says both that coverage is "certain part chapters" shared separately and that it is limited to "Parts 1–2" | The site states the Parts 1–2 wording and that coverage is limited |
 | Slide files | The Book Club decks carry inconsistent titles ("Session 1", "Session x", "Week 9"), and one file is named `Chapter1.7B_1.8_v1.0_2026_03_01 (1).pdf` (a duplicate-download suffix) | The site lists their chapters instead of the deck titles |
-| Videos | Parts 7–10 list 48, 23, 64, and 68 entries but only 3, 2, 6, and 3 direct links; the rest are search suggestions. Of the 267 unique YouTube links, 36 return "not found", 2 cannot be embedded, and dozens are live but are a different video from the one the entry names (for example an entry titled "LangGraph Checkpointer - Game-Changer for AI Agents" links to an unrelated video about marriage) | Those videos are not embedded; the full list is on `video-link-check.md` |
+| Videos | Parts 7–10 list far more entries than direct links; the rest are search suggestions. A 2026-09-23 link check found 93 entries whose link was dead or pointed at a real but different video (for example an entry titled "LangGraph Checkpointer - Game-Changer for AI Agents" linked to an unrelated video about marriage) | Those 93 entries were removed from `videos/`, not just left un-embedded; `video-link-check.md` has the full account |
 | Review time | `CONTRIBUTING.md` and `SUPPORT.md` promise a first response in 3 business days; `CALL_FOR_COLLABORATORS.md` now says 3–5 | The site says "a few business days" |
 
 ## Local preview
