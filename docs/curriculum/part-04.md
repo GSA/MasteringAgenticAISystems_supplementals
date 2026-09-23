@@ -19,7 +19,7 @@ permalink: /curriculum/part-04/
 
 ## Chapters
 
-Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({% link certifications.md %}).
+Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({{ site.baseurl }}/certifications/).
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
@@ -32,7 +32,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 4.7 | [Scaling Strategies]({{ site.repo_blob }}/Study_Plan.md#part-4-chapter-47-scaling-strategies) | 3.7 | [PDF]({{ site.repo_blob }}/slides/Ch4.7_v20MAR26.pdf) | — | [3]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md#chapter-47---scaling-strategies) | [6]({{ site.repo_tree }}/figures/Ch4.7_figures_v11MAY26) | — | NV AWS GCP MS |
 
 
-**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_04_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_04_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_04_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({{ site.baseurl }}/videos/link-check/). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -380,7 +380,7 @@ These files are named for a chapter number that is not in the current chapter li
 
 ### Labs
 
-No finished lab exists for this Part yet. These legacy example files are prose excerpts with embedded code, kept as source material; they do not count as lab coverage. See [Labs]({% link labs.md %}).
+No finished lab exists for this Part yet. These legacy example files are prose excerpts with embedded code, kept as source material; they do not count as lab coverage. See [Labs]({{ site.baseurl }}/labs/).
 
 - [`Part_04_Chapter_4.1_Labs1.md`]({{ site.repo_blob }}/labs/archive/Part_04_Chapter_4.1_Labs1.md)
 - [`Part_04_Chapter_4.1_Labs2.md`]({{ site.repo_blob }}/labs/archive/Part_04_Chapter_4.1_Labs2.md)

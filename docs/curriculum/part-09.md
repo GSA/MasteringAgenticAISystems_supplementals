@@ -19,7 +19,7 @@ permalink: /curriculum/part-09/
 
 ## Chapters
 
-Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({% link certifications.md %}).
+Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({{ site.baseurl }}/certifications/).
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
@@ -35,7 +35,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 9.17 | Chapter Summary and Integration § | — | — | [Quiz](https://docs.google.com/forms/d/19CQlkouCfWXofAvGk8PS_Wmaj7KnviEaA1kmD4okGrI/viewform?usp=sharing) | — | — | — | NV |
 
 
-**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_09_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_09_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_09_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({{ site.baseurl }}/videos/link-check/). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -87,7 +87,7 @@ Output filtering serves as the critical last line of defense in AI safety, inter
 
 This chapter addresses the fundamental vulnerability of autonomous agents operating with excessive permissions, where the machine-paced execution of 1,000-10,000 operations per minute combined with dynamic behavior synthesis creates risks that traditional human-centric permission models cannot address. It provides comprehensive frameworks for implementing least-privilege permissions, multi-layered defense architectures, and human oversight mechanisms to contain the blast radius of agent misbehavior or compromise.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (21 files)</summary>
@@ -148,25 +148,25 @@ Fairness in AI extends beyond non-discrimination to address emergent biases from
 
 Constitutional AI addresses RLHF's critical limitations (implicit values, annotation bottleneck, psychological costs) by replacing preference-based learning with explicit, inspectable ethical principles that guide behavior throughout training. The two-phase approach—Phase 1 supervised self-critique with constitutional principles and Phase 2 reinforcement learning from AI feedback—makes values transparent while enabling scalability without human annotation, though implementation remains constrained by principle ambiguity, incomplete coverage, and fundamental value conflicts.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 ### 9.6. Standards, Certifications, and Frameworks
 
 Value alignment frameworks operationalize abstract ethical principles into systematic technical and governance approaches that ensure AI systems maintain long-term consistency with human values across deployment contexts. The World Economic Forum framework emphasizes that effective alignment requires transparency at every development stage, continuous stakeholder participation beyond initial design, ongoing monitoring to detect drift, and explicit documentation of value conflicts rather than pretending technical methods eliminate inherent tensions.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 ### 9.7. GDPR Foundations
 
 The General Data Protection Regulation represents a paradigm shift in global data protection, establishing principles-based requirements applicable worldwide to any organization processing EU resident data since May 25, 2018. GDPR compliance requires embedding data protection into operational culture as ongoing governance commitment rather than temporary initiative, with organizations adapting implementations to context while maintaining consistent data protection standards.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 ### 9.8. Standards and Frameworks for AI Governance
 
 NIST AI Risk Management Framework and ISO/IEC 42001 provide complementary governance approaches where NIST delivers flexible operational risk management while ISO 42001 establishes formal management system structure, with implementation of both frameworks creating more robust governance than either alone. These standards integrate with sector-specific regulations and other management systems into unified governance addressing complete AI system lifecycles.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 ### 9.16. Chapter Summary and Integration
 
@@ -178,4 +178,4 @@ _No summary in the Study Plan for this chapter._
 
 ### Labs
 
-No lab or legacy example exists for this Part yet. See [Labs]({% link labs.md %}) and [Contributing]({% link contributing.md %}).
+No lab or legacy example exists for this Part yet. See [Labs]({{ site.baseurl }}/labs/) and [Contributing]({{ site.baseurl }}/contributing/).

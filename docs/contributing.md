@@ -24,7 +24,7 @@ Listed in priority order; the [call for collaborators]({{ site.repo_blob }}/CALL
 
 | Track | What you would do | Skills | Typical effort |
 |---|---|---|---|
-| **Labs** (the focus) | Write a hands-on lab for a chapter against the [lab template]({% link labs.md %}) | Python, plus the chapter's framework | 4–12 hours self-contained; 12–20 with an external service; submitted as several small PRs |
+| **Labs** (the focus) | Write a hands-on lab for a chapter against the [lab template]({{ site.baseurl }}/labs/) | Python, plus the chapter's framework | 4–12 hours self-contained; 12–20 with an external service; submitted as several small PRs |
 | **Instructional content review** | Fact-check chapter text against current vendor documentation, review slides, check quiz-to-chapter mapping | Subject expertise; no coding | 1–3 hours per finding |
 | **Certification mapping** | Rate every chapter against an exam's knowledge items (H/M/L/N), for example Google's Generative AI Leader | Careful structured reading | Varies |
 | **Video library** | Verify links still work and match their descriptions, or add curated entries | Judgment of what makes a good explanation | 15–30 minutes per link check |

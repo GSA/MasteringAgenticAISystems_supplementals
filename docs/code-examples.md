@@ -31,16 +31,16 @@ Each Part page lists its files under the chapter they belong to.
 
 | Part | Snippets in `code_examples/` | Files in `more_examples/` |
 |---|---:|---:|
-| [Part 1]({% link curriculum/part-01.md %}) | 53 | 4 |
-| [Part 2]({% link curriculum/part-02.md %}) | 66 | 1 |
-| [Part 3]({% link curriculum/part-03.md %}) | 35 | 2 |
-| [Part 4]({% link curriculum/part-04.md %}) | 45 | — |
-| [Part 5]({% link curriculum/part-05.md %}) | 8 | 2 |
-| [Part 6]({% link curriculum/part-06.md %}) | 59 | 2 |
-| [Part 7]({% link curriculum/part-07.md %}) | 76 | 5 |
-| [Part 8]({% link curriculum/part-08.md %}) | 29 | 2 |
-| [Part 9]({% link curriculum/part-09.md %}) | 27 | — |
-| [Part 10]({% link curriculum/part-10.md %}) | 4 | 2 |
+| [Part 1]({{ site.baseurl }}/curriculum/part-01/) | 53 | 4 |
+| [Part 2]({{ site.baseurl }}/curriculum/part-02/) | 66 | 1 |
+| [Part 3]({{ site.baseurl }}/curriculum/part-03/) | 35 | 2 |
+| [Part 4]({{ site.baseurl }}/curriculum/part-04/) | 45 | — |
+| [Part 5]({{ site.baseurl }}/curriculum/part-05/) | 8 | 2 |
+| [Part 6]({{ site.baseurl }}/curriculum/part-06/) | 59 | 2 |
+| [Part 7]({{ site.baseurl }}/curriculum/part-07/) | 76 | 5 |
+| [Part 8]({{ site.baseurl }}/curriculum/part-08/) | 29 | 2 |
+| [Part 9]({{ site.baseurl }}/curriculum/part-09/) | 27 | — |
+| [Part 10]({{ site.baseurl }}/curriculum/part-10/) | 4 | 2 |
 
 Some files are named for chapter numbers that are not in the current chapter list (`3.1`, `4.1C`, `4.2A`, `4.2B`,
 `10.3`); the Part pages list them separately as *Other code examples*.

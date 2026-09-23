@@ -80,6 +80,6 @@ The per-chapter status table is in [`labs/README.md`]({{ site.repo_blob }}/labs/
 
 ## Write a lab
 
-Labs are the priority track in the [call for collaborators]({% link contributing.md %}): pick a chapter, design a realistic
+Labs are the priority track in the [call for collaborators]({{ site.baseurl }}/contributing/): pick a chapter, design a realistic
 scenario, and write it against the template. Expect roughly 4–12 hours for a self-contained algorithmic lab and 12–20
 for one that needs an external service, submitted as a sequence of small pull requests.

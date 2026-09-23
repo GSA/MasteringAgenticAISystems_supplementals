@@ -19,7 +19,7 @@ permalink: /curriculum/part-02/
 
 ## Chapters
 
-Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({% link certifications.md %}).
+Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({{ site.baseurl }}/certifications/).
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
@@ -34,7 +34,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 2.9 | [Streaming and Real-Time Responses]({{ site.repo_blob }}/Study_Plan.md#part-2-chapter-29-streaming-and-real-time-responses) | 2.0 | [PDF‡]({{ site.repo_blob }}/slides/Chapter2.7_2.8_2.9_v1.0_2026_03_01.pdf) | [Quiz](https://docs.google.com/forms/d/1EVvuCnVelN44xHeVzolDx1MVwV3AJucqDsPeeHLP5DA/viewform?usp=sharing) | [1]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md#chapter-29---streaming) | — | 9 | NV AWS GCP MS |
 
 
-**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_02_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_02_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_02_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({{ site.baseurl }}/videos/link-check/). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -380,7 +380,7 @@ From [`more_examples/part_02/`]({{ site.repo_tree }}/more_examples/part_02):
 
 ### Labs
 
-No finished lab exists for this Part yet. These legacy example files are prose excerpts with embedded code, kept as source material; they do not count as lab coverage. See [Labs]({% link labs.md %}).
+No finished lab exists for this Part yet. These legacy example files are prose excerpts with embedded code, kept as source material; they do not count as lab coverage. See [Labs]({{ site.baseurl }}/labs/).
 
 - [`Part_02_Chapter_2.10_Lab.md`]({{ site.repo_blob }}/labs/archive/Part_02_Chapter_2.10_Lab.md)
 - [`Part_02_Chapter_2.7_Labs.md`]({{ site.repo_blob }}/labs/archive/Part_02_Chapter_2.7_Labs.md)

@@ -19,7 +19,7 @@ permalink: /curriculum/part-08/
 
 ## Chapters
 
-Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({% link certifications.md %}).
+Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({{ site.baseurl }}/certifications/).
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
@@ -30,7 +30,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 8.4 | [Success Metrics]({{ site.repo_blob }}/Study_Plan.md#part-8-chapter-84-success-metrics) | 0.8 | — | [Quiz](https://docs.google.com/forms/d/1xbI_UW3aLlDWQcQSJZ12GTkAz78PP0rMUouJLDfPIdU/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_08_YoutubeVideos.md#chapter-84-success-metrics) | [7]({{ site.repo_tree }}/figures/Ch8.4_figures_v11MAY26) | — | NV AWS GCP MS |
 
 
-**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_08_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_08_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_08_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_08_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({{ site.baseurl }}/videos/link-check/). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -49,7 +49,7 @@ Summaries are excerpted from [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.m
 
 Agent latency monitoring requires simultaneous tracking of end-to-end metrics and granular per-step measurements to distinguish between average performance that masks outliers and percentile-based metrics revealing true user experience. From diagnosis through distributed tracing to GPU-level observability, this chapter provides the comprehensive measurement framework necessary for production optimization.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (8 files)</summary>
@@ -102,7 +102,7 @@ This chapter provides a systematic framework for categorizing AI agent failures 
 
 This chapter addresses how circuit breakers prevent cascading failures in distributed systems through fast-fail behavior, and how to categorize production errors into safety violations versus infrastructure failures for proper team escalation and monitoring. The practical focus includes implementing a three-state circuit breaker automaton and designing separate monitoring pipelines that distinguish NeMo Guardrails safety blocks from execution exceptions.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (5 files)</summary>
@@ -119,7 +119,7 @@ _No videos are shown for this chapter: its list has only search suggestions, or 
 
 Token economics fundamentally shape LLM cost optimization strategies through asymmetric pricing, where output tokens cost 4-5× more than input tokens due to computational differences between single-pass encoding and iterative decoding. This chapter establishes a three-tier monitoring architecture and demonstrates how systematic multi-faceted optimizations can achieve significant cost reductions while maintaining quality metrics.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (8 files)</summary>
@@ -148,4 +148,4 @@ From [`more_examples/part_08/`]({{ site.repo_tree }}/more_examples/part_08):
 
 ### Labs
 
-Chapter 8.2B has the project's first lab written to the lab template: [Build a Circuit Breaker for a Flaky Downstream Tool]({{ site.repo_blob }}/labs/8.2B_circuit_breaker/lab.md) (status: draft). See [Labs]({% link labs.md %}).
+Chapter 8.2B has the project's first lab written to the lab template: [Build a Circuit Breaker for a Flaky Downstream Tool]({{ site.repo_blob }}/labs/8.2B_circuit_breaker/lab.md) (status: draft). See [Labs]({{ site.baseurl }}/labs/).

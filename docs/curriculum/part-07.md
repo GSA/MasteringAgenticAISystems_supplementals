@@ -19,7 +19,7 @@ permalink: /curriculum/part-07/
 
 ## Chapters
 
-Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({% link certifications.md %}).
+Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({{ site.baseurl }}/certifications/).
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
@@ -33,7 +33,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 7.6 | [Multi-Instance GPU (MIG) & Security]({{ site.repo_blob }}/Study_Plan.md#part-7-chapter-76-multi-instance-gpu-mig--security) | 2.1 | — | [Quiz](https://docs.google.com/forms/d/1io2Z9tCSlSIAPDXIdrVC1KsGJL3nA_5S_aLxCKj0M7s/viewform?usp=sharing) | [0]({{ site.repo_blob }}/videos/Part_07_YoutubeVideos.md#chapter-76-gpu-security-and-multi-instance-gpu) | [7]({{ site.repo_tree }}/figures/Ch7.6_figures_v11MAY26) | — | NV AWS GCP MS |
 
 
-**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_07_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_07_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_07_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_07_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({{ site.baseurl }}/videos/link-check/). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -52,7 +52,7 @@ Summaries are excerpted from [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.m
 
 This chapter orchestrates the complete AI agent lifecycle through NVIDIA NeMo platform's integrated ecosystem. The architecture encompasses data curation via NeMo Curator (16x GPU acceleration), safety via NeMo Guardrails (six protective layers), optimized inference through NIM and TensorRT-LLM (3-4x throughput), and domain-aware retrieval via NeMo Retriever (50% accuracy improvements). Six defense-in-depth rail types apply protection at strategic pipeline checkpoints, complemented by advanced inference optimization techniques including speculative decoding, continuous batching, and multi-GPU parallelism strategies.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (5 files)</summary>
@@ -69,7 +69,7 @@ _No videos are shown for this chapter: its list has only search suggestions, or 
 
 This chapter translates business safety policies into executable guardrail configurations using Colang, a Python-inspired domain-specific language enabling declarative policy definition without ML expertise. The chapter demonstrates seamless NIM integration through protective wrapper architecture, then clarifies four critical misconceptions: guardrails as complete security, elimination of model safety training, jailbreak detection reliability, and fact-checking hallucination coverage. Understanding these limitations positions teams to design realistic, multi-layered safety strategies acknowledging guardrails' role as one component in defense-in-depth architectures.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (1 files)</summary>
@@ -99,7 +99,7 @@ This chapter navigates the fundamental throughput-latency-cost optimization tria
 
 This chapter transforms abstract NIM architecture into hands-on deployment infrastructure starting with local Docker development then scaling to production Kubernetes. Prerequisites validate system readiness (GPU drivers, VRAM constraints, NGC authentication), environment configuration establishes persistent storage and credential management, and deployment verification confirms end-to-end pipeline functionality. The chapter translates Docker patterns to Kubernetes resources (volumes to PersistentVolumeClaims, GPU allocation to resource requests) while maintaining development-production consistency. Multi-model serving architecture enables workload-specific scaling, and service mesh routing provides intelligent model selection without client knowledge of backend implementations.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (4 files)</summary>
@@ -115,7 +115,7 @@ _No videos are shown for this chapter: its list has only search suggestions, or 
 
 NeMo Agent Toolkit provides systematic profiling, optimization, and continuous monitoring capabilities for production LLM agents across frameworks like LangChain, CrewAI, and LlamaIndex. This chapter covers end-to-end performance engineering—from identifying bottlenecks through profiling, implementing optimizations with measured impact validation, and preventing regressions through continuous benchmarking integrated into CI/CD pipelines.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 <details markdown="block">
 <summary>Code examples (14 files)</summary>
@@ -226,7 +226,7 @@ This chapter covers GPU-accelerated data curation through NeMo Curator, producti
 
 This chapter addresses the fundamental economics problem of GPU underutilization in multi-tenant AI deployments, where 85-90% of GPU capacity sits idle when serving agent inference workloads. It explores how Multi-Instance GPU (MIG) hardware partitioning divides a single A100 into up to seven fully isolated instances, enabling dramatic cost reduction (86% CAPEX savings) while maintaining strict performance guarantees essential for SaaS platforms, contrasting this with software-level time-slicing approaches that sacrifice isolation for flexibility.
 
-_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({% link video-link-check.md %})._
+_No videos are shown for this chapter: its list has only search suggestions, or its links failed the [link check]({{ site.baseurl }}/videos/link-check/)._
 
 ### Additional worked examples
 
@@ -240,6 +240,6 @@ From [`more_examples/part_07/`]({{ site.repo_tree }}/more_examples/part_07):
 
 ### Labs
 
-No finished lab exists for this Part yet. These legacy example files are prose excerpts with embedded code, kept as source material; they do not count as lab coverage. See [Labs]({% link labs.md %}).
+No finished lab exists for this Part yet. These legacy example files are prose excerpts with embedded code, kept as source material; they do not count as lab coverage. See [Labs]({{ site.baseurl }}/labs/).
 
 - [`Part_07_Chapter_7.2A_Local_Development.md`]({{ site.repo_blob }}/labs/archive/Part_07_Chapter_7.2A_Local_Development.md)

@@ -45,7 +45,7 @@ there (some are truncated in the source).
 **Numbering caution.** The quiz list uses an older chapter numbering than the Study Plan, slides, and
 certification maps from Part 4 onward: for example, quiz 5.11 is *Procedural Memory* while chapter 5.11
 is *Rule-Based Decision Making*, and quizzes 9.9–9.11 and 5.14–5.15 have no chapter with that ID. Match
-quizzes to chapters by **title**, not number. The [Part pages]({% link curriculum/index.md %}) link a quiz
+quizzes to chapters by **title**, not number. The [Part pages]({{ site.baseurl }}/curriculum/) link a quiz
 to a chapter only where the titles agree.
 
 
@@ -206,4 +206,4 @@ Each chapter section in [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.md) en
 2. Re-take the quizzes for the chapters you missed before moving on to the next Part.
 3. Take one full practice exam about two weeks before your exam date and another the week of, treating
    the second as a dress rehearsal.
-4. Use the [AI tutor]({% link ai-tutor.md %}) to work through questions you got wrong.
+4. Use the [AI tutor]({{ site.baseurl }}/ai-tutor/) to work through questions you got wrong.

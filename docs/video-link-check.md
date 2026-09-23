@@ -10,7 +10,7 @@ permalink: /videos/link-check/
 On 2026-09-23, every YouTube link in [`videos/`]({{ site.repo_tree }}/videos) was checked against YouTube's public oEmbed
 endpoint, which reports whether a video or playlist exists and may be embedded, and returns its real title. This page
 records what that check found, for maintainers and for anyone picking up the
-[video library track]({% link contributing.md %}).
+[video library track]({{ site.baseurl }}/contributing/).
 
 **Method.** A link whose YouTube title shared at least half its meaningful words with the entry's title was accepted;
 the rest were compared by hand. This is a title check only, and it will go stale as videos come and go — re-run it before

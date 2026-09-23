@@ -19,7 +19,7 @@ permalink: /curriculum/part-05/
 
 ## Chapters
 
-Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({% link certifications.md %}).
+Rating tags show which certification knowledge maps rate the chapter **H** (highly relevant) in at least one item: **NV** NCP-AAI · **AWS** AIP-C01 · **DBX** Databricks GenAI Engineer · **GCP** Professional ML Engineer · **MS** AI-102. See [Certifications]({{ site.baseurl }}/certifications/).
 
 | Ch. | Title | Hours | Slides | Quiz | Videos | Figures | Code | H-rated for |
 |---|---|---:|---|---|---:|---|---:|---|
@@ -38,7 +38,7 @@ Rating tags show which certification knowledge maps rate the chapter **H** (high
 | 5.13 | [Hybrid Decision Systems]({{ site.repo_blob }}/Study_Plan.md#part-5-chapter-513-hybrid-decision-systems) | 9.7 | [PDF]({{ site.repo_blob }}/slides/Ch5.13_v20MAR26.pdf) | [Quiz](https://docs.google.com/forms/d/1xyjiUDrzOfxbeixSAX08jC7rNL4HW99guwzyJDwuDSw/viewform?usp=sharing) | [9]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md#chapter-513---hybrid-decision-systems) | [6]({{ site.repo_tree }}/figures/Ch5.13_figures_v11MAY26) | — | NV AWS DBX MS |
 
 
-**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_05_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({% link video-link-check.md %}). Chapters can also list search suggestions instead of links.
+**Notes.** The Videos column counts the videos shown under each chapter summary below, out of the unique direct links in [`Part_05_YoutubeVideos.md`]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md) ("3 of 5"). A video is left out when its link is dead, embedding is disabled, or YouTube's title does not match the entry; see the [link check]({{ site.baseurl }}/videos/link-check/). Chapters can also list search suggestions instead of links.
 
 † Linked by chapter-family number, not an exact ID match: the deck, quiz, or figure set is numbered differently from this chapter in the source files (for example a quiz or deck numbered `6.2` for chapters `6.2A` and `6.2B`).
 
@@ -610,4 +610,4 @@ From [`more_examples/part_05/`]({{ site.repo_tree }}/more_examples/part_05):
 
 ### Labs
 
-No lab or legacy example exists for this Part yet. See [Labs]({% link labs.md %}) and [Contributing]({% link contributing.md %}).
+No lab or legacy example exists for this Part yet. See [Labs]({{ site.baseurl }}/labs/) and [Contributing]({{ site.baseurl }}/contributing/).

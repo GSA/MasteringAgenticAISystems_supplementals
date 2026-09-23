@@ -38,12 +38,12 @@ chapter against every knowledge item of each exam.
 | **Microsoft AI-102**<br>Azure AI Engineer Associate | [`microsoft_AI-102.csv`]({{ site.repo_blob }}/cert_mapping/microsoft_AI-102.csv) | [`microsoft_AI‑102.md`]({{ site.repo_blob }}/cert_mapping/microsoft_AI%E2%80%91102.md) | 93 | 106 | 86 |
 
 Each CSV has one row per chapter and one column per knowledge item, holding H, M, L, or N. Open the CSV for the
-full grid; the [Part pages]({% link curriculum/index.md %}) show, for every chapter, which certifications rate it **H**
+full grid; the [Part pages]({{ site.baseurl }}/curriculum/) show, for every chapter, which certifications rate it **H**
 on at least one item.
 
 **Not yet mapped.** The exam guide for Google's *Generative AI Leader* certification is in the folder
 ([`google_genAI_leader.pdf`]({{ site.repo_blob }}/cert_mapping/google_genAI_leader.pdf)) but has no mapping yet. Mapping it is an
-open [contribution track]({% link contributing.md %}).
+open [contribution track]({{ site.baseurl }}/contributing/).
 
 ## Using the maps
 

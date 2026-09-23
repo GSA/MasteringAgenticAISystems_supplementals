@@ -14,22 +14,22 @@ maps rate it highly relevant.
 
 | Part | Topic | Chapters | Study hrs | Slide decks | Videos | Code files |
 |---|---|---:|---:|---:|---:|---:|
-| [Part 1]({% link curriculum/part-01.md %}) | Agent Fundamentals | 11 | 28.3 | 5 | 52 | 53 |
-| [Part 2]({% link curriculum/part-02.md %}) | Framework & Tool Integration | 9 | 22.1 | 4 | 25 | 66 |
-| [Part 3]({% link curriculum/part-03.md %}) | Evaluation & Optimization | 12 | 63.8 | 11 | 35 | 35 |
-| [Part 4]({% link curriculum/part-04.md %}) | Production Deployment & Scaling | 7 | 24.4 | 7 | 39 | 45 |
-| [Part 5]({% link curriculum/part-05.md %}) | Advanced Reasoning & Decision Making | 13 | 70.4 | 13 | 82 | 8 |
-| [Part 6]({% link curriculum/part-06.md %}) | Retrieval-Augmented Generation (RAG) | 14 | 26.2 | 8 | 21 | 59 |
-| [Part 7]({% link curriculum/part-07.md %}) | NVIDIA NeMo Framework & Optimization | 8 | 20.0 | 0 | 3 | 76 |
-| [Part 8]({% link curriculum/part-08.md %}) | Reliability & Cost Management | 5 | 10.9 | 0 | 2 | 29 |
-| [Part 9]({% link curriculum/part-09.md %}) | Safety & Governance | 10 | 35.4 | 0 | 5 | 27 |
-| [Part 10]({% link curriculum/part-10.md %}) | Human-in-the-Loop & Integration | 7 | 38.3 | 0 | 2 | 4 |
+| [Part 1]({{ site.baseurl }}/curriculum/part-01/) | Agent Fundamentals | 11 | 28.3 | 5 | 52 | 53 |
+| [Part 2]({{ site.baseurl }}/curriculum/part-02/) | Framework & Tool Integration | 9 | 22.1 | 4 | 25 | 66 |
+| [Part 3]({{ site.baseurl }}/curriculum/part-03/) | Evaluation & Optimization | 12 | 63.8 | 11 | 35 | 35 |
+| [Part 4]({{ site.baseurl }}/curriculum/part-04/) | Production Deployment & Scaling | 7 | 24.4 | 7 | 39 | 45 |
+| [Part 5]({{ site.baseurl }}/curriculum/part-05/) | Advanced Reasoning & Decision Making | 13 | 70.4 | 13 | 82 | 8 |
+| [Part 6]({{ site.baseurl }}/curriculum/part-06/) | Retrieval-Augmented Generation (RAG) | 14 | 26.2 | 8 | 21 | 59 |
+| [Part 7]({{ site.baseurl }}/curriculum/part-07/) | NVIDIA NeMo Framework & Optimization | 8 | 20.0 | 0 | 3 | 76 |
+| [Part 8]({{ site.baseurl }}/curriculum/part-08/) | Reliability & Cost Management | 5 | 10.9 | 0 | 2 | 29 |
+| [Part 9]({{ site.baseurl }}/curriculum/part-09/) | Safety & Governance | 10 | 35.4 | 0 | 5 | 27 |
+| [Part 10]({{ site.baseurl }}/curriculum/part-10/) | Human-in-the-Loop & Integration | 7 | 38.3 | 0 | 2 | 4 |
 | **Total** | | **96** | **339.8** | **48** | **266** | **402** |
 
 ## Where the chapter list comes from
 
 Chapter IDs in this repository are not perfectly consistent across files, so these pages use the
-union of the chapter IDs in the five [certification mapping]({% link certifications.md %}) CSVs and the
+union of the chapter IDs in the five [certification mapping]({{ site.baseurl }}/certifications/) CSVs and the
 section headings of [`Study_Plan.md`]({{ site.repo_blob }}/Study_Plan.md), which gives 96 chapters. The
 counts therefore differ from the "86 theory chapters" in the Study Plan's introduction and the
 "94 chapters" in the certification mapping. Where a slide deck, quiz, or figure set is numbered

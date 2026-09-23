@@ -20,13 +20,18 @@ The site is then served at
 set by `url` and `baseurl` in [`_config.yml`](_config.yml); change both if the
 repository moves or is forked.
 
-**Not yet verified.** The pages have not been built with Jekyll: it was not
-available where they were written. The video players in particular have not been
-seen in a browser. Before announcing the site, check the first
-Pages build (Actions tab → *pages build and deployment*) and click through the
-navigation. The theme is loaded as `just-the-docs/just-the-docs` without a version
-pin; once you have a working build, pin it (`just-the-docs/just-the-docs@vX.Y.Z`
-in `_config.yml`) so a theme release cannot change the site unannounced.
+**Partially verified against the live site**, not a local Jekyll build: no local Jekyll
+toolchain is available where these pages are written (system Ruby is 2.6, too old for
+a current `jekyll`/`rouge`). Once GitHub Pages had actually built and served the site,
+its rendered HTML was checked directly (`curl`, not just reading source) — this is how
+the `{% link %}` baseurl bug above was actually found, since it was invisible from the
+Markdown source and from a same-repo-file-exists check alike. The video players
+specifically have been confirmed to embed (oEmbed-checked per video), but not watched
+in a browser. After any change here, re-check a live rendered page's `href=`
+attributes, not just that the source parses. The theme is loaded as
+`just-the-docs/just-the-docs` without a version pin; pin it
+(`just-the-docs/just-the-docs@vX.Y.Z` in `_config.yml`) so a theme release cannot
+change the site unannounced.
 
 ## Layout
 
@@ -183,10 +188,28 @@ Then open <http://localhost:4000/MasteringAgenticAISystems_supplementals/>.
 
 - Every page has front matter with `title`, and `nav_order` for top-level pages.
   Part pages use `parent: Curriculum`.
-- Link to other pages with `{% link page.md %}` (the build fails on a typo instead of
-  publishing a dead link), and to repository files with `{{ site.repo_blob }}` /
-  `{{ site.repo_tree }}`. Never use a relative path that leaves `docs/`: Jekyll cannot
-  serve files outside this folder, and such links would break on the published site.
+- Link to other pages with `{{ site.baseurl }}/target-permalink/`, matching the target
+  page's own `permalink:` exactly — **not** `{% link page.md %}`. On this site (GitHub
+  Pages, a project site served under `/MasteringAgenticAISystems_supplementals/`, with
+  the `just-the-docs` theme), `{% link %}` resolves to the bare `page.url`, which does
+  **not** include `baseurl` — every such link 404s on the live site (confirmed: e.g.
+  `{% link curriculum/index.md %}` rendered as `https://gsa.github.io/curriculum/`
+  instead of `https://gsa.github.io/MasteringAgenticAISystems_supplementals/curriculum/`
+  — a bug that shipped in the first version of this site and reached every internal
+  link in the body content of every page, ~122 of them, until caught from the live
+  site and fixed). The theme's own auto-generated sidebar nav is unaffected — it
+  correctly includes baseurl — so a broken body link and a working sidebar link can sit
+  on the same page, which is what made this easy to miss from source alone. Link to
+  repository files with `{{ site.repo_blob }}` / `{{ site.repo_tree }}`, which do not
+  have this problem since they're absolute GitHub URLs, not baseurl-relative ones.
+  Never use a relative path that leaves `docs/`: Jekyll cannot serve files outside this
+  folder, and such links would break on the published site.
+- **Verifying internal links only from source is not enough** — `{% link %}` looks
+  exactly as correct as `{{ site.baseurl }}/…/` in the raw Markdown, and a check that
+  only confirms the target file exists (as opposed to fetching the actual built page)
+  cannot tell them apart. Check the live site directly after a Jekyll-affecting change:
+  `curl` a rendered page and grep its `href=` attributes for anything under `/curriculum/`,
+  `/videos/`, etc. that is *not* prefixed with `/MasteringAgenticAISystems_supplementals/`.
 - Percent-encode spaces and `&` in file names (for example `Chapter1.1A%26B_...`).
 - External links (Google Forms quizzes, YouTube) are copied from the source files
   as-is; this project does not verify that they resolve.
