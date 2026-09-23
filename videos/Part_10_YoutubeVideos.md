@@ -191,10 +191,6 @@
 
 **Topics:** RLHF and human feedback integration, Approval workflows, Interrupt patterns, Active learning, Annotation infrastructure, Agent frameworks (LangChain, LangGraph), Guardrails and policy enforcement, Explainability and audit trails
 
-### Tornado Human-in-the-Loop ML Tool Demo
-- [https://www.youtube.com/watch?v=zBe6b_vxs_I](https://www.youtube.com/watch?v=zBe6b_vxs_I)
-- Covers: Real-world HITL workflow with 1300 image labeling iterations
-
 ### Deep Dive into LLMs like ChatGPT
 - [https://www.youtube.com/watch?v=7xTGNNLPyMI](https://www.youtube.com/watch?v=7xTGNNLPyMI)
 - Andrej Karpathy

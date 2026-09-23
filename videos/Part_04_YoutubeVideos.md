@@ -53,14 +53,6 @@
 - [https://www.youtube.com/watch?v=kTp5xUtcalw](https://www.youtube.com/watch?v=kTp5xUtcalw) Variable
 - Covers: Docker and Kubernetes fundamentals, containerization, orchestration workflows
 
-### RabbitMQ Crash Course
-- [https://www.youtube.com/watch?v=xynXjChKkJc](https://www.youtube.com/watch?v=xynXjChKkJc) ~43 minutes
-- Covers: AMQP protocol, channels, queues, publishers, consumers, RabbitMQ setup with Docker, Node.js client implementation
-
-### MLOps and Continuous Delivery for Machine Learning
-- [https://www.youtube.com/watch?v=V18AsBIHlWs](https://www.youtube.com/watch?v=V18AsBIHlWs) Variable
-- Covers: MLOps principles, ML deployment patterns, continuous delivery, versioning and monitoring
-
 ---
 
 <a name="chapter-42---deployment--scaling-architecture"></a>
@@ -68,37 +60,9 @@
 
 **Topics:** Microservices, Serverless, Message Queues, Observability, API Gateways, MLOps
 
-### Microservice Architecture and System Design with Python & Kubernetes
-- [https://www.youtube.com/watch?v=rv4LlmLmVWk](https://www.youtube.com/watch?v=rv4LlmLmVWk) ~5 hours
-- Covers: Microservices architecture fundamentals, Python implementation, Kubernetes orchestration, RabbitMQ message queues, MongoDB & MySQL management, distributed systems design
-
-### Serverless Architecture Explained
-- [https://www.youtube.com/watch?v=CZ3wIuvmHeM](https://www.youtube.com/watch?v=CZ3wIuvmHeM) ~15 minutes
-- Covers: Serverless deployment fundamentals, AWS Lambda, event-driven architecture, scaling patterns and cold starts, trade-offs analysis
-
 ### Setup Prometheus Monitoring on Kubernetes using Helm and Prometheus Operator
 - [https://www.youtube.com/watch?v=QoDqxm7ybLc](https://www.youtube.com/watch?v=QoDqxm7ybLc) ~30 minutes
 - Covers: Prometheus architecture, Kubernetes operators, Helm charts, Grafana integration, metrics collection and exporters
-
-### Kafka vs RabbitMQ
-- [https://www.youtube.com/watch?v=X48VuDVv0do](https://www.youtube.com/watch?v=X48VuDVv0do) ~10 minutes
-- Covers: Message queue architectures, RabbitMQ broker-centric model, Kafka distributed log model, use case comparisons, throughput vs latency trade-offs
-
-### RabbitMQ Crash Course
-- [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) ~43 minutes
-- Covers: AMQP protocol details, channels, queues, routing, Docker setup, Node.js implementation, message acknowledgment
-
-### MLOps Tutorial - Building End-to-End Machine Learning Pipeline
-- [https://www.youtube.com/watch?v=hmkF77F9TLw](https://www.youtube.com/watch?v=hmkF77F9TLw) ~3 hours
-- Covers: MLOps fundamentals, ZenML and MLflow, model deployment, CI/CD pipelines, monitoring and versioning
-
-### API Gateway Explained
-- [https://www.youtube.com/watch?v=Y6Ev8GIlbxc](https://www.youtube.com/watch?v=Y6Ev8GIlbxc) ~7 minutes
-- Covers: API gateway pattern, rate limiting and authentication, request routing, load balancing and circuit breakers, Kong vs NGINX comparison
-
-### Kubernetes Deployment Strategies (Blue-Green, Canary, Rolling)
-- [https://www.youtube.com/watch?v=5OL7fu2R4M8](https://www.youtube.com/watch?v=5OL7fu2R4M8) ~18 minutes
-- Covers: Deployment strategies comparison, canary deployments, blue-green deployments, rolling updates, progressive rollout and rollback, Argo Rollouts
 
 ---
 
@@ -118,14 +82,6 @@
 ### Kubernetes Crash Course for Absolute Beginners [NEW]
 - [https://www.youtube.com/watch?v=s_o8dwzRlu4](https://www.youtube.com/watch?v=s_o8dwzRlu4) ~1 hour
 - Covers: Core Kubernetes concepts, components and architecture, practical Minikube demos
-
-### Quantization: Optimize AI Models to Run Everywhere
-- [https://www.youtube.com/watch?v=0VdNflU08yA](https://www.youtube.com/watch?v=0VdNflU08yA) ~10 minutes
-- Covers: Post-training quantization (PTQ), quantization-aware training (QAT), model compression techniques
-
-### MIT 6.S965 - Pruning and Sparsity in Neural Networks
-- [https://www.youtube.com/watch?v=vq2nnJ4g6N0](https://www.youtube.com/watch?v=vq2nnJ4g6N0) ~50 minutes
-- Covers: Structured and unstructured pruning, weight removal strategies, lottery ticket hypothesis, fine-tuning sparse networks
 
 ### Getting Started with the NVIDIA Jetson Nano
 - [https://www.youtube.com/watch?v=km0yT99eVTY](https://www.youtube.com/watch?v=km0yT99eVTY) ~25 minutes
@@ -193,10 +149,6 @@
 - [https://www.youtube.com/watch?v=5ftMMBj6xj0](https://www.youtube.com/watch?v=5ftMMBj6xj0) ~90 minutes
 - Covers: TensorRT-LLM optimization, kernel fusion, quantization
 
-### vLLM Deployment with Hugging Face
-- [https://www.youtube.com/watch?v=80bIUggRJf4](https://www.youtube.com/watch?v=80bIUggRJf4) Variable
-- Covers: vLLM deployment, continuous batching, PagedAttention
-
 ### NVIDIA NIM Multimodal RAG
 - [https://www.youtube.com/watch?v=NaT5Eo97_I0](https://www.youtube.com/watch?v=NaT5Eo97_I0) Variable
 - Covers: NIM deployment, multimodal RAG, inference microservices
@@ -232,10 +184,6 @@
 - [https://www.youtube.com/watch?v=Oq2SN7uutbQ](https://www.youtube.com/watch?v=Oq2SN7uutbQ) ~45 minutes
 - Covers: vLLM, PagedAttention, KV cache optimization, SOSP'23
 
-### How vLLM Optimizes the LLM Serving System
-- [https://www.youtube.com/watch?v=80bIUggRJf4](https://www.youtube.com/watch?v=80bIUggRJf4) ~30 minutes
-- Covers: vLLM architecture, continuous batching, GPU utilization
-
 ### CUDA Mode Lecture 1 - Getting Started with CUDA Optimization
 - [https://www.youtube.com/watch?v=LuhJEEJQgUM](https://www.youtube.com/watch?v=LuhJEEJQgUM) ~60 minutes
 - Covers: CUDA fundamentals, kernel optimization, memory optimization
@@ -247,10 +195,6 @@
 ### But what is a Neural Network?
 - [https://www.youtube.com/watch?v=aircAruvnKk](https://www.youtube.com/watch?v=aircAruvnKk) ~20 minutes
 - Covers: Neural network fundamentals, mathematical foundations
-
-### PyTorch Distributed Data Parallel (DDP)
-- [https://www.youtube.com/watch?v=TibQO_xv1zc](https://www.youtube.com/watch?v=TibQO_xv1zc) ~45 minutes
-- Covers: Distributed training, multi-GPU coordination
 
 ---
 
@@ -271,6 +215,3 @@
 - [https://www.youtube.com/watch?v=X48VuDVv0do](https://www.youtube.com/watch?v=X48VuDVv0do) ~4 hours
 - Covers: Kubernetes architecture, deployments, services, scaling, load balancing with Services
 
-### Complete Kubernetes Tutorial (Playlist)
-- [https://www.youtube.com/watch?v=VnvRFRk_51k](https://www.youtube.com/watch?v=VnvRFRk_51k) Variable (22-video playlist)
-- Covers: Kubernetes components, container orchestration, scaling applications

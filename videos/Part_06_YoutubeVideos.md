@@ -76,9 +76,7 @@
 
 **Topics:** Docker Compose, Weaviate Production, HNSW, Hybrid Search, Monitoring
 
-### Weaviate Tutorial
-- [https://www.youtube.com/watch?v=SF1ZlRjVsxw](https://www.youtube.com/watch?v=SF1ZlRjVsxw) Variable
-- Covers: Production Weaviate deployment
+Note: the video(s) previously listed for this chapter failed verification (dead link or wrong video) and were removed on 2026-09-23. No verified video is listed for this chapter yet.
 
 ---
 

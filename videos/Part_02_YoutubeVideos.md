@@ -74,10 +74,6 @@
 - [https://youtube.com/watch?v=E2shqsYwxck](https://youtube.com/watch?v=E2shqsYwxck) ~5-10 minutes
 - Covers: Self-correcting RAG, iterative refinement, error correction loops
 
-### Query Routing with LangGraph
-- [https://youtu.be/pfpIndq7Fi8](https://youtu.be/pfpIndq7Fi8) ~5-10 minutes
-- Covers: Conditional routing implementation, multi-path workflow design
-
 ### Report mAIstro - Building Research Agent from Scratch with LangGraph
 - [https://youtube.com/watch?v=wSxZ7yFbbas](https://youtube.com/watch?v=wSxZ7yFbbas) ~30-45 minutes
 - Covers: Complex multi-agent workflow, state management, production architecture
@@ -124,10 +120,6 @@
 - [https://www.youtube.com/watch?v=tnejrr-0a94](https://www.youtube.com/watch?v=tnejrr-0a94) ~45 minutes
 - Covers: Role-based collaboration, organizational structure, specialist coordination
 
-### AutoGen Advanced Patterns
-- [https://youtu.be/oum6EI7wohM](https://youtu.be/oum6EI7wohM) ~30 minutes
-- Covers: Conversation-driven coordination, multi-agent patterns, agent composition
-
 ---
 
 <a name="chapter-25---semantic-kernel"></a>
@@ -154,10 +146,6 @@
 - [https://www.youtube.com/watch?v=aqdWSYWC_LI](https://www.youtube.com/watch?v=aqdWSYWC_LI) ~20 minutes
 - Covers: OpenAI function calling API, structured tool invocation, schema design
 
-### LangChain Tool Use and Integration
-- [https://www.youtube.com/watch?v=2xxziIWmaSA](https://www.youtube.com/watch?v=2xxziIWmaSA) ~20 minutes
-- Covers: LangChain tool integration patterns, agent executor configuration
-
 ---
 
 <a name="chapter-27---multimodal-rag"></a>
@@ -169,10 +157,6 @@
 - [https://www.youtube.com/watch?v=sVcwVQRHIc8](https://www.youtube.com/watch?v=sVcwVQRHIc8) ~3.5 hours
 - Covers: RAG fundamentals, multi-step retrieval, integration patterns
 
-### LangChain RAG Tutorial
-- [https://www.youtube.com/watch?v=jGg_1h0qzaM](https://www.youtube.com/watch?v=jGg_1h0qzaM) ~3 hours
-- Covers: RAG architecture with LangGraph, document processing, retrieval optimization
-
 ---
 
 <a name="chapter-28---error-handling"></a>
@@ -180,13 +164,7 @@
 
 **Topics:** Error Handling, Resilience, Recovery Patterns, Graceful Degradation
 
-### Building Robust AI Applications with Error Handling
-- [https://www.youtube.com/watch?v=5h-JBkySK34](https://www.youtube.com/watch?v=5h-JBkySK34) ~35 minutes
-- Covers: Error handling strategies, circuit breakers, retry patterns
-
-### LangGraph Error Recovery Patterns
-- [https://youtu.be/GMaGG8UBek8](https://youtu.be/GMaGG8UBek8) ~15-20 minutes
-- Covers: Checkpointing for recovery, state persistence, error handling in workflows
+Note: the video(s) previously listed for this chapter failed verification (dead link or wrong video) and were removed on 2026-09-23. No verified video is listed for this chapter yet.
 
 ---
 
@@ -194,10 +172,6 @@
 ## Chapter 2.9 - Streaming
 
 **Topics:** Streaming, Real-Time Responses, Event-Driven Architecture, Async Patterns
-
-### Streaming with LangChain
-- [https://www.youtube.com/watch?v=jGg_1h0qzaM](https://www.youtube.com/watch?v=jGg_1h0qzaM) ~3 hours
-- Covers: Streaming output, real-time responses, async agent patterns
 
 ### Python Asynchronous Programming
 - [https://www.youtube.com/watch?v=ngXbyui-weA](https://www.youtube.com/watch?v=ngXbyui-weA) ~26 minutes

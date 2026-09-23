@@ -19,11 +19,6 @@
 
 **Topics:** Multi-Layered Filtering, Content Moderation, Toxicity Detection, Bias Detection, NeMo Guardrails, Human-in-the-Loop, Safety Requirements
 
-### LLM Guardrails with Llama Guard 3 Vision
-- [https://www.youtube.com/watch?v=3sav6vUG_XQ](https://www.youtube.com/watch?v=3sav6vUG_XQ) ~20 minutes
-- IBM Technology
-- Covers: Practical guardrail implementation, vision model safety
-
 ### Tracetest - OpenTelemetry End-to-End Testing
 - [https://www.youtube.com/watch?v=WMRicNlaehc](https://www.youtube.com/watch?v=WMRicNlaehc)
 - Covers: Distributed tracing for audit trails

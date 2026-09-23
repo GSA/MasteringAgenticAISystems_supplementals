@@ -68,10 +68,6 @@
 - [https://www.youtube.com/watch?v=qSNUi7pRmWg](https://www.youtube.com/watch?v=qSNUi7pRmWg) ~25 minutes
 - Covers: Semantic HTML, screen reader compatibility, proper heading hierarchy
 
-### Accessibility Navigation Tutorial
-- [https://www.youtube.com/watch?v=YAqRQoN8ykI](https://www.youtube.com/watch?v=YAqRQoN8ykI) ~18 minutes
-- Covers: Accessible navigation patterns, focus management, keyboard operability
-
 ### Colors with Good Contrast
 - [https://www.youtube.com/watch?v=Hui87z2Vx8o](https://www.youtube.com/watch?v=Hui87z2Vx8o) ~2 minutes
 - Covers: WCAG contrast requirements, visual indicators beyond color
@@ -99,18 +95,6 @@
 - [https://www.youtube.com/watch?v=43qfHaKh0Xk](https://www.youtube.com/watch?v=43qfHaKh0Xk) ~35 minutes
 - Covers: Security vulnerabilities in ReAct agents, tool-use security, jailbreaking techniques
 
-### AI Agent Tool Calling Example
-- [https://www.youtube.com/watch?v=zjkBMFhNj_g](https://www.youtube.com/watch?v=zjkBMFhNj_g) ~20 minutes
-- Covers: Tool-Use Architecture, function calling mechanisms, API integration
-
-### LangChain Agents Tutorial (James Briggs)
-- [https://www.youtube.com/watch?v=nE2skSRWTTs](https://www.youtube.com/watch?v=nE2skSRWTTs) ~38 minutes
-- Covers: Tool integration, agent executor patterns, agent workflows
-
-### Advanced LangChain Concepts (James Briggs)
-- [https://www.youtube.com/watch?v=RflBcK0oDH0](https://www.youtube.com/watch?v=RflBcK0oDH0) ~25 minutes
-- Covers: Advanced agent patterns, chaining, workflow orchestration
-
 ---
 
 <a name="chapter-13---multi-agent-systems"></a>
@@ -137,10 +121,6 @@
 ### Simulating Natural Selection - Emergent Behavior
 - [https://www.youtube.com/watch?v=0ZGbIKd0XrM](https://www.youtube.com/watch?v=0ZGbIKd0XrM) ~10 minutes
 - Covers: Swarm intelligence, emergent behavior, local interactions creating global patterns
-
-### Ballerina gRPC Introduction
-- [https://www.youtube.com/watch?v=Kk4tbN8FcZ4](https://www.youtube.com/watch?v=Kk4tbN8FcZ4) ~20 minutes
-- Covers: gRPC protocol, Protocol Buffers, API-based inter-agent communication
 
 ---
 
@@ -239,10 +219,6 @@
 - [https://youtu.be/k1OEeqknoR0](https://youtu.be/k1OEeqknoR0) ~30 minutes
 - Covers: Stateful conversations, HITL workflows, state persistence
 
-### LangGraph Checkpointer - Game-Changer for AI Agents
-- [https://youtu.be/0yISjksQ8as](https://youtu.be/0yISjksQ8as) ~25 minutes
-- Covers: Checkpointer fundamentals, MemorySaver, state persistence, recovery from failures
-
 ### LangGraph Persistence Tutorial
 - [https://www.youtube.com/watch?v=GMaGG8UBek8](https://www.youtube.com/watch?v=GMaGG8UBek8) ~20 minutes
 - Covers: Built-in persistence, thread management, fault tolerance, time travel replay
@@ -278,16 +254,11 @@
 - [https://youtu.be/kl6NwWYxvbM](https://youtu.be/kl6NwWYxvbM) ~8 minutes
 - Covers: Natural language to Cypher query translation, LangChain + Neo4j integration
 
-### Named Entity Recognition with spaCy
-- [https://www.youtube.com/watch?v=ytAyCO-n8tY](https://www.youtube.com/watch?v=ytAyCO-n8tY) ~18 minutes
-- Covers: NER fundamentals, entity extraction, entity type classification
-
 ### Custom NER with spaCy
 - [https://www.youtube.com/watch?v=sqDHBH9IjRU](https://www.youtube.com/watch?v=sqDHBH9IjRU) ~38 minutes
 - Covers: Custom NER training, dependency parsing for relationship extraction
 
 ---
-
 
 
 <a name="chapter-17b---hybrid-ragkg"></a>
