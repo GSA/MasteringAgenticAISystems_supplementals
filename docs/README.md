@@ -42,7 +42,10 @@ docs/
 ├── Gemfile              Local-preview dependencies (ignored by GitHub Pages)
 ├── index.md             Site home
 ├── getting-started.md   Study path and how to use the material
-├── prerequisites.md     Summary of Prerequisite_Knowledge.md
+├── prerequisites/
+│   ├── index.md          Tier overview, self-assessment, preparation paths
+│   └── essential.md, recommended.md, beneficial.md   One page per tier: topics broken into
+│                         sub-skills, each with a self-check question and one curated resource
 ├── curriculum/
 │   ├── index.md         The 10 Parts at a glance
 │   └── part-01.md … part-10.md   One page per Part: chapter-by-chapter resource table
@@ -84,7 +87,7 @@ whole site can be re-pointed by editing one line:
 | `labs.md` | `labs/README.md`, `labs/LAB_TEMPLATE.md`, `labs/8.2B_circuit_breaker/` |
 | `code-examples.md` | `code_examples/`, `more_examples/` |
 | `ai-tutor.md` | `ai_tutor/README.md` |
-| `prerequisites.md` | `Prerequisite_Knowledge.md` |
+| `prerequisites/*.md` | `Prerequisite_Knowledge.md`, cross-checked against `Study_Plan.md`'s per-chapter Key Concepts, plus reused videos from `videos/*.md` where a good match exists (see "Prerequisite sub-topics and embedded videos" below) |
 | `contributing.md`, `about.md` | `CONTRIBUTING.md`, `CALL_FOR_COLLABORATORS.md`, `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `LICENSE.md`, `CITATION.cff`, `.all-contributorsrc` |
 
 The pages were produced by a one-off script and are maintained by hand from here on;
@@ -141,6 +144,35 @@ This is a title check only. It cannot tell whether a video is a good explanation
 loosely related to the chapter they sit under. It is also a snapshot — new links added later, or videos that go dead
 after the check date, will not be caught until the check is re-run. Family-numbered sections (the `6.1` section of
 Part 6) are embedded once, under the first chapter of the family.
+
+### Prerequisite sub-topics and embedded videos
+
+`prerequisites/essential.md`, `recommended.md`, and `beneficial.md` break each of the 15 prerequisite topics from
+`Prerequisite_Knowledge.md` into specific sub-skills (a "What is a neural network" question is not the same
+self-check as "Can you explain temperature", even though both sit under "LLM Fundamentals"). Two overlapping topics —
+Essential's "RESTful APIs and HTTP Fundamentals" and Beneficial's "API Design and REST Principles" — were merged into
+one Essential topic with a core group and a "going deeper" group, rather than duplicated across tiers.
+
+Every sub-skill gets one curated resource, chosen for that specific sub-skill rather than reused across several: a
+short video where a good one exists, otherwise a course, book, or official doc. **Videos are reused from this
+repository's own `videos/*.md` library wherever a good match exists**, not sourced fresh — those files are already
+oEmbed-verified (see "Embedded videos" above), so a title like "But what is a neural network?" already known to work
+for [Part 5]({{ site.repo_blob }}/videos/Part_05_YoutubeVideos.md) is exactly as trustworthy when reused for the LLM
+Fundamentals prerequisite. 14 videos are embedded this way across the three tier pages, using the identical
+`youtube-nocookie.com` embed markup as the curriculum pages, each used exactly once (no sub-skill reuses another
+sub-skill's video). Where no good match exists in the library — Python, Linux CLI, SQL, most of Database
+Fundamentals — the sub-skill keeps a text resource instead of forcing a weak video fit.
+
+`supplemental_course/` (a dataset of AI-literacy and governance courses for public-sector professionals) was
+evaluated against every sub-topic and found to genuinely fit almost none of them: it's non-technical and
+policy/governance-focused, with nothing on Python, Docker, Kubernetes, SQL, async programming, CI/CD, or the
+technical depth of LLM/NLP/ML internals. It is not cited anywhere in the prerequisite pages.
+
+The three tier pages cross-link each other by heading anchor (for example, Recommended's Kubernetes sub-topic points
+back to `essential/#docker-and-containerization-basics`). Because kramdown's auto-generated heading IDs include any
+leading text, tier-page topic headings (`## `) deliberately carry **no** leading number ("Kubernetes fundamentals",
+not "3. Kubernetes fundamentals") — a numbered heading would slug to `#3-kubernetes-fundamentals` and break every
+cross-reference to it.
 
 ### Deliberately not published
 
