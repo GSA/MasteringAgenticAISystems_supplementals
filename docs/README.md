@@ -56,6 +56,8 @@ docs/
 ├── slides.md            Slide decks, per chapter
 ├── labs.md              Lab status and how labs are written
 ├── code-examples.md     Code snippets and worked examples, per Part
+├── architecture.md      Hub page for the Reference Architecture (links out; see below)
+├── reference-architecture/   Generated static site, copied verbatim — see "Reference Architecture" below
 ├── ai-tutor.md          The AI study tutor
 ├── contributing.md      How to help, governance, conduct, security, support
 └── about.md             License, citation, contributors
@@ -89,6 +91,7 @@ whole site can be re-pointed by editing one line:
 | `ai-tutor.md` | `ai_tutor/README.md` |
 | `prerequisites/*.md` | `Prerequisite_Knowledge.md`, cross-checked against `Study_Plan.md`'s per-chapter Key Concepts, plus reused videos from `videos/*.md` where a good match exists (see "Prerequisite sub-topics and embedded videos" below) |
 | `contributing.md`, `about.md` | `CONTRIBUTING.md`, `CALL_FOR_COLLABORATORS.md`, `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `LICENSE.md`, `CITATION.cff`, `.all-contributorsrc` |
+| `architecture.md`, `reference-architecture/` | A separate repository, `Cybonto/book1` (`drafts/iter3/reference_architecture/`); see "Reference Architecture" below |
 
 The pages were produced by a one-off script and are maintained by hand from here on;
 there is no generator in the repository. They are snapshots, so they will drift as
