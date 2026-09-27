@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reward Shaper · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Reward Shaper</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:RewardShaper</code></p>
+<div class="split"><section>
+<p class="lead">A training-time component that adds intermediate shaping rewards to a sparse reward signal to accelerate learning while preserving the optimal policy.</p>
+<p><strong>Responsibility.</strong> Densifies sparse rewards with potential-based shaping terms during learning.</p>
+<p class="muted">Also known as: Reward shaping</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Reward Shaper"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><a href="ReinforcementPolicyLearner.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Reinforcement Learning Policy Learner: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Reinforcement Learning P…</text></a><a href="RewardFunctionSpecification.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Reward Function Specification: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Reward Function Specific…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RewardFunctionSpecification.html"><span class="dot g2" aria-hidden="true"></span>Reward Function Specification</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReinforcementPolicyLearner.html"><span class="dot g4" aria-hidden="true"></span>Reinforcement Learning Policy Learner</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD use potential-based shaping so the optimal policy under shaped rewards equals that under the original rewards.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Potential-based reward shaping F(s,a,s&#x27;) = gamma*Phi(s&#x27;) - Phi(s)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Slow learning in sparse-reward environments</span><span class="chip">Reward hacking of shaped rewards</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.10">Ch5.10</a>: T. Nguyen, &quot;Utility-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

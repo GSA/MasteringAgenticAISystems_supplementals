@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluation Rubric · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Evaluation Rubric</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:EvaluationRubric</code></p>
+<div class="split"><section>
+<p class="lead">A structured scoring specification defining quality criteria (e.g., clarity, completeness, relevance, appropriateness) and their rating scales for human or model evaluators.</p>
+<p><strong>Responsibility.</strong> Defines consistent scoring criteria for evaluators.</p>
+<p class="muted">Also known as: Structured rubric, Action Quality Rubric</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Evaluation Rubric"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>configures</title></line><a href="LLMJudge.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>LLM Judge: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Judge</text></a><a href="HumanEvaluator.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Human Evaluator: configures</title></circle><text x="520.3" y="305.0" text-anchor="start">Human Evaluator</text></a><a href="ChainOfThoughtJudge.html"><circle class="g6" cx="250.1" cy="295.0" r="7"><title>Chain-of-Thought Judge: configures</title></circle><text x="239.7" y="305.0" text-anchor="end">Chain-of-Thought Judge</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ChainOfThoughtJudge.html"><span class="dot g6" aria-hidden="true"></span>Chain-of-Thought Judge</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li><li><a class="comp" href="../c/HumanEvaluator.html"><span class="dot g8" aria-hidden="true"></span>Human Evaluator</a> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li><li><a class="comp" href="../c/LLMJudge.html"><span class="dot g6" aria-hidden="true"></span>LLM Judge</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a> <a class="src" href="../sources.html#Ch3.8">Ch3.8</a> <span class="src more" title="Ref8.01, Ref8.03">+2</span></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Criteria rated clarity 1-5, completeness 1-5, relevance 1-5, appropriateness 1-5 (Ch3.3).</li><li>Tool-selection rubric: intent alignment, parameter appropriateness, efficiency, reasoning soundness, each 1-5 with anchored examples for 5, 3 and 1 (Ch3.8).</li><li>Judge scale: 5 completely correct and comprehensive ... 0 completely wrong or no answer (Ch4.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Inconsistent evaluator standards</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.3">Ch3.3</a>: T. Nguyen, &quot;Web Navigation and Interaction Benchmarks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.8">Ch3.8</a>: T. Nguyen, &quot;Action Accuracy Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.01">Ref8.01</a>: LangChain, &quot;LangSmith observability: AI agent observability platform,&quot; LangChain. Accessed: Sep. 27, 2026. [Online]. Available: https://www.langchain.com/langsmith/observability</li><li><a href="../sources.html#Ref8.03">Ref8.03</a>: &quot;Agent Evaluation Frameworks and Metrics,&quot; unpublished reference note (03-Agent-Evaluation-Frameworks.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

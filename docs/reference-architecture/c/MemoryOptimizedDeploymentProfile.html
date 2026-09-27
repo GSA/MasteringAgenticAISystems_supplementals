@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory-Optimized Deployment Profile · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Memory-Optimized Deployment Profile</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:MemoryOptimizedDeploymentProfile</code></p>
+<div class="split"><section>
+<p class="lead">A quantized model deployment profile that reduces memory footprint so a model fits smaller GPUs or edge devices, possibly at some cost in throughput and latency.</p>
+<p><strong>Responsibility.</strong> Configures an inference microservice to fit constrained GPU memory.</p>
+<p class="muted">Also known as: Quantized profile, Edge profile</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ModelDeploymentProfile.html"><span class="dot g4" aria-hidden="true"></span>Model Deployment Profile</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when available GPU memory is insufficient for full-precision weights plus activations, such as smaller GPUs or edge devices.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Memory-Optimized Deployment Profile"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="ModelDeploymentProfile.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Model Deployment Profile: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Model Deployment Profile</text></a><a href="LatencyOptimizedDeploymentProfile.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Latency-Optimized Deployment Profile: is target of alternativeTo</title></circle><text x="520.3" y="305.0" text-anchor="start">Latency-Optimized Deploy…</text></a><a href="ThroughputOptimizedDeploymentProfile.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Throughput-Optimized Deployment Profile: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Throughput-Optimized Dep…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/LatencyOptimizedDeploymentProfile.html"><span class="dot g4" aria-hidden="true"></span>Latency-Optimized Deployment Profile</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a></li><li><a class="comp" href="../c/ThroughputOptimizedDeploymentProfile.html"><span class="dot g4" aria-hidden="true"></span>Throughput-Optimized Deployment Profile</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a></li></ul></section>
+</div>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.5">Ch4.5</a>: T. Nguyen, &quot;NVIDIA NIM and Triton Inference Server,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

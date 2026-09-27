@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule Outcome Monitor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Rule Outcome Monitor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:RuleOutcomeMonitor</code></p>
+<div class="split"><section>
+<p class="lead">An observability component that compares rule-triggered decisions with later-confirmed outcomes or business metrics to track per-rule performance and flag underperforming rules.</p>
+<p><strong>Responsibility.</strong> Detects rule-level decision errors and performance degradation in production.</p>
+<p class="muted">Also known as: Outcome tracker, Rule performance tracker</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Rule Outcome Monitor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>monitors</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>triggers</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>writes</title></line><a href="AuditLogStore.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Audit Log Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Audit Log Store</text></a><a href="RuleBasedDecisionEngine.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Rule-Based Decision Engine: monitors</title></circle><text x="542.0" y="224.0" text-anchor="start">Rule-Based Decision Engine</text></a><a href="CaseBasedRuleRefiner.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Case-Based Rule Refiner: triggers</title></circle><text x="380.0" y="396.0" text-anchor="middle">Case-Based Rule Refiner</text></a><a href="MisclassifiedCaseStore.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>Misclassified Case Store: writes</title></circle><text x="218.0" y="224.0" text-anchor="end">Misclassified Case Store</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MisclassifiedCaseStore.html"><span class="dot g4" aria-hidden="true"></span>Misclassified Case Store</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>triggers <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/CaseBasedRuleRefiner.html"><span class="dot g4" aria-hidden="true"></span>Case-Based Rule Refiner</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/RuleBasedDecisionEngine.html"><span class="dot g2" aria-hidden="true"></span>Rule-Based Decision Engine</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Fraud case: over 18 months 37 high-confidence rules added and 12 obsolete rules retired; detection rose from 78% to 91%, false positives fell from 12% to 8% (Ch5.11).</li><li>Medical case: accuracy improved from 82% to 89%; elderly false-negative rate fell from 8% to 3%; unnecessary antibiotic prescriptions fell 24% (Ch5.11).</li><li>E-commerce case: over two years 43 rules refined and 28 added; rule-triggered promotion revenue rose 31% (Ch5.11).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Outcome tracking</span><span class="chip">Per-rule conversion/precision tracking</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Undetected rule obsolescence</span><span class="chip">Excessive false positives from stale rules</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.11">Ch5.11</a>: T. Nguyen, &quot;Rule-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.11. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

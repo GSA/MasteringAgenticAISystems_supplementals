@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modality-Specific Vector Store · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Data store</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Modality-Specific Vector Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ModalitySpecificVectorStore</code></p>
+<div class="split"><section>
+<p class="lead">A vector store dedicated to one modality&#x27;s embeddings (text, image, or audio), possibly using a storage technology specialised for that modality.</p>
+<p><strong>Responsibility.</strong> Stores and searches embeddings of a single modality.</p>
+<p class="muted">Also known as: Text vector store, Image vector store</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span></p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Modality-Specific Vector Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is written by</title></line><a href="VectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Store: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Store</text></a><a href="PerModalityFanOutRetriever.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Per-Modality Fan-Out Retriever: is read by</title></circle><text x="520.3" y="305.0" text-anchor="start">Per-Modality Fan-Out Ret…</text></a><a href="ModalitySpecificEmbeddingService.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>Modality-Specific Embedding Service: is written by</title></circle><text x="239.7" y="305.0" text-anchor="end">Modality-Specific Embedd…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/PerModalityFanOutRetriever.html"><span class="dot g3" aria-hidden="true"></span>Per-Modality Fan-Out Retriever</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModalitySpecificEmbeddingService.html"><span class="dot g3" aria-hidden="true"></span>Modality-Specific Embedding Service</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Separate stores with cross-modal reranking</span><span class="chip">Heterogeneous storage</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

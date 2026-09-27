@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prioritized Review Queue · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Data store</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Prioritized Review Queue</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:PrioritizedReviewQueue</code></p>
+<div class="split"><section>
+<p class="lead">A holding store of agent-flagged cases, such as pre-screened medical images or compliance alerts, ordered by likelihood of requiring intervention, from which accountable professionals review and sign off.</p>
+<p><strong>Responsibility.</strong> Holds flagged cases in priority order for accountable human review.</p>
+<p class="muted">Also known as: Radiologist worklist, Alert review queue</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Prioritized Review Queue"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is written by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="HumanApprover.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Human Approver: sends data to</title></circle><text x="542.0" y="224.0" text-anchor="start">Human Approver</text></a><a href="ComplianceOfficer.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Compliance Officer: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Compliance Officer</text></a><a href="ContinuousComplianceMonitor.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Continuous Compliance Monitor: is written by</title></circle><text x="218.0" y="224.0" text-anchor="end">Continuous Compliance Mo…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/ContinuousComplianceMonitor.html"><span class="dot g7" aria-hidden="true"></span>Continuous Compliance Monitor</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ComplianceOfficer.html"><span class="dot g7" aria-hidden="true"></span>Compliance Officer</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be reviewed within defined response-time service-level objectives.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">AI pre-screening with human final authority</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

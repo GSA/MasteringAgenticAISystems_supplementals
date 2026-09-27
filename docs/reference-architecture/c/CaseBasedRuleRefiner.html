@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case-Based Rule Refiner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Case-Based Rule Refiner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:CaseBasedRuleRefiner</code></p>
+<div class="split"><section>
+<p class="lead">A rule learner that analyses accumulated misclassified cases to propose added conditions or new rules that correct an existing expert rule set.</p>
+<p><strong>Responsibility.</strong> Proposes corrective refinements to existing rules from their failure cases.</p>
+<p class="muted">Also known as: Rule refinement algorithm</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/RuleLearner.html"><span class="dot g4" aria-hidden="true"></span>Rule Learner</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when an expert-provided initial rule set exists and should be refined from accumulated cases where its decisions proved wrong.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Case-Based Rule Refiner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is triggered by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="RuleLearner.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Rule Learner: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Rule Learner</text></a><a href="RuleOutcomeMonitor.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Rule Outcome Monitor: is triggered by</title></circle><text x="542.0" y="224.0" text-anchor="start">Rule Outcome Monitor</text></a><a href="InductiveRuleLearner.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Inductive Rule Learner: alternative to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Inductive Rule Learner</text></a><a href="MisclassifiedCaseStore.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>Misclassified Case Store: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Misclassified Case Store</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MisclassifiedCaseStore.html"><span class="dot g4" aria-hidden="true"></span>Misclassified Case Store</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>is triggered by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/RuleOutcomeMonitor.html"><span class="dot g6" aria-hidden="true"></span>Rule Outcome Monitor</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/InductiveRuleLearner.html"><span class="dot g4" aria-hidden="true"></span>Inductive Rule Learner</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD accumulate multiple failure cases before proposing a change so refinements address genuine patterns, not noise.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Medical case: 234 discrepancy cases accumulated over six months; refined rule would have caught 43 of 52 elderly false negatives (Ch5.11).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Case-based refinement</span><span class="chip">Outcome-driven rule refinement</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Overfitting rules to exceptional cases</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.11">Ch5.11</a>: T. Nguyen, &quot;Rule-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.11. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

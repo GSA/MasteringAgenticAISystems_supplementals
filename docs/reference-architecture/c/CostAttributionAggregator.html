@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost Attribution Aggregator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Cost Attribution Aggregator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:CostAttributionAggregator</code></p>
+<div class="split"><section>
+<p class="lead">An aggregation component that groups request-level token and cost metrics by feature, customer, model or time period, computing total tokens, total cost, request count, average cost per request and trends.</p>
+<p><strong>Responsibility.</strong> Rolls request-level cost records up into per-feature, per-customer and per-model cost totals.</p>
+<p class="muted">Also known as: Feature-level aggregation, Tier 2 token monitoring, Cost breakdown by customer/feature/model</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cost Attribution Aggregator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is invoked by</title></line><a href="TimeSeriesMetricsStore.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Time-Series Metrics Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Time-Series Metrics Store</text></a><a href="CostReportingDashboard.html"><circle class="g6" cx="509.9" cy="295.0" r="7"><title>Cost Reporting Dashboard: sends data to</title></circle><text x="520.3" y="305.0" text-anchor="start">Cost Reporting Dashboard</text></a><a href="CostChargebackService.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Cost Chargeback Service: is invoked by</title></circle><text x="239.7" y="305.0" text-anchor="end">Cost Chargeback Service</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CostChargebackService.html"><span class="dot g7" aria-hidden="true"></span>Cost Chargeback Service</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TimeSeriesMetricsStore.html"><span class="dot g6" aria-hidden="true"></span>Time-Series Metrics Store</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/CostReportingDashboard.html"><span class="dot g6" aria-hidden="true"></span>Cost Reporting Dashboard</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD group costs using a feature tag attached to request-level metrics rather than inspecting millions of individual requests.</li><li>SHOULD rank optimization targets by total spend (volume x per-request cost) together with optimization difficulty, not by per-request cost alone.</li><li>SHOULD track costs at multiple levels: request, customer and feature (Ref8.05).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example: support chatbot 100,000 req/day x $0.003 = $300/day (85% input); code assistant 5,000 x $0.08 = $400/day (75% output); research summarization 2,000 x $0.15 = $300/day (70% input) (Ch8.3).</li><li>Halving code-assistant cost saves $200/day ($6,000/month) versus $60/day ($1,800/month) for a 20% support-chatbot reduction (Ch8.3).</li><li>Feature-level analysis attributed 68% of an unexpected 33% monthly increase to one feature ($4,200 -&gt; $9,800), traced to injecting an 8,000-token catalog instead of 500-800 retrieved tokens (Ch8.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Tag-based cost attribution</span><span class="chip">Three-tier token monitoring (request / feature / organization)</span></dd><dt>Technologies</dt><dd><span class="chip">Prometheus</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Optimization effort misdirected at high per-request but low total-spend features</span><span class="chip">Unnoticed cost growth in features considered finished (e.g., accidentally disabled caching)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.3">Ch8.3</a>: T. Nguyen, &quot;Token Economics and Architecture,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inverse Reward Learner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Inverse Reward Learner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:InverseRewardLearner</code></p>
+<div class="split"><section>
+<p class="lead">A preference elicitor that recovers the reward or utility function under which observed expert state-action behaviour would be optimal.</p>
+<p><strong>Responsibility.</strong> Infers a reward function from expert demonstrations via inverse reinforcement learning.</p>
+<p class="muted">Also known as: Inverse reinforcement learning (IRL)</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/PreferenceElicitor.html"><span class="dot g4" aria-hidden="true"></span>Preference Elicitor</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when expert demonstrations (e.g., thousands of hours of human driving) are available and explicit preference specification is impractical.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Inverse Reward Learner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>writes; produces</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>specializes</title></line><a href="RewardFunctionSpecification.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Reward Function Specification: writes; produces</title></circle><text x="380.0" y="50.0" text-anchor="middle">Reward Function Specific…</text></a><a href="DomainExpertAnnotator.html"><circle class="g8" cx="522.7" cy="173.6" r="7"><title>Domain Expert Annotator: sends data to</title></circle><text x="534.1" y="173.9" text-anchor="start">Domain Expert Annotator</text></a><a href="RevealedPreferenceLearner.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Revealed Preference Learner: alternative to</title></circle><text x="475.2" y="355.1" text-anchor="start">Revealed Preference Lear…</text></a><a href="ExpertDemonstrationDataset.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Expert Demonstration Dataset: reads</title></circle><text x="284.8" y="355.1" text-anchor="end">Expert Demonstration Dat…</text></a><a href="PreferenceElicitor.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Preference Elicitor: specializes</title></circle><text x="225.9" y="173.9" text-anchor="end">Preference Elicitor</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExpertDemonstrationDataset.html"><span class="dot g4" aria-hidden="true"></span>Expert Demonstration Dataset</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RewardFunctionSpecification.html"><span class="dot g2" aria-hidden="true"></span>Reward Function Specification</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/DomainExpertAnnotator.html"><span class="dot g8" aria-hidden="true"></span>Domain Expert Annotator</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>produces <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/RewardFunctionSpecification.html"><span class="dot g2" aria-hidden="true"></span>Reward Function Specification</a> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/RevealedPreferenceLearner.html"><span class="dot g4" aria-hidden="true"></span>Revealed Preference Learner</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT learn from demonstrations that reflect implicit prejudice or constraints, since IRL assumes behaviour approximates optimal behaviour under hidden values.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Inverse reinforcement learning</span><span class="chip">Priors over plausible utility functions</span><span class="chip">Active learning queries to disambiguate hypotheses</span><span class="chip">Inverse Reinforcement Learning</span><span class="chip">Bottom-up value alignment</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.10">Ch5.10</a>: T. Nguyen, &quot;Utility-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.10. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.6">Ch9.6</a>: T. Nguyen, &quot;Value Alignment Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

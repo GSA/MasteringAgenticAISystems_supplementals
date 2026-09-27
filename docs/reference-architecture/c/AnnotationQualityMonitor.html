@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annotation Quality Monitor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Annotation Quality Monitor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:AnnotationQualityMonitor</code></p>
+<div class="split"><section>
+<p class="lead">A quality-control component that cross-checks annotations of identical pairs, tracks inter-rater agreement and statistically detects annotators with systematic biases.</p>
+<p><strong>Responsibility.</strong> Detects inconsistent or biased preference annotations.</p>
+<p class="muted">Also known as: Annotation quality control, Inter-rater reliability tracking, Moderator quality control</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Annotation Quality Monitor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>monitors</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="PreferenceDataset.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Preference Dataset: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Preference Dataset</text></a><a href="PreferenceAnnotator.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Preference Annotator: monitors</title></circle><text x="542.0" y="224.0" text-anchor="start">Preference Annotator</text></a><a href="ContentModerator.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Content Moderator: evaluates</title></circle><text x="380.0" y="396.0" text-anchor="middle">Content Moderator</text></a><a href="OverrideFeedbackRecord.html"><circle class="g8" cx="230.0" cy="220.0" r="7"><title>Override Feedback Record: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Override Feedback Record</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/OverrideFeedbackRecord.html"><span class="dot g8" aria-hidden="true"></span>Override Feedback Record</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/PreferenceDataset.html"><span class="dot g4" aria-hidden="true"></span>Preference Dataset</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ContentModerator.html"><span class="dot g8" aria-hidden="true"></span>Content Moderator</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/PreferenceAnnotator.html"><span class="dot g8" aria-hidden="true"></span>Preference Annotator</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a> <span class="src more" title="Ch10.5">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD flag pairs where multiple annotators disagree sharply and give targeted feedback or filter biased annotators.</li><li>SHOULD verify moderator accuracy through regular audits, double review of a decision sample and calibration sessions.</li><li>SHOULD monitor each annotator&#x27;s consistency over time and trigger retraining when it degrades.</li><li>SHOULD NOT treat all annotator disagreement as error; distinguish systematic criterion differences from noise.</li><li>SHOULD ensure feedback represents diverse perspectives and detect and correct individual reviewer biases before they are learned at scale.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Cross-annotator consistency checks</span><span class="chip">Annotator bias detection</span><span class="chip">Consistency checks against team consensus</span><span class="chip">Longitudinal annotator consistency tracking</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Fairness (NIST AI RMF: fair, harmful bias managed)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Length bias</span><span class="chip">Assertiveness bias</span><span class="chip">Fluency bias</span><span class="chip">Anchor bias</span><span class="chip">Fatigued or unqualified annotators</span><span class="chip">Annotator fatigue</span><span class="chip">Guideline interpretation drift</span><span class="chip">Systematic annotator bias</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.5">Ch3.5</a>: T. Nguyen, &quot;Prompt Optimization, Few-Shot Learning, Fine-Tuning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.1">Ch9.1</a>: T. Nguyen, &quot;Output Filtering and Content Moderation,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

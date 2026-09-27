@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cache-Aware Inference Router · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Cache-Aware Inference Router</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:CacheAwareInferenceRouter</code></p>
+<div class="split"><section>
+<p class="lead">A load balancer for inference replicas that selects the target instance using model-serving state such as KV-cache contents, per-instance queue length, accelerator load and loaded LoRA adapters, plus request priority and cost.</p>
+<p><strong>Responsibility.</strong> Routes each inference request to the instance best able to serve it quickly.</p>
+<p class="muted">Also known as: Model-aware routing, Inference gateway</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/LoadBalancer.html"><span class="dot g5" aria-hidden="true"></span>Load Balancer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when inference replicas hold non-equivalent state (KV caches, loaded adapters) and multi-agent routing must track which pods cache which contexts.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cache-Aware Inference Router"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>routes to; monitors</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>monitors</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="InferenceServer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Server: routes to; monitors</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Server</text></a><a href="LoadBalancer.html"><circle class="g5" cx="522.7" cy="173.6" r="7"><title>Load Balancer: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Load Balancer</text></a><a href="KVCacheManager.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>KV Cache Manager: monitors</title></circle><text x="475.2" y="355.1" text-anchor="start">KV Cache Manager</text></a><a href="L4LoadBalancer.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>Layer-4 Load Balancer: alternative to</title></circle><text x="284.8" y="355.1" text-anchor="end">Layer-4 Load Balancer</text></a><a href="SessionAffinityLoadBalancer.html"><circle class="g5" cx="237.3" cy="173.6" r="7"><title>Session Affinity Load Balancer: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Session Affinity Load Ba…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>routes to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li><li><a class="comp" href="../c/KVCacheManager.html"><span class="dot g4" aria-hidden="true"></span>KV Cache Manager</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/L4LoadBalancer.html"><span class="dot g5" aria-hidden="true"></span>Layer-4 Load Balancer</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li><li><a class="comp" href="../c/SessionAffinityLoadBalancer.html"><span class="dot g5" aria-hidden="true"></span>Session Affinity Load Balancer</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT treat stateful inference replicas as equivalent; route to exploit cache and adapter locality.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Warm-cache pod ~100 ms vs cold pod 2+ s (~20x) when context must be rebuilt (Ch4.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">KV-cache-aware routing</span><span class="chip">Queue-length balancing</span><span class="chip">LoRA-adapter affinity</span><span class="chip">Priority and cost-aware balancing</span></dd><dt>Technologies</dt><dd><span class="chip">GKE Inference Gateway</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Cold-cache latency penalty</span><span class="chip">Expensive adapter swapping</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.3">Ch4.3</a>: T. Nguyen, &quot;Container Orchestration and Edge Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

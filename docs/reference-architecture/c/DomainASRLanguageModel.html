@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domain ASR Language Model · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Model asset</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Domain ASR Language Model</h1>
+<p class="badges"><span class="badge">Model asset</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:DomainASRLanguageModel</code></p>
+<div class="split"><section>
+<p class="lead">An n-gram or neural language model trained on domain text whose word co-occurrence priors guide the speech decoder toward domain terminology.</p>
+<p><strong>Responsibility.</strong> Supplies domain-specific linguistic priors to speech decoding.</p>
+<p class="muted">Also known as: Custom ASR language model</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Domain ASR Language Model"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is trained by</title></line><a href="AutomaticSpeechRecognizer.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Automatic Speech Recognizer: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Automatic Speech Recogni…</text></a><a href="ASRLanguageModelTrainer.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>ASR Language Model Trainer: is trained by</title></circle><text x="380.0" y="396.0" text-anchor="middle">ASR Language Model Trainer</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AutomaticSpeechRecognizer.html"><span class="dot g8" aria-hidden="true"></span>Automatic Speech Recognizer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>is trained by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/ASRLanguageModelTrainer.html"><span class="dot g4" aria-hidden="true"></span>ASR Language Model Trainer</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be trained when comprehensive domain adaptation is needed beyond word boosting.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>1-2 days to train; reduces domain-terminology errors 30-50% and overall WER 5-10% (Ch7.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Language model fusion in beam search</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Riva ASR</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Misrecognized technical terms where errors are most harmful (e.g., diagnoses)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

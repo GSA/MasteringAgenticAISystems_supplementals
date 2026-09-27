@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Card Generator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Model Card Generator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ModelCardGenerator</code></p>
+<div class="split"><section>
+<p class="lead">A documentation automation component that extracts model architecture, training data statistics and performance metrics from registries and evaluation results to draft model cards for human review.</p>
+<p><strong>Responsibility.</strong> Drafts model documentation automatically from technical metadata.</p>
+<p class="muted">Also known as: Automated model card generation, Documentation automation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Model Card Generator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>produces</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="ModelRegistry.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Model and Agent Release Registry: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Model and Agent Release …</text></a><a href="ModelCard.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Model Card: produces</title></circle><text x="542.0" y="224.0" text-anchor="start">Model Card</text></a><a href="EvaluationResultStore.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Evaluation Result Store: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Evaluation Result Store</text></a><a href="DatasetDatasheet.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Dataset Datasheet: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Dataset Datasheet</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DatasetDatasheet.html"><span class="dot g7" aria-hidden="true"></span>Dataset Datasheet</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li><li><a class="comp" href="../c/EvaluationResultStore.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Result Store</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li><li><a class="comp" href="../c/ModelRegistry.html"><span class="dot g7" aria-hidden="true"></span>Model and Agent Release Registry</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li></ul></section>
+<section class="rel"><h3>produces <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/ModelCard.html"><span class="dot g7" aria-hidden="true"></span>Model Card</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST route generated drafts to human review; automation cannot judge whether bias is acceptable or limitations are properly characterized.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Automated model card generation reduces documentation time by ~90%, from weeks to hours (Ch9.8).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Documentation bottlenecks delaying deployment</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.8">Ch9.8</a>: T. Nguyen, &quot;Standards and Frameworks for AI Governance,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.8. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

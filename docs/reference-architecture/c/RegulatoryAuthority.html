@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulatory Authority · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Human role</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Regulatory Authority</h1>
+<p class="badges"><span class="badge">Human role</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:RegulatoryAuthority</code></p>
+<div class="split"><section>
+<p class="lead">An external regulator or supervisory body that receives required documentation and transparency information and investigates whether an organization&#x27;s AI systems comply with applicable law.</p>
+<p><strong>Responsibility.</strong> Receives breach notifications and reviews compliance records.</p>
+<p class="muted">Also known as: Data protection authority, DPA, Supervisory authority, Regulator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Regulatory Authority"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>audits</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>audits</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>audits</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>receives data from</title></line><a href="AuditLogStore.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Audit Log Store: audits</title></circle><text x="380.0" y="50.0" text-anchor="middle">Audit Log Store</text></a><a href="ComplianceEvidenceRepository.html"><circle class="g7" cx="509.9" cy="145.0" r="7"><title>Compliance Evidence Repository: audits</title></circle><text x="520.3" y="143.0" text-anchor="start">Compliance Evidence Repo…</text></a><a href="DataProtectionOfficer.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Data Protection Officer: receives data from</title></circle><text x="520.3" y="305.0" text-anchor="start">Data Protection Officer</text></a><a href="GovernanceDecisionLog.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Governance Decision Log: audits</title></circle><text x="380.0" y="396.0" text-anchor="middle">Governance Decision Log</text></a><a href="TransparencyReport.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Transparency Report: receives data from</title></circle><text x="239.7" y="305.0" text-anchor="end">Transparency Report</text></a><a href="PersonalDataBreachNotifier.html"><circle class="g7" cx="250.1" cy="145.0" r="7"><title>Personal Data Breach Notifier: receives data from</title></circle><text x="239.7" y="143.0" text-anchor="end">Personal Data Breach Not…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/DataProtectionOfficer.html"><span class="dot g7" aria-hidden="true"></span>Data Protection Officer</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li><li><a class="comp" href="../c/PersonalDataBreachNotifier.html"><span class="dot g7" aria-hidden="true"></span>Personal Data Breach Notifier</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a> <a class="src" href="../sources.html#Ref9.05">Ref9.05</a></li><li><a class="comp" href="../c/TransparencyReport.html"><span class="dot g7" aria-hidden="true"></span>Transparency Report</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li></ul></section>
+<section class="rel"><h3>audits <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a> <a class="src" href="../sources.html#Ref9.03">Ref9.03</a></li><li><a class="comp" href="../c/ComplianceEvidenceRepository.html"><span class="dot g7" aria-hidden="true"></span>Compliance Evidence Repository</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li><li><a class="comp" href="../c/GovernanceDecisionLog.html"><span class="dot g7" aria-hidden="true"></span>Governance Decision Log</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be given access to documentation under confidentiality obligations; inability to share with regulators creates compliance risk.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>EU AI Act fines up to EUR 30M or 6% of revenue (prohibited risk), EUR 20M or 4% (high-risk non-compliance), EUR 10M or 2% (transparency violations) (Ref9.03).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Frameworks &amp; regulations</dt><dd><span class="chip">GDPR Art. 33</span><span class="chip">EU AI Act (high-risk requirements)</span><span class="chip">EU AI Act</span><span class="chip">GDPR</span><span class="chip">FDA guidance on AI/ML in medical devices</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.7">Ch9.7</a>: T. Nguyen, &quot;GDPR and Data Protection Regulations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.8">Ch9.8</a>: T. Nguyen, &quot;Standards and Frameworks for AI Governance,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.03">Ref9.03</a>: &quot;Regulatory Compliance Frameworks for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/03-Regulatory-Compliance-Frameworks.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref9.05">Ref9.05</a>: &quot;Privacy and Data Protection for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/05-Privacy-Data-Protection.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

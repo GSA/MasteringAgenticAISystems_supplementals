@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan-and-Execute Controller · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Plan-and-Execute Controller</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:PlanAndExecuteController</code></p>
+<div class="split"><section>
+<p class="lead">An agent controller that separates strategic planning from tactical execution, coordinating a planner, an executor, and a replanner around an explicit multi-step plan.</p>
+<p><strong>Responsibility.</strong> Coordinates plan creation, step execution, and replanning.</p>
+<p class="muted">Also known as: Plan-and-Execute agent, Replanning agent loop, Continuous adaptation controller</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for complex workflows with mostly predictable steps in stable environments, resource-constrained settings, or supervisor-worker coordination; avoid for highly dynamic, real-time, simple, or open-ended exploratory tasks.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Plan-and-Execute Controller"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is target of alternativeTo</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ReActController.html"><circle class="g1" cx="497.3" cy="126.5" r="7"><title>ReAct Agent Controller: alternative to</title></circle><text x="506.7" y="123.0" text-anchor="start">ReAct Agent Controller</text></a><a href="TaskPlanner.html"><circle class="g2" cx="526.2" cy="253.4" r="7"><title>Task Planner: orchestrates</title></circle><text x="537.9" y="260.0" text-anchor="start">Task Planner</text></a><a href="Replanner.html"><circle class="g2" cx="445.1" cy="355.1" r="7"><title>Replanner: orchestrates</title></circle><text x="450.3" y="370.0" text-anchor="start">Replanner</text></a><a href="PlanExecutor.html"><circle class="g2" cx="314.9" cy="355.1" r="7"><title>Plan Executor: orchestrates</title></circle><text x="309.7" y="370.0" text-anchor="end">Plan Executor</text></a><a href="PlanExecutionMonitor.html"><circle class="g2" cx="233.8" cy="253.4" r="7"><title>Plan Deviation Monitor: orchestrates</title></circle><text x="222.1" y="260.0" text-anchor="end">Plan Deviation Monitor</text></a><a href="DirectToolCallingController.html"><circle class="g1" cx="262.7" cy="126.5" r="7"><title>Direct Tool-Calling Controller: is target of alternativeTo</title></circle><text x="253.3" y="123.0" text-anchor="end">Direct Tool-Calling Cont…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>orchestrates <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/PlanExecutionMonitor.html"><span class="dot g2" aria-hidden="true"></span>Plan Deviation Monitor</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/PlanExecutor.html"><span class="dot g2" aria-hidden="true"></span>Plan Executor</a> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/Replanner.html"><span class="dot g2" aria-hidden="true"></span>Replanner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/TaskPlanner.html"><span class="dot g2" aria-hidden="true"></span>Task Planner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/DirectToolCallingController.html"><span class="dot g1" aria-hidden="true"></span>Direct Tool-Calling Controller</a> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a></li><li><a class="comp" href="../c/ReActController.html"><span class="dot g1" aria-hidden="true"></span>ReAct Agent Controller</a> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD use powerful models for planning and lighter-weight models or rule-based executors for execution.</li><li>SHOULD design replanning triggers that are neither too sensitive nor too conservative.</li><li>SHOULD run execution monitoring in parallel with execution rather than treating planning and execution as separate sequential phases.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Frontier model for planning with smaller execution models can cut total inference cost by 60-70% (Ch1.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Plan-and-Execute</span><span class="chip">Hierarchical task decomposition</span><span class="chip">Dynamic replanning</span><span class="chip">Plan-execute-monitor-replan cycle</span><span class="chip">Interleaved planning and execution</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Getting sidetracked by tangential exploration</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.2">Ch1.2</a>: T. Nguyen, &quot;Core Agent Patterns,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

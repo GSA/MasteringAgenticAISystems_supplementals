@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termination Checker · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Termination Checker</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:TerminationChecker</code></p>
+<div class="split"><section>
+<p class="lead">A control component that evaluates end conditions, such as reviewer approval or a maximum round count, after each message to decide whether a multi-agent conversation stops.</p>
+<p><strong>Responsibility.</strong> Decides after each message whether a multi-agent conversation has reached an end condition.</p>
+<p class="muted">Also known as: Termination check function, End-condition validator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Termination Checker"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is invoked by</title></line><a href="GroupChatManager.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Conversational Agent Coordinator: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Conversational Agent Coo…</text></a><a href="IterationLimitPolicy.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Iteration Limit Policy: is configured by</title></circle><text x="542.0" y="224.0" text-anchor="start">Iteration Limit Policy</text></a><a href="SharedMessageHistory.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Shared Message History: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Shared Message History</text></a><a href="IterativeRefinementCoordinator.html"><circle class="g1" cx="230.0" cy="220.0" r="7"><title>Iterative Refinement Coordinator: is invoked by</title></circle><text x="218.0" y="224.0" text-anchor="end">Iterative Refinement Coo…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/IterationLimitPolicy.html"><span class="dot g1" aria-hidden="true"></span>Iteration Limit Policy</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GroupChatManager.html"><span class="dot g1" aria-hidden="true"></span>Conversational Agent Coordinator</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li><li><a class="comp" href="../c/IterativeRefinementCoordinator.html"><span class="dot g1" aria-hidden="true"></span>Iterative Refinement Coordinator</a> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/SharedMessageHistory.html"><span class="dot g1" aria-hidden="true"></span>Shared Message History</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST stop the conversation when the critic approves or the maximum round limit is reached.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Bounded conversation</span><span class="chip">Approval-based termination</span></dd><dt>Technologies</dt><dd><span class="chip">AutoGen</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Cost efficiency</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unbounded agent conversations</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.4">Ch2.4</a>: T. Nguyen, &quot;Multi-Agent Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.13">Ch5.13</a>: T. Nguyen, &quot;Hybrid Decision Systems Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.13. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

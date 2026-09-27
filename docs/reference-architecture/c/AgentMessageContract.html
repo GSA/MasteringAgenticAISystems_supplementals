@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Message Contract · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data artifact</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Agent Message Contract</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:AgentMessageContract</code></p>
+<div class="split"><section>
+<p class="lead">A versioned specification of the data format, units, field names and semantic meaning of messages exchanged between agents.</p>
+<p><strong>Responsibility.</strong> Defines the syntax and semantics of inter-agent messages.</p>
+<p class="muted">Also known as: Interface contract, Event schema, .proto definition, Shared ontology, Structured inter-agent message schema, Standard event envelope</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Agent Message Contract"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>configures</title></line><a href="EventTriggeredAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Event-Triggered Agent: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Event-Triggered Agent</text></a><a href="AgentMessageBus.html"><circle class="g1" cx="522.7" cy="173.6" r="7"><title>Agent Message Bus: constrains</title></circle><text x="534.1" y="173.9" text-anchor="start">Agent Message Bus</text></a><a href="AgentServiceAPI.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Agent Service API: constrains</title></circle><text x="475.2" y="355.1" text-anchor="start">Agent Service API</text></a><a href="AgentDelegationInterface.html"><circle class="g1" cx="291.8" cy="341.4" r="7"><title>Agent Delegation Interface: constrains</title></circle><text x="284.8" y="355.1" text-anchor="end">Agent Delegation Interface</text></a><a href="MessageSchemaValidator.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Message Schema Validator: configures</title></circle><text x="225.9" y="173.9" text-anchor="end">Message Schema Validator</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/MessageSchemaValidator.html"><span class="dot g1" aria-hidden="true"></span>Message Schema Validator</a> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a> <span class="src more" title="Ch10.5">+1</span></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AgentDelegationInterface.html"><span class="dot g1" aria-hidden="true"></span>Agent Delegation Interface</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li><li><a class="comp" href="../c/AgentMessageBus.html"><span class="dot g1" aria-hidden="true"></span>Agent Message Bus</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li><li><a class="comp" href="../c/AgentServiceAPI.html"><span class="dot g1" aria-hidden="true"></span>Agent Service API</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li><li><a class="comp" href="../c/EventTriggeredAgent.html"><span class="dot g1" aria-hidden="true"></span>Event-Triggered Agent</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST state units and semantic meaning, not just syntax, of exchanged values.</li><li>SHOULD evolve additively: never delete fields or renumber field IDs.</li><li>SHOULD balance event granularity; overly generic events couple subscribers and overly granular events create versioning burden.</li><li>SHOULD standardise events on required routing fields (event type, timestamp, source service) plus type-specific optional payload.</li><li>SHOULD force agents to declare intent and outputs in structured formats that other agents and monitoring systems can parse.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Communication ambiguity causes approximately 32% of traced multi-agent coordination failures (Ch1.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Formal speech acts (propose, commit, report, request assistance)</span></dd><dt>Technologies</dt><dd><span class="chip">Protocol Buffers</span><span class="chip">JSON Schema</span><span class="chip">buf.validate</span></dd><dt>Quality attributes</dt><dd><span class="chip">Compatibility (ISO/IEC 25010)</span><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Communication ambiguity</span><span class="chip">Format incompatibility cascades</span><span class="chip">Breaking schema changes</span><span class="chip">Per-consumer custom parsing of inconsistent event formats</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.3">Ch1.3</a>: T. Nguyen, &quot;Multi-Agent Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

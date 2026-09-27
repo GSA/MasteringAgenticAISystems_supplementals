@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shard Query Router · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Shard Query Router</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:ShardQueryRouter</code></p>
+<div class="split"><section>
+<p class="lead">A cluster component on every node that forwards each request to a node owning the relevant shard and redirects to replica shards when an owner is degraded.</p>
+<p><strong>Responsibility.</strong> Routes queries to shard owners, failing over to replicas.</p>
+<p class="muted">Also known as: Query forwarding</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Shard Query Router"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is triggered by</title></line><a href="ContainerOrchestrator.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Container Orchestrator: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Container Orchestrator</text></a><a href="VectorStoreQueryAPI.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Vector Store Query API: routes to</title></circle><text x="520.3" y="305.0" text-anchor="start">Vector Store Query API</text></a><a href="GossipMembershipService.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Gossip Membership Service: is triggered by</title></circle><text x="239.7" y="305.0" text-anchor="end">Gossip Membership Service</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ContainerOrchestrator.html"><span class="dot g5" aria-hidden="true"></span>Container Orchestrator</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+<section class="rel"><h3>is triggered by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/GossipMembershipService.html"><span class="dot g5" aria-hidden="true"></span>Gossip Membership Service</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+<section class="rel"><h3>routes to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/VectorStoreQueryAPI.html"><span class="dot g3" aria-hidden="true"></span>Vector Store Query API</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+</div>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.2B">Ch6.2B</a>: T. Nguyen, &quot;Production Vector Database Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

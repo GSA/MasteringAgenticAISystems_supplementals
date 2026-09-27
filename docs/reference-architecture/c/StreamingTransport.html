@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streaming Transport · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Interface</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Streaming Transport</h1>
+<p class="badges"><span class="badge">Interface</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:StreamingTransport</code></p>
+<div class="split"><section>
+<p class="lead">An abstract client-facing transport through which incremental agent output is delivered from server to client while it is still being generated.</p>
+<p><strong>Responsibility.</strong> Carries progressively generated agent output to the client over a long-lived connection.</p>
+<p class="muted">Also known as: Streaming endpoint, Streaming protocol</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Streaming Transport"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is exposed by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is monitored by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is specialized by</title></line><a href="ConversationalInterface.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Conversational (Chat) Interface: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Conversational (Chat) In…</text></a><a href="ResponseStreamer.html"><circle class="g8" cx="522.7" cy="173.6" r="7"><title>Response Streamer: is exposed by</title></circle><text x="534.1" y="173.9" text-anchor="start">Response Streamer</text></a><a href="StreamConnectionManager.html"><circle class="g8" cx="468.2" cy="341.4" r="7"><title>Stream Connection Manager: is monitored by</title></circle><text x="475.2" y="355.1" text-anchor="start">Stream Connection Manager</text></a><a href="ServerSentEventsStream.html"><circle class="g8" cx="291.8" cy="341.4" r="7"><title>Server-Sent Events Stream: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Server-Sent Events Stream</text></a><a href="WebSocketChannel.html"><circle class="g8" cx="237.3" cy="173.6" r="7"><title>WebSocket Channel: is specialized by</title></circle><text x="225.9" y="173.9" text-anchor="end">WebSocket Channel</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/ServerSentEventsStream.html"><span class="dot g8" aria-hidden="true"></span>Server-Sent Events Stream</a></td><td>Choose for most agent streaming workflows: the user submits a query, the agent streams a response, and no mid-stream client-to-server interaction is needed.</td></tr><tr><td><a class="comp" href="../c/WebSocketChannel.html"><span class="dot g8" aria-hidden="true"></span>WebSocket Channel</a></td><td>Choose for genuinely interactive scenarios: agents expecting mid-stream user feedback or interruption, collaborative multi-user agent sessions, or real-time dashboards whose pushed updates need client acknowledgment.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is exposed by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ResponseStreamer.html"><span class="dot g8" aria-hidden="true"></span>Response Streamer</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConversationalInterface.html"><span class="dot g8" aria-hidden="true"></span>Conversational (Chat) Interface</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+<section class="rel"><h3>is monitored by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/StreamConnectionManager.html"><span class="dot g8" aria-hidden="true"></span>Stream Connection Manager</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Progressive delivery</span><span class="chip">Generate-and-stream-simultaneously</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">User abandonment during blank-screen waits</span><span class="chip">Inability to distinguish slow processing from silent failure</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.9">Ch2.9</a>: T. Nguyen, &quot;Streaming and Real-Time Responses,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coarse-to-Fine Vector Retriever · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Coarse-to-Fine Vector Retriever</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:CoarseToFineVectorRetriever</code></p>
+<div class="split"><section>
+<p class="lead">A vector retriever that first searches truncated low-dimensional embeddings to shortlist candidates, then rescores the shortlist with full-dimensional embeddings.</p>
+<p><strong>Responsibility.</strong> Shortlists candidates with low-dimensional vectors and refines their ranking with full-dimensional vectors.</p>
+<p class="muted">Also known as: Adaptive retrieval, Two-stage MRL retrieval</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/VectorRetriever.html"><span class="dot g3" aria-hidden="true"></span>Vector Retriever</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when embeddings are MRL-trained and corpus scale makes full-dimensional search latency or memory prohibitive.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Coarse-to-Fine Vector Retriever"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><a href="VectorRetriever.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Retriever: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Retriever</text></a><a href="Reranker.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Reranker: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Reranker</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/Reranker.html"><span class="dot g3" aria-hidden="true"></span>Reranker</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.1">Ch6.1</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Two-stage 256-dim/3,072-dim retrieval typically cuts end-to-end latency by 40-60% vs. full-dimensional retrieval (Ch6.1).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Matryoshka Representation Learning</span><span class="chip">Two-stage retrieval (low-dim first pass, high-dim rerank)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.1">Ch6.1</a>: T. Nguyen, &quot;Embeddings and RAG Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

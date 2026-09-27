@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyword Match Scorer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Keyword Match Scorer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:KeywordMatchScorer</code></p>
+<div class="split"><section>
+<p class="lead">A response scorer that detects required or forbidden phrases in a response and converts their capped count into a normalized score.</p>
+<p><strong>Responsibility.</strong> Scores presence of required or forbidden phrasing such as empathy acknowledgments.</p>
+<p class="muted">Also known as: Key-phrase fuzzy matching in integration tests</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ResponseScorer.html"><span class="dot g6" aria-hidden="true"></span>Response Scorer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for cheap detection of required/forbidden language (e.g., acknowledgment phrases, unauthorized guarantees).</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Keyword Match Scorer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is invoked by</title></line><a href="LLMJudge.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>LLM Judge: alternative to</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Judge</text></a><a href="ReActController.html"><circle class="g1" cx="522.7" cy="173.6" r="7"><title>ReAct Agent Controller: evaluates</title></circle><text x="534.1" y="173.9" text-anchor="start">ReAct Agent Controller</text></a><a href="EvaluationDataset.html"><circle class="g6" cx="468.2" cy="341.4" r="7"><title>Evaluation Dataset: reads</title></circle><text x="475.2" y="355.1" text-anchor="start">Evaluation Dataset</text></a><a href="ResponseScorer.html"><circle class="g6" cx="291.8" cy="341.4" r="7"><title>Response Scorer: specializes</title></circle><text x="284.8" y="355.1" text-anchor="end">Response Scorer</text></a><a href="AgentTestRunner.html"><circle class="g6" cx="237.3" cy="173.6" r="7"><title>Agent Test Runner: is invoked by</title></circle><text x="225.9" y="173.9" text-anchor="end">Agent Test Runner</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentTestRunner.html"><span class="dot g6" aria-hidden="true"></span>Agent Test Runner</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationDataset.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Dataset</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ReActController.html"><span class="dot g1" aria-hidden="true"></span>ReAct Agent Controller</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/LLMJudge.html"><span class="dot g6" aria-hidden="true"></span>LLM Judge</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.1B">Ch3.1B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD cap phrase-count scores so mechanical repetition does not inflate the score.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Capped phrase counting to prevent score inflation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.1B">Ch3.1B</a>: T. Nguyen, &quot;Implement Evaluation Pipelines and Task Benchmarks - Guided Practice,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.07">Ref7.07</a>: E. Li, V. Bellotti, R. Kraus, and R. Kao, &quot;Build a retrieval-augmented generation (RAG) agent with NVIDIA Nemotron,&quot; NVIDIA Technical Blog, Sep. 23, 2025. [Online]. Available: https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

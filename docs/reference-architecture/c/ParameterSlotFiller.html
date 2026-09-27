@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parameter Slot Filler · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ToolIntegrationComponent">Tools &amp; Integration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Parameter Slot Filler</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Tools &amp; Integration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:ParameterSlotFiller</code></p>
+<div class="split"><section>
+<p class="lead">A structured extraction component that fills a tool&#x27;s parameter slots from natural-language user input using slot-filling rather than free-form model output.</p>
+<p><strong>Responsibility.</strong> Extracts tool parameter values from user input into typed slots.</p>
+<p class="muted">Also known as: Structured Parameter Extractor</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Parameter Slot Filler"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>reads</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="ToolExecutor.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Tool Executor: sends data to</title></circle><text x="520.3" y="305.0" text-anchor="start">Tool Executor</text></a><a href="ToolSchema.html"><circle class="g1" cx="250.1" cy="295.0" r="7"><title>Tool Schema: reads</title></circle><text x="239.7" y="305.0" text-anchor="end">Tool Schema</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch3.8">Ch3.8</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ToolSchema.html"><span class="dot g1" aria-hidden="true"></span>Tool Schema</a> <a class="src" href="../sources.html#Ch3.8">Ch3.8</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ToolExecutor.html"><span class="dot g1" aria-hidden="true"></span>Tool Executor</a> <a class="src" href="../sources.html#Ch3.8">Ch3.8</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Slot filling</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Parameter misextraction from natural language</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.8">Ch3.8</a>: T. Nguyen, &quot;Action Accuracy Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.8. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

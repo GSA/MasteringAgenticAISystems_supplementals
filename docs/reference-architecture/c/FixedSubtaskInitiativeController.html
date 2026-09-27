@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixed Subtask Initiative Controller · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Fixed Subtask Initiative Controller</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:FixedSubtaskInitiativeController</code></p>
+<div class="split"><section>
+<p class="lead">A mixed-initiative controller that assigns pre-designated workflow stages to agent or human ownership and halts at human-owned stages to request human judgment.</p>
+<p><strong>Responsibility.</strong> Enforces a fixed partition of workflow stages between agent and human.</p>
+<p class="muted">Also known as: Fixed subtask initiative</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/MixedInitiativeController.html"><span class="dot g1" aria-hidden="true"></span>Mixed-Initiative Controller</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when workflow stages can be pre-partitioned by clear decision criteria, e.g., routine verification to the agent and judgment-heavy decisions to humans.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Fixed Subtask Initiative Controller"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>escalates to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is configured by</title></line><a href="HumanSpecialist.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Human Specialist: escalates to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Human Specialist</text></a><a href="MixedInitiativeController.html"><circle class="g1" cx="509.9" cy="145.0" r="7"><title>Mixed-Initiative Controller: specializes</title></circle><text x="520.3" y="143.0" text-anchor="start">Mixed-Initiative Control…</text></a><a href="NegotiatedInitiativeController.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Negotiated Initiative Controller: alternative to</title></circle><text x="520.3" y="305.0" text-anchor="start">Negotiated Initiative Co…</text></a><a href="SubdialogueInitiativeController.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Subdialogue Initiative Controller: alternative to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Subdialogue Initiative C…</text></a><a href="UnsolicitedReportingController.html"><circle class="g1" cx="250.1" cy="295.0" r="7"><title>Unsolicited Reporting Controller: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Unsolicited Reporting Co…</text></a><a href="ResponsibilityMatrix.html"><circle class="g8" cx="250.1" cy="145.0" r="7"><title>Responsibility Matrix: is configured by</title></circle><text x="239.7" y="143.0" text-anchor="end">Responsibility Matrix</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ResponsibilityMatrix.html"><span class="dot g8" aria-hidden="true"></span>Responsibility Matrix</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>escalates to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/HumanSpecialist.html"><span class="dot g8" aria-hidden="true"></span>Human Specialist</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/NegotiatedInitiativeController.html"><span class="dot g1" aria-hidden="true"></span>Negotiated Initiative Controller</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li><li><a class="comp" href="../c/SubdialogueInitiativeController.html"><span class="dot g1" aria-hidden="true"></span>Subdialogue Initiative Controller</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li><li><a class="comp" href="../c/UnsolicitedReportingController.html"><span class="dot g1" aria-hidden="true"></span>Unsolicited Reporting Controller</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST define precisely which subtasks fall within agent authority versus require human involvement.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Insurance claims example: automated document completeness verification with historical accuracy exceeding 99%, underwriting decisions left to humans (Ch10.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Stage-partitioned responsibility</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Agents overstepping authority</span><span class="chip">Unnecessary escalation of routine decisions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

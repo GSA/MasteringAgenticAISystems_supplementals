@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cacheable Prefix Prompt Layout · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Cacheable Prefix Prompt Layout</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:CacheablePrefixPromptLayout</code></p>
+<div class="split"><section>
+<p class="lead">A prompt-structure convention that places static, frequently reused content (system instructions, tool definitions, stable user profile) first and variable request-specific content last so provider prefix caches can match it.</p>
+<p><strong>Responsibility.</strong> Orders prompt segments by cacheability to maximize prefix-cache hits.</p>
+<p class="muted">Also known as: Cache-friendly prompt structure, Static-first prompt ordering</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cacheable Prefix Prompt Layout"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><a href="PromptContextBuilder.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Prompt Context Builder: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Prompt Context Builder</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/PromptContextBuilder.html"><span class="dot g2" aria-hidden="true"></span>Prompt Context Builder</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST place static, frequently reused content at the beginning of the prompt, followed by variable, request-specific content.</li><li>SHOULD NOT include content that changes more often than it is reused (e.g., daily market data) in the cacheable prefix.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Financial advisor: cacheable prefix of 5,800 tokens (800 system prompt + 5,000 client profile) out of 9,000 input tokens; market data (3,000) and query (200) remain variable (Ch8.3).</li><li>Regulatory context of 12,000 tokens (SEC 3,500, FINRA 4,200, DOL 2,800, state 1,500) repeated in 20,000 of 50,000 monthly requests = 240M input tokens ($600/month) of redundant transmission (Ch8.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Prompt caching</span><span class="chip">Prefix matching</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Cache misses caused by variable content inside the prompt prefix</span><span class="chip">Redundant retransmission of static context</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.3">Ch8.3</a>: T. Nguyen, &quot;Token Economics and Architecture,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episode Pattern Abstractor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Episode Pattern Abstractor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:EpisodePatternAbstractor</code></p>
+<div class="split"><section>
+<p class="lead">A consolidation component that clusters related episodes and extracts general patterns across them, promoting the resulting rules to semantic or procedural memory.</p>
+<p><strong>Responsibility.</strong> Synthesizes generalized patterns from collections of episodes.</p>
+<p class="muted">Also known as: Abstraction process, Episodic-to-semantic promotion, Periodic abstraction loop, Working-to-semantic abstraction, Episodic-to-semantic abstraction, Experience consolidation, Semantic Knowledge Abstractor</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Episode Pattern Abstractor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>reads</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>writes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>writes</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="EpisodicMemoryStore.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Episodic Memory Store: reads</title></circle><text x="534.1" y="173.9" text-anchor="start">Episodic Memory Store</text></a><a href="MemoryConsolidator.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Memory Consolidator: is invoked by</title></circle><text x="475.2" y="355.1" text-anchor="start">Memory Consolidator</text></a><a href="SemanticMemoryStore.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Semantic Memory Store: writes</title></circle><text x="284.8" y="355.1" text-anchor="end">Semantic Memory Store</text></a><a href="ProceduralMemoryStore.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Procedural Memory Store: writes</title></circle><text x="225.9" y="173.9" text-anchor="end">Procedural Memory Store</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MemoryConsolidator.html"><span class="dot g2" aria-hidden="true"></span>Memory Consolidator</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EpisodicMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Episodic Memory Store</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a> <a class="src" href="../sources.html#Ch5.9">Ch5.9</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ProceduralMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Procedural Memory Store</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li><li><a class="comp" href="../c/SemanticMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Semantic Memory Store</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a> <a class="src" href="../sources.html#Ch5.9">Ch5.9</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD periodically cluster similar episodes and promote extracted principles to semantic or procedural memory.</li><li>SHOULD validate that a pattern generalizes beyond the specific instances observed before encoding it as semantic knowledge.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Illustrative abstraction after 50 password resets: 30% of resets for accounts &gt;2 years fail email verification; phone verification succeeds in 90%; resolution rises from 5 to 12 minutes (Ch5.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Episode clustering</span><span class="chip">Cross-episode pattern extraction</span><span class="chip">Episodic-to-semantic/procedural promotion</span><span class="chip">Trajectory clustering and alignment</span><span class="chip">Context clustering of contradictory episodes</span><span class="chip">Cross-episode pattern identification</span><span class="chip">Generalization validation</span><span class="chip">Lesson extraction from individual experiences (Ref5.07)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Flexibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Bounded improvement from reasoning only by analogy to stored cases</span><span class="chip">Inability to transfer lessons across domains</span><span class="chip">Repeated retrieval of specific episodes for general knowledge</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.7">Ch5.7</a>: T. Nguyen, &quot;Episodic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.9">Ch5.9</a>: T. Nguyen, &quot;Working Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.9. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref5.08">Ref5.08</a>: X. Huang et al., &quot;Understanding the planning of LLM agents: A survey,&quot; arXiv:2402.02716, 2024.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

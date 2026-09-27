@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>File Store Extractor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>File Store Extractor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:FileStoreExtractor</code></p>
+<div class="split"><section>
+<p class="lead">A data source connector that discovers files in file systems or object storage via path patterns and extracts those modified since the last run using file metadata.</p>
+<p><strong>Responsibility.</strong> Retrieves new or modified files from file systems or object storage.</p>
+<p class="muted">Also known as: File system extractor, S3 connector, Object storage connector</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DataSourceConnector.html"><span class="dot g3" aria-hidden="true"></span>Data Source Connector</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for unstructured document repositories such as shared drives, Git repositories or cloud object storage.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of File Store Extractor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="DataSourceConnector.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Data Source Connector: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Data Source Connector</text></a><a href="DocumentIngestor.html"><circle class="g3" cx="530.0" cy="220.0" r="7"><title>Document Ingestor: invokes</title></circle><text x="542.0" y="224.0" text-anchor="start">Document Ingestor</text></a><a href="OverlappingWindowChunker.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Overlapping Window Chunker: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Overlapping Window Chunker</text></a><a href="ObjectStore.html"><circle class="g5" cx="230.0" cy="220.0" r="7"><title>Object Store: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Object Store</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DocumentIngestor.html"><span class="dot g3" aria-hidden="true"></span>Document Ingestor</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ObjectStore.html"><span class="dot g5" aria-hidden="true"></span>Object Store</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/OverlappingWindowChunker.html"><span class="dot g3" aria-hidden="true"></span>Overlapping Window Chunker</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD isolate per-file failures (encoding, permission, deleted files) and continue so the pipeline completes when some files are inaccessible.</li><li>SHOULD route binary formats by file type to an appropriate document parser.</li><li>SHOULD detect file encodings before decoding legacy documents, with best-effort fallback.</li><li>SHOULD deduplicate symlinks, hardlinks and copies using inodes or content hashes.</li><li>SHOULD load multiple formats (PDF, TXT, Markdown), handle encoding and track source, date and author metadata (Ref7.07).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Modification-time checks yield 10-100x speedups on large documentation repositories where only a few files change daily (Ch6.3A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Glob-based file discovery</span><span class="chip">Modification-time change detection</span><span class="chip">Per-file graceful error handling</span><span class="chip">Encoding detection</span><span class="chip">Inode or content-hash duplicate detection</span></dd><dt>Technologies</dt><dd><span class="chip">Amazon S3</span><span class="chip">Azure Blob Storage</span><span class="chip">Google Cloud Storage</span><span class="chip">SharePoint</span><span class="chip">Git repositories</span><span class="chip">chardet</span><span class="chip">LangChain DirectoryLoader</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Pipeline abort from individual unreadable files</span><span class="chip">Duplicate entries from symlinks or copies</span><span class="chip">Encoding decode failures on legacy documents</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.07">Ref7.07</a>: E. Li, V. Bellotti, R. Kraus, and R. Kao, &quot;Build a retrieval-augmented generation (RAG) agent with NVIDIA Nemotron,&quot; NVIDIA Technical Blog, Sep. 23, 2025. [Online]. Available: https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

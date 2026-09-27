@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human Oversight Protocol · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Human Oversight Protocol</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:HumanOversightProtocol</code></p>
+<div class="split"><section>
+<p class="lead">A documented specification of mandatory human review decision points, override-trigger factors, documentation requirements for approvals and overrides, escalation paths, and oversight performance metrics.</p>
+<p><strong>Responsibility.</strong> Specifies when and how humans must intervene in an automated system.</p>
+<p class="muted">Also known as: Oversight implementation guidance, Human oversight measures documentation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Human Oversight Protocol"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>constrains</title></line><a href="ApprovalGateway.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Approval Gateway: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Approval Gateway</text></a><a href="HumanApprover.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Human Approver: constrains</title></circle><text x="520.3" y="305.0" text-anchor="start">Human Approver</text></a><a href="HumanSupervisor.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Human Supervisor: constrains</title></circle><text x="239.7" y="305.0" text-anchor="end">Human Supervisor</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ApprovalGateway.html"><span class="dot g8" aria-hidden="true"></span>Approval Gateway</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/HumanSupervisor.html"><span class="dot g8" aria-hidden="true"></span>Human Supervisor</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be developed collaboratively by technical teams, domain experts and front-line operators.</li><li>MUST be documented by providers of high-risk AI systems, and deployers must assign trained personnel with genuine authority and resources.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Meaningful human oversight</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Symbolic rather than substantive oversight</span><span class="chip">Uncritical acceptance or abandonment of AI tools (e.g., EPV-R)</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">EU AI Act Art. 14</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

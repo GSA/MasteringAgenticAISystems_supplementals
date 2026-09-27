@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persistent Volume · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Infrastructure resource</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Persistent Volume</h1>
+<p class="badges"><span class="badge">Infrastructure resource</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:PersistentVolume</code></p>
+<div class="split"><section>
+<p class="lead">Durable block, network-attached or local storage provisioned to containers through a storage claim, surviving pod restarts and rescheduling.</p>
+<p><strong>Responsibility.</strong> Provides storage that outlives individual container instances.</p>
+<p class="muted">Also known as: Persistent volume claim, PVC, Named Docker volume, SSD-backed volume</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Persistent Volume"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>hosts</title></line><a href="VectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Store: hosts</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Store</text></a><a href="SelfManagedVectorIndexStore.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Self-Managed Vector Index Store: hosts</title></circle><text x="520.3" y="305.0" text-anchor="start">Self-Managed Vector Inde…</text></a><a href="ModelArtifactCache.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Model Artifact Cache: hosts</title></circle><text x="239.7" y="305.0" text-anchor="end">Model Artifact Cache</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ModelArtifactCache.html"><span class="dot g4" aria-hidden="true"></span>Model Artifact Cache</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li><li><a class="comp" href="../c/SelfManagedVectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Self-Managed Vector Index Store</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li><li><a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example: 100 GiB fast-SSD ReadOnlyMany volume shared by all GPU worker pods for model caching (Ch4.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Storage abstraction via claims</span><span class="chip">ReadOnlyMany shared mounts</span></dd><dt>Technologies</dt><dd><span class="chip">Kubernetes PersistentVolumeClaim</span><span class="chip">StorageClass</span><span class="chip">AWS EBS gp3</span><span class="chip">GCP Persistent SSD</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Flexibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Loss of embeddings and conversation history on pod restart</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.3">Ch4.3</a>: T. Nguyen, &quot;Container Orchestration and Edge Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.2B">Ch6.2B</a>: T. Nguyen, &quot;Production Vector Database Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

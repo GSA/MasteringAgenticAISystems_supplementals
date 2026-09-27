@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Normalizer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Text Normalizer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:TextNormalizer</code></p>
+<div class="split"><section>
+<p class="lead">A transformation component that strips markup, control characters and whitespace artifacts from extracted text to produce standardized input for chunking and embedding.</p>
+<p><strong>Responsibility.</strong> Removes formatting artifacts from raw extracted text.</p>
+<p class="muted">Also known as: Text cleaner, Cleaning stage</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Text Normalizer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is configured by</title></line><a href="IngestionPipelineOrchestrator.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Ingestion Pipeline Orchestrator: is orchestrated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Ingestion Pipeline Orche…</text></a><a href="ContentDeduplicator.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Content Deduplicator: sends data to</title></circle><text x="534.1" y="173.9" text-anchor="start">Content Deduplicator</text></a><a href="DocumentQualityFilter.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Document Quality Filter: receives data from</title></circle><text x="475.2" y="355.1" text-anchor="start">Document Quality Filter</text></a><a href="DataframeComputeEngine.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>Dataframe Compute Engine: deployed on</title></circle><text x="284.8" y="355.1" text-anchor="end">Dataframe Compute Engine</text></a><a href="TextCleaningProfile.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Text Cleaning Profile: is configured by</title></circle><text x="225.9" y="173.9" text-anchor="end">Text Cleaning Profile</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DataframeComputeEngine.html"><span class="dot g5" aria-hidden="true"></span>Dataframe Compute Engine</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li></ul></section>
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/TextCleaningProfile.html"><span class="dot g3" aria-hidden="true"></span>Text Cleaning Profile</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/DocumentQualityFilter.html"><span class="dot g3" aria-hidden="true"></span>Document Quality Filter</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ContentDeduplicator.html"><span class="dot g3" aria-hidden="true"></span>Content Deduplicator</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/IngestionPipelineOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Ingestion Pipeline Orchestrator</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD use a robust HTML parser rather than regular expressions for malformed or nested markup in production.</li><li>MAY convert HTML to Markdown before stripping to preserve structure that improves embedding quality.</li><li>SHOULD detect document language and apply language-appropriate normalization that preserves script-specific characters.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Regex-based cleaning processes thousands of documents per second on commodity hardware (Ch6.3A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">HTML tag removal</span><span class="chip">Whitespace normalization</span><span class="chip">Control-character filtering</span><span class="chip">Language-specific cleaning pipelines</span><span class="chip">Markdown-preserving cleaning</span></dd><dt>Technologies</dt><dd><span class="chip">BeautifulSoup</span><span class="chip">lxml</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Degraded embedding quality from formatting artifacts</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

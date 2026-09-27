@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parallel Tool Dispatcher · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ToolIntegrationComponent">Tools &amp; Integration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Parallel Tool Dispatcher</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Tools &amp; Integration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:ParallelToolDispatcher</code></p>
+<div class="split"><section>
+<p class="lead">A component that runs independent tool calls concurrently and aggregates their results for the agent.</p>
+<p><strong>Responsibility.</strong> Executes independent tool calls concurrently and aggregates results.</p>
+<p class="muted">Also known as: Parallel tool execution, Parallel function calling executor, Concurrent tool execution</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ToolCallDispatcher.html"><span class="dot g1" aria-hidden="true"></span>Tool Call Dispatcher</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for independent data fetching from multiple sources where latency matters and tools share no mutable state and have no coordination requirements.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Parallel Tool Dispatcher"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>specializes</title></line><a href="ToolExecutor.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Tool Executor: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Tool Executor</text></a><a href="PlanExecutor.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Plan Executor: is invoked by</title></circle><text x="534.1" y="173.9" text-anchor="start">Plan Executor</text></a><a href="FunctionCallingController.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Function-Calling Controller: is invoked by</title></circle><text x="475.2" y="355.1" text-anchor="start">Function-Calling Control…</text></a><a href="SequentialToolDispatcher.html"><circle class="g1" cx="291.8" cy="341.4" r="7"><title>Sequential Tool Dispatcher: alternative to</title></circle><text x="284.8" y="355.1" text-anchor="end">Sequential Tool Dispatcher</text></a><a href="ToolCallDispatcher.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Tool Call Dispatcher: specializes</title></circle><text x="225.9" y="173.9" text-anchor="end">Tool Call Dispatcher</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ToolExecutor.html"><span class="dot g1" aria-hidden="true"></span>Tool Executor</a> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/FunctionCallingController.html"><span class="dot g1" aria-hidden="true"></span>Function-Calling Controller</a> <a class="src" href="../sources.html#Ch2.5">Ch2.5</a></li><li><a class="comp" href="../c/PlanExecutor.html"><span class="dot g2" aria-hidden="true"></span>Plan Executor</a> <a class="src" href="../sources.html#Ch1.2">Ch1.2</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/SequentialToolDispatcher.html"><span class="dot g1" aria-hidden="true"></span>Sequential Tool Dispatcher</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a> <a class="src" href="../sources.html#Ch3.4">Ch3.4</a> <span class="src more" title="Ch7.3">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used only for tool calls without mutual dependencies.</li><li>MUST only execute tools in parallel when they are truly independent with no shared state and no coordination requirements.</li><li>SHOULD define a partial-failure strategy (return partial results, retry the failed call, or fail the operation).</li><li>SHOULD account for multiplied rate-limit quota, bandwidth, and memory consumption of concurrent calls.</li><li>SHOULD execute only tools with no shared state or data dependency concurrently.</li><li>SHOULD be reserved for workflows where profiling shows &gt;30% latency savings, given async error-handling complexity and resource contention.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Three independent calls of 2s, 1.5s, and 3s drop from 6.5s sequential to ~3s parallel, a 54% latency reduction (Ch2.6 example).</li><li>Ten sources at 2-3s each: 20-30s sequential vs 2-3s parallel (Ch2.6).</li><li>Two independent tool calls finish in 1-2s in parallel vs 2-4s sequentially (Ch3.4).</li><li>Parallelizing two independent searches cut latency 43% (2,468ms to 1,402ms) (Ch7.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Parallel tool execution</span><span class="chip">Result aggregation</span><span class="chip">Parallel function calling</span><span class="chip">Fan-out/gather</span></dd><dt>Technologies</dt><dd><span class="chip">Python asyncio.gather</span><span class="chip">Thread pools</span><span class="chip">Python asyncio</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Sequential bottleneck</span><span class="chip">Excess latency from sequential independent calls</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.2">Ch1.2</a>: T. Nguyen, &quot;Core Agent Patterns,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.5">Ch2.5</a>: T. Nguyen, &quot;Semantic Kernel,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.6">Ch2.6</a>: T. Nguyen, &quot;Tool Integration and Function Calling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.4">Ch3.4</a>: T. Nguyen, &quot;Tuning Model Parameters for Production Performance,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.3">Ch7.3</a>: T. Nguyen, &quot;NeMo Agent Toolkit Profiling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

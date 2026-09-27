@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chunking Policy · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Data artifact</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Chunking Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ChunkingPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A configuration fixing target chunk size, overlap, minimum chunk size and boundary-seeking order for a document chunker.</p>
+<p><strong>Responsibility.</strong> Parameterizes how documents are segmented into retrievable chunks.</p>
+<p class="muted">Also known as: Chunking parameters, Chunking strategy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Chunking Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><a href="DocumentChunker.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Document Chunker: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Document Chunker</text></a><a href="OverlappingWindowChunker.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Overlapping Window Chunker: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Overlapping Window Chunker</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DocumentChunker.html"><span class="dot g3" aria-hidden="true"></span>Document Chunker</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li><li><a class="comp" href="../c/OverlappingWindowChunker.html"><span class="dot g3" aria-hidden="true"></span>Overlapping Window Chunker</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>512-token target, 50-token overlap, 100-token minimum chunk (Ch6.3A).</li><li>128-256-token chunks improved precision but hurt recall; 1024-2048-token chunks improved context completeness but reduced precision (Ch6.3A).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.07">Ref7.07</a>: E. Li, V. Bellotti, R. Kraus, and R. Kao, &quot;Build a retrieval-augmented generation (RAG) agent with NVIDIA Nemotron,&quot; NVIDIA Technical Blog, Sep. 23, 2025. [Online]. Available: https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

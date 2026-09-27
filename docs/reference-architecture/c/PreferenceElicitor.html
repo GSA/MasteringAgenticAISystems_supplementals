@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preference Elicitor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Preference Elicitor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:PreferenceElicitor</code></p>
+<div class="split"><section>
+<p class="lead">An abstract component that derives utility or reward function parameters representing a principal&#x27;s preferences from observed behaviour instead of explicit engineering.</p>
+<p><strong>Responsibility.</strong> Infers utility-function parameters from observed choices or demonstrations.</p>
+<p class="muted">Also known as: Utility function learner, Preference learning</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Preference Elicitor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><a href="UtilityFunctionSpecification.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Utility Function Specification: writes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Utility Function Specifi…</text></a><a href="InverseRewardLearner.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Inverse Reward Learner: is specialized by</title></circle><text x="520.3" y="305.0" text-anchor="start">Inverse Reward Learner</text></a><a href="RevealedPreferenceLearner.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Revealed Preference Learner: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Revealed Preference Lear…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/InverseRewardLearner.html"><span class="dot g4" aria-hidden="true"></span>Inverse Reward Learner</a></td><td>Choose when expert demonstrations (e.g., thousands of hours of human driving) are available and explicit preference specification is impractical.</td></tr><tr><td><a class="comp" href="../c/RevealedPreferenceLearner.html"><span class="dot g4" aria-hidden="true"></span>Revealed Preference Learner</a></td><td>Choose when users&#x27; selections among presented options and feedback are continuously observable, enabling personalization without explicit preference configuration.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/UtilityFunctionSpecification.html"><span class="dot g2" aria-hidden="true"></span>Utility Function Specification</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD resolve the ambiguity of multiple utility functions explaining the same behaviour through simplicity assumptions, priors over plausible utilities, or active queries.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Misalignment between engineered utility functions and actual preferences</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.10">Ch5.10</a>: T. Nguyen, &quot;Utility-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

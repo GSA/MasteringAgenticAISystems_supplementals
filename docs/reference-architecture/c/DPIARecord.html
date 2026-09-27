@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DPIA Record · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>DPIA Record</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:DPIARecord</code></p>
+<div class="split"><section>
+<p class="lead">A living Data Protection Impact Assessment recording identified risks with harm pathways, data-flow mapping, mitigations, stakeholder impact, necessity and proportionality justification, residual risk and an approval decision.</p>
+<p><strong>Responsibility.</strong> Documents and governs high-risk personal-data processing risks before and during deployment.</p>
+<p class="muted">Also known as: Data Protection Impact Assessment, Privacy impact assessment</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of DPIA Record"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is evaluated by</title></line><a href="DecisionEngine.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Decision Engine: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Decision Engine</text></a><a href="StagePromotionController.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Stage Promotion Controller: is read by</title></circle><text x="520.3" y="305.0" text-anchor="start">Stage Promotion Controller</text></a><a href="DataProtectionOfficer.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Data Protection Officer: is evaluated by</title></circle><text x="239.7" y="305.0" text-anchor="end">Data Protection Officer</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/StagePromotionController.html"><span class="dot g7" aria-hidden="true"></span>Stage Promotion Controller</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a> <a class="src" href="../sources.html#Ref9.03">Ref9.03</a></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DecisionEngine.html"><span class="dot g2" aria-hidden="true"></span>Decision Engine</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/DataProtectionOfficer.html"><span class="dot g7" aria-hidden="true"></span>Data Protection Officer</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a> <a class="src" href="../sources.html#Ref9.05">Ref9.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST be completed before large-scale processing, automated decisions with legal or significant effects, sensitive-category processing, novel technology or consequential AI/ML decisions.</li><li>MUST be revised when new data sources are added or model capabilities expand.</li><li>SHOULD be reviewed by others and conclude proceed, proceed with mitigation, or redesign (Ref9.05).</li><li>SHOULD test whether purposes could be achieved with less data, e.g., pseudonymized claim IDs instead of names.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Privacy by design</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unauthorized disclosure of sensitive data</span><span class="chip">Algorithmic bias producing disparate denial rates</span><span class="chip">Individuals unable to understand or challenge automated decisions</span><span class="chip">External attacks on valuable data</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">GDPR Art. 35</span><span class="chip">EU AI Act (high-risk requirements)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.7">Ch9.7</a>: T. Nguyen, &quot;GDPR and Data Protection Regulations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.03">Ref9.03</a>: &quot;Regulatory Compliance Frameworks for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/03-Regulatory-Compliance-Frameworks.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref9.05">Ref9.05</a>: &quot;Privacy and Data Protection for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/05-Privacy-Data-Protection.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

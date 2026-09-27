@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compliance Report Generator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Compliance Report Generator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ComplianceReportGenerator</code></p>
+<div class="split"><section>
+<p class="lead">A reporting component that periodically compiles compliance status per area, findings, metrics, trends and recommendations into a formatted report distributed to stakeholders.</p>
+<p><strong>Responsibility.</strong> Produces scheduled compliance reports from collected compliance evidence and metrics.</p>
+<p class="muted">Also known as: Automated Compliance Reporter</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Compliance Report Generator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>reads</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>reads</title></line><a href="AuditLogStore.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Audit Log Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Audit Log Store</text></a><a href="TimeSeriesMetricsStore.html"><circle class="g6" cx="522.7" cy="173.6" r="7"><title>Time-Series Metrics Store: reads</title></circle><text x="534.1" y="173.9" text-anchor="start">Time-Series Metrics Store</text></a><a href="ComplianceOfficer.html"><circle class="g7" cx="468.2" cy="341.4" r="7"><title>Compliance Officer: sends data to</title></circle><text x="475.2" y="355.1" text-anchor="start">Compliance Officer</text></a><a href="AIGovernanceBoard.html"><circle class="g7" cx="291.8" cy="341.4" r="7"><title>Oversight Governance Committee: sends data to</title></circle><text x="284.8" y="355.1" text-anchor="end">Oversight Governance Com…</text></a><a href="ComplianceEvidenceRepository.html"><circle class="g7" cx="237.3" cy="173.6" r="7"><title>Compliance Evidence Repository: reads</title></circle><text x="225.9" y="173.9" text-anchor="end">Compliance Evidence Repo…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ref9.09">Ref9.09</a></li><li><a class="comp" href="../c/ComplianceEvidenceRepository.html"><span class="dot g7" aria-hidden="true"></span>Compliance Evidence Repository</a> <a class="src" href="../sources.html#Ref9.09">Ref9.09</a></li><li><a class="comp" href="../c/TimeSeriesMetricsStore.html"><span class="dot g6" aria-hidden="true"></span>Time-Series Metrics Store</a> <a class="src" href="../sources.html#Ref9.09">Ref9.09</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AIGovernanceBoard.html"><span class="dot g7" aria-hidden="true"></span>Oversight Governance Committee</a> <a class="src" href="../sources.html#Ref9.10">Ref9.10</a></li><li><a class="comp" href="../c/ComplianceOfficer.html"><span class="dot g7" aria-hidden="true"></span>Compliance Officer</a> <a class="src" href="../sources.html#Ref9.09">Ref9.09</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD generate compliance reports on a regular schedule (e.g., monthly) covering safety, fairness, privacy, security and regulatory status.</li><li>SHOULD include executive summary, findings, metrics, trends and recommendations in each report.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Automated compliance reporting</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Incomplete compliance documentation</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">GDPR</span><span class="chip">EU AI Act</span><span class="chip">CCPA</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref9.09">Ref9.09</a>: &quot;Compliance Automation and Tools,&quot; unpublished reference note (09-Compliance-Automation-Tools.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref9.10">Ref9.10</a>: &quot;Chapter 9 Summary: Safety, Ethics, and Compliance,&quot; unpublished reference note (10-Chapter-9-Summary.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

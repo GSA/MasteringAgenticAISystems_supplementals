@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swarm Agent · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Swarm Agent</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:SwarmAgent</code></p>
+<div class="split"><section>
+<p class="lead">A simple agent that applies local behavioural rules to neighbour state and local signals, producing emergent group behaviour without global knowledge.</p>
+<p><strong>Responsibility.</strong> Acts on local rules using only neighbour observations.</p>
+<p class="muted">Also known as: Swarm member, Particle</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Swarm Agent"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is monitored by; is overridden by</title></line><a href="SwarmAnomalyDetector.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Swarm Anomaly Detector: is monitored by; is overridden by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Swarm Anomaly Detector</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is overridden by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/SwarmAnomalyDetector.html"><span class="dot g7" aria-hidden="true"></span>Swarm Anomaly Detector</a> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li></ul></section>
+<section class="rel"><h3>is monitored by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/SwarmAnomalyDetector.html"><span class="dot g7" aria-hidden="true"></span>Swarm Anomaly Detector</a> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be chosen when problems need distributed coordination, continuous adaptation, or search over very large solution spaces.</li><li>SHOULD NOT be used where precise timing, exact global optimisation or predictable behaviour is safety-critical.</li><li>MUST have rule parameters (e.g., inertia, cohesion weights, evaporation rates) tuned and tested at realistic scale.</li><li>SHOULD bound neighbour communication to avoid superlinear bandwidth growth.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Drone swarms redistributed coverage within 7 seconds after individual failures (Ch1.3).</li><li>Experimental swarms achieved 96% spatial coverage, cut collisions from 30 to zero in 10-second windows, and reached 80%+ goal convergence (Ch1.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Swarm intelligence</span><span class="chip">Separation-alignment-cohesion rules</span><span class="chip">Positive/negative feedback loops</span><span class="chip">Particle Swarm Optimization</span><span class="chip">Ant Colony Optimization</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Single point of failure</span><span class="chip">Central bottleneck</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.3">Ch1.3</a>: T. Nguyen, &quot;Multi-Agent Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

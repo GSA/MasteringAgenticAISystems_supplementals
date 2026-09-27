@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Moderation Policy · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Content Moderation Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ContentModerationPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A precise content guideline specifying what to block, why, and with which exceptions, illustrated with concrete edge-case examples, used by human reviewers and automated filters.</p>
+<p><strong>Responsibility.</strong> Defines consistent criteria for moderation decisions.</p>
+<p class="muted">Also known as: Content policy, Content guidelines, Safety policy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Content Moderation Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>configures</title></line><a href="OutputRail.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Output Rail: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Output Rail</text></a><a href="ContentModerator.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Content Moderator: configures</title></circle><text x="520.3" y="305.0" text-anchor="start">Content Moderator</text></a><a href="ModerationTriageRouter.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Moderation Triage Router: configures</title></circle><text x="239.7" y="305.0" text-anchor="end">Moderation Triage Router</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ContentModerator.html"><span class="dot g8" aria-hidden="true"></span>Content Moderator</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li><li><a class="comp" href="../c/ModerationTriageRouter.html"><span class="dot g8" aria-hidden="true"></span>Moderation Triage Router</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/OutputRail.html"><span class="dot g7" aria-hidden="true"></span>Output Rail</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ref9.04">Ref9.04</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST be precise (e.g., block ethnic slurs except in educational or news contexts with content warnings) rather than vague (&#x27;block offensive content&#x27;).</li><li>SHOULD be domain-specific; financial and healthcare deployments require fundamentally different policies and escalation workflows.</li><li>SHOULD define per-rule actions (decline, redirect, add disclaimer, log) as in rule-based safety policies.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.1">Ch9.1</a>: T. Nguyen, &quot;Output Filtering and Content Moderation,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.04">Ref9.04</a>: &quot;Safety Guardrails Implementation for Agent Systems,&quot; unpublished reference note (04-Safety-Guardrails-Implementation.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

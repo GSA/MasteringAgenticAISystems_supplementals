@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Approximate Vector Search Retriever · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Approximate Vector Search Retriever</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ApproximateVectorSearchRetriever</code></p>
+<div class="split"><section>
+<p class="lead">A vector retriever that uses approximate nearest-neighbour search (e.g., HNSW, IVF), trading exactness and determinism for sub-linear query time.</p>
+<p><strong>Responsibility.</strong> Retrieves approximately nearest vectors with sub-linear latency.</p>
+<p class="muted">Also known as: ANN search</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/VectorRetriever.html"><span class="dot g3" aria-hidden="true"></span>Vector Retriever</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when sub-linear, millisecond-latency search over millions of vectors matters more than exact, reproducible top-K results.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Approximate Vector Search Retriever"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is triggered by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is configured by</title></line><a href="VectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Store</text></a><a href="VectorRetriever.html"><circle class="g3" cx="509.9" cy="145.0" r="7"><title>Vector Retriever: specializes</title></circle><text x="520.3" y="143.0" text-anchor="start">Vector Retriever</text></a><a href="RetrievalQualityEvaluator.html"><circle class="g6" cx="509.9" cy="295.0" r="7"><title>Retrieval Quality Evaluator: is evaluated by</title></circle><text x="520.3" y="305.0" text-anchor="start">Retrieval Quality Evalua…</text></a><a href="RetrievalConfidenceFilter.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Retrieval Confidence Filter: is triggered by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Retrieval Confidence Fil…</text></a><a href="ExactVectorSearchRetriever.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>Exact Vector Search Retriever: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Exact Vector Search Retr…</text></a><a href="VectorSearchConfig.html"><circle class="g3" cx="250.1" cy="145.0" r="7"><title>Vector Search Configuration: is configured by</title></circle><text x="239.7" y="143.0" text-anchor="end">Vector Search Configurat…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/VectorSearchConfig.html"><span class="dot g3" aria-hidden="true"></span>Vector Search Configuration</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li></ul></section>
+<section class="rel"><h3>is triggered by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/RetrievalConfidenceFilter.html"><span class="dot g3" aria-hidden="true"></span>Retrieval Confidence Filter</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/RetrievalQualityEvaluator.html"><span class="dot g6" aria-hidden="true"></span>Retrieval Quality Evaluator</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ExactVectorSearchRetriever.html"><span class="dot g3" aria-hidden="true"></span>Exact Vector Search Retriever</a> <a class="src" href="../sources.html#Ch5.8">Ch5.8</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MAY use deterministic seeding to make approximate search repeatable at the cost of occasionally missing optimal results.</li><li>SHOULD be adopted at production scale, accepting quality-speed trade-offs, when exact scans take seconds.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>ANN returns results in 10-100 ms at 95-99% of exact-search accuracy; tunable down to ~90% for speed (Ch6.2A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">HNSW</span><span class="chip">IVF</span><span class="chip">Deterministic seeding for repeatable ANN</span><span class="chip">Annoy</span><span class="chip">DiskANN</span><span class="chip">Hierarchical greedy graph search (O(log N))</span><span class="chip">Adaptive ef: retry at higher ef when confidence is low</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.8">Ch5.8</a>: T. Nguyen, &quot;Semantic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.2A">Ch6.2A</a>: T. Nguyen, &quot;Vector Database Selection,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distributed Model Executor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Distributed Model Executor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:DistributedModelExecutor</code></p>
+<div class="split"><section>
+<p class="lead">An execution component that partitions a model&#x27;s training or inference computation across multiple GPUs according to a parallelism strategy and synchronizes partial results through collective communication.</p>
+<p><strong>Responsibility.</strong> Runs one model across many GPUs.</p>
+<p class="muted">Also known as: Multi-GPU parallelism strategy, Model parallel executor</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Distributed Model Executor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is specialized by</title></line><a href="GPUNode.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>GPU Node: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">GPU Node</text></a><a href="RLHFPolicyOptimizer.html"><circle class="g4" cx="497.3" cy="126.5" r="7"><title>RLHF Policy Optimizer: hosts</title></circle><text x="506.7" y="123.0" text-anchor="start">RLHF Policy Optimizer</text></a><a href="TensorParallelExecutor.html"><circle class="g5" cx="526.2" cy="253.4" r="7"><title>Tensor Parallel Executor: is specialized by</title></circle><text x="537.9" y="260.0" text-anchor="start">Tensor Parallel Executor</text></a><a href="DataParallelExecutor.html"><circle class="g5" cx="445.1" cy="355.1" r="7"><title>Data Parallel Executor: is specialized by</title></circle><text x="450.3" y="370.0" text-anchor="start">Data Parallel Executor</text></a><a href="PipelineParallelExecutor.html"><circle class="g5" cx="314.9" cy="355.1" r="7"><title>Pipeline Parallel Executor: is specialized by</title></circle><text x="309.7" y="370.0" text-anchor="end">Pipeline Parallel Executor</text></a><a href="CollectiveCommunicationLibrary.html"><circle class="g5" cx="233.8" cy="253.4" r="7"><title>Collective Communication Library: invokes</title></circle><text x="222.1" y="260.0" text-anchor="end">Collective Communication…</text></a><a href="FullyShardedDataParallelExecutor.html"><circle class="g5" cx="262.7" cy="126.5" r="7"><title>Fully Sharded Data Parallel Executor: is specialized by</title></circle><text x="253.3" y="123.0" text-anchor="end">Fully Sharded Data Paral…</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/DataParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Data Parallel Executor</a></td><td>Choose for models under ~13B that fit on one GPU; scales nearly linearly.</td></tr><tr><td><a class="comp" href="../c/FullyShardedDataParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Fully Sharded Data Parallel Executor</a></td><td>Choose for training models whose weights plus optimizer state exceed GPU memory (e.g., 70B with 280 GB state on 4x80GB).</td></tr><tr><td><a class="comp" href="../c/PipelineParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Pipeline Parallel Executor</a></td><td>Choose for cross-node scaling over slower interconnects where memory efficiency matters more than per-sample latency.</td></tr><tr><td><a class="comp" href="../c/TensorParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Tensor Parallel Executor</a></td><td>Choose for memory-constrained models (30-40B+) and latency-sensitive inference, confined to a single-node high-bandwidth GPU interconnect domain.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/RLHFPolicyOptimizer.html"><span class="dot g4" aria-hidden="true"></span>RLHF Policy Optimizer</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CollectiveCommunicationLibrary.html"><span class="dot g5" aria-hidden="true"></span>Collective Communication Library</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT assume N GPUs give Nx speedup; serial all-reduce consumes 5-15% of time even at 900 GB/s (Amdahl&#x27;s law).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>175B model with DP=32, TP=4, PP=1 achieves 120-way parallelism at 75-85% efficiency (Ch7.1A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">3D parallelism (DP across nodes, TP within nodes, PP for massive models)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

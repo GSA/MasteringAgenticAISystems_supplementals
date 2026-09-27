@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Deployment Profile · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Model Deployment Profile</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:ModelDeploymentProfile</code></p>
+<div class="split"><section>
+<p class="lead">A pre-validated, hardware-specific bundle of serving decisions for one model (precision format, multi-GPU layout, batch sizes) selected when an inference microservice is deployed.</p>
+<p><strong>Responsibility.</strong> Encapsulates the quantization, parallelism and batching choices that fit a given GPU target and latency-throughput objective.</p>
+<p class="muted">Also known as: NIM profile, Optimization profile, NIM_MODEL_PROFILE</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/InferenceServingConfig.html"><span class="dot g4" aria-hidden="true"></span>Inference Serving Configuration</a> <span class="tag">abstract</span></p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Model Deployment Profile"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is specialized by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="InferenceServingConfig.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Inference Serving Configuration: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Inference Serving Config…</text></a><a href="LatencyOptimizedDeploymentProfile.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Latency-Optimized Deployment Profile: is specialized by</title></circle><text x="475.2" y="355.1" text-anchor="start">Latency-Optimized Deploy…</text></a><a href="MemoryOptimizedDeploymentProfile.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Memory-Optimized Deployment Profile: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Memory-Optimized Deploym…</text></a><a href="ThroughputOptimizedDeploymentProfile.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Throughput-Optimized Deployment Profile: is specialized by</title></circle><text x="225.9" y="173.9" text-anchor="end">Throughput-Optimized Dep…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/LatencyOptimizedDeploymentProfile.html"><span class="dot g4" aria-hidden="true"></span>Latency-Optimized Deployment Profile</a></td><td>Choose for latency-critical interactive applications where time-to-first-token SLOs dominate.</td></tr><tr><td><a class="comp" href="../c/MemoryOptimizedDeploymentProfile.html"><span class="dot g4" aria-hidden="true"></span>Memory-Optimized Deployment Profile</a></td><td>Choose when available GPU memory is insufficient for full-precision weights plus activations, such as smaller GPUs or edge devices.</td></tr><tr><td><a class="comp" href="../c/ThroughputOptimizedDeploymentProfile.html"><span class="dot g4" aria-hidden="true"></span>Throughput-Optimized Deployment Profile</a></td><td>Choose when maximising queries per second matters more than minimum time-to-first-token and multiple GPUs are available.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ref7.04">Ref7.04</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST select a profile compatible with the target GPU type, GPU count and quantization support rather than relying on the default profile.</li><li>SHOULD treat profile selection as a latency-throughput-memory trade-off decision recorded per deployment.</li><li>SHOULD be selected automatically from the detected GPU configuration so no manual serving configuration is needed.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">NVIDIA NIM</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Deployment failure when default profile exceeds available GPU resources</span><span class="chip">Severely suboptimal performance when a conservative profile runs on powerful hardware</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.5">Ch4.5</a>: T. Nguyen, &quot;NVIDIA NIM and Triton Inference Server,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.04">Ref7.04</a>: NVIDIA, &quot;NVIDIA NIM,&quot; NVIDIA Docs. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/nim/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

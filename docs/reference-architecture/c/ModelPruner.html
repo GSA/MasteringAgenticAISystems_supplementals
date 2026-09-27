@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Pruner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Model Pruner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:ModelPruner</code></p>
+<div class="split"><section>
+<p class="lead">A model optimisation component that removes low-contribution weights, neurons or layers and briefly fine-tunes to recover accuracy until a target sparsity is reached.</p>
+<p><strong>Responsibility.</strong> Reduces model size and compute by eliminating redundant parameters.</p>
+<p class="muted">Also known as: Pruning stage</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Model Pruner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>optimizes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>optimizes</title></line><a href="FoundationLLM.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Foundation LLM: optimizes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Foundation LLM</text></a><a href="EdgeOptimizedModel.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Edge-Optimized Model: optimizes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Edge-Optimized Model</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>optimizes <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/EdgeOptimizedModel.html"><span class="dot g4" aria-hidden="true"></span>Edge-Optimized Model</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li><li><a class="comp" href="../c/FoundationLLM.html"><span class="dot g4" aria-hidden="true"></span>Foundation LLM</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref7.05">Ref7.05</a> <a class="src" href="../sources.html#Ref7.15">Ref7.15</a> <span class="src more" title="Ref7.18">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD prefer structured pruning when speedups are needed without specialised sparse kernels.</li><li>SHOULD prefer structured 2:4 sparsity where hardware acceleration is required; unstructured sparsity needs specialised kernels with limited hardware support (Ref7.05).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Typical target sparsity 50-90%; 70% pruned + INT8 model ~10x smaller at ~98% accuracy (Ch4.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Structured pruning</span><span class="chip">Unstructured pruning</span><span class="chip">Iterative magnitude pruning</span><span class="chip">2:4 structured sparsity</span><span class="chip">Unstructured sparsity</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Model exceeding edge memory budget</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.3">Ch4.3</a>: T. Nguyen, &quot;Container Orchestration and Edge Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.05">Ref7.05</a>: S. Verma and N. Vaidya, &quot;Mastering LLM Techniques: Inference Optimization,&quot; NVIDIA Technical Blog, Nov. 17, 2023. [Online]. Available: https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/</li><li><a href="../sources.html#Ref7.15">Ref7.15</a>: &quot;Advanced Agentic AI Optimization Techniques,&quot; unpublished reference note (15-Advanced-Agentic-Optimization.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref7.18">Ref7.18</a>: &quot;Chapter 7 Summary: NVIDIA Platform Implementation,&quot; unpublished reference note (18-Chapter-7-Summary.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

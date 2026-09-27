@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance Trend Analyzer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Performance Trend Analyzer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:PerformanceTrendAnalyzer</code></p>
+<div class="split"><section>
+<p class="lead">An analysis component that examines historical benchmark results over a window to classify accuracy, latency and cost trends and flag gradual drift that no single threshold violation reveals.</p>
+<p><strong>Responsibility.</strong> Detects gradual multi-week performance, cost and accuracy drift from benchmark history.</p>
+<p class="muted">Also known as: Benchmark trend analysis, Latency creep detector</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Performance Trend Analyzer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>triggers</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="AlertManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Alert Manager: triggers</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alert Manager</text></a><a href="TimeSeriesMetricsStore.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Time-Series Metrics Store: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Time-Series Metrics Store</text></a><a href="AgentDeveloper.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Agent Developer: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Agent Developer</text></a><a href="EvaluationResultStore.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Evaluation Result Store: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Evaluation Result Store</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationResultStore.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Result Store</a> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a></li><li><a class="comp" href="../c/TimeSeriesMetricsStore.html"><span class="dot g6" aria-hidden="true"></span>Time-Series Metrics Store</a> <a class="src" href="../sources.html#Ch8.2A">Ch8.2A</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AgentDeveloper.html"><span class="dot g6" aria-hidden="true"></span>Agent Developer</a> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a></li></ul></section>
+<section class="rel"><h3>triggers <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AlertManager.html"><span class="dot g6" aria-hidden="true"></span>Alert Manager</a> <a class="src" href="../sources.html#Ref8.06">Ref8.06</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD recommend re-profiling when latency trends upward and cache/token review when cost trends upward, even without threshold breaches.</li><li>SHOULD review info-level burn-rate trends weekly to catch degrading baselines (e.g., burn rate rising from 0.8 to 1.5).</li><li>SHOULD alert on gradual degradation trends in latency, memory, cache size and error rate (e.g., memory leaks, connection pool exhaustion).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>30-day history showed latency +14.9% (1,876 to 2,156ms) and cost +18.2% ($0.011 to $0.013) while accuracy stayed stable (Ch7.3).</li><li>Alert on &gt; 10% hourly increase; memory growth &gt; 10% of baseline flags a potential leak (Ref8.06, Ref8.07).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Trend analysis</span><span class="chip">Proactive re-profiling</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo Agent Toolkit Evaluator</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Gradual latency creep from accumulated technical debt</span><span class="chip">Rising cost per query from growing token usage</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.3">Ch7.3</a>: T. Nguyen, &quot;NeMo Agent Toolkit Profiling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.2A">Ch8.2A</a>: T. Nguyen, &quot;Error Rates and Reliability,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.06">Ref8.06</a>: &quot;Error Troubleshooting and Incident Response for Agent Systems,&quot; unpublished reference note (06-Error-Troubleshooting-Incident-Response.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref8.07">Ref8.07</a>: &quot;Agent Health Checks and Diagnostics,&quot; unpublished reference note (07-Agent-Health-Checks-Diagnostics.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthesis Prompt Template · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Data artifact</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Synthesis Prompt Template</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:SynthesisPromptTemplate</code></p>
+<div class="split"><section>
+<p class="lead">A prompt template instructing the LLM how to combine each context source for its strength when synthesizing an answer.</p>
+<p><strong>Responsibility.</strong> Directs how the LLM combines document content and graph relations in answers.</p>
+<p class="muted">Also known as: Answer Synthesis Prompt, Decomposed synthesis prompt</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Synthesis Prompt Template"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><a href="AnswerSynthesizer.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Answer Synthesizer: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Answer Synthesizer</text></a><a href="MultiHopAnswerSynthesizer.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Multi-Hop Answer Synthesizer: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Multi-Hop Answer Synthes…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AnswerSynthesizer.html"><span class="dot g3" aria-hidden="true"></span>Answer Synthesizer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.7B">Ch1.7B</a></li><li><a class="comp" href="../c/MultiHopAnswerSynthesizer.html"><span class="dot g3" aria-hidden="true"></span>Multi-Hop Answer Synthesizer</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD instruct the LLM to use documents for rules and definitions and the graph for entity connections.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.7B">Ch1.7B</a>: T. Nguyen, &quot;Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.7B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.6">Ch6.6</a>: T. Nguyen, &quot;Query Decomposition and Adaptive Retrieval,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Surrogate Explainer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Local Surrogate Explainer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:LocalSurrogateExplainer</code></p>
+<div class="split"><section>
+<p class="lead">A decision explainer that perturbs a single input and fits a local approximation of the model to estimate each feature&#x27;s contribution to that prediction.</p>
+<p><strong>Responsibility.</strong> Produces per-prediction feature contributions for black-box models.</p>
+<p class="muted">Also known as: LIME, SHAP, Local explanation</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DecisionExplainer.html"><span class="dot g2" aria-hidden="true"></span>Decision Explainer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when the decision model is opaque and a model-agnostic local approximation of top feature contributions is needed.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Local Surrogate Explainer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is target of alternativeTo</title></line><a href="InferenceServer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Server: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Server</text></a><a href="CounterfactualExplainer.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Counterfactual Explainer: is target of alternativeTo</title></circle><text x="534.1" y="173.9" text-anchor="start">Counterfactual Explainer</text></a><a href="DecisionFactorExplainer.html"><circle class="g7" cx="468.2" cy="341.4" r="7"><title>Decision Factor Explainer: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">Decision Factor Explainer</text></a><a href="DecisionExplainer.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Decision Explainer: specializes</title></circle><text x="284.8" y="355.1" text-anchor="end">Decision Explainer</text></a><a href="ExampleBasedExplainer.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Example-Based Explainer: is target of alternativeTo</title></circle><text x="225.9" y="173.9" text-anchor="end">Example-Based Explainer</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/CounterfactualExplainer.html"><span class="dot g2" aria-hidden="true"></span>Counterfactual Explainer</a> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li><li><a class="comp" href="../c/DecisionFactorExplainer.html"><span class="dot g7" aria-hidden="true"></span>Decision Factor Explainer</a> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li><li><a class="comp" href="../c/ExampleBasedExplainer.html"><span class="dot g2" aria-hidden="true"></span>Example-Based Explainer</a> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Local model-agnostic explanation</span></dd><dt>Technologies</dt><dd><span class="chip">LIME</span><span class="chip">SHAP</span></dd><dt>Quality attributes</dt><dd><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref10.02">Ref10.02</a>: &quot;Explainability and Interpretability in Agent Systems,&quot; unpublished reference note (02-Explainability-Interpretability.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

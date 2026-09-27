@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan Repairer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Plan Repairer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:PlanRepairer</code></p>
+<div class="split"><section>
+<p class="lead">A replanner that identifies the invalidated segment of the current plan and searches only for a patch reconnecting to its still-valid later segments.</p>
+<p><strong>Responsibility.</strong> Minimally modifies the invalidated segment of an existing plan while preserving valid segments.</p>
+<p class="muted">Also known as: Plan repair, Local plan patcher</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/Replanner.html"><span class="dot g2" aria-hidden="true"></span>Replanner</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when discrepancies are localized, adaptation must be fast, and plan stability matters (multi-robot committed trajectories, user-communicated ETAs); good-enough solutions suffice.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Plan Repairer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>fails over to; is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is routed to by</title></line><a href="CompleteReplanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Complete Replanner: fails over to; is target of alternativeTo</title></circle><text x="380.0" y="50.0" text-anchor="middle">Complete Replanner</text></a><a href="Replanner.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Replanner: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Replanner</text></a><a href="IncrementalSearchReplanner.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Incremental Search Replanner: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">Incremental Search Repla…</text></a><a href="GraphSearchPlanner.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Graph Search Planner: invokes</title></circle><text x="284.8" y="355.1" text-anchor="end">Graph Search Planner</text></a><a href="ReplanningStrategyRouter.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Replanning Strategy Router: is routed to by</title></circle><text x="225.9" y="173.9" text-anchor="end">Replanning Strategy Router</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GraphSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Graph Search Planner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReplanningStrategyRouter.html"><span class="dot g1" aria-hidden="true"></span>Replanning Strategy Router</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>fails over to <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/CompleteReplanner.html"><span class="dot g2" aria-hidden="true"></span>Complete Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/CompleteReplanner.html"><span class="dot g2" aria-hidden="true"></span>Complete Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/IncrementalSearchReplanner.html"><span class="dot g2" aria-hidden="true"></span>Incremental Search Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used when failures are localized, response time is tight, or other agents and users rely on plan continuity.</li><li>MUST fall back to complete replanning when no feasible reconnection to the original plan exists.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Repaired delivery route preserved 40-50% of planned actions and the original arrival direction (Ch5.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Plan repair</span><span class="chip">Segment reconnection</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Disruption to downstream agents relying on committed plans</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

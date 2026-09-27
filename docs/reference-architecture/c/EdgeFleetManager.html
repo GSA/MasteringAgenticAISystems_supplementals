@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edge Fleet Manager · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Edge Fleet Manager</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:EdgeFleetManager</code></p>
+<div class="split"><section>
+<p class="lead">A cloud-hosted management plane that holds the desired application, model and configuration state of every edge AI site and continuously reconciles sites toward it over secure tunnels.</p>
+<p><strong>Responsibility.</strong> Centrally enforces consistent desired state across a fleet of edge locations.</p>
+<p class="muted">Also known as: Fleet Command cloud management plane, Hybrid-cloud edge orchestrator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Edge Fleet Manager"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to; receives telemetry from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>has access controlled by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>has access controlled by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is configured by</title></line><a href="EdgeDeviceAgent.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Edge Device Agent: sends data to; receives telemetry from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Edge Device Agent</text></a><a href="EdgeUpdateOrchestrator.html"><circle class="g5" cx="509.9" cy="145.0" r="7"><title>Edge Update Orchestrator: invokes</title></circle><text x="520.3" y="143.0" text-anchor="start">Edge Update Orchestrator</text></a><a href="GPUPartitionLayout.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>GPU Partition Layout: reads</title></circle><text x="520.3" y="305.0" text-anchor="start">GPU Partition Layout</text></a><a href="CertificateAuthority.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Certificate Authority: has access controlled by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Certificate Authority</text></a><a href="EdgeProvisioningService.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Edge Provisioning Service: has access controlled by</title></circle><text x="239.7" y="305.0" text-anchor="end">Edge Provisioning Service</text></a><a href="EdgeApplicationDefinition.html"><circle class="g5" cx="250.1" cy="145.0" r="7"><title>Edge Application Definition: is configured by</title></circle><text x="239.7" y="143.0" text-anchor="end">Edge Application Definit…</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EdgeApplicationDefinition.html"><span class="dot g5" aria-hidden="true"></span>Edge Application Definition</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EdgeUpdateOrchestrator.html"><span class="dot g5" aria-hidden="true"></span>Edge Update Orchestrator</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GPUPartitionLayout.html"><span class="dot g5" aria-hidden="true"></span>GPU Partition Layout</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li></ul></section>
+<section class="rel"><h3>receives telemetry from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/EdgeDeviceAgent.html"><span class="dot g5" aria-hidden="true"></span>Edge Device Agent</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/EdgeDeviceAgent.html"><span class="dot g5" aria-hidden="true"></span>Edge Device Agent</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li></ul></section>
+<section class="rel"><h3>has access controlled by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/CertificateAuthority.html"><span class="dot g7" aria-hidden="true"></span>Certificate Authority</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li><li><a class="comp" href="../c/EdgeProvisioningService.html"><span class="dot g5" aria-hidden="true"></span>Edge Provisioning Service</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD manage edge sites as declaratively configured resources grouped by location group, allowing controlled per-site exceptions.</li><li>SHOULD adopt centralized edge fleet management for 50+ geographically distributed sites without local technical staff; avoid for &lt;10 locations, cloud-only workloads or rarely updated static models.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Configuration drift incidents fell from 15-20% of locations within 6 months to &lt;1% (Ch4.6 retail example).</li><li>Outage response 5-15 minutes remotely vs 4-24 hours via technician dispatch (Ch4.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Declarative desired-state reconciliation</span><span class="chip">Centralized control with edge autonomy</span><span class="chip">Hierarchical location groups</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Fleet Command</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Configuration drift across edge locations</span><span class="chip">Version inconsistencies</span><span class="chip">Physical site visits for remediation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.6">Ch4.6</a>: T. Nguyen, &quot;TensorRT-LLM and NVIDIA Fleet Command,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

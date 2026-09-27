@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trajectory Scorer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Trajectory Scorer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:TrajectoryScorer</code></p>
+<div class="split"><section>
+<p class="lead">A response scorer that evaluates how an agent reached its result, assessing reasoning-chain soundness, tool-selection sequence, strategy adaptation and decision transparency from execution traces.</p>
+<p><strong>Responsibility.</strong> Scores the quality of an agent&#x27;s reasoning and action process rather than only its outcome.</p>
+<p class="muted">Also known as: Process evaluator, Trajectory evaluation, Trajectory Evaluator</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ResponseScorer.html"><span class="dot g6" aria-hidden="true"></span>Response Scorer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when deployment requires auditability, interpretability or trust calibration, not just correct outcomes.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Trajectory Scorer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>reads</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>evaluates</title></line><a href="EvaluationHarness.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Harness: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Harness</text></a><a href="TraceStore.html"><circle class="g6" cx="522.7" cy="173.6" r="7"><title>Trace Store: reads</title></circle><text x="534.1" y="173.9" text-anchor="start">Trace Store</text></a><a href="LLMJudge.html"><circle class="g6" cx="468.2" cy="341.4" r="7"><title>LLM Judge: invokes</title></circle><text x="475.2" y="355.1" text-anchor="start">LLM Judge</text></a><a href="ResponseScorer.html"><circle class="g6" cx="291.8" cy="341.4" r="7"><title>Response Scorer: specializes</title></circle><text x="284.8" y="355.1" text-anchor="end">Response Scorer</text></a><a href="ToolSelector.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Tool Selector: evaluates</title></circle><text x="225.9" y="173.9" text-anchor="end">Tool Selector</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LLMJudge.html"><span class="dot g6" aria-hidden="true"></span>LLM Judge</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref3.01">Ref3.01</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ref3.01">Ref3.01</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TraceStore.html"><span class="dot g6" aria-hidden="true"></span>Trace Store</a> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a> <a class="src" href="../sources.html#Ref3.01">Ref3.01</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ToolSelector.html"><span class="dot g1" aria-hidden="true"></span>Tool Selector</a> <a class="src" href="../sources.html#Ref3.01">Ref3.01</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used to assess agent decision-making, including tool selection.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Process evaluation in addition to outcome evaluation</span><span class="chip">LLM-as-a-judge over intermediate steps</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Agent Intelligence Toolkit</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Poor tool selection hidden behind acceptable final answers</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.2">Ch3.2</a>: T. Nguyen, &quot;Compare Agent Performance Across Tasks and Datasets,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref3.01">Ref3.01</a>: NVIDIA, &quot;Agent Evaluation in NVIDIA NeMo Agent Toolkit,&quot; NVIDIA NeMo Agent Toolkit Documentation, v1.8. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/nemo/agent-toolkit/latest/improve-workflows/evaluate.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

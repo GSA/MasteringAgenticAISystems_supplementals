@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concurrent Inference Request Dispatcher · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Concurrent Inference Request Dispatcher</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:ConcurrentInferenceRequestDispatcher</code></p>
+<div class="split"><section>
+<p class="lead">A client-side dispatcher that submits many independent inference requests concurrently or pipelined over pooled, multiplexed connections so the inference server can batch them into shared forward passes.</p>
+<p><strong>Responsibility.</strong> Overlaps independent inference requests to maximize end-to-end request throughput.</p>
+<p class="muted">Also known as: Async batch request client, High-throughput request pattern, Request pipeliner</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Concurrent Inference Request Dispatcher"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><a href="OpenAICompatibleInferenceAPI.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>OpenAI-Compatible Inference API: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">OpenAI-Compatible Infere…</text></a><a href="ConnectionPool.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Connection Pool: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Connection Pool</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConnectionPool.html"><span class="dot g5" aria-hidden="true"></span>Connection Pool</a> <a class="src" href="../sources.html#Ch7.2">Ch7.2</a></li><li><a class="comp" href="../c/OpenAICompatibleInferenceAPI.html"><span class="dot g4" aria-hidden="true"></span>OpenAI-Compatible Inference API</a> <a class="src" href="../sources.html#Ch7.2">Ch7.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD submit independent batch-workload requests concurrently so the server can batch them in one forward pass.</li><li>SHOULD bound concurrency to the GPU/model-specific optimum, because exceeding it exhausts GPU memory and crashes inference with OOM errors.</li><li>SHOULD NOT be used for interactive workloads, since batching adds queueing latency and reduces fairness.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>32 sequential requests at 100ms take 3,200ms; concurrent batched processing takes ~300-400ms, an 8-10x throughput improvement (Ch7.2).</li><li>Optimal concurrency: 7B on A100 40GB 16-32; 7B on RTX 4090 24GB 8-16; 70B on A100 80GB 4-8 requests (Ch7.2).</li><li>Pipelining 10 requests raises throughput from 9.5 to 95 requests/s with 5ms serialization and 100ms server time (Ch7.2).</li><li>Throughput optimization adds 50-200ms queueing time per request (Ch7.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Concurrent async fan-out (gather)</span><span class="chip">Request pipelining</span><span class="chip">HTTP/2 multiplexing</span></dd><dt>Technologies</dt><dd><span class="chip">Python asyncio</span><span class="chip">AsyncOpenAI client</span><span class="chip">NVIDIA NIM</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Cost efficiency</span></dd><dt>Risks mitigated</dt><dd><span class="chip">GPU underutilization from sequential request submission</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.2">Ch7.2</a>: T. Nguyen, &quot;Performance Optimization and Production Monitoring,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

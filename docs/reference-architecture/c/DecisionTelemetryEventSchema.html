@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Telemetry Event Schema · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Decision Telemetry Event Schema</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:DecisionTelemetryEventSchema</code></p>
+<div class="split"><section>
+<p class="lead">A structured data contract for the per-request telemetry event an agent emits at decision points, carrying request ID, timestamp, decision type, confidence score, latency measurements, tools invoked and outcome.</p>
+<p><strong>Responsibility.</strong> Defines the fields every agent decision event must carry for aggregation and anomaly detection.</p>
+<p class="muted">Also known as: Structured telemetry event</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Decision Telemetry Event Schema"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><a href="MetricsCollector.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Metrics Collector: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Metrics Collector</text></a><a href="TraceCollector.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Trace Collector: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Trace Collector</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/MetricsCollector.html"><span class="dot g6" aria-hidden="true"></span>Metrics Collector</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD balance agent-specific, interaction and system-level telemetry: too little leaves blind spots, too much overwhelms storage and obscures signals.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Compatibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Telemetry blind spots</span><span class="chip">Excessive telemetry noise</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

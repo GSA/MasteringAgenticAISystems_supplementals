@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verifier Ensemble Aggregator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Verifier Ensemble Aggregator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:VerifierEnsembleAggregator</code></p>
+<div class="split"><section>
+<p class="lead">A cognition component that combines judgments from diverse reasoning verifiers by voting, weighted voting or a meta-model, treating disagreement as an uncertainty signal.</p>
+<p><strong>Responsibility.</strong> Aggregates diverse verifier judgments into one verdict with uncertainty.</p>
+<p class="muted">Also known as: Multi-model verification ensemble</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Verifier Ensemble Aggregator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>escalates to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><a href="HumanSpecialist.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Human Specialist: escalates to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Human Specialist</text></a><a href="ReasoningVerifier.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Reasoning Verifier: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Reasoning Verifier</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ReasoningVerifier.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Verifier</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li></ul></section>
+<section class="rel"><h3>escalates to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/HumanSpecialist.html"><span class="dot g8" aria-hidden="true"></span>Human Specialist</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD combine verifiers with diverse training data, architectures or strategies; homogeneous ensembles add little.</li><li>SHOULD escalate to more sophisticated verification or human review when verifiers disagree.</li><li>MAY require unanimous agreement for approval but majority for rejection in high-stakes domains.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Majority voting</span><span class="chip">Accuracy-weighted voting</span><span class="chip">Meta-model aggregation</span><span class="chip">Asymmetric verification thresholds</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Single-verifier systematic bias</span><span class="chip">Verifier overconfidence</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.6">Ch3.6</a>: T. Nguyen, &quot;Trace Analysis and Execution Debugging,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session Summary Store · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Session Summary Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:SessionSummaryStore</code></p>
+<div class="split"><section>
+<p class="lead">A mid-term memory store of extractive semantic summaries of earlier conversation segments, trading verbatim accuracy for capacity.</p>
+<p><strong>Responsibility.</strong> Holds compressed summaries of earlier discussion for retrieval when users reference past points.</p>
+<p class="muted">Also known as: Mid-term memory, Conversation summaries</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Session Summary Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is written by</title></line><a href="MemoryRetriever.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Memory Retriever: is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Memory Retriever</text></a><a href="HierarchicalHistoryCompressor.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Hierarchical History Compressor: is written by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Hierarchical History Com…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MemoryRetriever.html"><span class="dot g2" aria-hidden="true"></span>Memory Retriever</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/HierarchicalHistoryCompressor.html"><span class="dot g2" aria-hidden="true"></span>Hierarchical History Compressor</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD store key facts (e.g., issue reported, action taken, resolution) rather than every message of a long support thread.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Erica keeps semantic summaries for the current session extending 30-40 turns back (Ch10.1).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Hierarchical memory architecture</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Token budget exhaustion in long conversations</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

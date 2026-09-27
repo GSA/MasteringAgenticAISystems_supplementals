@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blue-Green Deployment Switcher · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Blue-Green Deployment Switcher</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:BlueGreenDeploymentSwitcher</code></p>
+<div class="split"><section>
+<p class="lead">A rollout controller that runs the stable and new versions as parallel full environments and switches all traffic between them at once, keeping the old environment ready for instant failback.</p>
+<p><strong>Responsibility.</strong> Performs instantaneous whole-traffic cutover and failback between versions.</p>
+<p class="muted">Also known as: Blue-green deployment, Blue-Green Deployment Controller</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ModelRolloutManager.html"><span class="dot g5" aria-hidden="true"></span>Rollout Manager</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when validation completes before cutover and instant switch-over with instant failback to a fully running previous version is required.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Blue-Green Deployment Switcher"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>alternative to</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: routes to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ModelRolloutManager.html"><circle class="g5" cx="509.9" cy="145.0" r="7"><title>Rollout Manager: specializes</title></circle><text x="520.3" y="143.0" text-anchor="start">Rollout Manager</text></a><a href="RAGQueryOrchestrator.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>RAG Query Orchestrator: routes to</title></circle><text x="520.3" y="305.0" text-anchor="start">RAG Query Orchestrator</text></a><a href="L7LoadBalancer.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Layer-7 Load Balancer: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Layer-7 Load Balancer</text></a><a href="CanaryRolloutController.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Canary Rollout Controller: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Canary Rollout Controller</text></a><a href="RollingUpdateController.html"><circle class="g5" cx="250.1" cy="145.0" r="7"><title>Rolling Update Controller: alternative to</title></circle><text x="239.7" y="143.0" text-anchor="end">Rolling Update Controller</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/L7LoadBalancer.html"><span class="dot g5" aria-hidden="true"></span>Layer-7 Load Balancer</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+<section class="rel"><h3>routes to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a></li><li><a class="comp" href="../c/RAGQueryOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>RAG Query Orchestrator</a> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/CanaryRolloutController.html"><span class="dot g5" aria-hidden="true"></span>Canary Rollout Controller</a> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <span class="src more" title="Ch4.4, Ch6.5">+2</span></li><li><a class="comp" href="../c/RollingUpdateController.html"><span class="dot g5" aria-hidden="true"></span>Rolling Update Controller</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a> <span class="src more" title="Ch6.5">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MAY be chosen for critical systems needing instant rollback, accepting doubled infrastructure and vector database synchronization challenges.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Blue-green deployment</span></dd><dt>Technologies</dt><dd><span class="chip">Argo Rollouts</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Prolonged outage during rollback</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.1">Ch4.1</a>: T. Nguyen, &quot;Introduction to AI Agent Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

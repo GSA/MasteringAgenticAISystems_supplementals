@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Metadata Descriptor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Model Metadata Descriptor</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:ModelMetadataDescriptor</code></p>
+<div class="split"><section>
+<p class="lead">A machine-readable description of a model&#x27;s architecture, context length, tokenizer settings and build environment that serving runtimes use to configure backend engines.</p>
+<p><strong>Responsibility.</strong> Informs the serving runtime how to initialise engines for a specific model.</p>
+<p class="muted">Also known as: Hugging Face config.json, Model metadata</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Model Metadata Descriptor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is written by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="EngineBuilder.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Engine Builder: is written by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Engine Builder</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EngineBuilder.html"><span class="dot g4" aria-hidden="true"></span>Engine Builder</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST provide complete and accurate architecture, context length and tokenizer metadata for every served model.</li><li>SHOULD record the CUDA and engine library versions used to build compiled engines as part of model metadata.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Engine initialisation failure from missing or malformed model metadata</span><span class="chip">Engine version mismatch across environments</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.5">Ch4.5</a>: T. Nguyen, &quot;NVIDIA NIM and Triton Inference Server,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

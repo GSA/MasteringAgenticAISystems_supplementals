@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation Review Console · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Moderation Review Console</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ModerationReviewConsole</code></p>
+<div class="split"><section>
+<p class="lead">A review interface presenting a queued content item with the original query, proposed response, multi-classifier scores and highlighted concerning passages, and capturing the moderator&#x27;s decision and justification.</p>
+<p><strong>Responsibility.</strong> Presents queued content for moderator decision and records the outcome.</p>
+<p class="muted">Also known as: Borderline case moderator interface</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Moderation Review Console"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>writes</title></line><a href="ContentModerator.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Content Moderator: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Content Moderator</text></a><a href="ModerationReviewQueue.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Moderation Review Queue: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Moderation Review Queue</text></a><a href="PrecedentCaseRetriever.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Precedent Case Retriever: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Precedent Case Retriever</text></a><a href="ModerationLabelDataset.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>Moderation Label Dataset: writes</title></circle><text x="218.0" y="224.0" text-anchor="end">Moderation Label Dataset</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/PrecedentCaseRetriever.html"><span class="dot g3" aria-hidden="true"></span>Precedent Case Retriever</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContentModerator.html"><span class="dot g8" aria-hidden="true"></span>Content Moderator</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModerationReviewQueue.html"><span class="dot g8" aria-hidden="true"></span>Moderation Review Queue</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModerationLabelDataset.html"><span class="dot g4" aria-hidden="true"></span>Moderation Label Dataset</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD highlight concerning passages so moderators need not read entire harmful messages.</li><li>MUST record each decision with its justification so it can feed filter updates.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Detected vs not-detected policy indicators</span><span class="chip">Alternative interpretations with confidences</span><span class="chip">Precedent case display</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.1">Ch9.1</a>: T. Nguyen, &quot;Output Filtering and Content Moderation,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

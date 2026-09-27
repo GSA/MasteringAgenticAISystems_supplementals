@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vision-Language Model · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Model asset</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Vision-Language Model</h1>
+<p class="badges"><span class="badge">Model asset</span><span class="badge">Model Serving</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:VisionLanguageModel</code></p>
+<div class="split"><section>
+<p class="lead">A generative multimodal model combining a vision encoder with a language model via cross-attention, producing captions and answers about images, including reading visible text.</p>
+<p><strong>Responsibility.</strong> Generates natural-language descriptions and answers grounded in image content.</p>
+<p class="muted">Also known as: Multimodal LLM, VLM, Neva</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Vision-Language Model"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is optimized by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is optimized by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is specialized by</title></line><a href="InferenceServer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Server: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Server</text></a><a href="EngineBuilder.html"><circle class="g4" cx="509.9" cy="145.0" r="7"><title>Engine Builder: is optimized by</title></circle><text x="520.3" y="143.0" text-anchor="start">Engine Builder</text></a><a href="ModelQuantizer.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Model Quantizer: is optimized by</title></circle><text x="520.3" y="305.0" text-anchor="start">Model Quantizer</text></a><a href="BalancedVisionLanguageModel.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Balanced Vision-Language Model: is specialized by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Balanced Vision-Language…</text></a><a href="EdgeVisionLanguageModel.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Edge Vision-Language Model: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Edge Vision-Language Model</text></a><a href="HighAccuracyVisionLanguageModel.html"><circle class="g4" cx="250.1" cy="145.0" r="7"><title>High-Accuracy Vision-Language Model: is specialized by</title></circle><text x="239.7" y="143.0" text-anchor="end">High-Accuracy Vision-Lan…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/BalancedVisionLanguageModel.html"><span class="dot g4" aria-hidden="true"></span>Balanced Vision-Language Model</a></td><td>Choose for cloud deployment needing a balance of accuracy and compute.</td></tr><tr><td><a class="comp" href="../c/EdgeVisionLanguageModel.html"><span class="dot g4" aria-hidden="true"></span>Edge Vision-Language Model</a></td><td>Choose for edge deployment on embedded GPU devices where memory and power are constrained.</td></tr><tr><td><a class="comp" href="../c/HighAccuracyVisionLanguageModel.html"><span class="dot g4" aria-hidden="true"></span>High-Accuracy Vision-Language Model</a></td><td>Choose for demanding applications requiring the highest visual reasoning accuracy.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a> <span class="src more" title="Ch10.1, Ref2.07">+2</span></li></ul></section>
+<section class="rel"><h3>is optimized by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/EngineBuilder.html"><span class="dot g4" aria-hidden="true"></span>Engine Builder</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li><li><a class="comp" href="../c/ModelQuantizer.html"><span class="dot g4" aria-hidden="true"></span>Model Quantizer</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>NeVA: 22B-parameter LLM with ViT encoder; 300-500 ms per image on A100 (800 ms without TensorRT) (Ch2.7).</li><li>Batching 100 images in parallel gives 3x images/second versus sequential (Ch2.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Cross-attention vision-language fusion</span><span class="chip">Vision encoder -&gt; projection layer -&gt; LLM decoder</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeVA 22B</span><span class="chip">GPT-4V</span><span class="chip">NVIDIA Neva</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref2.07">Ref2.07</a>: NVIDIA Developer, &quot;Building multimodal AI RAG with LlamaIndex, NVIDIA NIM, and Milvus | LLM app development,&quot; YouTube. Accessed: Sep. 26, 2026. [Online Video]. Available: https://www.youtube.com/watch?v=NaT5Eo97_I0</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

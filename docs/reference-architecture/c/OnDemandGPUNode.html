@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On-Demand GPU Node · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Infrastructure resource</p>
+<h1><span class="dot g5" aria-hidden="true"></span>On-Demand GPU Node</h1>
+<p class="badges"><span class="badge">Infrastructure resource</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:OnDemandGPUNode</code></p>
+<div class="split"><section>
+<p class="lead">A compute instance with guaranteed availability billed at on-demand rates.</p>
+<p><strong>Responsibility.</strong> Provides guaranteed-availability compute for critical workloads.</p>
+<p class="muted">Also known as: On-demand instance</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for critical real-time production workloads requiring guaranteed availability.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of On-Demand GPU Node"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is scaled by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: hosts</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="GPUNode.html"><circle class="g5" cx="522.7" cy="173.6" r="7"><title>GPU Node: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">GPU Node</text></a><a href="SpotGPUNode.html"><circle class="g5" cx="468.2" cy="341.4" r="7"><title>Spot GPU Node: alternative to</title></circle><text x="475.2" y="355.1" text-anchor="start">Spot GPU Node</text></a><a href="ReservedGPUNode.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>Reserved GPU Node: alternative to</title></circle><text x="284.8" y="355.1" text-anchor="end">Reserved GPU Node</text></a><a href="SpotInterruptionHandler.html"><circle class="g5" cx="237.3" cy="173.6" r="7"><title>Spot Interruption Handler: is scaled by</title></circle><text x="225.9" y="173.9" text-anchor="end">Spot Interruption Handler</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>is scaled by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/SpotInterruptionHandler.html"><span class="dot g5" aria-hidden="true"></span>Spot Interruption Handler</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ReservedGPUNode.html"><span class="dot g5" aria-hidden="true"></span>Reserved GPU Node</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li><li><a class="comp" href="../c/SpotGPUNode.html"><span class="dot g5" aria-hidden="true"></span>Spot GPU Node</a> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a> <span class="src more" title="Ref8.05">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD host real-time, user-facing production workloads with strict uptime requirements.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Tiered example: 100 req/s capacity on on-demand as spot-replacement buffer (no discount) (Ch4.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Capacity interruption</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.8">Ch1.8</a>: T. Nguyen, &quot;Scalability and Production Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.7">Ch4.7</a>: T. Nguyen, &quot;Scaling Strategies,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

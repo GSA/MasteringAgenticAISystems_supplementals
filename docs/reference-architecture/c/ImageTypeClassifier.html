@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Type Classifier · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Image Type Classifier</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:ImageTypeClassifier</code></p>
+<div class="split"><section>
+<p class="lead">An abstract preprocessing classifier that assigns each image a content class, such as chart/plot versus general image, to drive processing-path selection.</p>
+<p><strong>Responsibility.</strong> Classifies images by content type so they can be routed to the appropriate vision model.</p>
+<p class="muted">Also known as: Content complexity assessor, Chart detector</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Image Type Classifier"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><a href="MultimodalContentRouter.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Multimodal Content Router: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Multimodal Content Router</text></a><a href="VLMImageTypeClassifier.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>VLM-based Image Type Classifier: is specialized by</title></circle><text x="520.3" y="305.0" text-anchor="start">VLM-based Image Type Cla…</text></a><a href="HeuristicImageTypeClassifier.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>Heuristic Image Type Classifier: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Heuristic Image Type Cla…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/HeuristicImageTypeClassifier.html"><span class="dot g3" aria-hidden="true"></span>Heuristic Image Type Classifier</a></td><td>Choose when a simple rule suffices to spot charts, e.g., images containing axis labels, legends or grid patterns, as in the financial-report worked example.</td></tr><tr><td><a class="comp" href="../c/VLMImageTypeClassifier.html"><span class="dot g3" aria-hidden="true"></span>VLM-based Image Type Classifier</a></td><td>Choose when routing at scale and a vision-language model is already deployed, reusing it for meta-classification instead of adding a separate classification model.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MultimodalContentRouter.html"><span class="dot g3" aria-hidden="true"></span>Multimodal Content Router</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST be sufficiently accurate, because misclassifying a chart as a diagram routes it to the wrong pipeline and can lose critical data.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Misrouting charts to the wrong preprocessing pipeline</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

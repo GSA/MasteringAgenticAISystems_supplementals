@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trajectory Harvester · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Trajectory Harvester</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:TrajectoryHarvester</code></p>
+<div class="split"><section>
+<p class="lead">A data-flywheel component that extracts successful, and instructive failed, production executions from traces as candidate demonstrations, training trajectories and preference data.</p>
+<p><strong>Responsibility.</strong> Turns production execution traces into candidate adaptation data.</p>
+<p class="muted">Also known as: Demonstration curation from production, Data flywheel, Continuous improvement flywheel</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Trajectory Harvester"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>writes</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>writes</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>writes</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>sends data to</title></line><a href="TraceStore.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Trace Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Trace Store</text></a><a href="LLMJudge.html"><circle class="g6" cx="497.3" cy="126.5" r="7"><title>LLM Judge: invokes</title></circle><text x="506.7" y="123.0" text-anchor="start">LLM Judge</text></a><a href="UserFeedbackStore.html"><circle class="g6" cx="526.2" cy="253.4" r="7"><title>User Feedback Store: reads</title></circle><text x="537.9" y="260.0" text-anchor="start">User Feedback Store</text></a><a href="PromptExemplarSet.html"><circle class="g2" cx="445.1" cy="355.1" r="7"><title>Prompt Exemplar Set: writes</title></circle><text x="450.3" y="370.0" text-anchor="start">Prompt Exemplar Set</text></a><a href="PreferenceDataset.html"><circle class="g4" cx="314.9" cy="355.1" r="7"><title>Preference Dataset: writes</title></circle><text x="309.7" y="370.0" text-anchor="end">Preference Dataset</text></a><a href="AgentTrajectoryDataset.html"><circle class="g4" cx="233.8" cy="253.4" r="7"><title>Agent Trajectory Dataset: writes</title></circle><text x="222.1" y="260.0" text-anchor="end">Agent Trajectory Dataset</text></a><a href="AnnotationTaskRouter.html"><circle class="g8" cx="262.7" cy="126.5" r="7"><title>Annotation Task Router: sends data to</title></circle><text x="253.3" y="123.0" text-anchor="end">Annotation Task Router</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LLMJudge.html"><span class="dot g6" aria-hidden="true"></span>LLM Judge</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TraceStore.html"><span class="dot g6" aria-hidden="true"></span>Trace Store</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li><li><a class="comp" href="../c/UserFeedbackStore.html"><span class="dot g6" aria-hidden="true"></span>User Feedback Store</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentTrajectoryDataset.html"><span class="dot g4" aria-hidden="true"></span>Agent Trajectory Dataset</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li><li><a class="comp" href="../c/PreferenceDataset.html"><span class="dot g4" aria-hidden="true"></span>Preference Dataset</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li><li><a class="comp" href="../c/PromptExemplarSet.html"><span class="dot g2" aria-hidden="true"></span>Prompt Exemplar Set</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AnnotationTaskRouter.html"><span class="dot g8" aria-hidden="true"></span>Annotation Task Router</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD identify successful executions through accuracy metrics and user-satisfaction signals before admitting them as candidates.</li><li>SHOULD be monitored for reward hacking and distribution collapse when feeding preference learning loops.</li><li>SHOULD collect deployment examples where the model performed poorly or users expressed dissatisfaction and route them for preference labeling.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Organizations running continuous improvement flywheels report 25-60% improvements in key metrics versus static approaches (Ch3.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Data flywheel</span><span class="chip">Iterative demonstration curation</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo</span></dd><dt>Quality attributes</dt><dd><span class="chip">Flexibility (ISO/IEC 25010)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Static agents degrading as distributions shift</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.5">Ch3.5</a>: T. Nguyen, &quot;Prompt Optimization, Few-Shot Learning, Fine-Tuning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

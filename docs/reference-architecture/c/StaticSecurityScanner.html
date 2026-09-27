@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Static Security Scanner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Static Security Scanner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:StaticSecurityScanner</code></p>
+<div class="split"><section>
+<p class="lead">A source-code security scanner that detects insecure patterns such as hardcoded secrets, injection-prone queries, unsafe deserialisation and unsanitised user input interpolated into prompt templates.</p>
+<p><strong>Responsibility.</strong> Flags insecure code patterns in agent application code before build.</p>
+<p class="muted">Also known as: SAST scan, Prompt-template injection scan, Code filtering layer, Generated-code sanitizer, SAST</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Static Security Scanner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>triggers</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>audits</title></line><a href="AlertManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Alert Manager: triggers</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alert Manager</text></a><a href="ContinuousIntegrationRunner.html"><circle class="g5" cx="530.0" cy="220.0" r="7"><title>Continuous Integration Runner: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Continuous Integration R…</text></a><a href="CodeExecutionRunner.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Code Execution Runner: guards</title></circle><text x="380.0" y="396.0" text-anchor="middle">Code Execution Runner</text></a><a href="ConfigurationRepository.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Configuration Repository: audits</title></circle><text x="218.0" y="224.0" text-anchor="end">Configuration Repository</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContinuousIntegrationRunner.html"><span class="dot g5" aria-hidden="true"></span>Continuous Integration Runner</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ref9.09">Ref9.09</a></li></ul></section>
+<section class="rel"><h3>triggers <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AlertManager.html"><span class="dot g6" aria-hidden="true"></span>Alert Manager</a> <a class="src" href="../sources.html#Ref9.09">Ref9.09</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/CodeExecutionRunner.html"><span class="dot g1" aria-hidden="true"></span>Code Execution Runner</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>audits <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ConfigurationRepository.html"><span class="dot g7" aria-hidden="true"></span>Configuration Repository</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST add agent-specific rules that detect user input interpolated into prompts without sanitisation and flag them for review or explicit security annotation.</li><li>SHOULD be used as a fast but brittle first filter; it complements rather than replaces structural isolation.</li><li>SHOULD run both as a pre-commit hook and in CI, failing on high and critical findings.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Custom rules for unsafe prompt construction</span></dd><dt>Technologies</dt><dd><span class="chip">Bandit</span><span class="chip">NVIDIA NeMo Guardrails</span><span class="chip">SonarQube</span><span class="chip">CodeQL</span><span class="chip">pre-commit</span></dd><dt>Quality attributes</dt><dd><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Prompt injection via direct interpolation of user input</span><span class="chip">Credential leaks</span><span class="chip">Remote code execution via unsafe deserialisation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.09">Ref9.09</a>: &quot;Compliance Automation and Tools,&quot; unpublished reference note (09-Compliance-Automation-Tools.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref9.10">Ref9.10</a>: &quot;Chapter 9 Summary: Safety, Ethics, and Compliance,&quot; unpublished reference note (10-Chapter-9-Summary.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

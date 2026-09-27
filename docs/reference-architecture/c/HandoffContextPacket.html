@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escalation Handoff Package · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Data artifact</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Escalation Handoff Package</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:HandoffContextPacket</code></p>
+<div class="split"><section>
+<p class="lead">A context-transfer bundle passed to a human agent on escalation, containing the full conversation transcript plus structured metadata on escalation reason, detected intents and attempted solutions.</p>
+<p><strong>Responsibility.</strong> Carries complete automated-interaction context to the human who takes over the case.</p>
+<p class="muted">Also known as: Escalation context transfer, Handoff protocol, Shared mental model record, Escalation Handoff Package</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Escalation Handoff Package"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is produced by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is written by</title></line><a href="EscalationHandler.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Escalation Handler: is produced by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Escalation Handler</text></a><a href="ApprovalReviewConsole.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Approval Review Console: is read by</title></circle><text x="520.3" y="305.0" text-anchor="start">Approval Review Console</text></a><a href="HandoffContextPackager.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Handoff Context Packager: is written by</title></circle><text x="239.7" y="305.0" text-anchor="end">Handoff Context Packager</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ApprovalReviewConsole.html"><span class="dot g8" aria-hidden="true"></span>Approval Review Console</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/HandoffContextPackager.html"><span class="dot g8" aria-hidden="true"></span>Handoff Context Packager</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>is produced by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/EscalationHandler.html"><span class="dot g8" aria-hidden="true"></span>Escalation Handler</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST give the receiving human what the user requested, what the system attempted, where ambiguity arose and what information was already collected.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Warm handoff</span><span class="chip">State persistence</span><span class="chip">Rationale documentation</span><span class="chip">Constraint communication</span><span class="chip">Confidence attribution</span><span class="chip">Explicit role declaration</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Users repeating information after escalation</span><span class="chip">Re-exploring dead ends</span><span class="chip">Decisions conflicting with prior reasoning</span><span class="chip">Confusion after abrupt handoffs</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

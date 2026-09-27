@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speech Synthesizer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Speech Synthesizer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:SpeechSynthesizer</code></p>
+<div class="split"><section>
+<p class="lead">A text-to-speech service that converts an agent&#x27;s text response into natural-sounding audio with controllable voice, pitch, rate and prosody.</p>
+<p><strong>Responsibility.</strong> Renders agent text output as spoken audio.</p>
+<p class="muted">Also known as: TTS service, Text-to-speech, Voice output modality handler, Synthetic speech responses</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Speech Synthesizer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is configured by</title></line><a href="InferenceServer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Server: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Server</text></a><a href="ConversationalInterface.html"><circle class="g8" cx="509.9" cy="145.0" r="7"><title>Conversational (Chat) Interface: is invoked by</title></circle><text x="520.3" y="143.0" text-anchor="start">Conversational (Chat) In…</text></a><a href="ResponseStreamer.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Response Streamer: sends data to</title></circle><text x="520.3" y="305.0" text-anchor="start">Response Streamer</text></a><a href="VoiceTurnCoordinator.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Voice Turn Coordinator: is invoked by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Voice Turn Coordinator</text></a><a href="SpeechSynthesisModel.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Speech Synthesis Model: hosts</title></circle><text x="239.7" y="305.0" text-anchor="end">Speech Synthesis Model</text></a><a href="VoicePersonaProfile.html"><circle class="g8" cx="250.1" cy="145.0" r="7"><title>Voice Persona Profile: is configured by</title></circle><text x="239.7" y="143.0" text-anchor="end">Voice Persona Profile</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/SpeechSynthesisModel.html"><span class="dot g4" aria-hidden="true"></span>Speech Synthesis Model</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/VoicePersonaProfile.html"><span class="dot g8" aria-hidden="true"></span>Voice Persona Profile</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConversationalInterface.html"><span class="dot g8" aria-hidden="true"></span>Conversational (Chat) Interface</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li><li><a class="comp" href="../c/VoiceTurnCoordinator.html"><span class="dot g1" aria-hidden="true"></span>Voice Turn Coordinator</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ResponseStreamer.html"><span class="dot g8" aria-hidden="true"></span>Response Streamer</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD stream synthesized audio in chunks so playback begins after the first few words.</li><li>SHOULD split long responses into sentences and synthesize them in parallel.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Typical utterance synthesis 100-200ms; users perceive &lt;200ms as instant, 200-500ms acceptable, &gt;500ms sluggish (Ch7.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Streaming synthesis (chunked audio output)</span><span class="chip">Sentence-level parallel batching</span><span class="chip">Mid-utterance multi-speaker voice switching</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Riva TTS</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Sluggish voice responses that feel unnatural</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

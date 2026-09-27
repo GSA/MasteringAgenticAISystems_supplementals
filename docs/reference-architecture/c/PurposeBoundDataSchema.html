@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purpose-Bound Data Schema · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Purpose-Bound Data Schema</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:PurposeBoundDataSchema</code></p>
+<div class="split"><section>
+<p class="lead">A specification listing, for each processing purpose, the minimal personal-data fields permitted to be collected, stored or used for model training, derived from a per-element necessity assessment.</p>
+<p><strong>Responsibility.</strong> Limits personal data to what each defined purpose strictly requires.</p>
+<p class="muted">Also known as: Strict field requirements, Minimal data collection schema</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Purpose-Bound Data Schema"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>constrains</title></line><a href="DataCurator.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Data Curator: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Data Curator</text></a><a href="PersonalDataStore.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Personal Data Store: constrains</title></circle><text x="380.0" y="396.0" text-anchor="middle">Personal Data Store</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DataCurator.html"><span class="dot g4" aria-hidden="true"></span>Data Curator</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li><li><a class="comp" href="../c/PersonalDataStore.html"><span class="dot g3" aria-hidden="true"></span>Personal Data Store</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a> <a class="src" href="../sources.html#Ref9.05">Ref9.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD exclude attributes unnecessary for the purpose, such as demographics, photos or proxies like institution names and zip codes, from model inputs and training data.</li><li>SHOULD destroy verification documents once verification is recorded rather than archive them.</li><li>SHOULD grant sensitive data (e.g., medical questionnaires) only to the roles that need it, encrypted.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Data minimization</span><span class="chip">Purpose limitation</span></dd><dt>Quality attributes</dt><dd><span class="chip">Privacy (NIST AI RMF: privacy-enhanced)</span><span class="chip">Fairness (NIST AI RMF: fair, harmful bias managed)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Discrimination via demographic or proxy features</span><span class="chip">Expanded data footprint requiring protection</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">GDPR Art. 5(1)(c)</span><span class="chip">GDPR Art. 25</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.7">Ch9.7</a>: T. Nguyen, &quot;GDPR and Data Protection Regulations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.05">Ref9.05</a>: &quot;Privacy and Data Protection for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/05-Privacy-Data-Protection.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

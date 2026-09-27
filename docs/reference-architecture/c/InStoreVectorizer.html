@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In-Store Vectorizer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>In-Store Vectorizer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:InStoreVectorizer</code></p>
+<div class="split"><section>
+<p class="lead">A vector store module that automatically calls an external embedding provider to vectorize raw text on insert and on query when no vector is supplied.</p>
+<p><strong>Responsibility.</strong> Generates embeddings inside the vector store for objects submitted without vectors.</p>
+<p class="muted">Also known as: Built-in vectorization module, Vectorizer module</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of In-Store Vectorizer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>invokes</title></line><a href="SelfManagedVectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Self-Managed Vector Index Store: writes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Self-Managed Vector Inde…</text></a><a href="VectorIndexLoader.html"><circle class="g3" cx="530.0" cy="220.0" r="7"><title>Vector Batch Ingestor: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Vector Batch Ingestor</text></a><a href="KnowledgeChunkMetadataSchema.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Knowledge Chunk Metadata Schema: is configured by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Knowledge Chunk Metadata…</text></a><a href="HostedEmbeddingAPIService.html"><circle class="g3" cx="230.0" cy="220.0" r="7"><title>Hosted Embedding API Service: invokes</title></circle><text x="218.0" y="224.0" text-anchor="end">Hosted Embedding API Ser…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/KnowledgeChunkMetadataSchema.html"><span class="dot g3" aria-hidden="true"></span>Knowledge Chunk Metadata Schema</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/HostedEmbeddingAPIService.html"><span class="dot g3" aria-hidden="true"></span>Hosted Embedding API Service</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/VectorIndexLoader.html"><span class="dot g3" aria-hidden="true"></span>Vector Batch Ingestor</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/SelfManagedVectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Self-Managed Vector Index Store</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be relied on for high-throughput ingestion; it adds external API latency and third-party dependencies.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Adds ~50-200 ms per document of external API latency (Ch6.2B).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Weaviate text2vec-openai</span><span class="chip">Weaviate text2vec-cohere</span><span class="chip">NVIDIA NIM</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.2A">Ch6.2A</a>: T. Nguyen, &quot;Vector Database Selection,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.2B">Ch6.2B</a>: T. Nguyen, &quot;Production Vector Database Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reasoning Chain Validator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Reasoning Chain Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:ReasoningChainValidator</code></p>
+<div class="split"><section>
+<p class="lead">An evaluation component that reconstructs an agent&#x27;s intermediate multi-hop reasoning steps and validates each against annotated supporting facts or knowledge-graph triples, scoring answers jointly with evidence.</p>
+<p><strong>Responsibility.</strong> Checks faithfulness of intermediate reasoning and supporting evidence.</p>
+<p class="muted">Also known as: Supporting fact evaluation, Joint EM/F1 scoring, Reasoning chain evaluation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Reasoning Chain Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>evaluates</title></line><a href="EvaluationHarness.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Harness: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Harness</text></a><a href="KnowledgeGraphStore.html"><circle class="g3" cx="530.0" cy="220.0" r="7"><title>Knowledge Graph Store: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Knowledge Graph Store</text></a><a href="EvaluationDataset.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Evaluation Dataset: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Evaluation Dataset</text></a><a href="MultiHopRetrievalController.html"><circle class="g3" cx="230.0" cy="220.0" r="7"><title>Multi-Hop Retrieval Controller: evaluates</title></circle><text x="218.0" y="224.0" text-anchor="end">Multi-Hop Retrieval Cont…</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationDataset.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Dataset</a> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li><li><a class="comp" href="../c/KnowledgeGraphStore.html"><span class="dot g3" aria-hidden="true"></span>Knowledge Graph Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/MultiHopRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Multi-Hop Retrieval Controller</a> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST report joint metrics as primary, not secondary, where transparency or audits matter.</li><li>SHOULD measure success at each hop independently to reveal early-hop breakdowns.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>HotpotQA distractor: answer EM 44-45%, F1 58-59%; supporting-fact EM 22%; joint EM/F1 11-12% / 40-41% (Ch3.3).</li><li>HotpotQA full wiki: answer F1 34%; joint 2.6% EM / 17.8% F1 (Ch3.3).</li><li>For N-hop questions there are 2^(N+1) possible reasoning chains (Ch3.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Sub-question answering evaluation</span><span class="chip">Joint answer-plus-supporting-fact metrics</span><span class="chip">Hop-level success stratification</span></dd><dt>Technologies</dt><dd><span class="chip">HotpotQA</span><span class="chip">2WikiMultiHopQA</span><span class="chip">MuSiQue</span></dd><dt>Quality attributes</dt><dd><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Hallucinated intermediate steps</span><span class="chip">Correct answers via shortcuts or dataset artifacts</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.3">Ch3.3</a>: T. Nguyen, &quot;Web Navigation and Interaction Benchmarks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

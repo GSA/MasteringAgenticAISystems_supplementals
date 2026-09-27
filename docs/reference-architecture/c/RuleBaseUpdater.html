@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule Base Updater · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Rule Base Updater</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:RuleBaseUpdater</code></p>
+<div class="split"><section>
+<p class="lead">A governance component that commits approved rule additions, refinements and retirements, with confidence scores and documented rationale, to the production rule base.</p>
+<p><strong>Responsibility.</strong> Applies approved changes to the production rule base.</p>
+<p class="muted">Also known as: Rule deployment</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Rule Base Updater"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>requires approval from; is invoked by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>emits telemetry to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>writes</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>writes</title></line><a href="DomainRuleExpert.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Domain Rule Expert: requires approval from; is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Domain Rule Expert</text></a><a href="AuditLogStore.html"><circle class="g7" cx="522.7" cy="173.6" r="7"><title>Audit Log Store: emits telemetry to</title></circle><text x="534.1" y="173.9" text-anchor="start">Audit Log Store</text></a><a href="ProductionRuleBase.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Production Rule Base: writes</title></circle><text x="475.2" y="355.1" text-anchor="start">Production Rule Base</text></a><a href="RuleValidationOrchestrator.html"><circle class="g7" cx="291.8" cy="341.4" r="7"><title>Rule Validation Orchestrator: is invoked by</title></circle><text x="284.8" y="355.1" text-anchor="end">Rule Validation Orchestr…</text></a><a href="RejectedRuleLog.html"><circle class="g7" cx="237.3" cy="173.6" r="7"><title>Rejected Rule Log: writes</title></circle><text x="225.9" y="173.9" text-anchor="end">Rejected Rule Log</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DomainRuleExpert.html"><span class="dot g8" aria-hidden="true"></span>Domain Rule Expert</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RuleValidationOrchestrator.html"><span class="dot g7" aria-hidden="true"></span>Rule Validation Orchestrator</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ProductionRuleBase.html"><span class="dot g3" aria-hidden="true"></span>Production Rule Base</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RejectedRuleLog.html"><span class="dot g7" aria-hidden="true"></span>Rejected Rule Log</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>emits telemetry to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>requires approval from <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DomainRuleExpert.html"><span class="dot g8" aria-hidden="true"></span>Domain Rule Expert</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD log rejected rules with rejection rationale so learners do not repeatedly propose the same flawed patterns.</li><li>SHOULD link each rule change to its business rationale or supporting literature.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Rule retirement</span><span class="chip">Documented rule change rationale</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.11">Ch5.11</a>: T. Nguyen, &quot;Rule-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.11. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

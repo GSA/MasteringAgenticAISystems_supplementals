@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Query Complexity Assessor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Query Complexity Assessor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:QueryComplexityAssessor</code></p>
+<div class="split"><section>
+<p class="lead">An abstract component that classifies an incoming query&#x27;s complexity (e.g., simple, moderate, complex) before generation so that a router can select an appropriately sized model.</p>
+<p><strong>Responsibility.</strong> Classifies query complexity ahead of model selection.</p>
+<p class="muted">Also known as: Complexity classification, estimate_query_complexity</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Query Complexity Assessor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><a href="ModelRouter.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Model Router: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Model Router</text></a><a href="QueryComplexityClassifier.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Query Complexity Classifier: is specialized by</title></circle><text x="520.3" y="305.0" text-anchor="start">Query Complexity Classif…</text></a><a href="RuleBasedComplexityClassifier.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Rule-Based Complexity Classifier: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Rule-Based Complexity Cl…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/QueryComplexityClassifier.html"><span class="dot g4" aria-hidden="true"></span>Query Complexity Classifier</a></td><td>Choose when query phrasing varies widely and higher classification accuracy justifies the added latency and cost of a classifier model.</td></tr><tr><td><a class="comp" href="../c/RuleBasedComplexityClassifier.html"><span class="dot g4" aria-hidden="true"></span>Rule-Based Complexity Classifier</a></td><td>Choose when query classes follow clear lexical patterns and zero added latency and cost matter more than robustness to phrasing variation.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModelRouter.html"><span class="dot g4" aria-hidden="true"></span>Model Router</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD run before generation and add as little latency and cost as possible.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Complexity classes: simple (balances, history, definitions), moderate (performance summaries, holdings analysis), complex (tax optimization, multi-objective rebalancing, scenario analysis) (Ch8.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Complexity-based model routing</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Over-provisioning large models for simple queries</span><span class="chip">Quality loss from under-provisioning complex queries</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.3">Ch8.3</a>: T. Nguyen, &quot;Token Economics and Architecture,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

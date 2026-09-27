@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source Schema Validator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Source Schema Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:SourceSchemaValidator</code></p>
+<div class="split"><section>
+<p class="lead">A validation component that checks extracted records or API responses against the expected source schema, surfacing source schema or API contract changes before processing.</p>
+<p><strong>Responsibility.</strong> Detects mismatches between source data and the expected extraction schema.</p>
+<p class="muted">Also known as: Schema drift detector, API response validator, Startup schema validation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Source Schema Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>guards</title></line><a href="AlertManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Alert Manager: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alert Manager</text></a><a href="SourceRecordExtractor.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Source Record Extractor: guards</title></circle><text x="520.3" y="305.0" text-anchor="start">Source Record Extractor</text></a><a href="PaginatedAPIExtractor.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>Paginated API Extractor: guards</title></circle><text x="239.7" y="305.0" text-anchor="end">Paginated API Extractor</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AlertManager.html"><span class="dot g6" aria-hidden="true"></span>Alert Manager</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/PaginatedAPIExtractor.html"><span class="dot g3" aria-hidden="true"></span>Paginated API Extractor</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li><li><a class="comp" href="../c/SourceRecordExtractor.html"><span class="dot g3" aria-hidden="true"></span>Source Record Extractor</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD validate source schemas at pipeline startup so mismatches are detected before processing begins.</li><li>SHOULD alert engineers when API response structures change rather than silently returning empty results.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Explicit column selection</span><span class="chip">Startup schema validation</span><span class="chip">Response model validation</span></dd><dt>Technologies</dt><dd><span class="chip">Pydantic</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Extraction breakage from added/removed/renamed columns</span><span class="chip">Silent empty results after API contract changes</span><span class="chip">API version deprecation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

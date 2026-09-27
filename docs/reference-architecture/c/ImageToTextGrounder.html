@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image-to-Text Grounder · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Image-to-Text Grounder</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:ImageToTextGrounder</code></p>
+<div class="split"><section>
+<p class="lead">An abstract preprocessing component that converts image content into searchable text (captions or structured data) so it can be embedded and retrieved with standard text retrieval.</p>
+<p><strong>Responsibility.</strong> Grounds visual content to text representations for text-based indexing.</p>
+<p class="muted">Also known as: Ground to text, Vision preprocessing</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Image-to-Text Grounder"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is configured by</title></line><a href="TextEmbeddingService.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Text Embedding Service: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Text Embedding Service</text></a><a href="OpenAICompatibleInferenceAPI.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>OpenAI-Compatible Inference API: invokes</title></circle><text x="534.1" y="173.9" text-anchor="start">OpenAI-Compatible Infere…</text></a><a href="ChartDataExtractor.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Chart Data Extractor: is specialized by</title></circle><text x="475.2" y="355.1" text-anchor="start">Chart Data Extractor</text></a><a href="ImageCaptioner.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Image Captioner: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Image Captioner</text></a><a href="MultimodalChunkMetadataSchema.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Multimodal Chunk Metadata Schema: is configured by</title></circle><text x="225.9" y="173.9" text-anchor="end">Multimodal Chunk Metadat…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/ChartDataExtractor.html"><span class="dot g3" aria-hidden="true"></span>Chart Data Extractor</a></td><td>Choose for information-dense images (charts, plots, graphs, tables) where users need exact figures and computation, e.g., financial or benchmark charts.</td></tr><tr><td><a class="comp" href="../c/ImageCaptioner.html"><span class="dot g3" aria-hidden="true"></span>Image Captioner</a></td><td>Choose for natural images, complex scenes, and diagrams with readable text where descriptive detail (objects, spatial relationships, context, visible text) matters more than exact numbers.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/MultimodalChunkMetadataSchema.html"><span class="dot g3" aria-hidden="true"></span>Multimodal Chunk Metadata Schema</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/OpenAICompatibleInferenceAPI.html"><span class="dot g4" aria-hidden="true"></span>OpenAI-Compatible Inference API</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/TextEmbeddingService.html"><span class="dot g3" aria-hidden="true"></span>Text Embedding Service</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a> <a class="src" href="../sources.html#Ref2.07">Ref2.07</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD record the original source modality and a reference to the original image in chunk metadata.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Ground-to-text multimodal RAG</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Visual information inaccessible to text-only retrieval</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref2.07">Ref2.07</a>: NVIDIA Developer, &quot;Building multimodal AI RAG with LlamaIndex, NVIDIA NIM, and Milvus | LLM app development,&quot; YouTube. Accessed: Sep. 26, 2026. [Online Video]. Available: https://www.youtube.com/watch?v=NaT5Eo97_I0</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

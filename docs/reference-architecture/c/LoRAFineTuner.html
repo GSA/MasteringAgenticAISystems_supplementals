@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoRA Fine-Tuner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>LoRA Fine-Tuner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:LoRAFineTuner</code></p>
+<div class="split"><section>
+<p class="lead">A parameter-efficient fine-tuning pipeline that freezes base model weights and trains small low-rank adapter matrices.</p>
+<p><strong>Responsibility.</strong> Specializes a frozen model by training low-rank adapters.</p>
+<p class="muted">Also known as: Parameter-efficient fine-tuning (PEFT), Low-Rank Adaptation</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/FineTuningPipeline.html"><span class="dot g4" aria-hidden="true"></span>Fine-Tuning Pipeline</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when GPU memory is constrained and near-full-fine-tuning quality is needed by training only a small adapter.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of LoRA Fine-Tuner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>trains</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>trains</title></line><a href="GPUNode.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>GPU Node: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">GPU Node</text></a><a href="FineTuningPipeline.html"><circle class="g4" cx="509.9" cy="145.0" r="7"><title>Fine-Tuning Pipeline: specializes</title></circle><text x="520.3" y="143.0" text-anchor="start">Fine-Tuning Pipeline</text></a><a href="FineTunedAgentModel.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Fine-Tuned Agent Model: trains</title></circle><text x="520.3" y="305.0" text-anchor="start">Fine-Tuned Agent Model</text></a><a href="FullParameterFineTuner.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Full-Parameter Fine-Tuner: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">Full-Parameter Fine-Tuner</text></a><a href="QLoRAFineTuner.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>QLoRA Fine-Tuner: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">QLoRA Fine-Tuner</text></a><a href="LoRAAdapter.html"><circle class="g4" cx="250.1" cy="145.0" r="7"><title>LoRA Adapter: trains</title></circle><text x="239.7" y="143.0" text-anchor="end">LoRA Adapter</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/QLoRAFineTuner.html"><span class="dot g4" aria-hidden="true"></span>QLoRA Fine-Tuner</a></td><td>Choose when even LoRA exceeds available hardware memory and a small quality loss is acceptable.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ref7.06">Ref7.06</a></li></ul></section>
+<section class="rel"><h3>trains <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/FineTunedAgentModel.html"><span class="dot g4" aria-hidden="true"></span>Fine-Tuned Agent Model</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/LoRAAdapter.html"><span class="dot g4" aria-hidden="true"></span>LoRA Adapter</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/FullParameterFineTuner.html"><span class="dot g4" aria-hidden="true"></span>Full-Parameter Fine-Tuner</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>PEFT trains ~0.1-1% of weights with performance comparable to full fine-tuning (Ch3.5).</li><li>LoRA cuts fine-tuning memory 60-90%; a 70B model needing ~400GB may need ~40GB, fitting a single high-end GPU (Ch3.5).</li><li>A 70B model can be fine-tuned on one 8x40GB-GPU server instead of a 64-GPU cluster (Ch3.5).</li><li>Activation offloading: 20-30% slower training for 30-50% GPU memory reduction (Ref7.06).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">LoRA</span><span class="chip">PEFT</span><span class="chip">Activation offloading to host memory</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo Customizer</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.5">Ch3.5</a>: T. Nguyen, &quot;Prompt Optimization, Few-Shot Learning, Fine-Tuning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.06">Ref7.06</a>: NVIDIA, &quot;Performance Tuning Guide,&quot; Megatron Bridge Documentation. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/nemo/megatron-bridge/latest/performance-guide.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

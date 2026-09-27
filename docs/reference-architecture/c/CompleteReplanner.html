@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete Replanner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Complete Replanner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:CompleteReplanner</code></p>
+<div class="split"><section>
+<p class="lead">A replanner that discards the current plan and regenerates a full plan from the actual current state to the goal using the standard planner.</p>
+<p><strong>Responsibility.</strong> Regenerates the entire plan from scratch from the current actual state.</p>
+<p class="muted">Also known as: Replanning from scratch, Strategic deliberative planner, Layer 4 strategic replanning</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/Replanner.html"><span class="dot g2" aria-hidden="true"></span>Replanner</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when failures are global or rare (&lt;10% of executions), unpredictable, memory is constrained, spaces are small, latency can be tolerated, or optimality matters more than continuity.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Complete Replanner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>alternative to; is failover for</title></line><line x1="380.0" y1="220.0" x2="486.1" y2="113.9"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="486.1" y2="326.1"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="273.9" y2="326.1"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="273.9" y2="113.9"><title>reads</title></line><a href="PlanRepairer.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Plan Repairer: alternative to; is failover for</title></circle><text x="380.0" y="50.0" text-anchor="middle">Plan Repairer</text></a><a href="Replanner.html"><circle class="g2" cx="486.1" cy="113.9" r="7"><title>Replanner: specializes</title></circle><text x="494.6" y="109.4" text-anchor="start">Replanner</text></a><a href="IncrementalSearchReplanner.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Incremental Search Replanner: alternative to</title></circle><text x="542.0" y="224.0" text-anchor="start">Incremental Search Repla…</text></a><a href="GraphSearchPlanner.html"><circle class="g2" cx="486.1" cy="326.1" r="7"><title>Graph Search Planner: invokes</title></circle><text x="494.6" y="338.6" text-anchor="start">Graph Search Planner</text></a><a href="ReplanningStrategyRouter.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Replanning Strategy Router: is routed to by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Replanning Strategy Router</text></a><a href="ContingencyBranchActivator.html"><circle class="g2" cx="273.9" cy="326.1" r="7"><title>Contingency Branch Activator: alternative to</title></circle><text x="265.4" y="338.6" text-anchor="end">Contingency Branch Activ…</text></a><a href="ReplanningLayerArbiter.html"><circle class="g1" cx="230.0" cy="220.0" r="7"><title>Replanning Layer Arbiter: sends data to</title></circle><text x="218.0" y="224.0" text-anchor="end">Replanning Layer Arbiter</text></a><a href="ExecutionFailureHistoryStore.html"><circle class="g2" cx="273.9" cy="113.9" r="7"><title>Execution Failure History Store: reads</title></circle><text x="265.4" y="109.4" text-anchor="end">Execution Failure Histor…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GraphSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Graph Search Planner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExecutionFailureHistoryStore.html"><span class="dot g2" aria-hidden="true"></span>Execution Failure History Store</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReplanningStrategyRouter.html"><span class="dot g1" aria-hidden="true"></span>Replanning Strategy Router</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReplanningLayerArbiter.html"><span class="dot g1" aria-hidden="true"></span>Replanning Layer Arbiter</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is failover for <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/PlanRepairer.html"><span class="dot g2" aria-hidden="true"></span>Plan Repairer</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ContingencyBranchActivator.html"><span class="dot g2" aria-hidden="true"></span>Contingency Branch Activator</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/IncrementalSearchReplanner.html"><span class="dot g2" aria-hidden="true"></span>Incremental Search Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/PlanRepairer.html"><span class="dot g2" aria-hidden="true"></span>Plan Repairer</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used for global failures or when less than ~50% of the plan remains valid.</li><li>MAY run asynchronously in the background, switching to the new plan only once a better alternative is ready.</li><li>SHOULD NOT be used where coordinating agents or users depend on plan stability, as successive replans can differ radically.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Reactive replanning from scratch costs ~3-5 s of paused computation per failure in the delivery-robot scenario (Ch5.6).</li><li>Strategic fleet replanning runs periodically, e.g., every 30 minutes (Ch5.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Complete replanning</span><span class="chip">Periodic strategic re-planning</span><span class="chip">Asynchronous background replanning</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Accumulated global plan suboptimality</span><span class="chip">Widespread plan invalidation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

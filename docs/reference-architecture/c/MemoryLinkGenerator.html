@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory Link Generator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Memory Link Generator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:MemoryLinkGenerator</code></p>
+<div class="split"><section>
+<p class="lead">A memory component that creates connections between related stored memories, giving memory a navigable structure from one memory to related concepts.</p>
+<p><strong>Responsibility.</strong> Links related memories to enable associative navigation.</p>
+<p class="muted">Also known as: Link generation, Episode linker</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Memory Link Generator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>writes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>writes</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>writes</title></line><a href="EvaluationHarness.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Harness: is evaluated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Harness</text></a><a href="KnowledgeGraphStore.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Knowledge Graph Store: writes</title></circle><text x="534.1" y="173.9" text-anchor="start">Knowledge Graph Store</text></a><a href="EpisodicMemoryStore.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Episodic Memory Store: writes</title></circle><text x="475.2" y="355.1" text-anchor="start">Episodic Memory Store</text></a><a href="MemoryConsolidator.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Memory Consolidator: is invoked by</title></circle><text x="284.8" y="355.1" text-anchor="end">Memory Consolidator</text></a><a href="SemanticMemoryStore.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Semantic Memory Store: writes</title></circle><text x="225.9" y="173.9" text-anchor="end">Semantic Memory Store</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MemoryConsolidator.html"><span class="dot g2" aria-hidden="true"></span>Memory Consolidator</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a> <a class="src" href="../sources.html#Ch5.9">Ch5.9</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EpisodicMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Episodic Memory Store</a> <a class="src" href="../sources.html#Ch5.9">Ch5.9</a></li><li><a class="comp" href="../c/KnowledgeGraphStore.html"><span class="dot g3" aria-hidden="true"></span>Knowledge Graph Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li><li><a class="comp" href="../c/SemanticMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Semantic Memory Store</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD link consolidated episodes to related semantic knowledge, procedural workflows and prior episodes to enable multi-hop retrieval.</li><li>SHOULD encode causal structure (which actions led to which outcomes) to support causal retrieval.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Removing link generation while keeping memory evolution degrades ~8-12% (Ch3.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Associative memory linking</span><span class="chip">Semantic links (shared concepts)</span><span class="chip">Temporal links (happened-before)</span><span class="chip">Causal links (one episode led to another)</span><span class="chip">Entity links (same customer, product, system)</span><span class="chip">Link new episodes to related existing episodes for graph-based retrieval</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.7">Ch3.7</a>: T. Nguyen, &quot;Tool Usage Auditing,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.7">Ch5.7</a>: T. Nguyen, &quot;Episodic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.9">Ch5.9</a>: T. Nguyen, &quot;Working Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

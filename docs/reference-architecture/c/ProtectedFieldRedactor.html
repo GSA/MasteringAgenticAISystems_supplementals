@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protected Field Redactor · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Protected Field Redactor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ProtectedFieldRedactor</code></p>
+<div class="split"><section>
+<p class="lead">A runtime filter that removes fields designated as protected from structured retrieved records or tool results while keeping permitted fields for LLM processing.</p>
+<p><strong>Responsibility.</strong> Removes protected fields from data entering the LLM context.</p>
+<p class="muted">Also known as: Field-level redaction, Analyst-view pseudonymizer</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Protected Field Redactor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is configured by</title></line><a href="PersonalDataStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Personal Data Store: guards</title></circle><text x="380.0" y="50.0" text-anchor="middle">Personal Data Store</text></a><a href="ExecutionRail.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Execution Rail: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Execution Rail</text></a><a href="RetrievalRail.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Retrieval Rail: is invoked by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Retrieval Rail</text></a><a href="ProtectedFieldPolicy.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Protected Field Policy: is configured by</title></circle><text x="218.0" y="224.0" text-anchor="end">Protected Field Policy</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ProtectedFieldPolicy.html"><span class="dot g7" aria-hidden="true"></span>Protected Field Policy</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExecutionRail.html"><span class="dot g7" aria-hidden="true"></span>Execution Rail</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/RetrievalRail.html"><span class="dot g7" aria-hidden="true"></span>Retrieval Rail</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/PersonalDataStore.html"><span class="dot g3" aria-hidden="true"></span>Personal Data Store</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Pseudonymization</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Exposure of protected health information</span><span class="chip">Leakage of internal scores to the LLM</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">HIPAA</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.7">Ch9.7</a>: T. Nguyen, &quot;GDPR and Data Protection Regulations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

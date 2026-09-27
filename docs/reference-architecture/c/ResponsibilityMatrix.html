@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsibility Matrix · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Data artifact</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Responsibility Matrix</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ResponsibilityMatrix</code></p>
+<div class="split"><section>
+<p class="lead">An explicit allocation of subtasks and case categories between agent and humans, including flag rules that force human review and protocols for role transitions and scope recalibration.</p>
+<p><strong>Responsibility.</strong> Declares who owns each subtask or case category and how that allocation may change.</p>
+<p class="muted">Also known as: Human-agent responsibility matrix, Decision authority boundaries</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Responsibility Matrix"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is written by</title></line><a href="FixedSubtaskInitiativeController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Fixed Subtask Initiative Controller: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Fixed Subtask Initiative…</text></a><a href="AutonomyScopeAdjuster.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Autonomy Scope Adjuster: is written by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Autonomy Scope Adjuster</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/FixedSubtaskInitiativeController.html"><span class="dot g1" aria-hidden="true"></span>Fixed Subtask Initiative Controller</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AutonomyScopeAdjuster.html"><span class="dot g8" aria-hidden="true"></span>Autonomy Scope Adjuster</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST state responsibilities upfront rather than rely on natural role emergence.</li><li>SHOULD evolve as the agent demonstrates reliability, rather than remain static.</li><li>SHOULD weight both accuracy and error consequence when defining authority boundaries.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Explicit role allocation</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Role ambiguity</span><span class="chip">Critical tasks falling through the cracks</span><span class="chip">Duplicated effort</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

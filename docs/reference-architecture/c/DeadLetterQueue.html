@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dead Letter Queue · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data store</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Dead Letter Queue</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:DeadLetterQueue</code></p>
+<div class="split"><section>
+<p class="lead">A holding store for poison messages that repeatedly fail processing, isolating them from healthy traffic.</p>
+<p><strong>Responsibility.</strong> Isolates messages that exceed retry limits.</p>
+<p class="muted">Also known as: DLQ, Poison message queue, ETL dead letter queue</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Dead Letter Queue"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is written by; receives data from</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>receives data from</title></line><a href="MessageQueue.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Message Queue: is written by; receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Message Queue</text></a><a href="IngestionPipelineOrchestrator.html"><circle class="g1" cx="522.7" cy="173.6" r="7"><title>Ingestion Pipeline Orchestrator: is written by</title></circle><text x="534.1" y="173.9" text-anchor="start">Ingestion Pipeline Orche…</text></a><a href="EventBroker.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Event Broker: is written by</title></circle><text x="475.2" y="355.1" text-anchor="start">Event Broker</text></a><a href="DataQualityReviewer.html"><circle class="g8" cx="291.8" cy="341.4" r="7"><title>Data Quality Reviewer: sends data to</title></circle><text x="284.8" y="355.1" text-anchor="end">Data Quality Reviewer</text></a><a href="ServerlessFunctionRuntime.html"><circle class="g5" cx="237.3" cy="173.6" r="7"><title>Serverless Function Runtime: receives data from</title></circle><text x="225.9" y="173.9" text-anchor="end">Serverless Function Runt…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EventBroker.html"><span class="dot g1" aria-hidden="true"></span>Event Broker</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li><li><a class="comp" href="../c/IngestionPipelineOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Ingestion Pipeline Orchestrator</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li><li><a class="comp" href="../c/MessageQueue.html"><span class="dot g1" aria-hidden="true"></span>Message Queue</a> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/MessageQueue.html"><span class="dot g1" aria-hidden="true"></span>Message Queue</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li><li><a class="comp" href="../c/ServerlessFunctionRuntime.html"><span class="dot g5" aria-hidden="true"></span>Serverless Function Runtime</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/DataQualityReviewer.html"><span class="dot g8" aria-hidden="true"></span>Data Quality Reviewer</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST receive messages automatically after retry limits are exceeded.</li><li>SHOULD capture persistently failing events for manual review instead of losing them.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">AWS Lambda dead letter queues</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Poison messages</span><span class="chip">Queue congestion</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.3">Ch1.3</a>: T. Nguyen, &quot;Multi-Agent Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.1">Ch4.1</a>: T. Nguyen, &quot;Introduction to AI Agent Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

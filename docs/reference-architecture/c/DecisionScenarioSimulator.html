@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Scenario Simulator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Decision Scenario Simulator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:DecisionScenarioSimulator</code></p>
+<div class="split"><section>
+<p class="lead">A simulation environment that exercises a decision engine across diverse synthetic scenarios to surface counterintuitive or harmful utility-maximizing behaviours.</p>
+<p><strong>Responsibility.</strong> Simulates diverse decision scenarios for pre-deployment validation of utility functions.</p>
+<p class="muted">Also known as: Simulation testing</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/BenchmarkEnvironment.html"><span class="dot g6" aria-hidden="true"></span>Benchmark Environment</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose to test utility-driven decisions across diverse and edge-case scenarios before deployment.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Decision Scenario Simulator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><a href="EvaluationHarness.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Harness: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Harness</text></a><a href="BenchmarkEnvironment.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Benchmark Environment: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Benchmark Environment</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Undetected edge cases in utility optimization</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.10">Ch5.10</a>: T. Nguyen, &quot;Utility-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

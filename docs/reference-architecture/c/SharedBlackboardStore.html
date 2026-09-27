@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shared Blackboard Store · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data store</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Shared Blackboard Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:SharedBlackboardStore</code></p>
+<div class="split"><section>
+<p class="lead">A common memory space to which agents publish hypotheses, evidence and results and from which they consume others&#x27; contributions, enabling implicit, opportunistic coordination.</p>
+<p><strong>Responsibility.</strong> Holds shared problem state through which agents coordinate implicitly.</p>
+<p class="muted">Also known as: Blackboard, Shared memory, Shared context, Shared memory layer, Shared context pool, Central context buffer, Shared memory space, Shared workflow state</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Shared Blackboard Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to; is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>has access controlled by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is constrained by</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: sends data to; is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="ActionPolicyEngine.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Action Policy Engine: has access controlled by</title></circle><text x="520.3" y="305.0" text-anchor="start">Action Policy Engine</text></a><a href="StateConcurrencyController.html"><circle class="g1" cx="250.1" cy="295.0" r="7"><title>State Concurrency Controller: is constrained by</title></circle><text x="239.7" y="305.0" text-anchor="end">State Concurrency Contro…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a> <span class="src more" title="Ch5.9, Ch8.2A, Ref5.05">+3</span></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a> <span class="src more" title="Ch5.9, Ch8.2A, Ref5.05">+3</span></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li></ul></section>
+<section class="rel"><h3>has access controlled by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ActionPolicyEngine.html"><span class="dot g7" aria-hidden="true"></span>Action Policy Engine</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/StateConcurrencyController.html"><span class="dot g1" aria-hidden="true"></span>State Concurrency Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.9">Ch5.9</a> <a class="src" href="../sources.html#Ch8.2A">Ch8.2A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be chosen when workflows are unknown or dynamic, many agents contribute to overlapping problems, and agent populations change frequently.</li><li>MUST apply concurrency control and versioning; without conflict resolution, concurrent writes create race conditions.</li><li>SHOULD be distributed with replication and automatic failover; a centralised blackboard is a bottleneck and single point of failure.</li><li>SHOULD log every read and write with timestamp and agent identifier to allow reconstruction of problem-solving paths.</li><li>SHOULD NOT be used where strong consistency or low-latency coordination is required.</li><li>SHOULD scope agent access so no agent can undo another agent&#x27;s completed work.</li><li>MUST make updates atomic and immediately visible so agents never reason over stale or partially modified context.</li><li>SHOULD apply negotiation or priority mechanisms when agents compete for the pool&#x27;s collective token budget.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Suitable when scalability to hundreds of agents is required (Ch1.3 selection criteria).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Blackboard architecture</span><span class="chip">Opportunistic problem-solving</span><span class="chip">Shared working memory across collaborating agents</span><span class="chip">Collective token budget</span><span class="chip">Coordination via shared memory without direct communication (Ref5.05)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Rigid predefined workflows</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.3">Ch1.3</a>: T. Nguyen, &quot;Multi-Agent Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.6">Ch2.6</a>: T. Nguyen, &quot;Tool Integration and Function Calling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.9">Ch5.9</a>: T. Nguyen, &quot;Working Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.9. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.2A">Ch8.2A</a>: T. Nguyen, &quot;Error Rates and Reliability,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref5.04">Ref5.04</a>: C. Stryker, &quot;What is AI agent memory?,&quot; IBM Think. Accessed: Sep. 27, 2026. [Online]. Available: https://www.ibm.com/think/topics/ai-agent-memory</li><li><a href="../sources.html#Ref5.05">Ref5.05</a>: Model Context Protocol, &quot;Model Context Protocol servers,&quot; GitHub repository. Accessed: Sep. 27, 2026. [Online]. Available: https://github.com/modelcontextprotocol/servers</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

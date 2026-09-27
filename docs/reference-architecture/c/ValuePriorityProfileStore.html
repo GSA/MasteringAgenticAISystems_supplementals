@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Value Priority Profile Store · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Value Priority Profile Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ValuePriorityProfileStore</code></p>
+<div class="split"><section>
+<p class="lead">A per-principal store of discovered value priorities, such as a patient&#x27;s weighting of autonomy, safety, convenience and outcomes, used to adapt an agent&#x27;s alignment specification to that individual.</p>
+<p><strong>Responsibility.</strong> Persists individual stakeholders&#x27; value priorities for personalised value alignment.</p>
+<p class="muted">Also known as: Patient value profile, Stakeholder value profile</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Value Priority Profile Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is read by</title></line><a href="DecisionStakeholder.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Decision Stakeholder: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Decision Stakeholder</text></a><a href="RevealedPreferenceLearner.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Revealed Preference Learner: is written by</title></circle><text x="520.3" y="305.0" text-anchor="start">Revealed Preference Lear…</text></a><a href="ContextualWeightAdapter.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Contextual Weight Adapter: is read by</title></circle><text x="239.7" y="305.0" text-anchor="end">Contextual Weight Adapter</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContextualWeightAdapter.html"><span class="dot g2" aria-hidden="true"></span>Contextual Weight Adapter</a> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RevealedPreferenceLearner.html"><span class="dot g4" aria-hidden="true"></span>Revealed Preference Learner</a> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/DecisionStakeholder.html"><span class="dot g8" aria-hidden="true"></span>Decision Stakeholder</a> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be refreshed through periodic re-engagement as individual priorities evolve.</li><li>SHOULD let principals correct recorded priorities when the system misunderstands them.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Interactive value discovery</span><span class="chip">Personalised alignment specification</span></dd><dt>Quality attributes</dt><dd><span class="chip">Flexibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">One-size-fits-all value imposition</span><span class="chip">Stale value understanding</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.6">Ch9.6</a>: T. Nguyen, &quot;Value Alignment Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

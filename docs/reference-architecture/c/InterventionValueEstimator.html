@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intervention Value Estimator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Intervention Value Estimator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:InterventionValueEstimator</code></p>
+<div class="split"><section>
+<p class="lead">A decision component that estimates whether a candidate proactive intervention&#x27;s expected value and confidence exceed its interruption and attention cost, suppressing interventions that do not.</p>
+<p><strong>Responsibility.</strong> Decides whether a proactive intervention is worth the user&#x27;s attention.</p>
+<p class="muted">Also known as: Interruption cost evaluator, Proactivity calibrator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Intervention Value Estimator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is configured by</title></line><a href="ConfidenceEstimator.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Confidence Estimator: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Confidence Estimator</text></a><a href="ProactiveAgent.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Proactive Agent: is invoked by</title></circle><text x="520.3" y="305.0" text-anchor="start">Proactive Agent</text></a><a href="InterventionThresholdPolicy.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Intervention Threshold Policy: is configured by</title></circle><text x="239.7" y="305.0" text-anchor="end">Intervention Threshold P…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/InterventionThresholdPolicy.html"><span class="dot g8" aria-hidden="true"></span>Intervention Threshold Policy</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ProactiveAgent.html"><span class="dot g1" aria-hidden="true"></span>Proactive Agent</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ConfidenceEstimator.html"><span class="dot g2" aria-hidden="true"></span>Confidence Estimator</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST NOT assume proactive intervention always improves experience; interruptions impose cognitive costs even when eventually valuable.</li><li>SHOULD intervene only when delivered value exceeds the attention cost consumed.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Returning to prior focus after an interruption takes ~23 minutes on average; a notification saving 5 minutes hardly justifies disrupting 30 minutes of focus (Ch10.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Value per attention unit</span><span class="chip">Optimal (not maximal) proactivity</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Alert fatigue</span><span class="chip">Flow disruption</span><span class="chip">Users dismissing the agent as noisy</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

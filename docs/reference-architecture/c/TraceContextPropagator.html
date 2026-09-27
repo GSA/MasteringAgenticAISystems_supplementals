@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace Context Propagator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Trace Context Propagator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:TraceContextPropagator</code></p>
+<div class="split"><section>
+<p class="lead">A telemetry component that propagates shared trace, session and parent-span identifiers across agent handoffs and service boundaries so distributed spans correlate into one causally ordered trace.</p>
+<p><strong>Responsibility.</strong> Carries trace and session identifiers across agent and service boundaries.</p>
+<p class="muted">Also known as: Trace ID propagation, Session ID propagation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Trace Context Propagator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to; is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is configured by</title></line><a href="TraceCollector.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Trace Collector: sends data to; is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Trace Collector</text></a><a href="WorkerAgent.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Worker Agent: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Worker Agent</text></a><a href="DependencyOrderedExecutor.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Dependency-Ordered Executor: is invoked by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Dependency-Ordered Execu…</text></a><a href="TraceSchema.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Trace Schema: is configured by</title></circle><text x="218.0" y="224.0" text-anchor="end">Trace Schema</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/TraceSchema.html"><span class="dot g6" aria-hidden="true"></span>Trace Schema</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DependencyOrderedExecutor.html"><span class="dot g1" aria-hidden="true"></span>Dependency-Ordered Executor</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch8.2A">Ch8.2A</a></li><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch8.2A">Ch8.2A</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST propagate shared trace IDs across all agents of a multi-agent workflow to reconstruct the end-to-end timeline.</li><li>SHOULD scope trace IDs to individual conversations and consistently propagate session IDs.</li><li>SHOULD treat parent-child span relations and trace-ID propagation as ground-truth causal ordering, using timestamps only as approximate guides.</li><li>MUST propagate trace context (trace ID, span ID, sampling decision) across every inter-agent call or message so agent spans become children of the caller&#x27;s span.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Healthcare case: ~15% of multi-turn conversations included context from previous sessions; billing agent retrieved wrong patient&#x27;s payment history 3% of the time (Ch3.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Distributed tracing</span><span class="chip">Causal (partial) ordering over timestamps</span></dd><dt>Technologies</dt><dd><span class="chip">OpenTelemetry SDK</span><span class="chip">OpenTelemetry</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Clock-skew induced false event ordering</span><span class="chip">Cross-session context bleed going undetected</span><span class="chip">Uncorrelated multi-agent failures</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.6">Ch3.6</a>: T. Nguyen, &quot;Trace Analysis and Execution Debugging,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.2A">Ch8.2A</a>: T. Nguyen, &quot;Error Rates and Reliability,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

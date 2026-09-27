@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task Queue · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data store</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Task Queue</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:TaskQueue</code></p>
+<div class="split"><section>
+<p class="lead">A shared queue that holds pending jobs and tasks so stateless replicas and specialised agent pools can coordinate work without affinity.</p>
+<p><strong>Responsibility.</strong> Buffers pending jobs for pickup by any available replica.</p>
+<p class="muted">Also known as: Job queue, Queue system, Shared task queue, Request queue</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Task Queue"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is monitored by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="WorkerAgent.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Worker Agent: is read by</title></circle><text x="542.0" y="224.0" text-anchor="start">Worker Agent</text></a><a href="SupervisorAgent.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Supervisor Agent: is written by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Supervisor Agent</text></a><a href="QueueDepthAutoscaler.html"><circle class="g5" cx="230.0" cy="220.0" r="7"><title>Queue-Depth Autoscaler: is monitored by</title></circle><text x="218.0" y="224.0" text-anchor="end">Queue-Depth Autoscaler</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/SupervisorAgent.html"><span class="dot g1" aria-hidden="true"></span>Supervisor Agent</a> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a></li></ul></section>
+<section class="rel"><h3>is monitored by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/QueueDepthAutoscaler.html"><span class="dot g5" aria-hidden="true"></span>Queue-Depth Autoscaler</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be shared by all replicas so coordination does not require session affinity.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Work queue</span><span class="chip">Competing consumers</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Coordination overhead between replicas</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.8">Ch1.8</a>: T. Nguyen, &quot;Scalability and Production Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.7">Ch4.7</a>: T. Nguyen, &quot;Scaling Strategies,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

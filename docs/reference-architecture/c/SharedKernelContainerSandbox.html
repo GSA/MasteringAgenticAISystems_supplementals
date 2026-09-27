@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shared-Kernel Container Sandbox · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Infrastructure resource</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Shared-Kernel Container Sandbox</h1>
+<p class="badges"><span class="badge">Infrastructure resource</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:SharedKernelContainerSandbox</code></p>
+<div class="split"><section>
+<p class="lead">An execution sandbox built from a standard container using kernel namespaces and cgroups, sharing the host kernel with co-located containers.</p>
+<p><strong>Responsibility.</strong> Provides lightweight process, filesystem and network isolation for low-risk workloads.</p>
+<p class="muted">Also known as: Standard container, Docker container sandbox</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ExecutionSandbox.html"><span class="dot g7" aria-hidden="true"></span>Execution Sandbox</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for low-risk development environments running trusted code; insufficient for multi-tenant, sensitive-data or autonomous production workloads because of shared-kernel escape risk.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Shared-Kernel Container Sandbox"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>alternative to</title></line><a href="ExecutionSandbox.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Execution Sandbox: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Execution Sandbox</text></a><a href="DedicatedHardwareSandbox.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Dedicated Hardware Sandbox: is target of alternativeTo</title></circle><text x="542.0" y="224.0" text-anchor="start">Dedicated Hardware Sandbox</text></a><a href="MicroVMSandbox.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>MicroVM Sandbox: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">MicroVM Sandbox</text></a><a href="SyscallInterceptionSandbox.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Syscall-Interception Sandbox: alternative to</title></circle><text x="218.0" y="224.0" text-anchor="end">Syscall-Interception San…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/DedicatedHardwareSandbox.html"><span class="dot g7" aria-hidden="true"></span>Dedicated Hardware Sandbox</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/MicroVMSandbox.html"><span class="dot g7" aria-hidden="true"></span>MicroVM Sandbox</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/SyscallInterceptionSandbox.html"><span class="dot g7" aria-hidden="true"></span>Syscall-Interception Sandbox</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST NOT be relied on as adequate isolation for high-risk, multi-tenant production deployments.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>CVE-2025-23266 (NVIDIAScape) enabled container escape to host root with three lines of Dockerfile (Ch9.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Docker</span><span class="chip">containerd</span><span class="chip">runc</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

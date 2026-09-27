@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool Protocol Conformance Validator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Tool Protocol Conformance Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:ToolProtocolConformanceValidator</code></p>
+<div class="split"><section>
+<p class="lead">A test component that validates a tool-protocol server&#x27;s protocol conformance, verifies connectivity and exercises its tool integrations before agents rely on it.</p>
+<p><strong>Responsibility.</strong> Verifies that tool-protocol endpoints conform to the protocol and are reachable and functional.</p>
+<p class="muted">Also known as: MCP protocol validator, Tool integration tester</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Tool Protocol Conformance Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>evaluates</title></line><a href="ContinuousIntegrationRunner.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Continuous Integration Runner: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Continuous Integration R…</text></a><a href="ToolProtocolServer.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Tool Protocol Server: evaluates</title></circle><text x="380.0" y="396.0" text-anchor="middle">Tool Protocol Server</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContinuousIntegrationRunner.html"><span class="dot g5" aria-hidden="true"></span>Continuous Integration Runner</a> <a class="src" href="../sources.html#Ref1.01">Ref1.01</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ToolProtocolServer.html"><span class="dot g1" aria-hidden="true"></span>Tool Protocol Server</a> <a class="src" href="../sources.html#Ref1.01">Ref1.01</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD validate protocol conformance and connection health of tool servers as part of agent testing.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Contract/conformance testing</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Agent Intelligence Toolkit (AIQ)</span><span class="chip">Model Context Protocol (MCP)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Compatibility (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Broken or non-conformant remote tool connections</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref1.01">Ref1.01</a>: NVIDIA, &quot;NVIDIA NeMo Agent Toolkit overview,&quot; NVIDIA NeMo Agent Toolkit Documentation, v1.8. Accessed: Sep. 26, 2026. [Online]. Available: https://docs.nvidia.com/nemo/agent-toolkit/latest/index.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

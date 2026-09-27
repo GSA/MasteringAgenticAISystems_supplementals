@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Approval Authority Matrix · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Approval Authority Matrix</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ApprovalAuthorityMatrix</code></p>
+<div class="split"><section>
+<p class="lead">A configuration mapping decision types and risk tiers (e.g., monetary bands) to the organizational role authorised to approve them.</p>
+<p><strong>Responsibility.</strong> Encodes who has authority to approve which decisions.</p>
+<p class="muted">Also known as: Approval hierarchy, Organizational approval policy, Multi-level approval hierarchy, Transaction value threshold map</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Approval Authority Matrix"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><a href="ActionPolicyEngine.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Action Policy Engine: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Action Policy Engine</text></a><a href="ApprovalRouter.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Approval Router: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Approval Router</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ActionPolicyEngine.html"><span class="dot g7" aria-hidden="true"></span>Action Policy Engine</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/ApprovalRouter.html"><span class="dot g8" aria-hidden="true"></span>Approval Router</a> <a class="src" href="../sources.html#Ch9.2">Ch9.2</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example tiers: $1,000 team lead, $10,000 manager, $50,000 director, $500,000 VP (Ch9.2).</li><li>Procurement example: &lt; $1,000 full autonomy; $1,000-$10,000 manager approval; &gt; $10,000 procurement committee review (Ch10.5).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.2">Ch9.2</a>: T. Nguyen, &quot;Action Constraints and Permission Models,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Explainer · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Decision Explainer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:DecisionExplainer</code></p>
+<div class="split"><section>
+<p class="lead">An abstract explanation component that generates a justification for a specific agent or model decision in terms understandable to its audience.</p>
+<p><strong>Responsibility.</strong> Derives why a particular decision was made from the decision&#x27;s inputs and model behaviour.</p>
+<p class="muted">Also known as: Explanation technique</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Decision Explainer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is evaluated by</title></line><a href="AuditLogStore.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Audit Log Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Audit Log Store</text></a><a href="ExplanationPresenter.html"><circle class="g8" cx="497.3" cy="126.5" r="7"><title>Explanation Presenter: is invoked by</title></circle><text x="506.7" y="123.0" text-anchor="start">Explanation Presenter</text></a><a href="CounterfactualExplainer.html"><circle class="g2" cx="526.2" cy="253.4" r="7"><title>Counterfactual Explainer: is specialized by</title></circle><text x="537.9" y="260.0" text-anchor="start">Counterfactual Explainer</text></a><a href="DecisionFactorExplainer.html"><circle class="g7" cx="445.1" cy="355.1" r="7"><title>Decision Factor Explainer: is specialized by</title></circle><text x="450.3" y="370.0" text-anchor="start">Decision Factor Explainer</text></a><a href="ExampleBasedExplainer.html"><circle class="g2" cx="314.9" cy="355.1" r="7"><title>Example-Based Explainer: is specialized by</title></circle><text x="309.7" y="370.0" text-anchor="end">Example-Based Explainer</text></a><a href="LocalSurrogateExplainer.html"><circle class="g2" cx="233.8" cy="253.4" r="7"><title>Local Surrogate Explainer: is specialized by</title></circle><text x="222.1" y="260.0" text-anchor="end">Local Surrogate Explainer</text></a><a href="ReasoningFaithfulnessTester.html"><circle class="g6" cx="262.7" cy="126.5" r="7"><title>Reasoning Faithfulness Tester: is evaluated by</title></circle><text x="253.3" y="123.0" text-anchor="end">Reasoning Faithfulness T…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/CounterfactualExplainer.html"><span class="dot g2" aria-hidden="true"></span>Counterfactual Explainer</a></td><td>Choose when users need to know the minimal changes that would flip the decision (why-not / recourse).</td></tr><tr><td><a class="comp" href="../c/DecisionFactorExplainer.html"><span class="dot g7" aria-hidden="true"></span>Decision Factor Explainer</a></td><td>Choose when users need the key factors behind a decision and their relative importance.</td></tr><tr><td><a class="comp" href="../c/ExampleBasedExplainer.html"><span class="dot g2" aria-hidden="true"></span>Example-Based Explainer</a></td><td>Choose when comparing the case to k similar past decisions conveys the rationale better than factor weights.</td></tr><tr><td><a class="comp" href="../c/LocalSurrogateExplainer.html"><span class="dot g2" aria-hidden="true"></span>Local Surrogate Explainer</a></td><td>Choose when the decision model is opaque and a model-agnostic local approximation of top feature contributions is needed.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExplanationPresenter.html"><span class="dot g8" aria-hidden="true"></span>Explanation Presenter</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ReasoningFaithfulnessTester.html"><span class="dot g6" aria-hidden="true"></span>Reasoning Faithfulness Tester</a> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST tie explanations to real system logic and verify them with fidelity testing (Ref10.02).</li><li>SHOULD offer multiple explanation types (Ref10.02).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Explainable AI</span></dd><dt>Quality attributes</dt><dd><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Black-box perception</span><span class="chip">Post-hoc rationalization</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref10.02">Ref10.02</a>: &quot;Explainability and Interpretability in Agent Systems,&quot; unpublished reference note (02-Explainability-Interpretability.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

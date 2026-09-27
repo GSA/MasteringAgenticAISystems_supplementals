@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Feedback Preference Labeler · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>AI-Feedback Preference Labeler</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:AIFeedbackPreferenceLabeler</code></p>
+<div class="split"><section>
+<p class="lead">A language-model judge that compares two candidate responses against a randomly selected constitutional principle and records which better adheres, producing AI-generated preference labels.</p>
+<p><strong>Responsibility.</strong> Labels response pairs by constitutional adherence.</p>
+<p class="muted">Also known as: Constitutional judge, RLAIF labeler, AI feedback model</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/LLMJudge.html"><span class="dot g6" aria-hidden="true"></span>LLM Judge</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when preference labels must scale without human annotation time and be traceable to explicit principles; complement with human labels where contextual nuance matters.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of AI-Feedback Preference Labeler"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads; is configured by</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>writes</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is configured by</title></line><a href="Constitution.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Constitution: reads; is configured by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Constitution</text></a><a href="LLMInferenceService.html"><circle class="g4" cx="497.3" cy="126.5" r="7"><title>LLM Inference Service: invokes</title></circle><text x="506.7" y="123.0" text-anchor="start">LLM Inference Service</text></a><a href="LLMJudge.html"><circle class="g6" cx="526.2" cy="253.4" r="7"><title>LLM Judge: specializes</title></circle><text x="537.9" y="260.0" text-anchor="start">LLM Judge</text></a><a href="TrainingPipelineOrchestrator.html"><circle class="g4" cx="445.1" cy="355.1" r="7"><title>Training Pipeline Orchestrator: is orchestrated by</title></circle><text x="450.3" y="370.0" text-anchor="start">Training Pipeline Orches…</text></a><a href="PreferenceDataset.html"><circle class="g4" cx="314.9" cy="355.1" r="7"><title>Preference Dataset: writes</title></circle><text x="309.7" y="370.0" text-anchor="end">Preference Dataset</text></a><a href="CandidateResponseSampler.html"><circle class="g4" cx="233.8" cy="253.4" r="7"><title>Candidate Response Sampler: receives data from</title></circle><text x="222.1" y="260.0" text-anchor="end">Candidate Response Sampler</text></a><a href="PrinciplePriorityPolicy.html"><circle class="g7" cx="262.7" cy="126.5" r="7"><title>Principle Priority Policy: is configured by</title></circle><text x="253.3" y="123.0" text-anchor="end">Principle Priority Policy</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/Constitution.html"><span class="dot g7" aria-hidden="true"></span>Constitution</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li><li><a class="comp" href="../c/PrinciplePriorityPolicy.html"><span class="dot g7" aria-hidden="true"></span>Principle Priority Policy</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/Constitution.html"><span class="dot g7" aria-hidden="true"></span>Constitution</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/PreferenceDataset.html"><span class="dot g4" aria-hidden="true"></span>Preference Dataset</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/CandidateResponseSampler.html"><span class="dot g4" aria-hidden="true"></span>Candidate Response Sampler</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/TrainingPipelineOrchestrator.html"><span class="dot g4" aria-hidden="true"></span>Training Pipeline Orchestrator</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be assumed to supersede human feedback; it may miss contextual nuance and value diversity human annotators capture.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Human preference collection may take weeks per iteration; AI-feedback labeling generates equivalent data in hours or days (Ch9.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Reinforcement Learning from AI Feedback (RLAIF)</span><span class="chip">Principle-guided pairwise comparison</span><span class="chip">LLM-as-Judge</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Inconsistent human annotator judgments</span><span class="chip">Annotator psychological burden</span><span class="chip">Slow preference collection</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.5">Ch9.5</a>: T. Nguyen, &quot;Constitutional AI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge Store Loader · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Knowledge Store Loader</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:KnowledgeStoreLoader</code></p>
+<div class="split"><section>
+<p class="lead">An abstract load-stage component that inserts processed records, embeddings and metadata into a target knowledge store.</p>
+<p><strong>Responsibility.</strong> Persists transformed data into a target store for retrieval.</p>
+<p class="muted">Also known as: Loader, Load stage</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Knowledge Store Loader"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is guarded by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is specialized by</title></line><a href="IngestionPipelineOrchestrator.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Ingestion Pipeline Orchestrator: is orchestrated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Ingestion Pipeline Orche…</text></a><a href="TextEmbeddingService.html"><circle class="g3" cx="509.9" cy="145.0" r="7"><title>Text Embedding Service: receives data from</title></circle><text x="520.3" y="143.0" text-anchor="start">Text Embedding Service</text></a><a href="VectorIndexLoader.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Vector Batch Ingestor: is specialized by</title></circle><text x="520.3" y="305.0" text-anchor="start">Vector Batch Ingestor</text></a><a href="PIIRedactor.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>PII Redactor: is guarded by</title></circle><text x="380.0" y="396.0" text-anchor="middle">PII Redactor</text></a><a href="KnowledgeGraphLoader.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>Knowledge Graph Loader: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Knowledge Graph Loader</text></a><a href="FullTextIndexLoader.html"><circle class="g3" cx="250.1" cy="145.0" r="7"><title>Full-Text Index Loader: is specialized by</title></circle><text x="239.7" y="143.0" text-anchor="end">Full-Text Index Loader</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/FullTextIndexLoader.html"><span class="dot g3" aria-hidden="true"></span>Full-Text Index Loader</a></td><td>—</td></tr><tr><td><a class="comp" href="../c/KnowledgeGraphLoader.html"><span class="dot g3" aria-hidden="true"></span>Knowledge Graph Loader</a></td><td>—</td></tr><tr><td><a class="comp" href="../c/VectorIndexLoader.html"><span class="dot g3" aria-hidden="true"></span>Vector Batch Ingestor</a></td><td>—</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/TextEmbeddingService.html"><span class="dot g3" aria-hidden="true"></span>Text Embedding Service</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>is guarded by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/PIIRedactor.html"><span class="dot g7" aria-hidden="true"></span>PII Redactor</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/IngestionPipelineOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Ingestion Pipeline Orchestrator</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD configure target-specific indexing (vector indexes, full-text analyzers) and confirm after loading that data indexed correctly and queries return relevant results.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">ETL Load stage</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

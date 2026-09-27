@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Error Presenter · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Error Presenter</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ErrorPresenter</code></p>
+<div class="split"><section>
+<p class="lead">A presentation component that translates agent failures into plain-language layered messages stating cause, permanence, expected resolution, and separate user and system recovery actions.</p>
+<p><strong>Responsibility.</strong> Communicates failures with actionable recovery guidance.</p>
+<p class="muted">Also known as: Error communication UI, Recovery guidance, Degradation warning display</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Error Presenter"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>emits telemetry to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>sends data to</title></line><a href="TraceCollector.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Trace Collector: emits telemetry to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Trace Collector</text></a><a href="ActionPolicyEngine.html"><circle class="g7" cx="509.9" cy="145.0" r="7"><title>Action Policy Engine: receives data from</title></circle><text x="520.3" y="143.0" text-anchor="start">Action Policy Engine</text></a><a href="RetryHandler.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Retry Handler: receives data from</title></circle><text x="520.3" y="305.0" text-anchor="start">Retry Handler</text></a><a href="GracefulDegradationManager.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Graceful Degradation Manager: receives data from</title></circle><text x="380.0" y="396.0" text-anchor="middle">Graceful Degradation Man…</text></a><a href="ResponseStreamer.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Response Streamer: receives data from</title></circle><text x="239.7" y="305.0" text-anchor="end">Response Streamer</text></a><a href="AgentUserInterface.html"><circle class="g8" cx="250.1" cy="145.0" r="7"><title>Agent User Interface: sends data to</title></circle><text x="239.7" y="143.0" text-anchor="end">Agent User Interface</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>emits telemetry to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch1.1A">Ch1.1A</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ActionPolicyEngine.html"><span class="dot g7" aria-hidden="true"></span>Action Policy Engine</a> <a class="src" href="../sources.html#Ch1.1A">Ch1.1A</a></li><li><a class="comp" href="../c/GracefulDegradationManager.html"><span class="dot g1" aria-hidden="true"></span>Graceful Degradation Manager</a> <a class="src" href="../sources.html#Ch2.8">Ch2.8</a></li><li><a class="comp" href="../c/ResponseStreamer.html"><span class="dot g8" aria-hidden="true"></span>Response Streamer</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li><li><a class="comp" href="../c/RetryHandler.html"><span class="dot g1" aria-hidden="true"></span>Retry Handler</a> <a class="src" href="../sources.html#Ch1.1A">Ch1.1A</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AgentUserInterface.html"><span class="dot g8" aria-hidden="true"></span>Agent User Interface</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.1A">Ch1.1A</a> <a class="src" href="../sources.html#Ch1.1B">Ch1.1B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST NOT expose raw exceptions or stack traces to end users by default.</li><li>SHOULD indicate whether an error is temporary (auto-retry) or needs user action, with estimated resolution time when known.</li><li>SHOULD offer fallback options such as cached results when primary methods fail.</li><li>SHOULD log full technical error details separately for debugging.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Layered error disclosure</span><span class="chip">Clarification prompt for ambiguous input</span><span class="chip">Capability-limit disclosure</span><span class="chip">Policy-block explanation with approval path</span><span class="chip">Graceful degradation with fallback options</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Trust loss from generic error messages</span><span class="chip">Exposure of raw stack traces to users</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.1A">Ch1.1A</a>: T. Nguyen, &quot;Designing User Interfaces for Intuitive Human-Agent Interaction,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch1.1B">Ch1.1B</a>: T. Nguyen, &quot;Human-in-the-Loop Patterns and Accessible Design,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.8">Ch2.8</a>: T. Nguyen, &quot;Error Handling and Resilience,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.9">Ch2.9</a>: T. Nguyen, &quot;Streaming and Real-Time Responses,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

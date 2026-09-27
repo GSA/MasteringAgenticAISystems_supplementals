@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Violation Response Policy · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Violation Response Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:ViolationResponsePolicy</code></p>
+<div class="split"><section>
+<p class="lead">An abstract configuration stating what the system does when an output is judged to violate, or plausibly violate, a principle.</p>
+<p><strong>Responsibility.</strong> Determines the system&#x27;s reaction to principle violations.</p>
+<p class="muted">Also known as: Failure response policy, Enforcement strictness</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Violation Response Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>configures</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is specialized by</title></line><a href="ActionPolicyEngine.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Action Policy Engine: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Action Policy Engine</text></a><a href="OutputRail.html"><circle class="g7" cx="497.3" cy="126.5" r="7"><title>Output Rail: configures</title></circle><text x="506.7" y="123.0" text-anchor="start">Output Rail</text></a><a href="BlockingViolationResponsePolicy.html"><circle class="g7" cx="526.2" cy="253.4" r="7"><title>Blocking Violation Response Policy: is specialized by</title></circle><text x="537.9" y="260.0" text-anchor="start">Blocking Violation Respo…</text></a><a href="HumanEscalationViolationResponsePolicy.html"><circle class="g7" cx="445.1" cy="355.1" r="7"><title>Human-Escalation Violation Response Policy: is specialized by</title></circle><text x="450.3" y="370.0" text-anchor="start">Human-Escalation Violati…</text></a><a href="ContentModificationViolationResponsePolicy.html"><circle class="g7" cx="314.9" cy="355.1" r="7"><title>Content-Modification Violation Response Policy: is specialized by</title></circle><text x="309.7" y="370.0" text-anchor="end">Content-Modification Vio…</text></a><a href="WarningLabelViolationResponsePolicy.html"><circle class="g7" cx="233.8" cy="253.4" r="7"><title>Warning-Label Violation Response Policy: is specialized by</title></circle><text x="222.1" y="260.0" text-anchor="end">Warning-Label Violation …</text></a><a href="MonitorOnlyViolationResponsePolicy.html"><circle class="g7" cx="262.7" cy="126.5" r="7"><title>Monitor-Only Violation Response Policy: is specialized by</title></circle><text x="253.3" y="123.0" text-anchor="end">Monitor-Only Violation R…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/BlockingViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Blocking Violation Response Policy</a></td><td>Choose for clearly prohibited categories (e.g., illegal activity) where erring on the side of safety outweighs refusing some acceptable requests.</td></tr><tr><td><a class="comp" href="../c/ContentModificationViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Content-Modification Violation Response Policy</a></td><td>Choose when the violating portion can be removed or rewritten so the remaining response stays useful.</td></tr><tr><td><a class="comp" href="../c/HumanEscalationViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Human-Escalation Violation Response Policy</a></td><td>Choose for ambiguous cases with possible legitimate justification (fiction, security research) or high-stakes dilemmas, accepting slower responses for greater accuracy.</td></tr><tr><td><a class="comp" href="../c/MonitorOnlyViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Monitor-Only Violation Response Policy</a></td><td>Choose for borderline outputs approaching policy boundaries where immediate blocking is not required; use blocking mode for inviolable legal, ethical or safety constraints.</td></tr><tr><td><a class="comp" href="../c/WarningLabelViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Warning-Label Violation Response Policy</a></td><td>Choose when preserving user autonomy matters and the concern (e.g., possible misinformation, low confidence) warrants flagging rather than blocking.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ActionPolicyEngine.html"><span class="dot g7" aria-hidden="true"></span>Action Policy Engine</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li><li><a class="comp" href="../c/OutputRail.html"><span class="dot g7" aria-hidden="true"></span>Output Rail</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a> <a class="src" href="../sources.html#Ref9.01">Ref9.01</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be chosen explicitly as a judgment balancing user experience, autonomy and safety assurance.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.5">Ch9.5</a>: T. Nguyen, &quot;Constitutional AI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

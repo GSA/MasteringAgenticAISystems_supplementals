@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parametric Answer Generator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Parametric Answer Generator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ParametricAnswerGenerator</code></p>
+<div class="split"><section>
+<p class="lead">An answer-generation component that prompts the LLM to answer from its parametric (weight-encoded) knowledge without retrieved context, used for retrieval-free queries and as a retrieval fallback.</p>
+<p><strong>Responsibility.</strong> Answers queries without retrieval from the model&#x27;s parametric knowledge.</p>
+<p class="muted">Also known as: Direct parametric generation, No-retrieval generation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Parametric Answer Generator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is failover for</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is invoked by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="Retriever.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Retriever: is failover for</title></circle><text x="534.1" y="173.9" text-anchor="start">Retriever</text></a><a href="GracefulDegradationManager.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Graceful Degradation Manager: is routed to by</title></circle><text x="475.2" y="355.1" text-anchor="start">Graceful Degradation Man…</text></a><a href="AdaptiveRetrievalController.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Adaptive Retrieval Controller: is routed to by</title></circle><text x="284.8" y="355.1" text-anchor="end">Adaptive Retrieval Contr…</text></a><a href="ConfidenceGatedRetrievalController.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Confidence-Gated Retrieval Controller: is invoked by</title></circle><text x="225.9" y="173.9" text-anchor="end">Confidence-Gated Retriev…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConfidenceGatedRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Confidence-Gated Retrieval Controller</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AdaptiveRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Adaptive Retrieval Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li><li><a class="comp" href="../c/GracefulDegradationManager.html"><span class="dot g1" aria-hidden="true"></span>Graceful Degradation Manager</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>is failover for <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/Retriever.html"><span class="dot g3" aria-hidden="true"></span>Retriever</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.6">Ch6.6</a>: T. Nguyen, &quot;Query Decomposition and Adaptive Retrieval,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

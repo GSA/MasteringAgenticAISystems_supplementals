@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reasoning Quality Threshold Configuration · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Reasoning Quality Threshold Configuration</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:ReasoningQualityThresholdConfig</code></p>
+<div class="split"><section>
+<p class="lead">A configuration artifact holding calibrated decision thresholds for reasoning validators and tiered alerting on reasoning quality degradation.</p>
+<p><strong>Responsibility.</strong> Specifies calibrated thresholds for reasoning checks and alerts.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Reasoning Quality Threshold Configuration"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>configures</title></line><a href="AlertManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Alert Manager: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alert Manager</text></a><a href="ContradictionDetector.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Reasoning Consistency Checker: configures</title></circle><text x="542.0" y="224.0" text-anchor="start">Reasoning Consistency Ch…</text></a><a href="EvaluatorCalibrator.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Evaluator Calibrator: is written by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Evaluator Calibrator</text></a><a href="EntailmentStepValidator.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Entailment Step Validator: configures</title></circle><text x="218.0" y="224.0" text-anchor="end">Entailment Step Validator</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AlertManager.html"><span class="dot g6" aria-hidden="true"></span>Alert Manager</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li><li><a class="comp" href="../c/ContradictionDetector.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Consistency Checker</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li><li><a class="comp" href="../c/EntailmentStepValidator.html"><span class="dot g2" aria-hidden="true"></span>Entailment Step Validator</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluatorCalibrator.html"><span class="dot g6" aria-hidden="true"></span>Evaluator Calibrator</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Entailment 0.7-0.8; contradiction 0.6-0.7; alerts at &gt;15%/24h, &gt;5%/week over 3 weeks, &lt;60% per high-stakes trace (Ch3.9).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.9">Ch3.9</a>: T. Nguyen, &quot;Reasoning Quality,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proxy Feature Detector · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Proxy Feature Detector</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ProxyFeatureDetector</code></p>
+<div class="split"><section>
+<p class="lead">A bias-analysis component that identifies seemingly neutral input features, such as zip code, names, education credentials, or healthcare cost, that correlate with protected characteristics.</p>
+<p><strong>Responsibility.</strong> Flags candidate proxy variables for protected attributes for fairness review.</p>
+<p class="muted">Also known as: Feature fairness evaluation, Proxy variable analysis, Feature selection bias analysis</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Proxy Feature Detector"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads; evaluates</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>sends data to</title></line><a href="LabeledDecisionCaseDataset.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Labeled Decision Case Dataset: reads; evaluates</title></circle><text x="380.0" y="50.0" text-anchor="middle">Labeled Decision Case Da…</text></a><a href="BiasEvaluator.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Bias Evaluator: sends data to</title></circle><text x="542.0" y="224.0" text-anchor="start">Bias Evaluator</text></a><a href="PredictiveDecisionModel.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Predictive Decision Model: evaluates</title></circle><text x="380.0" y="396.0" text-anchor="middle">Predictive Decision Model</text></a><a href="FairnessAuditor.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Fairness Auditor: sends data to</title></circle><text x="218.0" y="224.0" text-anchor="end">Fairness Auditor</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/LabeledDecisionCaseDataset.html"><span class="dot g4" aria-hidden="true"></span>Labeled Decision Case Dataset</a> <a class="src" href="../sources.html#Ch9.4">Ch9.4</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/BiasEvaluator.html"><span class="dot g7" aria-hidden="true"></span>Bias Evaluator</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a></li><li><a class="comp" href="../c/FairnessAuditor.html"><span class="dot g7" aria-hidden="true"></span>Fairness Auditor</a> <a class="src" href="../sources.html#Ch9.4">Ch9.4</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/LabeledDecisionCaseDataset.html"><span class="dot g4" aria-hidden="true"></span>Labeled Decision Case Dataset</a> <a class="src" href="../sources.html#Ch9.5">Ch9.5</a></li><li><a class="comp" href="../c/PredictiveDecisionModel.html"><span class="dot g2" aria-hidden="true"></span>Predictive Decision Model</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST evaluate features for fairness impact, not only task relevance.</li><li>SHOULD route flagged features to human causal review with domain expertise, since automated techniques alone cannot distinguish legitimate from proxy relationships.</li><li>SHOULD be applied during feature selection because output-level principles cannot detect proxy relationships.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Fairness (NIST AI RMF: fair, harmful bias managed)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Proxy variable bias</span><span class="chip">Feature selection bias</span><span class="chip">Proxy amplification when protected attributes are included</span><span class="chip">Proxy discrimination</span><span class="chip">Disparate impact</span><span class="chip">Proxy discrimination (zip code, educational institution)</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">Equal Credit Opportunity Act (disparate impact)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.4">Ch9.4</a>: T. Nguyen, &quot;Fairness and Bias Mitigation,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.5">Ch9.5</a>: T. Nguyen, &quot;Constitutional AI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.7">Ch9.7</a>: T. Nguyen, &quot;GDPR and Data Protection Regulations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

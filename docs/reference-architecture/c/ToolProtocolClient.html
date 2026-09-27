@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool Protocol Client · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ToolIntegrationComponent">Tools &amp; Integration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Tool Protocol Client</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Tools &amp; Integration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:ToolProtocolClient</code></p>
+<div class="split"><section>
+<p class="lead">A client that connects an agent to remote standard tool-protocol servers, discovers their tools at runtime and makes them invocable alongside local tools.</p>
+<p><strong>Responsibility.</strong> Dynamically loads and invokes tools hosted on remote tool-protocol servers.</p>
+<p class="muted">Also known as: MCP client, Dynamic remote tool loader</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Tool Protocol Client"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>emits telemetry to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>invokes</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="TraceCollector.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Trace Collector: emits telemetry to</title></circle><text x="542.0" y="224.0" text-anchor="start">Trace Collector</text></a><a href="ToolRegistry.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Tool Registry: writes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Tool Registry</text></a><a href="ToolProtocolServer.html"><circle class="g1" cx="230.0" cy="220.0" r="7"><title>Tool Protocol Server: invokes</title></circle><text x="218.0" y="224.0" text-anchor="end">Tool Protocol Server</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ToolProtocolServer.html"><span class="dot g1" aria-hidden="true"></span>Tool Protocol Server</a> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a> <a class="src" href="../sources.html#Ref1.01">Ref1.01</a> <span class="src more" title="Ref3.07">+1</span></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ToolRegistry.html"><span class="dot g1" aria-hidden="true"></span>Tool Registry</a> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a></li></ul></section>
+<section class="rel"><h3>emits telemetry to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD keep remote tool calls within the same profiling and telemetry scope as local tool calls.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Dynamic tool loading</span><span class="chip">Remote tool invocation</span></dd><dt>Technologies</dt><dd><span class="chip">Model Context Protocol (MCP)</span><span class="chip">NVIDIA NeMo Agent Toolkit</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Compatibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Blind spots between local and remote tool-call profiling</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.3">Ch7.3</a>: T. Nguyen, &quot;NeMo Agent Toolkit Profiling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref1.01">Ref1.01</a>: NVIDIA, &quot;NVIDIA NeMo Agent Toolkit overview,&quot; NVIDIA NeMo Agent Toolkit Documentation, v1.8. Accessed: Sep. 26, 2026. [Online]. Available: https://docs.nvidia.com/nemo/agent-toolkit/latest/index.html</li><li><a href="../sources.html#Ref3.07">Ref3.07</a>: NVIDIA, &quot;NeMo-Agent-Toolkit,&quot; GitHub repository. Accessed: Sep. 27, 2026. [Online]. Available: https://github.com/NVIDIA/NeMo-Agent-Toolkit</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incident Commander · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Human role</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Incident Commander</h1>
+<p class="badges"><span class="badge">Human role</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:IncidentCommander</code></p>
+<div class="split"><section>
+<p class="lead">A human role paged on-call for critical incidents who holds decision-making authority to direct containment, escalation and communication until resolution.</p>
+<p><strong>Responsibility.</strong> Directs the response to a critical safety or compliance incident.</p>
+<p class="muted">Also known as: Incident Manager, On-call incident commander</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Incident Commander"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives escalation from</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>triggers</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>triggers</title></line><a href="IncidentManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Incident Manager: receives escalation from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Incident Manager</text></a><a href="GracefulDegradationManager.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Graceful Degradation Manager: triggers</title></circle><text x="542.0" y="224.0" text-anchor="start">Graceful Degradation Man…</text></a><a href="FeatureFlagService.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Feature Flag Service: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Feature Flag Service</text></a><a href="ImmediateRollbackController.html"><circle class="g5" cx="230.0" cy="220.0" r="7"><title>Immediate Rollback Controller: triggers</title></circle><text x="218.0" y="224.0" text-anchor="end">Immediate Rollback Contr…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/FeatureFlagService.html"><span class="dot g5" aria-hidden="true"></span>Feature Flag Service</a> <a class="src" href="../sources.html#Ref9.08">Ref9.08</a></li></ul></section>
+<section class="rel"><h3>receives escalation from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/IncidentManager.html"><span class="dot g6" aria-hidden="true"></span>Incident Manager</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a> <a class="src" href="../sources.html#Ref9.08">Ref9.08</a></li></ul></section>
+<section class="rel"><h3>triggers <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/GracefulDegradationManager.html"><span class="dot g1" aria-hidden="true"></span>Graceful Degradation Manager</a> <a class="src" href="../sources.html#Ref9.08">Ref9.08</a></li><li><a class="comp" href="../c/ImmediateRollbackController.html"><span class="dot g5" aria-hidden="true"></span>Immediate Rollback Controller</a> <a class="src" href="../sources.html#Ref9.08">Ref9.08</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST have clear decision-making authority, including assessing whether system shutdown is necessary.</li><li>SHOULD focus on containment first and preserve evidence before remediation.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Uncoordinated incident response</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.08">Ref9.08</a>: &quot;Safety Incident Response for AI Systems,&quot; unpublished reference note (08-Safety-Incident-Response.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

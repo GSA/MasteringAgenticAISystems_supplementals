@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchmark Environment · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Benchmark Environment</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:BenchmarkEnvironment</code></p>
+<div class="split"><section>
+<p class="lead">An interactive, reproducible task environment (e.g., operating system shell, database, knowledge graph, web application, game) that exposes actions and state to an agent under evaluation over multi-turn episodes.</p>
+<p><strong>Responsibility.</strong> Provides a controlled interactive world in which an agent&#x27;s multi-turn task performance is measured.</p>
+<p class="muted">Also known as: Evaluation environment, Benchmark environment adapter, Testing environment</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Benchmark Environment"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is configured by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="EvaluationHarness.html"><circle class="g6" cx="509.9" cy="145.0" r="7"><title>Evaluation Harness: is invoked by</title></circle><text x="520.3" y="143.0" text-anchor="start">Evaluation Harness</text></a><a href="StateOutcomeScorer.html"><circle class="g6" cx="509.9" cy="295.0" r="7"><title>State Outcome Scorer: is invoked by</title></circle><text x="520.3" y="305.0" text-anchor="start">State Outcome Scorer</text></a><a href="SimulatedWebEnvironment.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Simulated Web Environment: is specialized by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Simulated Web Environment</text></a><a href="DecisionScenarioSimulator.html"><circle class="g6" cx="250.1" cy="295.0" r="7"><title>Decision Scenario Simulator: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Decision Scenario Simula…</text></a><a href="EnvironmentSnapshot.html"><circle class="g6" cx="250.1" cy="145.0" r="7"><title>Environment Snapshot: is configured by</title></circle><text x="239.7" y="143.0" text-anchor="end">Environment Snapshot</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/DecisionScenarioSimulator.html"><span class="dot g6" aria-hidden="true"></span>Decision Scenario Simulator</a></td><td>Choose to test utility-driven decisions across diverse and edge-case scenarios before deployment.</td></tr><tr><td><a class="comp" href="../c/SimulatedWebEnvironment.html"><span class="dot g6" aria-hidden="true"></span>Simulated Web Environment</a></td><td>—</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EnvironmentSnapshot.html"><span class="dot g6" aria-hidden="true"></span>Environment Snapshot</a> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li><li><a class="comp" href="../c/StateOutcomeScorer.html"><span class="dot g6" aria-hidden="true"></span>State Outcome Scorer</a> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be standardized and version-controlled, with fixed snapshots for regression testing and documented dependencies.</li><li>SHOULD be provisioned by automated setup and updated deliberately rather than allowed to drift silently.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>AgentBench OS tasks require ~10-20 commands; hard tasks generate 4,000-13,000 tokens (dev avg 4,000, test avg 13,000) (Ch3.2).</li><li>WebArena requires deploying four web applications (e-commerce, forums, code collaboration, CMS) (Ch3.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Multi-turn interactive evaluation</span><span class="chip">Progressive difficulty (easy / medium / hard)</span><span class="chip">Supplementary tools (offline Wikipedia, calculator, maps)</span></dd><dt>Technologies</dt><dd><span class="chip">AgentBench (OS, DB, KG, DCG, LTP, HH, WS, WB)</span><span class="chip">ALFWorld</span><span class="chip">WebShop</span><span class="chip">Mind2Web</span><span class="chip">WebArena</span><span class="chip">tau-Bench</span><span class="chip">AstaBench</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Measurement variance from environment drift</span><span class="chip">Invalidated historical comparisons after interface changes</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.2">Ch3.2</a>: T. Nguyen, &quot;Compare Agent Performance Across Tasks and Datasets,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

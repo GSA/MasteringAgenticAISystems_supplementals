@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost Rate Card · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Cost Rate Card</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:CostRateCard</code></p>
+<div class="split"><section>
+<p class="lead">A versioned table of unit prices (per-million input, output and cached input tokens per model, plus GPU-hour, memory, storage and network rates) used to convert metered usage into monetary cost.</p>
+<p><strong>Responsibility.</strong> Supplies the unit prices applied to metered usage when computing cost.</p>
+<p class="muted">Also known as: Token pricing table, Cost model, Asymmetric token price list</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cost Rate Card"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by</title></line><a href="TokenCostMeter.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Token Cost Meter: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Token Cost Meter</text></a><a href="CostChargebackService.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Cost Chargeback Service: is read by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Cost Chargeback Service</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/TokenCostMeter.html"><span class="dot g6" aria-hidden="true"></span>Token Cost Meter</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CostChargebackService.html"><span class="dot g7" aria-hidden="true"></span>Cost Chargeback Service</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST price input, output and cached input tokens separately, because output tokens typically cost 4-5x input tokens.</li><li>SHOULD include infrastructure rates (GPU-hour, host memory, storage, network) so self-hosted and API inference share one cost model.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Output tokens cost ~4:1 to 5:1 relative to input tokens, reflecting one forward pass per generated token versus single-pass input encoding (a 200-token output needs 200 forward passes) (Ch8.3).</li><li>GPT-4o: $2.50 per 1M input, $10.00 per 1M output, $1.25 per 1M cached input tokens; GPT-4o-mini: $0.15 input / $0.60 output per 1M (~17x cheaper input, ~16x cheaper output) (Ch8.3).</li><li>Customer-service example (67 input, 267 output tokens, $0.0028375/request): output is 94% of cost at 80% of tokens; a 20% output cut saves 18.7% of cost versus 1.1% for a 20% input cut (~17x more) (Ch8.3).</li><li>GPU rates: H100 $2-3/h, A100 $1.50-2/h, L40S $1.50-2/h; host RAM $0.05-0.10/GB/month; storage $0.10-0.25/GB/month; network $0.01-0.15/GB (Ref8.05).</li><li>Cost composition: infrastructure 60-70%, API and third-party 20-30%, operational 10-15% of total (Ref8.05).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Asymmetric input/output token pricing</span></dd><dt>Technologies</dt><dd><span class="chip">OpenAI API</span><span class="chip">GPT-4o</span><span class="chip">GPT-4o-mini</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Naive uniform-cost-per-token assumptions misdirecting optimization</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.3">Ch8.3</a>: T. Nguyen, &quot;Token Economics and Architecture,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inference Backend · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Inference Backend</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:InferenceBackend</code></p>
+<div class="split"><section>
+<p class="lead">A pluggable execution module, loaded dynamically by an inference server according to model configuration, that runs a model in one specific framework runtime.</p>
+<p><strong>Responsibility.</strong> Executes inference for models of one framework behind the server&#x27;s backend contract.</p>
+<p class="muted">Also known as: Triton backend</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Inference Backend"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is orchestrated by</title></line><a href="InferenceServer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Server: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Server</text></a><a href="LLMGenerationBackend.html"><circle class="g4" cx="509.9" cy="145.0" r="7"><title>LLM Generation Backend: is specialized by</title></circle><text x="520.3" y="143.0" text-anchor="start">LLM Generation Backend</text></a><a href="PrecompiledEngineBackend.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Pre-compiled Engine Backend: is specialized by</title></circle><text x="520.3" y="305.0" text-anchor="start">Pre-compiled Engine Back…</text></a><a href="TensorFrameworkBackend.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Tensor Framework Backend: is specialized by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Tensor Framework Backend</text></a><a href="PortableLLMRuntimeBackend.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Portable LLM Runtime Backend: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Portable LLM Runtime Bac…</text></a><a href="ModelEnsembleOrchestrator.html"><circle class="g4" cx="250.1" cy="145.0" r="7"><title>Model Ensemble Orchestrator: is orchestrated by</title></circle><text x="239.7" y="143.0" text-anchor="end">Model Ensemble Orchestra…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/LLMGenerationBackend.html"><span class="dot g4" aria-hidden="true"></span>LLM Generation Backend</a></td><td>Choose for large language model generation, where the engine&#x27;s continuous or in-flight batching outperforms request-level batching.</td></tr><tr><td><a class="comp" href="../c/PortableLLMRuntimeBackend.html"><span class="dot g4" aria-hidden="true"></span>Portable LLM Runtime Backend</a></td><td>Choose for uncommon or heterogeneous GPUs (RTX 4090, A10G, V100, T4), edge and mixed research clusters, or development prioritizing iteration speed.</td></tr><tr><td><a class="comp" href="../c/PrecompiledEngineBackend.html"><span class="dot g4" aria-hidden="true"></span>Pre-compiled Engine Backend</a></td><td>Choose when pre-compiled engines exist for the deployed GPU (e.g., A100 40/80GB, H100 80GB, L40S 48GB).</td></tr><tr><td><a class="comp" href="../c/TensorFrameworkBackend.html"><span class="dot g4" aria-hidden="true"></span>Tensor Framework Backend</a></td><td>Choose for non-autoregressive models (classifiers, encoders, vision, tree-based models, custom Python logic) that benefit from server-side dynamic batching; OpenVINO for Intel CPU or edge CPU-only infrastructure.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ModelEnsembleOrchestrator.html"><span class="dot g4" aria-hidden="true"></span>Model Ensemble Orchestrator</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST choose batching configuration per model according to the backend that executes it.</li><li>SHOULD choose the backend per use case: compiled-engine backend for production LLM inference (highest performance), portable-format backend for multi-framework models, framework backends for development, custom-code backend for custom logic at lower performance.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Plugin architecture</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Triton Inference Server</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Compatibility (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.5">Ch4.5</a>: T. Nguyen, &quot;NVIDIA NIM and Triton Inference Server,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.1B">Ch7.1B</a>: T. Nguyen, &quot;Nvidia NIM and Colang,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.08">Ref7.08</a>: NVIDIA, &quot;NVIDIA Deep Learning Triton Inference Server Documentation,&quot; NVIDIA Docs. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/deeplearning/triton-inference-server/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

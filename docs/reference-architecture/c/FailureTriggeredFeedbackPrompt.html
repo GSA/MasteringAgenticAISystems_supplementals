@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Failure-Triggered Feedback Prompt · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Failure-Triggered Feedback Prompt</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:FailureTriggeredFeedbackPrompt</code></p>
+<div class="split"><section>
+<p class="lead">A feedback collector that proactively solicits a reason when behavioural signals such as abandonment or rapid escalation indicate an unhelpful response.</p>
+<p><strong>Responsibility.</strong> Converts detected failed interactions into targeted feedback opportunities.</p>
+<p class="muted">Also known as: Contextual failure prompt</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/FeedbackCollector.html"><span class="dot g8" aria-hidden="true"></span>Feedback Collector</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when training data should focus precisely on current weaknesses rather than random optional feedback.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Failure-Triggered Feedback Prompt"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is triggered by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="FeedbackCollector.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Feedback Collector: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Feedback Collector</text></a><a href="ImplicitFeedbackAnalyzer.html"><circle class="g6" cx="522.7" cy="173.6" r="7"><title>Behavioral Signal Tracker: is triggered by</title></circle><text x="534.1" y="173.9" text-anchor="start">Behavioral Signal Tracker</text></a><a href="DeferredFeedbackSurvey.html"><circle class="g8" cx="468.2" cy="341.4" r="7"><title>Deferred Feedback Survey: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">Deferred Feedback Survey</text></a><a href="BinaryRatingFeedbackPrompt.html"><circle class="g8" cx="291.8" cy="341.4" r="7"><title>Binary Rating Feedback Prompt: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Binary Rating Feedback P…</text></a><a href="StructuredCorrectionFeedbackForm.html"><circle class="g8" cx="237.3" cy="173.6" r="7"><title>Structured Correction Feedback Form: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Structured Correction Fe…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is triggered by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ImplicitFeedbackAnalyzer.html"><span class="dot g6" aria-hidden="true"></span>Behavioral Signal Tracker</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/BinaryRatingFeedbackPrompt.html"><span class="dot g8" aria-hidden="true"></span>Binary Rating Feedback Prompt</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li><li><a class="comp" href="../c/DeferredFeedbackSurvey.html"><span class="dot g8" aria-hidden="true"></span>Deferred Feedback Survey</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li><li><a class="comp" href="../c/StructuredCorrectionFeedbackForm.html"><span class="dot g8" aria-hidden="true"></span>Structured Correction Feedback Form</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD ask &quot;That answer wasn&#x27;t helpful. Could you tell us why?&quot; when a clearly unhelpful response is detected.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Targeted solicitation at failure points</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Feedback samples dominated by successful cases with little improvement signal</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

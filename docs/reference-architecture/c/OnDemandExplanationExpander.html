@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On-Demand Explanation Expander · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>On-Demand Explanation Expander</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:OnDemandExplanationExpander</code></p>
+<div class="split"><section>
+<p class="lead">An expansion controller that reveals deeper explanation layers only when the user activates controls such as &#x27;Show More Details&#x27;, &#x27;Technical View&#x27; toggles or collapsible step indicators.</p>
+<p><strong>Responsibility.</strong> Expands explanation layers upon explicit user request.</p>
+<p class="muted">Also known as: Passive explanation, Show More button, Technical View toggle, Collapsible step cascade</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ExplanationExpansionController.html"><span class="dot g8" aria-hidden="true"></span>Explanation Expansion Controller</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when users can be expected to seek detail themselves (low time pressure, routine or low-stakes decisions); insufficient alone because users rarely seek additional information spontaneously.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of On-Demand Explanation Expander"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>specializes</title></line><a href="EndUser.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>End User: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">End User</text></a><a href="ProactiveExplanationExpander.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Proactive Explanation Expander: alternative to</title></circle><text x="520.3" y="305.0" text-anchor="start">Proactive Explanation Ex…</text></a><a href="ExplanationExpansionController.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Explanation Expansion Controller: specializes</title></circle><text x="239.7" y="305.0" text-anchor="end">Explanation Expansion Co…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EndUser.html"><span class="dot g8" aria-hidden="true"></span>End User</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ProactiveExplanationExpander.html"><span class="dot g8" aria-hidden="true"></span>Proactive Explanation Expander</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be relied on as the sole disclosure path under time pressure or cognitive load (passive discovery fallacy).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Reactive disclosure</span><span class="chip">Collapsible step indicators</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Cognitive overload</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

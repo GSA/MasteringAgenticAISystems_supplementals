@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Failure Taxonomy · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Failure Taxonomy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:FailureTaxonomy</code></p>
+<div class="split"><section>
+<p class="lead">A versioned classification scheme of agent failure categories with domain-specific severity and fix-effort weights used to categorise and prioritise evaluation failures.</p>
+<p><strong>Responsibility.</strong> Defines failure categories and their severity and effort weights.</p>
+<p class="muted">Also known as: Error Taxonomy, Hallucination severity classification, Hallucination taxonomy, Three-tier agent error taxonomy, Planning/execution/verification failure tiers, Agent execution / system / data error categories</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Failure Taxonomy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><a href="EvaluationFailureAnalyzer.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Failure Analyzer: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Failure Analy…</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EvaluationFailureAnalyzer.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Failure Analyzer</a> <a class="src" href="../sources.html#Ch3.4">Ch3.4</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a> <span class="src more" title="Ch8.2A">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD encode the domain&#x27;s risk tolerance in category severity weights.</li><li>SHOULD distinguish critical, high, medium and low severity hallucinations by impact.</li><li>SHOULD distinguish mechanisms: training data contamination, temporal misinformation, confabulated citations, contextual distortion, multi-agent coordination failure.</li><li>SHOULD classify every agent failure as planning (reasoning), execution (infrastructure) or verification (silent incorrect output) before choosing a remedy.</li><li>SHOULD match remediation to tier: prompts, examples or fine-tuning for planning; retries, circuit breakers and capacity for execution; validation, guardrails and human review for verification.</li><li>SHOULD track remediation effectiveness per tier; simultaneous decrease across tiers suggests a broader (e.g., load-related) root cause.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Categories: tool selection, parameter, reasoning, retrieval, timeout, hallucination; example severity 6/5/7/5/3/9 and effort 7/8/3/4/6/2 on 1-10 scales (Ch3.4).</li><li>If 80% of errors are execution failures (e.g., payment API timeouts), prompt changes accomplish nothing (Ch8.2A).</li><li>Categories: agent execution (hallucination HIGH, tool call MEDIUM, decision loop HIGH), system (OOM CRITICAL, latency timeout HIGH, database connection CRITICAL), data (missing/corrupt MEDIUM, API response MEDIUM-HIGH) (Ref8.06).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Severity-weighted prioritisation</span><span class="chip">Taxonomy-driven diagnosis</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Misapplied mitigations from conflated failure types</span><span class="chip">One-size-fits-all remediation applied to the wrong failure tier</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.4">Ch3.4</a>: T. Nguyen, &quot;Tuning Model Parameters for Production Performance,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.2A">Ch8.2A</a>: T. Nguyen, &quot;Error Rates and Reliability,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.06">Ref8.06</a>: &quot;Error Troubleshooting and Incident Response for Agent Systems,&quot; unpublished reference note (06-Error-Troubleshooting-Incident-Response.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref8.07">Ref8.07</a>: &quot;Agent Health Checks and Diagnostics,&quot; unpublished reference note (07-Agent-Health-Checks-Diagnostics.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

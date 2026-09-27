@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Output Token Limit Policy · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Output Token Limit Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:OutputTokenLimitPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A calibrated per-feature configuration of the maximum number of output tokens a model may generate, set to the smallest limit that preserves measured response quality.</p>
+<p><strong>Responsibility.</strong> Caps generated output length to control output-token cost.</p>
+<p class="muted">Also known as: max_tokens constraint, Output length constraint</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Output Token Limit Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is produced by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="OutputLengthCalibrator.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Output Length Calibrator: is produced by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Output Length Calibrator</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a></li></ul></section>
+<section class="rel"><h3>is produced by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/OutputLengthCalibrator.html"><span class="dot g6" aria-hidden="true"></span>Output Length Calibrator</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be derived from the observed output-length distribution and quality testing rather than set arbitrarily.</li><li>SHOULD be paired with structured-output instructions so responses become naturally concise rather than truncated.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Output distribution: p50 650, p75 800, p90 1,100, p95 1,400 tokens, mean 800 (Ch8.3).</li><li>max_tokens = 400 dropped CSAT to 3.9/5; 500, 600 and 800 all held 4.3/5; 500 selected, cutting average output 37.5% (800 -&gt; 500) (Ch8.3).</li><li>Output constraints saved $435/month ($4,365 -&gt; $3,930, ~10%); at 4x output pricing, 300 output tokens saved equal 1,200 input tokens (Ch8.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Output length capping</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Verbose responses inflating output-token cost</span><span class="chip">Mid-sentence truncation from uncalibrated limits</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.3">Ch8.3</a>: T. Nguyen, &quot;Token Economics and Architecture,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

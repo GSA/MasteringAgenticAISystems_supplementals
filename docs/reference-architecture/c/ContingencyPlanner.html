@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contingency Planner · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Contingency Planner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ContingencyPlanner</code></p>
+<div class="split"><section>
+<p class="lead">A task planner that, at planning time, generates a primary plan plus pre-computed conditional branches for the most likely, high-impact failure modes.</p>
+<p><strong>Responsibility.</strong> Produces branching plans with prepared responses for anticipated failures.</p>
+<p class="muted">Also known as: Deliberative replanner, Conditional planner</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/TaskPlanner.html"><span class="dot g2" aria-hidden="true"></span>Task Planner</a> <span class="tag">abstract</span></p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Contingency Planner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>produces</title></line><a href="TaskPlanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Task Planner: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Task Planner</text></a><a href="GraphSearchPlanner.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Graph Search Planner: invokes</title></circle><text x="542.0" y="224.0" text-anchor="start">Graph Search Planner</text></a><a href="ExecutionFailureHistoryStore.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Execution Failure History Store: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Execution Failure Histor…</text></a><a href="ConditionalExecutionPlan.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Conditional Execution Plan: produces</title></circle><text x="218.0" y="224.0" text-anchor="end">Conditional Execution Plan</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GraphSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Graph Search Planner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExecutionFailureHistoryStore.html"><span class="dot g2" aria-hidden="true"></span>Execution Failure History Store</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>produces <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/ConditionalExecutionPlan.html"><span class="dot g2" aria-hidden="true"></span>Conditional Execution Plan</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD prepare a contingency only when failure probability x reactive delay exceeds the added planning overhead (P x D &gt; C).</li><li>SHOULD limit contingencies to the few failure modes covering most disruptions (typically 2-5) and to one or two contingency levels, leaving rare compound failures to reactive replanning.</li><li>SHOULD derive failure frequencies from historical execution logs.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Branching plan took ~200 ms vs 50 ms for a linear plan but removed 2-3 s of replanning delay per empty-bin event (Ch5.6).</li><li>Planning for all combinations of N failure modes needs 2^N scenarios: 64 for 6, 1,024 for 10 (Ch5.6).</li><li>Three failure modes (60%, 20%, 10%) covered 90% of manufacturing disruptions (Ch5.6).</li><li>Delivery robot: 30% blockage probability x 4 s delay = 1.2 s expected vs 0.5 s contingency planning, 0.7 s net gain (Ch5.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Contingency planning</span><span class="chip">Conditional plans</span><span class="chip">Pareto selection of failure modes</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Replanning pauses on predictable failures</span><span class="chip">Combinatorial explosion of contingency branches</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

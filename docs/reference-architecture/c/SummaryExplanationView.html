@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summary Explanation View · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Summary Explanation View</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:SummaryExplanationView</code></p>
+<div class="split"><section>
+<p class="lead">A layered explanation view presenting a brief plain-language summary of the primary decision factors plus actionable next steps or improvement paths, without technical detail.</p>
+<p><strong>Responsibility.</strong> Presents a plain-language decision summary with actionable guidance to non-expert stakeholders.</p>
+<p class="muted">Also known as: Customer-facing explanation layer, Novice mode, Basic summary tier</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/LayeredExplanationView.html"><span class="dot g8" aria-hidden="true"></span>Layered Explanation View</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for novice users, customers and affected parties, and for routine low-stakes decisions: plain-language summary of primary factors with actionable improvement or recourse guidance.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Summary Explanation View"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is constrained by</title></line><a href="EndUser.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>End User: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">End User</text></a><a href="CounterfactualExplainer.html"><circle class="g2" cx="509.9" cy="145.0" r="7"><title>Counterfactual Explainer: receives data from</title></circle><text x="520.3" y="143.0" text-anchor="start">Counterfactual Explainer</text></a><a href="ExhaustiveAuditExplanationView.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Exhaustive Audit Explanation View: is target of alternativeTo</title></circle><text x="520.3" y="305.0" text-anchor="start">Exhaustive Audit Explana…</text></a><a href="IntermediateExplanationView.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Intermediate Explanation View: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">Intermediate Explanation…</text></a><a href="LayeredExplanationView.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Layered Explanation View: specializes</title></circle><text x="239.7" y="305.0" text-anchor="end">Layered Explanation View</text></a><a href="TransparencyPolicy.html"><circle class="g7" cx="250.1" cy="145.0" r="7"><title>Transparency Policy: is constrained by</title></circle><text x="239.7" y="143.0" text-anchor="end">Transparency Policy</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EndUser.html"><span class="dot g8" aria-hidden="true"></span>End User</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/CounterfactualExplainer.html"><span class="dot g2" aria-hidden="true"></span>Counterfactual Explainer</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/TransparencyPolicy.html"><span class="dot g7" aria-hidden="true"></span>Transparency Policy</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ExhaustiveAuditExplanationView.html"><span class="dot g8" aria-hidden="true"></span>Exhaustive Audit Explanation View</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/IntermediateExplanationView.html"><span class="dot g8" aria-hidden="true"></span>Intermediate Explanation View</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>Denials SHOULD show which specific factors most influenced the decision with guidance on improving future applications.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Loan denial example: credit score 640 vs required 680; debt-to-income 0.52 vs recommended 0.43 (Ch10.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Contrastive explanation</span><span class="chip">Stakes-based disclosure (brief approvals, detailed denials)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Customer anxiety from technical overload</span><span class="chip">Gaming of proprietary decision logic</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">Fair lending regulations (adverse decision explanations)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

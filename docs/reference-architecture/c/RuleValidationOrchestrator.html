@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule Validation Orchestrator · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Rule Validation Orchestrator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:RuleValidationOrchestrator</code></p>
+<div class="split"><section>
+<p class="lead">A governance component that sequences each candidate rule through consistency checking, empirical scoring, threshold gating and expert review before it may enter production.</p>
+<p><strong>Responsibility.</strong> Coordinates the multi-stage validation workflow for candidate rules.</p>
+<p class="muted">Also known as: Rule validation workflow</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Rule Validation Orchestrator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>escalates to</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is constrained by</title></line><a href="ABTestRouter.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>A/B Test Traffic Splitter: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">A/B Test Traffic Splitter</text></a><a href="RuleBaseUpdater.html"><circle class="g7" cx="497.3" cy="126.5" r="7"><title>Rule Base Updater: invokes</title></circle><text x="506.7" y="123.0" text-anchor="start">Rule Base Updater</text></a><a href="CandidateRuleQueue.html"><circle class="g7" cx="526.2" cy="253.4" r="7"><title>Candidate Rule Queue: reads</title></circle><text x="537.9" y="260.0" text-anchor="start">Candidate Rule Queue</text></a><a href="DomainRuleExpert.html"><circle class="g8" cx="445.1" cy="355.1" r="7"><title>Domain Rule Expert: escalates to</title></circle><text x="450.3" y="370.0" text-anchor="start">Domain Rule Expert</text></a><a href="RuleConsistencyChecker.html"><circle class="g7" cx="314.9" cy="355.1" r="7"><title>Rule Consistency Checker: orchestrates</title></circle><text x="309.7" y="370.0" text-anchor="end">Rule Consistency Checker</text></a><a href="RuleQualityScorer.html"><circle class="g6" cx="233.8" cy="253.4" r="7"><title>Rule Quality Scorer: orchestrates</title></circle><text x="222.1" y="260.0" text-anchor="end">Rule Quality Scorer</text></a><a href="RuleAcceptanceThresholdPolicy.html"><circle class="g7" cx="262.7" cy="126.5" r="7"><title>Rule Acceptance Threshold Policy: is constrained by</title></circle><text x="253.3" y="123.0" text-anchor="end">Rule Acceptance Threshol…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ABTestRouter.html"><span class="dot g6" aria-hidden="true"></span>A/B Test Traffic Splitter</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RuleBaseUpdater.html"><span class="dot g7" aria-hidden="true"></span>Rule Base Updater</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CandidateRuleQueue.html"><span class="dot g7" aria-hidden="true"></span>Candidate Rule Queue</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>escalates to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/DomainRuleExpert.html"><span class="dot g8" aria-hidden="true"></span>Domain Rule Expert</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/RuleAcceptanceThresholdPolicy.html"><span class="dot g7" aria-hidden="true"></span>Rule Acceptance Threshold Policy</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>orchestrates <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/RuleConsistencyChecker.html"><span class="dot g7" aria-hidden="true"></span>Rule Consistency Checker</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RuleQualityScorer.html"><span class="dot g6" aria-hidden="true"></span>Rule Quality Scorer</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST require domain-expert approval before a learned rule enters the production rule base, even when metrics are satisfactory.</li><li>SHOULD advance only candidates exceeding minimum coverage and precision thresholds to expert review.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Multi-stage rule validation</span><span class="chip">Threshold gate then expert review</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Low-quality or contradictory learned rules reaching production</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.11">Ch5.11</a>: T. Nguyen, &quot;Rule-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.11. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

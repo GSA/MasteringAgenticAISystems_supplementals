@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Node Capability Labeler · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Node Capability Labeler</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:NodeCapabilityLabeler</code></p>
+<div class="split"><section>
+<p class="lead">A node agent that detects hardware features such as GPU vendor, device and model and applies them as node labels for targeted scheduling.</p>
+<p><strong>Responsibility.</strong> Labels cluster nodes with discovered hardware capabilities.</p>
+<p class="muted">Also known as: Node Feature Discovery (NFD)</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Node Capability Labeler"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is orchestrated by</title></line><a href="GPUNode.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>GPU Node: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">GPU Node</text></a><a href="ContainerOrchestrator.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>Container Orchestrator: sends data to</title></circle><text x="520.3" y="305.0" text-anchor="start">Container Orchestrator</text></a><a href="AcceleratorOperator.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Accelerator Operator: is orchestrated by</title></circle><text x="239.7" y="305.0" text-anchor="end">Accelerator Operator</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ContainerOrchestrator.html"><span class="dot g5" aria-hidden="true"></span>Container Orchestrator</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AcceleratorOperator.html"><span class="dot g5" aria-hidden="true"></span>Accelerator Operator</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Label-based node targeting</span></dd><dt>Technologies</dt><dd><span class="chip">Kubernetes Node Feature Discovery</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">GPU workloads scheduled on non-GPU nodes</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref4.07">Ref4.07</a>: NVIDIA, &quot;About the NVIDIA GPU Operator,&quot; NVIDIA GPU Operator Documentation. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

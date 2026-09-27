@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FP4 Inference Engine · Agentic AI Reference Architecture</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Reference Architecture</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Model asset</p>
+<h1><span class="dot g4" aria-hidden="true"></span>FP4 Inference Engine</h1>
+<p class="badges"><span class="badge">Model asset</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:FP4InferenceEngine</code></p>
+<div class="split"><section>
+<p class="lead">An optimized inference engine using 4-bit floating-point representations for maximum compression.</p>
+<p><strong>Responsibility.</strong> Serves a model at 4-bit floating-point precision.</p>
+<p class="muted">Also known as: FP4 quantized engine</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/OptimizedInferenceEngine.html"><span class="dot g4" aria-hidden="true"></span>Optimized Inference Engine</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for maximum compression and throughput in use cases that accept ~3-7% accuracy loss.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of FP4 Inference Engine"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="OptimizedInferenceEngine.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Optimized Inference Engine: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Optimized Inference Engine</text></a><a href="INT8InferenceEngine.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>INT8 Quantized Engine: alternative to</title></circle><text x="534.1" y="173.9" text-anchor="start">INT8 Quantized Engine</text></a><a href="FP8InferenceEngine.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>FP8 Quantized Engine: alternative to</title></circle><text x="475.2" y="355.1" text-anchor="start">FP8 Quantized Engine</text></a><a href="FP16InferenceEngine.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>FP16 Inference Engine: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">FP16 Inference Engine</text></a><a href="INT4InferenceEngine.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>INT4 Quantized Engine: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">INT4 Quantized Engine</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/FP16InferenceEngine.html"><span class="dot g4" aria-hidden="true"></span>FP16 Inference Engine</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a> <a class="src" href="../sources.html#Ref4.01">Ref4.01</a></li><li><a class="comp" href="../c/FP8InferenceEngine.html"><span class="dot g4" aria-hidden="true"></span>FP8 Quantized Engine</a> <a class="src" href="../sources.html#Ref4.01">Ref4.01</a></li><li><a class="comp" href="../c/INT4InferenceEngine.html"><span class="dot g4" aria-hidden="true"></span>INT4 Quantized Engine</a> <a class="src" href="../sources.html#Ref4.01">Ref4.01</a></li><li><a class="comp" href="../c/INT8InferenceEngine.html"><span class="dot g4" aria-hidden="true"></span>INT8 Quantized Engine</a> <a class="src" href="../sources.html#Ref4.01">Ref4.01</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>FP4: 4x speedup, 75% memory saving, ~3-7% accuracy loss (Ref4.01, Ref4.06).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref4.01">Ref4.01</a>: NVIDIA, &quot;TensorRT-LLM,&quot; GitHub repository. Accessed: Sep. 27, 2026. [Online]. Available: https://github.com/NVIDIA/TensorRT-LLM</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>
