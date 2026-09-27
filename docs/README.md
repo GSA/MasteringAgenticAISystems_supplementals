@@ -177,6 +177,30 @@ leading text, tier-page topic headings (`## `) deliberately carry **no** leading
 not "3. Kubernetes fundamentals") — a numbered heading would slug to `#3-kubernetes-fundamentals` and break every
 cross-reference to it.
 
+### Reference Architecture
+
+`reference-architecture/` (1,587 component pages, ≈17 MB, ≈1,605 files) is a **verbatim snapshot** of the static site
+built from the `Cybonto/book1` repository's Agentic AI Reference Architecture knowledge graph, copied in whole from
+`drafts/iter3/reference_architecture/site/` at that repository's commit `002b808`. It has no YAML front matter, so
+Jekyll copies its files as static assets rather than rendering them — this is required, not incidental: the pages
+carry their own header, navigation, and light/dark theme, and none of their internal links or asset references may be
+rewritten. **Never hand-edit anything under `reference-architecture/`.** Fix the knowledge graph or its generator in
+`book1`, rebuild, and re-copy.
+
+`architecture.md` is a normal Jekyll page (in the sidebar, `nav_order: 10.5`) that describes the reference
+architecture and links into it; it deliberately does not use the permalink `/reference-architecture/`, which would
+collide with `reference-architecture/index.html`.
+
+To refresh after `book1` changes:
+
+```bash
+rsync -a --delete --exclude '.DS_Store' \
+  /path/to/book1/drafts/iter3/reference_architecture/site/ docs/reference-architecture/
+```
+
+Then update the source commit noted on `architecture.md`, and re-run the link check documented in `book1`'s
+`site_integration.md` (§6) against `docs/reference-architecture/` before committing.
+
 ### Deliberately not published
 
 These are gitignored working notes and are not part of the site: `_cfc/`,
