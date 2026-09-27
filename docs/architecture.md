@@ -59,11 +59,8 @@ Opens in a **new tab**, full width, with none of this site's layout — the grap
 WebGL enabled. Hovering a node highlights its neighborhood; clicking opens a details panel. Link straight to a
 component with `#<ComponentId>`, for example `…/explore.html#ToolExecutor`.
 
-## Provenance and licensing
+## Licensing
 
-- The pages under `reference-architecture/` are copied verbatim from the `drafts/iter3/reference_architecture/site/`
-  build in `Cybonto/book1` (source commit `002b808`), not authored or hand-edited in this repository. To fix a
-  problem, fix it at the source and re-copy — see that repository's `site_integration.md` for the refresh steps.
-- The graph explorer vendors two MIT-licensed libraries, `sigma.js` and `graphology`, kept offline rather than loaded
-  from a CDN — see `reference-architecture/assets/vendor/NOTICE.md`. They are not covered by this repository's CC0
-  dedication (see [About]({{ site.baseurl }}/about/)).
+The graph explorer vendors two MIT-licensed libraries, `sigma.js` and `graphology`, kept offline rather than loaded
+from a CDN — see `reference-architecture/assets/vendor/NOTICE.md`. They are not covered by this repository's CC0
+dedication (see [About]({{ site.baseurl }}/about/)).
