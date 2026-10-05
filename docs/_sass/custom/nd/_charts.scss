@@ -16,7 +16,7 @@
 .cr-section { margin-top: 2.5rem; }
 .cr-section > h2 { margin: 0 0 0.25rem; }
 .cr-lede { margin: 0 0 1rem; color: var(--nd-muted); max-width: 60ch; }
-.cr-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.cr-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }  // one column: the page column is narrow, and charts are drawn at the card's width
 .cr-wide { grid-column: 1 / -1; }
 .cr-card {
   margin: 0;
@@ -52,8 +52,8 @@
 // svg charts
 .cr-svg {
   display: block; width: 100%; height: auto; overflow: visible;
-  text { fill: var(--nd-muted); font-size: 11px; letter-spacing: 0; font-family: var(--nd-font-sans); }
-  text.val { fill: var(--nd-ink); font-size: 12px; font-weight: 500; }
+  text { fill: var(--nd-muted); font-size: 12px; letter-spacing: 0; font-family: var(--nd-font-sans); }
+  text.val { fill: var(--nd-ink); font-size: 13px; font-weight: 500; }
   .grid line { stroke: var(--nd-hairline); stroke-width: 1; }
   .axis line { stroke: var(--nd-axis); stroke-width: 1; }
   .mark { pointer-events: none; }
@@ -111,7 +111,6 @@
 .cr-about li { color: var(--nd-ink-soft); }
 
 @media (max-width: 62rem) {
-  .cr-grid { grid-template-columns: minmax(0, 1fr); }
   .cr-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 34rem) {

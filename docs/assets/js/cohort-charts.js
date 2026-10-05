@@ -87,6 +87,18 @@
     node.addEventListener('blur', hideTip);
   }
 
+  /* Charts are drawn at the card's real pixel width, so text stays readable; redrawn when the width changes. */
+  var redraws = [], resizeTimer = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      redraws.forEach(function (r) {
+        var w = r.body.clientWidth;
+        if (r.chart() && Math.abs(w - r.w) > 24) { r.w = w; r.redraw(); }
+      });
+    }, 150);
+  });
+
   /* ---------- card with a Chart / Table twin ---------- */
   function dataTable(head, rows) {
     return h('div', { 'class': 'cr-tw' }, h('table', { 'class': 'cr-dt' },
@@ -104,7 +116,7 @@
       bTable.setAttribute('aria-pressed', String(t));
       hideTip();
       while (body.firstChild) { body.removeChild(body.firstChild); }
-      body.appendChild(t ? dataTable(table.head, table.rows) : draw());
+      body.appendChild(t ? dataTable(table.head, table.rows) : draw(Math.max(260, Math.floor(body.clientWidth || 560))));
     }
     bChart.addEventListener('click', function () { set(false); });
     bTable.addEventListener('click', function () { set(true); });
@@ -113,6 +125,7 @@
     var fig = h('figure', { 'class': 'cr-card' + (wide ? ' cr-wide' : '') }, head, body, foot ? h('p', { 'class': 'cr-foot', text: foot }) : null);
     parent.appendChild(fig);
     set(false);
+    redraws.push({ body: body, chart: function () { return bChart.getAttribute('aria-pressed') === 'true'; }, redraw: function () { set(false); }, w: body.clientWidth });
     return fig;
   }
   function legend(items) {
@@ -142,7 +155,7 @@
   /* cols: [{label, long, values: {key: n|null}}], series: [{k, label, color}] */
   function columns(cols, series, ariaLabel, opts) {
     opts = opts || {};
-    var W = 560, H = 250, m = { l: 36, r: 8, t: 22, b: 34 };
+    var W = opts.width || 560, H = 260, m = { l: 40, r: 10, t: 24, b: 34 };
     var totals = cols.map(function (c) {
       return series.reduce(function (a, se) { return a + (c.values[se.k] || 0); }, 0);
     });
@@ -176,7 +189,7 @@
       if (totals[idx] === 0 && c.noData) {
         svg.appendChild(s('text', { x: cx, y: y(0) - 6, 'text-anchor': 'middle', text: '–' }));
       }
-      if (idx % (cols.length > 10 ? 2 : 1) === 0) { svg.appendChild(s('text', { x: cx, y: H - 12, 'text-anchor': 'middle', text: c.label })); }
+      if (idx % (cols.length > 10 && W < 520 ? 2 : 1) === 0) { svg.appendChild(s('text', { x: cx, y: H - 12, 'text-anchor': 'middle', text: c.label })); }
       var hit = s('rect', { 'class': 'hit', x: m.l + band * idx, y: m.t, width: band, height: ph + 6, 'aria-label': c.long + ': ' + (opts.fmt ? opts.fmt(totals[idx]) : totals[idx]) });
       bindTip(hit, function () {
         return { title: c.long, rows: series.map(function (se) {
@@ -189,8 +202,8 @@
   }
 
   /* ---------- svg line (one series) ---------- */
-  function line(points, ariaLabel, valueLabel) {
-    var W = 560, H = 240, m = { l: 40, r: 40, t: 22, b: 34 };
+  function line(points, ariaLabel, valueLabel, width) {
+    var W = width || 560, H = 250, m = { l: 44, r: 44, t: 24, b: 34 };
     var pw = W - m.l - m.r, ph = H - m.t - m.b;
     function x(i) { return m.l + (points.length === 1 ? pw / 2 : pw * i / (points.length - 1)); }
     function y(v) { return m.t + ph - ph * v; }
@@ -214,13 +227,13 @@
     var lastIdx = -1;
     points.forEach(function (p, idx) { if (p.v != null) { lastIdx = idx; } });
     points.forEach(function (p, idx) {
-      if (idx % (points.length > 10 ? 2 : 1) === 0) { svg.appendChild(s('text', { x: x(idx), y: H - 12, 'text-anchor': 'middle', text: p.label })); }
+      if (idx % (points.length > 10 && W < 520 ? 2 : 1) === 0) { svg.appendChild(s('text', { x: x(idx), y: H - 12, 'text-anchor': 'middle', text: p.label })); }
       if (p.v == null) {
         svg.appendChild(s('text', { x: x(idx), y: y(0) - 6, 'text-anchor': 'middle', text: '–' }));
       } else {
         svg.appendChild(s('circle', { 'class': 'dot', cx: x(idx), cy: y(p.v), r: 4, fill: C.blue }));
         if (idx === lastIdx || idx === 0) {
-          svg.appendChild(s('text', { 'class': 'val', x: x(idx) + (idx === 0 ? 0 : 8), y: y(p.v) - 10, 'text-anchor': idx === 0 ? 'middle' : 'start', text: Math.round(p.v * 100) + '%' }));
+          svg.appendChild(s('text', { 'class': 'val', x: x(idx) + 8, y: y(p.v) - 10, 'text-anchor': 'start', text: Math.round(p.v * 100) + '%' }));
         }
       }
       var hit = s('rect', { 'class': 'hit', x: x(idx) - pw / points.length / 2, y: m.t, width: pw / points.length, height: ph + 6, 'aria-label': p.long + ': ' + (p.v == null ? 'no data' : Math.round(p.v * 100) + '%') });
@@ -264,9 +277,9 @@
   var g1 = section('Attendance and retention', 'Who came, and whether they kept coming.');
 
   var attSeries = [{ k: 'returning', label: 'Returning', color: C.blue }, { k: 'new', label: 'First session', color: C.orange }];
-  card(g1, 'Attendance per session', 'People present, split into first-time and returning', function () {
+  card(g1, 'Attendance per session', 'People present, split into first-time and returning', function (w) {
     var cols = held.map(function (x) { return { label: x.label, long: x.long, values: { returning: x.s.returning, 'new': x.s['new'] } }; });
-    return h('div', {}, legend(attSeries), columns(cols, attSeries, 'Attendance per session'));
+    return h('div', {}, legend(attSeries), columns(cols, attSeries, 'Attendance per session', { width: w }));
   }, { head: ['Session', 'Present', 'First session', 'Returning', 'Median minutes'],
        rows: held.map(function (x) { return [x.long, num(x.s.attendees), num(x.s['new']), num(x.s.returning), String(Math.round(x.s.median_minutes))]; }) },
     'First session means the first held session a person attended.');
@@ -275,8 +288,8 @@
   ret.points.forEach(function (p) {
     retPts.push({ label: dayLabel(p.date), long: dayLabel(p.date, true), v: p.share, extra: [{ value: num(Math.round(p.share * ret.opening_group)), label: 'of ' + num(ret.opening_group) + ' came back' }] });
   });
-  card(g1, 'Did the opening group keep coming?', 'Share of the ' + num(ret.opening_group) + ' people at the first session who were present each time', function () {
-    return line(retPts, 'Share of the opening group present at each session', 'of the opening group present');
+  card(g1, 'Did the opening group keep coming?', 'Share of the ' + num(ret.opening_group) + ' people at the first session who were present each time', function (w) {
+    return line(retPts, 'Share of the opening group present at each session', 'of the opening group present', w);
   }, { head: ['Session', 'Share present', 'People'],
        rows: retPts.map(function (p) { return [p.long, Math.round(p.v * 100) + '%', num(Math.round(p.v * ret.opening_group))]; }) });
 
@@ -297,14 +310,14 @@
     return { label: x.label, long: x.long, v: ok ? x.s.read_yes / x.s.read_n : null, why: 'Fewer than ' + D.min_cell + ' answers, or no poll that day.',
              extra: ok ? [{ value: x.s.read_yes + ' of ' + x.s.read_n, label: 'said yes' }] : [] };
   });
-  card(g2, 'Did people do the assigned reading?', 'Share who answered yes', function () {
-    return line(readPts, 'Share of poll respondents who did the assigned reading, by session', 'did the reading');
+  card(g2, 'Did people do the assigned reading?', 'Share who answered yes', function (w) {
+    return line(readPts, 'Share of poll respondents who did the assigned reading, by session', 'did the reading', w);
   }, { head: ['Session', 'Yes', 'Answers', 'Share'],
        rows: held.map(function (x) { return [x.long, num(x.s.read_yes), num(x.s.read_n), x.s.read_n ? pct(x.s.read_yes, x.s.read_n) : '–']; }) },
     'Each point is one session. Read the counts in the tooltip or table, because small groups swing.');
 
   var confSeries = [{ k: 'conf_high', label: 'High', color: C.blue }, { k: 'conf_med', label: 'Medium', color: C.neutral }, { k: 'conf_low', label: 'Low', color: C.orange }];
-  card(g2, 'How confident do people feel?', 'Share of answers by level, per session', function () {
+  card(g2, 'How confident do people feel?', 'Share of answers by level, per session', function (w) {
     var cols = held.map(function (x) {
       var n = x.s.conf_n, v = {};
       if (n) { v.conf_high = x.s.conf_high / n * 100; v.conf_med = x.s.conf_med / n * 100; v.conf_low = x.s.conf_low / n * 100; }
@@ -313,7 +326,7 @@
     });
     var ser = [{ k: 'conf_low', label: 'Low', color: C.orange }, { k: 'conf_med', label: 'Medium', color: C.neutral }, { k: 'conf_high', label: 'High', color: C.blue }];
     return h('div', {}, legend([ser[2], ser[1], ser[0]]),
-      columns(cols, ser, 'Confidence level by session, as a share of answers', { max: 100, step: 25, noTotals: true, fmt: function (v) { return Math.round(v) + '%'; } }));
+      columns(cols, ser, 'Confidence level by session, as a share of answers', { width: w, max: 100, step: 25, noTotals: true, fmt: function (v) { return Math.round(v) + '%'; } }));
   }, { head: ['Session', 'High', 'Medium', 'Low', 'Answers'],
        rows: held.map(function (x) { return [x.long, num(x.s.conf_high), num(x.s.conf_med), num(x.s.conf_low), num(x.s.conf_n)]; }) },
     'High is at the top of each column. Counts, not percentages, are in the table.');
@@ -337,9 +350,9 @@
   /* ---------- time and organizations ---------- */
   var g3 = section('Time in session and organizations', null);
   var th = D.time_in_session;
-  card(g3, 'How long did people stay?', 'Person-sessions by minutes in the meeting', function () {
+  card(g3, 'How long did people stay?', 'Person-sessions by minutes in the meeting', function (w) {
     var cols = th.map(function (b) { return { label: b.label, long: b.label + ' minutes', values: { n: b.count } }; });
-    return columns(cols, [{ k: 'n', label: 'Person-sessions', color: C.blue }], 'Minutes in the meeting, per person per session', { noTotals: false });
+    return columns(cols, [{ k: 'n', label: 'Person-sessions', color: C.blue }], 'Minutes in the meeting, per person per session', { width: w });
   }, { head: ['Minutes in the meeting', 'Person-sessions'], rows: th.map(function (b) { return [b.label, num(b.count)]; }) },
     'One person who attends five sessions counts five times. Sessions last about an hour.');
 
