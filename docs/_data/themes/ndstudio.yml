@@ -38,8 +38,8 @@ tokens:
   hero-size: "clamp(2.75rem, 7vw, 5.25rem)"   # home page headline
   h1-size: "clamp(2rem, 4.2vw, 3rem)"
   h2-size: "1.75rem"
-  site-title-size: "1rem"            # name at the top of the sidebar
-  seal-size: "2.25rem"               # width of the emblem above the site title
+  site-title-size: "1.125rem"            # name at the top of the sidebar
+  seal-size: "1.75rem"               # width of the emblem above the site title
   h3-size: "1.25rem"
 
 # Colours used when the reader picks (or their device prefers) the dark theme. Only colours

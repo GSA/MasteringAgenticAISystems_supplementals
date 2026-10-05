@@ -65,7 +65,7 @@ first in `font-sans`. Check the font's licence allows web use.
   `docs/`), with its description in `seal_alt`. Leave `seal` empty for none. Its width is the `seal-size` token.
 - **Light/dark button.** It sits at the top right of the menu column.
 - **Menu links that leave the site.** `nav_external_links` in `_config.yml` adds them. The theme puts them after all
-  the pages; `after: <menu title>` on an entry moves it under that item (done in `_includes/head_custom.html`; without
+  the pages; `before: <menu title>` or `after: <menu title>` on an entry moves it above or below that item (done in `_includes/head_custom.html`; without
   JavaScript it just stays last).
 
 ## Home page content

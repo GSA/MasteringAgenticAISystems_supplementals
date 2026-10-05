@@ -74,10 +74,10 @@
 </script>
 {%- endif %}
 {%- endif %}
-{%- assign nd_moves = site.nav_external_links | where_exp: "l", "l.after" -%}
+{%- assign nd_moves = site.nav_external_links | where_exp: "l", "l.after or l.before" -%}
 {%- if nd_moves.size > 0 %}
 <script>
-/* Moves each external menu link that has an `after:` in _config.yml under that menu item.
+/* Moves each external menu link that has a `before:` or `after:` in _config.yml next to that menu item.
    Without JavaScript the link simply stays at the end of the menu. */
 document.addEventListener("DOMContentLoaded", function () {
   var moves = {{ nd_moves | jsonify }};
@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }).filter(Boolean)[0];
     var after = Array.prototype.filter.call(top.children, function (li) {
       var a = li.querySelector(":scope > a.nav-list-link");
-      return a && a.textContent.trim() === m.after;
+      return a && a.textContent.trim() === (m.before || m.after);
     })[0];
-    if (item && after) after.insertAdjacentElement("afterend", item);
+    if (item && after) after.insertAdjacentElement(m.before ? "beforebegin" : "afterend", item);
   });
   Array.prototype.forEach.call(nav.querySelectorAll(":scope > ul.nav-list"), function (ul) {
     if (!ul.children.length) ul.parentNode.removeChild(ul);   /* the external list, once emptied */
