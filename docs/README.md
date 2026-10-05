@@ -28,10 +28,11 @@ the `{% link %}` baseurl bug above was actually found, since it was invisible fr
 Markdown source and from a same-repo-file-exists check alike. The video players
 specifically have been confirmed to embed (oEmbed-checked per video), but not watched
 in a browser. After any change here, re-check a live rendered page's `href=`
-attributes, not just that the source parses. The theme is loaded as
-`just-the-docs/just-the-docs` without a version pin; pin it
-(`just-the-docs/just-the-docs@vX.Y.Z` in `_config.yml`) so a theme release cannot
-change the site unannounced.
+attributes, not just that the source parses. The theme is pinned in `_config.yml` (`just-the-docs/just-the-docs@v0.12.0`) so a theme release cannot
+change the site unannounced; change the tag deliberately to upgrade.
+
+The visual style is a swappable preset; see [`STYLE.md`](STYLE.md). After changing styles or presets, run
+`python3 .github/scripts/check_theme.py` (colour contrast and a no-hard-coded-colours check).
 
 ## Layout
 
@@ -40,6 +41,10 @@ docs/
 ├── README.md            This file (excluded from the built site)
 ├── _config.yml          Jekyll + theme configuration, and the repo link variables
 ├── Gemfile              Local-preview dependencies (ignored by GitHub Pages)
+├── STYLE.md             How the look is configured and how to re-skin it (excluded from the built site)
+├── _data/               Theme presets (themes/*.yml) and home page content (home.yml)
+├── _includes/           Theme hooks: head_custom.html, footer_custom.html, nd/ (home page parts)
+├── _sass/custom/        Site CSS layered over the theme; reads only var(--nd-*) variables
 ├── index.md             Site home
 ├── getting-started.md   Study path and how to use the material
 ├── prerequisites/
@@ -50,18 +55,23 @@ docs/
 │   ├── index.md         The 10 Parts at a glance
 │   └── part-01.md … part-10.md   One page per Part: chapter-by-chapter resource table
 ├── certifications.md    Certification mappings (NCP-AAI, AWS, Databricks, Google, Microsoft)
-├── practice.md          Chapter quizzes and full-length practice exams
-├── videos.md            Curated third-party videos, per Part
+├── resources.md         "Resources" menu group: landing page for the five pages below, which are its children
+├── practice.md          Chapter quizzes and full-length practice exams (in Resources)
+├── videos.md            Curated third-party videos, per Part (in Resources)
 ├── video-link-check.md  Record of the video link check/cleanup: what was removed and why (hidden from the menu)
-├── slides.md            Slide decks, per chapter
-├── labs.md              Lab status and how labs are written
-├── code-examples.md     Code snippets and worked examples, per Part
+├── slides.md            Slide decks, per chapter (in Resources)
+├── labs.md              Lab status and how labs are written (in Resources)
+├── code-examples.md     Code snippets and worked examples, per Part (in Resources)
 ├── architecture.md      Hub page for the Reference Architecture (links out; see below)
 ├── reference-architecture/   Generated static site, copied verbatim — see "Reference Architecture" below
 ├── ai-tutor.md          The AI study tutor
 ├── contributing.md      How to help, governance, conduct, security, support
 └── about.md             License, citation, contributors
 ```
+
+The menu is built from front matter. `resources.md` is the parent of the "Resources" group; a page joins it with
+`parent: Resources` and a `nav_order` (1 to 5) among its siblings. The "Discussion" entry at the end of the menu is not
+a page: it comes from `nav_external_links` in `_config.yml`, which also lists any other link that leaves the site.
 
 ## How content is sourced
 
@@ -187,6 +197,12 @@ carry their own header, navigation, and light/dark theme, and none of their inte
 rewritten. **Never hand-edit anything under `reference-architecture/`.** Fix the knowledge graph or its generator in
 `book1`, rebuild, and re-copy.
 
+The one exception is the site's look. All the pages share two files, `assets/style.css` and `assets/theme.js`, and
+`.github/scripts/skin_reference_architecture.py` appends a clearly marked, generated block to each (between
+`ND-SKIN BEGIN` and `ND-SKIN END`). It applies the same theme preset as the rest of the site, makes the light/dark
+choice shared with the rest of the site, and adds a "Study guide" link back. No page is touched. Re-run it after every
+refresh below, and after changing the preset (`--check` tells you if it is out of date).
+
 `architecture.md` is a normal Jekyll page (in the sidebar, `nav_order: 10.5`) that describes the reference
 architecture and links into it; it deliberately does not use the permalink `/reference-architecture/`, which would
 collide with `reference-architecture/index.html`.
@@ -197,6 +213,8 @@ To refresh after `book1` changes:
 rsync -a --delete --exclude '.DS_Store' \
   /path/to/book1/drafts/iter3/reference_architecture/site/ docs/reference-architecture/
 ```
+
+Then re-apply the look: `python3 .github/scripts/skin_reference_architecture.py`.
 
 Then update the source commit noted on `architecture.md`, and re-run the link check documented in `book1`'s
 `site_integration.md` (§6) against `docs/reference-architecture/` before committing.

@@ -1,0 +1,140 @@
+// Sidebar, site title, navigation, search, breadcrumbs, footer.
+.side-bar {
+  background: var(--nd-surface);
+  border-right: 1px solid var(--nd-hairline);
+}
+.site-header {
+  height: auto;               // the emblem makes this taller than the theme's fixed height
+  max-height: none;
+  border-bottom: 1px solid var(--nd-hairline);
+}
+.nd-seal { display: block; width: var(--nd-seal-size); height: auto; margin: 0 auto; }
+.nd-site-name { display: block; }
+.site-title {
+  flex-direction: column;
+  align-items: center;        // emblem and name centred in the sidebar header
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.9rem;
+  font-size: var(--nd-site-title-size) !important; // the theme sets its size with !important
+  font-weight: var(--nd-weight-strong) !important;
+  line-height: 1.2;
+  color: var(--nd-ink);
+  letter-spacing: var(--nd-tracking-heading);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  &:hover { background-image: none; }
+}
+
+.nav-list .nav-list-item {
+  .nav-list-link {
+    color: var(--nd-ink-soft);
+    letter-spacing: var(--nd-tracking-body);
+    &:hover,
+    &.active {
+      color: var(--nd-ink);
+      background-image: none;
+      background-color: transparent;
+    }
+    &.active {
+      font-weight: var(--nd-weight-strong);
+      box-shadow: inset 2px 0 0 var(--nd-ink);
+    }
+  }
+  .nav-list-expander { color: var(--nd-ink); svg { fill: currentColor; } }
+}
+.nav-list .nav-list-item.active > .nav-list-link { color: var(--nd-ink); }
+
+.main-header,
+.search,
+.search-input-wrap,
+.aux-nav { background: var(--nd-surface); }
+.main-header { border-bottom: 1px solid var(--nd-hairline); }
+.search-input {
+  background: transparent;
+  color: var(--nd-ink);
+  border-radius: var(--nd-radius);
+  letter-spacing: var(--nd-tracking-body);
+}
+.search-label .search-icon { color: var(--nd-muted); }
+.search-results {
+  background: var(--nd-surface-raised);
+  border: 1px solid var(--nd-ink);
+  border-radius: var(--nd-radius);
+  box-shadow: none;
+}
+.search-results-list-item, .search-result { border-bottom: 1px solid var(--nd-hairline); }
+.search-result:hover, .search-result.active {
+  background: var(--nd-ink);
+  color: var(--nd-surface);
+  .search-result-doc-title, .search-result-previews, .search-result-rel-url { color: inherit; }
+}
+
+.aux-nav .aux-nav-list-item a { color: var(--nd-link); }
+.breadcrumb-nav-list-item {
+  color: var(--nd-muted);
+  a { color: var(--nd-muted); }
+}
+
+.site-footer {
+  color: var(--nd-muted);
+  border-top: 1px solid var(--nd-rule);
+  padding-top: 1rem;
+  a { color: var(--nd-ink); }
+}
+#back-to-top, .back-to-top { color: var(--nd-muted); }
+
+// Mobile header: menu and search buttons
+.site-button, .site-button svg, .nav-list-expander svg { color: var(--nd-ink); fill: currentColor; }
+.site-header .site-button { background: transparent; }
+
+// Multi-column footer (_includes/footer_custom.html)
+.nd-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 1.5rem;
+  h2 {
+    font-size: 0.8125rem;
+    font-weight: var(--nd-weight-strong);
+    letter-spacing: var(--nd-tracking-body);
+    color: var(--nd-muted);
+    margin: 0 0 0.5rem;
+  }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin: 0 0 0.25rem; }
+  a { color: var(--nd-ink); }
+}
+
+// Light/dark switch (added by _includes/head_custom.html): top right of the menu column
+.site-nav.nd-has-toggle { position: relative; }
+.nd-theme-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--nd-ink);
+  border: 1px solid var(--nd-ink);
+  border-radius: var(--nd-radius);
+  cursor: pointer;
+  &:hover { background: var(--nd-ink); color: var(--nd-surface); }
+}
+
+// Small screens: emblem beside the title, compact header
+@media (max-width: 49.99rem) {
+  // The emblem stays centred above the name; equal side padding leaves room for the menu button.
+  .site-title { gap: 0.35rem; padding-top: 0.6rem; padding-bottom: 0.6rem; padding-left: 3rem; padding-right: 3rem; }
+  .nd-seal { width: 1.5rem; }
+  // Take the menu button out of the row so the title block is centred on the whole header.
+  .site-header { position: relative; }
+  .site-header .site-button { position: absolute; top: 0; right: 0; bottom: 0; }
+}

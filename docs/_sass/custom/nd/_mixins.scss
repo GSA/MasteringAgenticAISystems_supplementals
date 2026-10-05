@@ -1,0 +1,8 @@
+// Styles that apply only in the dark theme: when the reader chose dark with the button, or
+// chose nothing and the device prefers dark. Use for anything the colour tokens cannot reach.
+@mixin nd-dark {
+  :root[data-theme="dark"] & { @content; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) & { @content; }
+  }
+}

@@ -13,15 +13,33 @@ baseurl: /MasteringAgenticAISystems_supplementals
 repo_blob: https://github.com/GSA/MasteringAgenticAISystems_supplementals/blob/master
 repo_tree: https://github.com/GSA/MasteringAgenticAISystems_supplementals/tree/master
 
-remote_theme: just-the-docs/just-the-docs
+# Pinned so a theme release cannot change the site unannounced. To upgrade, change the tag,
+# then re-check a few pages (see docs/README.md, "Publishing").
+remote_theme: just-the-docs/just-the-docs@v0.12.0
 plugins:
   - jekyll-remote-theme
 
 color_scheme: light
+
+# Visual style. Names a file in _data/themes/ (ndstudio, classic, or your own).
+# See docs/STYLE.md.
+theme_preset: ndstudio
+
+# Emblem shown above the site title in the sidebar (a file in docs/). Leave empty for none.
+seal: /gsa-seal.png
+seal_alt: U.S. General Services Administration seal
 search_enabled: true
 heading_anchors: true
 back_to_top: true
 back_to_top_text: Back to top
+# Extra menu entries that leave the site. The theme lists them after the pages; `before:` or `after:` (read by
+# _includes/head_custom.html) moves one above or below the named menu item. Remove it to keep the link last.
+nav_external_links:
+  - title: Discussion
+    url: https://github.com/GSA/MasteringAgenticAISystems_supplementals/discussions
+    opens_in_new_tab: true
+    before: Reference Architecture  # menu item to sit above (our addition; the theme itself puts these last)
+
 aux_links:
   GitHub repository: https://github.com/GSA/MasteringAgenticAISystems_supplementals
 aux_links_new_tab: true
@@ -32,6 +50,7 @@ footer_content: >-
 
 exclude:
   - README.md
+  - STYLE.md
   - Gemfile
   - Gemfile.lock
   - vendor

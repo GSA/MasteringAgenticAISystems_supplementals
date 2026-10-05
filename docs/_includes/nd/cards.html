@@ -1,0 +1,11 @@
+{%- assign nd_items = include.items | default: site.data.home.cards -%}
+<ul class="nd-cards">
+{%- for c in nd_items %}
+  <li>
+    <a class="nd-card" href="{% if c.url contains '://' %}{{ c.url }}{% else %}{{ c.url | prepend: site.baseurl }}{% endif %}">
+      <span class="nd-card-title">{{ c.title }}</span>
+      <span class="nd-card-text">{{ c.text }}</span>
+    </a>
+  </li>
+{%- endfor %}
+</ul>

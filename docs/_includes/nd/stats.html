@@ -1,0 +1,5 @@
+<ul class="nd-stats">
+{%- for s in site.data.home.stats %}
+  <li class="nd-stat"><span class="nd-stat-value">{{ s.value }}</span><span class="nd-stat-label">{{ s.label }}</span></li>
+{%- endfor %}
+</ul>

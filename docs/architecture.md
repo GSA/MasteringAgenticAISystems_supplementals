@@ -37,8 +37,8 @@ a static website generated from that KG.
 
 ## Browse the site
 
-This is a **separate, self-contained website** with its own header, top navigation, and light/dark theme toggle — it
-does not use this site's sidebar or styling, and makes no network calls. Once you're in it, move between sections
+This is a **separate, self-contained website** with its own header and top navigation — it does not use this site's
+sidebar, but it shares its look and its light/dark choice, and it makes no network calls. Once you're in it, move between sections
 with its own menu, or jump straight to one:
 
 - [Overview]({{ site.baseurl }}/reference-architecture/index.html) — stats, layer breakdown, and full-text search over all 1,587 components
@@ -52,8 +52,7 @@ Each component also has its own page, for example `reference-architecture/c/Tool
 
 ## Explore the graph
 
-<a href="{{ site.baseurl }}/reference-architecture/explore.html" target="_blank" rel="noopener">Open the interactive graph explorer ↗</a>
-{: .btn .btn-primary }
+[Open the interactive graph explorer]({{ site.baseurl }}/reference-architecture/explore.html){: .btn .btn-primary target="_blank" rel="noopener" }
 
 Opens in a **new tab**, full width, with none of this site's layout — the graph needs the room, and a browser with
 WebGL enabled. Hovering a node highlights its neighborhood; clicking opens a details panel. Link straight to a

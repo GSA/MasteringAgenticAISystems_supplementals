@@ -1,0 +1,5 @@
+@media print {
+  .side-bar, .main-header, .nd-footer, .back-to-top { display: none !important; }
+  body, html { background: none; color: var(--nd-ink); }
+  a:not([class]) { color: inherit; text-decoration: underline; }
+}
