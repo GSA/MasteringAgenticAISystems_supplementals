@@ -1,0 +1,88 @@
+// Article content: buttons, tables, code, quotes, disclosure widgets, embeds.
+.btn {
+  background: transparent;
+  background-image: none;
+  color: var(--nd-ink);
+  border: 1px solid var(--nd-ink);
+  border-radius: var(--nd-radius);
+  box-shadow: none;
+  font-weight: var(--nd-weight-strong);
+  letter-spacing: var(--nd-tracking-body);
+  &::after { content: "\2192"; margin-left: 0.6em; }
+  &:hover { background: var(--nd-ink); color: var(--nd-surface); }
+}
+.btn-primary {
+  background: var(--nd-ink);
+  background-image: none;
+  color: var(--nd-surface);
+  &:hover { background: var(--nd-link); border-color: var(--nd-link); color: var(--nd-surface); }
+}
+
+// Tables: hairlines only, no boxes, no stripes.
+.table-wrapper {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+th, td {
+  background: transparent;
+  border-left: 0;
+  border-bottom: 1px solid var(--nd-hairline);
+  letter-spacing: var(--nd-tracking-body);
+}
+th {
+  text-align: start;
+  color: var(--nd-muted);
+  font-weight: var(--nd-weight-strong);
+  border-bottom: 1px solid var(--nd-rule);
+}
+td { vertical-align: top; }
+tbody tr:hover td { background: var(--nd-surface-raised); }
+
+// Code
+code, kbd, samp, pre {
+  font-family: var(--nd-font-mono);
+  letter-spacing: 0;
+}
+code.language-plaintext, p code, li code, td code, th code {
+  background: var(--nd-surface-raised);
+  border: 1px solid var(--nd-hairline);
+  border-radius: var(--nd-radius);
+  color: var(--nd-ink);
+  padding: 0.05em 0.35em;
+}
+div.highlighter-rouge, pre.highlight, figure.highlight {
+  background: var(--nd-surface-raised);
+  border: 1px solid var(--nd-hairline);
+  border-radius: var(--nd-radius);
+  box-shadow: none;
+}
+
+blockquote {
+  border-left: 2px solid var(--nd-ink);
+  color: var(--nd-ink-soft);
+}
+
+// Disclosure widgets (chapter "Videos", code examples, "On this page")
+details {
+  border-top: 1px solid var(--nd-hairline);
+  padding: 0.5rem 0;
+  > summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: var(--nd-weight-strong);
+    &::-webkit-details-marker { display: none; }
+    &::before {
+      content: "+";
+      display: inline-block;
+      width: 1.25em;
+      font-family: var(--nd-font-mono);
+      color: var(--nd-muted);
+    }
+  }
+  &[open] > summary::before { content: "\2212"; }
+}
+
+iframe { background: var(--nd-ink); border-radius: var(--nd-radius); }
+img { border-radius: var(--nd-radius); }

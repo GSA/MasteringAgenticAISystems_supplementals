@@ -6,15 +6,18 @@ description: Study materials for the NVIDIA NCP-AAI Agentic AI certification and
 ---
 
 # Mastering Agentic AI Systems
-{: .fs-9 }
+{: .nd-display }
 
 Companion material for *Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam*: a study plan,
 slides, quizzes, practice exams, curated videos, and code examples across 96 chapters in 10 Parts.
-{: .fs-6 .fw-300 }
+{: .nd-lede }
 
-[Get started]({{ site.baseurl }}/getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Browse the curriculum]({{ site.baseurl }}/curriculum/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Explore the reference architecture]({{ site.baseurl }}/architecture/){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get started]({{ site.baseurl }}/getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }
+
+{::nomarkdown}
+{% include nd/stats.html %}
+{% include nd/cards.html %}
+{:/nomarkdown}
 
 ---
 

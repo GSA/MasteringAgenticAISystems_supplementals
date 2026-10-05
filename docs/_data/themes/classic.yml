@@ -1,0 +1,28 @@
+# Theme preset: "classic" — an approximation of the stock Just the Docs look, kept as a
+# fallback and as a second example of a preset. Select it with `theme_preset: classic`.
+name: Classic (approximate Just the Docs)
+tokens:
+  surface: "#ffffff"
+  surface-raised: "#f5f6fa"
+  ink: "#27262b"
+  ink-soft: "#44434d"
+  muted: "#5c5962"
+  hairline: "#eeebee"
+  rule: "#44434d"
+  link: "#5f43d6"
+  link-hover: "#3e2aa0"
+  focus: "#5f43d6"
+  danger: "#b3261e"
+  radius: "4px"
+  font-sans: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  font-mono: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+  tracking-body: "0"
+  tracking-heading: "0"
+  weight-body: 400
+  weight-strong: 600
+  leading-heading: 1.25
+  hero-size: "2.25rem"
+  h1-size: "2rem"
+  h2-size: "1.5rem"
+  site-title-size: "1.125rem"            # name at the top of the sidebar
+  h3-size: "1.2rem"

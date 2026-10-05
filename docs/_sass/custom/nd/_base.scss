@@ -1,0 +1,52 @@
+// Page, type and focus.
+html { background: var(--nd-surface); }
+
+body {
+  background: var(--nd-surface);
+  color: var(--nd-ink);
+  font-family: var(--nd-font-sans);
+  font-weight: var(--nd-weight-body);
+  letter-spacing: var(--nd-tracking-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.text-delta {
+  font-family: var(--nd-font-sans);
+  font-weight: var(--nd-weight-strong);
+  letter-spacing: var(--nd-tracking-heading);
+  line-height: var(--nd-leading-heading);
+  color: var(--nd-ink);
+}
+h1 { font-size: var(--nd-h1-size); }
+h2 { font-size: var(--nd-h2-size); }
+h3 { font-size: var(--nd-h3-size); }
+.text-delta {
+  // Small captions such as "On this page" keep their size but not the muted theme tint.
+  color: var(--nd-muted);
+  letter-spacing: var(--nd-tracking-body);
+}
+b, strong { font-weight: var(--nd-weight-strong); }
+
+a:not([class]) {
+  color: var(--nd-link);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.2em;
+  background-image: none;
+  &:hover { color: var(--nd-link-hover); text-decoration-thickness: 2px; }
+}
+
+:focus-visible,
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--nd-focus);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+hr { border: 0; border-top: 1px solid var(--nd-hairline); height: 0; background: none; }
+
+::selection { background: var(--nd-ink); color: var(--nd-surface); }

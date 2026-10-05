@@ -1,0 +1,15 @@
+{%- comment -%}
+  Turns the chosen theme preset (docs/_data/themes/<theme_preset>.yml) into CSS variables
+  named --nd-<token>. All site CSS reads these variables; it contains no colours of its own.
+{%- endcomment -%}
+{%- assign nd_theme = site.data.themes[site.theme_preset] -%}
+{%- if nd_theme %}
+<style id="nd-tokens">
+:root {
+{%- for t in nd_theme.tokens %}
+  --nd-{{ t[0] }}: {{ t[1] }};
+{%- endfor %}
+}
+</style>
+{%- endif %}
+<meta name="theme-color" content="{{ nd_theme.tokens.surface | default: '#ffffff' }}">

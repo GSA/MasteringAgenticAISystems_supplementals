@@ -1,0 +1,10 @@
+// Site styling layered over the Just the Docs theme (loaded last, so it wins ties).
+//
+// RULE: no colours, font names or sizes are written here. Everything reads the CSS
+// variables --nd-* that _includes/head_custom.html generates from the chosen preset in
+// _data/themes/. To restyle the site, edit or add a preset; see docs/STYLE.md.
+@import "custom/nd/base";
+@import "custom/nd/chrome";
+@import "custom/nd/content";
+@import "custom/nd/home";
+@import "custom/nd/print";

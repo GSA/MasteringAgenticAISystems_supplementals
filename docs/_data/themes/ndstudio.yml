@@ -1,0 +1,40 @@
+# Theme preset: "ndstudio" — a light, flat, high-contrast look inspired by https://ndstudio.gov/
+#
+# HOW TO MAKE YOUR OWN: copy this file to _data/themes/<yourname>.yml, change the values
+# under `tokens`, then set `theme_preset: <yourname>` in docs/_config.yml. Do not edit the
+# stylesheets. Every colour, font and size on the site comes from this file.
+# See docs/STYLE.md for what each token controls and how to check contrast.
+#
+# Keep these pairs at WCAG AA (4.5:1 or better) — .github/scripts/check_theme.py checks them:
+#   ink / surface, ink / surface-raised, ink-soft / surface, muted / surface,
+#   link / surface, link / surface-raised, surface / ink (button text), surface / link.
+name: ND Studio-inspired (light)
+tokens:
+  # Colour
+  surface: "#f2f2f2"          # page and sidebar background
+  surface-raised: "#ffffff"   # cards, code, search box, table row hover
+  ink: "#010101"              # headings and main text
+  ink-soft: "#3a3a3a"         # secondary text, navigation links
+  muted: "#6b6b6b"            # captions, table headers, breadcrumbs
+  hairline: "#d4d4d4"         # thin dividers
+  rule: "#010101"             # strong dividers (section tops, table header line)
+  link: "#3760f2"             # links and primary-button hover
+  link-hover: "#1f3fb8"       # hovered links
+  focus: "#010101"            # keyboard focus ring
+  danger: "#bf000f"           # warnings
+  # Shape
+  radius: "0"                 # corners of buttons, cards, code, inputs
+  # Type
+  font-sans: '"PP Neue Montreal", "Neue Montreal", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif'
+  font-mono: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+  tracking-body: "-0.01em"
+  tracking-heading: "-0.035em"
+  weight-body: 400
+  weight-strong: 500
+  leading-heading: 1.05
+  # Sizes
+  hero-size: "clamp(2.75rem, 7vw, 5.25rem)"   # home page headline
+  h1-size: "clamp(2rem, 4.2vw, 3rem)"
+  h2-size: "1.75rem"
+  site-title-size: "1.0625rem"            # name at the top of the sidebar
+  h3-size: "1.25rem"

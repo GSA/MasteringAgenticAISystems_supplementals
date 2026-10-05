@@ -28,10 +28,11 @@ the `{% link %}` baseurl bug above was actually found, since it was invisible fr
 Markdown source and from a same-repo-file-exists check alike. The video players
 specifically have been confirmed to embed (oEmbed-checked per video), but not watched
 in a browser. After any change here, re-check a live rendered page's `href=`
-attributes, not just that the source parses. The theme is loaded as
-`just-the-docs/just-the-docs` without a version pin; pin it
-(`just-the-docs/just-the-docs@vX.Y.Z` in `_config.yml`) so a theme release cannot
-change the site unannounced.
+attributes, not just that the source parses. The theme is pinned in `_config.yml` (`just-the-docs/just-the-docs@v0.12.0`) so a theme release cannot
+change the site unannounced; change the tag deliberately to upgrade.
+
+The visual style is a swappable preset; see [`STYLE.md`](STYLE.md). After changing styles or presets, run
+`python3 .github/scripts/check_theme.py` (colour contrast and a no-hard-coded-colours check).
 
 ## Layout
 
@@ -40,6 +41,10 @@ docs/
 ├── README.md            This file (excluded from the built site)
 ├── _config.yml          Jekyll + theme configuration, and the repo link variables
 ├── Gemfile              Local-preview dependencies (ignored by GitHub Pages)
+├── STYLE.md             How the look is configured and how to re-skin it (excluded from the built site)
+├── _data/               Theme presets (themes/*.yml) and home page content (home.yml)
+├── _includes/           Theme hooks: head_custom.html, footer_custom.html, nd/ (home page parts)
+├── _sass/custom/        Site CSS layered over the theme; reads only var(--nd-*) variables
 ├── index.md             Site home
 ├── getting-started.md   Study path and how to use the material
 ├── prerequisites/

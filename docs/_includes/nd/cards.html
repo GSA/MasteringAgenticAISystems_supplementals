@@ -1,0 +1,10 @@
+<ul class="nd-cards">
+{%- for c in site.data.home.cards %}
+  <li>
+    <a class="nd-card" href="{% if c.url contains '://' %}{{ c.url }}{% else %}{{ c.url | prepend: site.baseurl }}{% endif %}">
+      <span class="nd-card-title">{{ c.title }}</span>
+      <span class="nd-card-text">{{ c.text }}</span>
+    </a>
+  </li>
+{%- endfor %}
+</ul>
