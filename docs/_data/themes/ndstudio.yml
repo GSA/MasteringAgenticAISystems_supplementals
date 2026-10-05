@@ -39,7 +39,7 @@ tokens:
   h1-size: "clamp(2rem, 4.2vw, 3rem)"
   h2-size: "1.75rem"
   site-title-size: "1rem"            # name at the top of the sidebar
-  seal-size: "4.5rem"                # width of the emblem above the site title
+  seal-size: "2.25rem"               # width of the emblem above the site title
   h3-size: "1.25rem"
 
 # Colours used when the reader picks (or their device prefers) the dark theme. Only colours
