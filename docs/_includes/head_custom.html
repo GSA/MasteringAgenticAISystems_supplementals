@@ -74,13 +74,18 @@
 </script>
 {%- endif %}
 {%- endif %}
-{%- assign nd_moves = site.nav_external_links | where_exp: "l", "l.after or l.before" -%}
-{%- if nd_moves.size > 0 %}
+{%- comment -%} Plain loops, not where_exp: the Pages build (Jekyll 3.10) rejects `or` inside where_exp. {%- endcomment -%}
+{%- if site.nav_external_links.size > 0 %}
 <script>
 /* Moves each external menu link that has a `before:` or `after:` in _config.yml next to that menu item.
    Without JavaScript the link simply stays at the end of the menu. */
 document.addEventListener("DOMContentLoaded", function () {
-  var moves = {{ nd_moves | jsonify }};
+  var moves = [
+{%- for l in site.nav_external_links %}{% if l.after or l.before %}
+    { url: {{ l.url | jsonify }}, before: {{ l.before | default: "" | jsonify }}, after: {{ l.after | default: "" | jsonify }} },
+{%- endif %}{% endfor %}
+  ];
+  if (!moves.length) return;
   var nav = document.querySelector(".site-nav");
   if (!nav) return;
   /* The theme prints the page menu and the external links as two separate lists. */
