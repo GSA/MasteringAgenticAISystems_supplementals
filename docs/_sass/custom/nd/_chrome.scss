@@ -131,6 +131,10 @@
 
 // Small screens: emblem beside the title, compact header
 @media (max-width: 49.99rem) {
-  .site-title { flex-direction: row; align-items: center; justify-content: flex-start; text-align: left; gap: 0.75rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
-  .nd-seal { width: 1.5rem; margin: 0; }
+  // The emblem stays centred above the name; equal side padding leaves room for the menu button.
+  .site-title { gap: 0.35rem; padding-top: 0.6rem; padding-bottom: 0.6rem; padding-left: 3rem; padding-right: 3rem; }
+  .nd-seal { width: 1.5rem; }
+  // Take the menu button out of the row so the title block is centred on the whole header.
+  .site-header { position: relative; }
+  .site-header .site-button { position: absolute; top: 0; right: 0; bottom: 0; }
 }
