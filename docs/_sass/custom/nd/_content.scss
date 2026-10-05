@@ -9,6 +9,7 @@
   font-weight: var(--nd-weight-strong);
   letter-spacing: var(--nd-tracking-body);
   &::after { content: "\2192"; margin-left: 0.6em; }
+  &[target="_blank"]::after { content: "\2197"; } // opens in a new tab
   &:hover { background: var(--nd-ink); color: var(--nd-surface); }
 }
 .btn-primary {
@@ -84,5 +85,21 @@ details {
   &[open] > summary::before { content: "\2212"; }
 }
 
-iframe { background: var(--nd-ink); border-radius: var(--nd-radius); }
+iframe { border-radius: var(--nd-radius); }
 img { border-radius: var(--nd-radius); }
+
+// Things the theme colours on its own, pulled onto the tokens.
+::placeholder { color: var(--nd-muted); opacity: 1; }
+.main-content li::before { color: var(--nd-muted); }
+.anchor-heading svg { fill: var(--nd-muted); }
+iframe { background: var(--nd-surface-raised); }
+
+// Syntax highlighting: the theme's colours are tuned for a white page, so in the dark theme
+// code is shown in the text colour, with comments muted.
+.highlight {
+  @include nd-dark {
+    span { color: inherit; }
+    .c, .cm, .c1, .cs, .cp, .cd { color: var(--nd-muted); }
+    .hll { background: var(--nd-hairline); }
+  }
+}

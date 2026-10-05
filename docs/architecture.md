@@ -52,8 +52,7 @@ Each component also has its own page, for example `reference-architecture/c/Tool
 
 ## Explore the graph
 
-<a href="{{ site.baseurl }}/reference-architecture/explore.html" target="_blank" rel="noopener">Open the interactive graph explorer ↗</a>
-{: .btn .btn-primary }
+[Open the interactive graph explorer]({{ site.baseurl }}/reference-architecture/explore.html){: .btn .btn-primary target="_blank" rel="noopener" }
 
 Opens in a **new tab**, full width, with none of this site's layout — the graph needs the room, and a browser with
 WebGL enabled. Hovering a node highlights its neighborhood; clicking opens a details panel. Link straight to a

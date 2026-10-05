@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Checks the site's theme presets. Run from anywhere:  python3 .github/scripts/check_theme.py
 
-  1. Every preset in docs/_data/themes/ defines the same tokens as the reference preset.
-  2. Text and control colours meet WCAG AA contrast (4.5:1; 3:1 for the focus ring).
+  1. Every preset in docs/_data/themes/ defines the same tokens as the reference preset, and
+     any `dark:` block overrides only known tokens.
+  2. Text and control colours meet WCAG AA contrast (4.5:1; 3:1 for the focus ring), in the
+     light tokens and, where a preset has one, in the dark theme.
   3. The stylesheets in docs/_sass/custom/ contain no literal colours (use var(--nd-*)).
   4. `theme_preset` in docs/_config.yml names a preset that exists.
 
@@ -33,11 +35,11 @@ PAIRS = [
 ]
 
 
-def read_tokens(path):
-    """Minimal reader for the flat `tokens:` block (avoids needing PyYAML)."""
+def read_tokens(path, block="tokens"):
+    """Minimal reader for a flat top-level block such as `tokens:` or `dark:` (no PyYAML needed)."""
     tokens, inside = {}, False
     for line in path.read_text(encoding="utf-8").splitlines():
-        if re.match(r"^tokens:\s*$", line):
+        if re.match(rf"^{block}:\s*$", line):
             inside = True
             continue
         if inside:
@@ -68,7 +70,9 @@ def ratio(a, b):
 
 def main():
     problems = []
-    presets = {p.stem: read_tokens(p) for p in sorted((DOCS / "_data/themes").glob("*.yml"))}
+    files = sorted((DOCS / "_data/themes").glob("*.yml"))
+    presets = {p.stem: read_tokens(p) for p in files}
+    darks = {p.stem: read_tokens(p, "dark") for p in files}
     if REFERENCE not in presets:
         sys.exit(f"Reference preset {REFERENCE}.yml is missing.")
     ref = set(presets[REFERENCE])
@@ -78,17 +82,26 @@ def main():
             problems.append(f"[{name}] missing token: {missing}")
         for extra in sorted(set(tok) - ref):
             problems.append(f"[{name}] unknown token (not in {REFERENCE}): {extra}")
-        for fg, bg, need, what in PAIRS:
-            if fg in tok and bg in tok:
-                try:
-                    r = ratio(tok[fg], tok[bg])
-                except ValueError:
-                    problems.append(f"[{name}] {fg}/{bg} must be #rrggbb hex colours")
-                    continue
-                status = "ok " if r >= need else "LOW"
-                print(f"  {name:10s} {status} {r:5.2f}:1  {fg} on {bg} ({what}, needs {need})")
-                if r < need:
-                    problems.append(f"[{name}] {fg} on {bg} is {r:.2f}:1, needs {need}:1 ({what})")
+        for extra in sorted(set(darks[name]) - ref):
+            problems.append(f"[{name}] unknown token in dark block: {extra}")
+        themes = [("light", tok)]
+        if darks[name]:
+            themes.append(("dark", {**tok, **darks[name]}))
+        for mode, tk in themes:
+            for fg, bg, need, what in PAIRS:
+                if fg in tk and bg in tk:
+                    label = f"{name}/{mode}"
+                    try:
+                        r = ratio(tk[fg], tk[bg])
+                    except ValueError:
+                        problems.append(f"[{label}] {fg}/{bg} must be #rrggbb hex colours")
+                        continue
+                    status = "ok " if r >= need else "LOW"
+                    print(f"  {label:14s} {status} {r:5.2f}:1  {fg} on {bg} ({what}, needs {need})")
+                    if r < need:
+                        problems.append(f"[{label}] {fg} on {bg} is {r:.2f}:1, needs {need}:1 ({what})")
+        if REFERENCE == name and not darks[name]:
+            problems.append(f"[{name}] the reference preset must define a dark: block")
 
     for scss in sorted((DOCS / "_sass/custom").rglob("*.scss")):
         text = re.sub(r"//.*|/\*.*?\*/", "", scss.read_text(encoding="utf-8"), flags=re.S)

@@ -26,3 +26,16 @@ tokens:
   h2-size: "1.5rem"
   site-title-size: "1.125rem"            # name at the top of the sidebar
   h3-size: "1.2rem"
+
+dark:
+  surface: "#1b1b1f"
+  surface-raised: "#26262c"
+  ink: "#f5f6fa"
+  ink-soft: "#d5d4da"
+  muted: "#a9a8b3"
+  hairline: "#37373f"
+  rule: "#d5d4da"
+  link: "#b3a4ff"
+  link-hover: "#d0c6ff"
+  focus: "#b3a4ff"
+  danger: "#ff8a80"

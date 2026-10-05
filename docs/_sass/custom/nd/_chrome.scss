@@ -10,6 +10,7 @@
   line-height: 1.2;
   color: var(--nd-ink);
   letter-spacing: var(--nd-tracking-heading);
+  padding-right: 0.5rem;
   &:hover { background-image: none; }
 }
 
@@ -32,12 +33,13 @@
 }
 .nav-list .nav-list-item.active > .nav-list-link { color: var(--nd-ink); }
 
-.main-header {
-  background: var(--nd-surface);
-  border-bottom: 1px solid var(--nd-hairline);
-}
+.main-header,
+.search,
+.search-input-wrap,
+.aux-nav { background: var(--nd-surface); }
+.main-header { border-bottom: 1px solid var(--nd-hairline); }
 .search-input {
-  background: var(--nd-surface-raised);
+  background: transparent;
   color: var(--nd-ink);
   border-radius: var(--nd-radius);
   letter-spacing: var(--nd-tracking-body);
@@ -90,4 +92,23 @@
   ul { list-style: none; margin: 0; padding: 0; }
   li { margin: 0 0 0.25rem; }
   a { color: var(--nd-ink); }
+}
+
+// Light/dark switch (added by _includes/head_custom.html)
+.nd-theme-toggle {
+  flex-shrink: 0;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.75rem;
+  padding: 0;
+  background: transparent;
+  color: var(--nd-ink);
+  border: 1px solid var(--nd-ink);
+  border-radius: var(--nd-radius);
+  cursor: pointer;
+  &:hover { background: var(--nd-ink); color: var(--nd-surface); }
 }

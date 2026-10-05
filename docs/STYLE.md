@@ -3,14 +3,14 @@
 The site's look comes from one small file of values, called a **preset**. You can change
 colours, fonts, corner shape and heading sizes without writing any CSS.
 
-The default preset, `ndstudio`, is a light, flat, high-contrast style inspired by
+The default preset, `ndstudio`, is a flat, high-contrast style on a white page, with a dark theme, inspired by
 [ndstudio.gov](https://ndstudio.gov/). It borrows the design language only (colour, spacing,
 type scale). It uses no logos, images or font files from that site.
 
 ## Re-skin in five minutes
 
 1. Copy `docs/_data/themes/ndstudio.yml` to `docs/_data/themes/<yourname>.yml`.
-2. Edit the values under `tokens:`. Colours must be six-digit hex such as `"#1a1a1a"`.
+2. Edit the values under `tokens:` (the light theme) and, for colours, under `dark:` (the dark theme). Colours must be six-digit hex such as `"#1a1a1a"`.
 3. In `docs/_config.yml`, set `theme_preset: <yourname>`.
 4. Run `python3 .github/scripts/check_theme.py`. It fails if any text colour is hard to read.
 5. Commit. GitHub Pages rebuilds the site.
@@ -18,11 +18,21 @@ type scale). It uses no logos, images or font files from that site.
 Two presets ship with the repository: `ndstudio` (the default) and `classic` (an approximation
 of the stock Just the Docs look). Set `theme_preset: classic` to go back.
 
+## Light and dark
+
+Every page has a small sun/moon button at the top of the sidebar. It switches between the light and
+dark theme and remembers the choice in that browser. Until someone clicks it, the site follows the
+device's own setting. If the browser blocks storage, the button still works for the current page.
+
+The `dark:` block in a preset lists only the colour tokens that change; everything else (fonts,
+sizes, corners) is shared. A preset with no `dark:` block has no dark theme and no button.
+`check_theme.py` tests contrast for both themes.
+
 ## What each token controls
 
 | Token | Controls |
 |---|---|
-| `surface` | Page and sidebar background |
+| `surface` | Page and sidebar background (white in the default preset) |
 | `surface-raised` | Cards, code blocks, search box, table row hover |
 | `ink` | Headings and main text |
 | `ink-soft` | Navigation links, secondary text |
@@ -59,8 +69,9 @@ docs/
 ├── _config.yml                    theme_preset: ndstudio   (picks the preset)
 ├── _data/themes/*.yml             the presets (colours, fonts, sizes)
 ├── _data/home.yml                 home page figures and cards
-├── _includes/head_custom.html     turns the preset into CSS variables, named --nd-<token>
+├── _includes/head_custom.html     turns the preset into CSS variables (--nd-<token>) and adds the light/dark button
 ├── _includes/footer_custom.html   footer links
+├── _includes/nav_footer_custom.html   sidebar-bottom note on why the project is in the GSA organization
 ├── _includes/nd/                  stats and cards used by index.md
 └── _sass/custom/                  the CSS, layered over Just the Docs; reads only var(--nd-*)
 ```
@@ -68,7 +79,9 @@ docs/
 Rules for contributors:
 
 - Do not write colours (`#fff`, `rgb(...)`) in `_sass/custom/`. Use `var(--nd-<token>)`. If you need
-  a new value, add a token to every preset, and add it to the table above.
+  a new value, add a token to every preset (and to `dark:` if it is a colour), and add it to the table above.
+- For a rule that must differ in the dark theme, use the `@include nd-dark { ... }` mixin from
+  `_sass/custom/nd/_mixins.scss`, so it follows both the button and the device setting.
 - Keep text colours at WCAG AA contrast (4.5:1). `check_theme.py` tests the pairs the site uses.
 - The theme is pinned in `_config.yml` (`just-the-docs@v0.12.0`). Upgrade by changing the tag and
   re-checking a few pages.
@@ -94,5 +107,4 @@ To bring it into line, have the generator emit its `:root` variables from the sa
 | `--font`, `--mono` | `font-sans`, `font-mono` |
 
 Leave the graph's category colours (`--g1` to `--g8`) as they are: they are a validated colour-blind-safe
-set, and recolouring them would hurt readability. Its dark theme and toggle can stay until a dark preset
-exists.
+set, and recolouring them would hurt readability. Its own dark-mode toggle can stay until it reads the same preset.
