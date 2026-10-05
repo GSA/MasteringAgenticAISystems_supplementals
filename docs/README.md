@@ -197,6 +197,12 @@ carry their own header, navigation, and light/dark theme, and none of their inte
 rewritten. **Never hand-edit anything under `reference-architecture/`.** Fix the knowledge graph or its generator in
 `book1`, rebuild, and re-copy.
 
+The one exception is the site's look. All the pages share two files, `assets/style.css` and `assets/theme.js`, and
+`.github/scripts/skin_reference_architecture.py` appends a clearly marked, generated block to each (between
+`ND-SKIN BEGIN` and `ND-SKIN END`). It applies the same theme preset as the rest of the site, makes the light/dark
+choice shared with the rest of the site, and adds a "Study guide" link back. No page is touched. Re-run it after every
+refresh below, and after changing the preset (`--check` tells you if it is out of date).
+
 `architecture.md` is a normal Jekyll page (in the sidebar, `nav_order: 10.5`) that describes the reference
 architecture and links into it; it deliberately does not use the permalink `/reference-architecture/`, which would
 collide with `reference-architecture/index.html`.
@@ -207,6 +213,8 @@ To refresh after `book1` changes:
 rsync -a --delete --exclude '.DS_Store' \
   /path/to/book1/drafts/iter3/reference_architecture/site/ docs/reference-architecture/
 ```
+
+Then re-apply the look: `python3 .github/scripts/skin_reference_architecture.py`.
 
 Then update the source commit noted on `architecture.md`, and re-run the link check documented in `book1`'s
 `site_integration.md` (§6) against `docs/reference-architecture/` before committing.

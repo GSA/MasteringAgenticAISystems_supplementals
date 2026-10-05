@@ -7,10 +7,11 @@
      light tokens and, where a preset has one, in the dark theme.
   3. The stylesheets in docs/_sass/custom/ contain no literal colours (use var(--nd-*)).
   4. `theme_preset` in docs/_config.yml names a preset that exists.
+  5. The Reference Architecture pages carry the current preset (skin_reference_architecture.py --check).
 
 Uses only the Python standard library. Exits 1 if anything fails.
 """
-import re, sys
+import re, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -112,6 +113,14 @@ def main():
     m = re.search(r"^theme_preset:\s*(\S+)", cfg, re.M)
     if not m or m.group(1) not in presets:
         problems.append(f"_config.yml theme_preset {m.group(1) if m else '(missing)'} has no file in docs/_data/themes/")
+
+    skin = Path(__file__).resolve().parent / "skin_reference_architecture.py"
+    if skin.exists():
+        run = subprocess.run([sys.executable, str(skin), "--check"], capture_output=True, text=True)
+        if run.returncode != 0:
+            problems.append("Reference Architecture skin is out of date; run python3 .github/scripts/skin_reference_architecture.py")
+        else:
+            print("  " + run.stdout.strip())
 
     if problems:
         print("\nTheme check FAILED:")

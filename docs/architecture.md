@@ -37,8 +37,8 @@ a static website generated from that KG.
 
 ## Browse the site
 
-This is a **separate, self-contained website** with its own header, top navigation, and light/dark theme toggle — it
-does not use this site's sidebar or styling, and makes no network calls. Once you're in it, move between sections
+This is a **separate, self-contained website** with its own header and top navigation — it does not use this site's
+sidebar, but it shares its look and its light/dark choice, and it makes no network calls. Once you're in it, move between sections
 with its own menu, or jump straight to one:
 
 - [Overview]({{ site.baseurl }}/reference-architecture/index.html) — stats, layer breakdown, and full-text search over all 1,587 components

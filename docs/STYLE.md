@@ -38,6 +38,7 @@ sizes, corners) is shared. A preset with no `dark:` block has no dark theme and 
 | `ink-soft` | Navigation links, secondary text |
 | `muted` | Captions, table headers, breadcrumbs |
 | `hairline` | Thin dividers |
+| `axis` | Chart axes, input borders, lines in the reference-architecture graph |
 | `rule` | Strong dividers (above sections, under table headers) |
 | `link`, `link-hover` | Links; primary button on hover |
 | `focus` | Keyboard focus outline |
@@ -88,11 +89,19 @@ Rules for contributors:
 
 ## Reference architecture pages
 
-`docs/reference-architecture/` is a generated snapshot with its own stylesheet (`assets/style.css`) and
-is **not yet covered by these presets**. Do not edit it here: fix the generator in the `Cybonto/book1`
-repository and re-copy (see `docs/README.md`, "Reference Architecture").
+`docs/reference-architecture/` is a generated snapshot of another repository's site, and its pages must not be
+edited by hand. All of its pages share two files, so the preset is applied by a script instead:
 
-To bring it into line, have the generator emit its `:root` variables from the same preset. The mapping:
+```bash
+python3 .github/scripts/skin_reference_architecture.py          # apply (safe to repeat)
+python3 .github/scripts/skin_reference_architecture.py --check  # is it current?
+```
+
+The script appends one generated block (between `ND-SKIN BEGIN` and `ND-SKIN END`) to `assets/style.css` and
+`assets/theme.js`. It maps the generator's variables onto the preset's tokens, squares the corners, flattens the
+cards, and restyles the header and the light/dark button. It also makes those pages use the same saved light/dark
+choice as the rest of the site, and adds a "Study guide" link back and the GSA footer note. Run it again after
+changing a preset and after every refresh of the snapshot. `check_theme.py` reports if it is out of date.
 
 | Reference architecture variable | Preset token |
 |---|---|
@@ -102,9 +111,12 @@ To bring it into line, have the generator emit its `:root` variables from the sa
 | `--ink-2` | `ink-soft` |
 | `--muted` | `muted` |
 | `--hair` | `hairline` |
-| `--accent`, `--accent-ink` | `link`, `link-hover` |
+| `--axis` | `axis` |
+| `--accent`, `--accent-ink` | `link` |
+| `--rule` | `rule` |
 | `--radius` | `radius` |
 | `--font`, `--mono` | `font-sans`, `font-mono` |
 
-Leave the graph's category colours (`--g1` to `--g8`) as they are: they are a validated colour-blind-safe
-set, and recolouring them would hurt readability. Its own dark-mode toggle can stay until it reads the same preset.
+The graph's category colours (`--g1` to `--g8`) are left as the generator defines them: they are a validated
+colour-blind-safe set, and recolouring them would hurt readability. To make the change permanent, the
+generator in `Cybonto/book1` could read the same tokens; until then the script is the single place the look is applied.

@@ -17,6 +17,7 @@ tokens:
   ink: "#010101"              # headings and main text
   ink-soft: "#3a3a3a"         # secondary text, navigation links
   muted: "#6b6b6b"            # captions, table headers, breadcrumbs
+  axis: "#c4c4c4"            # chart axes, input borders
   hairline: "#d9d9d9"         # thin dividers
   rule: "#010101"             # strong dividers (section tops, table header line)
   link: "#3760f2"             # links and primary-button hover
@@ -49,6 +50,7 @@ dark:
   ink: "#ffffff"
   ink-soft: "#c3c2b7"
   muted: "#a09f98"
+  axis: "#383835"
   hairline: "#2c2c2a"
   rule: "#ffffff"
   link: "#8ba2ff"
