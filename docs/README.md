@@ -60,7 +60,7 @@ docs/
 ├── videos.md            Curated third-party videos, per Part (in Resources)
 ├── video-link-check.md  Record of the video link check/cleanup: what was removed and why (hidden from the menu)
 ├── reports.md           "Reports" menu group: landing page for the cohort report pages in reports/, which are its children
-├── reports/             One page per cohort and section; numbers come from _data/cohorts/ (see REPORTS.md)
+├── reports/             One page per cohort and section; numbers come from _data/cohorts/ (see COHORT_DATA.md)
 ├── slides.md            Slide decks, per chapter (in Resources)
 ├── labs.md              Lab status and how labs are written (in Resources)
 ├── code-examples.md     Code snippets and worked examples, per Part (in Resources)

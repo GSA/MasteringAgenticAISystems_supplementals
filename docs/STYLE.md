@@ -85,7 +85,7 @@ docs/
 ├── _includes/head_custom.html     turns the preset into CSS variables (--nd-<token>) and adds the light/dark button
 ├── _includes/footer_custom.html   footer links
 ├── _includes/title.html           emblem above the site name
-├── _includes/nd/cohort_report.html  body of a cohort report page (see REPORTS.md)
+├── _includes/nd/cohort_report.html  body of a cohort report page (see COHORT_DATA.md)
 ├── _includes/nav_footer_custom.html   sidebar-bottom note on why the project is in the GSA organization
 ├── _includes/nd/                  stats and cards used by index.md
 └── _sass/custom/                  the CSS, layered over Just the Docs; reads only var(--nd-*)

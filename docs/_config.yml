@@ -51,7 +51,7 @@ footer_content: >-
 exclude:
   - README.md
   - STYLE.md
-  - REPORTS.md
+  - COHORT_DATA.md
   - Gemfile
   - Gemfile.lock
   - vendor

@@ -1,7 +1,7 @@
 {%- comment -%}
   Cohort report body. Used by the pages under "Reports": set `cohort: <id>` in the page's front matter, where
   <id> is the name of a file in docs/_data/cohorts/ (without .json). The numbers are aggregates only;
-  see docs/REPORTS.md. The charts are drawn by assets/js/cohort-charts.js from the data embedded below.
+  see docs/COHORT_DATA.md. The charts are drawn by assets/js/cohort-charts.js from the data embedded below.
 {%- endcomment -%}
 {%- assign nd_cohort = site.data.cohorts[page.cohort] -%}
 {%- if nd_cohort %}
