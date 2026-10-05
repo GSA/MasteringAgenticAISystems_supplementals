@@ -1,0 +1,5 @@
+{%- comment -%}
+  Replaces the theme's title: the emblem (site.seal in _config.yml, if set) above the site name.
+{%- endcomment -%}
+{%- if site.seal %}<img class="nd-seal" src="{{ site.seal | relative_url }}" alt="{{ site.seal_alt }}" width="182" height="182">{% endif -%}
+<span class="nd-site-name">{{ site.title }}</span>

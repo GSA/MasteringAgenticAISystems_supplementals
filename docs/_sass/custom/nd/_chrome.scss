@@ -3,8 +3,20 @@
   background: var(--nd-surface);
   border-right: 1px solid var(--nd-hairline);
 }
-.site-header { border-bottom: 1px solid var(--nd-hairline); }
+.site-header {
+  height: auto;               // the emblem makes this taller than the theme's fixed height
+  max-height: none;
+  border-bottom: 1px solid var(--nd-hairline);
+}
+.nd-seal { display: block; width: var(--nd-seal-size); height: auto; }
+.nd-site-name { display: block; }
 .site-title {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
   font-size: var(--nd-site-title-size) !important; // the theme sets its size with !important
   font-weight: var(--nd-weight-strong) !important;
   line-height: 1.2;
@@ -94,16 +106,18 @@
   a { color: var(--nd-ink); }
 }
 
-// Light/dark switch (added by _includes/head_custom.html)
+// Light/dark switch (added by _includes/head_custom.html): top right of the menu column
+.site-nav.nd-has-toggle { position: relative; }
 .nd-theme-toggle {
-  flex-shrink: 0;
-  align-self: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  margin: 0 0.75rem;
+  margin: 0;
   padding: 0;
   background: transparent;
   color: var(--nd-ink);
@@ -111,4 +125,10 @@
   border-radius: var(--nd-radius);
   cursor: pointer;
   &:hover { background: var(--nd-ink); color: var(--nd-surface); }
+}
+
+// Small screens: emblem beside the title, compact header
+@media (max-width: 49.99rem) {
+  .site-title { flex-direction: row; align-items: center; gap: 0.75rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .nd-seal { width: 2.25rem; }
 }

@@ -49,6 +49,7 @@ sizes, corners) is shared. A preset with no `dark:` block has no dark theme and 
 | `weight-body`, `weight-strong` | Font weights for text and headings |
 | `leading-heading` | Heading line height |
 | `hero-size`, `h1-size`, `h2-size`, `h3-size`, `site-title-size` | Type sizes |
+| `seal-size` | Width of the emblem above the site title |
 
 ## Fonts
 
@@ -57,6 +58,15 @@ repository does not include it. The `ndstudio` preset lists it first, so a reade
 installed sees it; everyone else gets Helvetica Neue, Arial or the system font. To use another
 font, add its `@font-face` rule in `docs/_includes/head_custom.html` and put the family name
 first in `font-sans`. Check the font's licence allows web use.
+
+## Emblem and menu
+
+- **Emblem.** The image above the site title is `seal` in `docs/_config.yml` (default `/gsa-seal.png`, a file in
+  `docs/`), with its description in `seal_alt`. Leave `seal` empty for none. Its width is the `seal-size` token.
+- **Light/dark button.** It sits at the top right of the menu column.
+- **Menu links that leave the site.** `nav_external_links` in `_config.yml` adds them. The theme puts them after all
+  the pages; `after: <menu title>` on an entry moves it under that item (done in `_includes/head_custom.html`; without
+  JavaScript it just stays last).
 
 ## Home page content
 
@@ -72,6 +82,7 @@ docs/
 ├── _data/home.yml                 home page figures and cards
 ├── _includes/head_custom.html     turns the preset into CSS variables (--nd-<token>) and adds the light/dark button
 ├── _includes/footer_custom.html   footer links
+├── _includes/title.html           emblem above the site name
 ├── _includes/nav_footer_custom.html   sidebar-bottom note on why the project is in the GSA organization
 ├── _includes/nd/                  stats and cards used by index.md
 └── _sass/custom/                  the CSS, layered over Just the Docs; reads only var(--nd-*)

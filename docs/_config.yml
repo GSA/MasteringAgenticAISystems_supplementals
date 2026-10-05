@@ -24,15 +24,21 @@ color_scheme: light
 # Visual style. Names a file in _data/themes/ (ndstudio, classic, or your own).
 # See docs/STYLE.md.
 theme_preset: ndstudio
+
+# Emblem shown above the site title in the sidebar (a file in docs/). Leave empty for none.
+seal: /gsa-seal.png
+seal_alt: U.S. General Services Administration seal
 search_enabled: true
 heading_anchors: true
 back_to_top: true
 back_to_top_text: Back to top
-# Extra menu entries that leave the site (shown after the pages, in this order).
+# Extra menu entries that leave the site. The theme lists them after the pages; `after:` (read by
+# _includes/head_custom.html) moves one under the named menu item. Remove `after:` to keep it last.
 nav_external_links:
   - title: Discussion
     url: https://github.com/GSA/MasteringAgenticAISystems_supplementals/discussions
     opens_in_new_tab: true
+    after: Reference Architecture   # menu item to sit below (our addition; the theme itself puts these last)
 
 aux_links:
   GitHub repository: https://github.com/GSA/MasteringAgenticAISystems_supplementals

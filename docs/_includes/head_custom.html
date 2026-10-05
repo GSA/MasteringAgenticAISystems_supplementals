@@ -48,8 +48,8 @@
   var MOON = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
 
   document.addEventListener("DOMContentLoaded", function () {
-    var header = document.querySelector(".site-header");
-    if (!header) return;
+    var host = document.querySelector(".site-nav") || document.querySelector(".site-header");
+    if (!host) return;
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "nd-theme-toggle";
@@ -66,11 +66,33 @@
       paint();
     });
     if (mq && mq.addEventListener) mq.addEventListener("change", paint);
-    header.insertBefore(btn, header.querySelector(".site-button"));
+    host.classList.add("nd-has-toggle");
+    host.insertBefore(btn, host.firstChild);   /* top right of the menu column */
     paint();
   });
 })();
 </script>
 {%- endif %}
+{%- endif %}
+{%- assign nd_moves = site.nav_external_links | where_exp: "l", "l.after" -%}
+{%- if nd_moves.size > 0 %}
+<script>
+/* Moves each external menu link that has an `after:` in _config.yml under that menu item.
+   Without JavaScript the link simply stays at the end of the menu. */
+document.addEventListener("DOMContentLoaded", function () {
+  var moves = {{ nd_moves | jsonify }};
+  var top = document.querySelector(".site-nav > ul.nav-list");
+  if (!top) return;
+  moves.forEach(function (m) {
+    var item = Array.prototype.filter.call(top.querySelectorAll(":scope > li.external"), function (li) {
+      var a = li.querySelector("a"); return a && a.getAttribute("href") === m.url;
+    })[0];
+    var after = Array.prototype.filter.call(top.children, function (li) {
+      var a = li.querySelector(":scope > a.nav-list-link"); return a && a.textContent.trim() === m.after;
+    })[0];
+    if (item && after) after.insertAdjacentElement("afterend", item);
+  });
+});
+</script>
 {%- endif %}
 <meta name="theme-color" content="{{ nd_theme.tokens.surface | default: '#ffffff' }}">
