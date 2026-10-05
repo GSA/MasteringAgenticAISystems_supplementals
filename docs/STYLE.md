@@ -50,6 +50,8 @@ sizes, corners) is shared. A preset with no `dark:` block has no dark theme and 
 | `leading-heading` | Heading line height |
 | `hero-size`, `h1-size`, `h2-size`, `h3-size`, `site-title-size` | Type sizes |
 | `seal-size` | Width of the emblem above the site title |
+| `viz-blue`, `viz-orange`, `viz-neutral` | Chart colors: main series, second series or the low end of a scale, and the middle of a scale or context |
+| `viz-ramp-1` to `viz-ramp-4` | Chart colors for ordered steps, lowest to highest |
 
 ## Fonts
 
@@ -83,6 +85,7 @@ docs/
 ├── _includes/head_custom.html     turns the preset into CSS variables (--nd-<token>) and adds the light/dark button
 ├── _includes/footer_custom.html   footer links
 ├── _includes/title.html           emblem above the site name
+├── _includes/nd/cohort_report.html  body of a cohort report page (see REPORTS.md)
 ├── _includes/nav_footer_custom.html   sidebar-bottom note on why the project is in the GSA organization
 ├── _includes/nd/                  stats and cards used by index.md
 └── _sass/custom/                  the CSS, layered over Just the Docs; reads only var(--nd-*)

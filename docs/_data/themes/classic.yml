@@ -27,6 +27,13 @@ tokens:
   h2-size: "1.5rem"
   site-title-size: "1.125rem"            # name at the top of the sidebar
   seal-size: "1.5rem"
+  viz-blue: "#2a78d6"          # chart: main series
+  viz-orange: "#eb6834"        # chart: second series, "low" end of a scale
+  viz-neutral: "#c9c9c9"       # chart: middle of a scale, remaining or context
+  viz-ramp-1: "#86b6ef"        # chart: ordered steps, lowest
+  viz-ramp-2: "#5598e7"
+  viz-ramp-3: "#1c5cab"
+  viz-ramp-4: "#104281"        # chart: ordered steps, highest
   h3-size: "1.2rem"
 
 dark:
@@ -42,3 +49,10 @@ dark:
   link-hover: "#d0c6ff"
   focus: "#b3a4ff"
   danger: "#ff8a80"
+  viz-blue: "#3987e5"
+  viz-orange: "#d95926"
+  viz-neutral: "#3a3a38"
+  viz-ramp-1: "#184f95"
+  viz-ramp-2: "#256abf"
+  viz-ramp-3: "#6da7ec"
+  viz-ramp-4: "#9ec5f4"

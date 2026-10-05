@@ -46,3 +46,11 @@ resources:
   - title: "Code examples"
     text: "Illustrative code and worked examples, by Part."
     url: "/code-examples/"
+# Cards on the Reports page (children of "Reports" in the menu). Add one for each new cohort report.
+reports:
+  - title: "2026 Cohort 1 Section 2"
+    text: "Attendance, retention and poll results."
+    url: "/reports/2026-cohort-1-section-2/"
+  - title: "2026 Cohort 2 Section 1"
+    text: "Attendance, retention, poll results and organizations."
+    url: "/reports/2026-cohort-2-section-1/"

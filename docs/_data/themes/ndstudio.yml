@@ -40,6 +40,13 @@ tokens:
   h2-size: "1.75rem"
   site-title-size: "1.125rem"            # name at the top of the sidebar
   seal-size: "1.75rem"               # width of the emblem above the site title
+  viz-blue: "#2a78d6"          # chart: main series
+  viz-orange: "#eb6834"        # chart: second series, "low" end of a scale
+  viz-neutral: "#c9c9c9"       # chart: middle of a scale, remaining or context
+  viz-ramp-1: "#86b6ef"        # chart: ordered steps, lowest
+  viz-ramp-2: "#5598e7"
+  viz-ramp-3: "#1c5cab"
+  viz-ramp-4: "#104281"        # chart: ordered steps, highest
   h3-size: "1.25rem"
 
 # Colours used when the reader picks (or their device prefers) the dark theme. Only colours
@@ -58,3 +65,10 @@ dark:
   link-hover: "#b4c2ff"
   focus: "#ffffff"
   danger: "#ff6568"
+  viz-blue: "#3987e5"
+  viz-orange: "#d95926"
+  viz-neutral: "#3a3a38"
+  viz-ramp-1: "#184f95"
+  viz-ramp-2: "#256abf"
+  viz-ramp-3: "#6da7ec"
+  viz-ramp-4: "#9ec5f4"

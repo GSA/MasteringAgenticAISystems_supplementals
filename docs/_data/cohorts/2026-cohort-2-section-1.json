@@ -1,0 +1,296 @@
+{
+ "cohort": 2,
+ "excluded": [
+  {
+   "attendees": 20,
+   "date": "2026-07-28",
+   "reason": "Median time in the meeting was 3 minutes, so it was not a held session."
+  }
+ ],
+ "first_session": "2026-07-21",
+ "id": "2026-cohort-2-section-1",
+ "last_session": "2026-09-22",
+ "min_cell": 5,
+ "notes": [
+  "1 meeting date(s) were left out because they were not held sessions.",
+  "10 attendance rows had no email address, so they are not counted as people.",
+  "No usable poll results for: 2026-09-15, 2026-09-22 (no poll file, or fewer than 5 answers).",
+  "Poll results come from people who were in the meeting when a poll opened and chose to answer.",
+  "Percentages in a small cohort move a lot with one person; read the counts."
+ ],
+ "organizations": {
+  "listed": [
+   {
+    "label": "USDA",
+    "people": 24
+   },
+   {
+    "label": "GSA",
+    "people": 9
+   },
+   {
+    "label": "Veterans Affairs",
+    "people": 9
+   },
+   {
+    "label": "IRS",
+    "people": 8
+   },
+   {
+    "label": "TSA",
+    "people": 6
+   }
+  ],
+  "min_people": 5,
+  "other_orgs": 66,
+  "other_people": 95
+ },
+ "read_vs_confidence": {
+  "noread": {
+   "high": 27,
+   "low": 16,
+   "med": 87,
+   "n": 130
+  },
+  "read": {
+   "high": 116,
+   "low": 5,
+   "med": 135,
+   "n": 256
+  }
+ },
+ "retention": {
+  "opening_group": 124,
+  "points": [
+   {
+    "date": "2026-08-04",
+    "share": 0.5887
+   },
+   {
+    "date": "2026-08-11",
+    "share": 0.5323
+   },
+   {
+    "date": "2026-08-18",
+    "share": 0.5081
+   },
+   {
+    "date": "2026-08-25",
+    "share": 0.4355
+   },
+   {
+    "date": "2026-09-01",
+    "share": 0.4274
+   },
+   {
+    "date": "2026-09-08",
+    "share": 0.3871
+   },
+   {
+    "date": "2026-09-15",
+    "share": 0.3468
+   },
+   {
+    "date": "2026-09-22",
+    "share": 0.3468
+   }
+  ]
+ },
+ "section": 1,
+ "sessions": [
+  {
+   "attendees": 124,
+   "conf_high": 41,
+   "conf_low": 6,
+   "conf_med": 58,
+   "conf_n": 105,
+   "date": "2026-07-21",
+   "median_minutes": 62.0,
+   "new": 124,
+   "poll_people": 115,
+   "read_n": 104,
+   "read_yes": 60,
+   "returning": 0,
+   "stay45": 0.8306
+  },
+  {
+   "attendees": 85,
+   "conf_high": 24,
+   "conf_low": 1,
+   "conf_med": 43,
+   "conf_n": 68,
+   "date": "2026-08-04",
+   "median_minutes": 58,
+   "new": 12,
+   "poll_people": 76,
+   "read_n": 65,
+   "read_yes": 41,
+   "returning": 73,
+   "stay45": 0.8118
+  },
+  {
+   "attendees": 78,
+   "conf_high": 21,
+   "conf_low": 6,
+   "conf_med": 31,
+   "conf_n": 58,
+   "date": "2026-08-11",
+   "median_minutes": 57.0,
+   "new": 7,
+   "poll_people": 69,
+   "read_n": 61,
+   "read_yes": 38,
+   "returning": 71,
+   "stay45": 0.8077
+  },
+  {
+   "attendees": 73,
+   "conf_high": 18,
+   "conf_low": 4,
+   "conf_med": 38,
+   "conf_n": 60,
+   "date": "2026-08-18",
+   "median_minutes": 60,
+   "new": 2,
+   "poll_people": 64,
+   "read_n": 58,
+   "read_yes": 38,
+   "returning": 71,
+   "stay45": 0.8493
+  },
+  {
+   "attendees": 64,
+   "conf_high": 18,
+   "conf_low": 6,
+   "conf_med": 27,
+   "conf_n": 51,
+   "date": "2026-08-25",
+   "median_minutes": 62.0,
+   "new": 2,
+   "poll_people": 55,
+   "read_n": 46,
+   "read_yes": 37,
+   "returning": 62,
+   "stay45": 0.875
+  },
+  {
+   "attendees": 63,
+   "conf_high": 20,
+   "conf_low": 3,
+   "conf_med": 22,
+   "conf_n": 45,
+   "date": "2026-09-01",
+   "median_minutes": 59,
+   "new": 0,
+   "poll_people": 57,
+   "read_n": 44,
+   "read_yes": 35,
+   "returning": 63,
+   "stay45": 0.746
+  },
+  {
+   "attendees": 60,
+   "conf_high": 15,
+   "conf_low": 1,
+   "conf_med": 27,
+   "conf_n": 43,
+   "date": "2026-09-08",
+   "median_minutes": 54.5,
+   "new": 3,
+   "poll_people": 50,
+   "read_n": 39,
+   "read_yes": 24,
+   "returning": 57,
+   "stay45": 0.7
+  },
+  {
+   "attendees": 49,
+   "conf_high": null,
+   "conf_low": null,
+   "conf_med": null,
+   "conf_n": null,
+   "date": "2026-09-15",
+   "median_minutes": 60,
+   "new": 0,
+   "poll_people": null,
+   "read_n": null,
+   "read_yes": null,
+   "returning": 49,
+   "stay45": 0.8776
+  },
+  {
+   "attendees": 52,
+   "conf_high": null,
+   "conf_low": null,
+   "conf_med": null,
+   "conf_n": null,
+   "date": "2026-09-22",
+   "median_minutes": 61.0,
+   "new": 1,
+   "poll_people": null,
+   "read_n": null,
+   "read_yes": null,
+   "returning": 51,
+   "stay45": 0.8462
+  }
+ ],
+ "tiers": {
+  "bins": [
+   {
+    "label": "25% or fewer",
+    "people": 53
+   },
+   {
+    "label": "26 to 50%",
+    "people": 28
+   },
+   {
+    "label": "51 to 75%",
+    "people": 30
+   },
+   {
+    "label": "more than 75%",
+    "people": 40
+   }
+  ],
+  "people": 151,
+  "sessions_held": 9
+ },
+ "tiles": {
+  "helpful_n": 434,
+  "helpful_yes": 427,
+  "median_minutes": 59.0,
+  "orgs": 71,
+  "people": 151,
+  "poll_response_rate": 0.8829,
+  "sessions": 9
+ },
+ "time_in_session": [
+  {
+   "count": 16,
+   "label": "under 10"
+  },
+  {
+   "count": 44,
+   "label": "10 to 29"
+  },
+  {
+   "count": 59,
+   "label": "30 to 44"
+  },
+  {
+   "count": 207,
+   "label": "45 to 59"
+  },
+  {
+   "count": 317,
+   "label": "60 to 74"
+  },
+  {
+   "count": 5,
+   "label": "75 or more"
+  }
+ ],
+ "title": "2026 Cohort 2 Section 1",
+ "year": 2026
+}

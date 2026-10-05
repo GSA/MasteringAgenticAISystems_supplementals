@@ -33,6 +33,8 @@ PAIRS = [
     ("surface", "link", 4.5, "primary button hover text"),
     ("danger", "surface", 4.5, "warnings"),
     ("focus", "surface", 3.0, "keyboard focus ring"),
+    ("viz-blue", "surface", 3.0, "chart marks, main series"),
+    ("viz-orange", "surface", 3.0, "chart marks, second series"),
 ]
 
 
