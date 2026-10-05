@@ -1,6 +1,7 @@
 ---
 title: Videos
-nav_order: 7
+parent: Resources
+nav_order: 2
 permalink: /videos/
 ---
 

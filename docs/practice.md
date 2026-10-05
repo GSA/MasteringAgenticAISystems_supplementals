@@ -1,6 +1,7 @@
 ---
 title: Quizzes & practice exams
-nav_order: 6
+parent: Resources
+nav_order: 1
 permalink: /practice/
 ---
 

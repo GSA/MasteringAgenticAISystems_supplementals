@@ -55,18 +55,23 @@ docs/
 │   ├── index.md         The 10 Parts at a glance
 │   └── part-01.md … part-10.md   One page per Part: chapter-by-chapter resource table
 ├── certifications.md    Certification mappings (NCP-AAI, AWS, Databricks, Google, Microsoft)
-├── practice.md          Chapter quizzes and full-length practice exams
-├── videos.md            Curated third-party videos, per Part
+├── resources.md         "Resources" menu group: landing page for the five pages below, which are its children
+├── practice.md          Chapter quizzes and full-length practice exams (in Resources)
+├── videos.md            Curated third-party videos, per Part (in Resources)
 ├── video-link-check.md  Record of the video link check/cleanup: what was removed and why (hidden from the menu)
-├── slides.md            Slide decks, per chapter
-├── labs.md              Lab status and how labs are written
-├── code-examples.md     Code snippets and worked examples, per Part
+├── slides.md            Slide decks, per chapter (in Resources)
+├── labs.md              Lab status and how labs are written (in Resources)
+├── code-examples.md     Code snippets and worked examples, per Part (in Resources)
 ├── architecture.md      Hub page for the Reference Architecture (links out; see below)
 ├── reference-architecture/   Generated static site, copied verbatim — see "Reference Architecture" below
 ├── ai-tutor.md          The AI study tutor
 ├── contributing.md      How to help, governance, conduct, security, support
 └── about.md             License, citation, contributors
 ```
+
+The menu is built from front matter. `resources.md` is the parent of the "Resources" group; a page joins it with
+`parent: Resources` and a `nav_order` (1 to 5) among its siblings. The "Discussion" entry at the end of the menu is not
+a page: it comes from `nav_external_links` in `_config.yml`, which also lists any other link that leaves the site.
 
 ## How content is sourced
 

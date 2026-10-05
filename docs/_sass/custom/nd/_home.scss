@@ -43,9 +43,9 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  gap: 1px;
-  background: var(--nd-hairline);
-  border: 1px solid var(--nd-hairline);
+  gap: 0;
+  border-top: 1px solid var(--nd-hairline);
+  border-left: 1px solid var(--nd-hairline);
   li {
     margin: 0;
     padding: 0;
@@ -59,6 +59,8 @@
   height: 100%;
   padding: 1.25rem;
   background: var(--nd-surface-raised);
+  border-right: 1px solid var(--nd-hairline);
+  border-bottom: 1px solid var(--nd-hairline);
   color: var(--nd-ink);
   text-decoration: none;
   .nd-card-title {

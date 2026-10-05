@@ -1,6 +1,7 @@
 ---
 title: Code examples
-nav_order: 10
+parent: Resources
+nav_order: 5
 permalink: /code-examples/
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Labs
-nav_order: 9
+parent: Resources
+nav_order: 4
 permalink: /labs/
 ---
 

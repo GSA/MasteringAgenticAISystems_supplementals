@@ -1,6 +1,7 @@
 ---
 title: Slides
-nav_order: 8
+parent: Resources
+nav_order: 3
 permalink: /slides/
 ---
 

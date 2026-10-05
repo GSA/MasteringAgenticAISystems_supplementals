@@ -28,6 +28,12 @@ search_enabled: true
 heading_anchors: true
 back_to_top: true
 back_to_top_text: Back to top
+# Extra menu entries that leave the site (shown after the pages, in this order).
+nav_external_links:
+  - title: Discussion
+    url: https://github.com/GSA/MasteringAgenticAISystems_supplementals/discussions
+    opens_in_new_tab: true
+
 aux_links:
   GitHub repository: https://github.com/GSA/MasteringAgenticAISystems_supplementals
 aux_links_new_tab: true
