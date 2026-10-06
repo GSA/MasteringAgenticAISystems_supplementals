@@ -64,7 +64,13 @@ for slide or quiz review. Your experience must reflect Agentic AI expertise.
 
 **Time:** roughly 1-3 hours per finding for most sub-tasks.
 
-**Where to start:** Please contact Tam.Nguyen@gsa.gov for further details
+**Where to start:** every chapter, slide deck and quiz set has its own issue, labeled
+`track:content-review` and tagged by Part and by topic so you can follow a subject
+across the book. Browse them on the
+[Review menu](https://gsa.github.io/MasteringAgenticAISystems_supplementals/review-menu/)
+or filter the issue list yourself. Comment on an issue to take it; for a chapter, we
+then email you the chapter text, which is not published in this repository. Slide decks
+and quizzes are public, so you can begin right away. Questions: Tam.Nguyen@gsa.gov
 
 ### 3. Certification mapping
 
