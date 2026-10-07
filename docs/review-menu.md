@@ -1,6 +1,7 @@
 ---
 title: Review menu
-nav_order: 12.5
+parent: Contributing
+nav_order: 1
 permalink: /review-menu/
 description: Find a chapter, slide deck or quiz set to review, by topic, Part, size or kind of work.
 ---
