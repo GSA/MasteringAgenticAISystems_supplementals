@@ -5,10 +5,9 @@
 {%- endcomment -%}
 {%- if site.data.cohorts -%}
   {%- assign t_people = 0 -%}{%- assign t_sessions = 0 -%}{%- assign t_att = 0 -%}{%- assign t_long = 0 -%}
-  {%- assign t_help_yes = 0 -%}{%- assign t_help_n = 0 -%}{%- assign t_base = 0 -%}{%- assign t_still = 0 -%}
+  {%- assign t_help_yes = 0 -%}{%- assign t_help_n = 0 -%}
   {%- assign t_half = 0 -%}{%- assign t_tier_n = 0 -%}
   {%- assign t_r_n = 0 -%}{%- assign t_r_high = 0 -%}{%- assign t_n_n = 0 -%}{%- assign t_n_high = 0 -%}
-  {%- capture nd_rows -%}
     {%- for entry in site.data.cohorts -%}
       {%- assign c = entry[1] -%}
       {%- assign att = 0 -%}{%- assign long = 0 -%}
@@ -20,30 +19,17 @@
         {%- if b.label == "51 to 75%" or b.label == "more than 75%" -%}{%- assign t_half = t_half | plus: b.people -%}{%- endif -%}
       {%- endfor -%}
       {%- assign t_tier_n = t_tier_n | plus: c.tiers.people -%}
-      {%- assign last_pt = c.retention.points | last -%}
-      {%- assign still = c.retention.opening_group | times: last_pt.share | round -%}
       {%- assign t_people = t_people | plus: c.tiles.people -%}
       {%- assign t_sessions = t_sessions | plus: c.tiles.sessions -%}
       {%- assign t_att = t_att | plus: att -%}
       {%- assign t_long = t_long | plus: long -%}
       {%- assign t_help_yes = t_help_yes | plus: c.tiles.helpful_yes -%}
       {%- assign t_help_n = t_help_n | plus: c.tiles.helpful_n -%}
-      {%- assign t_base = t_base | plus: c.retention.opening_group -%}
-      {%- assign t_still = t_still | plus: still -%}
       {%- assign t_r_n = t_r_n | plus: c.read_vs_confidence.read.n -%}
       {%- assign t_r_high = t_r_high | plus: c.read_vs_confidence.read.high -%}
       {%- assign t_n_n = t_n_n | plus: c.read_vs_confidence.noread.n -%}
       {%- assign t_n_high = t_n_high | plus: c.read_vs_confidence.noread.high -%}
-<tr>
-  <th scope="row"><a href="{{ c.id | prepend: '/reports/' | append: '/' | relative_url }}">{{ c.title }}</a></th>
-  <td class="num">{{ c.tiles.people }}</td>
-  <td class="num">{{ c.tiles.sessions }}</td>
-  <td class="num">{{ long | times: 100.0 | divided_by: att | round }}%</td>
-  <td class="num">{{ still | times: 100.0 | divided_by: c.retention.opening_group | round }}%</td>
-  <td class="num">{{ c.tiles.helpful_yes | times: 100.0 | divided_by: c.tiles.helpful_n | round }}%</td>
-</tr>
     {%- endfor -%}
-  {%- endcapture -%}
   {%- assign r_pct = t_r_high | times: 100.0 | divided_by: t_r_n | round -%}
   {%- assign n_pct = t_n_high | times: 100.0 | divided_by: t_n_n | round -%}
   {%- assign ratio = t_r_high | times: t_n_n | times: 1.0 | divided_by: t_r_n | divided_by: t_n_high | round: 1 -%}
@@ -56,30 +42,4 @@
   <li class="cr-tile"><p class="l">Attended more than half the sessions</p><p class="v">{{ t_half | times: 100.0 | divided_by: t_tier_n | round }}%</p><p class="s">{{ t_half }} of {{ t_tier_n }} people</p></li>
   <li class="cr-tile"><p class="l">Highly confident, with the reading</p><p class="v">{{ ratio }}×</p><p class="s">as likely: {{ r_pct }}% of those who did the reading, {{ n_pct }}% of those who did not</p></li>
 </ul>
-
-<div class="table-wrapper">
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Report</th>
-      <th scope="col" class="num">People</th>
-      <th scope="col" class="num">Sessions held</th>
-      <th scope="col" class="num">Stayed 45 minutes or more</th>
-      <th scope="col" class="num">Opening group still attending</th>
-      <th scope="col" class="num">Said helpful</th>
-    </tr>
-  </thead>
-  <tbody>
-{{ nd_rows }}
-<tr>
-  <th scope="row">Both reports</th>
-  <td class="num">{{ t_people }}</td>
-  <td class="num">{{ t_sessions }}</td>
-  <td class="num">{{ t_long | times: 100.0 | divided_by: t_att | round }}%</td>
-  <td class="num">{{ t_still | times: 100.0 | divided_by: t_base | round }}%</td>
-  <td class="num">{{ t_help_yes | times: 100.0 | divided_by: t_help_n | round }}%</td>
-</tr>
-  </tbody>
-</table>
-</div>
 {%- endif -%}
