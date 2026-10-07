@@ -24,6 +24,12 @@ The reports show totals only. They never show a name, an email address, or a gro
 
 Figures are added up from the cohort reports. Percentages for stayed 45 minutes or more count every attendance, once per person per session. Someone who appears in more than one report is counted in each. "Opening group still attending" is the share of people at the first session who were at the latest one. "Highly confident" compares poll answers from people who said they did the reading with those who said they did not.
 
+## Where people come from
+
+{::nomarkdown}
+{% include nd/org_chart.html %}
+{:/nomarkdown}
+
 ## Expert engagement
 
 {::nomarkdown}

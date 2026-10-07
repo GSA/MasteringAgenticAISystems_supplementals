@@ -6,7 +6,7 @@
 Fails (exit 1) if a file
   * contains an "@" anywhere (an email address),
   * has a key that is not on the allowed list (so a stray name or email column cannot slip in),
-  * lists an organisation with fewer than min_cell people, or breaks organisations out for a cohort
+  * lists an organisation with fewer than MIN_ORG (3) people, or breaks organisations out for a cohort
     with fewer than 30 people,
   * shows a per-session poll count smaller than min_cell.
 Standard library only.
@@ -25,6 +25,7 @@ SESSION = {"date", "attendees", "new", "returning", "median_minutes", "stay45", 
 EXCLUDED = {"date", "attendees", "reason"}
 ORGS = {"min_people", "listed", "other_people", "other_orgs"}
 MIN_PEOPLE_FOR_ORGS = 30
+MIN_ORG = 3
 
 
 def main():
@@ -57,7 +58,7 @@ def main():
             if d["tiles"]["people"] < MIN_PEOPLE_FOR_ORGS:
                 problems.append(f"{name}: organisations listed for a cohort of only {d['tiles']['people']} people")
             for item in o["listed"]:
-                if set(item) != {"label", "people"} or item["people"] < d["min_cell"]:
+                if set(item) != {"label", "people"} or item["people"] < MIN_ORG:
                     problems.append(f"{name}: organisation entry not allowed: {item}")
         print(f"  {name}: {d['tiles']['people']} people, {len(d['sessions'])} sessions, organisations {'listed' if o else 'not listed'}")
     if problems:

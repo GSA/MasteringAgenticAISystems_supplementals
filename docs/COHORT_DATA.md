@@ -6,7 +6,7 @@ The pages under **Reports** show attendance and poll results for each study coho
 
 For each cohort and section, one page (for example `reports/2026-cohort-1-section-2.md`) with these charts: headline numbers; attendance per session; whether the opening group kept coming; how many sessions people attended; whether people did the reading; confidence by session; confidence with and without the reading; time in session; and where people work (large cohorts only). Every chart has a table view.
 
-The **Reports** page itself also shows combined figures: a row of headline numbers and a comparison table across cohorts (`_includes/nd/reports_summary.html`), and headline numbers for expert engagement (`_includes/nd/expert_summary.html`). They are added up at build time from the same JSON files, so nothing on that page is typed by hand and a new cohort is included once its JSON exists.
+The **Reports** page itself also shows combined figures: a row of headline numbers and a comparison table across cohorts (`_includes/nd/reports_summary.html`), and headline numbers for expert engagement (`_includes/nd/expert_summary.html`), and a "Where people come from" column chart of the top 15 agencies plus one combined "All other agencies" column (`_includes/nd/org_chart.html`, drawn by `assets/js/org-chart.js`). Agency names come from `DOMAIN_NAMES` in `build_cohort_stats.py`; add a domain there to spell it out. They are added up at build time from the same JSON files, so nothing on that page is typed by hand and a new cohort is included once its JSON exists.
 
 ## Where the numbers come from
 
@@ -24,10 +24,10 @@ The first writes `docs/_data/cohorts/<id>.json`. The second checks it. Commit on
 ## Privacy rules (enforced by the scripts)
 
 - The JSON holds totals only: no name, no email address, no per-person row.
-- Organizations (email domains) are listed only for a cohort of 30 or more people, and only when 5 or more people share one. Everyone else is shown as a single "everyone else" figure.
+- Organizations (email domains) are listed only for a cohort of 30 or more people, and only when 3 or more people share one. Everyone else is shown as a single "everyone else" figure. (Poll results keep the stricter minimum of 5.)
 - A poll result for one session is dropped when fewer than 5 people answered.
 - "Did the reading" against confidence is shown only when each group has at least 10 answers.
-- `check_cohort_data.py` fails if the JSON contains an `@`, a key that is not on its list, a listed organization with fewer than 5 people, or organizations for a small cohort.
+- `check_cohort_data.py` fails if the JSON contains an `@`, a key that is not on its list, a listed organization with fewer than 3 people, or organizations for a small cohort.
 
 ## Counting rules
 

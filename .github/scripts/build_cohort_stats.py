@@ -11,7 +11,7 @@ and writes docs/_data/cohorts/<slug>.json.
 
 THE JSON HOLDS AGGREGATES ONLY. No name or email address is ever written. Organisations (email
 domains) appear only in a cohort with at least MIN_PEOPLE_FOR_ORGS people, and only when at least
-MIN_CELL people share a domain. Poll results for a session are dropped when fewer than MIN_CELL
+MIN_ORG people share a domain. Poll results for a session are dropped when fewer than MIN_CELL
 people answered. .github/scripts/check_cohort_data.py re-checks the output before you commit it.
 
 Rules for what counts (so every cohort is treated the same):
@@ -40,7 +40,8 @@ COHORTS = [
      "folder": "Cohort 2 Section 1 Zoom Reports"},
 ]
 
-MIN_CELL = 5                # smallest group shown for an organisation or a per-session poll result
+MIN_CELL = 5                # smallest group shown for a per-session poll result
+MIN_ORG = 3                 # smallest group shown for an organisation
 MIN_PEOPLE_FOR_ORGS = 30    # below this, organisations are not broken out at all
 MIN_PAIRS = 10              # smallest group for "did the reading" versus confidence
 HELD_MEDIAN_MINUTES = 10
@@ -51,7 +52,7 @@ HIST_BINS = [(0, 10, "under 10"), (10, 30, "10 to 29"), (30, 45, "30 to 44"),
 TIERS = [(0, 0.25, "25% or fewer"), (0.25, 0.5, "26 to 50%"), (0.5, 0.75, "51 to 75%"), (0.75, 1.01, "more than 75%")]
 # Plain names for the few domains that can be listed (domain -> name). Others show the domain.
 DOMAIN_NAMES = {"usda.gov": "USDA", "va.gov": "Veterans Affairs", "gsa.gov": "GSA", "irs.gov": "IRS",
-                "tsa.dhs.gov": "TSA", "epa.gov": "EPA", "noaa.gov": "NOAA", "sec.gov": "SEC",
+                "tsa.dhs.gov": "TSA", "cisa.dhs.gov": "CISA", "us.af.mil": "USAF", "ny.frb.org": "FRB-NY", "nara.gov": "NARA", "epa.gov": "EPA", "noaa.gov": "NOAA", "sec.gov": "SEC",
                 "fda.hhs.gov": "FDA", "cms.hhs.gov": "CMS", "uspto.gov": "USPTO", "faa.gov": "FAA",
                 "dot.gov": "DOT", "gao.gov": "GAO", "nih.gov": "NIH", "bls.gov": "BLS",
                 "hq.doe.gov": "DOE"}
@@ -168,9 +169,9 @@ def build(cohort, raw):
     n_orgs = len(set(domain_of.values()))
     if len(people) >= MIN_PEOPLE_FOR_ORGS:
         by = Counter(domain_of.values())
-        listed = [{"label": DOMAIN_NAMES.get(dom, dom), "people": n} for dom, n in by.most_common() if n >= MIN_CELL]
-        rest = [(dom, n) for dom, n in by.items() if n < MIN_CELL]
-        orgs = {"min_people": MIN_CELL, "listed": listed,
+        listed = [{"label": DOMAIN_NAMES.get(dom, dom), "people": n} for dom, n in by.most_common() if n >= MIN_ORG]
+        rest = [(dom, n) for dom, n in by.items() if n < MIN_ORG]
+        orgs = {"min_people": MIN_ORG, "listed": listed,
                 "other_people": sum(n for _, n in rest), "other_orgs": len(rest)}
 
     # --- headline numbers --------------------------------------------------------------------

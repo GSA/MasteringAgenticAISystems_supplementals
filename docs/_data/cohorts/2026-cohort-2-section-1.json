@@ -39,11 +39,35 @@
    {
     "label": "TSA",
     "people": 6
+   },
+   {
+    "label": "FDA",
+    "people": 4
+   },
+   {
+    "label": "EPA",
+    "people": 4
+   },
+   {
+    "label": "NOAA",
+    "people": 3
+   },
+   {
+    "label": "CISA",
+    "people": 3
+   },
+   {
+    "label": "SEC",
+    "people": 3
+   },
+   {
+    "label": "DOE",
+    "people": 3
    }
   ],
-  "min_people": 5,
-  "other_orgs": 66,
-  "other_people": 95
+  "min_people": 3,
+  "other_orgs": 60,
+  "other_people": 75
  },
  "read_vs_confidence": {
   "noread": {
