@@ -59,15 +59,16 @@ docs/
 ├── practice.md          Chapter quizzes and full-length practice exams (in Resources)
 ├── videos.md            Curated third-party videos, per Part (in Resources)
 ├── video-link-check.md  Record of the video link check/cleanup: what was removed and why (hidden from the menu)
-├── reports.md           "Reports" menu group: landing page for the cohort report pages in reports/, which are its children
-├── reports/             One page per cohort and section; numbers come from _data/cohorts/ (see COHORT_DATA.md)
+├── reports.md           "Reports" menu group: landing page for the report pages in reports/ (cohort reports and Expert Engagement), which are its children
+├── reports/             One page per cohort and section (numbers from _data/cohorts/, see COHORT_DATA.md), plus Expert Engagement (_data/expert_engagement.json, built by the outreach folder's build_expert_engagement_page.py)
 ├── slides.md            Slide decks, per chapter (in Resources)
 ├── labs.md              Lab status and how labs are written (in Resources)
 ├── code-examples.md     Code snippets and worked examples, per Part (in Resources)
 ├── architecture.md      Hub page for the Reference Architecture (links out; see below)
 ├── reference-architecture/   Generated static site, copied verbatim — see "Reference Architecture" below
 ├── ai-tutor.md          The AI study tutor
-├── contributing.md      How to help, governance, conduct, security, support
+├── contributing.md      How to help, governance, conduct, security, support ("Contributing" menu group; the Review menu is its child)
+├── review-menu.md       Chapters, slide decks and quiz sets to review, by topic (in Contributing)
 └── about.md             License, citation, contributors
 ```
 

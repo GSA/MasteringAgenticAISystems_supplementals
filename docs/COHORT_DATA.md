@@ -6,6 +6,8 @@ The pages under **Reports** show attendance and poll results for each study coho
 
 For each cohort and section, one page (for example `reports/2026-cohort-1-section-2.md`) with these charts: headline numbers; attendance per session; whether the opening group kept coming; how many sessions people attended; whether people did the reading; confidence by session; confidence with and without the reading; time in session; and where people work (large cohorts only). Every chart has a table view.
 
+The **Reports** page itself also shows combined figures: a row of headline numbers and a comparison table across cohorts (`_includes/nd/reports_summary.html`), and headline numbers for expert engagement (`_includes/nd/expert_summary.html`). They are added up at build time from the same JSON files, so nothing on that page is typed by hand and a new cohort is included once its JSON exists.
+
 ## Where the numbers come from
 
 Two Zoom exports per cohort, combined by hand into `participants_combined.csv` and `poll_combined.csv` in the cohort's report folder. These files hold names and email addresses. **They never go in this repository.**
