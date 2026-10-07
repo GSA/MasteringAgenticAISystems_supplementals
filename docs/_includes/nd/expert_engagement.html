@@ -1,0 +1,12 @@
+{%- comment -%}
+  Expert Engagement report body, used by reports/expert-engagement.md. The numbers are aggregates only and come
+  from docs/_data/expert_engagement.json (written by build_compact_report.py in the outreach folder; see
+  docs/COHORT_DATA.md). The charts are drawn by assets/js/expert-engagement-charts.js from the data embedded below.
+{%- endcomment -%}
+{%- if site.data.expert_engagement %}
+<div id="expert-report" class="cr" data-ready="false"><noscript><p>The charts on this page need JavaScript. The same numbers are in the repository file docs/_data/expert_engagement.json.</p></noscript></div>
+<script type="application/json" id="expert-data">{{ site.data.expert_engagement | jsonify }}</script>
+<script src="{{ '/assets/js/expert-engagement-charts.js' | relative_url }}" defer></script>
+{%- else %}
+<p>No data is available for this report yet.</p>
+{%- endif %}

@@ -54,3 +54,6 @@ reports:
   - title: "2026 Cohort 2 Section 1"
     text: "Attendance, retention, poll results and organizations."
     url: "/reports/2026-cohort-2-section-1/"
+  - title: "Expert Engagement"
+    text: "How outside experts are engaging with the curriculum."
+    url: "/reports/expert-engagement/"

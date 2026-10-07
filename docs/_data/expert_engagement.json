@@ -1,0 +1,114 @@
+{
+ "as_of": "October 7, 2026",
+ "by_org": [
+  {
+   "label": "Microsoft",
+   "n": 3
+  },
+  {
+   "label": "Harvard University",
+   "n": 2
+  },
+  {
+   "label": "Purdue University",
+   "n": 2
+  },
+  {
+   "label": "University of Illinois Urbana-Champaign",
+   "n": 2
+  },
+  {
+   "label": "18 other organizations (fewer than 2 contacts each)",
+   "n": 18
+  }
+ ],
+ "by_tag": [
+  {
+   "label": "LLM agents",
+   "n": 5
+  },
+  {
+   "label": "agent security",
+   "n": 4
+  },
+  {
+   "label": "agentic AI",
+   "n": 4
+  },
+  {
+   "label": "AI agent security",
+   "n": 4
+  },
+  {
+   "label": "multi-agent systems",
+   "n": 4
+  },
+  {
+   "label": "AI security",
+   "n": 3
+  },
+  {
+   "label": "autonomous AI agents",
+   "n": 3
+  },
+  {
+   "label": "access control",
+   "n": 2
+  }
+ ],
+ "days": [
+  {
+   "d": "2026-10-01",
+   "joined": 1,
+   "replied": 5
+  },
+  {
+   "d": "2026-10-02",
+   "joined": 2,
+   "replied": 4
+  },
+  {
+   "d": "2026-10-03",
+   "joined": 4,
+   "replied": 2
+  },
+  {
+   "d": "2026-10-04",
+   "joined": 5,
+   "replied": 6
+  },
+  {
+   "d": "2026-10-05",
+   "joined": 3,
+   "replied": 5
+  }
+ ],
+ "min_cell": 2,
+ "n_orgs": 22,
+ "steps": [
+  {
+   "label": "Introduced themselves in the discussion",
+   "n": 16
+  },
+  {
+   "label": "Wrote back by email",
+   "n": 22
+  },
+  {
+   "label": "Completed the survey",
+   "n": 3
+  },
+  {
+   "label": "Named Content Review as their track",
+   "n": 8
+  }
+ ],
+ "tiles": {
+  "both": 11,
+  "content_review": 8,
+  "emailed": 22,
+  "engaged": 27,
+  "joined": 16
+ },
+ "undated_joins": 1
+}
