@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quantization Calibrator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Quantization Calibrator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:QuantizationCalibrator</code></p>
+<div class="split"><section>
+<p class="lead">A model optimisation component that runs representative inputs through a network to collect per-tensor activation statistics and computes quantization thresholds (scaling factors) minimising information loss.</p>
+<p><strong>Responsibility.</strong> Derives the scaling factors used to map full-precision activations to low-precision integers.</p>
+<p class="muted">Also known as: Entropy calibrator, INT8 calibration, Entropy calibration, Calibration step</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Quantization Calibrator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><a href="ModelQuantizer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Model Quantizer: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Model Quantizer</text></a><a href="QuantizationCalibrationDataset.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Quantization Calibration Dataset: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Quantization Calibration…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModelQuantizer.html"><span class="dot g4" aria-hidden="true"></span>Model Quantizer</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/QuantizationCalibrationDataset.html"><span class="dot g4" aria-hidden="true"></span>Quantization Calibration Dataset</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a> <span class="src more" title="Ref7.01">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST calibrate with data representative of the production input distribution, not generic web text.</li><li>SHOULD use entropy (KL-divergence) calibration when accuracy is the priority; min-max trades extra accuracy loss for faster calibration; percentile clipping sits between them.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Entropy calibration of a 7B model takes 10-20 minutes; min-max takes 2-3 minutes but typically loses an additional 0.2-0.5% accuracy (Ch7.4).</li><li>FP8 calibration example uses 512 calibration batches (512 forward passes) (Ch7.4).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Entropy calibration (KL-divergence minimisation)</span><span class="chip">Entropy (KL-divergence) calibration</span><span class="chip">Min-max calibration</span><span class="chip">Percentile calibration</span><span class="chip">E4M3 FP8 calibration</span></dd><dt>Technologies</dt><dd><span class="chip">TensorRT-LLM</span><span class="chip">TensorRT</span><span class="chip">NVIDIA TensorRT Model Optimizer (ModelOpt)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Accuracy loss from mis-set quantization thresholds</span><span class="chip">INT8 slower than FP16 from poor quantize-dequantize placement</span><span class="chip">&#x27;No scaling factors detected&#x27; calibration failures</span><span class="chip">Suboptimal scaling factors amplifying quantization error</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.6">Ch4.6</a>: T. Nguyen, &quot;TensorRT-LLM and NVIDIA Fleet Command,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.4">Ch7.4</a>: T. Nguyen, &quot;TensorRT-LLM Fundamentals and Quantization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.4. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

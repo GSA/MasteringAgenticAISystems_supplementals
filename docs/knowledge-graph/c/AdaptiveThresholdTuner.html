@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adaptive Threshold Tuner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Adaptive Threshold Tuner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:AdaptiveThresholdTuner</code></p>
+<div class="split"><section>
+<p class="lead">A feedback component that analyses human approval, modification, and rejection rates and adjusts escalation thresholds to observed user or team risk tolerance.</p>
+<p><strong>Responsibility.</strong> Tunes escalation thresholds from approval outcomes.</p>
+<p class="muted">Also known as: Smart thresholds, Approval-rate tracker, Rejection reason analyzer</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Adaptive Threshold Tuner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>receives data from</title></line><a href="AuditLogStore.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Audit Log Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Audit Log Store</text></a><a href="ApprovalRequestStore.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Approval Request Store: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Approval Request Store</text></a><a href="EscalationThresholdPolicy.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Escalation Threshold Policy: writes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Escalation Threshold Pol…</text></a><a href="InterventionPatternAnalyzer.html"><circle class="g8" cx="230.0" cy="220.0" r="7"><title>Override Pattern Analyzer: receives data from</title></circle><text x="218.0" y="224.0" text-anchor="end">Override Pattern Analyzer</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ApprovalRequestStore.html"><span class="dot g8" aria-hidden="true"></span>Approval Request Store</a> <a class="src" href="../sources.html#Ch9.2">Ch9.2</a></li><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ch1.1A">Ch1.1A</a> <a class="src" href="../sources.html#Ch1.1B">Ch1.1B</a> <span class="src more" title="Ch10.4">+1</span></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EscalationThresholdPolicy.html"><span class="dot g8" aria-hidden="true"></span>Escalation Threshold Policy</a> <a class="src" href="../sources.html#Ch1.1B">Ch1.1B</a> <a class="src" href="../sources.html#Ch9.2">Ch9.2</a> <span class="src more" title="Ch10.2, Ch10.4, Ch10.5, Ref10.01">+4</span></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/InterventionPatternAnalyzer.html"><span class="dot g8" aria-hidden="true"></span>Override Pattern Analyzer</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a> <span class="src more" title="Ref10.01">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD track approval rates and relax thresholds when reviewers approve nearly everything, tightening them when rejections are frequent.</li><li>SHOULD adjust confidence thresholds and policy parameters from shadow-period comparisons of human judgments with agent recommendations before activating enforcement.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Approving &gt;80% of requests without modification suggests the threshold is too low (Ch1.1A).</li><li>If users approve 95% of refunds under $1,000, raise auto-approval to $1,200 then $1,500; if 40% of flagged contracts are rejected, lower the escalation threshold (Ch1.1B).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Adaptive thresholds</span><span class="chip">Categorized rejection reasons for statistical policy-gap analysis</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Flexibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Approval fatigue</span><span class="chip">Missed edge cases</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.1A">Ch1.1A</a>: T. Nguyen, &quot;Designing User Interfaces for Intuitive Human-Agent Interaction,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch1.1B">Ch1.1B</a>: T. Nguyen, &quot;Human-in-the-Loop Patterns and Accessible Design,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.2">Ch9.2</a>: T. Nguyen, &quot;Action Constraints and Permission Models,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref10.01">Ref10.01</a>: &quot;Human-in-the-Loop Systems for Agent Interactions,&quot; unpublished reference note (01-Human-in-the-Loop-Systems.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

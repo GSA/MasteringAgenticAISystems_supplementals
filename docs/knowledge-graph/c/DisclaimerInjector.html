@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disclaimer Injector · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Disclaimer Injector</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:DisclaimerInjector</code></p>
+<div class="split"><section>
+<p class="lead">An output guardrail that modifies responses to meet standards by appending domain-appropriate compliance disclaimers or converting absolute statements into hedged language.</p>
+<p><strong>Responsibility.</strong> Adds required disclosures to outgoing responses.</p>
+<p class="muted">Also known as: Modify guardrail, add disclaimers flow</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Disclaimer Injector"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is configured by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: guards</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="GuardrailOrchestrator.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Guardrail Orchestrator: is orchestrated by</title></circle><text x="520.3" y="305.0" text-anchor="start">Guardrail Orchestrator</text></a><a href="DomainPolicyDocument.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Compliance Policy Rule Set: is configured by</title></circle><text x="239.7" y="305.0" text-anchor="end">Compliance Policy Rule Set</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DomainPolicyDocument.html"><span class="dot g7" aria-hidden="true"></span>Compliance Policy Rule Set</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ref9.04">Ref9.04</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ref9.04">Ref9.04</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/GuardrailOrchestrator.html"><span class="dot g7" aria-hidden="true"></span>Guardrail Orchestrator</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD select the disclaimer by detected domain (medical, financial, legal) of the response.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">NeMo Guardrails</span><span class="chip">Colang</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Missing legally required disclosures</span><span class="chip">Responses construed as medical, legal or financial advice</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.1">Ch9.1</a>: T. Nguyen, &quot;Output Filtering and Content Moderation,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.04">Ref9.04</a>: &quot;Safety Guardrails Implementation for Agent Systems,&quot; unpublished reference note (04-Safety-Guardrails-Implementation.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explanation Method Selector · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Explanation Method Selector</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ExplanationMethodSelector</code></p>
+<div class="split"><section>
+<p class="lead">A component that selects which explainability method(s) and visualizations to apply for a decision, based on user mode (novice or expert), investigation goal and decision context.</p>
+<p><strong>Responsibility.</strong> Selects the explainability methods applied to a decision for a given user and context.</p>
+<p class="muted">Also known as: Multi-method explanation interface, Novice/expert mode switch</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Explanation Method Selector"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>routes to</title></line><a href="ExplanationPresenter.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Explanation Presenter: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Explanation Presenter</text></a><a href="CounterfactualExplainer.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Counterfactual Explainer: routes to</title></circle><text x="542.0" y="224.0" text-anchor="start">Counterfactual Explainer</text></a><a href="DecisionFactorExplainer.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Decision Factor Explainer: routes to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Decision Factor Explainer</text></a><a href="AttributionAnalyzer.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Attribution Analyzer: routes to</title></circle><text x="218.0" y="224.0" text-anchor="end">Attribution Analyzer</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExplanationPresenter.html"><span class="dot g8" aria-hidden="true"></span>Explanation Presenter</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>routes to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AttributionAnalyzer.html"><span class="dot g6" aria-hidden="true"></span>Attribution Analyzer</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/CounterfactualExplainer.html"><span class="dot g2" aria-hidden="true"></span>Counterfactual Explainer</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/DecisionFactorExplainer.html"><span class="dot g7" aria-hidden="true"></span>Decision Factor Explainer</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD offer multiple explanation methods rather than one universal method, since regulators, end users, developers and operators need different explanation types.</li><li>Novice mode SHOULD present a single default method selected by decision context; expert mode MAY expose all methods and visualization parameters.</li><li>Divergence between methods SHOULD be treated as a signal of complexity warranting further investigation or human oversight.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Multi-method triangulation (SHAP, LIME, Anchors, DiCE)</span><span class="chip">Novice mode single default method</span><span class="chip">Expert mode full method and visualization control</span></dd><dt>Technologies</dt><dd><span class="chip">IXAII</span></dd><dt>Quality attributes</dt><dd><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span><span class="chip">Flexibility (ISO/IEC 25010)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Universality assumption (single method for all users)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

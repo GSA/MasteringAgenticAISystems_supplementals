@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hallucination Threshold Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Hallucination Threshold Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:HallucinationThresholdPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A policy artifact setting maximum acceptable hallucination rates per severity level and application domain for deployment and alerting decisions.</p>
+<p><strong>Responsibility.</strong> Declares domain- and severity-specific hallucination tolerances.</p>
+<p class="muted">Also known as: Domain-specific hallucination thresholds, Severity thresholds</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Hallucination Threshold Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>configures</title></line><a href="AlertManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Alert Manager: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alert Manager</text></a><a href="ModelRolloutManager.html"><circle class="g5" cx="530.0" cy="220.0" r="7"><title>Rollout Manager: constrains</title></circle><text x="542.0" y="224.0" text-anchor="start">Rollout Manager</text></a><a href="OnlineEvaluator.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Online Evaluator: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Online Evaluator</text></a><a href="QualityDriftDetector.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Quality Drift Detector: configures</title></circle><text x="218.0" y="224.0" text-anchor="end">Quality Drift Detector</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AlertManager.html"><span class="dot g6" aria-hidden="true"></span>Alert Manager</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li><li><a class="comp" href="../c/OnlineEvaluator.html"><span class="dot g6" aria-hidden="true"></span>Online Evaluator</a> <a class="src" href="../sources.html#Ref8.03">Ref8.03</a></li><li><a class="comp" href="../c/QualityDriftDetector.html"><span class="dot g6" aria-hidden="true"></span>Quality Drift Detector</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ModelRolloutManager.html"><span class="dot g5" aria-hidden="true"></span>Rollout Manager</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST set thresholds by failure consequence per domain and severity rather than one aggregate target.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Severity thresholds: critical &lt;0.1-0.5%, high &lt;1-2%, medium &lt;5%, low &lt;10-15% (Ch3.10).</li><li>Domain thresholds: financial advice &lt;2%, customer support &lt;5%, healthcare critical &lt;0.5%, entertainment &lt;20% (Ch3.10).</li><li>Production baseline hallucination rates range 8-20%; customer-facing targets &lt;5% (Ch3.10).</li><li>Alert when hallucination rate exceeds 2% (Ref8.03).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Aggregate rates masking critical hallucinations</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.03">Ref8.03</a>: &quot;Agent Evaluation Frameworks and Metrics,&quot; unpublished reference note (03-Agent-Evaluation-Frameworks.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

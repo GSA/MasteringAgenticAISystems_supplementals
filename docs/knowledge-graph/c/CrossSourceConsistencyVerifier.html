@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-Source Consistency Verifier · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Cross-Source Consistency Verifier</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:CrossSourceConsistencyVerifier</code></p>
+<div class="split"><section>
+<p class="lead">A verification step that retrieves the same information from multiple reputable sources, compares them, and flags conflicts for manual review instead of answering confidently.</p>
+<p><strong>Responsibility.</strong> Detects contradictions across retrieved sources before an answer is given.</p>
+<p class="muted">Also known as: Contradiction detection</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cross-Source Consistency Verifier"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>escalates to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is invoked by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="Retriever.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Retriever: invokes</title></circle><text x="534.1" y="173.9" text-anchor="start">Retriever</text></a><a href="HumanSpecialist.html"><circle class="g8" cx="468.2" cy="341.4" r="7"><title>Human Specialist: escalates to</title></circle><text x="475.2" y="355.1" text-anchor="start">Human Specialist</text></a><a href="MultiHopAnswerSynthesizer.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Multi-Hop Answer Synthesizer: sends data to</title></circle><text x="284.8" y="355.1" text-anchor="end">Multi-Hop Answer Synthes…</text></a><a href="MultiHopRetrievalController.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Multi-Hop Retrieval Controller: is invoked by</title></circle><text x="225.9" y="173.9" text-anchor="end">Multi-Hop Retrieval Cont…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/Retriever.html"><span class="dot g3" aria-hidden="true"></span>Retriever</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li><li><a class="comp" href="../c/MultiHopRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Multi-Hop Retrieval Controller</a> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li></ul></section>
+<section class="rel"><h3>escalates to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/HumanSpecialist.html"><span class="dot g8" aria-hidden="true"></span>Human Specialist</a> <a class="src" href="../sources.html#Ch3.2">Ch3.2</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/MultiHopAnswerSynthesizer.html"><span class="dot g3" aria-hidden="true"></span>Multi-Hop Answer Synthesizer</a> <a class="src" href="../sources.html#Ch3.3">Ch3.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD flag conflicting information across sources so users can make informed decisions.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Paraphrase consistency rose from 73% to 91% after verification and prompt changes (Ch3.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Contradictory answers to paraphrased questions</span><span class="chip">Outdated or conflicting information across sources</span><span class="chip">Conflicting evidence in medical literature</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.2">Ch3.2</a>: T. Nguyen, &quot;Compare Agent Performance Across Tasks and Datasets,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.3">Ch3.3</a>: T. Nguyen, &quot;Web Navigation and Interaction Benchmarks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

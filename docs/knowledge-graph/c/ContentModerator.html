@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Moderator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Human role</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Content Moderator</h1>
+<p class="badges"><span class="badge">Human role</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ContentModerator</code></p>
+<div class="split"><section>
+<p class="lead">A human reviewer who assesses ambiguous or reported content against detailed content policies and makes final approve or block decisions with justification.</p>
+<p><strong>Responsibility.</strong> Decides borderline moderation cases using contextual and ethical judgment.</p>
+<p class="muted">Also known as: Human moderator, Human reviewer</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Content Moderator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="486.1" y2="113.9"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>receives escalation from</title></line><line x1="380.0" y1="220.0" x2="486.1" y2="326.1"><title>receives escalation from</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="273.9" y2="326.1"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="273.9" y2="113.9"><title>is constrained by</title></line><a href="FeedbackCollector.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Feedback Collector: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Feedback Collector</text></a><a href="ContentSafetyFilter.html"><circle class="g7" cx="486.1" cy="113.9" r="7"><title>Content Safety Filter: evaluates</title></circle><text x="494.6" y="109.4" text-anchor="start">Content Safety Filter</text></a><a href="BiasDetector.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Output Bias Detector: receives escalation from</title></circle><text x="542.0" y="224.0" text-anchor="start">Output Bias Detector</text></a><a href="ModerationTriageRouter.html"><circle class="g8" cx="486.1" cy="326.1" r="7"><title>Moderation Triage Router: receives escalation from</title></circle><text x="494.6" y="338.6" text-anchor="start">Moderation Triage Router</text></a><a href="AnnotationQualityMonitor.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Annotation Quality Monitor: is evaluated by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Annotation Quality Monitor</text></a><a href="ModerationReviewConsole.html"><circle class="g8" cx="273.9" cy="326.1" r="7"><title>Moderation Review Console: invokes</title></circle><text x="265.4" y="338.6" text-anchor="end">Moderation Review Console</text></a><a href="ContentModerationPolicy.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Content Moderation Policy: is configured by</title></circle><text x="218.0" y="224.0" text-anchor="end">Content Moderation Policy</text></a><a href="ModeratorExposurePolicy.html"><circle class="g8" cx="273.9" cy="113.9" r="7"><title>Moderator Exposure Policy: is constrained by</title></circle><text x="265.4" y="109.4" text-anchor="end">Moderator Exposure Policy</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ContentModerationPolicy.html"><span class="dot g7" aria-hidden="true"></span>Content Moderation Policy</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/FeedbackCollector.html"><span class="dot g8" aria-hidden="true"></span>Feedback Collector</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/ModerationReviewConsole.html"><span class="dot g8" aria-hidden="true"></span>Moderation Review Console</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>receives escalation from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/BiasDetector.html"><span class="dot g7" aria-hidden="true"></span>Output Bias Detector</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li><li><a class="comp" href="../c/ModerationTriageRouter.html"><span class="dot g8" aria-hidden="true"></span>Moderation Triage Router</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ModeratorExposurePolicy.html"><span class="dot g8" aria-hidden="true"></span>Moderator Exposure Policy</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ContentSafetyFilter.html"><span class="dot g7" aria-hidden="true"></span>Content Safety Filter</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/AnnotationQualityMonitor.html"><span class="dot g4" aria-hidden="true"></span>Annotation Quality Monitor</a> <a class="src" href="../sources.html#Ch9.1">Ch9.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD focus on cases where human judgment adds most value; human review is an integral component, not a stopgap to be eliminated.</li><li>SHOULD be protected from vicarious trauma through automated handling of clear-cut cases, highlighting of concerning passages, exposure rotation and mental health support.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Context-dependent bias missed by classifiers</span><span class="chip">Novel harmful content</span><span class="chip">Evolving social norms</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.1">Ch9.1</a>: T. Nguyen, &quot;Output Filtering and Content Moderation,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

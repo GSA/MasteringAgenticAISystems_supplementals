@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multimodal Retriever · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Multimodal Retriever</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:MultimodalRetriever</code></p>
+<div class="split"><section>
+<p class="lead">An abstract retriever that returns the most relevant items for a query across text, image, and audio content, whatever modality they originated in.</p>
+<p><strong>Responsibility.</strong> Retrieves query-relevant content across modalities.</p>
+<p class="muted">Also known as: Multimodal RAG retrieval</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/Retriever.html"><span class="dot g3" aria-hidden="true"></span>Retriever</a> <span class="tag">abstract</span></p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Multimodal Retriever"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is specialized by</title></line><a href="VectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Store</text></a><a href="Retriever.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Retriever: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Retriever</text></a><a href="PerModalityFanOutRetriever.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Per-Modality Fan-Out Retriever: is specialized by</title></circle><text x="475.2" y="355.1" text-anchor="start">Per-Modality Fan-Out Ret…</text></a><a href="GroundedTextRetriever.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Grounded Text Retriever: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Grounded Text Retriever</text></a><a href="UnifiedEmbeddingRetriever.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Unified Embedding Retriever: is specialized by</title></circle><text x="225.9" y="173.9" text-anchor="end">Unified Embedding Retrie…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/GroundedTextRetriever.html"><span class="dot g3" aria-hidden="true"></span>Grounded Text Retriever</a></td><td>Choose for information-dense visuals (financial reports, scientific charts, technical diagrams) where precise chart content must be retrievable and existing text RAG infrastructure should stay unchanged.</td></tr><tr><td><a class="comp" href="../c/PerModalityFanOutRetriever.html"><span class="dot g3" aria-hidden="true"></span>Per-Modality Fan-Out Retriever</a></td><td>Choose for research or experimentation with best-in-class per-modality embedding models, or mature-MLOps production systems able to absorb the extra complexity and cost.</td></tr><tr><td><a class="comp" href="../c/UnifiedEmbeddingRetriever.html"><span class="dot g3" aria-hidden="true"></span>Unified Embedding Retriever</a></td><td>Choose for general imagery, rapid prototyping, or minimal change to an existing text RAG stack with a single vector store.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a> <a class="src" href="../sources.html#Ref2.07">Ref2.07</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Multimodal RAG</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

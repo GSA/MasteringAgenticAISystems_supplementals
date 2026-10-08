@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan Template Extractor · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Plan Template Extractor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:PlanTemplateExtractor</code></p>
+<div class="split"><section>
+<p class="lead">A component that abstracts completed agent execution plans into parameterized workflow templates and stores them for reuse by structurally similar future requests.</p>
+<p><strong>Responsibility.</strong> Derives reusable plan templates from previous executions.</p>
+<p class="muted">Also known as: GoO template consolidation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Plan Template Extractor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>writes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>writes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>produces</title></line><a href="ExecutionPlan.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Execution Plan: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Execution Plan</text></a><a href="ProceduralMemoryStore.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Procedural Memory Store: writes</title></circle><text x="534.1" y="173.9" text-anchor="start">Procedural Memory Store</text></a><a href="GraphReasoningStateStore.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Graph Reasoning State Store: reads</title></circle><text x="475.2" y="355.1" text-anchor="start">Graph Reasoning State St…</text></a><a href="ReasoningChainCache.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Reasoning Chain Cache: writes</title></circle><text x="284.8" y="355.1" text-anchor="end">Reasoning Chain Cache</text></a><a href="GraphOfOperations.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Graph of Operations: produces</title></circle><text x="225.9" y="173.9" text-anchor="end">Graph of Operations</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExecutionPlan.html"><span class="dot g2" aria-hidden="true"></span>Execution Plan</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li><li><a class="comp" href="../c/GraphReasoningStateStore.html"><span class="dot g2" aria-hidden="true"></span>Graph Reasoning State Store</a> <a class="src" href="../sources.html#Ch5.2">Ch5.2</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ProceduralMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Procedural Memory Store</a> <a class="src" href="../sources.html#Ch5.2">Ch5.2</a></li><li><a class="comp" href="../c/ReasoningChainCache.html"><span class="dot g4" aria-hidden="true"></span>Reasoning Chain Cache</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li></ul></section>
+<section class="rel"><h3>produces <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/GraphOfOperations.html"><span class="dot g2" aria-hidden="true"></span>Graph of Operations</a> <a class="src" href="../sources.html#Ch5.2">Ch5.2</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Plan template reuse</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.7">Ch4.7</a>: T. Nguyen, &quot;Scaling Strategies,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.2">Ch5.2</a>: T. Nguyen, &quot;Tree-of-Thought (ToT) Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

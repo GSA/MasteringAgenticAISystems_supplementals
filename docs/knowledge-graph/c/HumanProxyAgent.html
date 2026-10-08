@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human Proxy Agent · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Human Proxy Agent</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:HumanProxyAgent</code></p>
+<div class="split"><section>
+<p class="lead">A conversational agent acting on the user&#x27;s behalf that validates other agents&#x27; proposed solutions by executing their code and reporting results back as conversational messages.</p>
+<p><strong>Responsibility.</strong> Executes and validates peer-agent outputs on the user&#x27;s behalf within a conversation.</p>
+<p class="muted">Also known as: UserProxyAgent, User proxy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Human Proxy Agent"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to; evaluates; receives data from</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>escalates to; requires approval from</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>invokes</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: sends data to; evaluates; receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="HumanApprover.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Human Approver: escalates to; requires approval from</title></circle><text x="542.0" y="224.0" text-anchor="start">Human Approver</text></a><a href="GroupChatManager.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Conversational Agent Coordinator: is orchestrated by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Conversational Agent Coo…</text></a><a href="CodeExecutionRunner.html"><circle class="g1" cx="230.0" cy="220.0" r="7"><title>Code Execution Runner: invokes</title></circle><text x="218.0" y="224.0" text-anchor="end">Code Execution Runner</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CodeExecutionRunner.html"><span class="dot g1" aria-hidden="true"></span>Code Execution Runner</a> <a class="src" href="../sources.html#Ch2.1">Ch2.1</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+<section class="rel"><h3>escalates to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.1">Ch2.1</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.1">Ch2.1</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/GroupChatManager.html"><span class="dot g1" aria-hidden="true"></span>Conversational Agent Coordinator</a> <a class="src" href="../sources.html#Ch2.1">Ch2.1</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+<section class="rel"><h3>requires approval from <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.1">Ch2.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD seek human approval before actions when configured for always-ask input mode, and run autonomously only when configured for never-ask mode.</li><li>SHOULD request human validation of the final output when the conversation ends or the round limit is reached.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Conversation-driven collaboration</span><span class="chip">Human-in-the-loop</span><span class="chip">Separation of thinking and execution</span></dd><dt>Technologies</dt><dd><span class="chip">AutoGen</span><span class="chip">AutoGen UserProxyAgent</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unreviewed execution of agent-generated code</span><span class="chip">Unvalidated final outputs</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.1">Ch2.1</a>: T. Nguyen, &quot;Framework Landscape and Selection,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.4">Ch2.4</a>: T. Nguyen, &quot;Multi-Agent Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.4. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

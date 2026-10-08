@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Communication Topology · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data artifact</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Agent Communication Topology</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:AgentCommunicationTopology</code></p>
+<div class="split"><section>
+<p class="lead">A declarative graph (e.g., adjacency matrix) specifying which agents participate and which may exchange messages in a multi-agent workflow.</p>
+<p><strong>Responsibility.</strong> Defines the permitted agent set and communication edges of a multi-agent system.</p>
+<p class="muted">Also known as: Adjacency matrix, Coordination graph</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Agent Communication Topology"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is produced by</title></line><a href="AgentMessageBus.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Message Bus: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Message Bus</text></a><a href="MultiAgentCoordinator.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Multi-Agent Coordinator: configures</title></circle><text x="520.3" y="305.0" text-anchor="start">Multi-Agent Coordinator</text></a><a href="CommunicationTopologyOptimizer.html"><circle class="g1" cx="250.1" cy="295.0" r="7"><title>Communication Topology Optimizer: is produced by</title></circle><text x="239.7" y="305.0" text-anchor="end">Communication Topology O…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/MultiAgentCoordinator.html"><span class="dot g1" aria-hidden="true"></span>Multi-Agent Coordinator</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AgentMessageBus.html"><span class="dot g1" aria-hidden="true"></span>Agent Message Bus</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+<section class="rel"><h3>is produced by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/CommunicationTopologyOptimizer.html"><span class="dot g1" aria-hidden="true"></span>Communication Topology Optimizer</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unnecessary agents and interactions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

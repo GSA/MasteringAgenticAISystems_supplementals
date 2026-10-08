@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paginated API Extractor · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Paginated API Extractor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:PaginatedAPIExtractor</code></p>
+<div class="split"><section>
+<p class="lead">A data source connector that pulls records from web service APIs page by page, managing authentication, pagination tokens, rate limits and server-side updated-since filters.</p>
+<p><strong>Responsibility.</strong> Retrieves changed records from a web API in bounded pages.</p>
+<p class="muted">Also known as: REST API connector, API extractor, GraphQL connector</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DataSourceConnector.html"><span class="dot g3" aria-hidden="true"></span>Data Source Connector</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for semi-structured sources exposed through REST or GraphQL APIs (e.g., ticketing, CRM, wiki platforms).</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Paginated API Extractor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is constrained by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is guarded by</title></line><a href="ExternalServiceAPI.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>External Service API: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">External Service API</text></a><a href="RateLimiter.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Rate Limiter: is constrained by</title></circle><text x="542.0" y="224.0" text-anchor="start">Rate Limiter</text></a><a href="DataSourceConnector.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Data Source Connector: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Data Source Connector</text></a><a href="SourceSchemaValidator.html"><circle class="g3" cx="230.0" cy="220.0" r="7"><title>Source Schema Validator: is guarded by</title></circle><text x="218.0" y="224.0" text-anchor="end">Source Schema Validator</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExternalServiceAPI.html"><span class="dot g1" aria-hidden="true"></span>External Service API</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/RateLimiter.html"><span class="dot g7" aria-hidden="true"></span>Rate Limiter</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>is guarded by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/SourceSchemaValidator.html"><span class="dot g3" aria-hidden="true"></span>Source Schema Validator</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD prefer cursor-based pagination over page offsets to avoid race conditions when records are added during extraction.</li><li>SHOULD push incremental filtering to the server via an updated-since parameter to conserve API quota.</li><li>SHOULD distinguish transient failures (retry after delay) from permanent failures such as authentication or quota exhaustion (alert and abort).</li><li>SHOULD enforce the provider&#x27;s request-rate limit between calls.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Server-side updated_since filtering reduced Zendesk API calls by 98% in production (Ch6.3A).</li><li>Pages of 100 records replace a single ~10 GB response (Ch6.3A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Page-by-page iteration</span><span class="chip">Cursor-based pagination (next-page token)</span><span class="chip">Server-side incremental filtering (updated_since)</span><span class="chip">Request throttling</span></dd><dt>Technologies</dt><dd><span class="chip">Zendesk API</span><span class="chip">Confluence API</span><span class="chip">GitHub API</span><span class="chip">Salesforce API</span><span class="chip">Jira API</span><span class="chip">GraphQL</span><span class="chip">Pydantic</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">API throttling (HTTP 429)</span><span class="chip">Memory exhaustion from unpaged responses</span><span class="chip">Page-offset shifts when records change during extraction</span><span class="chip">Silent failure on API contract changes</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

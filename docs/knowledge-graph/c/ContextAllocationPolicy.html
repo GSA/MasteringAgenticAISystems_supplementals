@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Context Allocation Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data artifact</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Context Allocation Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ContextAllocationPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A configuration artifact specifying per-task-type context-window allocation shares, the reserve fraction, utilization thresholds that escalate compression, and the advertised versus enforced capacity.</p>
+<p><strong>Responsibility.</strong> Declares how context-window capacity is apportioned and when compression escalates.</p>
+<p class="muted">Also known as: Task-specific allocation policy, Token budget framework</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Context Allocation Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><a href="ContextBudgetAllocator.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Context Budget Allocator: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Context Budget Allocator</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ContextBudgetAllocator.html"><span class="dot g2" aria-hidden="true"></span>Context Budget Allocator</a> <a class="src" href="../sources.html#Ch5.9">Ch5.9</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD distinguish fixed costs (system prompt) from variable costs (retrieved documents, reasoning traces, output) that scale with query complexity and problem difficulty.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Fixed vs variable cost accounting</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.9">Ch5.9</a>: T. Nguyen, &quot;Working Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

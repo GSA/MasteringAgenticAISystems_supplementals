@@ -1,10 +1,10 @@
 ---
-title: Reference Architecture
+title: Knowledge Graph
 nav_order: 10.5
 permalink: /architecture/
 ---
 
-# Reference Architecture
+# Knowledge Graph
 {: .no_toc }
 
 An interactive reference architecture for agentic AI systems, generated from a validated knowledge graph of every
@@ -41,18 +41,18 @@ This is a **separate, self-contained website** with its own header and top navig
 sidebar, but it shares its look and its light/dark choice, and it makes no network calls. Once you're in it, move between sections
 with its own menu, or jump straight to one:
 
-- [Overview]({{ site.baseurl }}/reference-architecture/index.html) — stats, layer breakdown, and full-text search over all 1,587 components
-- [Layers]({{ site.baseurl }}/reference-architecture/layers.html) — every component grouped by layer/plane
-- [Variation points]({{ site.baseurl }}/reference-architecture/variation-points.html) — the 149 components with documented alternatives
-- [Profiles]({{ site.baseurl }}/reference-architecture/profiles.html) — the 226 named architecture profiles
-- [Ontology]({{ site.baseurl }}/reference-architecture/ontology.html) — the controlled vocabulary of element kinds and relationship types
-- [Sources]({{ site.baseurl }}/reference-architecture/sources.html) — the 152 cited chapters, references, and notes
+- [Overview]({{ site.baseurl }}/knowledge-graph/index.html) — stats, layer breakdown, and full-text search over all 1,587 components
+- [Layers]({{ site.baseurl }}/knowledge-graph/layers.html) — every component grouped by layer/plane
+- [Variation points]({{ site.baseurl }}/knowledge-graph/variation-points.html) — the 149 components with documented alternatives
+- [Profiles]({{ site.baseurl }}/knowledge-graph/profiles.html) — the 226 named architecture profiles
+- [Ontology]({{ site.baseurl }}/knowledge-graph/ontology.html) — the controlled vocabulary of element kinds and relationship types
+- [Sources]({{ site.baseurl }}/knowledge-graph/sources.html) — the 152 cited chapters, references, and notes
 
-Each component also has its own page, for example `reference-architecture/c/ToolExecutor.html`.
+Each component also has its own page, for example `knowledge-graph/c/ToolExecutor.html`.
 
 ## Explore the graph
 
-[Open the interactive graph explorer]({{ site.baseurl }}/reference-architecture/explore.html){: .btn .btn-primary target="_blank" rel="noopener" }
+[Open the interactive graph explorer]({{ site.baseurl }}/knowledge-graph/explore.html){: .btn .btn-primary target="_blank" rel="noopener" }
 
 Opens in a **new tab**, full width, with none of this site's layout — the graph needs the room, and a browser with
 WebGL enabled. Hovering a node highlights its neighborhood; clicking opens a details panel. Link straight to a
@@ -61,5 +61,5 @@ component with `#<ComponentId>`, for example `…/explore.html#ToolExecutor`.
 ## Licensing
 
 The graph explorer vendors two MIT-licensed libraries, `sigma.js` and `graphology`, kept offline rather than loaded
-from a CDN — see `reference-architecture/assets/vendor/NOTICE.md`. They are not covered by this repository's CC0
+from a CDN — see `knowledge-graph/assets/vendor/NOTICE.md`. They are not covered by this repository's CC0
 dedication (see [About]({{ site.baseurl }}/about/)).

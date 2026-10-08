@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pod Network Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Pod Network Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:PodNetworkPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A declarative firewall rule set specifying allowed ingress and egress traffic between workloads by label and namespace.</p>
+<p><strong>Responsibility.</strong> Restricts which components may communicate with each other.</p>
+<p class="muted">Also known as: Network policy, Network egress allow-list, Default-deny network policy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Pod Network Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>constrains</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="VectorIndexStore.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Vector Index Store: constrains</title></circle><text x="534.1" y="173.9" text-anchor="start">Vector Index Store</text></a><a href="ExecutionSandbox.html"><circle class="g7" cx="468.2" cy="341.4" r="7"><title>Execution Sandbox: constrains</title></circle><text x="475.2" y="355.1" text-anchor="start">Execution Sandbox</text></a><a href="GossipMembershipService.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>Gossip Membership Service: constrains</title></circle><text x="284.8" y="355.1" text-anchor="end">Gossip Membership Service</text></a><a href="ClusterNamespace.html"><circle class="g5" cx="237.3" cy="173.6" r="7"><title>Cluster Namespace: constrains</title></circle><text x="225.9" y="173.9" text-anchor="end">Cluster Namespace</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ClusterNamespace.html"><span class="dot g5" aria-hidden="true"></span>Cluster Namespace</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/ExecutionSandbox.html"><span class="dot g7" aria-hidden="true"></span>Execution Sandbox</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/GossipMembershipService.html"><span class="dot g5" aria-hidden="true"></span>Gossip Membership Service</a> <a class="src" href="../sources.html#Ch6.2B">Ch6.2B</a></li><li><a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD allow vector databases to accept connections only from authorised agent pods.</li><li>SHOULD restrict cluster-gossip traffic to internal networks, separating it from data-replication and client ports.</li><li>MUST start sandboxes with zero network connectivity and allow-list specific destinations (host, port) incrementally.</li><li>MUST NOT isolate the filesystem while leaving network connectivity unrestricted.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Default-deny segmentation</span><span class="chip">Default-deny egress</span><span class="chip">Destination allow-listing</span><span class="chip">Cross-namespace isolation</span></dd><dt>Technologies</dt><dd><span class="chip">Kubernetes NetworkPolicy</span></dd><dt>Quality attributes</dt><dd><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unrestricted pod-to-pod lateral movement</span><span class="chip">Unauthorized vector database access</span><span class="chip">Worker agents initiating external connections</span><span class="chip">Data exfiltration</span><span class="chip">Malware download</span><span class="chip">Command-and-control channels</span><span class="chip">Network reconnaissance</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.3">Ch4.3</a>: T. Nguyen, &quot;Container Orchestration and Edge Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.2B">Ch6.2B</a>: T. Nguyen, &quot;Production Vector Database Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

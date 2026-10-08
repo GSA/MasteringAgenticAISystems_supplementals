@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCTS Search Tree Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>MCTS Search Tree Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:MCTSSearchTreeStore</code></p>
+<div class="split"><section>
+<p class="lead">Working-memory store of an MCTS search tree whose nodes are states and edges actions, holding per state-action pair the visit count N(s,a), cumulative reward Q(s,a) and child pointers.</p>
+<p><strong>Responsibility.</strong> Retains accumulated simulation statistics that guide subsequent search iterations.</p>
+<p class="muted">Also known as: Search tree, MCTS tree</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/WorkingMemoryBuffer.html"><span class="dot g2" aria-hidden="true"></span>Working Memory Buffer</a> <span class="tag">abstract</span></p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of MCTS Search Tree Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is monitored by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is written by</title></line><a href="MCTSPlanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>MCTS Planner: is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">MCTS Planner</text></a><a href="MetricsCollector.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Metrics Collector: is monitored by</title></circle><text x="542.0" y="224.0" text-anchor="start">Metrics Collector</text></a><a href="WorkingMemoryBuffer.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Working Memory Buffer: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Working Memory Buffer</text></a><a href="SearchTreePruner.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Search Tree Pruner: is written by</title></circle><text x="218.0" y="224.0" text-anchor="end">Search Tree Pruner</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MCTSPlanner.html"><span class="dot g2" aria-hidden="true"></span>MCTS Planner</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MCTSPlanner.html"><span class="dot g2" aria-hidden="true"></span>MCTS Planner</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li><li><a class="comp" href="../c/SearchTreePruner.html"><span class="dot g2" aria-hidden="true"></span>Search Tree Pruner</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+<section class="rel"><h3>is monitored by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/MetricsCollector.html"><span class="dot g6" aria-hidden="true"></span>Metrics Collector</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>A one-million-node tree may consume 100 MB-1 GB of memory (Ch5.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Incremental asymmetric tree growth</span><span class="chip">Tree reuse across sequential decisions</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Redundant re-simulation across sequential decisions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.5">Ch5.5</a>: T. Nguyen, &quot;Monte Carlo Tree Search Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

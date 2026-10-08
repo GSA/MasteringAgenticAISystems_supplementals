@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Query-Type Retrieval Router · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Query-Type Retrieval Router</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:QueryTypeRetrievalRouter</code></p>
+<div class="split"><section>
+<p class="lead">An adaptive retrieval controller that classifies each query by type (calculation, factual, comparison, procedural) and routes it to the matching strategy: direct generation, standard, decomposed, or expanded retrieval.</p>
+<p><strong>Responsibility.</strong> Routes queries to a retrieval strategy by query type.</p>
+<p class="muted">Also known as: Pattern-based retrieval routing, Hybrid pipeline router, Query classification router</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/AdaptiveRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Adaptive Retrieval Controller</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when query types differ in their optimal retrieval strategy and more sophisticated routing than a single confidence gate is warranted.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Query-Type Retrieval Router"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is target of alternativeTo</title></line><a href="OnlineEvaluator.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Online Evaluator: is evaluated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Online Evaluator</text></a><a href="QuestionDecomposer.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Question Decomposer: routes to</title></circle><text x="542.0" y="224.0" text-anchor="start">Question Decomposer</text></a><a href="AdaptiveRetrievalController.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Adaptive Retrieval Controller: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Adaptive Retrieval Contr…</text></a><a href="ConfidenceGatedRetrievalController.html"><circle class="g3" cx="230.0" cy="220.0" r="7"><title>Confidence-Gated Retrieval Controller: is target of alternativeTo</title></circle><text x="218.0" y="224.0" text-anchor="end">Confidence-Gated Retriev…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>routes to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/QuestionDecomposer.html"><span class="dot g2" aria-hidden="true"></span>Question Decomposer</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/OnlineEvaluator.html"><span class="dot g6" aria-hidden="true"></span>Online Evaluator</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ConfidenceGatedRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Confidence-Gated Retrieval Controller</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD route calculations to direct parametric generation, comparisons to decomposed retrieval, and procedural queries to larger top_k retrieval.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Procedural queries retrieve top_k = 8 (Ch6.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Query classification</span><span class="chip">Type-appropriate retrieval strategy</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.6">Ch6.6</a>: T. Nguyen, &quot;Query Decomposition and Adaptive Retrieval,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

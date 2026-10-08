@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Policy Network · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Model asset</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Policy Network</h1>
+<p class="badges"><span class="badge">Model asset</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:DeepPolicyNetwork</code></p>
+<div class="split"><section>
+<p class="lead">Neural network weights trained on expert demonstrations to predict action probabilities for a state, used as search priors and rollout guidance.</p>
+<p><strong>Responsibility.</strong> Predicts expert-like action probabilities for a state.</p>
+<p class="muted">Also known as: Manipulation policy network, RL policy, Deep Q-Network, Actor network, Policy network, Deep RL policy, Policy Network, Control Policy Model</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/LearnedPolicyModel.html"><span class="dot g2" aria-hidden="true"></span>Learned Decision Policy</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when states are high-dimensional (images, sensors) or actions are continuous, so tables cannot be stored or visited.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Policy Network"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is trained by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is trained by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="LearnedPolicyModel.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Learned Decision Policy: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Learned Decision Policy</text></a><a href="PolicyValueNetworkTrainer.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Policy/Value Network Trainer: is trained by</title></circle><text x="534.1" y="173.9" text-anchor="start">Policy/Value Network Tra…</text></a><a href="ContinualLearningTrainer.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Continual Learning Trainer: is trained by</title></circle><text x="475.2" y="355.1" text-anchor="start">Continual Learning Trainer</text></a><a href="ActionPriorEstimator.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Action Prior Estimator: deployed on</title></circle><text x="284.8" y="355.1" text-anchor="end">Action Prior Estimator</text></a><a href="TabularValueFunction.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Tabular Value Function: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Tabular Value Function</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ActionPriorEstimator.html"><span class="dot g2" aria-hidden="true"></span>Action Prior Estimator</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+<section class="rel"><h3>is trained by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/ContinualLearningTrainer.html"><span class="dot g4" aria-hidden="true"></span>Continual Learning Trainer</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li><li><a class="comp" href="../c/PolicyValueNetworkTrainer.html"><span class="dot g4" aria-hidden="true"></span>Policy/Value Network Trainer</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/TabularValueFunction.html"><span class="dot g2" aria-hidden="true"></span>Tabular Value Function</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>AlphaGo&#x27;s policy network was trained on millions of expert games (Ch5.5).</li><li>Roughly one million parameters can capture Q-value patterns across trillions of states (Ch5.12).</li><li>DQN input is a stack of the four most recent game frames (Ch5.12).</li><li>AV operational policy outputs steering -30 to +30 degrees, throttle 0-100%, brake 0-100% (Ch5.13).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Function approximation</span><span class="chip">Convolutional feature extraction from pixels</span><span class="chip">Frame stacking</span><span class="chip">Dueling architecture</span><span class="chip">Continuous action output</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Curse of dimensionality in tabular methods</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.5">Ch5.5</a>: T. Nguyen, &quot;Monte Carlo Tree Search Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.7">Ch5.7</a>: T. Nguyen, &quot;Episodic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.12">Ch5.12</a>: T. Nguyen, &quot;Learning-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.12. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.13">Ch5.13</a>: T. Nguyen, &quot;Hybrid Decision Systems Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.13. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

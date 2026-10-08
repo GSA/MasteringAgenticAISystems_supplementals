@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domain Rule Expert · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Human role</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Domain Rule Expert</h1>
+<p class="badges"><span class="badge">Human role</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:DomainRuleExpert</code></p>
+<div class="split"><section>
+<p class="lead">A human domain expert accountable for the content of the rule base, encoding expertise as rules and deciding whether learned rule changes enter production.</p>
+<p><strong>Responsibility.</strong> Owns and approves the domain logic encoded in the rule base.</p>
+<p class="muted">Also known as: Knowledge engineer, Domain expert reviewer, Pulmonology department reviewer</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Domain Rule Expert"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>approves; invokes</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>receives escalation from</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>receives escalation from</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>receives escalation from</title></line><a href="RuleBaseUpdater.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Rule Base Updater: approves; invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Rule Base Updater</text></a><a href="RuleValidationOrchestrator.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Rule Validation Orchestrator: receives escalation from</title></circle><text x="542.0" y="224.0" text-anchor="start">Rule Validation Orchestr…</text></a><a href="RuleConsistencyChecker.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Rule Consistency Checker: receives escalation from</title></circle><text x="380.0" y="396.0" text-anchor="middle">Rule Consistency Checker</text></a><a href="FactContradictionResolver.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Fact Contradiction Resolver: receives escalation from</title></circle><text x="218.0" y="224.0" text-anchor="end">Fact Contradiction Resol…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RuleBaseUpdater.html"><span class="dot g7" aria-hidden="true"></span>Rule Base Updater</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>receives escalation from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/FactContradictionResolver.html"><span class="dot g2" aria-hidden="true"></span>Fact Contradiction Resolver</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RuleConsistencyChecker.html"><span class="dot g7" aria-hidden="true"></span>Rule Consistency Checker</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RuleValidationOrchestrator.html"><span class="dot g7" aria-hidden="true"></span>Rule Validation Orchestrator</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>approves <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/RuleBaseUpdater.html"><span class="dot g7" aria-hidden="true"></span>Rule Base Updater</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD verify that each learned rule aligns with domain knowledge and may reject it despite satisfactory metrics.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.11">Ch5.11</a>: T. Nguyen, &quot;Rule-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.11. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

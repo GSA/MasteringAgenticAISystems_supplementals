@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HNSW Index Configuration · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Data artifact</p>
+<h1><span class="dot g3" aria-hidden="true"></span>HNSW Index Configuration</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:HNSWIndexConfig</code></p>
+<div class="split"><section>
+<p class="lead">A vector index configuration building a hierarchical navigable small-world graph for millisecond approximate search at very large scale.</p>
+<p><strong>Responsibility.</strong> Configures graph-based approximate vector search.</p>
+<p class="muted">Also known as: HNSW index</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/VectorIndexConfig.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Build Configuration</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for large collections (beyond ~10 million vectors) where search latency outweighs higher memory usage.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of HNSW Index Configuration"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="VectorIndexConfig.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Build Configuration: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Build Confi…</text></a><a href="FlatIndexConfig.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Flat Index Configuration: is target of alternativeTo</title></circle><text x="520.3" y="305.0" text-anchor="start">Flat Index Configuration</text></a><a href="IVFIndexConfig.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>IVF Index Configuration: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">IVF Index Configuration</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/FlatIndexConfig.html"><span class="dot g3" aria-hidden="true"></span>Flat Index Configuration</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li><li><a class="comp" href="../c/IVFIndexConfig.html"><span class="dot g3" aria-hidden="true"></span>IVF Index Configuration</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Enables millisecond search on billion-scale collections but consumes 3-5x more memory (Ch6.3B).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

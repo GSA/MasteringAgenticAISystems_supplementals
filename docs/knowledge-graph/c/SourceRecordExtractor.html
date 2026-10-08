@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source Record Extractor · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Source Record Extractor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:SourceRecordExtractor</code></p>
+<div class="split"><section>
+<p class="lead">An ingestion component that pulls entity records from multiple operational source systems into a staging area for resolution and graph construction.</p>
+<p><strong>Responsibility.</strong> Extracts entity records from source systems into staging.</p>
+<p class="muted">Also known as: Staging extraction, SQL connector, Relational database extractor, PostgreSQL extractor</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DataSourceConnector.html"><span class="dot g3" aria-hidden="true"></span>Data Source Connector</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for structured sources (relational/NoSQL databases, warehouses) whose schemas and audit timestamps enable selective, batch delta queries.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Source Record Extractor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is guarded by</title></line><a href="RetryHandler.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Retry Handler: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Retry Handler</text></a><a href="DataSourceConnector.html"><circle class="g3" cx="509.9" cy="145.0" r="7"><title>Data Source Connector: specializes</title></circle><text x="520.3" y="143.0" text-anchor="start">Data Source Connector</text></a><a href="KnowledgeSourceSystem.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Knowledge Source System: reads</title></circle><text x="520.3" y="305.0" text-anchor="start">Knowledge Source System</text></a><a href="MultiSignalEntityResolver.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Multi-Signal Entity Resolver: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Multi-Signal Entity Reso…</text></a><a href="ConnectionPool.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Connection Pool: invokes</title></circle><text x="239.7" y="305.0" text-anchor="end">Connection Pool</text></a><a href="SourceSchemaValidator.html"><circle class="g3" cx="250.1" cy="145.0" r="7"><title>Source Schema Validator: is guarded by</title></circle><text x="239.7" y="143.0" text-anchor="end">Source Schema Validator</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConnectionPool.html"><span class="dot g5" aria-hidden="true"></span>Connection Pool</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li><li><a class="comp" href="../c/RetryHandler.html"><span class="dot g1" aria-hidden="true"></span>Retry Handler</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/KnowledgeSourceSystem.html"><span class="dot g3" aria-hidden="true"></span>Knowledge Source System</a> <a class="src" href="../sources.html#Ch5.8">Ch5.8</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/MultiSignalEntityResolver.html"><span class="dot g3" aria-hidden="true"></span>Multi-Signal Entity Resolver</a> <a class="src" href="../sources.html#Ch5.8">Ch5.8</a></li></ul></section>
+<section class="rel"><h3>is guarded by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/SourceSchemaValidator.html"><span class="dot g3" aria-hidden="true"></span>Source Schema Validator</a> <a class="src" href="../sources.html#Ch6.3A">Ch6.3A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST use parameterized queries for extraction predicates, even in trusted environments.</li><li>SHOULD iterate large result sets with cursors in bounded batches rather than materializing all rows in memory.</li><li>SHOULD index the change-tracking timestamp column so incremental filters avoid full table scans.</li><li>SHOULD reuse pooled database connections rather than opening a connection per query.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Timestamp-based filtering improved extraction efficiency by 95%, reducing daily ETL runtime from 4 hours to 12 minutes (Ch6.3A).</li><li>Large extractions iterate in batches of 10,000 rows (Ch6.3A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Timestamp-based incremental query (updated_at &gt; watermark)</span><span class="chip">Parameterized queries</span><span class="chip">Explicit column selection</span><span class="chip">Cursor-based batched iteration</span></dd><dt>Technologies</dt><dd><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Oracle</span><span class="chip">SQLAlchemy</span><span class="chip">Pandas</span></dd><dt>Quality attributes</dt><dd><span class="chip">Compatibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">SQL injection</span><span class="chip">Memory exhaustion on large extractions</span><span class="chip">Silent breakage from source schema changes</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.8">Ch5.8</a>: T. Nguyen, &quot;Semantic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.3A">Ch6.3A</a>: T. Nguyen, &quot;ETL Pipeline Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

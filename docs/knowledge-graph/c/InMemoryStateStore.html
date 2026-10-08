@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In-Memory State Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data store</p>
+<h1><span class="dot g1" aria-hidden="true"></span>In-Memory State Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:InMemoryStateStore</code></p>
+<div class="split"><section>
+<p class="lead">A state checkpoint store that keeps workflow state in the agent process&#x27;s memory for the duration of a task.</p>
+<p><strong>Responsibility.</strong> Keeps workflow state in process memory for short-lived tasks.</p>
+<p class="muted">Also known as: Agent-local state</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/StateCheckpointStore.html"><span class="dot g1" aria-hidden="true"></span>State Checkpoint Store</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for short-lived, agent-local workflows that complete in seconds to minutes on a single instance; state is lost if the instance fails.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of In-Memory State Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="StateCheckpointStore.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>State Checkpoint Store: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">State Checkpoint Store</text></a><a href="DatabaseStateStore.html"><circle class="g1" cx="522.7" cy="173.6" r="7"><title>Database State Store: is target of alternativeTo</title></circle><text x="534.1" y="173.9" text-anchor="start">Database State Store</text></a><a href="DistributedCacheStateStore.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Distributed Cache State Store: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">Distributed Cache State …</text></a><a href="GraphStateStore.html"><circle class="g1" cx="291.8" cy="341.4" r="7"><title>Graph State Store: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Graph State Store</text></a><a href="SerializedFileStateStore.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Serialized File State Store: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Serialized File State St…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/DatabaseStateStore.html"><span class="dot g1" aria-hidden="true"></span>Database State Store</a> <a class="src" href="../sources.html#Ch1.5A">Ch1.5A</a> <a class="src" href="../sources.html#Ch1.6">Ch1.6</a></li><li><a class="comp" href="../c/DistributedCacheStateStore.html"><span class="dot g1" aria-hidden="true"></span>Distributed Cache State Store</a> <a class="src" href="../sources.html#Ch1.5A">Ch1.5A</a> <a class="src" href="../sources.html#Ch1.6">Ch1.6</a></li><li><a class="comp" href="../c/GraphStateStore.html"><span class="dot g1" aria-hidden="true"></span>Graph State Store</a> <a class="src" href="../sources.html#Ch1.7B">Ch1.7B</a></li><li><a class="comp" href="../c/SerializedFileStateStore.html"><span class="dot g1" aria-hidden="true"></span>Serialized File State Store</a> <a class="src" href="../sources.html#Ch1.7B">Ch1.7B</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.5A">Ch1.5A</a>: T. Nguyen, &quot;Stateful Orchestration - Introduction and Core Concepts,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.5A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch1.6">Ch1.6</a>: T. Nguyen, &quot;Stateful Orchestration - Pitfalls, Integration, and Synthesis,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch1.7B">Ch1.7B</a>: T. Nguyen, &quot;Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.7B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inference Metrics Endpoint · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Interface</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Inference Metrics Endpoint</h1>
+<p class="badges"><span class="badge">Interface</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:InferenceMetricsEndpoint</code></p>
+<div class="split"><section>
+<p class="lead">A scrapeable endpoint on a model-serving process publishing inference-specific metrics such as queue depth, latency percentiles, batch sizes, error rates and per-model GPU usage.</p>
+<p><strong>Responsibility.</strong> Exposes serving-level operational metrics for collection.</p>
+<p class="muted">Also known as: Triton metrics port 8002, Prometheus metrics exporter, NIM /metrics endpoint, Inference server /metrics endpoint</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/MetricsEndpoint.html"><span class="dot g6" aria-hidden="true"></span>Metrics Endpoint</a> <span class="tag">abstract</span></p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Inference Metrics Endpoint"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is exposed by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is exposed by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>specializes</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: is exposed by</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="InferenceServer.html"><circle class="g4" cx="530.0" cy="220.0" r="7"><title>Inference Server: is exposed by</title></circle><text x="542.0" y="224.0" text-anchor="start">Inference Server</text></a><a href="MetricsCollector.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Metrics Collector: is invoked by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Metrics Collector</text></a><a href="MetricsEndpoint.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Metrics Endpoint: specializes</title></circle><text x="218.0" y="224.0" text-anchor="end">Metrics Endpoint</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is exposed by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ch7.2">Ch7.2</a> <span class="src more" title="Ch8.1, Ref4.03, Ref7.08">+3</span></li><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ref7.04">Ref7.04</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MetricsCollector.html"><span class="dot g6" aria-hidden="true"></span>Metrics Collector</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ch7.2">Ch7.2</a> <span class="src more" title="Ch8.1, Ref4.03, Ref7.04">+3</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD publish request duration, queue duration, batch size and per-model GPU memory so queue wait can be separated from compute time.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Counters/gauges include nim_inference_requests_total, nim_inference_duration_seconds_bucket, nim_inference_errors_total, nim_gpu_utilization_percent, nim_inference_tokens_generated_total (Ch7.2).</li><li>Queue duration above 100 ms indicates insufficient GPU throughput for the offered load (Ch8.1).</li><li>800 ms average inference may be 600 ms queue wait plus 200 ms compute (Ch8.1).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Prometheus exposition format</span><span class="chip">NVIDIA NIM</span><span class="chip">NVIDIA Triton Inference Server metrics (port 8002)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.5">Ch4.5</a>: T. Nguyen, &quot;NVIDIA NIM and Triton Inference Server,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.2">Ch7.2</a>: T. Nguyen, &quot;Performance Optimization and Production Monitoring,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.1">Ch8.1</a>: T. Nguyen, &quot;Latency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.04">Ref7.04</a>: NVIDIA, &quot;NVIDIA NIM,&quot; NVIDIA Docs. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/nim/</li><li><a href="../sources.html#Ref7.08">Ref7.08</a>: NVIDIA, &quot;NVIDIA Deep Learning Triton Inference Server Documentation,&quot; NVIDIA Docs. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/deeplearning/triton-inference-server/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

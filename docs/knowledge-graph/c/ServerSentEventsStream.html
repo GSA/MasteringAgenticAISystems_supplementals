@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Server-Sent Events Stream · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Interface</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Server-Sent Events Stream</h1>
+<p class="badges"><span class="badge">Interface</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ServerSentEventsStream</code></p>
+<div class="split"><section>
+<p class="lead">A unidirectional server-to-client streaming interface over a standard long-lived HTTP response carrying event-stream formatted token chunks.</p>
+<p><strong>Responsibility.</strong> Streams response events one way from agent to client over plain HTTP.</p>
+<p class="muted">Also known as: SSE endpoint, Event-stream endpoint, /stream endpoint</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/StreamingTransport.html"><span class="dot g8" aria-hidden="true"></span>Streaming Transport</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for most agent streaming workflows: the user submits a query, the agent streams a response, and no mid-stream client-to-server interaction is needed.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Server-Sent Events Stream"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="L7LoadBalancer.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Layer-7 Load Balancer: is routed to by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Layer-7 Load Balancer</text></a><a href="StreamingTransport.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Streaming Transport: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Streaming Transport</text></a><a href="WebSocketChannel.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>WebSocket Channel: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">WebSocket Channel</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/L7LoadBalancer.html"><span class="dot g5" aria-hidden="true"></span>Layer-7 Load Balancer</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/WebSocketChannel.html"><span class="dot g8" aria-hidden="true"></span>WebSocket Channel</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be the default streaming transport; reserve bidirectional channels for genuinely interactive scenarios.</li><li>MAY rely on standard HTTP middleware for authentication, rate limiting, and logging, and on standard load balancers without special configuration.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Server-Sent Events</span><span class="chip">EventSource API</span><span class="chip">FastAPI StreamingResponse</span><span class="chip">LangServe /stream</span><span class="chip">LangServe /stream_log</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Compatibility (ISO/IEC 25010)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.9">Ch2.9</a>: T. Nguyen, &quot;Streaming and Real-Time Responses,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

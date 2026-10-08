@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goal Specification · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Data artifact</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Goal Specification</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:GoalSpecification</code></p>
+<div class="split"><section>
+<p class="lead">A shared, asynchronously updatable specification of the target state or outcome an agent&#x27;s current plan must achieve (e.g., delivery address).</p>
+<p><strong>Responsibility.</strong> States the planning objective and its success criteria.</p>
+<p class="muted">Also known as: High-level goal, Root task, Shared task specification, Goal state</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Goal Specification"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is monitored by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is written by</title></line><a href="EndUser.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>End User: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">End User</text></a><a href="TaskPlanner.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Task Planner: is read by</title></circle><text x="534.1" y="173.9" text-anchor="start">Task Planner</text></a><a href="Replanner.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Replanner: is read by</title></circle><text x="475.2" y="355.1" text-anchor="start">Replanner</text></a><a href="PlanExecutionMonitor.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Plan Deviation Monitor: is monitored by</title></circle><text x="284.8" y="355.1" text-anchor="end">Plan Deviation Monitor</text></a><a href="GoalRefiner.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Goal Refiner: is written by</title></circle><text x="225.9" y="173.9" text-anchor="end">Goal Refiner</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/Replanner.html"><span class="dot g2" aria-hidden="true"></span>Replanner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/TaskPlanner.html"><span class="dot g2" aria-hidden="true"></span>Task Planner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GoalRefiner.html"><span class="dot g2" aria-hidden="true"></span>Goal Refiner</a> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/EndUser.html"><span class="dot g8" aria-hidden="true"></span>End User</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is monitored by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/PlanExecutionMonitor.html"><span class="dot g2" aria-hidden="true"></span>Plan Deviation Monitor</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD state what must be achieved, with measurable success criteria, scope and timeline, without prescribing how.</li><li>SHOULD be monitored during execution so goal changes cause the in-progress plan to be abandoned immediately.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Executing obsolete plans after goal changes</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.4">Ch5.4</a>: T. Nguyen, &quot;Hierarchical Planning Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

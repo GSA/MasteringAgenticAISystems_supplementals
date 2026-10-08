@@ -38,7 +38,7 @@ sizes, corners) is shared. A preset with no `dark:` block has no dark theme and 
 | `ink-soft` | Navigation links, secondary text |
 | `muted` | Captions, table headers, breadcrumbs |
 | `hairline` | Thin dividers |
-| `axis` | Chart axes, input borders, lines in the reference-architecture graph |
+| `axis` | Chart axes, input borders, lines in the knowledge graph |
 | `rule` | Strong dividers (above sections, under table headers) |
 | `link`, `link-hover` | Links; primary button on hover |
 | `focus` | Keyboard focus outline |
@@ -103,7 +103,7 @@ Rules for contributors:
 
 ## Reference architecture pages
 
-`docs/reference-architecture/` is a generated snapshot of another repository's site, and its pages must not be
+`docs/knowledge-graph/` is a generated snapshot of another repository's site, and its pages must not be
 edited by hand. All of its pages share two files, so the preset is applied by a script instead:
 
 ```bash

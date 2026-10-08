@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory-Bounded Search Planner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Memory-Bounded Search Planner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:MemoryBoundedSearchPlanner</code></p>
+<div class="split"><section>
+<p class="lead">A graph search planner that performs depth-first search under an iteratively increasing f-value threshold, storing only the current path instead of open and closed lists.</p>
+<p><strong>Responsibility.</strong> Finds a path within O(b*d) memory by trading repeated node re-expansion for storage.</p>
+<p class="muted">Also known as: IDA* planner, Iterative Deepening A*</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/GraphSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Graph Search Planner</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when memory is scarcer than time: embedded systems, mobile devices with strict memory budgets, or search spaces far exceeding available RAM.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Memory-Bounded Search Planner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="GraphSearchPlanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Graph Search Planner: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Graph Search Planner</text></a><a href="EdgeDevice.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>Edge Device: deployed on</title></circle><text x="520.3" y="305.0" text-anchor="start">Edge Device</text></a><a href="OptimalHeuristicSearchPlanner.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Optimal Heuristic Search Planner: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Optimal Heuristic Search…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EdgeDevice.html"><span class="dot g5" aria-hidden="true"></span>Edge Device</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/OptimalHeuristicSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Optimal Heuristic Search Planner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used on memory-constrained embedded or mobile hosts; servers with abundant memory SHOULD prefer standard A* for speed.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>GPS example: 500,000 explored nodes x 24 bytes = 12 MB closed list for A*; IDA* needs ~4.8 KB for a 200-edge path (Ch5.6).</li><li>IDA* can increase total node expansions by 3-5x due to re-expansion across iterations (Ch5.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Iterative Deepening A*</span><span class="chip">Time-memory trade-off</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Memory exhaustion on very large graphs</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

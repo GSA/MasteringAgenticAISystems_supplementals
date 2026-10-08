@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Workflow Configuration · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data artifact</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Agent Workflow Configuration</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:AgentWorkflowConfig</code></p>
+<div class="split"><section>
+<p class="lead">A declarative configuration file selecting the LLM, tools, and workflow composing an agent.</p>
+<p><strong>Responsibility.</strong> Declares the components and settings that compose an agent workflow.</p>
+<p class="muted">Also known as: YAML workflow config, Kernel configuration, ConfigMap-externalized agent configuration</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Agent Workflow Configuration"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is written by; is produced by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>configures</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>configures</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>configures</title></line><a href="AgentHyperparameterOptimizer.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Agent Hyperparameter Optimizer: is written by; is produced by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Hyperparameter Opt…</text></a><a href="AgentController.html"><circle class="g1" cx="522.7" cy="173.6" r="7"><title>Agent Controller: configures</title></circle><text x="534.1" y="173.9" text-anchor="start">Agent Controller</text></a><a href="WorkflowOrchestrator.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Workflow Orchestrator: configures</title></circle><text x="475.2" y="355.1" text-anchor="start">Workflow Orchestrator</text></a><a href="GitOpsReconciler.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>GitOps Reconciler: is read by</title></circle><text x="284.8" y="355.1" text-anchor="end">GitOps Reconciler</text></a><a href="ServiceContainer.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Service Container: configures</title></circle><text x="225.9" y="173.9" text-anchor="end">Service Container</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a> <a class="src" href="../sources.html#Ref1.01">Ref1.01</a> <span class="src more" title="Ref3.07">+1</span></li><li><a class="comp" href="../c/ServiceContainer.html"><span class="dot g1" aria-hidden="true"></span>Service Container</a> <a class="src" href="../sources.html#Ch2.5">Ch2.5</a></li><li><a class="comp" href="../c/WorkflowOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Workflow Orchestrator</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref1.01">Ref1.01</a></li></ul></section>
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GitOpsReconciler.html"><span class="dot g5" aria-hidden="true"></span>GitOps Reconciler</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentHyperparameterOptimizer.html"><span class="dot g6" aria-hidden="true"></span>Agent Hyperparameter Optimizer</a> <a class="src" href="../sources.html#Ref1.01">Ref1.01</a> <a class="src" href="../sources.html#Ref3.07">Ref3.07</a></li></ul></section>
+<section class="rel"><h3>is produced by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/AgentHyperparameterOptimizer.html"><span class="dot g6" aria-hidden="true"></span>Agent Hyperparameter Optimizer</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD compose agents, tools and workflows as reusable callable components across frameworks.</li><li>SHOULD be externalized from container images so configuration changes deploy without rebuilding images.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Configuration-driven agent composition</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo Agent Toolkit (YAML configuration builder)</span><span class="chip">NVIDIA Agent Intelligence (AIQ) toolkit</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.5">Ch2.5</a>: T. Nguyen, &quot;Semantic Kernel,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref1.01">Ref1.01</a>: NVIDIA, &quot;NVIDIA NeMo Agent Toolkit overview,&quot; NVIDIA NeMo Agent Toolkit Documentation, v1.8. Accessed: Sep. 26, 2026. [Online]. Available: https://docs.nvidia.com/nemo/agent-toolkit/latest/index.html</li><li><a href="../sources.html#Ref3.07">Ref3.07</a>: NVIDIA, &quot;NeMo-Agent-Toolkit,&quot; GitHub repository. Accessed: Sep. 27, 2026. [Online]. Available: https://github.com/NVIDIA/NeMo-Agent-Toolkit</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

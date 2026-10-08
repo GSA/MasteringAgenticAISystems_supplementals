@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partitioned Dataset Reader · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Partitioned Dataset Reader</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:PartitionedDatasetReader</code></p>
+<div class="split"><section>
+<p class="lead">A curation-stage loader that lazily streams a large line-delimited document dataset from disk-backed storage in batches sized to fit accelerator memory, validating record schema on load.</p>
+<p><strong>Responsibility.</strong> Feeds dataset records to downstream curation stages in memory-bounded batches.</p>
+<p class="muted">Also known as: Lazy dataset loader, Document dataset loader</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Partitioned Dataset Reader"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is configured by</title></line><a href="DataCurator.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Data Curator: is orchestrated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Data Curator</text></a><a href="LanguageIdentificationFilter.html"><circle class="g4" cx="530.0" cy="220.0" r="7"><title>Language Identification Filter: sends data to</title></circle><text x="542.0" y="224.0" text-anchor="start">Language Identification …</text></a><a href="RawDocumentCorpus.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Raw Document Corpus: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Raw Document Corpus</text></a><a href="SourceDocumentSchema.html"><circle class="g3" cx="230.0" cy="220.0" r="7"><title>Source Document Schema: is configured by</title></circle><text x="218.0" y="224.0" text-anchor="end">Source Document Schema</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/SourceDocumentSchema.html"><span class="dot g3" aria-hidden="true"></span>Source Document Schema</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RawDocumentCorpus.html"><span class="dot g4" aria-hidden="true"></span>Raw Document Corpus</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/LanguageIdentificationFilter.html"><span class="dot g4" aria-hidden="true"></span>Language Identification Filter</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DataCurator.html"><span class="dot g4" aria-hidden="true"></span>Data Curator</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD process documents in batches that fit GPU memory rather than loading the whole dataset into RAM, to scale to petabyte datasets.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Lazy batch streaming</span></dd><dt>Technologies</dt><dd><span class="chip">NeMo Curator DocumentDataset</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Out-of-memory failure when loading multi-terabyte datasets</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

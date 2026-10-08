@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimum Aggregation Quality Scorer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Minimum Aggregation Quality Scorer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:MinimumAggregationQualityScorer</code></p>
+<div class="split"><section>
+<p class="lead">A reasoning quality scorer that takes the minimum of the dimension scores, treating a chain as only as strong as its weakest dimension.</p>
+<p><strong>Responsibility.</strong> Scores reasoning quality by its bottleneck dimension.</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ReasoningQualityScorer.html"><span class="dot g6" aria-hidden="true"></span>Reasoning Quality Scorer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when agents must not receive full credit for correct answers reached through flawed reasoning and the bottleneck dimension should be surfaced.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Minimum Aggregation Quality Scorer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>alternative to</title></line><a href="ReasoningQualityScorer.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Reasoning Quality Scorer: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Reasoning Quality Scorer</text></a><a href="WeightedAggregationQualityScorer.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Weighted Aggregation Quality Scorer: alternative to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Weighted Aggregation Qua…</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/WeightedAggregationQualityScorer.html"><span class="dot g6" aria-hidden="true"></span>Weighted Aggregation Quality Scorer</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Scores of 95%/90%/85%/70% yield an overall 70% (Ch3.9 illustration).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">RECEVAL minimum aggregation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.9">Ch3.9</a>: T. Nguyen, &quot;Reasoning Quality,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

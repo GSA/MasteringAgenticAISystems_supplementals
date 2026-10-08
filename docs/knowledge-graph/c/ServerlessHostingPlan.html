@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serverless Hosting Plan · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Data artifact</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Serverless Hosting Plan</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:ServerlessHostingPlan</code></p>
+<div class="split"><section>
+<p class="lead">An abstract configuration selecting how a serverless runtime provisions capacity for a function, trading cold-start latency and timeout limits against idle cost.</p>
+<p><strong>Responsibility.</strong> Fixes the capacity provisioning and billing model of a serverless function.</p>
+<p class="muted">Also known as: Function hosting plan</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Serverless Hosting Plan"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is specialized by</title></line><a href="ServerlessFunctionRuntime.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Serverless Function Runtime: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Serverless Function Runt…</text></a><a href="OnDemandConsumptionPlan.html"><circle class="g5" cx="530.0" cy="220.0" r="7"><title>On-Demand Consumption Plan: is specialized by</title></circle><text x="542.0" y="224.0" text-anchor="start">On-Demand Consumption Plan</text></a><a href="PrewarmedCapacityPlan.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Pre-warmed Capacity Plan: is specialized by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Pre-warmed Capacity Plan</text></a><a href="ReservedCapacityPlan.html"><circle class="g5" cx="230.0" cy="220.0" r="7"><title>Reserved Capacity Plan: is specialized by</title></circle><text x="218.0" y="224.0" text-anchor="end">Reserved Capacity Plan</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/OnDemandConsumptionPlan.html"><span class="dot g5" aria-hidden="true"></span>On-Demand Consumption Plan</a></td><td>Choose for variable, unpredictable or infrequently triggered agent workloads.</td></tr><tr><td><a class="comp" href="../c/PrewarmedCapacityPlan.html"><span class="dot g5" aria-hidden="true"></span>Pre-warmed Capacity Plan</a></td><td>Choose for latency-sensitive agents requiring consistent performance; avoid enabling it for all functions, since it pays for idle capacity and removes serverless&#x27;s main cost benefit.</td></tr><tr><td><a class="comp" href="../c/ReservedCapacityPlan.html"><span class="dot g5" aria-hidden="true"></span>Reserved Capacity Plan</a></td><td>Choose for predictable, constant high-volume agent workloads where reserved capacity costs less than pay-per-execution billing.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ServerlessFunctionRuntime.html"><span class="dot g5" aria-hidden="true"></span>Serverless Function Runtime</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD choose the plan per agent workload: consumption for sporadic agents, pre-warmed for latency-sensitive agents, reserved capacity for constant high-volume agents.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Azure Functions hosting plans</span><span class="chip">AWS Lambda Provisioned Concurrency</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

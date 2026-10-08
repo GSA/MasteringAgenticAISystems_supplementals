@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Negotiation Dialogue Manager · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Negotiation Dialogue Manager</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:NegotiationDialogueManager</code></p>
+<div class="split"><section>
+<p class="lead">A cognition component that exchanges proposals, preferences, constraints and reasoning with a human counterpart and recomputes proposals under revised constraint sets until a mutually acceptable solution emerges.</p>
+<p><strong>Responsibility.</strong> Conducts turn-based negotiation with a human toward a compromise solution.</p>
+<p class="muted">Also known as: Negotiation protocol, Collaborative problem-solving agent</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Negotiation Dialogue Manager"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>invokes</title></line><a href="HumanSpecialist.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Human Specialist: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Human Specialist</text></a><a href="ConsensusDecisionProtocol.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Consensus Decision Protocol: is configured by</title></circle><text x="542.0" y="224.0" text-anchor="start">Consensus Decision Proto…</text></a><a href="CounterpartResponsePredictor.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Counterpart Response Predictor: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Counterpart Response Pre…</text></a><a href="PartnerPreferenceModeler.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Partner Preference Modeler: invokes</title></circle><text x="218.0" y="224.0" text-anchor="end">Partner Preference Modeler</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ConsensusDecisionProtocol.html"><span class="dot g8" aria-hidden="true"></span>Consensus Decision Protocol</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CounterpartResponsePredictor.html"><span class="dot g2" aria-hidden="true"></span>Counterpart Response Predictor</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li><li><a class="comp" href="../c/PartnerPreferenceModeler.html"><span class="dot g2" aria-hidden="true"></span>Partner Preference Modeler</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/HumanSpecialist.html"><span class="dot g8" aria-hidden="true"></span>Human Specialist</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD explain its reasoning and constraints and recalculate under the counterpart&#x27;s constraints rather than impose decisions unilaterally.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Underwriting example: risk-based premium +18% vs competitor range 8-12%; pricing at +12% raises expected loss ratio from 73% to 81%, offset by limiting water-damage coverage (40% of claims) (Ch10.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Collaborative problem-solving</span><span class="chip">Positional bargaining</span><span class="chip">Adaptive strategy selection</span><span class="chip">Distributed decision-making</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unilateral decisions ignoring competing objectives</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

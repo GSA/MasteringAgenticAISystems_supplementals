@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paged KV Cache Allocator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Paged KV Cache Allocator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:PagedKVCacheAllocator</code></p>
+<div class="split"><section>
+<p class="lead">A KV-cache allocator that assigns fixed-size, possibly non-contiguous pages on demand from a free pool and maps them through a page table.</p>
+<p><strong>Responsibility.</strong> Allocates KV-cache memory in on-demand fixed-size pages.</p>
+<p class="muted">Also known as: Paged Attention, Paged KV cache, PagedAttention</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/KVCacheAllocator.html"><span class="dot g4" aria-hidden="true"></span>KV Cache Allocator</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose by default for production serving, especially workloads with high variance in generation length; benefit is minimal for fixed-length outputs.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Paged KV Cache Allocator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is target of alternativeTo</title></line><a href="LLMGenerationBackend.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Generation Backend: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Generation Backend</text></a><a href="ContinuousBatchScheduler.html"><circle class="g4" cx="530.0" cy="220.0" r="7"><title>In-Flight Batch Scheduler: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">In-Flight Batch Scheduler</text></a><a href="KVCacheAllocator.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>KV Cache Allocator: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">KV Cache Allocator</text></a><a href="ContiguousKVCacheAllocator.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>Contiguous KV Cache Allocator: is target of alternativeTo</title></circle><text x="218.0" y="224.0" text-anchor="end">Contiguous KV Cache Allo…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/LLMGenerationBackend.html"><span class="dot g4" aria-hidden="true"></span>LLM Generation Backend</a> <a class="src" href="../sources.html#Ref7.15">Ref7.15</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContinuousBatchScheduler.html"><span class="dot g4" aria-hidden="true"></span>In-Flight Batch Scheduler</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a> <a class="src" href="../sources.html#Ref7.05">Ref7.05</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ContiguousKVCacheAllocator.html"><span class="dot g4" aria-hidden="true"></span>Contiguous KV Cache Allocator</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a> <span class="src more" title="Ref7.05">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used for batch sizes above ~8 and for memory-constrained or variable-length workloads.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Pages typically 16-32 tokens; page-table indirection costs under 1% compute for 2-3x memory efficiency (Ch4.4).</li><li>Enables 2-3x higher batch sizes (batch 4 -&gt; 12-16 typical) (Ch4.4).</li><li>Legal-contract example: batch 6 -&gt; 12, 5.2 -&gt; 6.4 req/s (combined 2.67x), 79.2 GB; eliminated 45% KV waste (Ch4.4).</li><li>Reduces KV-cache waste from ~95% to ~5% and improves throughput 2-4x on dynamic workloads with bit-identical accuracy (Ch7.4, Ref7.05).</li><li>A100 40GB rises from 12 to 32-48 concurrent requests (Ch7.4).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Virtual-memory-style paging</span><span class="chip">Cross-request prefix page sharing</span><span class="chip">Virtual-memory paging of KV cache</span><span class="chip">Block indirection table</span></dd><dt>Technologies</dt><dd><span class="chip">vLLM</span><span class="chip">TensorRT-LLM</span><span class="chip">NVIDIA NIM</span></dd><dt>Risks mitigated</dt><dd><span class="chip">KV-cache fragmentation</span><span class="chip">Periodic stalls from cache reallocation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.4">Ch7.4</a>: T. Nguyen, &quot;TensorRT-LLM Fundamentals and Quantization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.05">Ref7.05</a>: S. Verma and N. Vaidya, &quot;Mastering LLM Techniques: Inference Optimization,&quot; NVIDIA Technical Blog, Nov. 17, 2023. [Online]. Available: https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/</li><li><a href="../sources.html#Ref7.15">Ref7.15</a>: &quot;Advanced Agentic AI Optimization Techniques,&quot; unpublished reference note (15-Advanced-Agentic-Optimization.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

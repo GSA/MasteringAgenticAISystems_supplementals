@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regression Threshold Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Regression Threshold Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:RegressionThresholdPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A version-controlled configuration of per-metric absolute minimums and maximum allowed regressions that a regression gate enforces.</p>
+<p><strong>Responsibility.</strong> Declares the acceptable metric bounds for promoting an agent change.</p>
+<p class="muted">Also known as: Evaluation thresholds, Rollback trigger thresholds</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Regression Threshold Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>configures</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>configures</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>receives data from</title></line><a href="EvaluationHarness.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Harness: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Harness</text></a><a href="RegressionGate.html"><circle class="g6" cx="522.7" cy="173.6" r="7"><title>Regression Gate: configures</title></circle><text x="534.1" y="173.9" text-anchor="start">Regression Gate</text></a><a href="ExperimentGuardrailMonitor.html"><circle class="g6" cx="468.2" cy="341.4" r="7"><title>Experiment Guardrail Monitor: configures</title></circle><text x="475.2" y="355.1" text-anchor="start">Experiment Guardrail Mon…</text></a><a href="CanaryRolloutController.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>Canary Rollout Controller: constrains</title></circle><text x="284.8" y="355.1" text-anchor="end">Canary Rollout Controller</text></a><a href="ReleaseApprover.html"><circle class="g8" cx="237.3" cy="173.6" r="7"><title>Release Approver: receives data from</title></circle><text x="225.9" y="173.9" text-anchor="end">Release Approver</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ch7.3">Ch7.3</a></li><li><a class="comp" href="../c/ExperimentGuardrailMonitor.html"><span class="dot g6" aria-hidden="true"></span>Experiment Guardrail Monitor</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li><li><a class="comp" href="../c/RegressionGate.html"><span class="dot g6" aria-hidden="true"></span>Regression Gate</a> <a class="src" href="../sources.html#Ch3.1A">Ch3.1A</a> <a class="src" href="../sources.html#Ch3.1B">Ch3.1B</a> <span class="src more" title="Ch4.2, Ch4.4, Ch7.3">+3</span></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReleaseApprover.html"><span class="dot g8" aria-hidden="true"></span>Release Approver</a> <a class="src" href="../sources.html#Ch3.1B">Ch3.1B</a></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/CanaryRolloutController.html"><span class="dot g5" aria-hidden="true"></span>Canary Rollout Controller</a> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD live in a configuration file rather than being hard-coded in CI workflows.</li><li>SHOULD be tightened as the system matures; weakening MUST require documented justification.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Offline gate: accuracy drop &lt;=2%, P95 latency increase &lt;=20%, error rate &lt;5% (Ch3.1A).</li><li>Example file: accuracy min 0.80 / max -2%; P95 max 3,000 ms / +20%; empathy min 0.50 / -0.10; compliance min 0.95 / -5% (Ch3.1B).</li><li>Two-tier example: &gt; 0.80 proceeds automatically, 0.75-0.80 requires manual review, &lt; 0.75 blocks deployment (Ch4.2).</li><li>Registry flags versions whose correctness drops &gt; 5% below the previous version (Ch4.2).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.1A">Ch3.1A</a>: T. Nguyen, &quot;Implement Evaluation Pipelines and Task Benchmarks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.1B">Ch3.1B</a>: T. Nguyen, &quot;Implement Evaluation Pipelines and Task Benchmarks - Guided Practice,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.1">Ch4.1</a>: T. Nguyen, &quot;Introduction to AI Agent Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.3">Ch7.3</a>: T. Nguyen, &quot;NeMo Agent Toolkit Profiling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

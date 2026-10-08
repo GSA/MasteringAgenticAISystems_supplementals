@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neuro-Symbolic Trainer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Neuro-Symbolic Trainer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:NeuroSymbolicTrainer</code></p>
+<div class="split"><section>
+<p class="lead">A training component that trains neural components jointly with symbolic constraints via differentiable relaxations, straight-through estimators, weighted constraint loss, or reinforcement-learning bridges that treat symbolic evaluation as reward.</p>
+<p><strong>Responsibility.</strong> Trains neural components to respect symbolic constraints.</p>
+<p class="muted">Also known as: Joint neural-symbolic training, Constraint-aware training</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Neuro-Symbolic Trainer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>trains</title></line><a href="HumanSpecialist.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Human Specialist: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Human Specialist</text></a><a href="RuleBasedDecisionEngine.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Rule-Based Decision Engine: invokes</title></circle><text x="542.0" y="224.0" text-anchor="start">Rule-Based Decision Engine</text></a><a href="FormalRuleSpecification.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Formal Rule Specification: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Formal Rule Specification</text></a><a href="NeuralPerceptionModel.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Neural Perception Model: trains</title></circle><text x="218.0" y="224.0" text-anchor="end">Neural Perception Model</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RuleBasedDecisionEngine.html"><span class="dot g2" aria-hidden="true"></span>Rule-Based Decision Engine</a> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/FormalRuleSpecification.html"><span class="dot g7" aria-hidden="true"></span>Formal Rule Specification</a> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/HumanSpecialist.html"><span class="dot g8" aria-hidden="true"></span>Human Specialist</a> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+<section class="rel"><h3>trains <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/NeuralPerceptionModel.html"><span class="dot g2" aria-hidden="true"></span>Neural Perception Model</a> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD use soft constraints during training and still enforce hard constraints at inference time.</li><li>SHOULD use RL bridges for complex legacy symbolic components that cannot be modified.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Differentiable relaxations improve performance 15-20% over separate training for soft constraints (Ch5.13).</li><li>Pure neural approaches violate hard constraints in 5-15% of test cases (Ch5.13).</li><li>beta = 0.3-0.5 reduces constraint violations 85% while retaining 95% of neural performance (Ch5.13).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Differentiable relaxations (Logic Tensor Networks)</span><span class="chip">Straight-through estimators</span><span class="chip">Reinforcement learning bridges</span><span class="chip">Soft constraint weighting (Loss = a L_neural + b L_symbolic)</span><span class="chip">Constraint-aware data augmentation</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Non-differentiable symbolic operations blocking joint optimization</span><span class="chip">Training data conflicting with symbolic constraints</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.13">Ch5.13</a>: T. Nguyen, &quot;Hybrid Decision Systems Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.13. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Sensitivity Analyzer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Decision Sensitivity Analyzer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:SensitivityAnalyzer</code></p>
+<div class="split"><section>
+<p class="lead">An analysis component that re-evaluates decisions while varying probabilities, objective weights and risk parameters to reveal where the optimal choice changes.</p>
+<p><strong>Responsibility.</strong> Determines how robust the selected action is to plausible variation in utility inputs.</p>
+<p class="muted">Also known as: Sensitivity analysis, What-if analysis</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Decision Sensitivity Analyzer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="ExplanationPresenter.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Explanation Presenter: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Explanation Presenter</text></a><a href="UtilityBasedDecisionEngine.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Utility-Based Decision Maker: invokes</title></circle><text x="542.0" y="224.0" text-anchor="start">Utility-Based Decision M…</text></a><a href="DecisionStakeholder.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Decision Stakeholder: is invoked by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Decision Stakeholder</text></a><a href="UtilityFunctionSpecification.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Utility Function Specification: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Utility Function Specifi…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/UtilityBasedDecisionEngine.html"><span class="dot g2" aria-hidden="true"></span>Utility-Based Decision Maker</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DecisionStakeholder.html"><span class="dot g8" aria-hidden="true"></span>Decision Stakeholder</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/UtilityFunctionSpecification.html"><span class="dot g2" aria-hidden="true"></span>Utility Function Specification</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ExplanationPresenter.html"><span class="dot g8" aria-hidden="true"></span>Explanation Presenter</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used to support shared decision making by showing stakeholders how rankings change with their own preference parameters.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Medical example: raising side-effect penalty from 30 to 75 QALYs flips optimal choice from Treatment A (EU 58) to Treatment C (EU 46.25 vs 40) (Ch5.10).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Parameter sweep</span><span class="chip">Decision-flip threshold identification</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Spurious precision in expected-utility rankings</span><span class="chip">Fixed weights under changing context</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.10">Ch5.10</a>: T. Nguyen, &quot;Utility-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

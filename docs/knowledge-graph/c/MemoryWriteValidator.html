@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory Write Validator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Memory Write Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:MemoryWriteValidator</code></p>
+<div class="split"><section>
+<p class="lead">A validation gate between perception and long-term storage that checks candidate memories for consistency, hallucination patterns and multi-source confirmation before persistence.</p>
+<p><strong>Responsibility.</strong> Blocks unverified or inconsistent information from entering long-term memory.</p>
+<p class="muted">Also known as: Memory validation gate</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Memory Write Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards; reads</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>guards</title></line><a href="SemanticMemoryStore.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Semantic Memory Store: guards; reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Semantic Memory Store</text></a><a href="EpisodicMemoryStore.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Episodic Memory Store: guards</title></circle><text x="542.0" y="224.0" text-anchor="start">Episodic Memory Store</text></a><a href="MemoryConsolidator.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Memory Consolidator: guards</title></circle><text x="380.0" y="396.0" text-anchor="middle">Memory Consolidator</text></a><a href="ProceduralMemoryStore.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Procedural Memory Store: guards</title></circle><text x="218.0" y="224.0" text-anchor="end">Procedural Memory Store</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/SemanticMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Semantic Memory Store</a> <a class="src" href="../sources.html#Ch1.4">Ch1.4</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/EpisodicMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Episodic Memory Store</a> <a class="src" href="../sources.html#Ch1.4">Ch1.4</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li><li><a class="comp" href="../c/MemoryConsolidator.html"><span class="dot g2" aria-hidden="true"></span>Memory Consolidator</a> <a class="src" href="../sources.html#Ch1.4">Ch1.4</a></li><li><a class="comp" href="../c/ProceduralMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Procedural Memory Store</a> <a class="src" href="../sources.html#Ch1.4">Ch1.4</a></li><li><a class="comp" href="../c/SemanticMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Semantic Memory Store</a> <a class="src" href="../sources.html#Ch1.4">Ch1.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST validate information before persisting it; agents SHOULD NOT autonomously memorise unvalidated content.</li><li>SHOULD require multi-source confirmation for critical assertions.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Memory poisoning via prompt injection</span><span class="chip">Persisted hallucinations</span><span class="chip">Self-reinforcing error loops</span><span class="chip">Memory poisoning across sessions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.4">Ch1.4</a>: T. Nguyen, &quot;Memory and Perception Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.5">Ch3.5</a>: T. Nguyen, &quot;Prompt Optimization, Few-Shot Learning, Fine-Tuning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

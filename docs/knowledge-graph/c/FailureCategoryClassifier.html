@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Failure Category Classifier · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Failure Category Classifier</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:FailureCategoryClassifier</code></p>
+<div class="split"><section>
+<p class="lead">A telemetry component that labels each unsuccessful request either as a safety violation (a guardrail block with its reason) or as an infrastructure failure (an execution exception passed through the guardrail layer), feeding separate metrics and span attributes.</p>
+<p><strong>Responsibility.</strong> Separates safety-violation outcomes from infrastructure failures in telemetry.</p>
+<p class="muted">Also known as: Safety vs infrastructure error classification, Guardrail error classification</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Failure Category Classifier"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>emits telemetry to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>emits telemetry to</title></line><a href="MetricsCollector.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Metrics Collector: emits telemetry to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Metrics Collector</text></a><a href="GuardrailOrchestrator.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Guardrail Orchestrator: receives data from</title></circle><text x="520.3" y="305.0" text-anchor="start">Guardrail Orchestrator</text></a><a href="TraceExporter.html"><circle class="g6" cx="250.1" cy="295.0" r="7"><title>Trace Exporter: emits telemetry to</title></circle><text x="239.7" y="305.0" text-anchor="end">Trace Exporter</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>emits telemetry to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/MetricsCollector.html"><span class="dot g6" aria-hidden="true"></span>Metrics Collector</a> <a class="src" href="../sources.html#Ch8.2B">Ch8.2B</a></li><li><a class="comp" href="../c/TraceExporter.html"><span class="dot g6" aria-hidden="true"></span>Trace Exporter</a> <a class="src" href="../sources.html#Ch8.2B">Ch8.2B</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/GuardrailOrchestrator.html"><span class="dot g7" aria-hidden="true"></span>Guardrail Orchestrator</a> <a class="src" href="../sources.html#Ch8.2B">Ch8.2B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST NOT count guardrail blocks against infrastructure reliability SLOs, because a block is correct system behaviour.</li><li>SHOULD return a structured blocked response for guardrail blocks rather than raising an exception.</li><li>SHOULD let infrastructure exceptions propagate unchanged through the guardrail layer so they are counted as execution failures.</li><li>SHOULD keep the guardrail block reason at violation-type granularity (e.g., jailbreak, PII, factuality, brand safety) to target remediation.</li><li>SHOULD tag spans with category attributes (e.g., guardrail.blocked, error.infrastructure) so traces can be queried per category.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Separate error pipelines per failure category</span><span class="chip">Block-as-success semantics</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo Guardrails</span><span class="chip">OpenTelemetry</span><span class="chip">Prometheus</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Alert fatigue from conflated failure categories</span><span class="chip">Jailbreak attempts buried in infrastructure error noise</span><span class="chip">Safety blocks miscounted against reliability SLOs</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.2B">Ch8.2B</a>: T. Nguyen, &quot;NeMo Guardrails Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

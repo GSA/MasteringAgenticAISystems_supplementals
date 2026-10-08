@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Execution Failure History Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Execution Failure History Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ExecutionFailureHistoryStore</code></p>
+<div class="split"><section>
+<p class="lead">A store of historical execution discrepancies and failures with their context (time, location, signature) and outcomes, retained across planning cycles.</p>
+<p><strong>Responsibility.</strong> Records past discrepancies, failure signatures and outcomes for learning.</p>
+<p class="muted">Also known as: Historical execution logs, Failure pattern history</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Execution Failure History Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is read by</title></line><a href="ReplanningStrategyRouter.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Replanning Strategy Router: is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Replanning Strategy Router</text></a><a href="CompleteReplanner.html"><circle class="g2" cx="509.9" cy="145.0" r="7"><title>Complete Replanner: is read by</title></circle><text x="520.3" y="143.0" text-anchor="start">Complete Replanner</text></a><a href="DiscrepancySignificanceEvaluator.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Discrepancy Significance Evaluator: is written by</title></circle><text x="520.3" y="305.0" text-anchor="start">Discrepancy Significance…</text></a><a href="ContingencyPlanner.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Contingency Planner: is read by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Contingency Planner</text></a><a href="ActionModelLearner.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Action Model Learner: is read by</title></circle><text x="239.7" y="305.0" text-anchor="end">Action Model Learner</text></a><a href="ReplanTriggerThresholdLearner.html"><circle class="g2" cx="250.1" cy="145.0" r="7"><title>Replan Trigger Threshold Learner: is read by</title></circle><text x="239.7" y="143.0" text-anchor="end">Replan Trigger Threshold…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ActionModelLearner.html"><span class="dot g2" aria-hidden="true"></span>Action Model Learner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/CompleteReplanner.html"><span class="dot g2" aria-hidden="true"></span>Complete Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/ContingencyPlanner.html"><span class="dot g2" aria-hidden="true"></span>Contingency Planner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/ReplanTriggerThresholdLearner.html"><span class="dot g2" aria-hidden="true"></span>Replan Trigger Threshold Learner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/ReplanningStrategyRouter.html"><span class="dot g1" aria-hidden="true"></span>Replanning Strategy Router</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DiscrepancySignificanceEvaluator.html"><span class="dot g2" aria-hidden="true"></span>Discrepancy Significance Evaluator</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be retained across replanning cycles so recurring failures (e.g., a consistently delayed route) deprioritise that option in future plans.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trajectory Pruner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Trajectory Pruner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:TrajectoryPruner</code></p>
+<div class="split"><section>
+<p class="lead">A context window manager that removes useless (dead-end), redundant (restated) and expired (no-longer-relevant) information from an agent&#x27;s accumulated reasoning trajectory before it is re-sent to the model.</p>
+<p><strong>Responsibility.</strong> Prunes waste from the agent trajectory carried in the prompt.</p>
+<p class="muted">Also known as: Trajectory reduction, Trajectory cleaning, Context pruning</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ContextWindowManager.html"><span class="dot g2" aria-hidden="true"></span>Context Window Manager</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for multi-step agents whose trajectories accumulate dead ends, restatements and stale turns.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Trajectory Pruner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads; writes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is target of alternativeTo</title></line><a href="WorkingMemoryBuffer.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Working Memory Buffer: reads; writes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Working Memory Buffer</text></a><a href="PromptContextBuilder.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Prompt Context Builder: sends data to</title></circle><text x="534.1" y="173.9" text-anchor="start">Prompt Context Builder</text></a><a href="ContextWindowManager.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Context Window Manager: specializes</title></circle><text x="475.2" y="355.1" text-anchor="start">Context Window Manager</text></a><a href="SummarizingHistoryCompressor.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Summarizing History Compressor: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Summarizing History Comp…</text></a><a href="SlidingWindowHistoryTruncator.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Sliding-Window History Truncator: is target of alternativeTo</title></circle><text x="225.9" y="173.9" text-anchor="end">Sliding-Window History T…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/WorkingMemoryBuffer.html"><span class="dot g2" aria-hidden="true"></span>Working Memory Buffer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/WorkingMemoryBuffer.html"><span class="dot g2" aria-hidden="true"></span>Working Memory Buffer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/PromptContextBuilder.html"><span class="dot g2" aria-hidden="true"></span>Prompt Context Builder</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/SlidingWindowHistoryTruncator.html"><span class="dot g2" aria-hidden="true"></span>Sliding-Window History Truncator</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li><li><a class="comp" href="../c/SummarizingHistoryCompressor.html"><span class="dot g2" aria-hidden="true"></span>Summarizing History Compressor</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD remove dead-end explorations, restated context and expired turns from trajectories while preserving task performance.</li><li>SHOULD retain extraction results while discarding reasoning traces irrelevant to the final decision.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>AgentDiet reduced input tokens by 39.9%-59.7% with identical task performance (Ch3.10).</li><li>Loan agent: conversation history accumulated 1,800 tokens despite minimal relevance after extraction (Ch3.10).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Trajectory reduction (AgentDiet)</span></dd><dt>Technologies</dt><dd><span class="chip">AgentDiet</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Trajectory bloat</span><span class="chip">Context window overflow</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

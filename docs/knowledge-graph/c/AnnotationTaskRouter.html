@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annotation Task Router · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Annotation Task Router</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:AnnotationTaskRouter</code></p>
+<div class="split"><section>
+<p class="lead">A workflow component that assigns prompt-response comparison tasks to available annotators according to required domain expertise and redundancy needs.</p>
+<p><strong>Responsibility.</strong> Distributes comparison tasks to suitable annotators, including multiple annotators per item for validation.</p>
+<p class="muted">Also known as: Annotation workflow router</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Annotation Task Router"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>routes to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>receives data from</title></line><a href="PreferenceAnnotationConsole.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Preference Annotation Console: routes to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Preference Annotation Co…</text></a><a href="TrajectoryHarvester.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Trajectory Harvester: receives data from</title></circle><text x="520.3" y="305.0" text-anchor="start">Trajectory Harvester</text></a><a href="CandidateResponseSampler.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Candidate Response Sampler: receives data from</title></circle><text x="239.7" y="305.0" text-anchor="end">Candidate Response Sampler</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/CandidateResponseSampler.html"><span class="dot g4" aria-hidden="true"></span>Candidate Response Sampler</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li><li><a class="comp" href="../c/TrajectoryHarvester.html"><span class="dot g4" aria-hidden="true"></span>Trajectory Harvester</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>routes to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/PreferenceAnnotationConsole.html"><span class="dot g8" aria-hidden="true"></span>Preference Annotation Console</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD route specialized content to domain-expert annotators rather than general annotators.</li><li>SHOULD assign multiple annotators to selected comparisons to enable disagreement analysis.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Redundant annotation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

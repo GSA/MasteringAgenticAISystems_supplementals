@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Action Prior Estimator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Action Prior Estimator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ActionPriorEstimator</code></p>
+<div class="split"><section>
+<p class="lead">A cognition component that serves policy-network action probabilities for newly expanded search nodes and learned rollouts, biasing exploration toward promising actions.</p>
+<p><strong>Responsibility.</strong> Supplies informed action priors to tree search and rollouts.</p>
+<p class="muted">Also known as: Policy prior provider</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Action Prior Estimator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>hosts</title></line><a href="MCTSPlanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>MCTS Planner: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">MCTS Planner</text></a><a href="RolloutSimulator.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Rollout Simulator: is invoked by</title></circle><text x="520.3" y="305.0" text-anchor="start">Rollout Simulator</text></a><a href="DeepPolicyNetwork.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Policy Network: hosts</title></circle><text x="239.7" y="305.0" text-anchor="end">Policy Network</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DeepPolicyNetwork.html"><span class="dot g2" aria-hidden="true"></span>Policy Network</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MCTSPlanner.html"><span class="dot g2" aria-hidden="true"></span>MCTS Planner</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li><li><a class="comp" href="../c/RolloutSimulator.html"><span class="dot g2" aria-hidden="true"></span>Rollout Simulator</a> <a class="src" href="../sources.html#Ch5.5">Ch5.5</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Policy-network priors</span><span class="chip">Learned rollout policy</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Wasting limited budget on implausible actions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.5">Ch5.5</a>: T. Nguyen, &quot;Monte Carlo Tree Search Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

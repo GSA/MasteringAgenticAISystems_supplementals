@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Captioner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Image Captioner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ImageCaptioner</code></p>
+<div class="split"><section>
+<p class="lead">An image-to-text grounder that prompts a vision-language model to generate detailed captions describing objects, spatial relationships, scene context, colours, and visible text.</p>
+<p><strong>Responsibility.</strong> Generates detailed descriptive captions of images for indexing.</p>
+<p class="muted">Also known as: Detailed captioning, Caption generator, Scene describer, Visual context extractor, Image question answering</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ImageToTextGrounder.html"><span class="dot g3" aria-hidden="true"></span>Image-to-Text Grounder</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for natural images, complex scenes, and diagrams with readable text where descriptive detail (objects, spatial relationships, context, visible text) matters more than exact numbers.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Image Captioner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>specializes</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="InferenceServer.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Inference Server: invokes</title></circle><text x="534.1" y="173.9" text-anchor="start">Inference Server</text></a><a href="MultimodalContentRouter.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Multimodal Content Router: is routed to by</title></circle><text x="475.2" y="355.1" text-anchor="start">Multimodal Content Router</text></a><a href="ChartDataExtractor.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Chart Data Extractor: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Chart Data Extractor</text></a><a href="ImageToTextGrounder.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Image-to-Text Grounder: specializes</title></circle><text x="225.9" y="173.9" text-anchor="end">Image-to-Text Grounder</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/MultimodalContentRouter.html"><span class="dot g3" aria-hidden="true"></span>Multimodal Content Router</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ChartDataExtractor.html"><span class="dot g3" aria-hidden="true"></span>Chart Data Extractor</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD use low sampling temperature (0.1-0.2) when captioning to minimise hallucination.</li><li>SHOULD adjust caption detail level to retrieval needs: brief for simple classification, high detail for spatial and object-interaction queries.</li><li>SHOULD NOT be relied on for numerically precise charts, since natural-language captions approximate exact figures.</li><li>SHOULD convert user-supplied images (product photos, camera frames) into textual visual context that the reasoning agent combines with the spoken or typed query.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Captioning temperature 0.1-0.2 recommended to minimise hallucination (Ch2.7).</li><li>Batch size 32 captions 1,000 images in 6 minutes versus 18 minutes sequentially on an A100 (Ch2.7).</li><li>Visual diagnostics reduce troubleshooting time by 60-70% compared to verbal descriptions (Ch7.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Image captioning</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeVA 22B</span><span class="chip">GPT-4V</span><span class="chip">NVIDIA NIM</span><span class="chip">NVIDIA Neva</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Caption hallucination</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref2.07">Ref2.07</a>: NVIDIA Developer, &quot;Building multimodal AI RAG with LlamaIndex, NVIDIA NIM, and Milvus | LLM app development,&quot; YouTube. Accessed: Sep. 26, 2026. [Online Video]. Available: https://www.youtube.com/watch?v=NaT5Eo97_I0</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

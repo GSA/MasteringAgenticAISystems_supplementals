@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capability Tier Map · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data artifact</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Capability Tier Map</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:CapabilityTierMap</code></p>
+<div class="split"><section>
+<p class="lead">A declaration classifying an agent&#x27;s capabilities as core or auxiliary and defining the degradation levels and the dependencies each level requires.</p>
+<p><strong>Responsibility.</strong> Defines which capabilities survive at each degradation level.</p>
+<p class="muted">Also known as: Degradation levels, Core/auxiliary capability map, Minimum viable functionality definition</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Capability Tier Map"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures; is read by</title></line><a href="GracefulDegradationManager.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Graceful Degradation Manager: configures; is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Graceful Degradation Man…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GracefulDegradationManager.html"><span class="dot g1" aria-hidden="true"></span>Graceful Degradation Manager</a> <a class="src" href="../sources.html#Ch2.8">Ch2.8</a></li></ul></section>
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GracefulDegradationManager.html"><span class="dot g1" aria-hidden="true"></span>Graceful Degradation Manager</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD designate minimum viable functionality (e.g., returning document links) as core and enhancements (summaries, citation formatting, relevance scoring) as auxiliary.</li><li>SHOULD classify each tool capability as optional or essential to determine whether its failure may be degraded around.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Core vs. auxiliary capabilities</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Ad-hoc degradation decisions during outages</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.8">Ch2.8</a>: T. Nguyen, &quot;Error Handling and Resilience,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.7">Ch3.7</a>: T. Nguyen, &quot;Tool Usage Auditing,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

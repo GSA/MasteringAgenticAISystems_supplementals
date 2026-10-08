@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KV Cache Allocator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>KV Cache Allocator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:KVCacheAllocator</code></p>
+<div class="split"><section>
+<p class="lead">An abstract inference-engine component that allocates and releases accelerator memory for each request&#x27;s key-value cache.</p>
+<p><strong>Responsibility.</strong> Allocates KV-cache memory to in-flight requests.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of KV Cache Allocator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>writes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is specialized by</title></line><a href="KVCacheManager.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>KV Cache Manager: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">KV Cache Manager</text></a><a href="KVCacheStore.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>KV Cache Store: writes</title></circle><text x="534.1" y="173.9" text-anchor="start">KV Cache Store</text></a><a href="EngineBuildConfig.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Engine Build Configuration: is configured by</title></circle><text x="475.2" y="355.1" text-anchor="start">Engine Build Configuration</text></a><a href="PagedKVCacheAllocator.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Paged KV Cache Allocator: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Paged KV Cache Allocator</text></a><a href="ContiguousKVCacheAllocator.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Contiguous KV Cache Allocator: is specialized by</title></circle><text x="225.9" y="173.9" text-anchor="end">Contiguous KV Cache Allo…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/ContiguousKVCacheAllocator.html"><span class="dot g4" aria-hidden="true"></span>Contiguous KV Cache Allocator</a></td><td>Choose (with buffers pre-allocated for maximum length) only when sequence lengths are bounded and predictable, accepting higher initial memory use.</td></tr><tr><td><a class="comp" href="../c/PagedKVCacheAllocator.html"><span class="dot g4" aria-hidden="true"></span>Paged KV Cache Allocator</a></td><td>Choose by default for production serving, especially workloads with high variance in generation length; benefit is minimal for fixed-length outputs.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EngineBuildConfig.html"><span class="dot g4" aria-hidden="true"></span>Engine Build Configuration</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/KVCacheManager.html"><span class="dot g4" aria-hidden="true"></span>KV Cache Manager</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/KVCacheStore.html"><span class="dot g4" aria-hidden="true"></span>KV Cache Store</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a> <span class="src more" title="Ref7.05">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be treated as the primary throughput lever because KV cache, not weights, dominates memory under concurrency.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Static allocation on A100 40GB caps concurrency at 12-14 concurrent 2048-token requests (Ch7.4).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.4">Ch7.4</a>: T. Nguyen, &quot;TensorRT-LLM Fundamentals and Quantization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.05">Ref7.05</a>: S. Verma and N. Vaidya, &quot;Mastering LLM Techniques: Inference Optimization,&quot; NVIDIA Technical Blog, Nov. 17, 2023. [Online]. Available: https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

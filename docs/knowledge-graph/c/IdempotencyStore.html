@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idempotency Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data store</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Idempotency Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:IdempotencyStore</code></p>
+<div class="split"><section>
+<p class="lead">A record of processed message identifiers that lets consumers detect and discard duplicate deliveries.</p>
+<p><strong>Responsibility.</strong> Records processed message IDs for deduplication.</p>
+<p class="muted">Also known as: Deduplication store, Processed message ledger, Successful tool invocation record, Processed event ID store, Idempotency tokens</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Idempotency Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is read by</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="EventTriggeredAgent.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Event-Triggered Agent: is read by; is written by</title></circle><text x="542.0" y="224.0" text-anchor="start">Event-Triggered Agent</text></a><a href="ToolIdempotencyGuard.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Tool Idempotency Guard: is read by; is written by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Tool Idempotency Guard</text></a><a href="IngestionPipelineOrchestrator.html"><circle class="g1" cx="230.0" cy="220.0" r="7"><title>Ingestion Pipeline Orchestrator: is read by</title></circle><text x="218.0" y="224.0" text-anchor="end">Ingestion Pipeline Orche…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EventTriggeredAgent.html"><span class="dot g1" aria-hidden="true"></span>Event-Triggered Agent</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li><li><a class="comp" href="../c/IngestionPipelineOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Ingestion Pipeline Orchestrator</a> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li><li><a class="comp" href="../c/ToolIdempotencyGuard.html"><span class="dot g1" aria-hidden="true"></span>Tool Idempotency Guard</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EventTriggeredAgent.html"><span class="dot g1" aria-hidden="true"></span>Event-Triggered Agent</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li><li><a class="comp" href="../c/ToolIdempotencyGuard.html"><span class="dot g1" aria-hidden="true"></span>Tool Idempotency Guard</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.3">Ch1.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST be consulted by consumers of at-least-once channels before performing side effects.</li><li>MUST check an event&#x27;s ID before processing and record it after processing to prevent duplicate emails, charges or records.</li><li>SHOULD use idempotency tokens so retried indexing requests are detected and not indexed twice.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Duplicate processing</span><span class="chip">Double-charging</span><span class="chip">Duplicate notifications</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.3">Ch1.3</a>: T. Nguyen, &quot;Multi-Agent Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.7">Ch3.7</a>: T. Nguyen, &quot;Tool Usage Auditing,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

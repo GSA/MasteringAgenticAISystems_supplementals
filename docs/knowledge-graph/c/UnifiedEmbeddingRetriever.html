@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unified Embedding Retriever · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Unified Embedding Retriever</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:UnifiedEmbeddingRetriever</code></p>
+<div class="split"><section>
+<p class="lead">A multimodal retriever that encodes the text query into a shared text-image embedding space and retrieves text passages and images by cosine similarity from one store.</p>
+<p><strong>Responsibility.</strong> Retrieves text and images directly by cross-modal similarity in a unified space.</p>
+<p class="muted">Also known as: Approach 1: Unified embedding space</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/MultimodalRetriever.html"><span class="dot g3" aria-hidden="true"></span>Multimodal Retriever</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for general imagery, rapid prototyping, or minimal change to an existing text RAG stack with a single vector store.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Unified Embedding Retriever"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>specializes</title></line><a href="ContextAssembler.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Context Assembler: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Context Assembler</text></a><a href="JointMultimodalEmbeddingService.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Joint Multimodal Embedding Service: invokes</title></circle><text x="534.1" y="173.9" text-anchor="start">Joint Multimodal Embeddi…</text></a><a href="PerModalityFanOutRetriever.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Per-Modality Fan-Out Retriever: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">Per-Modality Fan-Out Ret…</text></a><a href="GroundedTextRetriever.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Grounded Text Retriever: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Grounded Text Retriever</text></a><a href="MultimodalRetriever.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Multimodal Retriever: specializes</title></circle><text x="225.9" y="173.9" text-anchor="end">Multimodal Retriever</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/JointMultimodalEmbeddingService.html"><span class="dot g3" aria-hidden="true"></span>Joint Multimodal Embedding Service</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ContextAssembler.html"><span class="dot g3" aria-hidden="true"></span>Context Assembler</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/GroundedTextRetriever.html"><span class="dot g3" aria-hidden="true"></span>Grounded Text Retriever</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li><li><a class="comp" href="../c/PerModalityFanOutRetriever.html"><span class="dot g3" aria-hidden="true"></span>Per-Modality Fan-Out Retriever</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Unified embedding space multimodal RAG</span></dd><dt>Technologies</dt><dd><span class="chip">CLIP</span><span class="chip">NV Embed</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Cost efficiency</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

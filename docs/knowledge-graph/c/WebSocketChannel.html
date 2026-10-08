@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebSocket Channel · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Interface</p>
+<h1><span class="dot g8" aria-hidden="true"></span>WebSocket Channel</h1>
+<p class="badges"><span class="badge">Interface</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:WebSocketChannel</code></p>
+<div class="split"><section>
+<p class="lead">A persistent full-duplex interface, established by an HTTP upgrade handshake, over which client and server exchange messages at any time during generation.</p>
+<p><strong>Responsibility.</strong> Carries streamed agent output and concurrent client messages over one persistent connection.</p>
+<p class="muted">Also known as: Bidirectional streaming channel</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/StreamingTransport.html"><span class="dot g8" aria-hidden="true"></span>Streaming Transport</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for genuinely interactive scenarios: agents expecting mid-stream user feedback or interruption, collaborative multi-user agent sessions, or real-time dashboards whose pushed updates need client acknowledgment.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of WebSocket Channel"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is target of alternativeTo</title></line><a href="StreamInterruptHandler.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Stream Interrupt Handler: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Stream Interrupt Handler</text></a><a href="StreamingTransport.html"><circle class="g8" cx="509.9" cy="295.0" r="7"><title>Streaming Transport: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Streaming Transport</text></a><a href="ServerSentEventsStream.html"><circle class="g8" cx="250.1" cy="295.0" r="7"><title>Server-Sent Events Stream: is target of alternativeTo</title></circle><text x="239.7" y="305.0" text-anchor="end">Server-Sent Events Stream</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/StreamInterruptHandler.html"><span class="dot g8" aria-hidden="true"></span>Stream Interrupt Handler</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ServerSentEventsStream.html"><span class="dot g8" aria-hidden="true"></span>Server-Sent Events Stream</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST be paired with explicit connection state handling, idle timeouts, and reconnection logic.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Mid-stream interruption</span><span class="chip">Agent-ID-tagged multi-agent streams</span><span class="chip">Server progress status messages</span><span class="chip">Client heartbeat pings</span></dd><dt>Technologies</dt><dd><span class="chip">WebSocket</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.9">Ch2.9</a>: T. Nguyen, &quot;Streaming and Real-Time Responses,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

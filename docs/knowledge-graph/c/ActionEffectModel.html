@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Action Effect Model · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Data artifact</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Action Effect Model</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ActionEffectModel</code></p>
+<div class="split"><section>
+<p class="lead">A planning-domain model describing how each action transforms state: its preconditions, expected effects, durations and costs, used to predict outcomes.</p>
+<p><strong>Responsibility.</strong> Specifies the executable semantics of primitive tasks for plan validity reasoning.</p>
+<p class="muted">Also known as: Planning operators, Operator library, STRIPS operators, Action schema, Primitive task definitions, Transition model, Internal physics model, Planning domain model</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Action Effect Model"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures; is read by</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>configures</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>configures</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is written by</title></line><a href="PlanExecutionMonitor.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Plan Deviation Monitor: configures; is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Plan Deviation Monitor</text></a><a href="TaskPlanner.html"><circle class="g2" cx="497.3" cy="126.5" r="7"><title>Task Planner: configures</title></circle><text x="506.7" y="123.0" text-anchor="start">Task Planner</text></a><a href="PlanExecutor.html"><circle class="g2" cx="526.2" cy="253.4" r="7"><title>Plan Executor: configures</title></circle><text x="537.9" y="260.0" text-anchor="start">Plan Executor</text></a><a href="HTNPlanner.html"><circle class="g2" cx="445.1" cy="355.1" r="7"><title>HTN Planner: is read by</title></circle><text x="450.3" y="370.0" text-anchor="start">HTN Planner</text></a><a href="FlatPlanner.html"><circle class="g2" cx="314.9" cy="355.1" r="7"><title>Flat Planner: is read by</title></circle><text x="309.7" y="370.0" text-anchor="end">Flat Planner</text></a><a href="PlanConstraintPropagator.html"><circle class="g2" cx="233.8" cy="253.4" r="7"><title>Plan Constraint Propagator: is read by</title></circle><text x="222.1" y="260.0" text-anchor="end">Plan Constraint Propagator</text></a><a href="ActionModelLearner.html"><circle class="g2" cx="262.7" cy="126.5" r="7"><title>Action Model Learner: is written by</title></circle><text x="253.3" y="123.0" text-anchor="end">Action Model Learner</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/PlanExecutionMonitor.html"><span class="dot g2" aria-hidden="true"></span>Plan Deviation Monitor</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/PlanExecutor.html"><span class="dot g2" aria-hidden="true"></span>Plan Executor</a> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a></li><li><a class="comp" href="../c/TaskPlanner.html"><span class="dot g2" aria-hidden="true"></span>Task Planner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/FlatPlanner.html"><span class="dot g2" aria-hidden="true"></span>Flat Planner</a> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a></li><li><a class="comp" href="../c/HTNPlanner.html"><span class="dot g2" aria-hidden="true"></span>HTN Planner</a> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a></li><li><a class="comp" href="../c/PlanConstraintPropagator.html"><span class="dot g2" aria-hidden="true"></span>Plan Constraint Propagator</a> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a></li><li><a class="comp" href="../c/PlanExecutionMonitor.html"><span class="dot g2" aria-hidden="true"></span>Plan Deviation Monitor</a> <a class="src" href="../sources.html#Ch5.4">Ch5.4</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ActionModelLearner.html"><span class="dot g2" aria-hidden="true"></span>Action Model Learner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST model the agent&#x27;s real capabilities accurately; misclassifying abstract tasks as primitive causes execution failures.</li><li>SHOULD NOT assume operators always succeed when preconditions hold in networked or physical systems.</li><li>SHOULD be updated when monitoring reveals systematic (patterned) rather than random discrepancies, e.g., adding surface friction as a grasp precondition or acceleration costs to travel time.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Constant-speed travel model predicted 240 s for 800 m vs ~280 s actual, a 40 s systematic error (Ch5.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">STRIPS operator representation</span><span class="chip">PDDL</span><span class="chip">Numeric fluents</span><span class="chip">Conditional effects</span><span class="chip">Probabilistic effects</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Plans assuming actions the agent cannot perform</span><span class="chip">Invalid action sequences</span><span class="chip">Systematic prediction errors from over-simplified models</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.4">Ch5.4</a>: T. Nguyen, &quot;Hierarchical Planning Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

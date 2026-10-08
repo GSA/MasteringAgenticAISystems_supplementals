@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cascaded Fact Checker · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Cascaded Fact Checker</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:CascadedFactChecker</code></p>
+<div class="split"><section>
+<p class="lead">A fact checking rail that runs alignment scoring on all responses, escalates marginal-confidence cases to NLI verification and only ambiguous residue to self-check LLM critique.</p>
+<p><strong>Responsibility.</strong> Minimizes fact-checking cost while maximizing hallucination catch rate through confidence-based escalation.</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/FactCheckRail.html"><span class="dot g7" aria-hidden="true"></span>Fact Checking Rail</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for production deployments needing the lowest hallucination rate at mostly-minimal added latency.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cascaded Fact Checker"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes; is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>invokes</title></line><a href="AlignmentScoreFactChecker.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Alignment-Score Fact Checker: invokes; is target of alternativeTo</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alignment-Score Fact Che…</text></a><a href="FactCheckRail.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Fact Checking Rail: specializes</title></circle><text x="542.0" y="224.0" text-anchor="start">Fact Checking Rail</text></a><a href="NLIFactChecker.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>NLI Fact Checker: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">NLI Fact Checker</text></a><a href="SelfCheckLLMFactChecker.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Self-Check LLM Fact Checker: invokes</title></circle><text x="218.0" y="224.0" text-anchor="end">Self-Check LLM Fact Chec…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AlignmentScoreFactChecker.html"><span class="dot g7" aria-hidden="true"></span>Alignment-Score Fact Checker</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/NLIFactChecker.html"><span class="dot g7" aria-hidden="true"></span>NLI Fact Checker</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/SelfCheckLLMFactChecker.html"><span class="dot g7" aria-hidden="true"></span>Self-Check LLM Fact Checker</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/AlignmentScoreFactChecker.html"><span class="dot g7" aria-hidden="true"></span>Alignment-Score Fact Checker</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD invoke NLI only for marginal alignment confidence (0.4-0.6) and self-check LLM only for the ambiguous remainder (&lt;5%).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Most requests add 45ms, edge cases add 150ms; hallucination rate below 2% (Ch7.1A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Confidence-tiered verification cascade</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Cost efficiency</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

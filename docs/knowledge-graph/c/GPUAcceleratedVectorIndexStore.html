@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU-Accelerated Vector Index Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Data store</p>
+<h1><span class="dot g3" aria-hidden="true"></span>GPU-Accelerated Vector Index Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:GPUAcceleratedVectorIndexStore</code></p>
+<div class="split"><section>
+<p class="lead">A vector store that builds approximate-nearest-neighbour indices and executes similarity search and metadata filtering in parallel on GPUs.</p>
+<p><strong>Responsibility.</strong> Serves low-latency vector search and index builds using GPU parallelism.</p>
+<p class="muted">Also known as: GPU-native vector search</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for large (up to billion-scale) collections, continuous ingestion with frequent index rebuilds, or multi-hop agent workflows querying many times per request under tight latency.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of GPU-Accelerated Vector Index Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is target of alternativeTo</title></line><a href="VectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Store: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Store</text></a><a href="GPUNode.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>GPU Node: deployed on</title></circle><text x="520.3" y="305.0" text-anchor="start">GPU Node</text></a><a href="CPUVectorIndexStore.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>CPU Vector Index Store: is target of alternativeTo</title></circle><text x="239.7" y="305.0" text-anchor="end">CPU Vector Index Store</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a> <a class="src" href="../sources.html#Ref2.07">Ref2.07</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/CPUVectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>CPU Vector Index Store</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>10-100x faster similarity search than CPU-only databases; sub-100 ms retrieval at billion scale (Ch2.7).</li><li>Index build 10-50x faster: IVF_FLAT for 100M 768-d vectors takes 4 h on CPU vs 12 min on an A100 (Ch2.7).</li><li>Sub-10 ms p95 on a 10M-vector collection on an A100 vs 100-300 ms on CPU, including with filter predicates (Ch2.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Approximate nearest neighbour indexing</span></dd><dt>Technologies</dt><dd><span class="chip">Milvus</span><span class="chip">NVIDIA RAPIDS cuVS</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Retrieval latency bottlenecks</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref2.07">Ref2.07</a>: NVIDIA Developer, &quot;Building multimodal AI RAG with LlamaIndex, NVIDIA NIM, and Milvus | LLM app development,&quot; YouTube. Accessed: Sep. 26, 2026. [Online Video]. Available: https://www.youtube.com/watch?v=NaT5Eo97_I0</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

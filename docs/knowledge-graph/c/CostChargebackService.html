@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost Chargeback Service · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Cost Chargeback Service</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:CostChargebackService</code></p>
+<div class="split"><section>
+<p class="lead">A billing component that allocates metered cost to tenants and generates per-customer charges, optionally applying a markup over base cost.</p>
+<p><strong>Responsibility.</strong> Produces per-customer charges from attributed costs.</p>
+<p class="muted">Also known as: Multi-tenant cost tracking, Customer invoice generation, Cost allocation and chargeback</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Cost Chargeback Service"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><a href="CostAttributionAggregator.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Cost Attribution Aggregator: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Cost Attribution Aggrega…</text></a><a href="CostRateCard.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Cost Rate Card: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Cost Rate Card</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CostAttributionAggregator.html"><span class="dot g6" aria-hidden="true"></span>Cost Attribution Aggregator</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CostRateCard.html"><span class="dot g6" aria-hidden="true"></span>Cost Rate Card</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD derive charges from the same per-customer cost attribution used for monitoring.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example invoice applies a 20% markup on base cost (Ref8.05).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Chargeback</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unallocated shared cost in multi-tenant deployments</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test-Based Vote Aggregator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Test-Based Vote Aggregator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:TestBasedVoteAggregator</code></p>
+<div class="split"><section>
+<p class="lead">A self-consistency aggregator for generated code that executes each sampled implementation against provided test cases and selects among the samples that pass, instead of comparing output text.</p>
+<p><strong>Responsibility.</strong> Selects consensus code solutions by test-execution outcomes.</p>
+<p class="muted">Also known as: Test-driven aggregation, Execution-based voting</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/SelfConsistencyAggregator.html"><span class="dot g2" aria-hidden="true"></span>Self-Consistency Aggregator</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for code generation where implementations vary textually but test cases define correctness.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Test-Based Vote Aggregator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>reads</title></line><a href="CodeExecutionRunner.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Code Execution Runner: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Code Execution Runner</text></a><a href="SelfConsistencyAggregator.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Self-Consistency Aggregator: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Self-Consistency Aggrega…</text></a><a href="QualityWeightedVoteAggregator.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Quality-Weighted Vote Aggregator: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">Quality-Weighted Vote Ag…</text></a><a href="MajorityVoteAggregator.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Majority Vote Aggregator: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Majority Vote Aggregator</text></a><a href="UnitTestSuite.html"><circle class="g6" cx="237.3" cy="173.6" r="7"><title>Unit Test Suite: reads</title></circle><text x="225.9" y="173.9" text-anchor="end">Unit Test Suite</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CodeExecutionRunner.html"><span class="dot g1" aria-hidden="true"></span>Code Execution Runner</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/UnitTestSuite.html"><span class="dot g6" aria-hidden="true"></span>Unit Test Suite</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/MajorityVoteAggregator.html"><span class="dot g2" aria-hidden="true"></span>Majority Vote Aggregator</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li><li><a class="comp" href="../c/QualityWeightedVoteAggregator.html"><span class="dot g2" aria-hidden="true"></span>Quality-Weighted Vote Aggregator</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>k=5 with consensus selection improved HumanEval correctness by 28%; 76% vs 59% of internal tasks passed all tests; consensus code rated more readable 64% of the time (Ch5.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Test-based voting</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Syntactically invalid generated code</span><span class="chip">Edge-case logic errors</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.3">Ch5.3</a>: T. Nguyen, &quot;Self-Consistency Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

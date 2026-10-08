@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distilled Draft Model · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Model asset</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Distilled Draft Model</h1>
+<p class="badges"><span class="badge">Model asset</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:DistilledDraftModel</code></p>
+<div class="split"><section>
+<p class="lead">A separate small draft model trained by knowledge distillation to minimize KL divergence from the target model&#x27;s logits, learning the target&#x27;s preferences rather than accuracy.</p>
+<p><strong>Responsibility.</strong> Provides high-acceptance speculative drafts aligned to the target distribution.</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/SpeculativeDraftModel.html"><span class="dot g4" aria-hidden="true"></span>Speculative Draft Model</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for production where improved acceptance justifies 50-100 GPU-hours of training; use online distillation at scale to track target shifts.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Distilled Draft Model"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is trained by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="SpeculativeDraftModel.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Speculative Draft Model: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Speculative Draft Model</text></a><a href="KnowledgeDistiller.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Knowledge Distiller: is trained by</title></circle><text x="520.3" y="305.0" text-anchor="start">Knowledge Distiller</text></a><a href="IndependentDraftModel.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Independent Draft Model: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Independent Draft Model</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is trained by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/KnowledgeDistiller.html"><span class="dot g4" aria-hidden="true"></span>Knowledge Distiller</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/IndependentDraftModel.html"><span class="dot g4" aria-hidden="true"></span>Independent Draft Model</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>alpha=0.7-0.85, 2-3x speedup; online distillation sustains alpha=0.75-0.90 (Ch7.1A).</li><li>Distilled drafts outperform general LLM drafts by 40-111%; 3B distilled achieves 2.5x vs 1.5x for independent 3B (Ch7.1A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Knowledge distillation</span><span class="chip">Online distillation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

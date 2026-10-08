@@ -64,8 +64,8 @@ docs/
 ├── slides.md            Slide decks, per chapter (in Resources)
 ├── labs.md              Lab status and how labs are written (in Resources)
 ├── code-examples.md     Code snippets and worked examples, per Part (in Resources)
-├── architecture.md      Hub page for the Reference Architecture (links out; see below)
-├── reference-architecture/   Generated static site, copied verbatim — see "Reference Architecture" below
+├── architecture.md      Hub page for the Knowledge Graph (links out; see below)
+├── knowledge-graph/   Generated static site, copied verbatim — see "Knowledge Graph" below
 ├── ai-tutor.md          The AI study tutor
 ├── contributing.md      How to help, governance, conduct, security, support ("Contributing" menu group; the Review menu is its child)
 ├── review-menu.md       Chapters, slide decks and quiz sets to review, by topic (in Contributing)
@@ -104,7 +104,7 @@ whole site can be re-pointed by editing one line:
 | `ai-tutor.md` | `ai_tutor/README.md` |
 | `prerequisites/*.md` | `Prerequisite_Knowledge.md`, cross-checked against `Study_Plan.md`'s per-chapter Key Concepts, plus reused videos from `videos/*.md` where a good match exists (see "Prerequisite sub-topics and embedded videos" below) |
 | `contributing.md`, `about.md` | `CONTRIBUTING.md`, `CALL_FOR_COLLABORATORS.md`, `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `LICENSE.md`, `CITATION.cff`, `.all-contributorsrc` |
-| `architecture.md`, `reference-architecture/` | A separate repository, `Cybonto/book1` (`drafts/iter3/reference_architecture/`); see "Reference Architecture" below |
+| `architecture.md`, `knowledge-graph/` | A separate repository, `Cybonto/book1` (`drafts/iter3/reference_architecture/`); see "Knowledge Graph" below |
 
 The pages were produced by a one-off script and are maintained by hand from here on;
 there is no generator in the repository. They are snapshots, so they will drift as
@@ -190,14 +190,14 @@ leading text, tier-page topic headings (`## `) deliberately carry **no** leading
 not "3. Kubernetes fundamentals") — a numbered heading would slug to `#3-kubernetes-fundamentals` and break every
 cross-reference to it.
 
-### Reference Architecture
+### Knowledge Graph
 
-`reference-architecture/` (1,587 component pages, ≈17 MB, ≈1,605 files) is a **verbatim snapshot** of the static site
-built from the `Cybonto/book1` repository's Agentic AI Reference Architecture knowledge graph, copied in whole from
+`knowledge-graph/` (1,587 component pages, ≈17 MB, ≈1,605 files) is a **verbatim snapshot** of the static site
+built from the `Cybonto/book1` repository's Agentic AI Knowledge Graph, copied in whole from
 `drafts/iter3/reference_architecture/site/` at that repository's commit `002b808`. It has no YAML front matter, so
 Jekyll copies its files as static assets rather than rendering them — this is required, not incidental: the pages
 carry their own header, navigation, and light/dark theme, and none of their internal links or asset references may be
-rewritten. **Never hand-edit anything under `reference-architecture/`.** Fix the knowledge graph or its generator in
+rewritten. **Never hand-edit anything under `knowledge-graph/`.** Fix the knowledge graph or its generator in
 `book1`, rebuild, and re-copy.
 
 The one exception is the site's look. All the pages share two files, `assets/style.css` and `assets/theme.js`, and
@@ -207,20 +207,20 @@ choice shared with the rest of the site, and adds a "Study guide" link back. No 
 refresh below, and after changing the preset (`--check` tells you if it is out of date).
 
 `architecture.md` is a normal Jekyll page (in the sidebar, `nav_order: 10.5`) that describes the reference
-architecture and links into it; it deliberately does not use the permalink `/reference-architecture/`, which would
-collide with `reference-architecture/index.html`.
+architecture and links into it; it deliberately does not use the permalink `/knowledge-graph/`, which would
+collide with `knowledge-graph/index.html`.
 
 To refresh after `book1` changes:
 
 ```bash
 rsync -a --delete --exclude '.DS_Store' \
-  /path/to/book1/drafts/iter3/reference_architecture/site/ docs/reference-architecture/
+  /path/to/book1/drafts/iter3/reference_architecture/site/ docs/knowledge-graph/
 ```
 
 Then re-apply the look: `python3 .github/scripts/skin_reference_architecture.py`.
 
 Then update the source commit noted on `architecture.md`, and re-run the link check documented in `book1`'s
-`site_integration.md` (§6) against `docs/reference-architecture/` before committing.
+`site_integration.md` (§6) against `docs/knowledge-graph/` before committing.
 
 ### Deliberately not published
 

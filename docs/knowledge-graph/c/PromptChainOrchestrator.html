@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Chain Orchestrator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Prompt Chain Orchestrator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:PromptChainOrchestrator</code></p>
+<div class="split"><section>
+<p class="lead">A workflow orchestrator that executes a fixed linear sequence of LLM calls in which each call&#x27;s output becomes the next call&#x27;s input.</p>
+<p><strong>Responsibility.</strong> Passes each stage&#x27;s LLM output as input to the next stage in a predefined sequence.</p>
+<p class="muted">Also known as: Prompt chain, Sequential LLM pipeline, Simple function composition, Prompt chaining</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/WorkflowOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Workflow Orchestrator</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when a task decomposes into a fixed sequence of processing stages, each needing a different prompting strategy, with intermediate outputs inspected between stages; for simple linear workflows without branching, simple function composition suffices.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Prompt Chain Orchestrator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>invokes</title></line><a href="ToolExecutor.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Tool Executor: orchestrates</title></circle><text x="380.0" y="50.0" text-anchor="middle">Tool Executor</text></a><a href="StateGraphOrchestrator.html"><circle class="g1" cx="522.7" cy="173.6" r="7"><title>State-Graph Orchestrator: alternative to</title></circle><text x="534.1" y="173.9" text-anchor="start">State-Graph Orchestrator</text></a><a href="WorkflowOrchestrator.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Workflow Orchestrator: specializes</title></circle><text x="475.2" y="355.1" text-anchor="start">Workflow Orchestrator</text></a><a href="ModelInferenceAPI.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Native Function-Calling API: invokes</title></circle><text x="284.8" y="355.1" text-anchor="end">Native Function-Calling …</text></a><a href="ProgressValidator.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Progress Validator: invokes</title></circle><text x="225.9" y="173.9" text-anchor="end">Progress Validator</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModelInferenceAPI.html"><span class="dot g4" aria-hidden="true"></span>Native Function-Calling API</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a></li><li><a class="comp" href="../c/ProgressValidator.html"><span class="dot g2" aria-hidden="true"></span>Progress Validator</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a></li></ul></section>
+<section class="rel"><h3>orchestrates <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ToolExecutor.html"><span class="dot g1" aria-hidden="true"></span>Tool Executor</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/StateGraphOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>State-Graph Orchestrator</a> <a class="src" href="../sources.html#Ch1.5A">Ch1.5A</a> <a class="src" href="../sources.html#Ch1.5B">Ch1.5B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD validate intermediate outputs at each stage and short-circuit when they show the final answer is unachievable.</li><li>SHOULD add programmatic checks at intermediate steps to verify format, completeness, and business rules before proceeding.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Prompt chaining</span><span class="chip">Chain-of-thought decomposition</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Hidden intermediate reasoning in monolithic prompts</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.5A">Ch1.5A</a>: T. Nguyen, &quot;Stateful Orchestration - Introduction and Core Concepts,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.5A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch1.5B">Ch1.5B</a>: T. Nguyen, &quot;Stateful Orchestration - Worked Examples,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.5B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.6">Ch2.6</a>: T. Nguyen, &quot;Tool Integration and Function Calling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

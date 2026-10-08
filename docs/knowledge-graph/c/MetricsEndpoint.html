@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metrics Endpoint · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Interface</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Metrics Endpoint</h1>
+<p class="badges"><span class="badge">Interface</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:MetricsEndpoint</code></p>
+<div class="split"><section>
+<p class="lead">An HTTP endpoint (conventionally /metrics) on an instrumented agent or service that exposes its counters, gauges, histograms and summaries in a scrapeable text format.</p>
+<p><strong>Responsibility.</strong> Exposes a component&#x27;s current metrics for collection.</p>
+<p class="muted">Also known as: /metrics endpoint, Metrics exporter endpoint</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Metrics Endpoint"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is exposed by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is exposed by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is specialized by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is exposed by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="MetricsCollector.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Metrics Collector: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Metrics Collector</text></a><a href="GPUTelemetryExporter.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>GPU Telemetry Exporter: is exposed by</title></circle><text x="380.0" y="396.0" text-anchor="middle">GPU Telemetry Exporter</text></a><a href="InferenceMetricsEndpoint.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Inference Metrics Endpoint: is specialized by</title></circle><text x="218.0" y="224.0" text-anchor="end">Inference Metrics Endpoint</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/InferenceMetricsEndpoint.html"><span class="dot g6" aria-hidden="true"></span>Inference Metrics Endpoint</a></td><td>—</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is exposed by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a></li><li><a class="comp" href="../c/GPUTelemetryExporter.html"><span class="dot g6" aria-hidden="true"></span>GPU Telemetry Exporter</a> <a class="src" href="../sources.html#Ch8.1">Ch8.1</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MetricsCollector.html"><span class="dot g6" aria-hidden="true"></span>Metrics Collector</a> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a> <span class="src more" title="Ch8.1">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD instrument LLM calls with latency timers, error counters and queue-depth gauges exposed on the endpoint.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Pull-based metrics exposition</span></dd><dt>Technologies</dt><dd><span class="chip">Prometheus text format</span><span class="chip">prometheus_client</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.1">Ch4.1</a>: T. Nguyen, &quot;Introduction to AI Agent Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.1">Ch8.1</a>: T. Nguyen, &quot;Latency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

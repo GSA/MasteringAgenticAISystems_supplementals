@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>External Session State Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>External Session State Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ExternalSessionStateStore</code></p>
+<div class="split"><section>
+<p class="lead">A shared, network-accessible store (key-value or relational) that externalizes session state so every stateless replica can retrieve and update any user&#x27;s conversation.</p>
+<p><strong>Responsibility.</strong> Persists session state outside replicas so any replica can continue any conversation.</p>
+<p class="muted">Also known as: Redis state store, Shared state layer, RedisStateStore, Shared state (database, cache)</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ConversationStateStore.html"><span class="dot g2" aria-hidden="true"></span>Conversation State Store</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for large-scale deployments (100+ instances), frequent autoscaling that would churn sessions, or when no session may be lost on instance failure.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of External Session State Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ConversationStateStore.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Conversation State Store: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Conversation State Store</text></a><a href="InstanceLocalSessionState.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Instance-Local Session State: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Instance-Local Session S…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a> <a class="src" href="../sources.html#Ref7.17">Ref7.17</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a> <a class="src" href="../sources.html#Ref7.17">Ref7.17</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/InstanceLocalSessionState.html"><span class="dot g2" aria-hidden="true"></span>Instance-Local Session State</a> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be the default for production agents; most production systems choose stateless architecture.</li><li>SHOULD be deployed with automatic failover (e.g., Sentinel or Cluster) so the state layer is not a single point of failure.</li><li>SHOULD use a relational store for structured state that requires transactional consistency.</li><li>MUST hold all persistent conversation state so any replica can serve any turn.</li><li>SHOULD be protected by multi-AZ replication, read replicas and backup/restore, since stateful components cannot rely on simple load balancing.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Adds 5-20 ms per request for state retrieval (Ch1.8).</li><li>Fetching context from Redis costs milliseconds vs microseconds for in-memory access (Ch4.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Externalized state</span><span class="chip">Stateless architecture</span><span class="chip">Automatic failover (Sentinel/Cluster)</span><span class="chip">Session-ID-indexed conversation history</span><span class="chip">Multi-AZ replication with automatic failover</span><span class="chip">Read replicas</span></dd><dt>Technologies</dt><dd><span class="chip">Redis</span><span class="chip">Redis Cluster</span><span class="chip">Redis Sentinel</span><span class="chip">PostgreSQL</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Session loss on instance failure</span><span class="chip">Uneven load from sticky sessions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.8">Ch1.8</a>: T. Nguyen, &quot;Scalability and Production Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.7">Ch4.7</a>: T. Nguyen, &quot;Scaling Strategies,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.17">Ref7.17</a>: &quot;Scaling Agentic AI Systems: Patterns and Strategies,&quot; unpublished reference note (17-Scalability-Patterns.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

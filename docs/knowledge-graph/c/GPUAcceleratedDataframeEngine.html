@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU-Accelerated Dataframe Engine · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>GPU-Accelerated Dataframe Engine</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:GPUAcceleratedDataframeEngine</code></p>
+<div class="split"><section>
+<p class="lead">A dataframe compute engine that executes filtering, deduplication and text processing on GPUs, partitioning datasets larger than memory across multiple GPUs.</p>
+<p><strong>Responsibility.</strong> Runs ETL transformations on GPUs for web-scale corpora.</p>
+<p class="muted">Also known as: GPU-accelerated ETL, GPU-accelerated data curation</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DataframeComputeEngine.html"><span class="dot g5" aria-hidden="true"></span>Dataframe Compute Engine</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for billions of documents where CPU pipelines take multiple days, regular full reprocessing of large corpora, fuzzy deduplication at scale, or when GPU infrastructure already exists.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of GPU-Accelerated Dataframe Engine"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is target of alternativeTo</title></line><a href="GPUNode.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>GPU Node: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">GPU Node</text></a><a href="DataCurator.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Data Curator: hosts</title></circle><text x="534.1" y="173.9" text-anchor="start">Data Curator</text></a><a href="NearDuplicateDetector.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Near-Duplicate Detector: hosts</title></circle><text x="475.2" y="355.1" text-anchor="start">Near-Duplicate Detector</text></a><a href="DataframeComputeEngine.html"><circle class="g5" cx="291.8" cy="341.4" r="7"><title>Dataframe Compute Engine: specializes</title></circle><text x="284.8" y="355.1" text-anchor="end">Dataframe Compute Engine</text></a><a href="CPUDataframeEngine.html"><circle class="g5" cx="237.3" cy="173.6" r="7"><title>CPU Dataframe Engine: is target of alternativeTo</title></circle><text x="225.9" y="173.9" text-anchor="end">CPU Dataframe Engine</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DataCurator.html"><span class="dot g4" aria-hidden="true"></span>Data Curator</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li><li><a class="comp" href="../c/NearDuplicateDetector.html"><span class="dot g3" aria-hidden="true"></span>Near-Duplicate Detector</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/CPUDataframeEngine.html"><span class="dot g5" aria-hidden="true"></span>CPU Dataframe Engine</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>50M documents (500 GB): 144 hours on 64 CPU cores vs 8.9 hours on 4x A100 (16.2x) (NVIDIA published results, Ch6.3B).</li><li>Per-stage speedups: load 18x, quality filtering 22.7x, exact deduplication 20.3x, fuzzy deduplication 13.6x (Ch6.3B).</li><li>Cost: $391.68 CPU (6 days c6i.16xlarge) vs $294.93 GPU (9 hours p4d.24xlarge), 24.7% cheaper (Ch6.3B).</li><li>cuDF gives 20-100x DataFrame speedups; GPU text processing ~30x faster than CPU (Ch6.3B).</li><li>Curation on GPUs runs 16-89x faster than CPU-based alternatives; full pipeline &lt;24 hours vs. ~2 weeks on CPUs (Ch7.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Distributed partitioned dataframes</span><span class="chip">GPU-parallel MinHash LSH</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo Curator</span><span class="chip">RAPIDS cuDF</span><span class="chip">Dask</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Cost efficiency</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bounded-Suboptimal Search Planner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Bounded-Suboptimal Search Planner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:BoundedSuboptimalSearchPlanner</code></p>
+<div class="split"><section>
+<p class="lead">A graph search planner that inflates the heuristic weight (g(n)+w*h(n), w&gt;1) to expand fewer nodes, returning paths at most w times optimal cost.</p>
+<p><strong>Responsibility.</strong> Returns a near-optimal path within a bounded cost factor under tight planning deadlines.</p>
+<p class="muted">Also known as: Weighted A* planner</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/GraphSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Graph Search Planner</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for real-time games, robots under time pressure and interactive systems where responsiveness outweighs optimality and cost may exceed optimal by up to factor w.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Bounded-Suboptimal Search Planner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>alternative to</title></line><a href="GraphSearchPlanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Graph Search Planner: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Graph Search Planner</text></a><a href="OptimalHeuristicSearchPlanner.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Optimal Heuristic Search Planner: alternative to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Optimal Heuristic Search…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/OptimalHeuristicSearchPlanner.html"><span class="dot g2" aria-hidden="true"></span>Optimal Heuristic Search Planner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be used when near-optimal solutions suffice and decisions must arrive within a strict time budget.</li><li>MUST NOT be used where provably shortest paths are mandatory.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>w = 2.0 expanded 95 instead of 380 nodes, 47 ms vs 185 ms, yielding a 49 m path vs 47 m optimal (~4% longer) (Ch5.6).</li><li>Solution cost is guaranteed at most w times optimal (Ch5.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Weighted A*</span><span class="chip">Bounded suboptimality</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Plans arriving after the control deadline</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

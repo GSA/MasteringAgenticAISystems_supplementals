@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Value Sentinel Agent · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Value Sentinel Agent</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:ValueSentinelAgent</code></p>
+<div class="split"><section>
+<p class="lead">A specialist agent in a multi-agent system that monitors one shared value dimension (e.g., supplier sustainability practices) and alerts peer agents to value-relevant risks before they commit local decisions.</p>
+<p><strong>Responsibility.</strong> Surfaces value-relevant risk signals to peer agents so local optimization respects global values.</p>
+<p class="muted">Also known as: Sustainability agent, Value monitoring agent</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Value Sentinel Agent"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="Constitution.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Constitution: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Constitution</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/Constitution.html"><span class="dot g7" aria-hidden="true"></span>Constitution</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD alert affected agents before decisions are made rather than after problems arise.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Value-relevant information sharing</span><span class="chip">Coordination value alignment</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Tragedy of the commons</span><span class="chip">Negative externalities between agents</span><span class="chip">Optimization pathologies at system level</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.6">Ch9.6</a>: T. Nguyen, &quot;Value Alignment Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consent Enforcement Gate · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Consent Enforcement Gate</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ConsentEnforcementGate</code></p>
+<div class="split"><section>
+<p class="lead">A runtime gate that permits data collection or processing for a purpose only while valid consent or another lawful basis exists, blocking non-essential trackers and halting collection immediately on withdrawal.</p>
+<p><strong>Responsibility.</strong> Enforces purpose-level consent at the point of collection and processing.</p>
+<p class="muted">Also known as: Tag management system, Consent-gated cookie loader, Purpose limitation enforcer</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Consent Enforcement Gate"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is triggered by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>reads</title></line><a href="DataCurator.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Data Curator: guards</title></circle><text x="380.0" y="50.0" text-anchor="middle">Data Curator</text></a><a href="ExternalServiceAPI.html"><circle class="g1" cx="509.9" cy="145.0" r="7"><title>External Service API: guards</title></circle><text x="520.3" y="143.0" text-anchor="start">External Service API</text></a><a href="ProactiveAgent.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Proactive Agent: guards</title></circle><text x="520.3" y="305.0" text-anchor="start">Proactive Agent</text></a><a href="LawfulBasisRecord.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Lawful Basis Record: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Lawful Basis Record</text></a><a href="ConsentManager.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Consent Manager: is triggered by</title></circle><text x="239.7" y="305.0" text-anchor="end">Consent Manager</text></a><a href="ConsentRegistry.html"><circle class="g7" cx="250.1" cy="145.0" r="7"><title>Consent Registry: reads</title></circle><text x="239.7" y="143.0" text-anchor="end">Consent Registry</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConsentRegistry.html"><span class="dot g7" aria-hidden="true"></span>Consent Registry</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li><li><a class="comp" href="../c/LawfulBasisRecord.html"><span class="dot g7" aria-hidden="true"></span>Lawful Basis Record</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li></ul></section>
+<section class="rel"><h3>is triggered by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ConsentManager.html"><span class="dot g7" aria-hidden="true"></span>Consent Manager</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DataCurator.html"><span class="dot g4" aria-hidden="true"></span>Data Curator</a> <a class="src" href="../sources.html#Ref9.05">Ref9.05</a></li><li><a class="comp" href="../c/ExternalServiceAPI.html"><span class="dot g1" aria-hidden="true"></span>External Service API</a> <a class="src" href="../sources.html#Ch9.7">Ch9.7</a></li><li><a class="comp" href="../c/ProactiveAgent.html"><span class="dot g1" aria-hidden="true"></span>Proactive Agent</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST activate only strictly necessary (essential) cookies or collectors before the user makes consent choices.</li><li>MUST stop tracking and remove analytics or marketing cookies immediately when consent is withdrawn, sending opt-out signals to advertising processors.</li><li>MUST NOT use data collected for one purpose (e.g., answering questions) for marketing, model training, profiling or sharing without consent.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Analytics data collection halts within seconds of consent withdrawal (Ch9.7 retailer).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Consent before deployment</span><span class="chip">Purpose limitation</span><span class="chip">Privacy as default setting</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Privacy (NIST AI RMF: privacy-enhanced)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Tracking before consent</span><span class="chip">Secondary use of data without consent</span><span class="chip">Proactive access beyond consented boundaries</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">GDPR Art. 7</span><span class="chip">GDPR Art. 5(1)(b)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.7">Ch9.7</a>: T. Nguyen, &quot;GDPR and Data Protection Regulations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.05">Ref9.05</a>: &quot;Privacy and Data Protection for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/05-Privacy-Data-Protection.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On-Device Trainer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>On-Device Trainer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:OnDeviceTrainer</code></p>
+<div class="split"><section>
+<p class="lead">A device-side training component that updates a received global model on local private data and returns only the resulting weight updates.</p>
+<p><strong>Responsibility.</strong> Learns from local data without exporting it.</p>
+<p class="muted">Also known as: Federated client</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of On-Device Trainer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>sends data to; is orchestrated by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>deployed on</title></line><a href="FederatedAggregator.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Federated Aggregator: sends data to; is orchestrated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Federated Aggregator</text></a><a href="EdgeDevice.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Edge Device: deployed on</title></circle><text x="380.0" y="396.0" text-anchor="middle">Edge Device</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EdgeDevice.html"><span class="dot g5" aria-hidden="true"></span>Edge Device</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/FederatedAggregator.html"><span class="dot g4" aria-hidden="true"></span>Federated Aggregator</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+<section class="rel"><h3>is orchestrated by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/FederatedAggregator.html"><span class="dot g4" aria-hidden="true"></span>Federated Aggregator</a> <a class="src" href="../sources.html#Ch4.3">Ch4.3</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Federated learning</span></dd><dt>Quality attributes</dt><dd><span class="chip">Privacy (NIST AI RMF: privacy-enhanced)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Centralisation of sensitive data</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.3">Ch4.3</a>: T. Nguyen, &quot;Container Orchestration and Edge Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persistent Search Tree Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Persistent Search Tree Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:PersistentSearchTreeStore</code></p>
+<div class="split"><section>
+<p class="lead">A store retaining a search&#x27;s per-node cost values, parent pointers and consistency information across planning cycles so later replans can reuse them.</p>
+<p><strong>Responsibility.</strong> Persists search-tree bookkeeping between planning cycles.</p>
+<p class="muted">Also known as: LPA* search tree, g-value and parent-pointer cache</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Persistent Search Tree Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by; is written by</title></line><a href="IncrementalSearchReplanner.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Incremental Search Replanner: is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Incremental Search Repla…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/IncrementalSearchReplanner.html"><span class="dot g2" aria-hidden="true"></span>Incremental Search Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/IncrementalSearchReplanner.html"><span class="dot g2" aria-hidden="true"></span>Incremental Search Replanner</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST be budgeted for: it consumes more memory than standard A*, which is wasted in environments that rarely change.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shared Message History · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Data store</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Shared Message History</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:SharedMessageHistory</code></p>
+<div class="split"><section>
+<p class="lead">An append-only conversation transcript shared by all participants in a multi-agent dialogue, holding every agent&#x27;s messages as the common coordination context.</p>
+<p><strong>Responsibility.</strong> Holds the ordered messages of a multi-agent conversation for all participants to read.</p>
+<p class="muted">Also known as: Group chat history, Shared conversation history, Message history</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Shared Message History"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is read by</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="DualAgentCritic.html"><circle class="g2" cx="509.9" cy="145.0" r="7"><title>Dual-Agent Critic: is read by; is written by</title></circle><text x="520.3" y="143.0" text-anchor="start">Dual-Agent Critic</text></a><a href="AgentMessageBus.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Agent Message Bus: is written by</title></circle><text x="520.3" y="305.0" text-anchor="start">Agent Message Bus</text></a><a href="ContradictionDetector.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Reasoning Consistency Checker: is read by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Reasoning Consistency Ch…</text></a><a href="GroupChatManager.html"><circle class="g1" cx="250.1" cy="295.0" r="7"><title>Conversational Agent Coordinator: is written by</title></circle><text x="239.7" y="305.0" text-anchor="end">Conversational Agent Coo…</text></a><a href="TerminationChecker.html"><circle class="g1" cx="250.1" cy="145.0" r="7"><title>Termination Checker: is read by</title></circle><text x="239.7" y="143.0" text-anchor="end">Termination Checker</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContradictionDetector.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Consistency Checker</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li><li><a class="comp" href="../c/DualAgentCritic.html"><span class="dot g2" aria-hidden="true"></span>Dual-Agent Critic</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li><li><a class="comp" href="../c/TerminationChecker.html"><span class="dot g1" aria-hidden="true"></span>Termination Checker</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentMessageBus.html"><span class="dot g1" aria-hidden="true"></span>Agent Message Bus</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a></li><li><a class="comp" href="../c/DualAgentCritic.html"><span class="dot g2" aria-hidden="true"></span>Dual-Agent Critic</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li><li><a class="comp" href="../c/GroupChatManager.html"><span class="dot g1" aria-hidden="true"></span>Conversational Agent Coordinator</a> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.4">Ch2.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD serve as the transparent record of what each agent contributed and why, for human oversight.</li><li>MUST NOT be assumed to carry custom state that agents track locally; such state requires explicit synchronization.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Message passing</span><span class="chip">Shared conversational context</span></dd><dt>Technologies</dt><dd><span class="chip">AutoGen</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Agents lacking visibility into others&#x27; contributions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.4">Ch2.4</a>: T. Nguyen, &quot;Multi-Agent Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

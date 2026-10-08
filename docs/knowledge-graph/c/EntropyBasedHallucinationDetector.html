@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entropy-Based Hallucination Detector · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Entropy-Based Hallucination Detector</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:EntropyBasedHallucinationDetector</code></p>
+<div class="split"><section>
+<p class="lead">A tool hallucination detector that monitors token-probability entropy while the generating model produces parameter values and flags values whose entropy exceeds thresholds derived from correct-invocation baselines.</p>
+<p><strong>Responsibility.</strong> Flags tool parameters generated with high model uncertainty as likely fabrications.</p>
+<p class="muted">Also known as: Entropy analysis, Confidence measures</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ToolHallucinationDetector.html"><span class="dot g7" aria-hidden="true"></span>Tool Hallucination Detector</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when the generating model&#x27;s token probability distributions are observable during parameter generation, so uncertainty can be measured without a separate model.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Entropy-Based Hallucination Detector"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="ToolHallucinationDetector.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Tool Hallucination Detector: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Tool Hallucination Detec…</text></a><a href="VerifierModelHallucinationDetector.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Verifier-Model Hallucination Detector: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Verifier-Model Hallucina…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/VerifierModelHallucinationDetector.html"><span class="dot g7" aria-hidden="true"></span>Verifier-Model Hallucination Detector</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD compare parameter-generation entropy to baselines from correct invocations and trigger validation when thresholds are exceeded.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Entropy-based uncertainty detection</span></dd><dt>Quality attributes</dt><dd><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Plausible-looking fabricated parameter values</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.7">Ch3.7</a>: T. Nguyen, &quot;Tool Usage Auditing,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

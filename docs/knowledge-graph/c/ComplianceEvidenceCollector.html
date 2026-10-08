@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compliance Evidence Collector · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Compliance Evidence Collector</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ComplianceEvidenceCollector</code></p>
+<div class="split"><section>
+<p class="lead">A governance component that gathers compliance evidence — security, fairness, performance and functionality test results and ongoing monitoring data — and archives it with timestamps.</p>
+<p><strong>Responsibility.</strong> Automatically assembles and archives evidence of compliance testing and monitoring.</p>
+<p class="muted">Also known as: Evidence collection</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Compliance Evidence Collector"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="476.4" y2="105.1"><title>reads</title></line><line x1="380.0" y1="220.0" x2="527.7" y2="194.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="431.3" y2="361.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="328.7" y2="361.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="232.3" y2="194.0"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="283.6" y2="105.1"><title>reads</title></line><a href="EvaluationHarness.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Evaluation Harness: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Evaluation Harness</text></a><a href="AuditLogStore.html"><circle class="g7" cx="476.4" cy="105.1" r="7"><title>Audit Log Store: reads</title></circle><text x="484.1" y="99.9" text-anchor="start">Audit Log Store</text></a><a href="TimeSeriesMetricsStore.html"><circle class="g6" cx="527.7" cy="194.0" r="7"><title>Time-Series Metrics Store: reads</title></circle><text x="539.5" y="195.9" text-anchor="start">Time-Series Metrics Store</text></a><a href="BiasEvaluator.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Bias Evaluator: invokes</title></circle><text x="520.3" y="305.0" text-anchor="start">Bias Evaluator</text></a><a href="UserFeedbackStore.html"><circle class="g6" cx="431.3" cy="361.0" r="7"><title>User Feedback Store: reads</title></circle><text x="435.4" y="376.2" text-anchor="start">User Feedback Store</text></a><a href="ComplianceEvidenceRepository.html"><circle class="g7" cx="328.7" cy="361.0" r="7"><title>Compliance Evidence Repository: writes</title></circle><text x="324.6" y="376.2" text-anchor="end">Compliance Evidence Repo…</text></a><a href="GovernanceDecisionLog.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Governance Decision Log: reads</title></circle><text x="239.7" y="305.0" text-anchor="end">Governance Decision Log</text></a><a href="ComplianceRequirementCrosswalk.html"><circle class="g7" cx="232.3" cy="194.0" r="7"><title>Compliance Requirement Crosswalk: is configured by</title></circle><text x="220.5" y="195.9" text-anchor="end">Compliance Requirement C…</text></a><a href="ReleaseHistoryLog.html"><circle class="g7" cx="283.6" cy="105.1" r="7"><title>Release History Log: reads</title></circle><text x="275.9" y="99.9" text-anchor="end">Release History Log</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ComplianceRequirementCrosswalk.html"><span class="dot g7" aria-hidden="true"></span>Compliance Requirement Crosswalk</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/BiasEvaluator.html"><span class="dot g7" aria-hidden="true"></span>Bias Evaluator</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AuditLogStore.html"><span class="dot g7" aria-hidden="true"></span>Audit Log Store</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li><li><a class="comp" href="../c/GovernanceDecisionLog.html"><span class="dot g7" aria-hidden="true"></span>Governance Decision Log</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li><li><a class="comp" href="../c/ReleaseHistoryLog.html"><span class="dot g7" aria-hidden="true"></span>Release History Log</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li><li><a class="comp" href="../c/TimeSeriesMetricsStore.html"><span class="dot g6" aria-hidden="true"></span>Time-Series Metrics Store</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li><li><a class="comp" href="../c/UserFeedbackStore.html"><span class="dot g6" aria-hidden="true"></span>User Feedback Store</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ComplianceEvidenceRepository.html"><span class="dot g7" aria-hidden="true"></span>Compliance Evidence Repository</a> <a class="src" href="../sources.html#Ref9.06">Ref9.06</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">ISO/IEC 42001 §9 Performance evaluation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref9.06">Ref9.06</a>: &quot;Auditing and Compliance Monitoring for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/06-Auditing-Compliance-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitor-Only Violation Response Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Monitor-Only Violation Response Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:MonitorOnlyViolationResponsePolicy</code></p>
+<div class="split"><section>
+<p class="lead">A violation response policy that lets a borderline action or output proceed while logging and alerting on it for later human review of whether policy refinement or agent retraining is needed.</p>
+<p><strong>Responsibility.</strong> Specifies monitoring-mode handling of borderline guardrail hits.</p>
+<p class="muted">Also known as: Monitoring flag, Monitoring mode guardrail, Log-and-allow</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Violation Response Policy</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for borderline outputs approaching policy boundaries where immediate blocking is not required; use blocking mode for inviolable legal, ethical or safety constraints.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Monitor-Only Violation Response Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><a href="ViolationResponsePolicy.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Violation Response Policy: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Violation Response Policy</text></a><a href="BlockingViolationResponsePolicy.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Blocking Violation Response Policy: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">Blocking Violation Respo…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/BlockingViolationResponsePolicy.html"><span class="dot g7" aria-hidden="true"></span>Blocking Violation Response Policy</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Over-blocking of borderline cases</span><span class="chip">Unnoticed policy boundary drift</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

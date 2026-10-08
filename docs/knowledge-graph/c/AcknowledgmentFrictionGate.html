@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acknowledgment Friction Gate · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Acknowledgment Friction Gate</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:AcknowledgmentFrictionGate</code></p>
+<div class="split"><section>
+<p class="lead">An oversight gate that requires the human decision-maker to explicitly acknowledge stated uncertainties before a high-stakes agent recommendation is implemented, without preventing informed acceptance.</p>
+<p><strong>Responsibility.</strong> Blocks reflexive acceptance of high-stakes recommendations until uncertainties are acknowledged.</p>
+<p class="muted">Also known as: Mandatory acknowledgment, Friction mechanism</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Acknowledgment Friction Gate"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is triggered by</title></line><a href="HumanApprover.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Human Approver: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Human Approver</text></a><a href="DecisionEngine.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Decision Engine: guards</title></circle><text x="542.0" y="224.0" text-anchor="start">Decision Engine</text></a><a href="ConfidenceEstimator.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Confidence Estimator: receives data from</title></circle><text x="380.0" y="396.0" text-anchor="middle">Confidence Estimator</text></a><a href="OutputRiskStratifier.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Output Risk Stratifier: is triggered by</title></circle><text x="218.0" y="224.0" text-anchor="end">Output Risk Stratifier</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>is triggered by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/OutputRiskStratifier.html"><span class="dot g7" aria-hidden="true"></span>Output Risk Stratifier</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ConfidenceEstimator.html"><span class="dot g2" aria-hidden="true"></span>Confidence Estimator</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DecisionEngine.html"><span class="dot g2" aria-hidden="true"></span>Decision Engine</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD combine explanations with friction for high-stakes recommendations, since explanations alone do not reduce automation bias.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Mandatory override consideration</span><span class="chip">Informed acceptance</span></dd><dt>Quality attributes</dt><dd><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Automation bias</span><span class="chip">Reflexive trust or distrust</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

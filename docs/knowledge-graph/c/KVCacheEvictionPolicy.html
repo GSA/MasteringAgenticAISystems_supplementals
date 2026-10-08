@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KV Cache Eviction Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>KV Cache Eviction Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:KVCacheEvictionPolicy</code></p>
+<div class="split"><section>
+<p class="lead">An abstract policy deciding which requests&#x27; KV caches to evict or defer when cache demand exceeds available memory.</p>
+<p><strong>Responsibility.</strong> Selects KV-cache victims under memory pressure.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of KV Cache Eviction Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is specialized by</title></line><a href="KVCacheManager.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>KV Cache Manager: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">KV Cache Manager</text></a><a href="CostAwareKVCacheEvictionPolicy.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Cost-Aware Hybrid KV Cache Eviction Policy: is specialized by</title></circle><text x="534.1" y="173.9" text-anchor="start">Cost-Aware Hybrid KV Cac…</text></a><a href="FIFOKVCacheEvictionPolicy.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>FIFO KV Cache Eviction Policy: is specialized by</title></circle><text x="475.2" y="355.1" text-anchor="start">FIFO KV Cache Eviction P…</text></a><a href="LRUKVCacheEvictionPolicy.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>LRU KV Cache Eviction Policy: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">LRU KV Cache Eviction Po…</text></a><a href="PriorityKVCacheEvictionPolicy.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Priority KV Cache Eviction Policy: is specialized by</title></circle><text x="225.9" y="173.9" text-anchor="end">Priority KV Cache Evicti…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/CostAwareKVCacheEvictionPolicy.html"><span class="dot g4" aria-hidden="true"></span>Cost-Aware Hybrid KV Cache Eviction Policy</a></td><td>Choose in production when recency, priority and recomputation cost must be balanced together.</td></tr><tr><td><a class="comp" href="../c/FIFOKVCacheEvictionPolicy.html"><span class="dot g4" aria-hidden="true"></span>FIFO KV Cache Eviction Policy</a></td><td>Choose when all requests have similar priority.</td></tr><tr><td><a class="comp" href="../c/LRUKVCacheEvictionPolicy.html"><span class="dot g4" aria-hidden="true"></span>LRU KV Cache Eviction Policy</a></td><td>Choose for interactive sessions where recent activity signals continued engagement and idle sessions can be suspended.</td></tr><tr><td><a class="comp" href="../c/PriorityKVCacheEvictionPolicy.html"><span class="dot g4" aria-hidden="true"></span>Priority KV Cache Eviction Policy</a></td><td>Choose when requests carry differentiated SLAs (e.g., premium versus free tier).</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/KVCacheManager.html"><span class="dot g4" aria-hidden="true"></span>KV Cache Manager</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD adopt sophisticated eviction only when request importance varies widely or memory is tight enough to force frequent eviction.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

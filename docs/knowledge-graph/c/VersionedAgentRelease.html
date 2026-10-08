@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Versioned Agent Release · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Versioned Agent Release</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:VersionedAgentRelease</code></p>
+<div class="split"><section>
+<p class="lead">A semantically versioned snapshot bundling model identifier and parameters, prompt templates, tool configuration, evaluation metrics, container image digest and commit metadata for one agent release.</p>
+<p><strong>Responsibility.</strong> Captures everything needed to reproduce one agent release.</p>
+<p class="muted">Also known as: Registered model version, Agent artifact bundle, Model version history</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Versioned Agent Release"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is produced by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is configured by</title></line><a href="ModelRolloutManager.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Rollout Manager: is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Rollout Manager</text></a><a href="ContinuousIntegrationRunner.html"><circle class="g5" cx="522.7" cy="173.6" r="7"><title>Continuous Integration Runner: is produced by</title></circle><text x="534.1" y="173.9" text-anchor="start">Continuous Integration R…</text></a><a href="StagePromotionController.html"><circle class="g7" cx="468.2" cy="341.4" r="7"><title>Stage Promotion Controller: is read by</title></circle><text x="475.2" y="355.1" text-anchor="start">Stage Promotion Controller</text></a><a href="SyntheticContentLabeler.html"><circle class="g7" cx="291.8" cy="341.4" r="7"><title>Synthetic Content Labeler: is read by</title></circle><text x="284.8" y="355.1" text-anchor="end">Synthetic Content Labeler</text></a><a href="SemanticVersioningPolicy.html"><circle class="g7" cx="237.3" cy="173.6" r="7"><title>Semantic Versioning Policy: is configured by</title></circle><text x="225.9" y="173.9" text-anchor="end">Semantic Versioning Policy</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/SemanticVersioningPolicy.html"><span class="dot g7" aria-hidden="true"></span>Semantic Versioning Policy</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModelRolloutManager.html"><span class="dot g5" aria-hidden="true"></span>Rollout Manager</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref8.08">Ref8.08</a></li><li><a class="comp" href="../c/StagePromotionController.html"><span class="dot g7" aria-hidden="true"></span>Stage Promotion Controller</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li><li><a class="comp" href="../c/SyntheticContentLabeler.html"><span class="dot g7" aria-hidden="true"></span>Synthetic Content Labeler</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>is produced by <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/ContinuousIntegrationRunner.html"><span class="dot g5" aria-hidden="true"></span>Continuous Integration Runner</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD carry version, release date, build ID and build time as deployment labels (Ref8.08).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example registered metrics: success_rate 0.94, hallucination_rate 0.02, avg_latency 1.8 s (Ch4.4).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Irreproducible historical deployments</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.08">Ref8.08</a>: &quot;Model Updates and Maintenance Procedures,&quot; unpublished reference note (08-Model-Updates-Maintenance-Procedures.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balanced Batching Config · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Balanced Batching Config</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:BalancedBatchingConfig</code></p>
+<div class="split"><section>
+<p class="lead">An inference serving configuration with moderate batch-size ranges, millisecond-scale batching timeouts and multiple instances per GPU, allowing opportunistic batching without pathological latency at low traffic.</p>
+<p><strong>Responsibility.</strong> Balances latency and throughput for mixed workloads.</p>
+<p class="muted">Also known as: Mixed-workload batching configuration</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/InferenceServingConfig.html"><span class="dot g4" aria-hidden="true"></span>Inference Serving Configuration</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for mixed or semi-interactive workloads, such as customer service chatbots where users tolerate 300-500 ms latency and traffic allows some batching.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Balanced Batching Config"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>configures</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="InferenceServingConfig.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Serving Configuration: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Serving Config…</text></a><a href="DynamicBatchScheduler.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Dynamic Batch Scheduler: configures</title></circle><text x="534.1" y="173.9" text-anchor="start">Dynamic Batch Scheduler</text></a><a href="ThroughputOrientedBatchingConfig.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Throughput-Oriented Batching Config: alternative to</title></circle><text x="475.2" y="355.1" text-anchor="start">Throughput-Oriented Batc…</text></a><a href="LatencyOrientedBatchingConfig.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Latency-Oriented Batching Config: alternative to</title></circle><text x="284.8" y="355.1" text-anchor="end">Latency-Oriented Batchin…</text></a><a href="PriorityTieredBatchingConfig.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Inference Queue Policy: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Inference Queue Policy</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DynamicBatchScheduler.html"><span class="dot g4" aria-hidden="true"></span>Dynamic Batch Scheduler</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a> <a class="src" href="../sources.html#Ref7.02">Ref7.02</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/LatencyOrientedBatchingConfig.html"><span class="dot g4" aria-hidden="true"></span>Latency-Oriented Batching Config</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/PriorityTieredBatchingConfig.html"><span class="dot g4" aria-hidden="true"></span>Inference Queue Policy</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/ThroughputOrientedBatchingConfig.html"><span class="dot g4" aria-hidden="true"></span>Throughput-Oriented Batching Config</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Batch size 1-8, 5 ms dynamic batching timeout, 2 inference instances per GPU (Ch4.2).</li><li>10ms max queue delay, preferred sizes [8,16,32], 2 priority levels balances interactive apps requiring &lt;100ms response (Ch7.1A).</li><li>Balanced/mixed-workload recipe: maximum batch 32, 10 ms maximum queue delay, 2 priority levels with REJECT timeout action (Ref7.02).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Dynamic batching</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA Triton Inference Server</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Latency degradation during low traffic</span><span class="chip">Under-utilisation during peaks</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.02">Ref7.02</a>: NVIDIA, &quot;Batchers,&quot; NVIDIA Triton Inference Server User Guide. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/batcher.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

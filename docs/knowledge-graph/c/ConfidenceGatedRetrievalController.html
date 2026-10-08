@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidence-Gated Retrieval Controller · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Confidence-Gated Retrieval Controller</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ConfidenceGatedRetrievalController</code></p>
+<div class="split"><section>
+<p class="lead">An adaptive retrieval controller that first generates a parametric answer with an LLM self-rated confidence and triggers retrieval only when confidence falls below a threshold or an always-retrieve pattern matches.</p>
+<p><strong>Responsibility.</strong> Gates retrieval on the model&#x27;s self-assessed answer confidence.</p>
+<p class="muted">Also known as: Confidence-based retrieval decision</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/AdaptiveRetrievalController.html"><span class="dot g3" aria-hidden="true"></span>Adaptive Retrieval Controller</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when a simple gate suffices and the model&#x27;s self-assessed certainty is reasonably calibrated; combine with pattern rules and periodic audits to catch miscalibration.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Confidence-Gated Retrieval Controller"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>alternative to</title></line><a href="ConfidenceCalibrationAnalyzer.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Confidence Calibration Analyzer: is evaluated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Confidence Calibration A…</text></a><a href="AdaptiveRetrievalController.html"><circle class="g3" cx="530.0" cy="220.0" r="7"><title>Adaptive Retrieval Controller: specializes</title></circle><text x="542.0" y="224.0" text-anchor="start">Adaptive Retrieval Contr…</text></a><a href="ParametricAnswerGenerator.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Parametric Answer Generator: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Parametric Answer Genera…</text></a><a href="QueryTypeRetrievalRouter.html"><circle class="g3" cx="230.0" cy="220.0" r="7"><title>Query-Type Retrieval Router: alternative to</title></circle><text x="218.0" y="224.0" text-anchor="end">Query-Type Retrieval Rou…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ParametricAnswerGenerator.html"><span class="dot g3" aria-hidden="true"></span>Parametric Answer Generator</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ConfidenceCalibrationAnalyzer.html"><span class="dot g6" aria-hidden="true"></span>Confidence Calibration Analyzer</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/QueryTypeRetrievalRouter.html"><span class="dot g3" aria-hidden="true"></span>Query-Type Retrieval Router</a> <a class="src" href="../sources.html#Ch6.6">Ch6.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT trust self-assessed confidence blindly; combine thresholds with pattern-based rules and periodic calibration audits.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Default confidence threshold 0.7 (Ch6.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Verbalized (self-assessed) confidence</span><span class="chip">Confidence threshold gating</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Retrieval when unnecessary (false positives)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.6">Ch6.6</a>: T. Nguyen, &quot;Query Decomposition and Adaptive Retrieval,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

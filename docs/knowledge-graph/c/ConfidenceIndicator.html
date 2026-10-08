@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidence Indicator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Confidence Indicator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ConfidenceIndicator</code></p>
+<div class="split"><section>
+<p class="lead">A presentation component that renders decision confidence as contextualized visual scales (color gradients, gauges, ranges) with comparative context and plain statements of limitations instead of raw scores.</p>
+<p><strong>Responsibility.</strong> Displays contextualized decision confidence to users.</p>
+<p class="muted">Also known as: Confidence display, Confidence metrics visualization, Color-coded confidence scale</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Confidence Indicator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>receives data from</title></line><a href="ExplanationPresenter.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Explanation Presenter: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Explanation Presenter</text></a><a href="DecisionOutcomeHistoryStore.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Decision Outcome History Store: reads</title></circle><text x="520.3" y="305.0" text-anchor="start">Decision Outcome History…</text></a><a href="ConfidenceCalibrator.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Confidence Calibrator: receives data from</title></circle><text x="239.7" y="305.0" text-anchor="end">Confidence Calibrator</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ExplanationPresenter.html"><span class="dot g8" aria-hidden="true"></span>Explanation Presenter</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DecisionOutcomeHistoryStore.html"><span class="dot g2" aria-hidden="true"></span>Decision Outcome History Store</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ConfidenceCalibrator.html"><span class="dot g2" aria-hidden="true"></span>Confidence Calibrator</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT present raw model confidence without context such as typical ranges and data limitations.</li><li>SHOULD explicitly acknowledge limitations and recommend specialist review when confidence is moderate or low.</li><li>SHOULD use the same confidence encoding consistently throughout the interface.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example: &#x27;87% confidence—higher than 73% of cases reviewed this month&#x27; (Ch10.5).</li><li>Example: moderate confidence 67% vs typical nodule-detection range 82–91% triggers specialist-review recommendation (Ch10.5).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Contextualized confidence</span><span class="chip">Comparative percentile context</span><span class="chip">Traffic-light confidence encoding</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Confidence score misinterpretation</span><span class="chip">False confidence</span><span class="chip">Automation bias</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

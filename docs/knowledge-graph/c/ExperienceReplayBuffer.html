@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience Replay Buffer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Experience Replay Buffer</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ExperienceReplayBuffer</code></p>
+<div class="split"><section>
+<p class="lead">A store of past experience transitions (state, action, reward, next state) from which batches are sampled to retrain learned models, mixing old and new experience.</p>
+<p><strong>Responsibility.</strong> Retains past experience transitions for repeated sampling during training.</p>
+<p class="muted">Also known as: Replay buffer, Episodic replay memory, Replay memory</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Experience Replay Buffer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is written by; is read by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is written by</title></line><a href="ReinforcementPolicyLearner.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Reinforcement Learning Policy Learner: is written by; is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Reinforcement Learning P…</text></a><a href="HindsightGoalRelabeler.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Hindsight Goal Relabeler: is read by; is written by</title></circle><text x="534.1" y="173.9" text-anchor="start">Hindsight Goal Relabeler</text></a><a href="LearnedPolicyDecisionEngine.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Learned-Policy Decision Engine: is written by</title></circle><text x="475.2" y="355.1" text-anchor="start">Learned-Policy Decision …</text></a><a href="ContinualLearningTrainer.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Continual Learning Trainer: is read by</title></circle><text x="284.8" y="355.1" text-anchor="end">Continual Learning Trainer</text></a><a href="EventBasedEpisodeEncoder.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Event-Based Episode Encoder: is written by</title></circle><text x="225.9" y="173.9" text-anchor="end">Event-Based Episode Enco…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContinualLearningTrainer.html"><span class="dot g4" aria-hidden="true"></span>Continual Learning Trainer</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li><li><a class="comp" href="../c/HindsightGoalRelabeler.html"><span class="dot g4" aria-hidden="true"></span>Hindsight Goal Relabeler</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li><li><a class="comp" href="../c/ReinforcementPolicyLearner.html"><span class="dot g4" aria-hidden="true"></span>Reinforcement Learning Policy Learner</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EventBasedEpisodeEncoder.html"><span class="dot g2" aria-hidden="true"></span>Event-Based Episode Encoder</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li><li><a class="comp" href="../c/HindsightGoalRelabeler.html"><span class="dot g4" aria-hidden="true"></span>Hindsight Goal Relabeler</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li><li><a class="comp" href="../c/LearnedPolicyDecisionEngine.html"><span class="dot g2" aria-hidden="true"></span>Learned-Policy Decision Engine</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li><li><a class="comp" href="../c/ReinforcementPolicyLearner.html"><span class="dot g4" aria-hidden="true"></span>Reinforcement Learning Policy Learner</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Replay buffer accumulated 1,000 small-object grasp attempts in weeks 1-4 (Ch5.7).</li><li>Holds perhaps one million recent transitions (Ch5.12).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Experience replay</span><span class="chip">Mixed old/new mini-batch sampling</span><span class="chip">Uniform experience replay</span><span class="chip">Prioritized experience replay (by TD error)</span><span class="chip">Hindsight experience replay</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Catastrophic forgetting</span><span class="chip">Overfitting to recent experience patterns</span><span class="chip">Temporally correlated training samples</span><span class="chip">Forgetting earlier learned patterns</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.7">Ch5.7</a>: T. Nguyen, &quot;Episodic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.12">Ch5.12</a>: T. Nguyen, &quot;Learning-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.12. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

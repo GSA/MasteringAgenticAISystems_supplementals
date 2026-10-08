@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parallel Fusion Retriever · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Parallel Fusion Retriever</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ParallelFusionRetriever</code></p>
+<div class="split"><section>
+<p class="lead">A hybrid retriever that queries the vector index and the knowledge graph independently in parallel and merges their results.</p>
+<p><strong>Responsibility.</strong> Queries vector and graph sources in parallel and merges results.</p>
+<p class="muted">Also known as: Parallel querying, Hybrid vector-plus-graph RAG retrieval</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/HybridRetriever.html"><span class="dot g3" aria-hidden="true"></span>Hybrid Retriever</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when you cannot predict whether vector search or the graph will surface the needed information, trading complexity for completeness.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Parallel Fusion Retriever"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is target of alternativeTo</title></line><a href="VectorRetriever.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Retriever: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Retriever</text></a><a href="Reranker.html"><circle class="g3" cx="497.3" cy="126.5" r="7"><title>Reranker: invokes</title></circle><text x="506.7" y="123.0" text-anchor="start">Reranker</text></a><a href="ContextAssembler.html"><circle class="g3" cx="526.2" cy="253.4" r="7"><title>Context Assembler: sends data to</title></circle><text x="537.9" y="260.0" text-anchor="start">Context Assembler</text></a><a href="HybridRetriever.html"><circle class="g3" cx="445.1" cy="355.1" r="7"><title>Hybrid Retriever: specializes</title></circle><text x="450.3" y="370.0" text-anchor="start">Hybrid Retriever</text></a><a href="GraphRetriever.html"><circle class="g3" cx="314.9" cy="355.1" r="7"><title>Graph Retriever: invokes</title></circle><text x="309.7" y="370.0" text-anchor="end">Graph Retriever</text></a><a href="RetrievalAugmentedGraphRetriever.html"><circle class="g3" cx="233.8" cy="253.4" r="7"><title>Retrieval-Augmented Graph Retriever: alternative to</title></circle><text x="222.1" y="260.0" text-anchor="end">Retrieval-Augmented Grap…</text></a><a href="GraphEnhancedRetriever.html"><circle class="g3" cx="262.7" cy="126.5" r="7"><title>Graph-Enhanced Retriever: is target of alternativeTo</title></circle><text x="253.3" y="123.0" text-anchor="end">Graph-Enhanced Retriever</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/GraphRetriever.html"><span class="dot g3" aria-hidden="true"></span>Graph Retriever</a> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li><li><a class="comp" href="../c/Reranker.html"><span class="dot g3" aria-hidden="true"></span>Reranker</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.7B">Ch1.7B</a></li><li><a class="comp" href="../c/VectorRetriever.html"><span class="dot g3" aria-hidden="true"></span>Vector Retriever</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ContextAssembler.html"><span class="dot g3" aria-hidden="true"></span>Context Assembler</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.13">Ch5.13</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/GraphEnhancedRetriever.html"><span class="dot g3" aria-hidden="true"></span>Graph-Enhanced Retriever</a> <a class="src" href="../sources.html#Ch1.7B">Ch1.7B</a></li><li><a class="comp" href="../c/RetrievalAugmentedGraphRetriever.html"><span class="dot g3" aria-hidden="true"></span>Retrieval-Augmented Graph Retriever</a> <a class="src" href="../sources.html#Ch1.7B">Ch1.7B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST deduplicate merged results and rank them by combining semantic scores with graph proximity, presenting one coherent result set.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Parallel retrieval with result fusion</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Coverage gaps where relationship edges do not yet exist</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.7B">Ch1.7B</a>: T. Nguyen, &quot;Relational Reasoning with Knowledge Graphs - Hybrid RAG+KG Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.7B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.13">Ch5.13</a>: T. Nguyen, &quot;Hybrid Decision Systems Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.13. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

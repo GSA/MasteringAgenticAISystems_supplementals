@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accelerator Operator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Accelerator Operator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:AcceleratorOperator</code></p>
+<div class="split"><section>
+<p class="lead">A cluster controller that automates deployment, upgrade and lifecycle of the per-node accelerator software stack (driver, container runtime hooks, device plugin, telemetry exporter, node labeling) as managed operands.</p>
+<p><strong>Responsibility.</strong> Manages the lifecycle of accelerator software on cluster nodes.</p>
+<p class="muted">Also known as: GPU Operator, NVIDIA GPU Operator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Accelerator Operator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>orchestrates</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>orchestrates</title></line><a href="ContainerOrchestrator.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Container Orchestrator: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Container Orchestrator</text></a><a href="GPUTelemetryExporter.html"><circle class="g6" cx="509.9" cy="145.0" r="7"><title>GPU Telemetry Exporter: orchestrates</title></circle><text x="520.3" y="143.0" text-anchor="start">GPU Telemetry Exporter</text></a><a href="GPUPartitionManager.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>GPU Partition Manager: orchestrates</title></circle><text x="520.3" y="305.0" text-anchor="start">GPU Partition Manager</text></a><a href="AcceleratorContainerRuntime.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Accelerator Container Runtime: orchestrates</title></circle><text x="380.0" y="396.0" text-anchor="middle">Accelerator Container Ru…</text></a><a href="AcceleratorDevicePlugin.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>GPU Device Plugin: orchestrates</title></circle><text x="239.7" y="305.0" text-anchor="end">GPU Device Plugin</text></a><a href="NodeCapabilityLabeler.html"><circle class="g5" cx="250.1" cy="145.0" r="7"><title>Node Capability Labeler: orchestrates</title></circle><text x="239.7" y="143.0" text-anchor="end">Node Capability Labeler</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ContainerOrchestrator.html"><span class="dot g5" aria-hidden="true"></span>Container Orchestrator</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li></ul></section>
+<section class="rel"><h3>orchestrates <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AcceleratorContainerRuntime.html"><span class="dot g5" aria-hidden="true"></span>Accelerator Container Runtime</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li><li><a class="comp" href="../c/AcceleratorDevicePlugin.html"><span class="dot g5" aria-hidden="true"></span>GPU Device Plugin</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li><li><a class="comp" href="../c/GPUPartitionManager.html"><span class="dot g5" aria-hidden="true"></span>GPU Partition Manager</a> <a class="src" href="../sources.html#Ch7.6">Ch7.6</a></li><li><a class="comp" href="../c/GPUTelemetryExporter.html"><span class="dot g6" aria-hidden="true"></span>GPU Telemetry Exporter</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li><li><a class="comp" href="../c/NodeCapabilityLabeler.html"><span class="dot g5" aria-hidden="true"></span>Node Capability Labeler</a> <a class="src" href="../sources.html#Ref4.07">Ref4.07</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be installed before deploying GPU workloads and validated with a sample GPU pod.</li><li>SHOULD run with RBAC and restricted privileges, with drivers regularly updated for security patches.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Kubernetes operator pattern</span><span class="chip">DaemonSet node agents</span><span class="chip">Containerized driver deployment</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA GPU Operator</span><span class="chip">Helm</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Manual per-node driver installation drift</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.6">Ch7.6</a>: T. Nguyen, &quot;Multi-Instance GPU,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref4.07">Ref4.07</a>: NVIDIA, &quot;About the NVIDIA GPU Operator,&quot; NVIDIA GPU Operator Documentation. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

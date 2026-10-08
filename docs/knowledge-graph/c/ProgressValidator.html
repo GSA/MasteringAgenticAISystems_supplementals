@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress Validator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Progress Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:ProgressValidator</code></p>
+<div class="split"><section>
+<p class="lead">A cognition component that checks each iteration&#x27;s tool results against success criteria to decide whether the workflow advanced or strategy must change.</p>
+<p><strong>Responsibility.</strong> Judges whether each iteration made progress toward the goal.</p>
+<p class="muted">Also known as: Progress check, Success validation gate</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Progress Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is invoked by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ToolExecutor.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Tool Executor: evaluates</title></circle><text x="542.0" y="224.0" text-anchor="start">Tool Executor</text></a><a href="SequentialToolDispatcher.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Sequential Tool Dispatcher: is invoked by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Sequential Tool Dispatcher</text></a><a href="PromptChainOrchestrator.html"><circle class="g1" cx="230.0" cy="220.0" r="7"><title>Prompt Chain Orchestrator: is invoked by</title></circle><text x="218.0" y="224.0" text-anchor="end">Prompt Chain Orchestrator</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch1.6">Ch1.6</a></li><li><a class="comp" href="../c/PromptChainOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Prompt Chain Orchestrator</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a></li><li><a class="comp" href="../c/SequentialToolDispatcher.html"><span class="dot g1" aria-hidden="true"></span>Sequential Tool Dispatcher</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ToolExecutor.html"><span class="dot g1" aria-hidden="true"></span>Tool Executor</a> <a class="src" href="../sources.html#Ch1.6">Ch1.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT allow the same failing tool call to be retried with identical inputs.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Progress validation</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Deterministic retry loops on failing tools</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.6">Ch1.6</a>: T. Nguyen, &quot;Stateful Orchestration - Pitfalls, Integration, and Synthesis,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.6">Ch2.6</a>: T. Nguyen, &quot;Tool Integration and Function Calling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.6. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

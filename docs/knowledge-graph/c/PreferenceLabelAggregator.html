@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preference Label Aggregator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Preference Label Aggregator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:PreferenceLabelAggregator</code></p>
+<div class="split"><section>
+<p class="lead">A data component that combines redundant annotators&#x27; judgments on the same comparison into a preference label annotated with the observed agreement distribution.</p>
+<p><strong>Responsibility.</strong> Produces preference labels that preserve disagreement metadata rather than forcing consensus.</p>
+<p class="muted">Also known as: Disagreement-aware label aggregator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Preference Label Aggregator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><a href="PreferenceAnnotationConsole.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Preference Annotation Console: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Preference Annotation Co…</text></a><a href="PreferenceAgreementFilter.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Preference Agreement Filter: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Preference Agreement Fil…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/PreferenceAnnotationConsole.html"><span class="dot g8" aria-hidden="true"></span>Preference Annotation Console</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/PreferenceAgreementFilter.html"><span class="dot g4" aria-hidden="true"></span>Preference Agreement Filter</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD record the vote split (e.g., 60% A / 40% B) so reward models can represent multimodal preferences.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episode Encoder · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Episode Encoder</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:EpisodeEncoder</code></p>
+<div class="split"><section>
+<p class="lead">An abstract memory component that decides which experiences from an interaction become episodic memories and converts them into structured episode records.</p>
+<p><strong>Responsibility.</strong> Converts selected interaction experiences into structured episode records for long-term storage.</p>
+<p class="muted">Also known as: Encoding strategy, Episode capture</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Episode Encoder"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>writes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is configured by</title></line><a href="WorkingMemoryBuffer.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Working Memory Buffer: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Working Memory Buffer</text></a><a href="EpisodicMemoryStore.html"><circle class="g2" cx="522.7" cy="173.6" r="7"><title>Episodic Memory Store: writes</title></circle><text x="534.1" y="173.9" text-anchor="start">Episodic Memory Store</text></a><a href="EventBasedEpisodeEncoder.html"><circle class="g2" cx="468.2" cy="341.4" r="7"><title>Event-Based Episode Encoder: is specialized by</title></circle><text x="475.2" y="355.1" text-anchor="start">Event-Based Episode Enco…</text></a><a href="SignificanceBasedEpisodeEncoder.html"><circle class="g2" cx="291.8" cy="341.4" r="7"><title>Significance-Based Episode Encoder: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Significance-Based Episo…</text></a><a href="EpisodeSchema.html"><circle class="g2" cx="237.3" cy="173.6" r="7"><title>Episode Schema: is configured by</title></circle><text x="225.9" y="173.9" text-anchor="end">Episode Schema</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/EventBasedEpisodeEncoder.html"><span class="dot g2" aria-hidden="true"></span>Event-Based Episode Encoder</a></td><td>Choose when every action might be significant later (e.g., debugging complex technical problems where the solution hinges on minor details); avoid for routine standard-pattern interactions where storage overhead outweighs retrieval value.</td></tr><tr><td><a class="comp" href="../c/SignificanceBasedEpisodeEncoder.html"><span class="dot g2" aria-hidden="true"></span>Significance-Based Episode Encoder</a></td><td>Choose when most interactions follow standard patterns and storage must be reduced while preserving the most informative experiences (failures, unusual outcomes, high-impact states).</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EpisodeSchema.html"><span class="dot g2" aria-hidden="true"></span>Episode Schema</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/WorkingMemoryBuffer.html"><span class="dot g2" aria-hidden="true"></span>Working Memory Buffer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EpisodicMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Episodic Memory Store</a> <a class="src" href="../sources.html#Ch5.7">Ch5.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD encode context metadata (timestamp, segment, channel, handling agent) so later retrieval can match circumstances, not just content.</li><li>SHOULD store debugging or multi-turn sessions as trajectories with problem category, resolution success, total time, attempts and outcome.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Richer encoding enables retrieval by similar context (segment, time of day, initial diagnostic hunches) (Ch5.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Episode anatomy encoding</span><span class="chip">Trajectory encoding</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Retrieval drowning in noise from indiscriminate recording</span><span class="chip">Unbounded storage growth</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.7">Ch5.7</a>: T. Nguyen, &quot;Episodic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

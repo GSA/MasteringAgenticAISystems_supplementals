@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intervention Threshold Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Data artifact</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Intervention Threshold Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:InterventionThresholdPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A calibrated configuration of confidence and deviation thresholds separating actionable interventions requiring immediate response from informational notices and from signals that should not interrupt the user at all.</p>
+<p><strong>Responsibility.</strong> Defines when a signal is significant enough to warrant proactive intervention.</p>
+<p class="muted">Also known as: Alert threshold calibration, Proactivity threshold</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Intervention Threshold Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><a href="InterventionValueEstimator.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Intervention Value Estimator: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Intervention Value Estim…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/InterventionValueEstimator.html"><span class="dot g8" aria-hidden="true"></span>Intervention Value Estimator</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD distinguish actionable alerts from informational notices.</li><li>SHOULD NOT alert on minor deviations (e.g., every 1% variance from baseline); low thresholds train users to dismiss alerts reflexively.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Risks mitigated</dt><dd><span class="chip">Alert fatigue from overly sensitive thresholds</span><span class="chip">Missed genuine issues from overly high thresholds</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adaptive Sample Allocator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Adaptive Sample Allocator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:AdaptiveSampleAllocator</code></p>
+<div class="split"><section>
+<p class="lead">A cognition component that sets the number of reasoning samples per query from estimated difficulty and early vote agreement, stopping after a few unanimous samples or requesting more when votes diverge.</p>
+<p><strong>Responsibility.</strong> Allocates the sampling budget per query according to difficulty.</p>
+<p class="muted">Also known as: Difficulty-Adaptive Self-Consistency controller, Early-stopping sampler controller</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Adaptive Sample Allocator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>triggers</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>reads</title></line><a href="ProceduralMemoryStore.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Procedural Memory Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Procedural Memory Store</text></a><a href="QueryComplexityClassifier.html"><circle class="g4" cx="509.9" cy="145.0" r="7"><title>Query Complexity Classifier: invokes</title></circle><text x="520.3" y="143.0" text-anchor="start">Query Complexity Classif…</text></a><a href="ReasoningPathSampler.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Reasoning Path Sampler: triggers</title></circle><text x="520.3" y="305.0" text-anchor="start">Reasoning Path Sampler</text></a><a href="SelfConsistencyAggregator.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Self-Consistency Aggregator: receives data from</title></circle><text x="380.0" y="396.0" text-anchor="middle">Self-Consistency Aggrega…</text></a><a href="ReasoningPathQualityClassifier.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Reasoning Path Quality Classifier: receives data from</title></circle><text x="239.7" y="305.0" text-anchor="end">Reasoning Path Quality C…</text></a><a href="SelfConsistencySamplingPolicy.html"><circle class="g2" cx="250.1" cy="145.0" r="7"><title>Self-Consistency Sampling Policy: reads</title></circle><text x="239.7" y="143.0" text-anchor="end">Self-Consistency Samplin…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/QueryComplexityClassifier.html"><span class="dot g4" aria-hidden="true"></span>Query Complexity Classifier</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ProceduralMemoryStore.html"><span class="dot g2" aria-hidden="true"></span>Procedural Memory Store</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li><li><a class="comp" href="../c/SelfConsistencySamplingPolicy.html"><span class="dot g2" aria-hidden="true"></span>Self-Consistency Sampling Policy</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReasoningPathQualityClassifier.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Path Quality Classifier</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li><li><a class="comp" href="../c/SelfConsistencyAggregator.html"><span class="dot g2" aria-hidden="true"></span>Self-Consistency Aggregator</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+<section class="rel"><h3>triggers <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReasoningPathSampler.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Path Sampler</a> <a class="src" href="../sources.html#Ch5.3">Ch5.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD classify a query as easy after an initial small sample set (e.g., k=3) agrees unanimously with high quality, and escalate to more samples when votes scatter or quality is low.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>On GSM8K, ~40% easy problems use k=3; average k drops from 40 to 15, cutting cost 63% within 1-2 points of full accuracy (Ch5.3).</li><li>Tutoring deployment averaged k=6.5, 40% below uniform k=10 cost; medical coding averaged k=8.7 vs uniform k=10, 13% saving (Ch5.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Difficulty-Adaptive Self-Consistency</span><span class="chip">Early-agreement stopping</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Wasted samples on easy queries</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.3">Ch5.3</a>: T. Nguyen, &quot;Self-Consistency Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

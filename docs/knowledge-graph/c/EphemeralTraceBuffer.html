@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ephemeral Trace Buffer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data store</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Ephemeral Trace Buffer</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:EphemeralTraceBuffer</code></p>
+<div class="split"><section>
+<p class="lead">A short-term store retaining all reasoning traces for a brief window so recent anomalies can be analysed without long-term storage cost.</p>
+<p><strong>Responsibility.</strong> Retains all recent traces for short-term anomaly analysis.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Ephemeral Trace Buffer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by</title></line><a href="TraceCollector.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Trace Collector: is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Trace Collector</text></a><a href="EvaluationTraceSampler.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Evaluation Trace Sampler: is read by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Evaluation Trace Sampler</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationTraceSampler.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Trace Sampler</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch3.9">Ch3.9</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Retention window 24-48 hours (Ch3.9).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.9">Ch3.9</a>: T. Nguyen, &quot;Reasoning Quality,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.9. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

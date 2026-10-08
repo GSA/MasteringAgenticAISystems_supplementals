@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fused Block-wise Attention Kernel · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Fused Block-wise Attention Kernel</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:FusedBlockwiseAttentionKernel</code></p>
+<div class="split"><section>
+<p class="lead">An exact attention kernel that computes attention in fused blocks without materializing the score matrix, cutting memory traffic while producing identical results.</p>
+<p><strong>Responsibility.</strong> Computes exact attention block-wise with reduced memory traffic.</p>
+<p class="muted">Also known as: Flash Attention, Memory-efficient attention, Fused multi-head attention (context FMHA), FlashAttention</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/AttentionKernel.html"><span class="dot g4" aria-hidden="true"></span>Attention Kernel</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose by default for any transformer deployment, especially long contexts on memory-bandwidth-limited GPUs; benchmark against standard attention for very short sequences.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Fused Block-wise Attention Kernel"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="AttentionKernel.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Attention Kernel: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Attention Kernel</text></a><a href="KVCacheStore.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>KV Cache Store: reads</title></circle><text x="475.2" y="355.1" text-anchor="start">KV Cache Store</text></a><a href="EngineBuildConfig.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Engine Build Configuration: is configured by</title></circle><text x="284.8" y="355.1" text-anchor="end">Engine Build Configuration</text></a><a href="StandardAttentionKernel.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Standard Attention Kernel: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Standard Attention Kernel</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EngineBuildConfig.html"><span class="dot g4" aria-hidden="true"></span>Engine Build Configuration</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/KVCacheStore.html"><span class="dot g4" aria-hidden="true"></span>KV Cache Store</a> <a class="src" href="../sources.html#Ch7.4">Ch7.4</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/StandardAttentionKernel.html"><span class="dot g4" aria-hidden="true"></span>Standard Attention Kernel</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be enabled first for long-context workloads since it has no accuracy trade-off and needs no code changes.</li><li>MUST support block-indirected KV-cache layout when combined with paged allocation.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Reduces attention memory by 40-60% (Ch4.4).</li><li>Speedup ~1.8x at 2,048 tokens, 2.4x at 8,192, 3.2x at 32,768 (Ch4.4).</li><li>Legal-contract example: 2.4 -&gt; 5.2 req/s (2.17x), zero accuracy impact (Ch4.4).</li><li>10-20% additional speedup on top of paged KV cache (Ch7.4); 2-4x memory-bandwidth reduction (Ref7.05).</li><li>Attention optimization saves 10-20% memory (Ref8.05).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">TensorRT-LLM GPT Attention Plugin</span><span class="chip">FlashAttention</span><span class="chip">TensorRT-LLM</span><span class="chip">vLLM</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.4">Ch7.4</a>: T. Nguyen, &quot;TensorRT-LLM Fundamentals and Quantization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.05">Ref7.05</a>: S. Verma and N. Vaidya, &quot;Mastering LLM Techniques: Inference Optimization,&quot; NVIDIA Technical Blog, Nov. 17, 2023. [Online]. Available: https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/</li><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

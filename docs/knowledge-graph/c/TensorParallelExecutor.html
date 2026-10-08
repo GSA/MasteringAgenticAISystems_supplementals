@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tensor Parallel Executor · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Tensor Parallel Executor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:TensorParallelExecutor</code></p>
+<div class="split"><section>
+<p class="lead">A distributed executor that shards each layer&#x27;s weight matrices across GPUs, computes partial results in parallel and combines them with all-reduce after every attention and feed-forward block.</p>
+<p><strong>Responsibility.</strong> Fits and accelerates a large model by splitting each layer across GPUs.</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DistributedModelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Distributed Model Executor</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for memory-constrained models (30-40B+) and latency-sensitive inference, confined to a single-node high-bandwidth GPU interconnect domain.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Tensor Parallel Executor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is target of alternativeTo</title></line><a href="FoundationLLM.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Foundation LLM: hosts</title></circle><text x="380.0" y="50.0" text-anchor="middle">Foundation LLM</text></a><a href="OptimizedInferenceEngine.html"><circle class="g4" cx="497.3" cy="126.5" r="7"><title>Optimized Inference Engine: hosts</title></circle><text x="506.7" y="123.0" text-anchor="start">Optimized Inference Engine</text></a><a href="DistributedModelExecutor.html"><circle class="g5" cx="526.2" cy="253.4" r="7"><title>Distributed Model Executor: specializes</title></circle><text x="537.9" y="260.0" text-anchor="start">Distributed Model Executor</text></a><a href="EngineBuildConfig.html"><circle class="g4" cx="445.1" cy="355.1" r="7"><title>Engine Build Configuration: is configured by</title></circle><text x="450.3" y="370.0" text-anchor="start">Engine Build Configuration</text></a><a href="GPUInterconnect.html"><circle class="g5" cx="314.9" cy="355.1" r="7"><title>GPU Interconnect: deployed on</title></circle><text x="309.7" y="370.0" text-anchor="end">GPU Interconnect</text></a><a href="DataParallelExecutor.html"><circle class="g5" cx="233.8" cy="253.4" r="7"><title>Data Parallel Executor: is target of alternativeTo</title></circle><text x="222.1" y="260.0" text-anchor="end">Data Parallel Executor</text></a><a href="PipelineParallelExecutor.html"><circle class="g5" cx="262.7" cy="126.5" r="7"><title>Pipeline Parallel Executor: is target of alternativeTo</title></circle><text x="253.3" y="123.0" text-anchor="end">Pipeline Parallel Executor</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUInterconnect.html"><span class="dot g5" aria-hidden="true"></span>GPU Interconnect</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/FoundationLLM.html"><span class="dot g4" aria-hidden="true"></span>Foundation LLM</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/OptimizedInferenceEngine.html"><span class="dot g4" aria-hidden="true"></span>Optimized Inference Engine</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/EngineBuildConfig.html"><span class="dot g4" aria-hidden="true"></span>Engine Build Configuration</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/DataParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Data Parallel Executor</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/PipelineParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Pipeline Parallel Executor</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be confined to a single-node NVLink domain, with pipeline parallelism used across nodes.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>70B split 4 ways achieves 3.4-3.7x speedup (85-92% efficiency) on NVLink; cross-node InfiniBand reduces efficiency to 65-80% (Ch7.1A).</li><li>~160 all-reduces per forward pass for 80 layers; per-token latency grows only 5-10% (Ch7.1A).</li><li>Llama 70B TP=2 on H100: 142 tokens/s/GPU at batch 32 with NVSwitch vs 112 without and 68 with PCIe (Ch7.1A).</li><li>Sharing 8 GPUs via TP with time-slicing raises utilization from 60-70% to 85-90% (Ch7.1A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Tensor parallelism</span><span class="chip">Horizontal layer sharding</span><span class="chip">Time-sliced multi-model sharing across GPUs</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

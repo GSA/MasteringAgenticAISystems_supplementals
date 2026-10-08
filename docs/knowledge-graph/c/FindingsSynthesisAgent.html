@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Findings Synthesis Agent · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Findings Synthesis Agent</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:FindingsSynthesisAgent</code></p>
+<div class="split"><section>
+<p class="lead">An agent that receives the reports of several specialist agents after they complete and integrates their possibly contradictory findings into consolidated conclusions and recommendations.</p>
+<p><strong>Responsibility.</strong> Integrates specialist agents&#x27; findings into one consolidated result.</p>
+<p class="muted">Also known as: Integration agent, Synthesis agent</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Findings Synthesis Agent"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>receives delegation from</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>sends data to</title></line><a href="WorkerAgent.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Worker Agent: receives data from</title></circle><text x="380.0" y="50.0" text-anchor="middle">Worker Agent</text></a><a href="ReasoningEngine.html"><circle class="g2" cx="530.0" cy="220.0" r="7"><title>Reasoning Engine: invokes</title></circle><text x="542.0" y="224.0" text-anchor="start">Reasoning Engine</text></a><a href="SupervisorAgent.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Supervisor Agent: receives delegation from</title></circle><text x="380.0" y="396.0" text-anchor="middle">Supervisor Agent</text></a><a href="MemoryConsolidator.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Memory Consolidator: sends data to</title></circle><text x="218.0" y="224.0" text-anchor="end">Memory Consolidator</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ReasoningEngine.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Engine</a> <a class="src" href="../sources.html#Ch5.1">Ch5.1</a></li></ul></section>
+<section class="rel"><h3>receives delegation from <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/SupervisorAgent.html"><span class="dot g1" aria-hidden="true"></span>Supervisor Agent</a> <a class="src" href="../sources.html#Ch5.1">Ch5.1</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/WorkerAgent.html"><span class="dot g1" aria-hidden="true"></span>Worker Agent</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch5.1">Ch5.1</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/MemoryConsolidator.html"><span class="dot g2" aria-hidden="true"></span>Memory Consolidator</a> <a class="src" href="../sources.html#Ch5.1">Ch5.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD start only after all prerequisite specialist subtasks have delivered their outputs.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Graph of Thoughts (aggregation, refinement, generation transformations)</span><span class="chip">Layered CoT</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Disconnected agents producing incompatible outputs</span><span class="chip">Premature commitment to a single hypothesis</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.1">Ch5.1</a>: T. Nguyen, &quot;Chain-of-Thought (CoT) Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

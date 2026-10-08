@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Depth-First Thought Search Controller · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#CognitionComponent">Cognition</a> · Software component</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Depth-First Thought Search Controller</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Cognition</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:DepthFirstThoughtSearchController</code></p>
+<div class="split"><section>
+<p class="lead">A tree search controller that recursively explores the best-scored child first, backtracking to the next-best sibling when a branch falls below a value threshold or dead-ends.</p>
+<p><strong>Responsibility.</strong> Pursues the most promising branch to completion with threshold-based backtracking.</p>
+<p class="muted">Also known as: DFS, Greedy search with backtracking</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/TreeSearchController.html"><span class="dot g2" aria-hidden="true"></span>Tree Search Controller</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when trees are deep (5+ steps), evaluation is reliable enough to trust greedy choices, or any solution suffices.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Depth-First Thought Search Controller"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><a href="TreeSearchController.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Tree Search Controller: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Tree Search Controller</text></a><a href="BreadthFirstThoughtSearchController.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Breadth-First Thought Search Controller: is target of alternativeTo</title></circle><text x="520.3" y="305.0" text-anchor="start">Breadth-First Thought Se…</text></a><a href="HybridBreadthDepthThoughtSearchController.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>Hybrid Breadth-then-Depth Thought Search Controller: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Hybrid Breadth-then-Dept…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/BreadthFirstThoughtSearchController.html"><span class="dot g2" aria-hidden="true"></span>Breadth-First Thought Search Controller</a> <a class="src" href="../sources.html#Ch5.2">Ch5.2</a></li><li><a class="comp" href="../c/HybridBreadthDepthThoughtSearchController.html"><span class="dot g2" aria-hidden="true"></span>Hybrid Breadth-then-Depth Thought Search Controller</a> <a class="src" href="../sources.html#Ch5.2">Ch5.2</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Memory O(depth), storing only the current path plus unexplored siblings (Ch5.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Depth-first search</span><span class="chip">Threshold pruning</span><span class="chip">Greedy optimization with backtracking</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Breadth explosion in deep trees</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.2">Ch5.2</a>: T. Nguyen, &quot;Tree-of-Thought (ToT) Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

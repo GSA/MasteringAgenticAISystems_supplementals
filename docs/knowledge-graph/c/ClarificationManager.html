@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clarification Manager · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#OrchestrationComponent">Orchestration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Clarification Manager</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Orchestration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:ClarificationManager</code></p>
+<div class="split"><section>
+<p class="lead">A dialogue-control component that, when intent inference is ambiguous or low-confidence, asks progressively more structured follow-up questions to resolve the user&#x27;s intent.</p>
+<p><strong>Responsibility.</strong> Resolves ambiguous user intent through staged clarification turns.</p>
+<p class="muted">Also known as: Progressive clarification, Disambiguation dialog</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Clarification Manager"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is configured by</title></line><a href="ConversationStateStore.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Conversation State Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Conversation State Store</text></a><a href="ConversationalInterface.html"><circle class="g8" cx="509.9" cy="145.0" r="7"><title>Conversational (Chat) Interface: sends data to</title></circle><text x="520.3" y="143.0" text-anchor="start">Conversational (Chat) In…</text></a><a href="IntentRouter.html"><circle class="g1" cx="509.9" cy="295.0" r="7"><title>Intent Router: is routed to by</title></circle><text x="520.3" y="305.0" text-anchor="start">Intent Router</text></a><a href="EscalationAgent.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Escalation Agent: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Escalation Agent</text></a><a href="IntentFailureLog.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Intent Failure Log: writes</title></circle><text x="239.7" y="305.0" text-anchor="end">Intent Failure Log</text></a><a href="ClarificationFallbackPolicy.html"><circle class="g1" cx="250.1" cy="145.0" r="7"><title>Clarification Fallback Policy: is configured by</title></circle><text x="239.7" y="143.0" text-anchor="end">Clarification Fallback P…</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ClarificationFallbackPolicy.html"><span class="dot g1" aria-hidden="true"></span>Clarification Fallback Policy</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ConversationStateStore.html"><span class="dot g2" aria-hidden="true"></span>Conversation State Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/IntentFailureLog.html"><span class="dot g4" aria-hidden="true"></span>Intent Failure Log</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/IntentRouter.html"><span class="dot g1" aria-hidden="true"></span>Intent Router</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ConversationalInterface.html"><span class="dot g8" aria-hidden="true"></span>Conversational (Chat) Interface</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li><li><a class="comp" href="../c/EscalationAgent.html"><span class="dot g8" aria-hidden="true"></span>Escalation Agent</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD acknowledge uncertainty transparently and offer specific options when multiple intents have similar confidence.</li><li>SHOULD escalate from open-ended rephrasing to targeted multiple-choice options to guided examples only as ambiguity persists.</li><li>SHOULD log failed intent inferences with eventual clarifications as training data.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Erica&#x27;s targeted clarification resolves ambiguity within a single follow-up turn (Ch10.1).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Progressive clarification</span><span class="chip">Multi-stage fallback hierarchy</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Generic &#x27;I don&#x27;t know&#x27; responses that abandon users</span><span class="chip">Misrouted intents</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sensor Input Adapter · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ExperienceComponent">Experience</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Sensor Input Adapter</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Experience</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:SensorInputAdapter</code></p>
+<div class="split"><section>
+<p class="lead">An acquisition component that captures raw input from a modality-specific source (camera, microphone, LiDAR, sensors, APIs, logs, email) at its native rate and format.</p>
+<p><strong>Responsibility.</strong> Acquires raw data from one input channel.</p>
+<p class="muted">Also known as: Sensor acquisition, GPS receiver, Wheel encoder, LIDAR, Vision sensor, Microphone capture, Smartphone camera capture</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Sensor Input Adapter"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>sends data to</title></line><a href="EndUser.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>End User: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">End User</text></a><a href="VoiceTurnCoordinator.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Voice Turn Coordinator: sends data to</title></circle><text x="542.0" y="224.0" text-anchor="start">Voice Turn Coordinator</text></a><a href="ReflexiveSafetyController.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Reflexive Safety Controller: sends data to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Reflexive Safety Control…</text></a><a href="SignalPreprocessor.html"><circle class="g2" cx="230.0" cy="220.0" r="7"><title>Signal Preprocessor: sends data to</title></circle><text x="218.0" y="224.0" text-anchor="end">Signal Preprocessor</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EndUser.html"><span class="dot g8" aria-hidden="true"></span>End User</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ReflexiveSafetyController.html"><span class="dot g7" aria-hidden="true"></span>Reflexive Safety Controller</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/SignalPreprocessor.html"><span class="dot g2" aria-hidden="true"></span>Signal Preprocessor</a> <a class="src" href="../sources.html#Ch1.4">Ch1.4</a> <a class="src" href="../sources.html#Ch5.6">Ch5.6</a></li><li><a class="comp" href="../c/VoiceTurnCoordinator.html"><span class="dot g1" aria-hidden="true"></span>Voice Turn Coordinator</a> <a class="src" href="../sources.html#Ch7.5">Ch7.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST attach accurate timestamps to every sample to preserve timestamp integrity.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.4">Ch1.4</a>: T. Nguyen, &quot;Memory and Perception Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.6">Ch5.6</a>: T. Nguyen, &quot;A* Search and Replaning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.5">Ch7.5</a>: T. Nguyen, &quot;NeMo Curator, Riva Speech AI &amp; Multimodal Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

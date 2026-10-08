@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule Learner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Rule Learner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:RuleLearner</code></p>
+<div class="split"><section>
+<p class="lead">An abstract adaptation component that proposes new or refined if-then rules from labelled decision cases while preserving interpretable rule structure.</p>
+<p><strong>Responsibility.</strong> Generates candidate rule additions or refinements from experience.</p>
+<p class="muted">Also known as: Rule learning component</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Rule Learner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>writes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>reads</title></line><a href="ProductionRuleBase.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Production Rule Base: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Production Rule Base</text></a><a href="CandidateRuleQueue.html"><circle class="g7" cx="522.7" cy="173.6" r="7"><title>Candidate Rule Queue: writes</title></circle><text x="534.1" y="173.9" text-anchor="start">Candidate Rule Queue</text></a><a href="CaseBasedRuleRefiner.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Case-Based Rule Refiner: is specialized by</title></circle><text x="475.2" y="355.1" text-anchor="start">Case-Based Rule Refiner</text></a><a href="InductiveRuleLearner.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Inductive Rule Learner: is specialized by</title></circle><text x="284.8" y="355.1" text-anchor="end">Inductive Rule Learner</text></a><a href="RejectedRuleLog.html"><circle class="g7" cx="237.3" cy="173.6" r="7"><title>Rejected Rule Log: reads</title></circle><text x="225.9" y="173.9" text-anchor="end">Rejected Rule Log</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/CaseBasedRuleRefiner.html"><span class="dot g4" aria-hidden="true"></span>Case-Based Rule Refiner</a></td><td>Choose when an expert-provided initial rule set exists and should be refined from accumulated cases where its decisions proved wrong.</td></tr><tr><td><a class="comp" href="../c/InductiveRuleLearner.html"><span class="dot g4" aria-hidden="true"></span>Inductive Rule Learner</a></td><td>Choose when rules must be induced from historical labelled examples (e.g., past approved/denied applications) rather than from an existing expert rule set.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ProductionRuleBase.html"><span class="dot g3" aria-hidden="true"></span>Production Rule Base</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li><li><a class="comp" href="../c/RejectedRuleLog.html"><span class="dot g7" aria-hidden="true"></span>Rejected Rule Log</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/CandidateRuleQueue.html"><span class="dot g7" aria-hidden="true"></span>Candidate Rule Queue</a> <a class="src" href="../sources.html#Ch5.11">Ch5.11</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST emit candidates in interpretable if-then form so experts can validate them.</li><li>SHOULD balance generalisation against overfitting, checking candidates on held-out examples.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Rule learning</span><span class="chip">Incremental knowledge-base augmentation</span></dd><dt>Quality attributes</dt><dd><span class="chip">Flexibility (ISO/IEC 25010)</span><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Static rule base obsolescence</span><span class="chip">Repeated proposal of rejected rule patterns</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.11">Ch5.11</a>: T. Nguyen, &quot;Rule-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.11. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

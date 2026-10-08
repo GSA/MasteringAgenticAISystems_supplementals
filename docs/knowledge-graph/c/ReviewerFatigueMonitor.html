@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviewer Fatigue Monitor · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Software component</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Reviewer Fatigue Monitor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ReviewerFatigueMonitor</code></p>
+<div class="split"><section>
+<p class="lead">A monitoring component that tracks human reviewer session duration and rising override rates on straightforward cases, suggesting breaks or role transitions before fatigue-induced errors occur.</p>
+<p><strong>Responsibility.</strong> Detects human reviewer performance degradation.</p>
+<p class="muted">Also known as: Mutual performance monitoring (AI-to-human), Human fatigue detector</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Reviewer Fatigue Monitor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>monitors; sends data to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>receives telemetry from</title></line><a href="HumanApprover.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Human Approver: monitors; sends data to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Human Approver</text></a><a href="ApprovalReviewConsole.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Approval Review Console: receives telemetry from</title></circle><text x="380.0" y="396.0" text-anchor="middle">Approval Review Console</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>receives telemetry from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ApprovalReviewConsole.html"><span class="dot g8" aria-hidden="true"></span>Approval Review Console</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/HumanApprover.html"><span class="dot g8" aria-hidden="true"></span>Human Approver</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Diagnostic accuracy declines 23% after extended sessions; example trigger after six consecutive hours of review (Ch10.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Mutual performance monitoring</span></dd><dt>Quality attributes</dt><dd><span class="chip">Safety (ISO/IEC 25010 | NIST AI RMF: safe)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Fatigue-induced human review errors</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

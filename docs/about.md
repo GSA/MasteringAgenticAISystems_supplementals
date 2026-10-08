@@ -13,7 +13,7 @@ As a work of the United States government, this project is in the public domain 
 waive copyright and related rights worldwide under the
 [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/), and all contributions,
 prose, code, and otherwise, are released under it. Third-party video links are references and are not covered, nor are
-the two vendored libraries in the [Reference Architecture]({{ site.baseurl }}/architecture/) graph explorer (MIT-licensed;
+the two vendored libraries in the [Knowledge Graph]({{ site.baseurl }}/architecture/) graph explorer (MIT-licensed;
 see that page for details). See [`LICENSE.md`]({{ site.repo_blob }}/LICENSE.md).
 
 ## Cite this work

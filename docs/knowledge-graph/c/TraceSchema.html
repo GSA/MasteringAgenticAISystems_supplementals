@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace Schema · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Data artifact</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Trace Schema</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:TraceSchema</code></p>
+<div class="split"><section>
+<p class="lead">A structured contract defining hierarchical spans (start/end time, metadata, parent-child links, trace IDs) and the per-span fields agent traces must carry, aligned with OpenTelemetry semantic conventions.</p>
+<p><strong>Responsibility.</strong> Defines the span structure and attributes every agent trace event must conform to.</p>
+<p class="muted">Also known as: Span model, Trace data model, OpenTelemetry semantic conventions, Span hierarchy, Run hierarchy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Trace Schema"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>configures</title></line><a href="TraceStore.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Trace Store: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Trace Store</text></a><a href="TraceCollector.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Trace Collector: configures</title></circle><text x="542.0" y="224.0" text-anchor="start">Trace Collector</text></a><a href="TraceExporter.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Trace Exporter: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Trace Exporter</text></a><a href="TraceContextPropagator.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Trace Context Propagator: configures</title></circle><text x="218.0" y="224.0" text-anchor="end">Trace Context Propagator</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/TraceCollector.html"><span class="dot g6" aria-hidden="true"></span>Trace Collector</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a> <a class="src" href="../sources.html#Ch8.1">Ch8.1</a> <span class="src more" title="Ref8.01">+1</span></li><li><a class="comp" href="../c/TraceContextPropagator.html"><span class="dot g6" aria-hidden="true"></span>Trace Context Propagator</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li><li><a class="comp" href="../c/TraceExporter.html"><span class="dot g6" aria-hidden="true"></span>Trace Exporter</a> <a class="src" href="../sources.html#Ch8.2A">Ch8.2A</a></li><li><a class="comp" href="../c/TraceStore.html"><span class="dot g6" aria-hidden="true"></span>Trace Store</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD follow OpenTelemetry semantic conventions so agent traces integrate with existing enterprise observability backends.</li><li>MUST record temporal data, token consumption, tool name/parameters/raw outputs/errors, state before and after each operation, and concurrency overlap per span.</li><li>SHOULD record agent reasoning (thoughts) as trace events, not only external function calls.</li><li>SHOULD log raw tool outputs alongside the agent&#x27;s subsequent reasoning to enable cross-reference validation.</li><li>SHOULD mirror the execution flow as a parent-child span hierarchy in which child spans inherit the parent context.</li><li>SHOULD nest runs as conversation &gt; agent decision &gt; LLM call / tool invocation &gt; final response, recording inputs/outputs, duration, tokens, cost, errors and metadata (Ref8.01).</li><li>SHOULD record static properties as span attributes and dynamic occurrences (agent failures, version conflicts, slow dependencies) as timestamped span events.</li><li>SHOULD record the shared-state version read and written in state-access spans to expose race conditions.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>A single agent execution may generate 50+ spans across workflow, agent and tool layers; complex production workflows may generate hundreds (Ch3.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Hierarchical span structure</span><span class="chip">Thought-Action-Observation trace events</span><span class="chip">Workflow/agent/tool instrumentation layers</span></dd><dt>Technologies</dt><dd><span class="chip">OpenTelemetry</span></dd><dt>Quality attributes</dt><dd><span class="chip">Compatibility (ISO/IEC 25010)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Vendor lock-in to a dedicated observability stack</span><span class="chip">Invisible decision points</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">OpenTelemetry semantic conventions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.6">Ch3.6</a>: T. Nguyen, &quot;Trace Analysis and Execution Debugging,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.1">Ch8.1</a>: T. Nguyen, &quot;Latency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.2A">Ch8.2A</a>: T. Nguyen, &quot;Error Rates and Reliability,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.01">Ref8.01</a>: LangChain, &quot;LangSmith observability: AI agent observability platform,&quot; LangChain. Accessed: Sep. 27, 2026. [Online]. Available: https://www.langchain.com/langsmith/observability</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

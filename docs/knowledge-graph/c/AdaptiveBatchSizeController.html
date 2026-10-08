@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adaptive Batch Size Controller · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Adaptive Batch Size Controller</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:AdaptiveBatchSizeController</code></p>
+<div class="split"><section>
+<p class="lead">A control component that adjusts inference batch size at runtime from observed queue depth and latency, enlarging batches during surges and shrinking them to hold latency objectives.</p>
+<p><strong>Responsibility.</strong> Adapts batching to variable demand while meeting latency SLOs.</p>
+<p class="muted">Also known as: Adaptive batching algorithm, Memory-aware batch size manager</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Adaptive Batch Size Controller"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>monitors</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>monitors</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is constrained by</title></line><a href="InferenceServer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Inference Server: monitors</title></circle><text x="380.0" y="50.0" text-anchor="middle">Inference Server</text></a><a href="GPUNode.html"><circle class="g5" cx="530.0" cy="220.0" r="7"><title>GPU Node: monitors</title></circle><text x="542.0" y="224.0" text-anchor="start">GPU Node</text></a><a href="InferenceServingConfig.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Inference Serving Configuration: writes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Inference Serving Config…</text></a><a href="ServiceLevelObjectiveSpec.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Service Level Objective Specification: is constrained by</title></circle><text x="218.0" y="224.0" text-anchor="end">Service Level Objective …</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/InferenceServingConfig.html"><span class="dot g4" aria-hidden="true"></span>Inference Serving Configuration</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ServiceLevelObjectiveSpec.html"><span class="dot g6" aria-hidden="true"></span>Service Level Objective Specification</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD reduce batch size when observed tail latency exceeds target and restore it once latency recovers.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example: halve batch size when p95 latency exceeds 200 ms (Ch4.2).</li><li>Speculation that forces batch 32 to 12 yields 2.5x x 0.375 = 0.94x net degradation (Ch7.1A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Feedback control</span><span class="chip">SLO-driven batching</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Flexibility (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">SLA violations under unexpected traffic with static batching</span><span class="chip">Queue growth during surges</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

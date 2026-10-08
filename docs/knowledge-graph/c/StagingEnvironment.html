@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staging Environment · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Infrastructure resource</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Staging Environment</h1>
+<p class="badges"><span class="badge">Infrastructure resource</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:StagingEnvironment</code></p>
+<div class="split"><section>
+<p class="lead">An isolated environment mirroring production configuration, data volumes and load in which agent versions are validated without exposing real users.</p>
+<p><strong>Responsibility.</strong> Hosts pre-production validation under production-equivalent conditions.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Staging Environment"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>hosts</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is monitored by</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: hosts</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="GitOpsReconciler.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>GitOps Reconciler: is monitored by</title></circle><text x="380.0" y="396.0" text-anchor="middle">GitOps Reconciler</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.1A">Ch3.1A</a> <a class="src" href="../sources.html#Ch4.1">Ch4.1</a> <span class="src more" title="Ch4.2, Ch4.3, Ref8.08">+3</span></li></ul></section>
+<section class="rel"><h3>is monitored by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/GitOpsReconciler.html"><span class="dot g5" aria-hidden="true"></span>GitOps Reconciler</a> <a class="src" href="../sources.html#Ch4.4">Ch4.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD deploy with the same manifests and configuration as production against separate staging instances of dependencies, waiting for rollout completion before testing.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>10-minute soak period; bugs such as memory leaks or pool exhaustion may only appear after 50+ requests (Ch4.2).</li><li>Worked example: staging metrics accumulated for 4 hours before promotion (success 93%, safety 97%, p95 1.7 s within 2.0 s SLA) (Ch4.4).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Smoke testing</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Connection-pool exhaustion, rate limiting, caching and memory-leak issues missed by offline tests</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.1A">Ch3.1A</a>: T. Nguyen, &quot;Implement Evaluation Pipelines and Task Benchmarks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.1A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.1">Ch4.1</a>: T. Nguyen, &quot;Introduction to AI Agent Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.3">Ch4.3</a>: T. Nguyen, &quot;Container Orchestration and Edge Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.4">Ch4.4</a>: T. Nguyen, &quot;Performance Profiling and Optimization,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.08">Ref8.08</a>: &quot;Model Updates and Maintenance Procedures,&quot; unpublished reference note (08-Model-Updates-Maintenance-Procedures.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

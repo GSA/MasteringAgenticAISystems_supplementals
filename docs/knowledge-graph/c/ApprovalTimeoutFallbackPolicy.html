@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Approval Timeout Fallback Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Approval Timeout Fallback Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><span class="badge accent">Variation point (abstract)</span><code class="badge mono">arc:ApprovalTimeoutFallbackPolicy</code></p>
+<div class="split"><section>
+<p class="lead">An abstract policy setting the automatic outcome when no approver in the escalation chain responds before the final deadline.</p>
+<p><strong>Responsibility.</strong> Determines the terminal disposition of expired approval requests.</p>
+<p class="muted">Also known as: Final escalation fallback</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Approval Timeout Fallback Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is specialized by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is specialized by</title></line><a href="ApprovalEscalationScheduler.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Approval Escalation Scheduler: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Approval Escalation Sche…</text></a><a href="AutoRejectTimeoutFallback.html"><circle class="g7" cx="509.9" cy="145.0" r="7"><title>Auto-Reject Timeout Fallback: is specialized by</title></circle><text x="520.3" y="143.0" text-anchor="start">Auto-Reject Timeout Fall…</text></a><a href="AutoApproveTimeoutFallback.html"><circle class="g7" cx="509.9" cy="295.0" r="7"><title>Auto-Approve Timeout Fallback: is specialized by</title></circle><text x="520.3" y="305.0" text-anchor="start">Auto-Approve Timeout Fal…</text></a><a href="EscalateUpTimeoutFallback.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Escalate-Up Timeout Fallback: is specialized by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Escalate-Up Timeout Fall…</text></a><a href="PostHocReviewTimeoutFallback.html"><circle class="g7" cx="250.1" cy="295.0" r="7"><title>Post-Hoc Review Timeout Fallback: is specialized by</title></circle><text x="239.7" y="305.0" text-anchor="end">Post-Hoc Review Timeout …</text></a><a href="RetryQueueTimeoutFallback.html"><circle class="g7" cx="250.1" cy="145.0" r="7"><title>Retry-Queue Timeout Fallback: is specialized by</title></circle><text x="239.7" y="143.0" text-anchor="end">Retry-Queue Timeout Fall…</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Variants</h2><table><thead><tr><th>Variant</th><th>When to choose</th></tr></thead><tbody><tr><td><a class="comp" href="../c/AutoApproveTimeoutFallback.html"><span class="dot g7" aria-hidden="true"></span>Auto-Approve Timeout Fallback</a></td><td>Choose when actions are reversible and organizational risk tolerance favors velocity over oversight (aggressive).</td></tr><tr><td><a class="comp" href="../c/AutoRejectTimeoutFallback.html"><span class="dot g7" aria-hidden="true"></span>Auto-Reject Timeout Fallback</a></td><td>Choose when actions are irreversible or risk tolerance is low (conservative; prevents unauthorized actions).</td></tr><tr><td><a class="comp" href="../c/EscalateUpTimeoutFallback.html"><span class="dot g7" aria-hidden="true"></span>Escalate-Up Timeout Fallback</a></td><td>Choose when the decision must still be made promptly and higher authority is available to make it.</td></tr><tr><td><a class="comp" href="../c/PostHocReviewTimeoutFallback.html"><span class="dot g7" aria-hidden="true"></span>Post-Hoc Review Timeout Fallback</a></td><td>Choose for time-critical decisions whose delay harms users (e.g., emergency claims or treatments) when approval queues exceed their SLA.</td></tr><tr><td><a class="comp" href="../c/RetryQueueTimeoutFallback.html"><span class="dot g7" aria-hidden="true"></span>Retry-Queue Timeout Fallback</a></td><td>Choose when the request remains valid later and neither declining nor escalating further is appropriate.</td></tr></tbody></table>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ApprovalEscalationScheduler.html"><span class="dot g8" aria-hidden="true"></span>Approval Escalation Scheduler</a> <a class="src" href="../sources.html#Ch9.2">Ch9.2</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a> <span class="src more" title="Ch10.5">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD choose the fallback according to action reversibility and organizational risk tolerance.</li><li>MUST define explicitly what the agent does when human response misses its response-time SLO, rather than leaving the agent in an ambiguous waiting state.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.2">Ch9.2</a>: T. Nguyen, &quot;Action Constraints and Permission Models,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Test Runner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Agent Test Runner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:AgentTestRunner</code></p>
+<div class="split"><section>
+<p class="lead">A CI component that executes layered automated test suites (isolated unit tests, workflow integration tests, performance benchmarks) against agent code with coverage reporting and per-test timeouts.</p>
+<p><strong>Responsibility.</strong> Runs automated functional and performance tests of agent code.</p>
+<p class="muted">Also known as: Automated testing stage, Test matrix</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Agent Test Runner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>reads</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: evaluates</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ContinuousIntegrationRunner.html"><circle class="g5" cx="522.7" cy="173.6" r="7"><title>Continuous Integration Runner: is invoked by</title></circle><text x="534.1" y="173.9" text-anchor="start">Continuous Integration R…</text></a><a href="KeywordMatchScorer.html"><circle class="g6" cx="468.2" cy="341.4" r="7"><title>Keyword Match Scorer: invokes</title></circle><text x="475.2" y="355.1" text-anchor="start">Keyword Match Scorer</text></a><a href="UnitTestSuite.html"><circle class="g6" cx="291.8" cy="341.4" r="7"><title>Unit Test Suite: reads</title></circle><text x="284.8" y="355.1" text-anchor="end">Unit Test Suite</text></a><a href="IntegrationTestSuite.html"><circle class="g6" cx="237.3" cy="173.6" r="7"><title>Integration Test Suite: reads</title></circle><text x="225.9" y="173.9" text-anchor="end">Integration Test Suite</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/KeywordMatchScorer.html"><span class="dot g6" aria-hidden="true"></span>Keyword Match Scorer</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContinuousIntegrationRunner.html"><span class="dot g5" aria-hidden="true"></span>Continuous Integration Runner</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/IntegrationTestSuite.html"><span class="dot g6" aria-hidden="true"></span>Integration Test Suite</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ref8.08">Ref8.08</a></li><li><a class="comp" href="../c/UnitTestSuite.html"><span class="dot g6" aria-hidden="true"></span>Unit Test Suite</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ref8.08">Ref8.08</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD use fuzzy key-phrase checks or LLM-as-judge rather than exact string matching for non-deterministic agent outputs.</li><li>SHOULD focus integration tests on the ~20% of workflows handling ~80% of traffic plus known failure modes.</li><li>SHOULD enforce a per-test timeout to fail hung tests.</li><li>SHOULD run unit, integration, performance-benchmark and quality-evaluation test levels before every update (Ref8.08).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Unit suite 30-90 s; version matrix cuts 4 minutes to 90 s (2.7x); suite matrix cuts 12 to 5 minutes (Ch4.2).</li><li>LLM-as-judge can stretch integration suites from 3 to 15+ minutes; focused suites stay under 5 minutes; per-test timeout 300 s (Ch4.2).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Test pyramid (unit, integration, performance)</span><span class="chip">Critical-path (80/20) test selection</span></dd><dt>Technologies</dt><dd><span class="chip">pytest</span><span class="chip">pytest-cov</span><span class="chip">pytest-timeout</span><span class="chip">Codecov</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Regression bugs</span><span class="chip">Hung pipelines from infinite loops or network timeouts</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.2">Ch4.2</a>: T. Nguyen, &quot;Deployment and Scaling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.08">Ref8.08</a>: &quot;Model Updates and Maintenance Procedures,&quot; unpublished reference note (08-Model-Updates-Maintenance-Procedures.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

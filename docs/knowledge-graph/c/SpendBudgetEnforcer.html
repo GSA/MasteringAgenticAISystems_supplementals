@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spend Budget Enforcer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Spend Budget Enforcer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:SpendBudgetEnforcer</code></p>
+<div class="split"><section>
+<p class="lead">A control component that compares a principal&#x27;s accumulated cost with its spending budget, warning at a soft threshold and rejecting further requests at the hard limit.</p>
+<p><strong>Responsibility.</strong> Blocks or flags requests from principals whose spend reaches budget thresholds.</p>
+<p class="muted">Also known as: Budget enforcement, enforce_budget</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Spend Budget Enforcer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>triggers</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is configured by</title></line><a href="AlertManager.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Alert Manager: triggers</title></circle><text x="380.0" y="50.0" text-anchor="middle">Alert Manager</text></a><a href="TimeSeriesMetricsStore.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Time-Series Metrics Store: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Time-Series Metrics Store</text></a><a href="AgentAPIGateway.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Agent API Gateway: guards</title></circle><text x="380.0" y="396.0" text-anchor="middle">Agent API Gateway</text></a><a href="SpendBudget.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Spend Budget: is configured by</title></circle><text x="218.0" y="224.0" text-anchor="end">Spend Budget</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/SpendBudget.html"><span class="dot g7" aria-hidden="true"></span>Spend Budget</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TimeSeriesMetricsStore.html"><span class="dot g6" aria-hidden="true"></span>Time-Series Metrics Store</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>triggers <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AlertManager.html"><span class="dot g6" aria-hidden="true"></span>Alert Manager</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AgentAPIGateway.html"><span class="dot g8" aria-hidden="true"></span>Agent API Gateway</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD reject requests from a customer whose cost reaches the hard budget limit and alert operators.</li><li>MAY be combined with rate limiting and more conservative capacity plans to contain budget overruns.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Hard limit at 95%, warning at 80% of monthly budget utilization (Ref8.05).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Soft/hard budget limits</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Budget overruns</span><span class="chip">Runaway customer spend</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

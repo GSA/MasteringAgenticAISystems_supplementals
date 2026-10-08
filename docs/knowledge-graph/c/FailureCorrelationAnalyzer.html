@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Failure Correlation Analyzer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Failure Correlation Analyzer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:FailureCorrelationAnalyzer</code></p>
+<div class="split"><section>
+<p class="lead">An analysis component that correlates failure occurrences with time of day, concurrent load, input type and resource state to reveal the conditions under which intermittent failures cluster.</p>
+<p><strong>Responsibility.</strong> Identifies the operating conditions with which failures correlate.</p>
+<p class="muted">Also known as: Intermittent failure analysis, Load/temporal correlation analysis, Metric correlation analysis</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Failure Correlation Analyzer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><a href="TraceStore.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Trace Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">Trace Store</text></a><a href="TimeSeriesMetricsStore.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Time-Series Metrics Store: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Time-Series Metrics Store</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TimeSeriesMetricsStore.html"><span class="dot g6" aria-hidden="true"></span>Time-Series Metrics Store</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li><li><a class="comp" href="../c/TraceStore.html"><span class="dot g6" aria-hidden="true"></span>Trace Store</a> <a class="src" href="../sources.html#Ch8.2A">Ch8.2A</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD record concurrent workload counts in traces so failure rates can be correlated with load.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Test (10 concurrent workflows) 98% success vs production (50+) 92%; 8% of 500 daily workflows failed (Ch8.2A).</li><li>Latency 3.2 s at 10 concurrent workflows vs 8.7 s at 50 (2.7x for 5x load) due to shared-state lock contention (Ch8.2A).</li><li>Failures clustered 9 AM-5 PM peak hours before fixes and were uniform afterwards (Ch8.2A).</li><li>Checks failure correlation by time, load, input type and resource state; correlation &gt; 0.7 treated as a strong pattern (Ref8.07).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Correlation analysis</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Load-dependent failures invisible in low-concurrency testing</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch8.2A">Ch8.2A</a>: T. Nguyen, &quot;Error Rates and Reliability,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.07">Ref8.07</a>: &quot;Agent Health Checks and Diagnostics,&quot; unpublished reference note (07-Agent-Health-Checks-Diagnostics.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

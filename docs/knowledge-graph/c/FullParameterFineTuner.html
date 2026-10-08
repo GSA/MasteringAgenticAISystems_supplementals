@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Full-Parameter Fine-Tuner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Full-Parameter Fine-Tuner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:FullParameterFineTuner</code></p>
+<div class="split"><section>
+<p class="lead">A fine-tuning pipeline that updates all model weights, storing gradients and optimizer states for every parameter.</p>
+<p><strong>Responsibility.</strong> Fine-tunes every parameter of a model.</p>
+<p class="muted">Also known as: Full fine-tuning</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/FineTuningPipeline.html"><span class="dot g4" aria-hidden="true"></span>Fine-Tuning Pipeline</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when substantial multi-GPU infrastructure is available and all model weights are to be modified.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Full-Parameter Fine-Tuner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>alternative to</title></line><a href="GPUNode.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>GPU Node: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">GPU Node</text></a><a href="FineTuningPipeline.html"><circle class="g4" cx="530.0" cy="220.0" r="7"><title>Fine-Tuning Pipeline: specializes</title></circle><text x="542.0" y="224.0" text-anchor="start">Fine-Tuning Pipeline</text></a><a href="LoRAFineTuner.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>LoRA Fine-Tuner: alternative to</title></circle><text x="380.0" y="396.0" text-anchor="middle">LoRA Fine-Tuner</text></a><a href="QLoRAFineTuner.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>QLoRA Fine-Tuner: alternative to</title></circle><text x="218.0" y="224.0" text-anchor="end">QLoRA Fine-Tuner</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/GPUNode.html"><span class="dot g5" aria-hidden="true"></span>GPU Node</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ref7.06">Ref7.06</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/LoRAFineTuner.html"><span class="dot g4" aria-hidden="true"></span>LoRA Fine-Tuner</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li><li><a class="comp" href="../c/QLoRAFineTuner.html"><span class="dot g4" aria-hidden="true"></span>QLoRA Fine-Tuner</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD start with data parallelism and add tensor, then pipeline, then context parallelism only when the model or sequence does not fit (Ref7.06).</li><li>SHOULD confine tensor parallelism to a single NVLink domain (intra-node, TP &lt;= 8) (Ref7.06, Ref7.05).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>A 70B-parameter model requires hundreds of GB (~400GB) of GPU memory for full fine-tuning (Ch3.5).</li><li>70B FP16 (~140 GB) with TP=8 needs ~17.5 GB per GPU (Ref7.06).</li><li>Targets: &gt;80% GPU utilisation and &gt;90% scaling efficiency (Ref7.06).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Data parallelism</span><span class="chip">Tensor parallelism</span><span class="chip">Pipeline / virtual pipeline parallelism</span><span class="chip">Context (sequence) parallelism</span><span class="chip">Fully sharded data parallelism</span><span class="chip">Distributed optimizer</span><span class="chip">Communication/computation overlap</span></dd><dt>Technologies</dt><dd><span class="chip">NVIDIA NeMo Framework</span><span class="chip">Megatron FSDP</span><span class="chip">PyTorch FSDP</span><span class="chip">NCCL</span></dd><dt>Quality attributes</dt><dd><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.5">Ch3.5</a>: T. Nguyen, &quot;Prompt Optimization, Few-Shot Learning, Fine-Tuning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.06">Ref7.06</a>: NVIDIA, &quot;Performance Tuning Guide,&quot; Megatron Bridge Documentation. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/nemo/megatron-bridge/latest/performance-guide.html</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workflow Execution Debugger · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Workflow Execution Debugger</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:WorkflowExecutionDebugger</code></p>
+<div class="split"><section>
+<p class="lead">A developer observability tool that inspects per-step workflow state, visualizes the execution path, and rewinds to a stored checkpoint to replay execution with modified state or parameters.</p>
+<p><strong>Responsibility.</strong> Enables state inspection and time-travel replay of agent workflow executions.</p>
+<p class="muted">Also known as: Time-travel debugger, Execution graph visualizer, State inspection, Trace checkpoints</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Workflow Execution Debugger"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes; monitors; receives telemetry from</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads; writes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is invoked by</title></line><a href="StateGraphOrchestrator.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>State-Graph Orchestrator: invokes; monitors; receives telemetry from</title></circle><text x="380.0" y="50.0" text-anchor="middle">State-Graph Orchestrator</text></a><a href="StateCheckpointStore.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>State Checkpoint Store: reads; writes</title></circle><text x="542.0" y="224.0" text-anchor="start">State Checkpoint Store</text></a><a href="TraceStore.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Trace Store: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Trace Store</text></a><a href="AgentDeveloper.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Agent Developer: is invoked by</title></circle><text x="218.0" y="224.0" text-anchor="end">Agent Developer</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/StateGraphOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>State-Graph Orchestrator</a> <a class="src" href="../sources.html#Ch2.2">Ch2.2</a></li></ul></section>
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentDeveloper.html"><span class="dot g6" aria-hidden="true"></span>Agent Developer</a> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/StateCheckpointStore.html"><span class="dot g1" aria-hidden="true"></span>State Checkpoint Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch2.2">Ch2.2</a> <a class="src" href="../sources.html#Ch2.3">Ch2.3</a> <span class="src more" title="Ch3.6">+1</span></li><li><a class="comp" href="../c/TraceStore.html"><span class="dot g6" aria-hidden="true"></span>Trace Store</a> <a class="src" href="../sources.html#Ref8.06">Ref8.06</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/StateCheckpointStore.html"><span class="dot g1" aria-hidden="true"></span>State Checkpoint Store</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.6">Ch3.6</a></li></ul></section>
+<section class="rel"><h3>receives telemetry from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/StateGraphOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>State-Graph Orchestrator</a> <a class="src" href="../sources.html#Ch2.2">Ch2.2</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/StateGraphOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>State-Graph Orchestrator</a> <a class="src" href="../sources.html#Ch2.1">Ch2.1</a> <a class="src" href="../sources.html#Ch2.2">Ch2.2</a> <span class="src more" title="Ch2.3">+1</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD replay from the checkpoint preceding a failure rather than re-running the entire workflow when investigating failures in expensive workflows.</li><li>SHOULD provide checkpoints after each agent allowing manual inspection and state editing.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Code-generation case: 85% first-attempt success, failures mainly on requirements exceeding context windows (Ch3.6).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Time-travel debugging</span><span class="chip">Replay from checkpoint</span></dd><dt>Technologies</dt><dd><span class="chip">LangGraph Studio</span><span class="chip">LangSmith</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Opaque multi-step failure diagnosis</span><span class="chip">Re-running expensive LLM calls during debugging</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.1">Ch2.1</a>: T. Nguyen, &quot;Framework Landscape and Selection,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.2">Ch2.2</a>: T. Nguyen, &quot;LangGraph,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.2. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.3">Ch2.3</a>: T. Nguyen, &quot;LangChain Sequential Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.6">Ch3.6</a>: T. Nguyen, &quot;Trace Analysis and Execution Debugging,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.06">Ref8.06</a>: &quot;Error Troubleshooting and Incident Response for Agent Systems,&quot; unpublished reference note (06-Error-Troubleshooting-Incident-Response.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

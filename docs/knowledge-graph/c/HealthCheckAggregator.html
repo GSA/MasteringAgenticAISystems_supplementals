@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health Check Aggregator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Health Check Aggregator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:HealthCheckAggregator</code></p>
+<div class="split"><section>
+<p class="lead">A health-check service that runs layered service, model, integration and end-to-end checks and combines their results into an overall healthy, degraded or unhealthy status for an agent system.</p>
+<p><strong>Responsibility.</strong> Combines layered health-check results into one system health status.</p>
+<p class="muted">Also known as: Unified health check, Layered health check framework</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Health Check Aggregator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="497.3" y2="126.5"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="526.2" y2="253.4"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="445.1" y2="355.1"><title>exposes</title></line><line x1="380.0" y1="220.0" x2="314.9" y2="355.1"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="233.8" y2="253.4"><title>exposes</title></line><line x1="380.0" y1="220.0" x2="262.7" y2="126.5"><title>is configured by</title></line><a href="DependencyHealthMonitor.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Dependency Health Monitor: invokes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Dependency Health Monitor</text></a><a href="ModelHealthProber.html"><circle class="g6" cx="497.3" cy="126.5" r="7"><title>Model Health Prober: invokes</title></circle><text x="506.7" y="123.0" text-anchor="start">Model Health Prober</text></a><a href="EndToEndHealthProber.html"><circle class="g6" cx="526.2" cy="253.4" r="7"><title>End-to-End Health Prober: invokes</title></circle><text x="537.9" y="260.0" text-anchor="start">End-to-End Health Prober</text></a><a href="HealthStatusEndpoint.html"><circle class="g6" cx="445.1" cy="355.1" r="7"><title>Health Status Endpoint: exposes</title></circle><text x="450.3" y="370.0" text-anchor="start">Health Status Endpoint</text></a><a href="ResourceHealthChecker.html"><circle class="g6" cx="314.9" cy="355.1" r="7"><title>Resource Health Checker: invokes</title></circle><text x="309.7" y="370.0" text-anchor="end">Resource Health Checker</text></a><a href="DiagnosticsEndpoint.html"><circle class="g6" cx="233.8" cy="253.4" r="7"><title>Diagnostics Endpoint: exposes</title></circle><text x="222.1" y="260.0" text-anchor="end">Diagnostics Endpoint</text></a><a href="HealthStatusPolicy.html"><circle class="g6" cx="262.7" cy="126.5" r="7"><title>Health Status Policy: is configured by</title></circle><text x="253.3" y="123.0" text-anchor="end">Health Status Policy</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>exposes <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/DiagnosticsEndpoint.html"><span class="dot g6" aria-hidden="true"></span>Diagnostics Endpoint</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li><li><a class="comp" href="../c/HealthStatusEndpoint.html"><span class="dot g6" aria-hidden="true"></span>Health Status Endpoint</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li></ul></section>
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/HealthStatusPolicy.html"><span class="dot g6" aria-hidden="true"></span>Health Status Policy</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DependencyHealthMonitor.html"><span class="dot g6" aria-hidden="true"></span>Dependency Health Monitor</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li><li><a class="comp" href="../c/EndToEndHealthProber.html"><span class="dot g6" aria-hidden="true"></span>End-to-End Health Prober</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li><li><a class="comp" href="../c/ModelHealthProber.html"><span class="dot g6" aria-hidden="true"></span>Model Health Prober</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li><li><a class="comp" href="../c/ResourceHealthChecker.html"><span class="dot g6" aria-hidden="true"></span>Resource Health Checker</a> <a class="src" href="../sources.html#Ref8.07">Ref8.07</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD start with simple availability checks and layer in performance, quality and diagnostic checks.</li><li>SHOULD keep basic checks fast (under 1 second) so health checking does not slow the system.</li><li>SHOULD run basic checks frequently and comprehensive diagnostics less often.</li><li>SHOULD itself be tested.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Schedule: basic health every 1 min, detailed every 5 min, comprehensive diagnostics hourly (Ref8.07).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Layered health checks</span><span class="chip">Scheduled health checks</span></dd><dt>Technologies</dt><dd><span class="chip">FastAPI</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Undetected partial degradation</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ref8.07">Ref8.07</a>: &quot;Agent Health Checks and Diagnostics,&quot; unpublished reference note (07-Agent-Health-Checks-Diagnostics.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

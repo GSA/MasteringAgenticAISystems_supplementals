@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preference Optimization Config · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Data artifact</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Preference Optimization Config</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:PreferenceOptimizationConfig</code></p>
+<div class="split"><section>
+<p class="lead">A configuration artifact fixing preference-optimization hyperparameters such as the KL-divergence penalty coefficient, PPO update settings and training duration or early-stopping criteria.</p>
+<p><strong>Responsibility.</strong> Sets the balance between reward maximization and staying close to the reference model.</p>
+<p class="muted">Also known as: KL penalty coefficient, RLHF hyperparameters</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Preference Optimization Config"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><a href="PreferenceOptimizer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Preference Optimizer: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Preference Optimizer</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/PreferenceOptimizer.html"><span class="dot g4" aria-hidden="true"></span>Preference Optimizer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST tune the KL coefficient deliberately: too small lets the policy drift into reward hacking; too large leaves the policy barely changed from the reference model.</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

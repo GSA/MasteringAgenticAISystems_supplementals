@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Scheduler · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Curriculum Scheduler</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:CurriculumScheduler</code></p>
+<div class="split"><section>
+<p class="lead">A training component that sequences tasks from simple to complex and, when automatic, advances or regresses task difficulty according to the learner&#x27;s current success rate.</p>
+<p><strong>Responsibility.</strong> Selects the next training task difficulty from learner progress.</p>
+<p class="muted">Also known as: Curriculum learning, Automatic curriculum generation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Curriculum Scheduler"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>monitors</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>invokes</title></line><a href="ReinforcementPolicyLearner.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Reinforcement Learning Policy Learner: monitors</title></circle><text x="380.0" y="50.0" text-anchor="middle">Reinforcement Learning P…</text></a><a href="EnvironmentSimulator.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Environment Simulator: invokes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Environment Simulator</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EnvironmentSimulator.html"><span class="dot g2" aria-hidden="true"></span>Environment Simulator</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li></ul></section>
+<section class="rel"><h3>monitors <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ReinforcementPolicyLearner.html"><span class="dot g4" aria-hidden="true"></span>Reinforcement Learning Policy Learner</a> <a class="src" href="../sources.html#Ch5.12">Ch5.12</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD order stages so simpler tasks teach sub-skills needed later without behaviours that must be unlearned.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Curriculum learning</span><span class="chip">Automatic curriculum generation</span><span class="chip">Zone of proximal development</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Sparse early rewards</span><span class="chip">Catastrophic forgetting between difficulty levels</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.12">Ch5.12</a>: T. Nguyen, &quot;Learning-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.12. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

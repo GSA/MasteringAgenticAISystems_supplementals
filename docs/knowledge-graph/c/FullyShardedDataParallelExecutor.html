@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fully Sharded Data Parallel Executor · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Fully Sharded Data Parallel Executor</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:FullyShardedDataParallelExecutor</code></p>
+<div class="split"><section>
+<p class="lead">A distributed training executor that shards parameters, gradients and optimizer states across GPUs, all-gathering layers for compute and reduce-scattering gradients.</p>
+<p><strong>Responsibility.</strong> Trains models whose full training state exceeds single-GPU memory.</p>
+<p class="muted">Also known as: FSDP</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DistributedModelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Distributed Model Executor</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for training models whose weights plus optimizer state exceed GPU memory (e.g., 70B with 280 GB state on 4x80GB).</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Fully Sharded Data Parallel Executor"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>trains</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is target of alternativeTo</title></line><a href="FoundationLLM.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>Foundation LLM: trains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Foundation LLM</text></a><a href="DistributedModelExecutor.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>Distributed Model Executor: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Distributed Model Executor</text></a><a href="DataParallelExecutor.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Data Parallel Executor: is target of alternativeTo</title></circle><text x="239.7" y="305.0" text-anchor="end">Data Parallel Executor</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>trains <span class="cat">lifecycle</span></h3><ul><li><a class="comp" href="../c/FoundationLLM.html"><span class="dot g4" aria-hidden="true"></span>Foundation LLM</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/DataParallelExecutor.html"><span class="dot g5" aria-hidden="true"></span>Data Parallel Executor</a> <a class="src" href="../sources.html#Ch7.1A">Ch7.1A</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>NVLink reduces FSDP communication overhead 5-8x, making 200B parameters feasible (Ch7.1A).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Fully sharded data parallelism</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1A">Ch7.1A</a>: T. Nguyen, &quot;Advanced Implementation with Nvidia NEMO Framework and Nvlink,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

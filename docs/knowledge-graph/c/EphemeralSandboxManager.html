@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ephemeral Sandbox Manager · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Ephemeral Sandbox Manager</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:EphemeralSandboxManager</code></p>
+<div class="split"><section>
+<p class="lead">A lifecycle component that creates a fresh minimal sandbox from a pristine base image for each tool execution and destroys it, with all created state, when execution completes or times out.</p>
+<p><strong>Responsibility.</strong> Guarantees no state persists between agent executions.</p>
+<p class="muted">Also known as: Container lifecycle manager</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Ephemeral Sandbox Manager"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>scales</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is invoked by</title></line><a href="ExecutionSandbox.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Execution Sandbox: scales</title></circle><text x="380.0" y="50.0" text-anchor="middle">Execution Sandbox</text></a><a href="CodeExecutionRunner.html"><circle class="g1" cx="530.0" cy="220.0" r="7"><title>Code Execution Runner: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Code Execution Runner</text></a><a href="ContainerImage.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Container Image: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Container Image</text></a><a href="AutomatedContainmentResponder.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Automated Containment Responder: is invoked by</title></circle><text x="218.0" y="224.0" text-anchor="end">Automated Containment Re…</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AutomatedContainmentResponder.html"><span class="dot g7" aria-hidden="true"></span>Automated Containment Responder</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/CodeExecutionRunner.html"><span class="dot g1" aria-hidden="true"></span>Code Execution Runner</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContainerImage.html"><span class="dot g5" aria-hidden="true"></span>Container Image</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>scales <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ExecutionSandbox.html"><span class="dot g7" aria-hidden="true"></span>Execution Sandbox</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD start sandboxes fast enough (e.g., millisecond microVM boot) to avoid user-visible latency while ensuring no state leaks.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Ephemeral containerization</span><span class="chip">Per-execution sandbox</span></dd><dt>Technologies</dt><dd><span class="chip">Firecracker</span></dd><dt>Quality attributes</dt><dd><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Persistent compromise / backdoors</span><span class="chip">State leakage between executions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

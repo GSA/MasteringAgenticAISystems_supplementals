@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reasoning Faithfulness Tester · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Reasoning Faithfulness Tester</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:ReasoningFaithfulnessTester</code></p>
+<div class="split"><section>
+<p class="lead">An evaluation component that tests whether a model&#x27;s verbalised reasoning actually drives its answers, using symmetric or perturbed question probes and causal analysis of which steps influence the output.</p>
+<p><strong>Responsibility.</strong> Measures the faithfulness, rather than the fluency, of chain-of-thought explanations.</p>
+<p class="muted">Also known as: CoT faithfulness evaluator, Causal step-importance analyzer, Explanation fidelity test, Explanation stability test</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Reasoning Faithfulness Tester"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>evaluates</title></line><a href="ReasoningEngine.html"><circle class="g2" cx="380.0" cy="70.0" r="7"><title>Reasoning Engine: evaluates</title></circle><text x="380.0" y="50.0" text-anchor="middle">Reasoning Engine</text></a><a href="EvaluationDataset.html"><circle class="g6" cx="530.0" cy="220.0" r="7"><title>Evaluation Dataset: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Evaluation Dataset</text></a><a href="DecisionExplainer.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>Decision Explainer: evaluates</title></circle><text x="380.0" y="396.0" text-anchor="middle">Decision Explainer</text></a><a href="AttributionAnalyzer.html"><circle class="g6" cx="230.0" cy="220.0" r="7"><title>Attribution Analyzer: evaluates</title></circle><text x="218.0" y="224.0" text-anchor="end">Attribution Analyzer</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EvaluationDataset.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Dataset</a> <a class="src" href="../sources.html#Ch5.1">Ch5.1</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/AttributionAnalyzer.html"><span class="dot g6" aria-hidden="true"></span>Attribution Analyzer</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li><li><a class="comp" href="../c/DecisionExplainer.html"><span class="dot g2" aria-hidden="true"></span>Decision Explainer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref10.02">Ref10.02</a></li><li><a class="comp" href="../c/ReasoningEngine.html"><span class="dot g2" aria-hidden="true"></span>Reasoning Engine</a> <a class="src" href="../sources.html#Ch5.1">Ch5.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST NOT treat CoT output as guaranteed explainability; treat it as a hypothesis about how the model reasoned.</li><li>SHOULD measure task accuracy independently of CoT coherence scores to detect metric gaming.</li><li>SHOULD identify critical-path reasoning steps to focus validation and error correction.</li><li>SHOULD verify that removing features cited by an explanation changes the prediction significantly (Ref10.02).</li><li>SHOULD verify that slightly perturbed inputs receive similar explanations (Ref10.02).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Contradictory answers on symmetric comparison questions: GPT-4o-mini 13%, Claude Haiku 3.5 7%, Gemini 2.5 Flash 2.17%, ChatGPT-4o 0.49% (Ch5.1).</li><li>About 25% of recent papers (38% medical AI, 25% AI-for-law, 63% autonomous-vehicle papers using CoT) wrongly treat CoT as interpretability (Ch5.1).</li><li>Example thresholds: prediction change &gt;0.3 when cited features removed; explanation similarity &gt;0.9 under noise 0.01-0.1 (Ref10.02).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Symmetric-question consistency probing</span><span class="chip">Adversarial prompt perturbation</span><span class="chip">Causal step-influence analysis</span></dd><dt>Quality attributes</dt><dd><span class="chip">Explainability (NIST AI RMF: explainable and interpretable)</span><span class="chip">Interaction capability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unfaithful post-hoc CoT rationalisation</span><span class="chip">Bias masked by plausible reasoning</span><span class="chip">Silent error correction hiding erroneous steps</span><span class="chip">Optimising CoT coherence metrics instead of accuracy</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.1">Ch5.1</a>: T. Nguyen, &quot;Chain-of-Thought (CoT) Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref10.02">Ref10.02</a>: &quot;Explainability and Interpretability in Agent Systems,&quot; unpublished reference note (02-Explainability-Interpretability.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

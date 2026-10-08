@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Identity Verifier · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>User Identity Verifier</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:UserIdentityVerifier</code></p>
+<div class="split"><section>
+<p class="lead">A security component that verifies an end user&#x27;s identity, for example through multi-factor authentication, before the agent accesses accounts or executes financial or claims transactions.</p>
+<p><strong>Responsibility.</strong> Authenticates the conversing user before sensitive operations.</p>
+<p class="muted">Also known as: Security verification, Customer identification</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of User Identity Verifier"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>controls access to</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>controls access to</title></line><a href="WorkflowOrchestrator.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Workflow Orchestrator: controls access to</title></circle><text x="380.0" y="50.0" text-anchor="middle">Workflow Orchestrator</text></a><a href="DatabaseConnector.html"><circle class="g1" cx="380.0" cy="370.0" r="7"><title>Database Connector: controls access to</title></circle><text x="380.0" y="396.0" text-anchor="middle">Database Connector</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>controls access to <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DatabaseConnector.html"><span class="dot g1" aria-hidden="true"></span>Database Connector</a> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li><li><a class="comp" href="../c/WorkflowOrchestrator.html"><span class="dot g1" aria-hidden="true"></span>Workflow Orchestrator</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch10.1">Ch10.1</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST apply security verification before routing payment issues to financial transaction systems.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Step-up verification</span></dd><dt>Quality attributes</dt><dd><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Unauthorized account or payment actions</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.1">Ch10.1</a>: T. Nguyen, &quot;Conversational UI,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.1. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resource-Utilization Autoscaler · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Software component</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Resource-Utilization Autoscaler</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:ResourceUtilizationAutoscaler</code></p>
+<div class="split"><section>
+<p class="lead">An autoscaler that adjusts replica counts to keep average CPU and/or memory utilization of a workload near declared targets, scaling on whichever resource approaches saturation.</p>
+<p><strong>Responsibility.</strong> Scales replicas to hold per-replica CPU or memory utilization at target levels.</p>
+<p class="muted">Also known as: CPU-based autoscaling, Memory-based autoscaling, Dual-metric CPU/memory HPA</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/Autoscaler.html"><span class="dot g5" aria-hidden="true"></span>Autoscaler</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose CPU for compute-bound agents dominated by inference or reasoning loops, and memory for agents holding large context windows or document embeddings.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Resource-Utilization Autoscaler"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>scales</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>invokes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is configured by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is target of alternativeTo</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: scales</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="MetricsCollector.html"><circle class="g6" cx="509.9" cy="145.0" r="7"><title>Metrics Collector: invokes</title></circle><text x="520.3" y="143.0" text-anchor="start">Metrics Collector</text></a><a href="Autoscaler.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>Autoscaler: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Autoscaler</text></a><a href="QueueDepthAutoscaler.html"><circle class="g5" cx="380.0" cy="370.0" r="7"><title>Queue-Depth Autoscaler: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">Queue-Depth Autoscaler</text></a><a href="AutoscalingPolicy.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Autoscaling Policy: is configured by</title></circle><text x="239.7" y="305.0" text-anchor="end">Autoscaling Policy</text></a><a href="LatencyTargetAutoscaler.html"><circle class="g5" cx="250.1" cy="145.0" r="7"><title>Latency-Target Autoscaler: is target of alternativeTo</title></circle><text x="239.7" y="143.0" text-anchor="end">Latency-Target Autoscaler</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AutoscalingPolicy.html"><span class="dot g5" aria-hidden="true"></span>Autoscaling Policy</a> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>invokes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MetricsCollector.html"><span class="dot g6" aria-hidden="true"></span>Metrics Collector</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li></ul></section>
+<section class="rel"><h3>scales <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref8.05">Ref8.05</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/LatencyTargetAutoscaler.html"><span class="dot g5" aria-hidden="true"></span>Latency-Target Autoscaler</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li><li><a class="comp" href="../c/QueueDepthAutoscaler.html"><span class="dot g5" aria-hidden="true"></span>Queue-Depth Autoscaler</a> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a> <a class="src" href="../sources.html#Ref7.17">Ref7.17</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be used alone for agents that mostly wait on external APIs; CPU may sit near 20% while the agent is at full capacity.</li><li>SHOULD serve as baseline scaling on simple built-in CPU/memory metrics.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Worked example targets 70% CPU and 75% memory utilization (Ch4.7).</li><li>Dynamic sizing (40 GPUs peak, 4 average, 1 off-peak; weighted 12) vs static 40 GPUs: $1,920/day -&gt; $240/day (87.5%); typical savings 50-70% (Ref8.05).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Target-utilization scaling</span><span class="chip">Dual-metric (max of CPU, memory) scaling</span></dd><dt>Technologies</dt><dd><span class="chip">Kubernetes Horizontal Pod Autoscaler (Resource metrics)</span><span class="chip">Kubernetes HorizontalPodAutoscaler</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Maintainability (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Resource-specific bottlenecks (CPU or memory saturation)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.7">Ch4.7</a>: T. Nguyen, &quot;Scaling Strategies,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.17">Ref7.17</a>: &quot;Scaling Agentic AI Systems: Patterns and Strategies,&quot; unpublished reference note (17-Scalability-Patterns.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref8.05">Ref8.05</a>: &quot;Cost Optimization and Resource Monitoring for Agent Systems,&quot; unpublished reference note (05-Cost-Optimization-Resource-Monitoring.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

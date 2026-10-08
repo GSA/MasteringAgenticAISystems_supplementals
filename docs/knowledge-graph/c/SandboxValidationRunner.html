@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandbox Validation Runner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Sandbox Validation Runner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:SandboxValidationRunner</code></p>
+<div class="split"><section>
+<p class="lead">A testing component that executes capability, container-escape and breach-simulation tests against deployed sandboxes to verify legitimate operations succeed and dangerous ones fail.</p>
+<p><strong>Responsibility.</strong> Continuously validates sandbox containment against known attacks.</p>
+<p class="muted">Also known as: Escape tester, Sandbox capability tester</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Sandbox Validation Runner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>evaluates</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>reads</title></line><a href="ExecutionSandbox.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Execution Sandbox: evaluates</title></circle><text x="380.0" y="50.0" text-anchor="middle">Execution Sandbox</text></a><a href="RedTeamTester.html"><circle class="g7" cx="530.0" cy="220.0" r="7"><title>Red Team Tester: is invoked by</title></circle><text x="542.0" y="224.0" text-anchor="start">Red Team Tester</text></a><a href="ContainerEscapeTestSuite.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Container Escape Test Suite: reads</title></circle><text x="380.0" y="396.0" text-anchor="middle">Container Escape Test Su…</text></a><a href="SandboxCapabilityTestSuite.html"><circle class="g7" cx="230.0" cy="220.0" r="7"><title>Sandbox Capability Test Suite: reads</title></circle><text x="218.0" y="224.0" text-anchor="end">Sandbox Capability Test …</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RedTeamTester.html"><span class="dot g7" aria-hidden="true"></span>Red Team Tester</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ContainerEscapeTestSuite.html"><span class="dot g7" aria-hidden="true"></span>Container Escape Test Suite</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/SandboxCapabilityTestSuite.html"><span class="dot g7" aria-hidden="true"></span>Sandbox Capability Test Suite</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>evaluates <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/ExecutionSandbox.html"><span class="dot g7" aria-hidden="true"></span>Execution Sandbox</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST add newly disclosed container escapes to the test suite immediately and verify patches block them.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Capability testing (positive and negative)</span><span class="chip">Escape testing</span><span class="chip">Breach simulation</span><span class="chip">Continuous validation</span></dd><dt>Technologies</dt><dd><span class="chip">Metasploit container escape modules</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

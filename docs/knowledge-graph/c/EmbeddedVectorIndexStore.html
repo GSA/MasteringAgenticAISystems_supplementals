@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embedded Vector Index Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Data store</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Embedded Vector Index Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:EmbeddedVectorIndexStore</code></p>
+<div class="split"><section>
+<p class="lead">A lightweight vector store that runs in-process inside the application as a library, requiring no separate services, network API or infrastructure.</p>
+<p><strong>Responsibility.</strong> Stores and searches vectors in-process for local development and small collections.</p>
+<p class="muted">Also known as: In-process vector database, Lightweight development vector store</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/VectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Vector Index Store</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for local development, notebooks, proofs of concept, education and embedded applications with modest scale (well under one million vectors).</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Embedded Vector Index Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>alternative to</title></line><a href="VectorIndexStore.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Index Store: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Index Store</text></a><a href="TextEmbeddingService.html"><circle class="g3" cx="509.9" cy="145.0" r="7"><title>Text Embedding Service: is written by</title></circle><text x="520.3" y="143.0" text-anchor="start">Text Embedding Service</text></a><a href="VectorRetriever.html"><circle class="g3" cx="509.9" cy="295.0" r="7"><title>Vector Retriever: is read by</title></circle><text x="520.3" y="305.0" text-anchor="start">Vector Retriever</text></a><a href="DistributedVectorIndexStore.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Distributed Vector Index Store: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">Distributed Vector Index…</text></a><a href="ManagedVectorIndexStore.html"><circle class="g3" cx="250.1" cy="295.0" r="7"><title>Managed Vector Index Store: alternative to</title></circle><text x="239.7" y="305.0" text-anchor="end">Managed Vector Index Store</text></a><a href="RelationalVectorExtensionStore.html"><circle class="g3" cx="250.1" cy="145.0" r="7"><title>Relational Vector Extension Store: alternative to</title></circle><text x="239.7" y="143.0" text-anchor="end">Relational Vector Extens…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/VectorRetriever.html"><span class="dot g3" aria-hidden="true"></span>Vector Retriever</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/TextEmbeddingService.html"><span class="dot g3" aria-hidden="true"></span>Text Embedding Service</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/DistributedVectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Distributed Vector Index Store</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li><li><a class="comp" href="../c/ManagedVectorIndexStore.html"><span class="dot g3" aria-hidden="true"></span>Managed Vector Index Store</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a></li><li><a class="comp" href="../c/RelationalVectorExtensionStore.html"><span class="dot g3" aria-hidden="true"></span>Relational Vector Extension Store</a> <a class="src" href="../sources.html#Ch6.2A">Ch6.2A</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be used where horizontal scaling, advanced index types, high availability or production monitoring are required.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Targets &lt;1 million vectors; performance degrades substantially beyond that (Ch6.2A).</li><li>Suited to single-node deployments up to ~1M documents (Ref7.07).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Prototype locally, migrate to production-grade store</span></dd><dt>Technologies</dt><dd><span class="chip">Chroma</span><span class="chip">FAISS</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.2A">Ch6.2A</a>: T. Nguyen, &quot;Vector Database Selection,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.2A. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.07">Ref7.07</a>: E. Li, V. Bellotti, R. Kraus, and R. Kao, &quot;Build a retrieval-augmented generation (RAG) agent with NVIDIA Nemotron,&quot; NVIDIA Technical Blog, Sep. 23, 2025. [Online]. Available: https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

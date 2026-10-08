@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool Call Schema Validator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ToolIntegrationComponent">Tools &amp; Integration</a> · Software component</p>
+<h1><span class="dot g1" aria-hidden="true"></span>Tool Call Schema Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Tools &amp; Integration</span><span class="badge">Orchestration &amp; Tools</span><code class="badge mono">arc:ToolCallSchemaValidator</code></p>
+<div class="split"><section>
+<p class="lead">A deterministic validator that checks tool invocations and tool responses against the tool&#x27;s formal schema: tool-name existence, required and extraneous parameters, types, format patterns, enumerations and ranges.</p>
+<p><strong>Responsibility.</strong> Rejects syntactically malformed tool calls and responses before they are executed or consumed.</p>
+<p class="muted">Also known as: Schema-based pre-validation, Syntactic auditing, Phantom tool detection, Post-execution schema validation, Data flow validation at tool boundaries</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Tool Call Schema Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards; is invoked by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>guards</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>reads</title></line><a href="ToolExecutor.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Tool Executor: guards; is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Tool Executor</text></a><a href="EvaluationHarness.html"><circle class="g6" cx="522.7" cy="173.6" r="7"><title>Evaluation Harness: is evaluated by</title></circle><text x="534.1" y="173.9" text-anchor="start">Evaluation Harness</text></a><a href="ToolIntegrationAdapter.html"><circle class="g1" cx="468.2" cy="341.4" r="7"><title>Tool Integration Adapter: guards</title></circle><text x="475.2" y="355.1" text-anchor="start">Tool Integration Adapter</text></a><a href="ToolSchema.html"><circle class="g1" cx="291.8" cy="341.4" r="7"><title>Tool Schema: reads</title></circle><text x="284.8" y="355.1" text-anchor="end">Tool Schema</text></a><a href="ToolRegistry.html"><circle class="g1" cx="237.3" cy="173.6" r="7"><title>Tool Registry: reads</title></circle><text x="225.9" y="173.9" text-anchor="end">Tool Registry</text></a><circle class="g1 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ToolExecutor.html"><span class="dot g1" aria-hidden="true"></span>Tool Executor</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ToolRegistry.html"><span class="dot g1" aria-hidden="true"></span>Tool Registry</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li><li><a class="comp" href="../c/ToolSchema.html"><span class="dot g1" aria-hidden="true"></span>Tool Schema</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/ToolExecutor.html"><span class="dot g1" aria-hidden="true"></span>Tool Executor</a> <a class="src" href="../sources.html#Ref8.06">Ref8.06</a></li><li><a class="comp" href="../c/ToolIntegrationAdapter.html"><span class="dot g1" aria-hidden="true"></span>Tool Integration Adapter</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/EvaluationHarness.html"><span class="dot g6" aria-hidden="true"></span>Evaluation Harness</a> <a class="src" href="../sources.html#Ch3.7">Ch3.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST verify that a requested tool name exists in the available toolkit before execution.</li><li>SHOULD return detailed error messages identifying exactly which constraint failed so the agent can correct the call.</li><li>SHOULD validate tool outputs against expected schemas to enable fallback instead of propagating corrupted data.</li><li>SHOULD validate data at tool boundaries in multi-step chains, transforming automatically when formats differ predictably and erroring otherwise.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Schema validation typically identifies 60-80% of malformed tool invocations automatically (Ch3.7).</li><li>Removing pre-execution validation from a database-querying agent lowered task success from 94% to 91% (Ch3.7 case).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Syntactic validation</span><span class="chip">Fail fast with specific error feedback</span><span class="chip">Deterministic validation around generative components</span></dd><dt>Technologies</dt><dd><span class="chip">JSON Schema validators</span></dd><dt>Quality attributes</dt><dd><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Cost efficiency</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Phantom (non-existent) tool invocation</span><span class="chip">Missing required parameters and type/format violations</span><span class="chip">Malformed tool responses propagating to downstream agents</span><span class="chip">Wasted expensive API calls that would fail anyway</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.7">Ch3.7</a>: T. Nguyen, &quot;Tool Usage Auditing,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref3.09">Ref3.09</a>: &quot;Agentic AI: The Top 5 Challenges and How to Overcome Them,&quot; unpublished reference note (09-Agentic-AI-Top-5-Challenges.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref8.06">Ref8.06</a>: &quot;Error Troubleshooting and Incident Response for Agent Systems,&quot; unpublished reference note (06-Error-Troubleshooting-Incident-Response.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

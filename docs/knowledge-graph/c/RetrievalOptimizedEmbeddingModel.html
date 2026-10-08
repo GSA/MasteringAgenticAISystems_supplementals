@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrieval-Optimized Embedding Model · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Model asset</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Retrieval-Optimized Embedding Model</h1>
+<p class="badges"><span class="badge">Model asset</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:RetrievalOptimizedEmbeddingModel</code></p>
+<div class="split"><section>
+<p class="lead">A compact dense embedding model trained specifically for search ranking, excelling at distinguishing near-duplicate documents within short passages.</p>
+<p><strong>Responsibility.</strong> Encodes short passages into vectors optimized for retrieval precision and ranking.</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/TextEmbeddingModel.html"><span class="dot g3" aria-hidden="true"></span>Text Embedding Model</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose for search-specific applications over short passages where ranking precision and near-duplicate discrimination matter more than long context.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Retrieval-Optimized Embedding Model"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>deployed on</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is target of alternativeTo</title></line><a href="TextEmbeddingService.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Text Embedding Service: deployed on</title></circle><text x="380.0" y="50.0" text-anchor="middle">Text Embedding Service</text></a><a href="TextEmbeddingModel.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Text Embedding Model: specializes</title></circle><text x="534.1" y="173.9" text-anchor="start">Text Embedding Model</text></a><a href="HighAccuracyEmbeddingModel.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>High-Accuracy General Embedding Model: is target of alternativeTo</title></circle><text x="475.2" y="355.1" text-anchor="start">High-Accuracy General Em…</text></a><a href="LongContextEmbeddingModel.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Long-Context Embedding Model: is target of alternativeTo</title></circle><text x="284.8" y="355.1" text-anchor="end">Long-Context Embedding M…</text></a><a href="CostOptimizedEmbeddingModel.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Cost-Optimized Embedding Model: is target of alternativeTo</title></circle><text x="225.9" y="173.9" text-anchor="end">Cost-Optimized Embedding…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>deployed on <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/TextEmbeddingService.html"><span class="dot g3" aria-hidden="true"></span>Text Embedding Service</a> <a class="src" href="../sources.html#Ref7.07">Ref7.07</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/CostOptimizedEmbeddingModel.html"><span class="dot g3" aria-hidden="true"></span>Cost-Optimized Embedding Model</a> <a class="src" href="../sources.html#Ch6.1">Ch6.1</a></li><li><a class="comp" href="../c/HighAccuracyEmbeddingModel.html"><span class="dot g3" aria-hidden="true"></span>High-Accuracy General Embedding Model</a> <a class="src" href="../sources.html#Ch6.1">Ch6.1</a></li><li><a class="comp" href="../c/LongContextEmbeddingModel.html"><span class="dot g3" aria-hidden="true"></span>Long-Context Embedding Model</a> <a class="src" href="../sources.html#Ch6.1">Ch6.1</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>1,024 dimensions, 512-token context, $0.10 per million tokens (Ch6.1).</li><li>1 billion parameters, question-answering-focused embeddings (Ref7.07).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Cohere embed-english-v3</span><span class="chip">Llama 3.2 EmbedQA 1B V2</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.1">Ch6.1</a>: T. Nguyen, &quot;Embeddings and RAG Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.1. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.07">Ref7.07</a>: E. Li, V. Bellotti, R. Kraus, and R. Kao, &quot;Build a retrieval-augmented generation (RAG) agent with NVIDIA Nemotron,&quot; NVIDIA Technical Blog, Sep. 23, 2025. [Online]. Available: https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

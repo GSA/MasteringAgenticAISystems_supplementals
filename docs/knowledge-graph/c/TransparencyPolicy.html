@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transparency Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Transparency Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:TransparencyPolicy</code></p>
+<div class="split"><section>
+<p class="lead">An organizational policy specifying how disclosure, data governance, decision-logic, outcome-explanation and ethical-governance transparency are implemented across contexts.</p>
+<p><strong>Responsibility.</strong> Operationalizes transparency obligations into concrete, context-specific requirements.</p>
+<p class="muted">Also known as: Comprehensive transparency policy, Calibrated disclosure policy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Transparency Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>constrains</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>configures</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: constrains</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ExplanationPresenter.html"><circle class="g8" cx="530.0" cy="220.0" r="7"><title>Explanation Presenter: configures</title></circle><text x="542.0" y="224.0" text-anchor="start">Explanation Presenter</text></a><a href="SummaryExplanationView.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Summary Explanation View: constrains</title></circle><text x="380.0" y="396.0" text-anchor="middle">Summary Explanation View</text></a><a href="AIDisclosureRenderer.html"><circle class="g8" cx="230.0" cy="220.0" r="7"><title>AI Disclosure Renderer: configures</title></circle><text x="218.0" y="224.0" text-anchor="end">AI Disclosure Renderer</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/AIDisclosureRenderer.html"><span class="dot g8" aria-hidden="true"></span>AI Disclosure Renderer</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/ExplanationPresenter.html"><span class="dot g8" aria-hidden="true"></span>Explanation Presenter</a> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li></ul></section>
+<section class="rel"><h3>constrains <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch9.3">Ch9.3</a></li><li><a class="comp" href="../c/SummaryExplanationView.html"><span class="dot g8" aria-hidden="true"></span>Summary Explanation View</a> <a class="src" href="../sources.html#Ch10.5">Ch10.5</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD disclose data sources, storage and retention, intentional data exclusions, training objectives, known limitations, error rates and uncertainty handling.</li><li>SHOULD describe discrimination safeguards, bias monitoring and harmful-output procedures specifically rather than vaguely.</li><li>SHOULD disclose which factors mattered and roughly how much weight they carried without exposing exact scoring formulas or thresholds that adversaries could exploit.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example: diagnostic AI 95% accurate for common conditions but 60% for rare diseases should be disclosed (Ch9.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Multi-layered transparency (notification, explainability, traceability, accountability)</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">EU AI Act</span><span class="chip">GDPR</span><span class="chip">HIPAA</span><span class="chip">SOC 2</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.3">Ch9.3</a>: T. Nguyen, &quot;Sandboxing and Transparency Foundations,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.5">Ch10.5</a>: T. Nguyen, &quot;Human-over-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.5. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

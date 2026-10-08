@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixed-Length Chunker · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Fixed-Length Chunker</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:FixedLengthChunker</code></p>
+<div class="split"><section>
+<p class="lead">A document chunker that splits text at fixed character or token counts regardless of sentence or topic boundaries.</p>
+<p><strong>Responsibility.</strong> Splits text into equal-length pieces.</p>
+<p class="muted">Also known as: Fixed-length character split, Arbitrary splits</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/DocumentChunker.html"><span class="dot g3" aria-hidden="true"></span>Document Chunker</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose only when content has no usable structure or timing data; the chapter presents it as the naive baseline that fractures semantic units.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Fixed-Length Chunker"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>alternative to</title></line><a href="DocumentChunker.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Document Chunker: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Document Chunker</text></a><a href="OverlappingWindowChunker.html"><circle class="g3" cx="522.7" cy="173.6" r="7"><title>Overlapping Window Chunker: alternative to</title></circle><text x="534.1" y="173.9" text-anchor="start">Overlapping Window Chunker</text></a><a href="SemanticBoundaryChunker.html"><circle class="g3" cx="468.2" cy="341.4" r="7"><title>Semantic Boundary Chunker: alternative to</title></circle><text x="475.2" y="355.1" text-anchor="start">Semantic Boundary Chunker</text></a><a href="TimeIndexedTranscriptChunker.html"><circle class="g3" cx="291.8" cy="341.4" r="7"><title>Time-Indexed Transcript Chunker: alternative to</title></circle><text x="284.8" y="355.1" text-anchor="end">Time-Indexed Transcript …</text></a><a href="HierarchicalChunker.html"><circle class="g3" cx="237.3" cy="173.6" r="7"><title>Hierarchical Chunker: alternative to</title></circle><text x="225.9" y="173.9" text-anchor="end">Hierarchical Chunker</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/HierarchicalChunker.html"><span class="dot g3" aria-hidden="true"></span>Hierarchical Chunker</a> <a class="src" href="../sources.html#Ch5.8">Ch5.8</a></li><li><a class="comp" href="../c/OverlappingWindowChunker.html"><span class="dot g3" aria-hidden="true"></span>Overlapping Window Chunker</a> <a class="src" href="../sources.html#Ch5.8">Ch5.8</a></li><li><a class="comp" href="../c/SemanticBoundaryChunker.html"><span class="dot g3" aria-hidden="true"></span>Semantic Boundary Chunker</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a> <a class="src" href="../sources.html#Ch3.10">Ch3.10</a> <span class="src more" title="Ch5.8, Ch6.3B">+2</span></li><li><a class="comp" href="../c/TimeIndexedTranscriptChunker.html"><span class="dot g3" aria-hidden="true"></span>Time-Indexed Transcript Chunker</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be used for continuous transcripts, since it breaks sentences and yields chunks that lack context and retrieve poorly.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example naive split: every 1,000 characters (Ch2.7).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch3.10">Ch3.10</a>: T. Nguyen, &quot;Efficiency Metrics,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.10. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch5.8">Ch5.8</a>: T. Nguyen, &quot;Semantic Memory,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direct Preference Optimizer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Direct Preference Optimizer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:DirectPreferenceOptimizer</code></p>
+<div class="split"><section>
+<p class="lead">A preference optimizer that trains the policy directly on preference pairs with a loss favouring preferred over non-preferred responses, without a separate reward model.</p>
+<p><strong>Responsibility.</strong> Optimizes a policy directly from preference data.</p>
+<p class="muted">Also known as: Direct Preference Optimization (DPO), DPO trainer</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/PreferenceOptimizer.html"><span class="dot g4" aria-hidden="true"></span>Preference Optimizer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose first for simpler preference-learning tasks where direct optimization suffices and lower compute is desired.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Direct Preference Optimizer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>alternative to</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>hosts</title></line><a href="RLHFPolicyOptimizer.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>RLHF Policy Optimizer: alternative to</title></circle><text x="380.0" y="50.0" text-anchor="middle">RLHF Policy Optimizer</text></a><a href="PreferenceDataset.html"><circle class="g4" cx="530.0" cy="220.0" r="7"><title>Preference Dataset: reads</title></circle><text x="542.0" y="224.0" text-anchor="start">Preference Dataset</text></a><a href="PreferenceOptimizer.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Preference Optimizer: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Preference Optimizer</text></a><a href="ReferencePolicyModel.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>Reference Policy Model: hosts</title></circle><text x="218.0" y="224.0" text-anchor="end">Reference Policy Model</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>hosts <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ReferencePolicyModel.html"><span class="dot g4" aria-hidden="true"></span>Reference Policy Model</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/PreferenceDataset.html"><span class="dot g4" aria-hidden="true"></span>Preference Dataset</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/RLHFPolicyOptimizer.html"><span class="dot g4" aria-hidden="true"></span>RLHF Policy Optimizer</a> <a class="src" href="../sources.html#Ch3.5">Ch3.5</a> <a class="src" href="../sources.html#Ch10.3">Ch10.3</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be used where the model must learn online from environment or user interaction, because DPO optimizes against a fixed, pre-collected preference dataset.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>DPO reduces the RLHF pipeline from three stages to two (Ch3.5).</li><li>Needs only the policy and reference models in memory, halving GPU memory versus PPO-based RLHF (Ch10.3).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Direct Preference Optimization</span><span class="chip">Direct Preference Optimization (DPO)</span><span class="chip">Implicit reward modeling</span><span class="chip">Offline preference learning</span></dd><dt>Quality attributes</dt><dd><span class="chip">Cost efficiency</span><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Compounding reward-model approximation error</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.5">Ch3.5</a>: T. Nguyen, &quot;Prompt Optimization, Few-Shot Learning, Fine-Tuning,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.3">Ch10.3</a>: T. Nguyen, &quot;RLHF Methodology,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.3. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

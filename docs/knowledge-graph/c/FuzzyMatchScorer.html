@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuzzy Match Scorer · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ObservabilityComponent">Observability &amp; Evaluation</a> · Software component</p>
+<h1><span class="dot g6" aria-hidden="true"></span>Fuzzy Match Scorer</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Observability &amp; Evaluation</span><span class="badge">Observability &amp; Evaluation</span><code class="badge mono">arc:FuzzyMatchScorer</code></p>
+<div class="split"><section>
+<p class="lead">A response scorer that marks a response correct when its string similarity to the ground-truth answer exceeds a threshold, tolerating paraphrase.</p>
+<p><strong>Responsibility.</strong> Scores correctness by similarity-thresholded matching against the expected answer.</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ResponseScorer.html"><span class="dot g6" aria-hidden="true"></span>Response Scorer</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when correct answers may be paraphrased (e.g., differently worded delivery dates) but wrong answers must still fail.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Fuzzy Match Scorer"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is target of alternativeTo</title></line><a href="ResponseScorer.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>Response Scorer: specializes</title></circle><text x="380.0" y="50.0" text-anchor="middle">Response Scorer</text></a><a href="ExactMatchScorer.html"><circle class="g6" cx="380.0" cy="370.0" r="7"><title>Exact Match Scorer: is target of alternativeTo</title></circle><text x="380.0" y="396.0" text-anchor="middle">Exact Match Scorer</text></a><circle class="g6 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ExactMatchScorer.html"><span class="dot g6" aria-hidden="true"></span>Exact Match Scorer</a> <a class="src" href="../sources.html#Ch3.1A">Ch3.1A</a></li></ul></section>
+</div>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>80% similarity threshold used to accept paraphrased correct answers (Ch3.1A).</li></ul>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch3.1A">Ch3.1A</a>: T. Nguyen, &quot;Implement Evaluation Pipelines and Task Benchmarks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 3.1A. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

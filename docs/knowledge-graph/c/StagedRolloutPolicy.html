@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staged Rollout Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#InfrastructureComponent">Infrastructure</a> · Data artifact</p>
+<h1><span class="dot g5" aria-hidden="true"></span>Staged Rollout Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Infrastructure</span><span class="badge">Infrastructure</span><code class="badge mono">arc:StagedRolloutPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A declarative rollout specification of strategy (staged or rolling), stage percentage, validation period, rollout velocity and automatic-rollback threshold.</p>
+<p><strong>Responsibility.</strong> Parameterises how quickly and safely an update propagates.</p>
+<p class="muted">Also known as: Rollout strategy, Update type strategy</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Staged Rollout Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>configures</title></line><a href="ModelRolloutManager.html"><circle class="g5" cx="380.0" cy="70.0" r="7"><title>Rollout Manager: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Rollout Manager</text></a><a href="EdgeUpdateOrchestrator.html"><circle class="g5" cx="509.9" cy="295.0" r="7"><title>Edge Update Orchestrator: configures</title></circle><text x="520.3" y="305.0" text-anchor="start">Edge Update Orchestrator</text></a><a href="CanaryRolloutController.html"><circle class="g5" cx="250.1" cy="295.0" r="7"><title>Canary Rollout Controller: configures</title></circle><text x="239.7" y="305.0" text-anchor="end">Canary Rollout Controller</text></a><circle class="g5 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/CanaryRolloutController.html"><span class="dot g5" aria-hidden="true"></span>Canary Rollout Controller</a> <a class="src" href="../sources.html#Ref8.08">Ref8.08</a></li><li><a class="comp" href="../c/EdgeUpdateOrchestrator.html"><span class="dot g5" aria-hidden="true"></span>Edge Update Orchestrator</a> <a class="src" href="../sources.html#Ch4.6">Ch4.6</a></li><li><a class="comp" href="../c/ModelRolloutManager.html"><span class="dot g5" aria-hidden="true"></span>Rollout Manager</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ref10.05">Ref10.05</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>Critical security patches MAY use immediate deployment after staging smoke tests with rollback ready; feature updates SHOULD use staged canary rollout; dependency updates SHOULD be tested in isolation first (Ref8.08).</li><li>SHOULD schedule updates in low-traffic periods and avoid Friday/holiday deployments (Ref8.08).</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Pilot example: 20% of 25 pilot stores first, 60-minute validation (Ch4.6).</li><li>After full rollout, monitor for 2 hours (Ref8.09).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">NVIDIA Fleet Command</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.6">Ch4.6</a>: T. Nguyen, &quot;TensorRT-LLM and NVIDIA Fleet Command,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref8.08">Ref8.08</a>: &quot;Model Updates and Maintenance Procedures,&quot; unpublished reference note (08-Model-Updates-Maintenance-Procedures.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref8.09">Ref8.09</a>: &quot;Chapter 8 Summary: Run, Monitor, and Maintain,&quot; unpublished reference note (09-Chapter-8-Summary.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li><li><a href="../sources.html#Ref10.05">Ref10.05</a>: &quot;The Data Flywheel: Continuous Improvement Loop,&quot; unpublished reference note (05-Data-Flywheel-Continuous-Improvement.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

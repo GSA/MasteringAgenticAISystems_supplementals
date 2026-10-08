@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hosted Provider Inference API · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Interface</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Hosted Provider Inference API</h1>
+<p class="badges"><span class="badge">Interface</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:HostedProviderInferenceAPI</code></p>
+<div class="split"><section>
+<p class="lead">A cloud-hosted model provider&#x27;s API offering function calling under provider-specific request, response, and schema-dialect conventions.</p>
+<p><strong>Responsibility.</strong> Provides function-calling inference as an external managed service.</p>
+<p class="muted">Also known as: Cloud LLM API</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ModelInferenceAPI.html"><span class="dot g4" aria-hidden="true"></span>Native Function-Calling API</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when data residency, security policy, and cost considerations permit sending prompts to a cloud-hosted LLM provider.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Hosted Provider Inference API"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is invoked by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is routed to by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>alternative to</title></line><a href="AnswerSynthesizer.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Answer Synthesizer: is invoked by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Answer Synthesizer</text></a><a href="ModelRouter.html"><circle class="g4" cx="530.0" cy="220.0" r="7"><title>Model Router: is routed to by</title></circle><text x="542.0" y="224.0" text-anchor="start">Model Router</text></a><a href="ModelInferenceAPI.html"><circle class="g4" cx="380.0" cy="370.0" r="7"><title>Native Function-Calling API: specializes</title></circle><text x="380.0" y="396.0" text-anchor="middle">Native Function-Calling …</text></a><a href="SelfHostedInferenceEndpoint.html"><circle class="g4" cx="230.0" cy="220.0" r="7"><title>Self-Hosted Inference Endpoint: alternative to</title></circle><text x="218.0" y="224.0" text-anchor="end">Self-Hosted Inference En…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is invoked by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AnswerSynthesizer.html"><span class="dot g3" aria-hidden="true"></span>Answer Synthesizer</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li></ul></section>
+<section class="rel"><h3>is routed to by <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ModelRouter.html"><span class="dot g4" aria-hidden="true"></span>Model Router</a> <a class="src" href="../sources.html#Ch4.2">Ch4.2</a> <a class="src" href="../sources.html#Ch8.3">Ch8.3</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/SelfHostedInferenceEndpoint.html"><span class="dot g4" aria-hidden="true"></span>Self-Hosted Inference Endpoint</a> <a class="src" href="../sources.html#Ch2.6">Ch2.6</a> <a class="src" href="../sources.html#Ch2.9">Ch2.9</a> <span class="src more" title="Ch6.5, Ref7.07">+2</span></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT assume model behaviour is stable across calls; providers may deploy model updates transparently.</li><li>SHOULD prefer dedicated-throughput capacity over pay-per-token APIs when peak-time queue wait inflates TTFT.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">OpenAI API</span><span class="chip">Anthropic Claude API</span><span class="chip">Google Gemini API</span><span class="chip">Anthropic API</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.6">Ch2.6</a>: T. Nguyen, &quot;Tool Integration and Function Calling,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch2.9">Ch2.9</a>: T. Nguyen, &quot;Streaming and Real-Time Responses,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.9. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch8.3">Ch8.3</a>: T. Nguyen, &quot;Token Economics and Architecture,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 8.3. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.07">Ref7.07</a>: E. Li, V. Bellotti, R. Kraus, and R. Kao, &quot;Build a retrieval-augmented generation (RAG) agent with NVIDIA Nemotron,&quot; NVIDIA Technical Blog, Sep. 23, 2025. [Online]. Available: https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

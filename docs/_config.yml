@@ -38,7 +38,7 @@ nav_external_links:
   - title: Discussion
     url: https://github.com/GSA/MasteringAgenticAISystems_supplementals/discussions
     opens_in_new_tab: true
-    before: Reference Architecture  # menu item to sit above (our addition; the theme itself puts these last)
+    before: Knowledge Graph  # menu item to sit above (our addition; the theme itself puts these last)
 
 aux_links:
   GitHub repository: https://github.com/GSA/MasteringAgenticAISystems_supplementals

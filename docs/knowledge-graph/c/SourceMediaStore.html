@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source Media Store · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Data store</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Source Media Store</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:SourceMediaStore</code></p>
+<div class="split"><section>
+<p class="lead">A store of original non-text source assets (images, charts, audio recordings) referenced from chunk metadata for visual reasoning, citation, and playback.</p>
+<p><strong>Responsibility.</strong> Preserves original media so retrieved chunks can be traced back to their source assets.</p>
+<p class="muted">Also known as: Original image store, Audio source repository</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Source Media Store"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="530.0" y2="220.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="230.0" y2="220.0"><title>is read by</title></line><a href="DocumentIngestor.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Document Ingestor: is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Document Ingestor</text></a><a href="SpeechTranscriber.html"><circle class="g3" cx="530.0" cy="220.0" r="7"><title>Speech Transcriber: is read by</title></circle><text x="542.0" y="224.0" text-anchor="start">Speech Transcriber</text></a><a href="MultimodalContextAssembler.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Multimodal Context Assembler: is read by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Multimodal Context Assem…</text></a><a href="TimestampedCitationPresenter.html"><circle class="g8" cx="230.0" cy="220.0" r="7"><title>Timestamped Citation Presenter: is read by</title></circle><text x="218.0" y="224.0" text-anchor="end">Timestamped Citation Pre…</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/MultimodalContextAssembler.html"><span class="dot g3" aria-hidden="true"></span>Multimodal Context Assembler</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li><li><a class="comp" href="../c/SpeechTranscriber.html"><span class="dot g3" aria-hidden="true"></span>Speech Transcriber</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li><li><a class="comp" href="../c/TimestampedCitationPresenter.html"><span class="dot g8" aria-hidden="true"></span>Timestamped Citation Presenter</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DocumentIngestor.html"><span class="dot g3" aria-hidden="true"></span>Document Ingestor</a> <a class="src" href="../sources.html#Ch2.7">Ch2.7</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD be referenced from chunk metadata so retrieved image-derived chunks can load the original image.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Retrieve on text, reason on original</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span><span class="chip">Functional suitability: correctness and validity (ISO/IEC 25010 | NIST AI RMF: valid)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Visual detail lost in text conversion</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch2.7">Ch2.7</a>: T. Nguyen, &quot;Multimodal RAG Approaches,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 2.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

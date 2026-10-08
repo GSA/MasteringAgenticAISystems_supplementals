@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instance-Local Session State · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#MemoryComponent">Memory</a> · Data store</p>
+<h1><span class="dot g2" aria-hidden="true"></span>Instance-Local Session State</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Memory</span><span class="badge">Cognition &amp; Memory</span><code class="badge mono">arc:InstanceLocalSessionState</code></p>
+<div class="split"><section>
+<p class="lead">Session state held in a replica&#x27;s own memory, requiring session affinity so a user&#x27;s requests return to the same replica.</p>
+<p><strong>Responsibility.</strong> Keeps a user&#x27;s session state in the serving replica&#x27;s memory.</p>
+<p class="muted">Also known as: Local memory state store, Sticky-session state, LocalMemory, Local TTL context cache</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/ConversationStateStore.html"><span class="dot g2" aria-hidden="true"></span>Conversation State Store</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when latency requirements are extreme (sub-100 ms), scale is modest (tens of instances), and session recreation after instance failure is acceptable.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Instance-Local Session State"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by; is written by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is target of alternativeTo</title></line><a href="AgentController.html"><circle class="g1" cx="380.0" cy="70.0" r="7"><title>Agent Controller: is read by; is written by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Agent Controller</text></a><a href="ConversationStateStore.html"><circle class="g2" cx="509.9" cy="295.0" r="7"><title>Conversation State Store: specializes</title></circle><text x="520.3" y="305.0" text-anchor="start">Conversation State Store</text></a><a href="ExternalSessionStateStore.html"><circle class="g2" cx="250.1" cy="295.0" r="7"><title>External Session State Store: is target of alternativeTo</title></circle><text x="239.7" y="305.0" text-anchor="end">External Session State S…</text></a><circle class="g2 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/AgentController.html"><span class="dot g1" aria-hidden="true"></span>Agent Controller</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch4.7">Ch4.7</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/ExternalSessionStateStore.html"><span class="dot g2" aria-hidden="true"></span>External Session State Store</a> <a class="src" href="../sources.html#Ch1.8">Ch1.8</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD NOT be used where autoscaling or instance failure would lose sessions unacceptably; new instances receive no traffic until sessions form.</li><li>SHOULD be limited to short-TTL caching with invalidation logic in hybrid designs; relying on it forces session affinity and loses context on replica failure or rolling update.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Suited to tens of instances; stateless preferred at 100+ instances (Ch1.8).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Session affinity (sticky sessions)</span></dd><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch1.8">Ch1.8</a>: T. Nguyen, &quot;Scalability and Production Deployment,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 1.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch4.7">Ch4.7</a>: T. Nguyen, &quot;Scaling Strategies,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.7. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

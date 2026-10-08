@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Integrity Validator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#SafetySecurityComponent">Safety &amp; Security</a> · Software component</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Model Integrity Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Safety &amp; Security</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:ModelArtifactVerifier</code></p>
+<div class="split"><section>
+<p class="lead">A security component that verifies model artifacts use a non-executable tensor serialization format, scans them for known vulnerabilities and validates their integrity before loading.</p>
+<p><strong>Responsibility.</strong> Prevents tampered or code-bearing model files from being loaded.</p>
+<p class="muted">Also known as: Safetensors validation, Model file scanner, Model integrity checking, Model security scanning, Model verification, Model Integrity Validator</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Model Integrity Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>audits</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>reads</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>guards</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>reads</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: guards</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="FoundationLLM.html"><circle class="g4" cx="522.7" cy="173.6" r="7"><title>Foundation LLM: audits</title></circle><text x="534.1" y="173.9" text-anchor="start">Foundation LLM</text></a><a href="ModelRepository.html"><circle class="g4" cx="468.2" cy="341.4" r="7"><title>Model Repository: reads</title></circle><text x="475.2" y="355.1" text-anchor="start">Model Repository</text></a><a href="DynamicModelLoader.html"><circle class="g4" cx="291.8" cy="341.4" r="7"><title>Dynamic Model Loader: guards</title></circle><text x="284.8" y="355.1" text-anchor="end">Dynamic Model Loader</text></a><a href="ModelArtifactCache.html"><circle class="g4" cx="237.3" cy="173.6" r="7"><title>Model Artifact Cache: reads</title></circle><text x="225.9" y="173.9" text-anchor="end">Model Artifact Cache</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/ModelArtifactCache.html"><span class="dot g4" aria-hidden="true"></span>Model Artifact Cache</a> <a class="src" href="../sources.html#Ref7.04">Ref7.04</a></li><li><a class="comp" href="../c/ModelRepository.html"><span class="dot g4" aria-hidden="true"></span>Model Repository</a> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/DynamicModelLoader.html"><span class="dot g4" aria-hidden="true"></span>Dynamic Model Loader</a> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ref7.04">Ref7.04</a></li></ul></section>
+<section class="rel"><h3>audits <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/FoundationLLM.html"><span class="dot g4" aria-hidden="true"></span>Foundation LLM</a> <span class="tag">abstract</span> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD require the safetensors format rather than pickle for custom or third-party models.</li><li>MUST verify the integrity of models not curated by the platform vendor (e.g., from a public hub or local storage) before deployment; the deploying organization bears this responsibility.</li><li>SHOULD store and load model weights in a safe tensor serialization format and validate it before loading.</li><li>MAY rely on vendor pre-verification, integrity checks and security scanning for curated model-specific inference containers.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Safe serialization format enforcement</span><span class="chip">Integrity checking</span><span class="chip">Pre-deployment model verification</span><span class="chip">Safe tensor serialization format</span></dd><dt>Technologies</dt><dd><span class="chip">safetensors</span><span class="chip">Safetensors</span><span class="chip">NVIDIA NIM</span></dd><dt>Quality attributes</dt><dd><span class="chip">Security (ISO/IEC 25010 | NIST AI RMF: secure and resilient)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Arbitrary code execution from pickle-format model files</span><span class="chip">Model tampering</span><span class="chip">Tampered or malicious model weights</span><span class="chip">Deployment of unverified third-party models</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch7.1B">Ch7.1B</a>: T. Nguyen, &quot;Nvidia NIM and Colang,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref7.04">Ref7.04</a>: NVIDIA, &quot;NVIDIA NIM,&quot; NVIDIA Docs. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/nim/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

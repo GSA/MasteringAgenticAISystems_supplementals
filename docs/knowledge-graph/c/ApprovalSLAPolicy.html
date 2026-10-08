@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Approval SLA Policy · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#HumanOversightComponent">Human Oversight</a> · Data artifact</p>
+<h1><span class="dot g8" aria-hidden="true"></span>Approval SLA Policy</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Human Oversight</span><span class="badge">Experience &amp; Human Oversight</span><code class="badge mono">arc:ApprovalSLAPolicy</code></p>
+<div class="split"><section>
+<p class="lead">A configuration of maximum acceptable human-approval times per urgency class, together with the actions taken on breach such as parallel routing to backup approvers, pool expansion or incident response.</p>
+<p><strong>Responsibility.</strong> Defines approval-time objectives by urgency and the responses to their violation.</p>
+<p class="muted">Also known as: Approval SLAs, Time-bounded decision policy, Response window</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Approval SLA Policy"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>configures</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>configures</title></line><a href="ApprovalEscalationScheduler.html"><circle class="g8" cx="380.0" cy="70.0" r="7"><title>Approval Escalation Scheduler: configures</title></circle><text x="380.0" y="50.0" text-anchor="middle">Approval Escalation Sche…</text></a><a href="OversightPerformanceMonitor.html"><circle class="g8" cx="380.0" cy="370.0" r="7"><title>Oversight Performance Monitor: configures</title></circle><text x="380.0" y="396.0" text-anchor="middle">Oversight Performance Mo…</text></a><circle class="g8 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>configures <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/ApprovalEscalationScheduler.html"><span class="dot g8" aria-hidden="true"></span>Approval Escalation Scheduler</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li><li><a class="comp" href="../c/OversightPerformanceMonitor.html"><span class="dot g8" aria-hidden="true"></span>Oversight Performance Monitor</a> <a class="src" href="../sources.html#Ch10.4">Ch10.4</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST bound every approval with a response window so requests never wait indefinitely.</li><li>SHOULD treat SLA violations as incidents signalling capacity shortfalls, not as inevitable operating characteristics.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example SLAs: routine requests within 2 hours, standard within 24 hours, complex cases within 72 hours (Ch10.4).</li><li>Timeout policies typically enforce 24-72 hour response windows before timeout escalation (Ch10.4).</li><li>Ref10.01 workflow timeouts: simple approval 5 minutes, collaborative refinement 30 minutes, expert escalation 2 hours.</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Quality attributes</dt><dd><span class="chip">Performance efficiency (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Indefinite waits on human approval</span><span class="chip">Extended approval delays harming users</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch10.4">Ch10.4</a>: T. Nguyen, &quot;Human-in-the-Loop,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.4. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref10.01">Ref10.01</a>: &quot;Human-in-the-Loop Systems for Agent Interactions,&quot; unpublished reference note (01-Human-in-the-Loop-Systems.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

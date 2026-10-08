@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chunk Schema Validator · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#KnowledgeComponent">Knowledge &amp; Data</a> · Software component</p>
+<h1><span class="dot g3" aria-hidden="true"></span>Chunk Schema Validator</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Knowledge &amp; Data</span><span class="badge">Knowledge &amp; Data</span><code class="badge mono">arc:ChunkSchemaValidator</code></p>
+<div class="split"><section>
+<p class="lead">A pre-load validation component that checks each processed chunk, including embedding dimensionality, against the target collection schema and fails fast on violations.</p>
+<p><strong>Responsibility.</strong> Blocks malformed records from reaching batch insertion.</p>
+<p class="muted">Also known as: Pre-load schema validation</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Chunk Schema Validator"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>guards</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is configured by</title></line><a href="VectorIndexLoader.html"><circle class="g3" cx="380.0" cy="70.0" r="7"><title>Vector Batch Ingestor: guards</title></circle><text x="380.0" y="50.0" text-anchor="middle">Vector Batch Ingestor</text></a><a href="VectorCollectionSchema.html"><circle class="g3" cx="380.0" cy="370.0" r="7"><title>Vector Collection Schema: is configured by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Vector Collection Schema</text></a><circle class="g3 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is configured by <span class="cat">structural</span></h3><ul><li><a class="comp" href="../c/VectorCollectionSchema.html"><span class="dot g3" aria-hidden="true"></span>Vector Collection Schema</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li></ul></section>
+<section class="rel"><h3>guards <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/VectorIndexLoader.html"><span class="dot g3" aria-hidden="true"></span>Vector Batch Ingestor</a> <a class="src" href="../sources.html#Ch6.3B">Ch6.3B</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>SHOULD validate chunks against the expected schema before loading and fail fast with clear error messages.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>One malformed embedding (1,023 instead of 1,024 dimensions) can crash batch insertion (Ch6.3B).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Fail fast</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Batch insertion crash from a single malformed embedding</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch6.3B">Ch6.3B</a>: T. Nguyen, &quot;ETL Worked Example - Load Phase &amp; Pipeline Integration,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.3B. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

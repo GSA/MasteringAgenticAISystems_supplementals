@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revealed Preference Learner · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelAdaptationComponent">Model Adaptation</a> · Software component</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Revealed Preference Learner</h1>
+<p class="badges"><span class="badge">Software component</span><span class="badge">Model Adaptation</span><span class="badge">Models</span><code class="badge mono">arc:RevealedPreferenceLearner</code></p>
+<div class="split"><section>
+<p class="lead">A preference elicitor that updates utility weights from which presented options users select and from outcome feedback, learning weights that best explain observed choices.</p>
+<p><strong>Responsibility.</strong> Learns personalized utility weights from users&#x27; revealed choices and feedback.</p>
+<p class="muted">Also known as: Adaptive utility learning, Implicit weight learning, Suggestion-rejection learner</p>
+<p><strong>Variant of</strong> <a class="comp" href="../c/PreferenceElicitor.html"><span class="dot g4" aria-hidden="true"></span>Preference Elicitor</a> <span class="tag">abstract</span></p>
+<p class="criterion"><strong>When to choose.</strong> Choose when users&#x27; selections among presented options and feedback are continuously observable, enabling personalization without explicit preference configuration.</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Revealed Preference Learner"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>reads</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is target of alternativeTo</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>writes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>specializes</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>writes</title></line><a href="UserFeedbackStore.html"><circle class="g6" cx="380.0" cy="70.0" r="7"><title>User Feedback Store: reads</title></circle><text x="380.0" y="50.0" text-anchor="middle">User Feedback Store</text></a><a href="ImplicitFeedbackAnalyzer.html"><circle class="g6" cx="509.9" cy="145.0" r="7"><title>Behavioral Signal Tracker: receives data from</title></circle><text x="520.3" y="143.0" text-anchor="start">Behavioral Signal Tracker</text></a><a href="InverseRewardLearner.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Inverse Reward Learner: is target of alternativeTo</title></circle><text x="520.3" y="305.0" text-anchor="start">Inverse Reward Learner</text></a><a href="UserPreferenceProfileStore.html"><circle class="g2" cx="380.0" cy="370.0" r="7"><title>User Preference Profile Store: writes</title></circle><text x="380.0" y="396.0" text-anchor="middle">User Preference Profile …</text></a><a href="PreferenceElicitor.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Preference Elicitor: specializes</title></circle><text x="239.7" y="305.0" text-anchor="end">Preference Elicitor</text></a><a href="ValuePriorityProfileStore.html"><circle class="g2" cx="250.1" cy="145.0" r="7"><title>Value Priority Profile Store: writes</title></circle><text x="239.7" y="143.0" text-anchor="end">Value Priority Profile S…</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>reads <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/UserFeedbackStore.html"><span class="dot g6" aria-hidden="true"></span>User Feedback Store</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+<section class="rel"><h3>writes <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/UserPreferenceProfileStore.html"><span class="dot g2" aria-hidden="true"></span>User Preference Profile Store</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li><li><a class="comp" href="../c/ValuePriorityProfileStore.html"><span class="dot g2" aria-hidden="true"></span>Value Priority Profile Store</a> <a class="src" href="../sources.html#Ch9.6">Ch9.6</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/ImplicitFeedbackAnalyzer.html"><span class="dot g6" aria-hidden="true"></span>Behavioral Signal Tracker</a> <a class="src" href="../sources.html#Ch10.2">Ch10.2</a></li></ul></section>
+<section class="rel"><h3>alternative to <span class="cat">variability</span></h3><ul><li><a class="comp" href="../c/InverseRewardLearner.html"><span class="dot g4" aria-hidden="true"></span>Inverse Reward Learner</a> <a class="src" href="../sources.html#Ch5.10">Ch5.10</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Revealed-preference weight inference</span><span class="chip">Contextual preference learning</span><span class="chip">Revealed-value observation</span></dd><dt>Quality attributes</dt><dd><span class="chip">Interaction capability (ISO/IEC 25010)</span><span class="chip">Flexibility (ISO/IEC 25010)</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch5.10">Ch5.10</a>: T. Nguyen, &quot;Utility-Based Decision Making Fundamentals,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 5.10. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch9.6">Ch9.6</a>: T. Nguyen, &quot;Value Alignment Frameworks,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.6. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch10.2">Ch10.2</a>: T. Nguyen, &quot;Proactive Agents,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 10.2. ISBN: 9798244538229.</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

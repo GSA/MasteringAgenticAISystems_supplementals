@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Repository · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#ModelServingComponent">Model Serving</a> · Data store</p>
+<h1><span class="dot g4" aria-hidden="true"></span>Model Repository</h1>
+<p class="badges"><span class="badge">Data store</span><span class="badge">Model Serving</span><span class="badge">Models</span><code class="badge mono">arc:ModelRepository</code></p>
+<div class="split"><section>
+<p class="lead">A versioned directory store of model artifacts and their serving configurations, mounted by an inference server from persistent or object storage.</p>
+<p><strong>Responsibility.</strong> Holds deployable model versions separately from inference server code.</p>
+<p class="muted">Also known as: Triton model repository, Shared model-weight storage, NGC model catalog</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Model Repository"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="145.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="509.9" y2="295.0"><title>is written by</title></line><line x1="380.0" y1="220.0" x2="380.0" y2="370.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="295.0"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="250.1" y2="145.0"><title>is read by</title></line><a href="LLMInferenceService.html"><circle class="g4" cx="380.0" cy="70.0" r="7"><title>LLM Inference Service: is read by</title></circle><text x="380.0" y="50.0" text-anchor="middle">LLM Inference Service</text></a><a href="InferenceServer.html"><circle class="g4" cx="509.9" cy="145.0" r="7"><title>Inference Server: is read by</title></circle><text x="520.3" y="143.0" text-anchor="start">Inference Server</text></a><a href="EngineBuilder.html"><circle class="g4" cx="509.9" cy="295.0" r="7"><title>Engine Builder: is written by</title></circle><text x="520.3" y="305.0" text-anchor="start">Engine Builder</text></a><a href="ModelArtifactVerifier.html"><circle class="g7" cx="380.0" cy="370.0" r="7"><title>Model Integrity Validator: is read by</title></circle><text x="380.0" y="396.0" text-anchor="middle">Model Integrity Validator</text></a><a href="DynamicModelLoader.html"><circle class="g4" cx="250.1" cy="295.0" r="7"><title>Dynamic Model Loader: is read by</title></circle><text x="239.7" y="305.0" text-anchor="end">Dynamic Model Loader</text></a><a href="InferenceEngineSelector.html"><circle class="g4" cx="250.1" cy="145.0" r="7"><title>Inference Engine Selector: is read by</title></circle><text x="239.7" y="143.0" text-anchor="end">Inference Engine Selector</text></a><circle class="g4 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/DynamicModelLoader.html"><span class="dot g4" aria-hidden="true"></span>Dynamic Model Loader</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li><li><a class="comp" href="../c/InferenceEngineSelector.html"><span class="dot g4" aria-hidden="true"></span>Inference Engine Selector</a> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li><li><a class="comp" href="../c/InferenceServer.html"><span class="dot g4" aria-hidden="true"></span>Inference Server</a> <a class="src" href="../sources.html#Ch4.5">Ch4.5</a> <a class="src" href="../sources.html#Ref4.03">Ref4.03</a> <span class="src more" title="Ref7.02, Ref7.08">+2</span></li><li><a class="comp" href="../c/LLMInferenceService.html"><span class="dot g4" aria-hidden="true"></span>LLM Inference Service</a> <a class="src" href="../sources.html#Ch6.5">Ch6.5</a></li><li><a class="comp" href="../c/ModelArtifactVerifier.html"><span class="dot g7" aria-hidden="true"></span>Model Integrity Validator</a> <a class="src" href="../sources.html#Ch7.1B">Ch7.1B</a></li></ul></section>
+<section class="rel"><h3>is written by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/EngineBuilder.html"><span class="dot g4" aria-hidden="true"></span>Engine Builder</a> <a class="src" href="../sources.html#Ref7.01">Ref7.01</a></li></ul></section>
+</div>
+<h2>Classification</h2><dl class="concepts"><dt>Technologies</dt><dd><span class="chip">Kubernetes PersistentVolume</span><span class="chip">Amazon S3</span><span class="chip">Google Cloud Storage</span><span class="chip">Kubernetes ConfigMap</span></dd><dt>Quality attributes</dt><dd><span class="chip">Maintainability (ISO/IEC 25010)</span><span class="chip">Reliability (ISO/IEC 25010 | NIST AI RMF: valid and reliable)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Downtime for model updates</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch4.5">Ch4.5</a>: T. Nguyen, &quot;NVIDIA NIM and Triton Inference Server,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 4.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch6.5">Ch6.5</a>: T. Nguyen, &quot;Production RAG Systems,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 6.5. ISBN: 9798244538229.</li><li><a href="../sources.html#Ch7.1B">Ch7.1B</a>: T. Nguyen, &quot;Nvidia NIM and Colang,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 7.1B. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref4.03">Ref4.03</a>: M. Zhang, J. Wyman, I. M. Bhosale, and W. Tan, &quot;Scaling LLMs with NVIDIA Triton and NVIDIA TensorRT-LLM using Kubernetes,&quot; NVIDIA Technical Blog, Oct. 22, 2024. [Online]. Available: https://developer.nvidia.com/blog/scaling-llms-with-nvidia-triton-and-nvidia-tensorrt-llm-using-kubernetes/</li><li><a href="../sources.html#Ref7.02">Ref7.02</a>: NVIDIA, &quot;Batchers,&quot; NVIDIA Triton Inference Server User Guide. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/batcher.html</li><li><a href="../sources.html#Ref7.08">Ref7.08</a>: NVIDIA, &quot;NVIDIA Deep Learning Triton Inference Server Documentation,&quot; NVIDIA Docs. Accessed: Sep. 27, 2026. [Online]. Available: https://docs.nvidia.com/deeplearning/triton-inference-server/</li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>

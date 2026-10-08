@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk Treatment Plan · Agentic AI Knowledge Graph</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/theme.js"></script>
+
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">Agentic AI Knowledge Graph</a>
+  <nav aria-label="Main"><a href="../index.html">Overview</a><a href="../explore.html">Explore graph</a><a href="../layers.html">Layers</a><a href="../variation-points.html">Variation points</a><a href="../profiles.html">Profiles</a><a href="../ontology.html">Ontology</a><a href="../sources.html">Sources</a></nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<p class="crumbs"><a href="../layers.html#GovernanceComponent">Governance &amp; Compliance</a> · Data artifact</p>
+<h1><span class="dot g7" aria-hidden="true"></span>Risk Treatment Plan</h1>
+<p class="badges"><span class="badge">Data artifact</span><span class="badge">Governance &amp; Compliance</span><span class="badge">Safety, Security &amp; Governance</span><code class="badge mono">arc:RiskTreatmentPlan</code></p>
+<div class="split"><section>
+<p class="lead">A per-risk plan recording the chosen treatment (avoid, mitigate, transfer or accept), the specific technical and organizational controls, their expected probability or impact reduction, owners, timelines and target residual score.</p>
+<p><strong>Responsibility.</strong> Specifies how one identified risk will be treated and by whom.</p>
+<p class="muted">Also known as: Mitigation plan, Risk response plan</p>
+</section>
+<figure class="ego-wrap"><svg class="ego" viewBox="0 0 760 440" role="img" aria-label="Direct neighbourhood of Risk Treatment Plan"><line x1="380.0" y1="220.0" x2="380.0" y2="70.0"><title>is evaluated by</title></line><line x1="380.0" y1="220.0" x2="522.7" y2="173.6"><title>sends data to</title></line><line x1="380.0" y1="220.0" x2="468.2" y2="341.4"><title>is read by</title></line><line x1="380.0" y1="220.0" x2="291.8" y2="341.4"><title>receives data from</title></line><line x1="380.0" y1="220.0" x2="237.3" y2="173.6"><title>is constrained by</title></line><a href="AIGovernanceBoard.html"><circle class="g7" cx="380.0" cy="70.0" r="7"><title>Oversight Governance Committee: is evaluated by</title></circle><text x="380.0" y="50.0" text-anchor="middle">Oversight Governance Com…</text></a><a href="AIRiskRegister.html"><circle class="g7" cx="522.7" cy="173.6" r="7"><title>Harm Risk Register: sends data to</title></circle><text x="534.1" y="173.9" text-anchor="start">Harm Risk Register</text></a><a href="RemediationTracker.html"><circle class="g7" cx="468.2" cy="341.4" r="7"><title>Remediation Tracker: is read by</title></circle><text x="475.2" y="355.1" text-anchor="start">Remediation Tracker</text></a><a href="AIControlCatalog.html"><circle class="g7" cx="291.8" cy="341.4" r="7"><title>AI Control Catalog: receives data from</title></circle><text x="284.8" y="355.1" text-anchor="end">AI Control Catalog</text></a><a href="RiskTolerancePolicy.html"><circle class="g7" cx="237.3" cy="173.6" r="7"><title>Risk Tolerance Policy: is constrained by</title></circle><text x="225.9" y="173.9" text-anchor="end">Risk Tolerance Policy</text></a><circle class="g7 center" cx="380.0" cy="220.0" r="12"/></svg><figcaption>Direct neighbourhood (hover for relationship types)</figcaption></figure></div>
+<h2>Relationships</h2><div class="rels">
+<section class="rel"><h3>is read by <span class="cat">dependency</span></h3><ul><li><a class="comp" href="../c/RemediationTracker.html"><span class="dot g7" aria-hidden="true"></span>Remediation Tracker</a> <a class="src" href="../sources.html#Ref9.07">Ref9.07</a></li></ul></section>
+<section class="rel"><h3>receives data from <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AIControlCatalog.html"><span class="dot g7" aria-hidden="true"></span>AI Control Catalog</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li></ul></section>
+<section class="rel"><h3>sends data to <span class="cat">dynamic</span></h3><ul><li><a class="comp" href="../c/AIRiskRegister.html"><span class="dot g7" aria-hidden="true"></span>Harm Risk Register</a> <a class="src" href="../sources.html#Ref9.07">Ref9.07</a></li></ul></section>
+<section class="rel"><h3>is constrained by <span class="cat">control</span></h3><ul><li><a class="comp" href="../c/RiskTolerancePolicy.html"><span class="dot g7" aria-hidden="true"></span>Risk Tolerance Policy</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li></ul></section>
+<section class="rel"><h3>is evaluated by <span class="cat">assurance</span></h3><ul><li><a class="comp" href="../c/AIGovernanceBoard.html"><span class="dot g7" aria-hidden="true"></span>Oversight Governance Committee</a> <a class="src" href="../sources.html#Ch9.8">Ch9.8</a></li></ul></section>
+</div>
+<h2>Design guidance</h2><ul class="guidance"><li>MUST record a deliberate treatment decision for each risk rather than a default approach.</li><li>SHOULD combine technical controls with organizational controls rather than relying on technology alone.</li><li>SHOULD prefer elimination, then reduction, then transfer, then acceptance with close monitoring.</li></ul>
+<h2>Quantitative guidance</h2><p class="muted">As stated by the sources; verify before use.</p><ul class="guidance"><li>Example: input validation reduces probability 30%; human review gate reduces impact 50%; residual 0.04 (Ref9.07).</li></ul>
+<h2>Classification</h2><dl class="concepts"><dt>Patterns</dt><dd><span class="chip">Risk avoidance</span><span class="chip">Risk mitigation</span><span class="chip">Risk transfer</span><span class="chip">Risk acceptance</span><span class="chip">Eliminate-reduce-transfer-accept hierarchy</span></dd><dt>Quality attributes</dt><dd><span class="chip">Transparency and accountability (NIST AI RMF: accountable and transparent)</span></dd><dt>Risks mitigated</dt><dd><span class="chip">Default, undeliberated risk treatment</span></dd><dt>Frameworks &amp; regulations</dt><dd><span class="chip">NIST AI RMF: MANAGE</span><span class="chip">ISO/IEC 42001 §8 Operation</span><span class="chip">ISO 31000</span></dd></dl>
+<h2>Sources</h2><ol class="sources"><li><a href="../sources.html#Ch9.8">Ch9.8</a>: T. Nguyen, &quot;Standards and Frameworks for AI Governance,&quot; in Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam, 1st ed. 2026, ch. 9.8. ISBN: 9798244538229.</li><li><a href="../sources.html#Ref9.07">Ref9.07</a>: &quot;Risk Assessment and Management for AI Systems,&quot; unpublished reference note (references/Chapter 9 - Safety, Ethics, and Compliance/07-Risk-Assessment-Management.md), Mastering Agentic AI Systems: Guide for the NVIDIA NCP-AAI Exam supplementary materials, 2026. <span class="tag">unpublished note</span></li></ol>
+</main>
+<footer class="site-footer">Generated from the validated knowledge graph (kg/build).
+Source: <em>Mastering Agentic AI Systems</em> (T. Nguyen, 2026).</footer>
+</body>
+</html>
