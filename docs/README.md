@@ -206,8 +206,8 @@ The one exception is the site's look. All the pages share two files, `assets/sty
 choice shared with the rest of the site, and adds a "Study guide" link back. No page is touched. Re-run it after every
 refresh below, and after changing the preset (`--check` tells you if it is out of date).
 
-`architecture.md` is a normal Jekyll page (in the sidebar, `nav_order: 10.5`) that describes the reference
-architecture and links into it; it deliberately does not use the permalink `/knowledge-graph/`, which would
+`architecture.md` is a normal Jekyll page (in the sidebar, `nav_order: 10.5`) that describes the knowledge
+graph and links into it; it deliberately does not use the permalink `/knowledge-graph/`, which would
 collide with `knowledge-graph/index.html`.
 
 To refresh after `book1` changes:

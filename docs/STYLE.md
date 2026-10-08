@@ -101,7 +101,7 @@ Rules for contributors:
 - The theme is pinned in `_config.yml` (`just-the-docs@v0.12.0`). Upgrade by changing the tag and
   re-checking a few pages.
 
-## Reference architecture pages
+## Knowledge Graph pages
 
 `docs/knowledge-graph/` is a generated snapshot of another repository's site, and its pages must not be
 edited by hand. All of its pages share two files, so the preset is applied by a script instead:
@@ -117,7 +117,7 @@ cards, and restyles the header and the light/dark button. It also makes those pa
 choice as the rest of the site, and adds a "Study guide" link back and the GSA footer note. Run it again after
 changing a preset and after every refresh of the snapshot. `check_theme.py` reports if it is out of date.
 
-| Reference architecture variable | Preset token |
+| Knowledge Graph variable | Preset token |
 |---|---|
 | `--page` | `surface` |
 | `--surface` | `surface-raised` |

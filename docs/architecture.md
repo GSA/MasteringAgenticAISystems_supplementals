@@ -7,7 +7,7 @@ permalink: /architecture/
 # Knowledge Graph
 {: .no_toc }
 
-An interactive reference architecture for agentic AI systems, generated from a validated knowledge graph of every
+An interactive view of agentic AI system components, generated from a validated knowledge graph of every
 architectural component described across the book's 96 chapters. Browse a searchable catalog, or explore the whole
 component graph visually.
 
@@ -20,7 +20,7 @@ component graph visually.
 
 ## What it is
 
-The reference architecture is a knowledge graph (KG) of **non-divisible architectural components** and the typed,
+The knowledge graph (KG) consists of **non-divisible architectural components** and the typed,
 source-attributed relationships between them, extracted from the book's chapter text and cross-checked against
 external references. It is a separate deliverable from this site's curriculum and study materials, published here as
 a static website generated from that KG.

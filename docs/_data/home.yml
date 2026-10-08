@@ -23,7 +23,7 @@ cards:
   - title: "Practice"
     text: "Chapter quizzes and full-length practice exams."
     url: "/practice/"
-  - title: "Reference architecture"
+  - title: "Knowledge Graph"
     text: "A browsable knowledge graph of agentic AI components."
     url: "/architecture/"
   - title: "Contribute"
