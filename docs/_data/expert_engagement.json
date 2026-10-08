@@ -1,5 +1,5 @@
 {
- "as_of": "October 7, 2026",
+ "as_of": "October 8, 2026",
  "by_org": [
   {
    "label": "Microsoft",
@@ -18,13 +18,17 @@
    "n": 2
   },
   {
-   "label": "18 other organizations (fewer than 2 contacts each)",
-   "n": 18
+   "label": "20 other organizations (fewer than 2 contacts each)",
+   "n": 20
   }
  ],
  "by_tag": [
   {
    "label": "LLM agents",
+   "n": 6
+  },
+  {
+   "label": "multi-agent systems",
    "n": 5
   },
   {
@@ -37,10 +41,6 @@
   },
   {
    "label": "AI agent security",
-   "n": 4
-  },
-  {
-   "label": "multi-agent systems",
    "n": 4
   },
   {
@@ -81,34 +81,44 @@
    "d": "2026-10-05",
    "joined": 3,
    "replied": 5
+  },
+  {
+   "d": "2026-10-06",
+   "joined": 1,
+   "replied": 1
+  },
+  {
+   "d": "2026-10-07",
+   "joined": 0,
+   "replied": 1
   }
  ],
  "min_cell": 2,
- "n_orgs": 22,
+ "n_orgs": 24,
  "steps": [
   {
    "label": "Introduced themselves in the discussion",
-   "n": 16
+   "n": 17
   },
   {
    "label": "Wrote back by email",
-   "n": 22
+   "n": 24
   },
   {
    "label": "Completed the survey",
-   "n": 3
+   "n": 4
   },
   {
    "label": "Named Content Review as their track",
-   "n": 8
+   "n": 10
   }
  ],
  "tiles": {
-  "both": 11,
-  "content_review": 8,
-  "emailed": 22,
-  "engaged": 27,
-  "joined": 16
+  "both": 12,
+  "content_review": 10,
+  "emailed": 24,
+  "engaged": 29,
+  "joined": 17
  },
  "undated_joins": 1
 }
