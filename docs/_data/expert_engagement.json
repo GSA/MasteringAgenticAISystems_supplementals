@@ -1,12 +1,24 @@
 {
- "as_of": "October 8, 2026",
+ "as_of": "October 14, 2026",
  "by_org": [
   {
    "label": "Microsoft",
    "n": 3
   },
   {
+   "label": "University of Illinois Urbana-Champaign",
+   "n": 3
+  },
+  {
+   "label": "Carnegie Mellon University",
+   "n": 2
+  },
+  {
    "label": "Harvard University",
+   "n": 2
+  },
+  {
+   "label": "Independent Researcher",
    "n": 2
   },
   {
@@ -14,18 +26,22 @@
    "n": 2
   },
   {
-   "label": "University of Illinois Urbana-Champaign",
-   "n": 2
-  },
-  {
-   "label": "20 other organizations (fewer than 2 contacts each)",
-   "n": 20
+   "label": "26 other organizations (fewer than 2 contacts each)",
+   "n": 26
   }
  ],
  "by_tag": [
   {
+   "label": "agentic AI",
+   "n": 8
+  },
+  {
    "label": "LLM agents",
-   "n": 6
+   "n": 8
+  },
+  {
+   "label": "AI agent security",
+   "n": 5
   },
   {
    "label": "multi-agent systems",
@@ -36,24 +52,16 @@
    "n": 4
   },
   {
-   "label": "agentic AI",
-   "n": 4
-  },
-  {
-   "label": "AI agent security",
-   "n": 4
+   "label": "agent evaluation",
+   "n": 3
   },
   {
    "label": "AI security",
    "n": 3
   },
   {
-   "label": "autonomous AI agents",
+   "label": "autonomous agents",
    "n": 3
-  },
-  {
-   "label": "access control",
-   "n": 2
   }
  ],
  "days": [
@@ -91,34 +99,69 @@
    "d": "2026-10-07",
    "joined": 0,
    "replied": 1
+  },
+  {
+   "d": "2026-10-08",
+   "joined": 2,
+   "replied": 1
+  },
+  {
+   "d": "2026-10-09",
+   "joined": 1,
+   "replied": 2
+  },
+  {
+   "d": "2026-10-10",
+   "joined": 0,
+   "replied": 2
+  },
+  {
+   "d": "2026-10-11",
+   "joined": 0,
+   "replied": 1
+  },
+  {
+   "d": "2026-10-12",
+   "joined": 1,
+   "replied": 3
+  },
+  {
+   "d": "2026-10-13",
+   "joined": 1,
+   "replied": 0
+  },
+  {
+   "d": "2026-10-14",
+   "joined": 0,
+   "replied": 1
   }
  ],
  "min_cell": 2,
- "n_orgs": 24,
+ "n_orgs": 32,
  "steps": [
   {
    "label": "Introduced themselves in the discussion",
-   "n": 17
+   "n": 22
   },
   {
    "label": "Wrote back by email",
-   "n": 24
+   "n": 34
   },
   {
    "label": "Completed the survey",
-   "n": 4
+   "n": 5
   },
   {
    "label": "Named Content Review as their track",
-   "n": 10
+   "n": 13
   }
  ],
  "tiles": {
-  "both": 12,
-  "content_review": 10,
-  "emailed": 24,
-  "engaged": 29,
-  "joined": 17
+  "both": 16,
+  "content_review": 13,
+  "emailed": 34,
+  "engaged": 40,
+  "joined": 22
  },
  "undated_joins": 1
 }
