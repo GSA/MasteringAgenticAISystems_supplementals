@@ -1,9 +1,9 @@
 {
- "as_of": "October 14, 2026",
+ "as_of": "October 19, 2026",
  "by_org": [
   {
    "label": "Microsoft",
-   "n": 3
+   "n": 4
   },
   {
    "label": "University of Illinois Urbana-Champaign",
@@ -26,18 +26,22 @@
    "n": 2
   },
   {
-   "label": "26 other organizations (fewer than 2 contacts each)",
-   "n": 26
+   "label": "27 other organizations (fewer than 2 contacts each)",
+   "n": 27
   }
  ],
  "by_tag": [
+  {
+   "label": "LLM agents",
+   "n": 10
+  },
   {
    "label": "agentic AI",
    "n": 8
   },
   {
-   "label": "LLM agents",
-   "n": 8
+   "label": "agent security",
+   "n": 5
   },
   {
    "label": "AI agent security",
@@ -46,10 +50,6 @@
   {
    "label": "multi-agent systems",
    "n": 5
-  },
-  {
-   "label": "agent security",
-   "n": 4
   },
   {
    "label": "agent evaluation",
@@ -132,20 +132,45 @@
   },
   {
    "d": "2026-10-14",
+   "joined": 1,
+   "replied": 1
+  },
+  {
+   "d": "2026-10-15",
+   "joined": 0,
+   "replied": 0
+  },
+  {
+   "d": "2026-10-16",
+   "joined": 1,
+   "replied": 1
+  },
+  {
+   "d": "2026-10-17",
+   "joined": 0,
+   "replied": 0
+  },
+  {
+   "d": "2026-10-18",
+   "joined": 0,
+   "replied": 0
+  },
+  {
+   "d": "2026-10-19",
    "joined": 0,
    "replied": 1
   }
  ],
  "min_cell": 2,
- "n_orgs": 32,
+ "n_orgs": 33,
  "steps": [
   {
    "label": "Introduced themselves in the discussion",
-   "n": 22
+   "n": 24
   },
   {
    "label": "Wrote back by email",
-   "n": 34
+   "n": 36
   },
   {
    "label": "Completed the survey",
@@ -153,15 +178,15 @@
   },
   {
    "label": "Named Content Review as their track",
-   "n": 13
+   "n": 15
   }
  ],
  "tiles": {
-  "both": 16,
-  "content_review": 13,
-  "emailed": 34,
-  "engaged": 40,
-  "joined": 22
+  "both": 18,
+  "content_review": 15,
+  "emailed": 36,
+  "engaged": 42,
+  "joined": 24
  },
  "undated_joins": 1
 }
