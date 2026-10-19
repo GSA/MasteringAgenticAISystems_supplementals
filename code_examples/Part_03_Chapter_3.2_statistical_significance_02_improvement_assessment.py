@@ -22,19 +22,21 @@ def assess_improvement_significance(baseline_results, improved_results,
     b10 = sum((b == 1 and i == 0) for b, i in zip(baseline_results, improved_results))
     b01 = sum((b == 0 and i == 1) for b, i in zip(baseline_results, improved_results))
 
-    if b10 + b01 < 25:
-        # Use exact binomial test for small disagreement counts
-        p_value = stats.binom_test(b01, n=b10+b01, p=0.5, alternative='greater')
+    if b10 + b01 == 0:
+        # The agents agree on every case, so there is no evidence of a difference
+        p_value = 1.0
+    elif b10 + b01 < 25:
+        # Use exact binomial test for small disagreement counts (two-sided, like the branch below)
+        p_value = stats.binomtest(b01, n=b10 + b01, p=0.5).pvalue
     else:
         # Use McNemar's test for larger samples
         chi2 = (abs(b01 - b10) - 1)**2 / (b01 + b10)
         p_value = 1 - stats.chi2.cdf(chi2, df=1)
 
-    # Calculate confidence interval using Wilson score interval
-    from statsmodels.stats.proportion import proportion_confint
-    ci_low, ci_high = proportion_confint(
-        sum(improved_results), n, method='wilson', alpha=0.05
-    )
+    # 95% confidence interval for the improvement (paired difference in accuracy; Wald,
+    # which is rough when the agents disagree on only a few cases)
+    se = np.sqrt(b01 + b10 - (b01 - b10)**2 / n) / n
+    ci_low, ci_high = improvement - 1.96 * se, improvement + 1.96 * se
 
     stats_dict = {
         'baseline_accuracy': baseline_accuracy,
@@ -69,14 +71,18 @@ def assess_improvement_significance(baseline_results, improved_results,
     return decision, stats_dict
 
 # Example: Evaluating whether an improved reasoning prompt helps
-baseline_results = [1, 0, 1, 1, 0, 1, 1, 1, 0, 1] * 100  # 70% accuracy
-improved_results = [1, 0, 1, 1, 1, 1, 1, 1, 0, 1] * 100  # 80% accuracy
+# 1,000 distinct test cases. Repeating a short list would inflate n with copies of the same cases.
+rng = np.random.default_rng(0)
+baseline_results = rng.binomial(1, 0.70, 1000)  # about 70% accuracy
+# The improved prompt fixes about 30% of baseline failures and breaks about 2% of successes
+improved_results = np.where(baseline_results == 1,
+                            rng.binomial(1, 0.98, 1000), rng.binomial(1, 0.30, 1000))
 
-decision, stats = assess_improvement_significance(
+decision, result = assess_improvement_significance(
     baseline_results, improved_results, min_practical_improvement=0.05
 )
 
 print(f"Decision: {decision}")
-print(f"Rationale: {stats['rationale']}")
-print(f"Baseline: {stats['baseline_accuracy']:.1%}, Improved: {stats['improved_accuracy']:.1%}")
-print(f"95% CI for improved agent: [{stats['ci_95'][0]:.1%}, {stats['ci_95'][1]:.1%}]")
+print(f"Rationale: {result['rationale']}")
+print(f"Baseline: {result['baseline_accuracy']:.1%}, Improved: {result['improved_accuracy']:.1%}")
+print(f"95% CI for the improvement: [{result['ci_95'][0]:.1%}, {result['ci_95'][1]:.1%}]")
