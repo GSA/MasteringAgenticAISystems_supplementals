@@ -23,9 +23,9 @@ related_reference_lab: "labs/8.2B_circuit_breaker/lab.md"
 
 # Lab 3.2: Repeated-Trial Stability Check
 
-> **In progress (#199).** The objectives, scenario, setup and guided exercise are
-> in place. The independent exercise, the self-check and the citation table follow
-> in later pull requests.
+> **In progress (#199).** The objectives, scenario, setup, both exercises, the
+> solution and the self-check are in place. The hint ladder, key points and
+> citation table follow in a later pull request.
 
 ## Objectives
 
@@ -64,6 +64,7 @@ dependencies (see `requirements.txt`).
 cd labs/3.2_repeated_trial_reliability
 python3 --version    # 3.10 or newer
 python3 starter.py   # prints the stability report; unfinished parts say TODO
+python3 test_lab.py  # run the self-check now, before changing anything
 ```
 
 ## We Do: what one run hides
@@ -100,6 +101,48 @@ versions, and the true gap between v1 and v2 is only about 2 points.
 the fraction of an item's trials that passed. Averaging trials *within* an item
 first, then comparing items, is what keeps the analysis paired.
 
-**Checkpoint:** `python3 starter.py` prints numbers for the one-run gate (v2 wins
-12, v1 wins 3) and both flip rates (18.1% and 11.6%). The last three lines say
-`TODO`. Those are the functions you write next.
+**Checkpoint:** `python3 test_lab.py` shows the four `TestGuidedFunctions` tests
+passing and the rest failing with `NotImplementedError`. The failures are your
+worklist.
+
+## You Do: three functions
+
+### Task
+
+Implement the three `TODO`s in `starter.py`. Keep the names and signatures:
+`test_lab.py` calls them directly.
+
+- **TODO 1, `pass_hat_k(runs, k)`.** Estimate pass^k, the chance that k
+  independent trials of an item *all* pass, averaged over items. Use the unbiased
+  estimator from tau-bench: for an item with `c` passes out of `n` trials, use
+  `C(c, k) / C(n, k)`. Raise `ValueError` if `k < 1` or `k > n`.
+- **TODO 2, `paired_bootstrap_ci(v1_runs, v2_runs, n_boot, alpha, seed)`.**
+  Return a percentile bootstrap interval for the mean of (v2 rate minus v1 rate).
+  Resample *items* with replacement, keeping each item's two rates together.
+  Use `random.Random(seed)` so the result is reproducible. Raise `ValueError` if
+  the versions cover different numbers of items.
+- **TODO 3, `trials_needed(runs, target)`.** Return the smallest odd k such
+  that, for at least `target` of the items, the majority verdict over the first
+  k trials matches the majority verdict over all recorded trials. Raise
+  `ValueError` if the number of recorded trials is even.
+
+**Solution:** see `solution.py` for a complete reference implementation. Try to
+get your own version passing first.
+
+## Self-Check
+
+Run:
+
+```bash
+python3 test_lab.py
+```
+
+You have succeeded if:
+
+- [ ] All 16 tests print `ok`, with no edits to `test_lab.py`.
+- [ ] `python3 starter.py` prints a full report with no `TODO` lines, including
+      `pass^1 0.783   pass^5 0.555   pass^15 0.380`, a v2 minus v1 interval
+      that excludes zero, and `agent v2 5` trials for 95% stable verdicts.
+
+Failing tests are named after their TODO: `test_todo1_*` checks TODO 1,
+`test_todo2_*` checks TODO 2, and `test_todo3_*` checks TODO 3.
