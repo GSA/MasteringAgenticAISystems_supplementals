@@ -94,7 +94,7 @@ One row per canonical chapter (94 total, from `cert_mapping/README.md`, Part 4 e
 | 3.1A | none | not started | |
 | 3.1B | none | not started | |
 | 3.1C | none | not started | |
-| 3.2 | none | not started | |
+| 3.2 | none | **draft** | Repeated-trial stability check for agent outcomes and LLM-judge verdicts, see [`labs/3.2_repeated_trial_reliability/lab.md`](3.2_repeated_trial_reliability/lab.md). |
 | 3.3 | none | not started | |
 | 3.4 | none | not started | |
 | 3.5 | none | not started | |
@@ -205,7 +205,7 @@ One row per canonical chapter (94 total, from `cert_mapping/README.md`, Part 4 e
 
 ### Summary
 
-94 chapters total. 93 are `not started` (no chapter has yet reached `draft` via a real lab written against the template, except one). 1 chapter — **8.2B** — is at `draft`, backed by the reference lab at `labs/8.2B_circuit_breaker/lab.md`. None are yet `piloted` or `stable`. The 17 legacy files remain at `example` stage as source material only; they are not chapter-maturity entries themselves (per Section 1, they don't count as coverage), which is why every chapter they touch still shows `not started` above.
+94 chapters total. 92 are `not started`. 2 chapters are at `draft`: **8.2B**, backed by the reference lab at `labs/8.2B_circuit_breaker/lab.md`, and **3.2**, backed by `labs/3.2_repeated_trial_reliability/lab.md`. None are yet `piloted` or `stable`. The 17 legacy files remain at `example` stage as source material only; they are not chapter-maturity entries themselves (per Section 1, they don't count as coverage), which is why every chapter they touch still shows `not started` above.
 
 ## 6. Citation convention
 
