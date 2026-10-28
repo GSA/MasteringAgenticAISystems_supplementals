@@ -1,192 +1,190 @@
 {
- "as_of": "October 19, 2026",
+ "as_of": "October 28, 2026",
  "by_org": [
-  {
-   "label": "Microsoft",
-   "n": 4
-  },
-  {
-   "label": "University of Illinois Urbana-Champaign",
-   "n": 3
-  },
-  {
-   "label": "Carnegie Mellon University",
-   "n": 2
-  },
-  {
-   "label": "Harvard University",
-   "n": 2
-  },
   {
    "label": "Independent Researcher",
    "n": 2
   },
   {
-   "label": "Purdue University",
-   "n": 2
-  },
-  {
-   "label": "27 other organizations (fewer than 2 contacts each)",
-   "n": 27
+   "label": "16 other organizations (fewer than 2 contacts each)",
+   "n": 16
   }
  ],
  "by_tag": [
   {
    "label": "LLM agents",
-   "n": 10
+   "n": 5
   },
   {
    "label": "agentic AI",
-   "n": 8
-  },
-  {
-   "label": "agent security",
-   "n": 5
-  },
-  {
-   "label": "AI agent security",
-   "n": 5
-  },
-  {
-   "label": "multi-agent systems",
-   "n": 5
-  },
-  {
-   "label": "agent evaluation",
-   "n": 3
-  },
-  {
-   "label": "AI security",
    "n": 3
   },
   {
    "label": "autonomous agents",
    "n": 3
+  },
+  {
+   "label": "agentic LLMs",
+   "n": 2
+  },
+  {
+   "label": "autonomous AI agents",
+   "n": 2
+  },
+  {
+   "label": "multi-agent collaboration",
+   "n": 2
+  },
+  {
+   "label": "tool use",
+   "n": 2
   }
  ],
  "days": [
   {
-   "d": "2026-10-01",
-   "joined": 1,
-   "replied": 5
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-06"
   },
   {
-   "d": "2026-10-02",
-   "joined": 2,
-   "replied": 4
+   "claimed": 3,
+   "contributed": 0,
+   "d": "2026-10-07"
   },
   {
-   "d": "2026-10-03",
-   "joined": 4,
-   "replied": 2
+   "claimed": 1,
+   "contributed": 1,
+   "d": "2026-10-08"
   },
   {
-   "d": "2026-10-04",
-   "joined": 5,
-   "replied": 6
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-09"
   },
   {
-   "d": "2026-10-05",
-   "joined": 3,
-   "replied": 5
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-10"
   },
   {
-   "d": "2026-10-06",
-   "joined": 1,
-   "replied": 1
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-11"
   },
   {
-   "d": "2026-10-07",
-   "joined": 0,
-   "replied": 1
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-12"
   },
   {
-   "d": "2026-10-08",
-   "joined": 2,
-   "replied": 1
+   "claimed": 0,
+   "contributed": 1,
+   "d": "2026-10-13"
   },
   {
-   "d": "2026-10-09",
-   "joined": 1,
-   "replied": 2
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-14"
   },
   {
-   "d": "2026-10-10",
-   "joined": 0,
-   "replied": 2
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-15"
   },
   {
-   "d": "2026-10-11",
-   "joined": 0,
-   "replied": 1
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-16"
   },
   {
-   "d": "2026-10-12",
-   "joined": 1,
-   "replied": 3
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-17"
   },
   {
-   "d": "2026-10-13",
-   "joined": 1,
-   "replied": 0
+   "claimed": 1,
+   "contributed": 1,
+   "d": "2026-10-18"
   },
   {
-   "d": "2026-10-14",
-   "joined": 1,
-   "replied": 1
+   "claimed": 2,
+   "contributed": 0,
+   "d": "2026-10-19"
   },
   {
-   "d": "2026-10-15",
-   "joined": 0,
-   "replied": 0
+   "claimed": 2,
+   "contributed": 0,
+   "d": "2026-10-20"
   },
   {
-   "d": "2026-10-16",
-   "joined": 1,
-   "replied": 1
+   "claimed": 2,
+   "contributed": 1,
+   "d": "2026-10-21"
   },
   {
-   "d": "2026-10-17",
-   "joined": 0,
-   "replied": 0
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-22"
   },
   {
-   "d": "2026-10-18",
-   "joined": 0,
-   "replied": 0
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-23"
   },
   {
-   "d": "2026-10-19",
-   "joined": 0,
-   "replied": 1
+   "claimed": 0,
+   "contributed": 1,
+   "d": "2026-10-24"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-25"
+  },
+  {
+   "claimed": 0,
+   "contributed": 1,
+   "d": "2026-10-26"
+  },
+  {
+   "claimed": 1,
+   "contributed": 0,
+   "d": "2026-10-27"
   }
  ],
  "min_cell": 2,
- "n_orgs": 33,
+ "n_orgs": 17,
  "steps": [
   {
    "label": "Introduced themselves in the discussion",
-   "n": 24
+   "n": 13
   },
   {
    "label": "Wrote back by email",
-   "n": 36
+   "n": 17
   },
   {
    "label": "Completed the survey",
-   "n": 5
+   "n": 4
   },
   {
    "label": "Named Content Review as their track",
-   "n": 15
+   "n": 10
+  },
+  {
+   "label": "Posted review findings or a contribution",
+   "n": 6
   }
  ],
  "tiles": {
-  "both": 18,
-  "content_review": 15,
-  "emailed": 36,
-  "engaged": 42,
-  "joined": 24
+  "both": 12,
+  "claimed": 12,
+  "content_review": 10,
+  "contributed": 6,
+  "emailed": 17,
+  "engaged": 18,
+  "issues": 37,
+  "joined": 13
  },
- "undated_joins": 1
+ "undated_joins": 0
 }

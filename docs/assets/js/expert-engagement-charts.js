@@ -211,39 +211,39 @@
 
   /* ---------- headline numbers ---------- */
   var tiles = [
-    ['Engaging experts', num(T.engaged), 'replied with interest or joined the discussion'],
-    ['In the discussion', num(T.joined), pct(T.joined, T.engaged) + ' of the group'],
-    ['Wrote back by email', num(T.emailed), pct(T.emailed, T.engaged) + ' of the group'],
-    ['Did both', num(T.both), 'email reply and discussion post'],
-    ['Chose Content Review', num(T.content_review), 'named a track in their reply']
+    ['Experts working on the curriculum', num(T.engaged), 'took an issue or posted findings or a contribution'],
+    ['Posted findings or a contribution', num(T.contributed), pct(T.contributed, T.engaged) + ' of the group'],
+    ['Took an issue, no findings yet', num(T.claimed), pct(T.claimed, T.engaged) + ' of the group'],
+    ['Issues taken', num(T.issues), 'distinct review, lab and quiz issues'],
+    ['In the discussion', num(T.joined), pct(T.joined, T.engaged) + ' of the group']
   ];
   root.appendChild(h('div', { 'class': 'cr-tiles' }, tiles.map(function (t) {
     return h('div', { 'class': 'cr-tile' }, h('p', { 'class': 'l', text: t[0] }), h('p', { 'class': 'v', text: t[1] }), h('p', { 'class': 's', text: t[2] }));
   })));
 
   /* ---------- engagement ---------- */
-  var g1 = section('Engagement', 'Counts of experts who replied with interest or posted in the community discussion. Invitation totals are not shown.');
+  var g1 = section('Work on the curriculum', 'Counts of experts who took an issue on GitHub or posted review findings or a contribution. Invitation totals are not shown.');
 
-  var SER = [{ k: 'replied', label: 'Replied by email', color: C.blue }, { k: 'joined', label: 'Posted in the discussion', color: C.orange }];
-  card(g1, 'Engagement per day', 'Each person counted once per door, on the day they used it', function (w) {
-    var cols = D.days.map(function (d) { return { label: dayLabel(d.d), long: dayLabel(d.d, true), values: { replied: d.replied, joined: d.joined } }; });
-    return cols.length ? h('div', {}, legend(SER), columns(cols, SER, 'Engagement per day, by type', w)) : h('p', { 'class': 'cr-note', text: 'No dated engagement yet.' });
-  }, { head: ['Day', 'Replied by email', 'Posted in the discussion', 'Total'],
-       rows: D.days.map(function (d) { return [dayLabel(d.d, true), num(d.replied), num(d.joined), num(d.replied + d.joined)]; }) },
+  var SER = [{ k: 'claimed', label: 'Took an issue', color: C.blue }, { k: 'contributed', label: 'Posted findings or a contribution', color: C.orange }];
+  card(g1, 'Work per day', 'Each expert counted on the day they first took an issue and the day they first posted findings or a contribution', function (w) {
+    var cols = D.days.map(function (d) { return { label: dayLabel(d.d), long: dayLabel(d.d, true), values: { claimed: d.claimed, contributed: d.contributed } }; });
+    return cols.length ? h('div', {}, legend(SER), columns(cols, SER, 'Work per day, by type', w)) : h('p', { 'class': 'cr-note', text: 'No dated work yet.' });
+  }, { head: ['Day', 'Took an issue', 'Posted findings or a contribution', 'Total'],
+       rows: D.days.map(function (d) { return [dayLabel(d.d, true), num(d.claimed), num(d.contributed), num(d.claimed + d.contributed)]; }) },
     D.undated_joins ? D.undated_joins + ' discussion ' + (D.undated_joins === 1 ? 'post has' : 'posts have') + ' no recorded date and ' + (D.undated_joins === 1 ? 'is' : 'are') + ' not in this chart.' : null);
 
-  countCard(g1, 'What they have done', 'Steps from the invitation, among engaging experts', D.steps, 'Step',
+  countCard(g1, 'What they have done', 'Steps from the invitation, among experts working on the curriculum', D.steps, 'Step',
     'One person can be counted in several rows.');
 
   /* ---------- who ---------- */
-  var g2 = section('Who is engaging', 'Counts of engaging experts. Groups smaller than ' + D.min_cell + ' are combined or left out so that no one can be picked out.');
+  var g2 = section('Who is working on it', 'Counts of experts working on the curriculum. Groups smaller than ' + D.min_cell + ' are combined or left out so that no one can be picked out.');
   countCard(g2, 'Research Area', 'Most common expertise tags', D.by_tag, 'Research area',
     'Each person carries several tags, so rows add up to more than the group size.');
-  countCard(g2, 'Organizations', num(D.n_orgs) + ' distinct organizations among the engaging experts', D.by_org, 'Organization',
-    'Organizations are matched by email domain. Only those with at least ' + D.min_cell + ' engaging experts are named.');
+  countCard(g2, 'Organizations', num(D.n_orgs) + ' distinct organizations among the experts working on the curriculum', D.by_org, 'Organization',
+    'Organizations are matched by email domain. Only those with at least ' + D.min_cell + ' experts are named.');
 
   root.appendChild(h('section', { 'class': 'cr-section cr-about' }, h('h2', { text: 'About these numbers' }), h('ul', {},
-    h('li', { text: 'Engaging means replying with interest by email, posting an introduction in the community discussion, or both.' }),
+    h('li', { text: 'Working on the curriculum means taking an issue on GitHub (a review, lab or quiz), or posting review findings or a contribution.' }),
     h('li', { text: 'The group is small, so one person moves a bar noticeably. Read the counts, not only the shares.' }),
     h('li', { text: 'As of ' + D.as_of + '.' }))));
   root.setAttribute('data-ready', 'true');

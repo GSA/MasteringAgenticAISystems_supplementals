@@ -5,11 +5,10 @@
 {%- assign ee = site.data.expert_engagement -%}
 {%- if ee %}
 <ul class="cr-tiles">
-  <li class="cr-tile"><p class="l">Engaging experts</p><p class="v">{{ ee.tiles.engaged }}</p><p class="s">replied with interest or joined the discussion</p></li>
+  <li class="cr-tile"><p class="l">Experts working on the curriculum</p><p class="v">{{ ee.tiles.engaged }}</p><p class="s">took an issue or posted findings or a contribution</p></li>
+  <li class="cr-tile"><p class="l">Posted findings or a contribution</p><p class="v">{{ ee.tiles.contributed }}</p><p class="s">{{ ee.tiles.claimed }} more have taken an issue</p></li>
+  <li class="cr-tile"><p class="l">Issues taken</p><p class="v">{{ ee.tiles.issues }}</p><p class="s">distinct review, lab and quiz issues</p></li>
   <li class="cr-tile"><p class="l">Organizations</p><p class="v">{{ ee.n_orgs }}</p><p class="s">distinct, by email domain</p></li>
-  <li class="cr-tile"><p class="l">Wrote back by email</p><p class="v">{{ ee.tiles.emailed | times: 100.0 | divided_by: ee.tiles.engaged | round }}%</p><p class="s">{{ ee.tiles.emailed }} of {{ ee.tiles.engaged }} experts</p></li>
-  <li class="cr-tile"><p class="l">Did both</p><p class="v">{{ ee.tiles.both | times: 100.0 | divided_by: ee.tiles.engaged | round }}%</p><p class="s">{{ ee.tiles.both }} replied by email and posted in the discussion</p></li>
-  <li class="cr-tile"><p class="l">Chose Content Review</p><p class="v">{{ ee.tiles.content_review }}</p><p class="s">named it as their track</p></li>
   <li class="cr-tile"><p class="l">Most common research area</p><p class="v" style="font-size:1.25rem;line-height:1.2">{{ ee.by_tag.first.label }}</p><p class="s">{{ ee.by_tag.first.n }} experts</p></li>
 </ul>
 {%- endif -%}

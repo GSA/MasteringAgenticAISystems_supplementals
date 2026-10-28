@@ -28,12 +28,12 @@ Figures are added up from the cohort reports. Percentages for stayed 45 minutes 
 {% include nd/org_chart.html %}
 {:/nomarkdown}
 
-## Expert engagement
+## Experts improving the curriculum
 
 {::nomarkdown}
 {% include nd/expert_summary.html %}
 {:/nomarkdown}
 
-Counts of outside experts who replied with interest or joined the community discussion, as of {{ site.data.expert_engagement.as_of }}. The group is small, so read the counts, not only the shares.
+Counts of outside experts who are working on improving the curriculum (they took an issue on GitHub or posted review findings or a contribution), as of {{ site.data.expert_engagement.as_of }}. The group is small, so read the counts, not only the shares.
 
 How the numbers are produced, and the privacy rules they follow, are described in the repository file `docs/COHORT_DATA.md`.
