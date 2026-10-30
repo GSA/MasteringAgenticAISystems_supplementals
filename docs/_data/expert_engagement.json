@@ -1,5 +1,5 @@
 {
- "as_of": "October 28, 2026",
+ "as_of": "October 30, 2026",
  "by_org": [
   {
    "label": "Independent Researcher",
@@ -150,6 +150,16 @@
    "claimed": 1,
    "contributed": 0,
    "d": "2026-10-27"
+  },
+  {
+   "claimed": 0,
+   "contributed": 1,
+   "d": "2026-10-28"
+  },
+  {
+   "claimed": 0,
+   "contributed": 1,
+   "d": "2026-10-29"
   }
  ],
  "min_cell": 2,
@@ -173,17 +183,17 @@
   },
   {
    "label": "Posted review findings or a contribution",
-   "n": 6
+   "n": 8
   }
  ],
  "tiles": {
   "both": 12,
-  "claimed": 12,
+  "claimed": 10,
   "content_review": 10,
-  "contributed": 6,
+  "contributed": 8,
   "emailed": 17,
   "engaged": 18,
-  "issues": 37,
+  "issues": 38,
   "joined": 13
  },
  "undated_joins": 0
