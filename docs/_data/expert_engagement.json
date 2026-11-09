@@ -1,13 +1,13 @@
 {
- "as_of": "October 30, 2026",
+ "as_of": "November 9, 2026",
  "by_org": [
   {
    "label": "Independent Researcher",
    "n": 2
   },
   {
-   "label": "16 other organizations (fewer than 2 contacts each)",
-   "n": 16
+   "label": "17 other organizations (fewer than 2 contacts each)",
+   "n": 17
   }
  ],
  "by_tag": [
@@ -28,6 +28,10 @@
    "n": 2
   },
   {
+   "label": "AI governance",
+   "n": 2
+  },
+  {
    "label": "autonomous AI agents",
    "n": 2
   },
@@ -41,31 +45,6 @@
   }
  ],
  "days": [
-  {
-   "claimed": 1,
-   "contributed": 0,
-   "d": "2026-10-06"
-  },
-  {
-   "claimed": 3,
-   "contributed": 0,
-   "d": "2026-10-07"
-  },
-  {
-   "claimed": 1,
-   "contributed": 1,
-   "d": "2026-10-08"
-  },
-  {
-   "claimed": 0,
-   "contributed": 0,
-   "d": "2026-10-09"
-  },
-  {
-   "claimed": 1,
-   "contributed": 0,
-   "d": "2026-10-10"
-  },
   {
    "claimed": 1,
    "contributed": 0,
@@ -160,10 +139,107 @@
    "claimed": 0,
    "contributed": 1,
    "d": "2026-10-29"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-30"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-10-31"
+  },
+  {
+   "claimed": 1,
+   "contributed": 1,
+   "d": "2026-11-01"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-11-02"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-11-03"
+  },
+  {
+   "claimed": 0,
+   "contributed": 1,
+   "d": "2026-11-04"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-11-05"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-11-06"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-11-07"
+  },
+  {
+   "claimed": 0,
+   "contributed": 2,
+   "d": "2026-11-08"
+  },
+  {
+   "claimed": 0,
+   "contributed": 0,
+   "d": "2026-11-09"
   }
  ],
  "min_cell": 2,
- "n_orgs": 17,
+ "n_orgs": 18,
+ "recent_institutions": [
+  {
+   "label": "Carnegie Mellon University",
+   "last_on": "2026-11-08"
+  },
+  {
+   "label": "Georgia Institute of Technology",
+   "last_on": "2026-11-08"
+  },
+  {
+   "label": "University of Illinois Urbana-Champaign",
+   "last_on": "2026-11-08"
+  },
+  {
+   "label": "Microsoft",
+   "last_on": "2026-11-04"
+  },
+  {
+   "label": "University of Notre Dame",
+   "last_on": "2026-11-01"
+  },
+  {
+   "label": "George Mason University",
+   "last_on": "2026-10-30"
+  },
+  {
+   "label": "Cleveland State University",
+   "last_on": "2026-10-28"
+  },
+  {
+   "label": "Multikernel Technologies, Inc.",
+   "last_on": "2026-10-24"
+  },
+  {
+   "label": "Salesforce",
+   "last_on": "2026-10-21"
+  },
+  {
+   "label": "The Davey Tree Expert Company",
+   "last_on": "2026-10-18"
+  }
+ ],
  "steps": [
   {
    "label": "Introduced themselves in the discussion",
@@ -171,7 +247,7 @@
   },
   {
    "label": "Wrote back by email",
-   "n": 17
+   "n": 18
   },
   {
    "label": "Completed the survey",
@@ -179,21 +255,21 @@
   },
   {
    "label": "Named Content Review as their track",
-   "n": 10
+   "n": 11
   },
   {
    "label": "Posted review findings or a contribution",
-   "n": 8
+   "n": 12
   }
  ],
  "tiles": {
   "both": 12,
-  "claimed": 10,
-  "content_review": 10,
-  "contributed": 8,
-  "emailed": 17,
-  "engaged": 18,
-  "issues": 38,
+  "claimed": 7,
+  "content_review": 11,
+  "contributed": 12,
+  "emailed": 18,
+  "engaged": 19,
+  "issues": 41,
   "joined": 13
  },
  "undated_joins": 0

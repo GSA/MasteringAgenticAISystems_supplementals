@@ -225,12 +225,22 @@
   var g1 = section('Work on the curriculum', 'Counts of experts who took an issue on GitHub or posted review findings or a contribution. Invitation totals are not shown.');
 
   var SER = [{ k: 'claimed', label: 'Took an issue', color: C.blue }, { k: 'contributed', label: 'Posted findings or a contribution', color: C.orange }];
-  card(g1, 'Work per day', 'Each expert counted on the day they first took an issue and the day they first posted findings or a contribution', function (w) {
+  card(g1, 'Work per day', 'Last 30 days. Each expert counted on the day they first took an issue and the day they first posted findings or a contribution', function (w) {
     var cols = D.days.map(function (d) { return { label: dayLabel(d.d), long: dayLabel(d.d, true), values: { claimed: d.claimed, contributed: d.contributed } }; });
     return cols.length ? h('div', {}, legend(SER), columns(cols, SER, 'Work per day, by type', w)) : h('p', { 'class': 'cr-note', text: 'No dated work yet.' });
   }, { head: ['Day', 'Took an issue', 'Posted findings or a contribution', 'Total'],
        rows: D.days.map(function (d) { return [dayLabel(d.d, true), num(d.claimed), num(d.contributed), num(d.claimed + d.contributed)]; }) },
     D.undated_joins ? D.undated_joins + ' discussion ' + (D.undated_joins === 1 ? 'post has' : 'posts have') + ' no recorded date and ' + (D.undated_joins === 1 ? 'is' : 'are') + ' not in this chart.' : null);
+
+  /* ---------- most recent contributing institutions (names institutions and dates only, never people) ---------- */
+  if (D.recent_institutions && D.recent_institutions.length) {
+    g1.appendChild(h('figure', { 'class': 'cr-card' },
+      h('header', {}, h('div', {}, h('h3', { text: 'Most recent contributing institutions' }),
+        h('p', { text: 'The institutions of the experts whose review findings or contributions came in most recently, newest first, with the date of the latest one' }))),
+      h('div', { 'class': 'cr-body' }, dataTable(['Institution', 'Latest contribution'],
+        D.recent_institutions.map(function (r) { return [r.label, dayLabel(r.last_on, true)]; }))),
+      h('p', { 'class': 'cr-foot', text: 'Institutions only; no people are named. An institution is listed once, on the date of its latest contribution.' })));
+  }
 
   countCard(g1, 'What they have done', 'Steps from the invitation, among experts working on the curriculum', D.steps, 'Step',
     'One person can be counted in several rows.');
@@ -245,6 +255,7 @@
   root.appendChild(h('section', { 'class': 'cr-section cr-about' }, h('h2', { text: 'About these numbers' }), h('ul', {},
     h('li', { text: 'Working on the curriculum means taking an issue on GitHub (a review, lab or quiz), or posting review findings or a contribution.' }),
     h('li', { text: 'The group is small, so one person moves a bar noticeably. Read the counts, not only the shares.' }),
+    h('li', { text: 'The institutions list names the institutions of experts who posted review findings or a contribution, never the people.' }),
     h('li', { text: 'As of ' + D.as_of + '.' }))));
   root.setAttribute('data-ready', 'true');
 })();
